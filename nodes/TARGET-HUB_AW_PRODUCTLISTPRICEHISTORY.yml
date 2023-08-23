@@ -1,0 +1,91 @@
+steps:
+  HUB_AW_PRODUCTLISTPRICEHISTORY-dc0ca6eb-e357-422e-a07c-1e2cc25cf095:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: bd77d1bd-fc2e-43b0-b1cb-fb3298cccea2
+              stepCounter: dc0ca6eb-e357-422e-a07c-1e2cc25cf095
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_PRODUCTLISTPRICEHISTORY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0638b576-8b58-4443-8846-9b32e214963b
+                    stepCounter: cee3d2ac-6ac9-4b22-9327-6a4012001e38
+                transform: ""
+          - columnReference:
+              columnCounter: cc5e4822-8dd1-4c4b-8b5a-5b5cf3044083
+              stepCounter: dc0ca6eb-e357-422e-a07c-1e2cc25cf095
+            dataType: NUMBER(38,0)
+            description: Product identification number. Foreign key to Product.ProductID
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCTID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 72c29f44-8d59-43c4-af74-ad6265cacb37
+                    stepCounter: cee3d2ac-6ac9-4b22-9327-6a4012001e38
+                transform: ""
+          - columnReference:
+              columnCounter: a42cee8a-1ab1-49b2-ae26-eb1046ce293e
+              stepCounter: dc0ca6eb-e357-422e-a07c-1e2cc25cf095
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1846bbb4-ffd4-4b9e-8f4d-cd69b944ff18
+                    stepCounter: cee3d2ac-6ac9-4b22-9327-6a4012001e38
+                transform: ""
+          - columnReference:
+              columnCounter: 9b451bb0-36d8-472c-95aa-5ae887f2545a
+              stepCounter: dc0ca6eb-e357-422e-a07c-1e2cc25cf095
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 460ef0e7-e6db-478f-91b6-a5ad9280dcbc
+                    stepCounter: cee3d2ac-6ac9-4b22-9327-6a4012001e38
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_PRODUCTLISTPRICEHISTORY
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_PRODUCTLISTPRICEHISTORY') }} "DVSTG_AW_PRODUCTLISTPRICEHISTORY"
+            name: HUB_AW_PRODUCTLISTPRICEHISTORY
+            noLinkRefs: []
+      name: HUB_AW_PRODUCTLISTPRICEHISTORY
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: dc0ca6eb-e357-422e-a07c-1e2cc25cf095

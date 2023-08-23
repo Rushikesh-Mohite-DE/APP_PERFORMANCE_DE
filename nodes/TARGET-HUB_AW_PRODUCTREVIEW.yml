@@ -1,0 +1,105 @@
+steps:
+  HUB_AW_PRODUCTREVIEW-3cf82c24-cba2-4afe-95a2-70dd51af6e9e:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: fdaafb8e-4048-49a3-bea4-e7c69b3efc0c
+              stepCounter: 3cf82c24-cba2-4afe-95a2-70dd51af6e9e
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_PRODUCTREVIEW
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 60c58bcb-bf20-4520-bbb3-bbf7b98694a9
+                    stepCounter: 3dab7470-6c27-4f7a-a3b7-10ee618020a6
+                transform: ""
+          - columnReference:
+              columnCounter: 03706223-8d19-47f6-a74d-28e0f01856d1
+              stepCounter: 3cf82c24-cba2-4afe-95a2-70dd51af6e9e
+            dataType: NUMBER(38,0)
+            description: Primary key for ProductReview records.
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCTREVIEWID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a50d5d28-32f4-4fbb-8d21-0dee71f89659
+                    stepCounter: 3dab7470-6c27-4f7a-a3b7-10ee618020a6
+                transform: ""
+          - columnReference:
+              columnCounter: 9a5b7a72-aa0e-493b-9367-d38c0cd10bcf
+              stepCounter: 3cf82c24-cba2-4afe-95a2-70dd51af6e9e
+            dataType: NUMBER(38,0)
+            description: Product identification number. Foreign key to Product.ProductID.
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCTID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: dc2a46ce-17ac-4cb3-af09-229141ec5a17
+                    stepCounter: 3dab7470-6c27-4f7a-a3b7-10ee618020a6
+                transform: ""
+          - columnReference:
+              columnCounter: 64ad157b-fa79-4671-bb05-50337b3e5f36
+              stepCounter: 3cf82c24-cba2-4afe-95a2-70dd51af6e9e
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: debdfb79-0a6e-464a-abf0-f1f47fef17b3
+                    stepCounter: 3dab7470-6c27-4f7a-a3b7-10ee618020a6
+                transform: ""
+          - columnReference:
+              columnCounter: 10d11872-f835-4980-bdcb-a055665168d5
+              stepCounter: 3cf82c24-cba2-4afe-95a2-70dd51af6e9e
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8896b47f-4281-4eb8-8443-f899ee0dcd5f
+                    stepCounter: 3dab7470-6c27-4f7a-a3b7-10ee618020a6
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_PRODUCTREVIEW
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_PRODUCTREVIEW') }} "DVSTG_AW_PRODUCTREVIEW"
+            name: HUB_AW_PRODUCTREVIEW
+            noLinkRefs: []
+      name: HUB_AW_PRODUCTREVIEW
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 3cf82c24-cba2-4afe-95a2-70dd51af6e9e

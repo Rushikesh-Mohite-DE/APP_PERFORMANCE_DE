@@ -1,0 +1,205 @@
+steps:
+  SATV0_WWI_PURCHASEORDERS-4aa2f698-1ffb-45af-8a7a-110f706e8e99:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: caa27d62-f900-423a-9b4f-e68f95418643
+              stepCounter: 4aa2f698-1ffb-45af-8a7a-110f706e8e99
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_PURCHASEORDERS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4edbfaf8-4430-4601-ab30-2b63cf32f8a5
+                    stepCounter: 4fc9b44b-cf08-4177-9770-964ad0d4351b
+                transform: ""
+          - columnReference:
+              columnCounter: 5271a1ac-a924-4468-8499-0daf0b3601b3
+              stepCounter: 4aa2f698-1ffb-45af-8a7a-110f706e8e99
+            dataType: DATE
+            description: Date that this purchase order was raised
+            hashColumns: []
+            hashDetails: null
+            name: ORDERDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1ce86601-0281-4807-9323-0631d15554a7
+                    stepCounter: 4fc9b44b-cf08-4177-9770-964ad0d4351b
+                transform: ""
+          - columnReference:
+              columnCounter: 9c80b657-61d7-44e8-be39-6fdf91a39bac
+              stepCounter: 4aa2f698-1ffb-45af-8a7a-110f706e8e99
+            dataType: DATE
+            description: Expected delivery date for this purchase order
+            hashColumns: []
+            hashDetails: null
+            name: EXPECTEDDELIVERYDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 03a3f60e-95a9-4b9f-a55f-2c9dfd35ae18
+                    stepCounter: 4fc9b44b-cf08-4177-9770-964ad0d4351b
+                transform: ""
+          - columnReference:
+              columnCounter: baf74cf3-7ff0-482e-8636-a7471e7f057a
+              stepCounter: 4aa2f698-1ffb-45af-8a7a-110f706e8e99
+            dataType: VARCHAR(20)
+            description: Supplier reference for our organization (might be our account number at the supplier)
+            hashColumns: []
+            hashDetails: null
+            name: SUPPLIERREFERENCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: eeb58080-17d2-4e5d-8ce5-8a4175e0b647
+                    stepCounter: 4fc9b44b-cf08-4177-9770-964ad0d4351b
+                transform: ""
+          - columnReference:
+              columnCounter: aea9e427-935c-4c1c-aca2-89b6df54cab3
+              stepCounter: 4aa2f698-1ffb-45af-8a7a-110f706e8e99
+            dataType: VARCHAR(20)
+            description: Is this purchase order now considered finalized?
+            hashColumns: []
+            hashDetails: null
+            name: ISORDERFINALIZED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fc40ee6a-2f3a-4342-9da3-4c89f7bee61c
+                    stepCounter: 4fc9b44b-cf08-4177-9770-964ad0d4351b
+                transform: ""
+          - columnReference:
+              columnCounter: ae923f60-26d4-469c-9e2a-2b2eb23f63a5
+              stepCounter: 4aa2f698-1ffb-45af-8a7a-110f706e8e99
+            dataType: VARCHAR(4000)
+            description: Any comments related this purchase order (comments sent to the supplier)
+            hashColumns: []
+            hashDetails: null
+            name: COMMENTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1178d830-4e44-4cb9-99f9-243f990cc58d
+                    stepCounter: 4fc9b44b-cf08-4177-9770-964ad0d4351b
+                transform: ""
+          - columnReference:
+              columnCounter: e085430e-65b6-4fa8-b263-cbcc67039ace
+              stepCounter: 4aa2f698-1ffb-45af-8a7a-110f706e8e99
+            dataType: VARCHAR(4000)
+            description: Any internal comments related this purchase order (comments for internal reference only and not sent to the supplier)
+            hashColumns: []
+            hashDetails: null
+            name: INTERNALCOMMENTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 44d6e4ff-abbc-4e94-b405-339a84c01290
+                    stepCounter: 4fc9b44b-cf08-4177-9770-964ad0d4351b
+                transform: ""
+          - columnReference:
+              columnCounter: 9cabce82-e587-41e4-a080-5e344109679e
+              stepCounter: 4aa2f698-1ffb-45af-8a7a-110f706e8e99
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LASTEDITEDBY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: eec86b33-cc22-4022-ac5c-ff764c2626dc
+                    stepCounter: 4fc9b44b-cf08-4177-9770-964ad0d4351b
+                transform: ""
+          - columnReference:
+              columnCounter: 72f05d2f-5656-423f-a1c3-9fd06f941899
+              stepCounter: 4aa2f698-1ffb-45af-8a7a-110f706e8e99
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LASTEDITEDWHEN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5b52dd8a-a5ec-4421-98a8-2d41a7aa9318
+                    stepCounter: 4fc9b44b-cf08-4177-9770-964ad0d4351b
+                transform: ""
+          - columnReference:
+              columnCounter: 9a0fd921-4487-41af-b43b-d8a8d58ae31d
+              stepCounter: 4aa2f698-1ffb-45af-8a7a-110f706e8e99
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 46264923-2e99-467f-bfde-7edf7d362270
+                    stepCounter: 4fc9b44b-cf08-4177-9770-964ad0d4351b
+                transform: ""
+          - columnReference:
+              columnCounter: 40262756-3e43-494d-bec8-9caf41dd4022
+              stepCounter: 4aa2f698-1ffb-45af-8a7a-110f706e8e99
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d67b088f-0fb3-464f-aea8-668c6741667e
+                    stepCounter: 4fc9b44b-cf08-4177-9770-964ad0d4351b
+                transform: ""
+          - columnReference:
+              columnCounter: 9fb8a9c4-474e-49b7-badd-e39800282e2b
+              stepCounter: 4aa2f698-1ffb-45af-8a7a-110f706e8e99
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c3e7c4f9-0909-4835-881b-fb65df12ec35
+                    stepCounter: 4fc9b44b-cf08-4177-9770-964ad0d4351b
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_WWI_PURCHASEORDERS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_WWI_PURCHASEORDERS') }} "DVSTG_WWI_PURCHASEORDERS"
+            name: SATV0_WWI_PURCHASEORDERS
+            noLinkRefs: []
+      name: SATV0_WWI_PURCHASEORDERS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: 4aa2f698-1ffb-45af-8a7a-110f706e8e99

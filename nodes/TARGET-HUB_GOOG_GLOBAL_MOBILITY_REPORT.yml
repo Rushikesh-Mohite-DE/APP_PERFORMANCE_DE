@@ -1,0 +1,105 @@
+steps:
+  HUB_GOOG_GLOBAL_MOBILITY_REPORT-14c57a61-00ca-4ac9-bfb5-2b5300508c90:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: Community Mobility Reports aim to provide insights into what has changed in response to policies aimed at combating COVID-19. The reports chart movement trends over time by geography, across different categories of places such as retail and recreation, groceries and pharmacies, parks, transit stations, workplaces, and residential
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 188ba52e-46d6-4bad-b5c0-9a9012f93223
+              stepCounter: 14c57a61-00ca-4ac9-bfb5-2b5300508c90
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_GOOG_GLOBAL_MOBILITY_REPORT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ee429c07-d161-4ada-95c1-426f8fb3aa97
+                    stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+                transform: ""
+          - columnReference:
+              columnCounter: b8fda543-92a2-42c0-adb7-bdd0f9b885ab
+              stepCounter: 14c57a61-00ca-4ac9-bfb5-2b5300508c90
+            dataType: VARCHAR(250)
+            description: Source Country
+            hashColumns: []
+            hashDetails: null
+            name: COUNTRY_REGION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5e6c796d-4028-4a46-8e00-66c987b7b769
+                    stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+                transform: ""
+          - columnReference:
+              columnCounter: 357b0358-d390-452d-bef1-5a6c04d8c906
+              stepCounter: 14c57a61-00ca-4ac9-bfb5-2b5300508c90
+            dataType: VARCHAR(250)
+            description: State or Province
+            hashColumns: []
+            hashDetails: null
+            name: PROVINCE_STATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f9d36d37-645d-4d60-8c53-abc0a421ee32
+                    stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+                transform: ""
+          - columnReference:
+              columnCounter: 6e762909-57eb-4d95-9dd7-f2ebca100cb6
+              stepCounter: 14c57a61-00ca-4ac9-bfb5-2b5300508c90
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 685adbb6-b151-4b57-bc57-175edea1d499
+                    stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+                transform: ""
+          - columnReference:
+              columnCounter: 0e2c77fa-ffc9-4954-8764-dbec2c150463
+              stepCounter: 14c57a61-00ca-4ac9-bfb5-2b5300508c90
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a79e4dc4-4b95-4110-ad08-e5c1fd1ea613
+                    stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_GOOG_GLOBAL_MOBILITY_REPORT
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_GOOG_GLOBAL_MOBILITY_REPORT') }} "DVSTG_GOOG_GLOBAL_MOBILITY_REPORT"
+            name: HUB_GOOG_GLOBAL_MOBILITY_REPORT
+            noLinkRefs: []
+      name: HUB_GOOG_GLOBAL_MOBILITY_REPORT
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 14c57a61-00ca-4ac9-bfb5-2b5300508c90

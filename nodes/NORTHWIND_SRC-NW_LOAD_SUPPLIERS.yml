@@ -1,0 +1,199 @@
+steps:
+  NW_LOAD_SUPPLIERS-e852ea61-4e6e-4631-9d90-2efc6370781d:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: NORTHWIND_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: cc8feaf1-3d10-486a-beac-26c2e9849a51
+              stepCounter: e852ea61-4e6e-4631-9d90-2efc6370781d
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: SUPPLIERID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c82fa16c-91ea-4d27-b822-6cb681678a9a
+              stepCounter: e852ea61-4e6e-4631-9d90-2efc6370781d
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: COMPANYNAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 97003c2a-7e70-4dac-b854-d7aa84bc650e
+              stepCounter: e852ea61-4e6e-4631-9d90-2efc6370781d
+            config: {}
+            dataType: VARCHAR(30)
+            defaultValue: ""
+            description: ""
+            name: CONTACTNAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 24184062-ed28-48d7-b8bf-71891d7cc14c
+              stepCounter: e852ea61-4e6e-4631-9d90-2efc6370781d
+            config: {}
+            dataType: VARCHAR(30)
+            defaultValue: ""
+            description: ""
+            name: CONTACTTITLE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 89075f0f-5d44-4b60-8ad0-36eb42bbb15b
+              stepCounter: e852ea61-4e6e-4631-9d90-2efc6370781d
+            config: {}
+            dataType: VARCHAR(60)
+            defaultValue: ""
+            description: ""
+            name: ADDRESS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e6da3a83-cf23-4ad7-9330-9ed302ab03fc
+              stepCounter: e852ea61-4e6e-4631-9d90-2efc6370781d
+            config: {}
+            dataType: VARCHAR(15)
+            defaultValue: ""
+            description: ""
+            name: CITY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 950c02ad-1f77-424d-a510-abf5de0c263e
+              stepCounter: e852ea61-4e6e-4631-9d90-2efc6370781d
+            config: {}
+            dataType: VARCHAR(15)
+            defaultValue: ""
+            description: ""
+            name: REGION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8804bd72-b247-4efd-81b6-f6b7d971dff6
+              stepCounter: e852ea61-4e6e-4631-9d90-2efc6370781d
+            config: {}
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: ""
+            name: POSTALCODE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2d2fb0a0-7868-4f06-9559-7b1c2f0ca0ec
+              stepCounter: e852ea61-4e6e-4631-9d90-2efc6370781d
+            config: {}
+            dataType: VARCHAR(15)
+            defaultValue: ""
+            description: ""
+            name: COUNTRY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 60ff7276-ba4d-4a21-aa3d-b0f718fda489
+              stepCounter: e852ea61-4e6e-4631-9d90-2efc6370781d
+            config: {}
+            dataType: VARCHAR(24)
+            defaultValue: ""
+            description: ""
+            name: PHONE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7d11c693-d1f5-40d8-aa49-4cad6e285b32
+              stepCounter: e852ea61-4e6e-4631-9d90-2efc6370781d
+            config: {}
+            dataType: VARCHAR(24)
+            defaultValue: ""
+            description: ""
+            name: FAX
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 69b519b2-6a4c-4b81-a0d4-50daa3704b06
+              stepCounter: e852ea61-4e6e-4631-9d90-2efc6370781d
+            config: {}
+            dataType: VARCHAR(4000)
+            defaultValue: ""
+            description: ""
+            name: HOMEPAGE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('NORTHWIND_SRC', 'NW_LOAD_SUPPLIERS') }}
+      name: NW_LOAD_SUPPLIERS
+      schema: ""
+      sqlType: Source
+      table: NW_LOAD_SUPPLIERS
+      type: sourceInput
+    stepCounter: e852ea61-4e6e-4631-9d90-2efc6370781d

@@ -1,0 +1,94 @@
+steps:
+  AW_LOAD_SHIFT-63b5159e-3629-4715-9a24-e790f37312bb:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: ADV_WRKS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: dcf7d522-6d09-4b63-bd09-0e7274af5f85
+              stepCounter: 63b5159e-3629-4715-9a24-e790f37312bb
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Primary key for Shift records.
+            name: SHIFTID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8cf846d9-9b0b-4b10-a952-fa39d103be65
+              stepCounter: 63b5159e-3629-4715-9a24-e790f37312bb
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: Shift description.
+            name: NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 66770cfb-f383-40af-9303-834257c8be70
+              stepCounter: 63b5159e-3629-4715-9a24-e790f37312bb
+            config: {}
+            dataType: VARCHAR(20)
+            defaultValue: ""
+            description: Shift start time.
+            name: STARTTIME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4527b39d-0db1-4aef-a23a-e64c0f2e5fa5
+              stepCounter: 63b5159e-3629-4715-9a24-e790f37312bb
+            config: {}
+            dataType: VARCHAR(20)
+            defaultValue: ""
+            description: Shift end time.
+            name: ENDTIME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9bfd50f5-c88c-4771-89da-5e164e1eceb7
+              stepCounter: 63b5159e-3629-4715-9a24-e790f37312bb
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_SHIFT') }}
+      name: AW_LOAD_SHIFT
+      schema: ""
+      sqlType: Source
+      table: AW_LOAD_SHIFT
+      type: sourceInput
+    stepCounter: 63b5159e-3629-4715-9a24-e790f37312bb

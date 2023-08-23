@@ -1,0 +1,121 @@
+steps:
+  SATV0_SPORTS_ICE_HOCKEY_ACTION_PARTICIPANTS-3d5f395e-19c8-48c5-ba78-cc848a14a6ed:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 5bae83c1-70db-457c-9a24-e2677da8c258
+              stepCounter: 3d5f395e-19c8-48c5-ba78-cc848a14a6ed
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_PARTICIPANTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fab674e3-4a06-4205-ac61-8934157f8aac
+                    stepCounter: c6b99a5c-8d28-42fb-8e0b-ce7ee4f92afb
+                transform: ""
+          - columnReference:
+              columnCounter: a6979808-23e3-44ec-a44e-682fbbc90341
+              stepCounter: 3d5f395e-19c8-48c5-ba78-cc848a14a6ed
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PARTICIPANT_ROLE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: eab84419-d71c-4549-814e-39e676d4fe3b
+                    stepCounter: c6b99a5c-8d28-42fb-8e0b-ce7ee4f92afb
+                transform: ""
+          - columnReference:
+              columnCounter: 5aba286c-1504-41c0-8257-ea3b246cba3e
+              stepCounter: 3d5f395e-19c8-48c5-ba78-cc848a14a6ed
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: POINT_CREDIT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f29ed33f-07df-4d00-aa56-7e32021153e4
+                    stepCounter: c6b99a5c-8d28-42fb-8e0b-ce7ee4f92afb
+                transform: ""
+          - columnReference:
+              columnCounter: 62d63951-79c9-4826-93f3-8fd618737a9b
+              stepCounter: 3d5f395e-19c8-48c5-ba78-cc848a14a6ed
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8e0a53d2-086d-4410-9eaf-4d6e3b5adc3b
+                    stepCounter: c6b99a5c-8d28-42fb-8e0b-ce7ee4f92afb
+                transform: ""
+          - columnReference:
+              columnCounter: c398ff04-35ed-41bd-aad7-9eb0b06375d3
+              stepCounter: 3d5f395e-19c8-48c5-ba78-cc848a14a6ed
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3d8a5d37-6288-4f94-b0c9-0238df0931e0
+                    stepCounter: c6b99a5c-8d28-42fb-8e0b-ce7ee4f92afb
+                transform: ""
+          - columnReference:
+              columnCounter: 5b8d6da8-3809-4d1e-8c29-6836ebab812c
+              stepCounter: 3d5f395e-19c8-48c5-ba78-cc848a14a6ed
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9c99956d-5fba-46f1-b152-3b7e83e3ff89
+                    stepCounter: c6b99a5c-8d28-42fb-8e0b-ce7ee4f92afb
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SPORTS_ICE_HOCKEY_ACTION_PARTICIPANTS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SPORTS_ICE_HOCKEY_ACTION_PARTICIPANTS') }} "DVSTG_SPORTS_ICE_HOCKEY_ACTION_PARTICIPANTS"
+            name: SATV0_SPORTS_ICE_HOCKEY_ACTION_PARTICIPANTS
+            noLinkRefs: []
+      name: SATV0_SPORTS_ICE_HOCKEY_ACTION_PARTICIPANTS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: 3d5f395e-19c8-48c5-ba78-cc848a14a6ed

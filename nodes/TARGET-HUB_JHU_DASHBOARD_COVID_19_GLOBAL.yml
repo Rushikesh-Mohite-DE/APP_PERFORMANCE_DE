@@ -1,0 +1,105 @@
+steps:
+  HUB_JHU_DASHBOARD_COVID_19_GLOBAL-c9583aae-4227-43eb-82a4-d716c2076ea6:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 2045f3be-7614-4320-be2b-f52bd2222a00
+              stepCounter: c9583aae-4227-43eb-82a4-d716c2076ea6
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_JHU_DASHBOARD_COVID_19_GLOBAL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c3c930a8-38df-4b3b-9e92-8aa4d9d11f4f
+                    stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+                transform: ""
+          - columnReference:
+              columnCounter: 5193a35e-fb66-4bb2-8dcd-55b7172f8a56
+              stepCounter: c9583aae-4227-43eb-82a4-d716c2076ea6
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: COUNTRY_REGION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ed1c1126-bb1d-4486-9b08-358beef3e895
+                    stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+                transform: ""
+          - columnReference:
+              columnCounter: 63fd0fc7-364f-4cbd-99ee-023673558832
+              stepCounter: c9583aae-4227-43eb-82a4-d716c2076ea6
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PROVINCE_STATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: eccb4970-548e-4661-a214-908ec490449d
+                    stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+                transform: ""
+          - columnReference:
+              columnCounter: f376c3b7-9819-42ae-9d84-fea25377f667
+              stepCounter: c9583aae-4227-43eb-82a4-d716c2076ea6
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 49f995f3-4e66-41d9-8dae-81b0fb4ff470
+                    stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+                transform: ""
+          - columnReference:
+              columnCounter: 58f6c750-5575-42b3-86ae-7d22479e61e7
+              stepCounter: c9583aae-4227-43eb-82a4-d716c2076ea6
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a399b979-e42e-47d7-901e-d0f38e77a886
+                    stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_JHU_DASHBOARD_COVID_19_GLOBAL
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_JHU_DASHBOARD_COVID_19_GLOBAL') }} "DVSTG_JHU_DASHBOARD_COVID_19_GLOBAL"
+            name: HUB_JHU_DASHBOARD_COVID_19_GLOBAL
+            noLinkRefs: []
+      name: HUB_JHU_DASHBOARD_COVID_19_GLOBAL
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: c9583aae-4227-43eb-82a4-d716c2076ea6

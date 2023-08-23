@@ -1,0 +1,119 @@
+steps:
+  HUB_IHME_COVID_19-16627343-c0bf-4ec7-9fa8-db952d8c534b:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: f41126e8-d7d3-4116-b596-2da7b6a64a8f
+              stepCounter: 16627343-c0bf-4ec7-9fa8-db952d8c534b
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_IHME_COVID_19
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c22c8037-c2c7-4904-98eb-a43ffb52a191
+                    stepCounter: 1de465cb-bf5f-42fb-a2fa-f296908cf85b
+                transform: ""
+          - columnReference:
+              columnCounter: 1bd4d6c4-4fb5-4b91-8d6c-865e4c5f9830
+              stepCounter: 16627343-c0bf-4ec7-9fa8-db952d8c534b
+            dataType: VARCHAR(8192)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: COUNTRY_REGION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d474edfd-2c7a-4990-8f6c-a5e4cf4870b4
+                    stepCounter: 1de465cb-bf5f-42fb-a2fa-f296908cf85b
+                transform: ""
+          - columnReference:
+              columnCounter: ad1e4c2f-4b8c-49e8-8f24-42a751dd3c5f
+              stepCounter: 16627343-c0bf-4ec7-9fa8-db952d8c534b
+            dataType: VARCHAR(3)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ISO_3166_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 98e27aef-6e3b-4b69-8321-a5c8f659e8f1
+                    stepCounter: 1de465cb-bf5f-42fb-a2fa-f296908cf85b
+                transform: ""
+          - columnReference:
+              columnCounter: e032c171-f794-4428-9e64-4b24694bd713
+              stepCounter: 16627343-c0bf-4ec7-9fa8-db952d8c534b
+            dataType: VARCHAR(3)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ISO_3166_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 759b301d-da70-49e5-8153-25bc70032042
+                    stepCounter: 1de465cb-bf5f-42fb-a2fa-f296908cf85b
+                transform: ""
+          - columnReference:
+              columnCounter: fcd72a6a-741c-4724-aa17-02d1e93155d3
+              stepCounter: 16627343-c0bf-4ec7-9fa8-db952d8c534b
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f0787933-8114-4eee-9ab4-889518749b1f
+                    stepCounter: 1de465cb-bf5f-42fb-a2fa-f296908cf85b
+                transform: ""
+          - columnReference:
+              columnCounter: 99b9caf7-6649-4a5a-b7e0-b21518cf0e57
+              stepCounter: 16627343-c0bf-4ec7-9fa8-db952d8c534b
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e784a841-f58d-442c-a394-01ad951d9cfe
+                    stepCounter: 1de465cb-bf5f-42fb-a2fa-f296908cf85b
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_IHME_COVID_19
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_IHME_COVID_19') }} "DVSTG_IHME_COVID_19"
+            name: HUB_IHME_COVID_19
+            noLinkRefs: []
+      name: HUB_IHME_COVID_19
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 16627343-c0bf-4ec7-9fa8-db952d8c534b

@@ -1,0 +1,455 @@
+steps:
+  LINK_WWI_INVOICES-b8ec3bb1-7a6d-4b7a-bd85-7b6168e2b7c4:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 219d45b3-c536-40a1-8cbb-d38eeeaea816
+              stepCounter: b8ec3bb1-7a6d-4b7a-bd85-7b6168e2b7c4
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_INVOICES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 786be4aa-ccfc-4682-b753-82c82d2ca640
+                    stepCounter: ff900fa2-7117-4d8b-85fe-15408117c767
+                transform: ""
+          - columnReference:
+              columnCounter: 71aed7b2-56a7-4fcb-b765-6aba9c947dc8
+              stepCounter: b8ec3bb1-7a6d-4b7a-bd85-7b6168e2b7c4
+            dataType: NUMBER(38,0)
+            description: Numeric ID used for reference to an invoice within the database
+            hashColumns: []
+            hashDetails: null
+            name: INVOICEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 32cf3eb5-4ab9-47ab-929c-067201361e6f
+                    stepCounter: ff900fa2-7117-4d8b-85fe-15408117c767
+                transform: ""
+          - columnReference:
+              columnCounter: 24409ac4-16d2-4bc1-bed6-acec24d8cfb8
+              stepCounter: b8ec3bb1-7a6d-4b7a-bd85-7b6168e2b7c4
+            dataType: NUMBER(38,0)
+            description: Customer for this invoice
+            hashColumns: []
+            hashDetails: null
+            name: CUSTOMERID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a7b0208a-9c60-474d-8aa1-ea4bea8184d4
+                    stepCounter: ff900fa2-7117-4d8b-85fe-15408117c767
+                transform: ""
+          - columnReference:
+              columnCounter: c7ceec59-5d54-47b6-9343-56d3d10a1913
+              stepCounter: b8ec3bb1-7a6d-4b7a-bd85-7b6168e2b7c4
+            dataType: NUMBER(38,0)
+            description: Bill to customer for this invoice (invoices might be billed to a head office)
+            hashColumns: []
+            hashDetails: null
+            name: BILLTOCUSTOMERID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ccfebb06-80c1-48ce-ba2c-353f109f13fd
+                    stepCounter: ff900fa2-7117-4d8b-85fe-15408117c767
+                transform: ""
+          - columnReference:
+              columnCounter: 706146fe-541a-4d6c-aec6-f93dd4d77e8b
+              stepCounter: b8ec3bb1-7a6d-4b7a-bd85-7b6168e2b7c4
+            dataType: NUMBER(38,0)
+            description: Sales order (if any) for this invoice
+            hashColumns: []
+            hashDetails: null
+            name: ORDERID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7d56767e-cb21-48d1-b950-7aa8f7f129c3
+                    stepCounter: ff900fa2-7117-4d8b-85fe-15408117c767
+                transform: ""
+          - columnReference:
+              columnCounter: b34045f2-a59b-427e-96d4-122054947231
+              stepCounter: b8ec3bb1-7a6d-4b7a-bd85-7b6168e2b7c4
+            dataType: NUMBER(38,0)
+            description: How these stock items are beign delivered
+            hashColumns: []
+            hashDetails: null
+            name: DELIVERYMETHODID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 43a8abdf-5dad-4db5-9ed9-95f99bd2529b
+                    stepCounter: ff900fa2-7117-4d8b-85fe-15408117c767
+                transform: ""
+          - columnReference:
+              columnCounter: 9e5d9a46-8052-4da3-8d3c-269268874abe
+              stepCounter: b8ec3bb1-7a6d-4b7a-bd85-7b6168e2b7c4
+            dataType: NUMBER(38,0)
+            description: Customer contact for this invoice
+            hashColumns: []
+            hashDetails: null
+            name: CONTACTPERSONID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 593e8c2c-649b-4ef3-ac11-8c5fd5ded3b3
+                    stepCounter: ff900fa2-7117-4d8b-85fe-15408117c767
+                transform: ""
+          - columnReference:
+              columnCounter: 7ba03b77-f0f4-418d-9e80-1626f6a5f0a9
+              stepCounter: b8ec3bb1-7a6d-4b7a-bd85-7b6168e2b7c4
+            dataType: NUMBER(38,0)
+            description: Customer accounts contact for this invoice
+            hashColumns: []
+            hashDetails: null
+            name: ACCOUNTSPERSONID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d69b87f8-4730-4081-ade1-1cfd4a7a84e1
+                    stepCounter: ff900fa2-7117-4d8b-85fe-15408117c767
+                transform: ""
+          - columnReference:
+              columnCounter: 73862f54-2d82-4034-9ca0-9fa6e6008f33
+              stepCounter: b8ec3bb1-7a6d-4b7a-bd85-7b6168e2b7c4
+            dataType: NUMBER(38,0)
+            description: Salesperson for this invoice
+            hashColumns: []
+            hashDetails: null
+            name: SALESPERSONPERSONID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c132aa3e-442d-4c3b-9d0f-595996c13fae
+                    stepCounter: ff900fa2-7117-4d8b-85fe-15408117c767
+                transform: ""
+          - columnReference:
+              columnCounter: 43651397-2e47-4f92-851f-56616b73e1ee
+              stepCounter: b8ec3bb1-7a6d-4b7a-bd85-7b6168e2b7c4
+            dataType: NUMBER(38,0)
+            description: Person who packed this shipment (or checked the packing)
+            hashColumns: []
+            hashDetails: null
+            name: PACKEDBYPERSONID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bc311a25-967e-476f-90c0-868d8fdb0060
+                    stepCounter: ff900fa2-7117-4d8b-85fe-15408117c767
+                transform: ""
+          - columnReference:
+              columnCounter: 10364c8a-b71b-4413-88b3-fe264d869c35
+              stepCounter: b8ec3bb1-7a6d-4b7a-bd85-7b6168e2b7c4
+            dataType: DATE
+            description: Date that this invoice was raised
+            hashColumns: []
+            hashDetails: null
+            name: INVOICEDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9414ee49-dbbc-4b91-9eb6-920991699267
+                    stepCounter: ff900fa2-7117-4d8b-85fe-15408117c767
+                transform: ""
+          - columnReference:
+              columnCounter: b700ffa2-b34d-4f5a-ad53-88f2acd0bcbb
+              stepCounter: b8ec3bb1-7a6d-4b7a-bd85-7b6168e2b7c4
+            dataType: VARCHAR(20)
+            description: Purchase Order Number received from customer
+            hashColumns: []
+            hashDetails: null
+            name: CUSTOMERPURCHASEORDERNUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1aa13d96-d8c0-42ae-a187-97f354bb8021
+                    stepCounter: ff900fa2-7117-4d8b-85fe-15408117c767
+                transform: ""
+          - columnReference:
+              columnCounter: fec69393-765b-4fdb-af54-b3f62a9112d0
+              stepCounter: b8ec3bb1-7a6d-4b7a-bd85-7b6168e2b7c4
+            dataType: VARCHAR(20)
+            description: Is this a credit note (rather than an invoice)
+            hashColumns: []
+            hashDetails: null
+            name: ISCREDITNOTE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c77a97e9-a8ca-4efe-a7ce-43caf465f837
+                    stepCounter: ff900fa2-7117-4d8b-85fe-15408117c767
+                transform: ""
+          - columnReference:
+              columnCounter: 40ac3de2-b6a6-4c1c-ab43-cc1fbd346ac9
+              stepCounter: b8ec3bb1-7a6d-4b7a-bd85-7b6168e2b7c4
+            dataType: VARCHAR(4000)
+            description: Reason that this credit note needed to be generated (if applicable)
+            hashColumns: []
+            hashDetails: null
+            name: CREDITNOTEREASON
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4de79c51-4338-4a2e-8ff2-b9de55a8f97e
+                    stepCounter: ff900fa2-7117-4d8b-85fe-15408117c767
+                transform: ""
+          - columnReference:
+              columnCounter: c50e41c4-7740-4567-a8c7-d61ffee9a572
+              stepCounter: b8ec3bb1-7a6d-4b7a-bd85-7b6168e2b7c4
+            dataType: VARCHAR(4000)
+            description: Any comments related to this invoice (sent to customer)
+            hashColumns: []
+            hashDetails: null
+            name: COMMENTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7d1f8e56-4d80-4c4a-81cf-f229c44a8f1a
+                    stepCounter: ff900fa2-7117-4d8b-85fe-15408117c767
+                transform: ""
+          - columnReference:
+              columnCounter: c8f27076-fb67-4aef-aca2-6da9fdf6b5b5
+              stepCounter: b8ec3bb1-7a6d-4b7a-bd85-7b6168e2b7c4
+            dataType: VARCHAR(4000)
+            description: Any comments related to delivery (sent to customer)
+            hashColumns: []
+            hashDetails: null
+            name: DELIVERYINSTRUCTIONS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e8bbd14f-6910-4187-8bcc-d5bce24ffa01
+                    stepCounter: ff900fa2-7117-4d8b-85fe-15408117c767
+                transform: ""
+          - columnReference:
+              columnCounter: 3660a5c4-956b-4aa2-ac11-cf5346c86cb9
+              stepCounter: b8ec3bb1-7a6d-4b7a-bd85-7b6168e2b7c4
+            dataType: VARCHAR(4000)
+            description: Any internal comments related to this invoice (not sent to the customer)
+            hashColumns: []
+            hashDetails: null
+            name: INTERNALCOMMENTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: efe3d19f-ec3d-41f0-83b9-d56add9e8bb8
+                    stepCounter: ff900fa2-7117-4d8b-85fe-15408117c767
+                transform: ""
+          - columnReference:
+              columnCounter: 5799a713-1fd3-4f2a-ba5f-0a424ee603ff
+              stepCounter: b8ec3bb1-7a6d-4b7a-bd85-7b6168e2b7c4
+            dataType: NUMBER(38,0)
+            description: Total number of dry packages (information for the delivery driver)
+            hashColumns: []
+            hashDetails: null
+            name: TOTALDRYITEMS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5b594048-0497-46fc-b252-3ff71211783d
+                    stepCounter: ff900fa2-7117-4d8b-85fe-15408117c767
+                transform: ""
+          - columnReference:
+              columnCounter: d875f61a-b6c4-486b-8d91-03193c5d205c
+              stepCounter: b8ec3bb1-7a6d-4b7a-bd85-7b6168e2b7c4
+            dataType: NUMBER(38,0)
+            description: Total number of chiller packages (information for the delivery driver)
+            hashColumns: []
+            hashDetails: null
+            name: TOTALCHILLERITEMS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 869f0a94-be9d-44e6-a7e8-e5d1ba667d22
+                    stepCounter: ff900fa2-7117-4d8b-85fe-15408117c767
+                transform: ""
+          - columnReference:
+              columnCounter: e7cec858-2460-4805-9f25-b97273078a2d
+              stepCounter: b8ec3bb1-7a6d-4b7a-bd85-7b6168e2b7c4
+            dataType: VARCHAR(5)
+            description: Delivery run for this shipment
+            hashColumns: []
+            hashDetails: null
+            name: DELIVERYRUN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6dcd96dd-de3e-4f23-a880-0b074e7a6b72
+                    stepCounter: ff900fa2-7117-4d8b-85fe-15408117c767
+                transform: ""
+          - columnReference:
+              columnCounter: 77d2c1cb-1c81-46fd-b9ce-dd650de9da53
+              stepCounter: b8ec3bb1-7a6d-4b7a-bd85-7b6168e2b7c4
+            dataType: VARCHAR(5)
+            description: Position in the delivery run for this shipment
+            hashColumns: []
+            hashDetails: null
+            name: RUNPOSITION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 614703a2-44db-41a1-af67-8ed135c6f722
+                    stepCounter: ff900fa2-7117-4d8b-85fe-15408117c767
+                transform: ""
+          - columnReference:
+              columnCounter: 375aaca2-5ff5-4ac1-8f1f-ce32f8f5064d
+              stepCounter: b8ec3bb1-7a6d-4b7a-bd85-7b6168e2b7c4
+            dataType: VARCHAR(4000)
+            description: JSON-structured data returned from delivery devices for deliveries made directly by the organization
+            hashColumns: []
+            hashDetails: null
+            name: RETURNEDDELIVERYDATA
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 69cd0eae-b907-4397-aa1f-fa48b66b37b8
+                    stepCounter: ff900fa2-7117-4d8b-85fe-15408117c767
+                transform: ""
+          - columnReference:
+              columnCounter: 8fcedefa-1802-44a9-b2ae-ea7c40cbfe73
+              stepCounter: b8ec3bb1-7a6d-4b7a-bd85-7b6168e2b7c4
+            dataType: VARCHAR(16777216)
+            description: Confirmed delivery date and time promoted from JSON delivery data
+            hashColumns: []
+            hashDetails: null
+            name: CONFIRMEDDELIVERYTIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 70ecee7d-b18f-4050-b3f4-45127003c8ab
+                    stepCounter: ff900fa2-7117-4d8b-85fe-15408117c767
+                transform: ""
+          - columnReference:
+              columnCounter: f2625bd8-5a0a-466a-a25f-c480985c5d79
+              stepCounter: b8ec3bb1-7a6d-4b7a-bd85-7b6168e2b7c4
+            dataType: VARCHAR(4000)
+            description: Confirmed receiver promoted from JSON delivery data
+            hashColumns: []
+            hashDetails: null
+            name: CONFIRMEDRECEIVEDBY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2d215a8e-56a8-4825-93ad-726959b7b961
+                    stepCounter: ff900fa2-7117-4d8b-85fe-15408117c767
+                transform: ""
+          - columnReference:
+              columnCounter: 34fc6535-696f-4621-a3b3-7e1b447c17f6
+              stepCounter: b8ec3bb1-7a6d-4b7a-bd85-7b6168e2b7c4
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LASTEDITEDBY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 245da948-5712-4781-b9cc-acbac81d09a4
+                    stepCounter: ff900fa2-7117-4d8b-85fe-15408117c767
+                transform: ""
+          - columnReference:
+              columnCounter: 9777941f-94c5-4a30-96a5-7bdb0ead4a1f
+              stepCounter: b8ec3bb1-7a6d-4b7a-bd85-7b6168e2b7c4
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LASTEDITEDWHEN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3ad7dd85-c2f8-43d3-89b8-ba47189eddde
+                    stepCounter: ff900fa2-7117-4d8b-85fe-15408117c767
+                transform: ""
+          - columnReference:
+              columnCounter: de7fbedc-8d3c-4671-ae83-82b1ec56562e
+              stepCounter: b8ec3bb1-7a6d-4b7a-bd85-7b6168e2b7c4
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2c40189f-afcd-478d-8ce6-3bff285ccb45
+                    stepCounter: ff900fa2-7117-4d8b-85fe-15408117c767
+                transform: ""
+          - columnReference:
+              columnCounter: 65e7fa75-9934-465a-842e-9b9bf7827513
+              stepCounter: b8ec3bb1-7a6d-4b7a-bd85-7b6168e2b7c4
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: daf5f143-9b8e-4069-a467-6b33b92c0330
+                    stepCounter: ff900fa2-7117-4d8b-85fe-15408117c767
+                transform: ""
+          - columnReference:
+              columnCounter: 07c0c9a2-4b84-4582-a17f-a7f5dc50f570
+              stepCounter: b8ec3bb1-7a6d-4b7a-bd85-7b6168e2b7c4
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f4cef09f-92d2-4e1e-8b3b-0a4fd7618bad
+                    stepCounter: ff900fa2-7117-4d8b-85fe-15408117c767
+                transform: ""
+          - columnReference:
+              columnCounter: bdb0a9f9-56ef-44e5-be37-03e678efb8a3
+              stepCounter: b8ec3bb1-7a6d-4b7a-bd85-7b6168e2b7c4
+            config:
+              is_Link_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LNK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 062acb50-6b71-49d9-84e9-7bd354ae722c
+                    stepCounter: ff900fa2-7117-4d8b-85fe-15408117c767
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_WWI_INVOICES
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_WWI_INVOICES') }} "DVSTG_WWI_INVOICES"
+            name: LINK_WWI_INVOICES
+            noLinkRefs: []
+      name: LINK_WWI_INVOICES
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::7
+      type: sql
+    stepCounter: b8ec3bb1-7a6d-4b7a-bd85-7b6168e2b7c4

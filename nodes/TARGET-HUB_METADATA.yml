@@ -1,0 +1,91 @@
+steps:
+  HUB_METADATA-7c3bcfb8-84ee-488b-9e8b-a518967773cf:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: Metadata table
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 6e40d5e6-0e42-4827-a4a5-513370244b66
+              stepCounter: 7c3bcfb8-84ee-488b-9e8b-a518967773cf
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_METADATA
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cc6b854d-0f25-4204-bfe2-d975d360f01d
+                    stepCounter: 84da04be-69b2-4116-a29c-f7486c29cbf8
+                transform: ""
+          - columnReference:
+              columnCounter: 734ad79d-f988-4064-8d8d-d460e782be8a
+              stepCounter: 7c3bcfb8-84ee-488b-9e8b-a518967773cf
+            dataType: VARCHAR(16777216)
+            description: Table name
+            hashColumns: []
+            hashDetails: null
+            name: TABLE_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 58cf0b90-eaba-4ea8-be60-2c5f1c9f824e
+                    stepCounter: 84da04be-69b2-4116-a29c-f7486c29cbf8
+                transform: ""
+          - columnReference:
+              columnCounter: b24586bc-e628-4434-b4ce-942f6869983a
+              stepCounter: 7c3bcfb8-84ee-488b-9e8b-a518967773cf
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 38b3893b-90fd-470f-88b6-0ef98b0c08f5
+                    stepCounter: 84da04be-69b2-4116-a29c-f7486c29cbf8
+                transform: ""
+          - columnReference:
+              columnCounter: 94360a5f-ccb6-41b9-a3a1-97d85eb8056d
+              stepCounter: 7c3bcfb8-84ee-488b-9e8b-a518967773cf
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 07040d20-a34d-4cb6-a20e-c6bfe2444edf
+                    stepCounter: 84da04be-69b2-4116-a29c-f7486c29cbf8
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_METADATA
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_METADATA') }} "DVSTG_METADATA"
+            name: HUB_METADATA
+            noLinkRefs: []
+      name: HUB_METADATA
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 7c3bcfb8-84ee-488b-9e8b-a518967773cf

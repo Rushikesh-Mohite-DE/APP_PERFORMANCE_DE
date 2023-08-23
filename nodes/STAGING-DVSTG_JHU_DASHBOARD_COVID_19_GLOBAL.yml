@@ -1,0 +1,419 @@
+steps:
+  DVSTG_JHU_DASHBOARD_COVID_19_GLOBAL-f562ffaa-25ed-43a8-ab49-1ba42b30dcb4:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c3c930a8-38df-4b3b-9e92-8aa4d9d11f4f
+              stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: ed1c1126-bb1d-4486-9b08-358beef3e895
+                stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+              - columnCounter: eccb4970-548e-4661-a214-908ec490449d
+                stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+            name: HK_JHU_DASHBOARD_COVID_19_GLOBAL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: ed1c1126-bb1d-4486-9b08-358beef3e895
+              stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: COUNTRY_REGION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 38e09b4d-1ce7-454c-b612-ecc93252a9e9
+                    stepCounter: 318f3ebf-e947-4270-b423-9f9a7df4142a
+                transform: ""
+          - columnReference:
+              columnCounter: eccb4970-548e-4661-a214-908ec490449d
+              stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: PROVINCE_STATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ac8df44f-5b4b-4c86-a7cf-a1a714442696
+                    stepCounter: 318f3ebf-e947-4270-b423-9f9a7df4142a
+                transform: ""
+          - columnReference:
+              columnCounter: fe2ebf90-be9a-40f6-b3c1-fa90ee593abe
+              stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: COUNTY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f5dfa8de-f05d-41ee-897c-448c4a235e0c
+                    stepCounter: 318f3ebf-e947-4270-b423-9f9a7df4142a
+                transform: ""
+          - columnReference:
+              columnCounter: c3bc4134-ddab-4c2c-a175-48c89c9df874
+              stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+            dataType: VARCHAR(10)
+            description: ""
+            name: FIPS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 29248a8d-9585-4bfd-a456-a3923727b995
+                    stepCounter: 318f3ebf-e947-4270-b423-9f9a7df4142a
+                transform: ""
+          - columnReference:
+              columnCounter: dbe2c2de-c3ee-4c3e-a026-f8ee60d48a80
+              stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+            dataType: DATE
+            description: ""
+            name: DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9c34fa2f-4802-4b91-a620-dc542500e1a3
+                    stepCounter: 318f3ebf-e947-4270-b423-9f9a7df4142a
+                transform: ""
+          - columnReference:
+              columnCounter: 0bb7f51b-d309-4eeb-87bf-f712498d0928
+              stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+            dataType: FLOAT
+            description: ""
+            name: ACTIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 605856d6-56a4-44d3-bb6f-416c085f13fa
+                    stepCounter: 318f3ebf-e947-4270-b423-9f9a7df4142a
+                transform: ""
+          - columnReference:
+              columnCounter: af64aee2-f053-4868-8399-43e672328ba4
+              stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+            dataType: FLOAT
+            description: ""
+            name: PEOPLE_TESTED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 66a30d60-3e95-4282-b571-70b3fb931a18
+                    stepCounter: 318f3ebf-e947-4270-b423-9f9a7df4142a
+                transform: ""
+          - columnReference:
+              columnCounter: b5ddf11d-a7a7-43dc-b8a9-15e5b6b61125
+              stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+            dataType: NUMBER(38,0)
+            description: ""
+            name: CONFIRMED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8f5d6109-7179-4d5a-9175-1144e91f4cf2
+                    stepCounter: 318f3ebf-e947-4270-b423-9f9a7df4142a
+                transform: ""
+          - columnReference:
+              columnCounter: 9af28052-7771-40e8-8902-5e72e5b47962
+              stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+            dataType: NUMBER(38,0)
+            description: ""
+            name: PEOPLE_HOSPITALIZED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3ce1a196-842b-42c1-af16-60b29ffd4202
+                    stepCounter: 318f3ebf-e947-4270-b423-9f9a7df4142a
+                transform: ""
+          - columnReference:
+              columnCounter: 1f73b04e-ac31-4fc5-9ad7-7945ddeec8bc
+              stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+            dataType: NUMBER(38,0)
+            description: ""
+            name: DEATHS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ef2006eb-4c0b-47b6-8041-1cade2fa4583
+                    stepCounter: 318f3ebf-e947-4270-b423-9f9a7df4142a
+                transform: ""
+          - columnReference:
+              columnCounter: 5bff4c4a-b39c-431f-85f8-c5d4d872b50d
+              stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+            dataType: FLOAT
+            description: ""
+            name: RECOVERED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 172a08bf-e3f4-438b-be6a-8edf3984ac53
+                    stepCounter: 318f3ebf-e947-4270-b423-9f9a7df4142a
+                transform: ""
+          - columnReference:
+              columnCounter: 4118168b-b527-439a-86a0-77179c245135
+              stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+            dataType: FLOAT
+            description: ""
+            name: INCIDENT_RATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e2bf4ad9-b269-42b6-a164-27dd7f97fcad
+                    stepCounter: 318f3ebf-e947-4270-b423-9f9a7df4142a
+                transform: ""
+          - columnReference:
+              columnCounter: e8ab0a46-2b9d-42a4-b719-8959a6df0521
+              stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+            dataType: FLOAT
+            description: ""
+            name: TESTING_RATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6bcb87a8-f66e-4398-bb1d-3afd1a15ca04
+                    stepCounter: 318f3ebf-e947-4270-b423-9f9a7df4142a
+                transform: ""
+          - columnReference:
+              columnCounter: e9fed70a-cdac-43a7-a4eb-ac4226436279
+              stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+            dataType: FLOAT
+            description: ""
+            name: HOSPITALIZATION_RATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 808aa285-f092-41a0-9853-1b857d6627f8
+                    stepCounter: 318f3ebf-e947-4270-b423-9f9a7df4142a
+                transform: ""
+          - columnReference:
+              columnCounter: bed4d183-61ab-40c7-b852-e00ff5ffe3b2
+              stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+            dataType: FLOAT
+            description: ""
+            name: MORTALITY_RATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 228abb41-1780-4a4e-a011-94286824bf1a
+                    stepCounter: 318f3ebf-e947-4270-b423-9f9a7df4142a
+                transform: ""
+          - columnReference:
+              columnCounter: 4ea7d403-1cea-43fd-a1f9-97388c9be5b6
+              stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+            dataType: FLOAT
+            description: ""
+            name: LONG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1aed1327-cc54-426b-88be-ecf6d253938a
+                    stepCounter: 318f3ebf-e947-4270-b423-9f9a7df4142a
+                transform: ""
+          - columnReference:
+              columnCounter: f78444e8-a605-4d1d-accd-3e64f7697054
+              stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+            dataType: FLOAT
+            description: ""
+            name: LAT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 047c084e-95b0-471b-9a86-55b527768f41
+                    stepCounter: 318f3ebf-e947-4270-b423-9f9a7df4142a
+                transform: ""
+          - columnReference:
+              columnCounter: 8d7f61c5-dd4a-4978-bb11-2608d3608f9f
+              stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+            dataType: VARCHAR(20)
+            description: ""
+            name: ISO3166_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a12abe4e-756e-46f5-b568-ad821c5a7150
+                    stepCounter: 318f3ebf-e947-4270-b423-9f9a7df4142a
+                transform: ""
+          - columnReference:
+              columnCounter: b011793e-488e-40cd-8c78-71740620b383
+              stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+            dataType: VARCHAR(20)
+            description: ""
+            name: ISO3166_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3fe71d42-a1cf-4999-86a0-3277def3761e
+                    stepCounter: 318f3ebf-e947-4270-b423-9f9a7df4142a
+                transform: ""
+          - columnReference:
+              columnCounter: 08e9e2ef-369b-4d05-9cbc-d14e46687fa9
+              stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            name: LAST_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a5c9de28-b9a2-4ab5-a953-ee71f48dc5a8
+                    stepCounter: 318f3ebf-e947-4270-b423-9f9a7df4142a
+                transform: ""
+          - columnReference:
+              columnCounter: fd47bac2-ce7b-400f-9ce1-4458526481cd
+              stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+            dataType: BOOLEAN
+            description: ""
+            name: LAST_REPORTED_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6ba26720-a1c2-4560-bae6-2099af2a4d8d
+                    stepCounter: 318f3ebf-e947-4270-b423-9f9a7df4142a
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 49f995f3-4e66-41d9-8dae-81b0fb4ff470
+              stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a399b979-e42e-47d7-901e-d0f38e77a886
+              stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 673c7345-01ae-4bad-aa8c-f88e284c75bd
+              stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: fe2ebf90-be9a-40f6-b3c1-fa90ee593abe
+                stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+              - columnCounter: c3bc4134-ddab-4c2c-a175-48c89c9df874
+                stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+              - columnCounter: dbe2c2de-c3ee-4c3e-a026-f8ee60d48a80
+                stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+              - columnCounter: 0bb7f51b-d309-4eeb-87bf-f712498d0928
+                stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+              - columnCounter: af64aee2-f053-4868-8399-43e672328ba4
+                stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+              - columnCounter: b5ddf11d-a7a7-43dc-b8a9-15e5b6b61125
+                stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+              - columnCounter: 9af28052-7771-40e8-8902-5e72e5b47962
+                stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+              - columnCounter: 1f73b04e-ac31-4fc5-9ad7-7945ddeec8bc
+                stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+              - columnCounter: 5bff4c4a-b39c-431f-85f8-c5d4d872b50d
+                stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+              - columnCounter: 4118168b-b527-439a-86a0-77179c245135
+                stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+              - columnCounter: e8ab0a46-2b9d-42a4-b719-8959a6df0521
+                stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+              - columnCounter: e9fed70a-cdac-43a7-a4eb-ac4226436279
+                stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+              - columnCounter: bed4d183-61ab-40c7-b852-e00ff5ffe3b2
+                stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+              - columnCounter: 4ea7d403-1cea-43fd-a1f9-97388c9be5b6
+                stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+              - columnCounter: f78444e8-a605-4d1d-accd-3e64f7697054
+                stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+              - columnCounter: 8d7f61c5-dd4a-4978-bb11-2608d3608f9f
+                stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+              - columnCounter: b011793e-488e-40cd-8c78-71740620b383
+                stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+              - columnCounter: 08e9e2ef-369b-4d05-9cbc-d14e46687fa9
+                stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+              - columnCounter: fd47bac2-ce7b-400f-9ce1-4458526481cd
+                stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 47af3c47-1996-44a1-9e69-6f59fd334dda
+              stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: c3bc4134-ddab-4c2c-a175-48c89c9df874
+                stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: COVID19
+                nodeName: JHU_DASHBOARD_COVID_19_GLOBAL
+            join:
+              joinCondition: FROM {{ ref('COVID19', 'JHU_DASHBOARD_COVID_19_GLOBAL') }} "JHU_DASHBOARD_COVID_19_GLOBAL"
+            name: DVSTG_JHU_DASHBOARD_COVID_19_GLOBAL
+            noLinkRefs: []
+      name: DVSTG_JHU_DASHBOARD_COVID_19_GLOBAL
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: f562ffaa-25ed-43a8-ab49-1ba42b30dcb4

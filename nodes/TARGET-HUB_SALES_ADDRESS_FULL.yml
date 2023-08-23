@@ -1,0 +1,105 @@
+steps:
+  HUB_SALES_ADDRESS_FULL-c2a9e453-1e27-4ae7-a6e9-7dcbc48a1320:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: bc5b50ec-f2c0-4655-a25e-71bae9af2c29
+              stepCounter: c2a9e453-1e27-4ae7-a6e9-7dcbc48a1320
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_SALES_ADDRESS_FULL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d1ae78d1-0c99-4d21-a7b2-127db86ad278
+                    stepCounter: b68471bd-82c5-4ffa-baa4-2ee52dd60877
+                transform: ""
+          - columnReference:
+              columnCounter: 1574c651-fb89-4f84-ad2f-963581179767
+              stepCounter: c2a9e453-1e27-4ae7-a6e9-7dcbc48a1320
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ADDRESS_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cf012d1c-71ce-4cbe-a3ec-5764b8a79c33
+                    stepCounter: b68471bd-82c5-4ffa-baa4-2ee52dd60877
+                transform: ""
+          - columnReference:
+              columnCounter: d56fb2cc-e714-49e6-be2c-cdd30ac9c896
+              stepCounter: c2a9e453-1e27-4ae7-a6e9-7dcbc48a1320
+            dataType: VARCHAR(20)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ADDRESS_TYPE_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 45fb8ecf-b1f4-4632-ae69-7f7f06f636b0
+                    stepCounter: b68471bd-82c5-4ffa-baa4-2ee52dd60877
+                transform: ""
+          - columnReference:
+              columnCounter: e919fe04-4148-4c61-a3e4-f0e9a4a5cfbf
+              stepCounter: c2a9e453-1e27-4ae7-a6e9-7dcbc48a1320
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 860eea65-5177-4309-ba17-3a7d7205d241
+                    stepCounter: b68471bd-82c5-4ffa-baa4-2ee52dd60877
+                transform: ""
+          - columnReference:
+              columnCounter: 53de5eb9-cd1a-43ea-b7be-2f5f40415a6d
+              stepCounter: c2a9e453-1e27-4ae7-a6e9-7dcbc48a1320
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 75d80b67-c9df-4c8e-a4b5-65ceda380d37
+                    stepCounter: b68471bd-82c5-4ffa-baa4-2ee52dd60877
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SALES_ADDRESS_FULL
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SALES_ADDRESS_FULL') }} "DVSTG_SALES_ADDRESS_FULL"
+            name: HUB_SALES_ADDRESS_FULL
+            noLinkRefs: []
+      name: HUB_SALES_ADDRESS_FULL
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: c2a9e453-1e27-4ae7-a6e9-7dcbc48a1320

@@ -1,0 +1,109 @@
+steps:
+  AW_LOAD_STORE-cc77440b-b178-4fc5-b779-b0129f7221d2:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: ADV_WRKS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 57edd87d-eb9e-4170-9b4e-f205060b0ead
+              stepCounter: cc77440b-b178-4fc5-b779-b0129f7221d2
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Primary key. Foreign key to Customer.BusinessEntityID.
+            name: BUSINESSENTITYID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b1f19d14-37e6-40b4-8779-e89c10fe2646
+              stepCounter: cc77440b-b178-4fc5-b779-b0129f7221d2
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: Name of the store.
+            name: NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7c9c8f2d-73da-48cc-8fe5-c6b9d4d59761
+              stepCounter: cc77440b-b178-4fc5-b779-b0129f7221d2
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ID of the sales person assigned to the customer. Foreign key to SalesPerson.BusinessEntityID.
+            name: SALESPERSONID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f84be6af-7e20-4462-928f-eacd4c65f4e7
+              stepCounter: cc77440b-b178-4fc5-b779-b0129f7221d2
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: Demographic informationg about the store such as the number of employees, annual sales and store type.
+            name: DEMOGRAPHICS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a145a157-38d3-41a2-a067-5fa922379f1e
+              stepCounter: cc77440b-b178-4fc5-b779-b0129f7221d2
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            name: ROWGUID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5d9464d6-e81d-4d75-9241-10ef61308f7e
+              stepCounter: cc77440b-b178-4fc5-b779-b0129f7221d2
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_STORE') }}
+      name: AW_LOAD_STORE
+      schema: ""
+      sqlType: Source
+      table: AW_LOAD_STORE
+      type: sourceInput
+    stepCounter: cc77440b-b178-4fc5-b779-b0129f7221d2

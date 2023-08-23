@@ -1,0 +1,105 @@
+steps:
+  HUB_CDC_TESTING-5e8bfb82-cea3-4494-a0ba-0448a2107221:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 43e0bdb6-3aab-4df0-be10-b1d4d4ad13e0
+              stepCounter: 5e8bfb82-cea3-4494-a0ba-0448a2107221
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_CDC_TESTING
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ae7f3865-cb4b-4ab5-8a4b-77ca63729962
+                    stepCounter: 5b0970c0-87d0-4105-a7cc-7caf47405a70
+                transform: ""
+          - columnReference:
+              columnCounter: 32996086-d2b5-47ad-96ab-1b50241eef0c
+              stepCounter: 5e8bfb82-cea3-4494-a0ba-0448a2107221
+            dataType: VARCHAR(2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ISO3166_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7cce08dd-1d9b-4627-a98e-d21cf3c567d4
+                    stepCounter: 5b0970c0-87d0-4105-a7cc-7caf47405a70
+                transform: ""
+          - columnReference:
+              columnCounter: 6aa0738c-4db2-4a5b-8e3f-b1d2ce8047ee
+              stepCounter: 5e8bfb82-cea3-4494-a0ba-0448a2107221
+            dataType: VARCHAR(2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ISO3166_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d9aca0b9-9044-41af-9e5e-5fadd98c458d
+                    stepCounter: 5b0970c0-87d0-4105-a7cc-7caf47405a70
+                transform: ""
+          - columnReference:
+              columnCounter: 386a66fd-a2ef-4a30-86a5-06b6b070b053
+              stepCounter: 5e8bfb82-cea3-4494-a0ba-0448a2107221
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 36bfeede-41b3-4461-94a6-5b5fcb4dbafc
+                    stepCounter: 5b0970c0-87d0-4105-a7cc-7caf47405a70
+                transform: ""
+          - columnReference:
+              columnCounter: a5baa238-fc59-4760-84be-159101272454
+              stepCounter: 5e8bfb82-cea3-4494-a0ba-0448a2107221
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 17e942f3-8f9f-4828-818c-9f2cc808d604
+                    stepCounter: 5b0970c0-87d0-4105-a7cc-7caf47405a70
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_CDC_TESTING
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_CDC_TESTING') }} "DVSTG_CDC_TESTING"
+            name: HUB_CDC_TESTING
+            noLinkRefs: []
+      name: HUB_CDC_TESTING
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 5e8bfb82-cea3-4494-a0ba-0448a2107221

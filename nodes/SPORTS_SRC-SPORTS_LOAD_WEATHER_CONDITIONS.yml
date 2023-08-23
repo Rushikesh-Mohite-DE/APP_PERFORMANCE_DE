@@ -1,0 +1,154 @@
+steps:
+  SPORTS_LOAD_WEATHER_CONDITIONS-58dec2ec-9348-4c32-9967-996efcb61658:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SPORTS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e527a541-2d1d-49ea-930a-9a55b708abeb
+              stepCounter: 58dec2ec-9348-4c32-9967-996efcb61658
+            config: {}
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            name: ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7cfd52e0-285c-4ab6-883f-a29ccb6fd9e2
+              stepCounter: 58dec2ec-9348-4c32-9967-996efcb61658
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: EVENT_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 63f7e103-5141-4335-872b-d78548139adf
+              stepCounter: 58dec2ec-9348-4c32-9967-996efcb61658
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: TEMPERATURE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 209e7301-f41a-45fa-98b5-aea4bd5664b5
+              stepCounter: 58dec2ec-9348-4c32-9967-996efcb61658
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: TEMPERATURE_UNITS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b97d93cc-3719-433a-9477-f90ed35848f9
+              stepCounter: 58dec2ec-9348-4c32-9967-996efcb61658
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: HUMIDITY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fa903e6e-3cd8-45e4-9d21-f30562b59378
+              stepCounter: 58dec2ec-9348-4c32-9967-996efcb61658
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: CLOUDS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3132e579-134d-457b-ac15-a8dca4503a3a
+              stepCounter: 58dec2ec-9348-4c32-9967-996efcb61658
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: WIND_DIRECTION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e9bee28a-67a8-414b-aa49-0b5ce178d33f
+              stepCounter: 58dec2ec-9348-4c32-9967-996efcb61658
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: WIND_VELOCITY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9c220d79-369b-4999-8dc0-a542df3c9d6c
+              stepCounter: 58dec2ec-9348-4c32-9967-996efcb61658
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: WEATHER_CODE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SPORTS_SRC', 'SPORTS_LOAD_WEATHER_CONDITIONS') }}
+      name: SPORTS_LOAD_WEATHER_CONDITIONS
+      schema: ""
+      sqlType: Source
+      table: SPORTS_LOAD_WEATHER_CONDITIONS
+      type: sourceInput
+    stepCounter: 58dec2ec-9348-4c32-9967-996efcb61658

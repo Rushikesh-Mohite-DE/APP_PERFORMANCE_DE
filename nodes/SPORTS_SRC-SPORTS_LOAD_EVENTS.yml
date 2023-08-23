@@ -1,0 +1,169 @@
+steps:
+  SPORTS_LOAD_EVENTS-c531f9c2-b0c6-4026-81de-8b2c8d6fb6cc:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SPORTS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7cc6954b-324b-4f3c-a20e-03de87953cba
+              stepCounter: c531f9c2-b0c6-4026-81de-8b2c8d6fb6cc
+            config: {}
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            name: ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8aea9b8b-8a19-4062-b712-6ea4fbb6a4ec
+              stepCounter: c531f9c2-b0c6-4026-81de-8b2c8d6fb6cc
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: EVENT_KEY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 324c36a2-613b-4827-8f16-deedfe497f53
+              stepCounter: c531f9c2-b0c6-4026-81de-8b2c8d6fb6cc
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: PUBLISHER_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c712ad8b-d113-4578-980e-ad817cde1e6f
+              stepCounter: c531f9c2-b0c6-4026-81de-8b2c8d6fb6cc
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: START_DATE_TIME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: da616e6a-c02e-41a0-a5e9-babcd3527be4
+              stepCounter: c531f9c2-b0c6-4026-81de-8b2c8d6fb6cc
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: SITE_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: beff91b7-5602-48b3-bc6d-1f9111b5fcb4
+              stepCounter: c531f9c2-b0c6-4026-81de-8b2c8d6fb6cc
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: SITE_ALIGNMENT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 94d777c4-4710-477b-8521-7a4091a1dee4
+              stepCounter: c531f9c2-b0c6-4026-81de-8b2c8d6fb6cc
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: EVENT_STATUS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6b0d4186-1c9e-4533-a193-6a00f6bff95a
+              stepCounter: c531f9c2-b0c6-4026-81de-8b2c8d6fb6cc
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: DURATION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 32afe39c-3a95-439d-9ebc-647f0a4b1b0d
+              stepCounter: c531f9c2-b0c6-4026-81de-8b2c8d6fb6cc
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: ATTENDANCE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f04cea41-cab5-4c7e-b7fe-b82c56473b38
+              stepCounter: c531f9c2-b0c6-4026-81de-8b2c8d6fb6cc
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: LAST_UPDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SPORTS_SRC', 'SPORTS_LOAD_EVENTS') }}
+      name: SPORTS_LOAD_EVENTS
+      schema: ""
+      sqlType: Source
+      table: SPORTS_LOAD_EVENTS
+      type: sourceInput
+    stepCounter: c531f9c2-b0c6-4026-81de-8b2c8d6fb6cc

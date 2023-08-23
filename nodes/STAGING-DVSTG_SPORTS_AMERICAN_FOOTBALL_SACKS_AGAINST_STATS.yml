@@ -1,0 +1,167 @@
+steps:
+  DVSTG_SPORTS_AMERICAN_FOOTBALL_SACKS_AGAINST_STATS-034a8b2f-2f42-422b-abf0-849fd0e49c43:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ef9d6342-a66e-448c-93d2-f77f5ee29606
+              stepCounter: 034a8b2f-2f42-422b-abf0-849fd0e49c43
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 0934e5f0-6c75-4b6a-b453-44292db2cb69
+                stepCounter: 034a8b2f-2f42-422b-abf0-849fd0e49c43
+            name: HK_AGAINST_STATS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 0934e5f0-6c75-4b6a-b453-44292db2cb69
+              stepCounter: 034a8b2f-2f42-422b-abf0-849fd0e49c43
+            dataType: VARCHAR(32)
+            description: ""
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 79ed8fc7-95a9-4a7b-920a-58c843c2d6d9
+                    stepCounter: 434bc3df-9de9-471c-abf4-e929134533c8
+                transform: ""
+          - columnReference:
+              columnCounter: 9ac72e6f-53cf-4901-81a0-757d8cf0ae2f
+              stepCounter: 034a8b2f-2f42-422b-abf0-849fd0e49c43
+            dataType: VARCHAR(100)
+            description: ""
+            name: SACKS_AGAINST_YARDS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f593e85e-6aac-4320-b2b3-3c5653713942
+                    stepCounter: 434bc3df-9de9-471c-abf4-e929134533c8
+                transform: ""
+          - columnReference:
+              columnCounter: 2b8c07b0-de84-435d-a981-cc5048673f26
+              stepCounter: 034a8b2f-2f42-422b-abf0-849fd0e49c43
+            dataType: VARCHAR(100)
+            description: ""
+            name: SACKS_AGAINST_TOTAL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ce1fe048-9dce-4f33-a2c4-a798f349dc60
+                    stepCounter: 434bc3df-9de9-471c-abf4-e929134533c8
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2efa0a97-12f5-420c-9933-180daee13e29
+              stepCounter: 034a8b2f-2f42-422b-abf0-849fd0e49c43
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 395cd12c-1938-42e3-b608-85b470bbd886
+              stepCounter: 034a8b2f-2f42-422b-abf0-849fd0e49c43
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a7220a00-0c32-4861-a6d5-b60782f721de
+              stepCounter: 034a8b2f-2f42-422b-abf0-849fd0e49c43
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 9ac72e6f-53cf-4901-81a0-757d8cf0ae2f
+                stepCounter: 034a8b2f-2f42-422b-abf0-849fd0e49c43
+              - columnCounter: 2b8c07b0-de84-435d-a981-cc5048673f26
+                stepCounter: 034a8b2f-2f42-422b-abf0-849fd0e49c43
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f9f22cf5-cd83-43f4-871c-bdb7c25088a4
+              stepCounter: 034a8b2f-2f42-422b-abf0-849fd0e49c43
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 9ac72e6f-53cf-4901-81a0-757d8cf0ae2f
+                stepCounter: 034a8b2f-2f42-422b-abf0-849fd0e49c43
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SPORTS_SRC
+                nodeName: SPORTS_LOAD_AMERICAN_FOOTBALL_SACKS_AGAINST_STATS
+            join:
+              joinCondition: FROM {{ ref('SPORTS_SRC', 'SPORTS_LOAD_AMERICAN_FOOTBALL_SACKS_AGAINST_STATS') }} "SPORTS_LOAD_AMERICAN_FOOTBALL_SACKS_AGAINST_STATS"
+            name: DVSTG_SPORTS_AMERICAN_FOOTBALL_SACKS_AGAINST_STATS
+            noLinkRefs: []
+      name: DVSTG_SPORTS_AMERICAN_FOOTBALL_SACKS_AGAINST_STATS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: 034a8b2f-2f42-422b-abf0-849fd0e49c43

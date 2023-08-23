@@ -1,0 +1,105 @@
+steps:
+  HUB_SPORTS_MOTOR_RACING_EVENT_STATES-3e889c96-48d8-4484-918d-38cfbe5e5457:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 9cd79bbb-8952-4192-a9d4-ac02bd646e5d
+              stepCounter: 3e889c96-48d8-4484-918d-38cfbe5e5457
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_EVENT_STATES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 97d001b4-d6c8-4e21-8ba2-fd172ca4e79f
+                    stepCounter: 122ff244-eb3d-47a0-993a-0cee3ae045c3
+                transform: ""
+          - columnReference:
+              columnCounter: 4f413651-8718-4b03-b399-67f575b37187
+              stepCounter: 3e889c96-48d8-4484-918d-38cfbe5e5457
+            dataType: VARCHAR(32)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b7e6746e-099e-427c-94ef-e9cd042de8ac
+                    stepCounter: 122ff244-eb3d-47a0-993a-0cee3ae045c3
+                transform: ""
+          - columnReference:
+              columnCounter: c8cf3dfa-8628-4834-aaed-47ea6d8f7d91
+              stepCounter: 3e889c96-48d8-4484-918d-38cfbe5e5457
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: EVENT_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9e5bc336-3dc6-44bf-a6cd-4e004b88fe59
+                    stepCounter: 122ff244-eb3d-47a0-993a-0cee3ae045c3
+                transform: ""
+          - columnReference:
+              columnCounter: fa8035cc-86e8-4640-b5d2-689d9c36a38d
+              stepCounter: 3e889c96-48d8-4484-918d-38cfbe5e5457
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4c09e8b5-8153-466f-86d8-101461033a67
+                    stepCounter: 122ff244-eb3d-47a0-993a-0cee3ae045c3
+                transform: ""
+          - columnReference:
+              columnCounter: 7c9ed033-4267-426e-9e49-aa562eb07c47
+              stepCounter: 3e889c96-48d8-4484-918d-38cfbe5e5457
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1e1a7fc4-044a-4df2-9b27-6b72f4345698
+                    stepCounter: 122ff244-eb3d-47a0-993a-0cee3ae045c3
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SPORTS_MOTOR_RACING_EVENT_STATES
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SPORTS_MOTOR_RACING_EVENT_STATES') }} "DVSTG_SPORTS_MOTOR_RACING_EVENT_STATES"
+            name: HUB_SPORTS_MOTOR_RACING_EVENT_STATES
+            noLinkRefs: []
+      name: HUB_SPORTS_MOTOR_RACING_EVENT_STATES
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 3e889c96-48d8-4484-918d-38cfbe5e5457

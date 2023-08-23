@@ -1,0 +1,147 @@
+steps:
+  HUB_SPORTS_WAGERING_RUNLINES-ebb91986-3ba0-4287-a91e-c748af0cc247:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 91d2a8b7-3402-4629-9e62-cc56f3e5180e
+              stepCounter: ebb91986-3ba0-4287-a91e-c748af0cc247
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_RUNLINES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 55d9ec73-f175-40a3-9611-84408c5ec150
+                    stepCounter: e271cf57-adf7-4a9d-b8da-907d71f5f0a5
+                transform: ""
+          - columnReference:
+              columnCounter: 5788c5ec-4df0-4cd1-994f-686ac0ec60fc
+              stepCounter: ebb91986-3ba0-4287-a91e-c748af0cc247
+            dataType: VARCHAR(32)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6af5b008-5e28-406d-a134-8ffb0847be5a
+                    stepCounter: e271cf57-adf7-4a9d-b8da-907d71f5f0a5
+                transform: ""
+          - columnReference:
+              columnCounter: 21a2a1f4-fb77-47c7-bdb6-fb379e71ff93
+              stepCounter: ebb91986-3ba0-4287-a91e-c748af0cc247
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: BOOKMAKER_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 68bfa2ed-30a8-4fec-aba0-ddd28d92d40a
+                    stepCounter: e271cf57-adf7-4a9d-b8da-907d71f5f0a5
+                transform: ""
+          - columnReference:
+              columnCounter: 392eacad-1f67-47a8-9f83-ae524755f76f
+              stepCounter: ebb91986-3ba0-4287-a91e-c748af0cc247
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: EVENT_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e312a796-cdc6-45c1-af7e-8e61c54e005b
+                    stepCounter: e271cf57-adf7-4a9d-b8da-907d71f5f0a5
+                transform: ""
+          - columnReference:
+              columnCounter: b9bc05b5-dab3-4a35-a0fc-2ddff6618761
+              stepCounter: ebb91986-3ba0-4287-a91e-c748af0cc247
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: TEAM_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 87132c34-b886-43df-aedc-13655bc0ccc3
+                    stepCounter: e271cf57-adf7-4a9d-b8da-907d71f5f0a5
+                transform: ""
+          - columnReference:
+              columnCounter: da092d5e-9022-4f66-8cfe-5ab79002b253
+              stepCounter: ebb91986-3ba0-4287-a91e-c748af0cc247
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PERSON_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 30ba88b7-153c-4836-afa7-2e2c30cc0911
+                    stepCounter: e271cf57-adf7-4a9d-b8da-907d71f5f0a5
+                transform: ""
+          - columnReference:
+              columnCounter: 2772c821-a840-4e85-947e-29b6a34b4bdb
+              stepCounter: ebb91986-3ba0-4287-a91e-c748af0cc247
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0dcd1124-52f8-4173-85f9-53b84f98be11
+                    stepCounter: e271cf57-adf7-4a9d-b8da-907d71f5f0a5
+                transform: ""
+          - columnReference:
+              columnCounter: 6335a668-9a8a-4bcf-bf76-17d50c49ebda
+              stepCounter: ebb91986-3ba0-4287-a91e-c748af0cc247
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 530f32c4-c9d9-4fe7-b137-6c4adbeabdc1
+                    stepCounter: e271cf57-adf7-4a9d-b8da-907d71f5f0a5
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SPORTS_WAGERING_RUNLINES
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SPORTS_WAGERING_RUNLINES') }} "DVSTG_SPORTS_WAGERING_RUNLINES"
+            name: HUB_SPORTS_WAGERING_RUNLINES
+            noLinkRefs: []
+      name: HUB_SPORTS_WAGERING_RUNLINES
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: ebb91986-3ba0-4287-a91e-c748af0cc247

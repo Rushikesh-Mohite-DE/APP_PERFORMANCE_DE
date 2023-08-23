@@ -1,0 +1,184 @@
+steps:
+  ECDC_GLOBAL_WEEKLY-4d18bc9d-5c21-4f8b-b472-b9cf600561a3:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: COVID19
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0213819f-436e-4333-bd01-7b414068bcf0
+              stepCounter: 4d18bc9d-5c21-4f8b-b472-b9cf600561a3
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: COUNTRY_REGION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 054b9126-565a-479b-930a-d3a2bce7e29f
+              stepCounter: 4d18bc9d-5c21-4f8b-b472-b9cf600561a3
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: CONTINENTEXP
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 24e30d91-f7b4-4f3d-90ea-e76b26af2e73
+              stepCounter: 4d18bc9d-5c21-4f8b-b472-b9cf600561a3
+            config: {}
+            dataType: VARCHAR(2)
+            defaultValue: ""
+            description: ""
+            name: ISO3166_1
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5669db46-e846-4a86-976e-7f458c63dc82
+              stepCounter: 4d18bc9d-5c21-4f8b-b472-b9cf600561a3
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: CASES_WEEKLY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 13e1a17f-7ce5-4af4-a144-cf5916afeb01
+              stepCounter: 4d18bc9d-5c21-4f8b-b472-b9cf600561a3
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: DEATHS_WEEKLY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5f4e206e-888f-4c90-ba8e-13d1490bb275
+              stepCounter: 4d18bc9d-5c21-4f8b-b472-b9cf600561a3
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: CASES_SINCE_PREV_WEEK
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9a9bca0b-1375-4bc2-bd86-f78c06f8682e
+              stepCounter: 4d18bc9d-5c21-4f8b-b472-b9cf600561a3
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: DEATHS_SINCE_PREV_WEEK
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: eb2cfb28-5112-4c68-b05d-809924e859f0
+              stepCounter: 4d18bc9d-5c21-4f8b-b472-b9cf600561a3
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: POPULATION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 81d276d3-9a2c-45e6-ab79-9fe7495d13ea
+              stepCounter: 4d18bc9d-5c21-4f8b-b472-b9cf600561a3
+            config: {}
+            dataType: DATE
+            defaultValue: ""
+            description: ""
+            name: DATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: dcff36b5-536d-4207-9c41-19be585356d7
+              stepCounter: 4d18bc9d-5c21-4f8b-b472-b9cf600561a3
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: LAST_UPDATE_DATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2c841d86-c72e-46d1-99ba-537b5fe96e39
+              stepCounter: 4d18bc9d-5c21-4f8b-b472-b9cf600561a3
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: LAST_REPORTED_FLAG
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('COVID19', 'ECDC_GLOBAL_WEEKLY') }}
+      name: ECDC_GLOBAL_WEEKLY
+      schema: ""
+      sqlType: Source
+      table: ECDC_GLOBAL_WEEKLY
+      type: sourceInput
+    stepCounter: 4d18bc9d-5c21-4f8b-b472-b9cf600561a3

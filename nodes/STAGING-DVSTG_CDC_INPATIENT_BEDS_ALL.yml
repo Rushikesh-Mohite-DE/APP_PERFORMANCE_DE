@@ -1,0 +1,321 @@
+steps:
+  DVSTG_CDC_INPATIENT_BEDS_ALL-eefd1525-759e-4755-be7b-121ba6de7c0d:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: acff6962-00dc-48b6-b81c-3a5e45a313ee
+              stepCounter: eefd1525-759e-4755-be7b-121ba6de7c0d
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: a44498af-7b0b-4c7e-ac43-db97523eda11
+                stepCounter: eefd1525-759e-4755-be7b-121ba6de7c0d
+              - columnCounter: cd9364af-04d6-428c-a1e3-af35ee80526a
+                stepCounter: eefd1525-759e-4755-be7b-121ba6de7c0d
+              - columnCounter: 790dcf36-559a-4e32-931d-b859b1b30c13
+                stepCounter: eefd1525-759e-4755-be7b-121ba6de7c0d
+            name: HK_INPATIENT_BEDS_ALL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: a44498af-7b0b-4c7e-ac43-db97523eda11
+              stepCounter: eefd1525-759e-4755-be7b-121ba6de7c0d
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: STATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9ee8d49a-d40e-41ce-92a2-11b328012e39
+                    stepCounter: 642c43ae-c4ff-4125-94ae-d8857c2987b8
+                transform: ""
+          - columnReference:
+              columnCounter: 0e4969e7-5ea2-40bf-9353-cd4fd5e4fa3b
+              stepCounter: eefd1525-759e-4755-be7b-121ba6de7c0d
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            name: DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 781dd489-8a9b-4031-a531-2bf9f818db88
+                    stepCounter: 642c43ae-c4ff-4125-94ae-d8857c2987b8
+                transform: ""
+          - columnReference:
+              columnCounter: 85318020-9e84-4b76-a4b5-f7bf1cb3b3d6
+              stepCounter: eefd1525-759e-4755-be7b-121ba6de7c0d
+            dataType: NUMBER(38,0)
+            description: ""
+            name: INPATIENT_BEDS_OCCUPIED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7d9244c1-3a53-454f-a4d3-5cb214ead585
+                    stepCounter: 642c43ae-c4ff-4125-94ae-d8857c2987b8
+                transform: ""
+          - columnReference:
+              columnCounter: 636b43bd-9a3e-41da-aa02-e28de5ce9ae3
+              stepCounter: eefd1525-759e-4755-be7b-121ba6de7c0d
+            dataType: NUMBER(38,0)
+            description: ""
+            name: INPATIENT_BEDS_LOWER_BOUND
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d2af6377-06f5-4e70-a7e2-599c1ff8962f
+                    stepCounter: 642c43ae-c4ff-4125-94ae-d8857c2987b8
+                transform: ""
+          - columnReference:
+              columnCounter: 0b94d89e-57ed-4050-9f1d-cd62389464be
+              stepCounter: eefd1525-759e-4755-be7b-121ba6de7c0d
+            dataType: NUMBER(38,0)
+            description: ""
+            name: INPATIENT_BEDS_UPPER_BOUND
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2fc46d03-c90d-4cb7-bee1-9a3726265f79
+                    stepCounter: 642c43ae-c4ff-4125-94ae-d8857c2987b8
+                transform: ""
+          - columnReference:
+              columnCounter: fe849f57-fa91-4dd3-ae1f-99795cc032f4
+              stepCounter: eefd1525-759e-4755-be7b-121ba6de7c0d
+            dataType: FLOAT
+            description: ""
+            name: INPATIENT_BEDS_IN_USE_PCT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2f51d2ed-62a6-4903-9516-127c08ff2ad0
+                    stepCounter: 642c43ae-c4ff-4125-94ae-d8857c2987b8
+                transform: ""
+          - columnReference:
+              columnCounter: e8ec54c5-f463-4e14-bbc1-055c570d5654
+              stepCounter: eefd1525-759e-4755-be7b-121ba6de7c0d
+            dataType: FLOAT
+            description: ""
+            name: INPATIENT_BEDS_IN_USE_PCT_LOWER_BOUND
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cf9e0605-24d7-4fbc-8f7a-d7b1b66f2f5f
+                    stepCounter: 642c43ae-c4ff-4125-94ae-d8857c2987b8
+                transform: ""
+          - columnReference:
+              columnCounter: 7f2fb019-a87d-4329-9121-ee94c6129157
+              stepCounter: eefd1525-759e-4755-be7b-121ba6de7c0d
+            dataType: FLOAT
+            description: ""
+            name: INPATIENT_BEDS_IN_USE_PCT_UPPER_BOUND
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 21da7c93-2a53-4399-93b2-a881a67c1164
+                    stepCounter: 642c43ae-c4ff-4125-94ae-d8857c2987b8
+                transform: ""
+          - columnReference:
+              columnCounter: 1fb8c30e-397b-423c-80b1-255678d6c022
+              stepCounter: eefd1525-759e-4755-be7b-121ba6de7c0d
+            dataType: NUMBER(38,0)
+            description: ""
+            name: TOTAL_INPATIENT_BEDS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 492cafd7-6665-402c-b4d7-e4d5e52bd7a4
+                    stepCounter: 642c43ae-c4ff-4125-94ae-d8857c2987b8
+                transform: ""
+          - columnReference:
+              columnCounter: 704da682-4412-4daf-b429-fdf73e94279d
+              stepCounter: eefd1525-759e-4755-be7b-121ba6de7c0d
+            dataType: NUMBER(38,0)
+            description: ""
+            name: TOTAL_INPATIENT_BEDS_LOWER_BOUND
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d4a8e9c3-7811-486a-8bc5-35948dec4bb1
+                    stepCounter: 642c43ae-c4ff-4125-94ae-d8857c2987b8
+                transform: ""
+          - columnReference:
+              columnCounter: 7675c77e-08e1-498f-b4a8-a33e984599c6
+              stepCounter: eefd1525-759e-4755-be7b-121ba6de7c0d
+            dataType: NUMBER(38,0)
+            description: ""
+            name: TOTAL_INPATIENT_BEDS_UPPER_BOUND
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ba007e4d-6a25-4dab-91f4-55f24efe2ad1
+                    stepCounter: 642c43ae-c4ff-4125-94ae-d8857c2987b8
+                transform: ""
+          - columnReference:
+              columnCounter: cd9364af-04d6-428c-a1e3-af35ee80526a
+              stepCounter: eefd1525-759e-4755-be7b-121ba6de7c0d
+            dataType: VARCHAR(2)
+            description: ""
+            name: ISO3166_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 041c046a-b9ab-4fbc-a415-523c262cf43c
+                    stepCounter: 642c43ae-c4ff-4125-94ae-d8857c2987b8
+                transform: ""
+          - columnReference:
+              columnCounter: 790dcf36-559a-4e32-931d-b859b1b30c13
+              stepCounter: eefd1525-759e-4755-be7b-121ba6de7c0d
+            dataType: VARCHAR(2)
+            description: ""
+            name: ISO3166_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 143469d0-b68a-45c6-a254-2a4bcfd3b0e6
+                    stepCounter: 642c43ae-c4ff-4125-94ae-d8857c2987b8
+                transform: ""
+          - columnReference:
+              columnCounter: 66282d21-78d8-464e-82a5-6f19c8a7009f
+              stepCounter: eefd1525-759e-4755-be7b-121ba6de7c0d
+            dataType: BOOLEAN
+            description: ""
+            name: LAST_REPORTED_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5c8e405a-57d5-44a0-b59c-1c050e66a8bd
+                    stepCounter: 642c43ae-c4ff-4125-94ae-d8857c2987b8
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 39ddf21d-33ff-496e-940e-4081a0e6c0c9
+              stepCounter: eefd1525-759e-4755-be7b-121ba6de7c0d
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 533a364b-fb2d-4fff-b69f-e977099a7391
+              stepCounter: eefd1525-759e-4755-be7b-121ba6de7c0d
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7c328e9a-f7d8-4a99-81f3-21e0cced9b6e
+              stepCounter: eefd1525-759e-4755-be7b-121ba6de7c0d
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 0e4969e7-5ea2-40bf-9353-cd4fd5e4fa3b
+                stepCounter: eefd1525-759e-4755-be7b-121ba6de7c0d
+              - columnCounter: 85318020-9e84-4b76-a4b5-f7bf1cb3b3d6
+                stepCounter: eefd1525-759e-4755-be7b-121ba6de7c0d
+              - columnCounter: 636b43bd-9a3e-41da-aa02-e28de5ce9ae3
+                stepCounter: eefd1525-759e-4755-be7b-121ba6de7c0d
+              - columnCounter: 0b94d89e-57ed-4050-9f1d-cd62389464be
+                stepCounter: eefd1525-759e-4755-be7b-121ba6de7c0d
+              - columnCounter: fe849f57-fa91-4dd3-ae1f-99795cc032f4
+                stepCounter: eefd1525-759e-4755-be7b-121ba6de7c0d
+              - columnCounter: e8ec54c5-f463-4e14-bbc1-055c570d5654
+                stepCounter: eefd1525-759e-4755-be7b-121ba6de7c0d
+              - columnCounter: 7f2fb019-a87d-4329-9121-ee94c6129157
+                stepCounter: eefd1525-759e-4755-be7b-121ba6de7c0d
+              - columnCounter: 1fb8c30e-397b-423c-80b1-255678d6c022
+                stepCounter: eefd1525-759e-4755-be7b-121ba6de7c0d
+              - columnCounter: 704da682-4412-4daf-b429-fdf73e94279d
+                stepCounter: eefd1525-759e-4755-be7b-121ba6de7c0d
+              - columnCounter: 7675c77e-08e1-498f-b4a8-a33e984599c6
+                stepCounter: eefd1525-759e-4755-be7b-121ba6de7c0d
+              - columnCounter: 66282d21-78d8-464e-82a5-6f19c8a7009f
+                stepCounter: eefd1525-759e-4755-be7b-121ba6de7c0d
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6584db1c-63fd-4603-a7e0-9fb3321a717b
+              stepCounter: eefd1525-759e-4755-be7b-121ba6de7c0d
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: fe849f57-fa91-4dd3-ae1f-99795cc032f4
+                stepCounter: eefd1525-759e-4755-be7b-121ba6de7c0d
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: COVID19
+                nodeName: CDC_INPATIENT_BEDS_ALL
+            join:
+              joinCondition: FROM {{ ref('COVID19', 'CDC_INPATIENT_BEDS_ALL') }} "CDC_INPATIENT_BEDS_ALL"
+            name: DVSTG_CDC_INPATIENT_BEDS_ALL
+            noLinkRefs: []
+      name: DVSTG_CDC_INPATIENT_BEDS_ALL
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: eefd1525-759e-4755-be7b-121ba6de7c0d

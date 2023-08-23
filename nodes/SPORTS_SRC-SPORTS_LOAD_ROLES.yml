@@ -1,0 +1,79 @@
+steps:
+  SPORTS_LOAD_ROLES-54d5a205-26bf-4553-b3e2-71ab331c11a6:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SPORTS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 90a23aa6-46e2-4bb9-9222-1995a1d49dbb
+              stepCounter: 54d5a205-26bf-4553-b3e2-71ab331c11a6
+            config: {}
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            name: ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 60157df3-3723-40bb-9114-13432c688082
+              stepCounter: 54d5a205-26bf-4553-b3e2-71ab331c11a6
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: ROLE_KEY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b098e693-9584-4095-9e2d-7280ddc66787
+              stepCounter: 54d5a205-26bf-4553-b3e2-71ab331c11a6
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: ROLE_NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 26a31d54-7edd-4e93-94a1-d4e847d3e10e
+              stepCounter: 54d5a205-26bf-4553-b3e2-71ab331c11a6
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: comment
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SPORTS_SRC', 'SPORTS_LOAD_ROLES') }}
+      name: SPORTS_LOAD_ROLES
+      schema: ""
+      sqlType: Source
+      table: SPORTS_LOAD_ROLES
+      type: sourceInput
+    stepCounter: 54d5a205-26bf-4553-b3e2-71ab331c11a6

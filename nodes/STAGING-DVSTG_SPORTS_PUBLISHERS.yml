@@ -1,0 +1,167 @@
+steps:
+  DVSTG_SPORTS_PUBLISHERS-b1c5cd23-72c2-4ad9-9614-7c698a9efdb3:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1aae5d26-1b95-446a-8e7a-949c9191a41a
+              stepCounter: b1c5cd23-72c2-4ad9-9614-7c698a9efdb3
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: cbc13042-a217-467b-a6d8-559b5e2fd0fa
+                stepCounter: b1c5cd23-72c2-4ad9-9614-7c698a9efdb3
+            name: HK_PUBLISHERS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: baff7037-2086-4a4b-bffe-ad3737e952cb
+              stepCounter: b1c5cd23-72c2-4ad9-9614-7c698a9efdb3
+            dataType: VARCHAR(32)
+            description: ""
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 72c777ea-29b3-466a-b521-decd9bfb79e7
+                    stepCounter: a9cdc8a7-bd51-4960-8d9f-3606c4e03219
+                transform: ""
+          - columnReference:
+              columnCounter: cbc13042-a217-467b-a6d8-559b5e2fd0fa
+              stepCounter: b1c5cd23-72c2-4ad9-9614-7c698a9efdb3
+            dataType: VARCHAR(100)
+            description: ""
+            name: PUBLISHER_KEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2dd9b184-ee31-420d-a0a4-023b63ba97bf
+                    stepCounter: a9cdc8a7-bd51-4960-8d9f-3606c4e03219
+                transform: ""
+          - columnReference:
+              columnCounter: ff8c6666-3045-4c88-a544-3ae9e5df98dd
+              stepCounter: b1c5cd23-72c2-4ad9-9614-7c698a9efdb3
+            dataType: VARCHAR(100)
+            description: ""
+            name: PUBLISHER_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 29bff5ea-646f-45bd-9730-d88ee5271f94
+                    stepCounter: a9cdc8a7-bd51-4960-8d9f-3606c4e03219
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9bcdb516-1fbe-49af-a760-89fcf17f9420
+              stepCounter: b1c5cd23-72c2-4ad9-9614-7c698a9efdb3
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 92090fe9-db5a-4d2c-827f-ec9b3c57e607
+              stepCounter: b1c5cd23-72c2-4ad9-9614-7c698a9efdb3
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 72163840-2ddf-430a-81c8-6e8af42adb7f
+              stepCounter: b1c5cd23-72c2-4ad9-9614-7c698a9efdb3
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: baff7037-2086-4a4b-bffe-ad3737e952cb
+                stepCounter: b1c5cd23-72c2-4ad9-9614-7c698a9efdb3
+              - columnCounter: ff8c6666-3045-4c88-a544-3ae9e5df98dd
+                stepCounter: b1c5cd23-72c2-4ad9-9614-7c698a9efdb3
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0ac15940-55eb-4029-b45a-96fb659009af
+              stepCounter: b1c5cd23-72c2-4ad9-9614-7c698a9efdb3
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: cbc13042-a217-467b-a6d8-559b5e2fd0fa
+                stepCounter: b1c5cd23-72c2-4ad9-9614-7c698a9efdb3
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SPORTS_SRC
+                nodeName: SPORTS_LOAD_PUBLISHERS
+            join:
+              joinCondition: FROM {{ ref('SPORTS_SRC', 'SPORTS_LOAD_PUBLISHERS') }} "SPORTS_LOAD_PUBLISHERS"
+            name: DVSTG_SPORTS_PUBLISHERS
+            noLinkRefs: []
+      name: DVSTG_SPORTS_PUBLISHERS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: b1c5cd23-72c2-4ad9-9614-7c698a9efdb3

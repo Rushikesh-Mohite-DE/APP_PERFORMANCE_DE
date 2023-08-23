@@ -1,0 +1,147 @@
+steps:
+  HUB_WWI_STOCKITEMS-3ada616b-68c7-4dbd-a890-637c6f6327df:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 31db0a4d-a0a1-4282-a6bf-e96bc0a1a67e
+              stepCounter: 3ada616b-68c7-4dbd-a890-637c6f6327df
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_STOCKITEMS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3a4c7797-e16b-4c8c-9a8d-7e5c475a1279
+                    stepCounter: c6a9ce04-2d2b-4917-b1b7-8fed496b4ffe
+                transform: ""
+          - columnReference:
+              columnCounter: 718e2cf1-4f09-4150-9fb1-250574fe5c2c
+              stepCounter: 3ada616b-68c7-4dbd-a890-637c6f6327df
+            dataType: NUMBER(38,0)
+            description: Numeric ID used for reference to a stock item within the database
+            hashColumns: []
+            hashDetails: null
+            name: STOCKITEMID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ce685a80-234f-4b4d-a422-9542a8967b08
+                    stepCounter: c6a9ce04-2d2b-4917-b1b7-8fed496b4ffe
+                transform: ""
+          - columnReference:
+              columnCounter: bc355b4e-b459-4af4-aefb-afde4227af6e
+              stepCounter: 3ada616b-68c7-4dbd-a890-637c6f6327df
+            dataType: NUMBER(38,0)
+            description: Usual supplier for this stock item
+            hashColumns: []
+            hashDetails: null
+            name: SUPPLIERID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0990deaa-5059-4b40-ad52-7d3c60086e4e
+                    stepCounter: c6a9ce04-2d2b-4917-b1b7-8fed496b4ffe
+                transform: ""
+          - columnReference:
+              columnCounter: 4289589a-f009-427b-85c1-d9f25f39c834
+              stepCounter: 3ada616b-68c7-4dbd-a890-637c6f6327df
+            dataType: VARCHAR(16777216)
+            description: Color (optional) for this stock item
+            hashColumns: []
+            hashDetails: null
+            name: COLORID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9856f020-19ac-4ace-86a2-88b6423eb9bc
+                    stepCounter: c6a9ce04-2d2b-4917-b1b7-8fed496b4ffe
+                transform: ""
+          - columnReference:
+              columnCounter: 1c38fb30-7422-4bd9-a911-206e6afd22a6
+              stepCounter: 3ada616b-68c7-4dbd-a890-637c6f6327df
+            dataType: NUMBER(38,0)
+            description: Usual package for selling units of this stock item
+            hashColumns: []
+            hashDetails: null
+            name: UNITPACKAGEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ed69fe17-4e74-45a2-ba22-fa6dddd4384f
+                    stepCounter: c6a9ce04-2d2b-4917-b1b7-8fed496b4ffe
+                transform: ""
+          - columnReference:
+              columnCounter: b7fc9845-7f5e-4790-82f4-661edb08a8c1
+              stepCounter: 3ada616b-68c7-4dbd-a890-637c6f6327df
+            dataType: NUMBER(38,0)
+            description: Usual package for selling outers of this stock item (ie cartons, boxes, etc.)
+            hashColumns: []
+            hashDetails: null
+            name: OUTERPACKAGEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b071b1ef-1f76-4087-b395-7b7d440b06c8
+                    stepCounter: c6a9ce04-2d2b-4917-b1b7-8fed496b4ffe
+                transform: ""
+          - columnReference:
+              columnCounter: 0bf15a0c-3137-41c9-aa69-07ecbb764c97
+              stepCounter: 3ada616b-68c7-4dbd-a890-637c6f6327df
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 140f7182-8560-4b64-bef2-90b17faafcac
+                    stepCounter: c6a9ce04-2d2b-4917-b1b7-8fed496b4ffe
+                transform: ""
+          - columnReference:
+              columnCounter: b2494249-9d8a-456b-8d96-db10cc5f0fc9
+              stepCounter: 3ada616b-68c7-4dbd-a890-637c6f6327df
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d51cee74-406a-49e1-958c-00051c1d305a
+                    stepCounter: c6a9ce04-2d2b-4917-b1b7-8fed496b4ffe
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_WWI_STOCKITEMS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_WWI_STOCKITEMS') }} "DVSTG_WWI_STOCKITEMS"
+            name: HUB_WWI_STOCKITEMS
+            noLinkRefs: []
+      name: HUB_WWI_STOCKITEMS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 3ada616b-68c7-4dbd-a890-637c6f6327df

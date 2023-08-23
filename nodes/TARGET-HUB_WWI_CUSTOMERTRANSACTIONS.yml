@@ -1,0 +1,147 @@
+steps:
+  HUB_WWI_CUSTOMERTRANSACTIONS-59e71782-3097-44e4-9c29-2e87670fcac9:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 4e8123de-33e0-42a5-a53d-4508a34b7379
+              stepCounter: 59e71782-3097-44e4-9c29-2e87670fcac9
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_CUSTOMERTRANSACTIONS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 44da329e-6d3e-48d4-9a5d-e415acdff37a
+                    stepCounter: 683bf3cc-b7fd-427d-a485-bef75af11589
+                transform: ""
+          - columnReference:
+              columnCounter: 34587a1a-cd29-4085-a209-c8d8a68c8254
+              stepCounter: 59e71782-3097-44e4-9c29-2e87670fcac9
+            dataType: NUMBER(38,0)
+            description: Numeric ID used to refer to a customer transaction within the database
+            hashColumns: []
+            hashDetails: null
+            name: CUSTOMERTRANSACTIONID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1a7bde65-11d8-4123-aafa-dc3c832bba60
+                    stepCounter: 683bf3cc-b7fd-427d-a485-bef75af11589
+                transform: ""
+          - columnReference:
+              columnCounter: 0a253925-ab39-4d1f-be71-64cf3df62113
+              stepCounter: 59e71782-3097-44e4-9c29-2e87670fcac9
+            dataType: NUMBER(38,0)
+            description: Customer for this transaction
+            hashColumns: []
+            hashDetails: null
+            name: CUSTOMERID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6f8bf614-cf3d-4cc5-97ec-a2e9f1dac529
+                    stepCounter: 683bf3cc-b7fd-427d-a485-bef75af11589
+                transform: ""
+          - columnReference:
+              columnCounter: 233e3a78-d041-4017-a605-ef0eb0008c10
+              stepCounter: 59e71782-3097-44e4-9c29-2e87670fcac9
+            dataType: NUMBER(38,0)
+            description: Type of transaction
+            hashColumns: []
+            hashDetails: null
+            name: TRANSACTIONTYPEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7bc2ef19-a224-4470-9016-d9ad80171bd1
+                    stepCounter: 683bf3cc-b7fd-427d-a485-bef75af11589
+                transform: ""
+          - columnReference:
+              columnCounter: 1b2425d9-c9f0-4eeb-a82f-f58779cfe7e3
+              stepCounter: 59e71782-3097-44e4-9c29-2e87670fcac9
+            dataType: VARCHAR(16777216)
+            description: ID of an invoice (for transactions associated with an invoice)
+            hashColumns: []
+            hashDetails: null
+            name: INVOICEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: df16a152-8065-4f1e-a88f-5e2e6ed3a783
+                    stepCounter: 683bf3cc-b7fd-427d-a485-bef75af11589
+                transform: ""
+          - columnReference:
+              columnCounter: 7cf6aa31-feca-4c88-8a46-525007ed3b0e
+              stepCounter: 59e71782-3097-44e4-9c29-2e87670fcac9
+            dataType: VARCHAR(16777216)
+            description: ID of a payment method (for transactions involving payments)
+            hashColumns: []
+            hashDetails: null
+            name: PAYMENTMETHODID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ff34c330-ec8a-4192-9a7a-c1585af731c6
+                    stepCounter: 683bf3cc-b7fd-427d-a485-bef75af11589
+                transform: ""
+          - columnReference:
+              columnCounter: e8a0527c-9d0b-4379-902e-43fdb4f7b50a
+              stepCounter: 59e71782-3097-44e4-9c29-2e87670fcac9
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e797f06d-13de-400e-a289-e6c974c30a35
+                    stepCounter: 683bf3cc-b7fd-427d-a485-bef75af11589
+                transform: ""
+          - columnReference:
+              columnCounter: f7f2b879-d053-44a5-a7fc-e77e53eb8d35
+              stepCounter: 59e71782-3097-44e4-9c29-2e87670fcac9
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8d6511b3-dc6d-4b60-9cdf-0c2904cb0fbf
+                    stepCounter: 683bf3cc-b7fd-427d-a485-bef75af11589
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_WWI_CUSTOMERTRANSACTIONS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_WWI_CUSTOMERTRANSACTIONS') }} "DVSTG_WWI_CUSTOMERTRANSACTIONS"
+            name: HUB_WWI_CUSTOMERTRANSACTIONS
+            noLinkRefs: []
+      name: HUB_WWI_CUSTOMERTRANSACTIONS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 59e71782-3097-44e4-9c29-2e87670fcac9

@@ -1,0 +1,237 @@
+steps:
+  DVSTG_WWI_CITIES-32abdc9b-69ed-4145-b02a-ac1410ecf052:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 36ca0152-43d2-4c2b-b833-888b071e3c9c
+              stepCounter: 32abdc9b-69ed-4145-b02a-ac1410ecf052
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: ebf930b7-0d9c-4788-8d61-3707bbc7b6ef
+                stepCounter: 32abdc9b-69ed-4145-b02a-ac1410ecf052
+              - columnCounter: dcb3623b-878e-400c-8bec-d5b31a34d059
+                stepCounter: 32abdc9b-69ed-4145-b02a-ac1410ecf052
+            name: HK_CITIES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: ebf930b7-0d9c-4788-8d61-3707bbc7b6ef
+              stepCounter: 32abdc9b-69ed-4145-b02a-ac1410ecf052
+            dataType: NUMBER(38,0)
+            description: Numeric ID used for reference to a city within the database
+            name: CITYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ad6ce015-3264-4429-9d87-eae924647b84
+                    stepCounter: 6e89691d-5cb2-4cd2-b41b-8e4209856889
+                transform: ""
+          - columnReference:
+              columnCounter: e50ea984-bdcb-4d08-aff6-16f7ce927df6
+              stepCounter: 32abdc9b-69ed-4145-b02a-ac1410ecf052
+            dataType: VARCHAR(50)
+            description: Formal name of the city
+            name: CITYNAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3f6bd971-b0d7-4d15-98c4-c021fdd3cac3
+                    stepCounter: 6e89691d-5cb2-4cd2-b41b-8e4209856889
+                transform: ""
+          - columnReference:
+              columnCounter: dcb3623b-878e-400c-8bec-d5b31a34d059
+              stepCounter: 32abdc9b-69ed-4145-b02a-ac1410ecf052
+            dataType: NUMBER(38,0)
+            description: State or province for this city
+            name: STATEPROVINCEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ee4274d9-1f7d-413e-93b0-7af2157cdaf4
+                    stepCounter: 6e89691d-5cb2-4cd2-b41b-8e4209856889
+                transform: ""
+          - columnReference:
+              columnCounter: 9dfdeba7-c1d8-42e9-9ee6-f4854f8d9976
+              stepCounter: 32abdc9b-69ed-4145-b02a-ac1410ecf052
+            dataType: STRING
+            description: Geographic location of the city
+            name: LOCATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 52274456-4777-478c-b970-8400efd60982
+              stepCounter: 32abdc9b-69ed-4145-b02a-ac1410ecf052
+            dataType: NUMBER(38,0)
+            description: Latest available population for the City
+            name: LATESTRECORDEDPOPULATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fe46f403-c0a0-485b-8f80-ccb05c44252a
+                    stepCounter: 6e89691d-5cb2-4cd2-b41b-8e4209856889
+                transform: ""
+          - columnReference:
+              columnCounter: 1bc2ec10-b75e-49c1-9c5d-36e3cd98cd71
+              stepCounter: 32abdc9b-69ed-4145-b02a-ac1410ecf052
+            dataType: NUMBER(38,0)
+            description: ""
+            name: LASTEDITEDBY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c634ad9b-98a6-455b-9ac3-477184b79a25
+                    stepCounter: 6e89691d-5cb2-4cd2-b41b-8e4209856889
+                transform: ""
+          - columnReference:
+              columnCounter: a797a484-c14c-401b-8d60-64ed24a27251
+              stepCounter: 32abdc9b-69ed-4145-b02a-ac1410ecf052
+            dataType: DATE
+            description: ""
+            name: VALIDFROM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b2b32d00-5e35-4541-9716-69bcfa679711
+                    stepCounter: 6e89691d-5cb2-4cd2-b41b-8e4209856889
+                transform: ""
+          - columnReference:
+              columnCounter: 70636dc9-ea3f-4663-9b9b-2caf91525784
+              stepCounter: 32abdc9b-69ed-4145-b02a-ac1410ecf052
+            dataType: DATE
+            description: ""
+            name: VALIDTO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a717178e-bc4b-4c21-9d00-2b0bb8dfabc6
+                    stepCounter: 6e89691d-5cb2-4cd2-b41b-8e4209856889
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c556b236-9e9a-4bbe-86d5-86b509f434fb
+              stepCounter: 32abdc9b-69ed-4145-b02a-ac1410ecf052
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ba1fda55-b770-4fb6-84e9-b37889da63f7
+              stepCounter: 32abdc9b-69ed-4145-b02a-ac1410ecf052
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2e3df077-4eac-48a5-acc9-e2bc6c2cc670
+              stepCounter: 32abdc9b-69ed-4145-b02a-ac1410ecf052
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: e50ea984-bdcb-4d08-aff6-16f7ce927df6
+                stepCounter: 32abdc9b-69ed-4145-b02a-ac1410ecf052
+              - columnCounter: 9dfdeba7-c1d8-42e9-9ee6-f4854f8d9976
+                stepCounter: 32abdc9b-69ed-4145-b02a-ac1410ecf052
+              - columnCounter: 52274456-4777-478c-b970-8400efd60982
+                stepCounter: 32abdc9b-69ed-4145-b02a-ac1410ecf052
+              - columnCounter: 1bc2ec10-b75e-49c1-9c5d-36e3cd98cd71
+                stepCounter: 32abdc9b-69ed-4145-b02a-ac1410ecf052
+              - columnCounter: a797a484-c14c-401b-8d60-64ed24a27251
+                stepCounter: 32abdc9b-69ed-4145-b02a-ac1410ecf052
+              - columnCounter: 70636dc9-ea3f-4663-9b9b-2caf91525784
+                stepCounter: 32abdc9b-69ed-4145-b02a-ac1410ecf052
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e22ac503-242e-47a6-8442-635e9fefb9c6
+              stepCounter: 32abdc9b-69ed-4145-b02a-ac1410ecf052
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: dcb3623b-878e-400c-8bec-d5b31a34d059
+                stepCounter: 32abdc9b-69ed-4145-b02a-ac1410ecf052
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: WIDEWORLIMPORTES_SRC
+                nodeName: WWI_LOAD_CITIES
+            join:
+              joinCondition: FROM {{ ref('WIDEWORLIMPORTES_SRC', 'WWI_LOAD_CITIES') }} "WWI_LOAD_CITIES"
+            name: DVSTG_WWI_CITIES
+            noLinkRefs: []
+      name: DVSTG_WWI_CITIES
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: 32abdc9b-69ed-4145-b02a-ac1410ecf052

@@ -1,0 +1,223 @@
+steps:
+  DVSTG_AW_PRODUCTINVENTORY-10d3878b-be72-4090-ae6c-7f353758de04:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a3adc1fa-c653-4fca-a48b-8c9bc7a2c35f
+              stepCounter: 10d3878b-be72-4090-ae6c-7f353758de04
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 799a93fa-8194-4a5f-ab8e-ce8b600900d2
+                stepCounter: 10d3878b-be72-4090-ae6c-7f353758de04
+              - columnCounter: 9a0e3c19-5827-4d88-a696-139e0bfdbfd7
+                stepCounter: 10d3878b-be72-4090-ae6c-7f353758de04
+            name: HK_PRODUCTINVENTORY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 799a93fa-8194-4a5f-ab8e-ce8b600900d2
+              stepCounter: 10d3878b-be72-4090-ae6c-7f353758de04
+            dataType: NUMBER(38,0)
+            description: Product identification number. Foreign key to Product.ProductID.
+            name: PRODUCTID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 184c70e3-815d-41d5-af36-b6832046513d
+                    stepCounter: d453065b-91f6-4257-aa0b-3d3ecb68c3ba
+                transform: ""
+          - columnReference:
+              columnCounter: 9a0e3c19-5827-4d88-a696-139e0bfdbfd7
+              stepCounter: 10d3878b-be72-4090-ae6c-7f353758de04
+            dataType: NUMBER(38,0)
+            description: Inventory location identification number. Foreign key to Location.LocationID.
+            name: LOCATIONID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 88c88554-bda3-4f04-991c-62abd532c4ac
+                    stepCounter: d453065b-91f6-4257-aa0b-3d3ecb68c3ba
+                transform: ""
+          - columnReference:
+              columnCounter: f5162511-2ba4-4890-9553-9a309b3308aa
+              stepCounter: 10d3878b-be72-4090-ae6c-7f353758de04
+            dataType: VARCHAR(10)
+            description: Storage compartment within an inventory location.
+            name: SHELF
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4bb22d7e-1cf5-4677-9247-59626d991382
+                    stepCounter: d453065b-91f6-4257-aa0b-3d3ecb68c3ba
+                transform: ""
+          - columnReference:
+              columnCounter: db97a4b4-fc87-4b33-9669-f44103b4fa46
+              stepCounter: 10d3878b-be72-4090-ae6c-7f353758de04
+            dataType: NUMBER(38,0)
+            description: Storage container on a shelf in an inventory location.
+            name: BIN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5e2dcb77-c629-4394-832f-f14851551d86
+                    stepCounter: d453065b-91f6-4257-aa0b-3d3ecb68c3ba
+                transform: ""
+          - columnReference:
+              columnCounter: 22b7d3f7-407c-4e0f-8102-1692031b21f7
+              stepCounter: 10d3878b-be72-4090-ae6c-7f353758de04
+            dataType: NUMBER(38,0)
+            description: Quantity of products in the inventory location.
+            name: QUANTITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d6ca1c85-ba5f-4143-9791-9ecc10c667d1
+                    stepCounter: d453065b-91f6-4257-aa0b-3d3ecb68c3ba
+                transform: ""
+          - columnReference:
+              columnCounter: a8b76cfa-899e-4531-8a33-0c488fe691b4
+              stepCounter: 10d3878b-be72-4090-ae6c-7f353758de04
+            dataType: VARCHAR(16777216)
+            description: ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            name: ROWGUID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 853ccdd9-5892-4156-8a59-8a6b42829af7
+                    stepCounter: d453065b-91f6-4257-aa0b-3d3ecb68c3ba
+                transform: ""
+          - columnReference:
+              columnCounter: 734f451b-00e5-4af8-8803-088cf28d2b64
+              stepCounter: 10d3878b-be72-4090-ae6c-7f353758de04
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 03537f9d-8ad2-49aa-b405-6a0da1bbbeba
+                    stepCounter: d453065b-91f6-4257-aa0b-3d3ecb68c3ba
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 57a71ced-5dd6-418e-8b3a-0679c493b123
+              stepCounter: 10d3878b-be72-4090-ae6c-7f353758de04
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 109288ac-1e20-4a3d-b9e3-f5c0ea6a4fce
+              stepCounter: 10d3878b-be72-4090-ae6c-7f353758de04
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0e389b79-ce48-449f-be0f-5cdabfaee589
+              stepCounter: 10d3878b-be72-4090-ae6c-7f353758de04
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: f5162511-2ba4-4890-9553-9a309b3308aa
+                stepCounter: 10d3878b-be72-4090-ae6c-7f353758de04
+              - columnCounter: db97a4b4-fc87-4b33-9669-f44103b4fa46
+                stepCounter: 10d3878b-be72-4090-ae6c-7f353758de04
+              - columnCounter: 22b7d3f7-407c-4e0f-8102-1692031b21f7
+                stepCounter: 10d3878b-be72-4090-ae6c-7f353758de04
+              - columnCounter: a8b76cfa-899e-4531-8a33-0c488fe691b4
+                stepCounter: 10d3878b-be72-4090-ae6c-7f353758de04
+              - columnCounter: 734f451b-00e5-4af8-8803-088cf28d2b64
+                stepCounter: 10d3878b-be72-4090-ae6c-7f353758de04
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: cfe26974-650c-4965-b0c4-094f3e3932e4
+              stepCounter: 10d3878b-be72-4090-ae6c-7f353758de04
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 9a0e3c19-5827-4d88-a696-139e0bfdbfd7
+                stepCounter: 10d3878b-be72-4090-ae6c-7f353758de04
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: ADV_WRKS_SRC
+                nodeName: AW_LOAD_PRODUCTINVENTORY
+            join:
+              joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_PRODUCTINVENTORY') }} "AW_LOAD_PRODUCTINVENTORY"
+            name: DVSTG_AW_PRODUCTINVENTORY
+            noLinkRefs: []
+      name: DVSTG_AW_PRODUCTINVENTORY
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: 10d3878b-be72-4090-ae6c-7f353758de04

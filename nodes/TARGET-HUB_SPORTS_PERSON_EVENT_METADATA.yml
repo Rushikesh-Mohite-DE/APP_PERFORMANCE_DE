@@ -1,0 +1,133 @@
+steps:
+  HUB_SPORTS_PERSON_EVENT_METADATA-34d92e66-b9b0-4c7c-a5bd-df7d2957808a:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 45f9b0d0-fa42-44a1-a61e-32551c438047
+              stepCounter: 34d92e66-b9b0-4c7c-a5bd-df7d2957808a
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_EVENT_METADATA
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ed2e0b05-3a6b-454a-ae9d-1ac0b6cb5f8d
+                    stepCounter: ed36544a-d3ac-46bc-8595-16474052470f
+                transform: ""
+          - columnReference:
+              columnCounter: 2969f235-6407-4b00-899e-ebd4facd5054
+              stepCounter: 34d92e66-b9b0-4c7c-a5bd-df7d2957808a
+            dataType: VARCHAR(32)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a13a2756-9a3d-47a5-a4cc-74168f5f2097
+                    stepCounter: ed36544a-d3ac-46bc-8595-16474052470f
+                transform: ""
+          - columnReference:
+              columnCounter: 555b4067-f3dd-470c-9dfe-7fa81f8fb834
+              stepCounter: 34d92e66-b9b0-4c7c-a5bd-df7d2957808a
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PERSON_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1849610d-ed02-4bff-8d81-80ce1f6868c2
+                    stepCounter: ed36544a-d3ac-46bc-8595-16474052470f
+                transform: ""
+          - columnReference:
+              columnCounter: 493dd502-3d4c-4bb3-8618-323a3aa45165
+              stepCounter: 34d92e66-b9b0-4c7c-a5bd-df7d2957808a
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: EVENT_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 849b445f-b5b7-4b98-9b49-33806feb25d5
+                    stepCounter: ed36544a-d3ac-46bc-8595-16474052470f
+                transform: ""
+          - columnReference:
+              columnCounter: fb7f3473-fcbe-4541-b18b-b80a411fd6c5
+              stepCounter: 34d92e66-b9b0-4c7c-a5bd-df7d2957808a
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: POSITION_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9fbc38fe-539a-4203-9255-2ebbbf775413
+                    stepCounter: ed36544a-d3ac-46bc-8595-16474052470f
+                transform: ""
+          - columnReference:
+              columnCounter: 28d505c2-e747-4389-9f1b-3d96f5fffd3c
+              stepCounter: 34d92e66-b9b0-4c7c-a5bd-df7d2957808a
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bc74cf93-ac89-4921-88d6-65d05b77feef
+                    stepCounter: ed36544a-d3ac-46bc-8595-16474052470f
+                transform: ""
+          - columnReference:
+              columnCounter: fc587b02-ab2c-4b03-b635-1bfeb030179d
+              stepCounter: 34d92e66-b9b0-4c7c-a5bd-df7d2957808a
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1e861042-914d-44b4-a210-ed65ef58f2e1
+                    stepCounter: ed36544a-d3ac-46bc-8595-16474052470f
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SPORTS_PERSON_EVENT_METADATA
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SPORTS_PERSON_EVENT_METADATA') }} "DVSTG_SPORTS_PERSON_EVENT_METADATA"
+            name: HUB_SPORTS_PERSON_EVENT_METADATA
+            noLinkRefs: []
+      name: HUB_SPORTS_PERSON_EVENT_METADATA
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 34d92e66-b9b0-4c7c-a5bd-df7d2957808a

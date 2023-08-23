@@ -1,0 +1,109 @@
+steps:
+  SPORTS_LOAD_SUB_SEASONS-f8bf6be1-9b74-47f1-8aa3-9f7c93ca6759:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SPORTS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: edc18608-1363-4101-a92f-4c30937b0090
+              stepCounter: f8bf6be1-9b74-47f1-8aa3-9f7c93ca6759
+            config: {}
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            name: ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 39884aab-e436-49aa-abd0-4b6d3a8c1247
+              stepCounter: f8bf6be1-9b74-47f1-8aa3-9f7c93ca6759
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: SUB_SEASON_KEY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8d2edaca-e9f0-4dc6-b633-aa91e1ab92db
+              stepCounter: f8bf6be1-9b74-47f1-8aa3-9f7c93ca6759
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: SEASON_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f35e402f-ea9e-4db8-a066-3126da33dbc5
+              stepCounter: f8bf6be1-9b74-47f1-8aa3-9f7c93ca6759
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: SUB_SEASON_TYPE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5c441e92-dbf1-448c-bed7-985a00988a50
+              stepCounter: f8bf6be1-9b74-47f1-8aa3-9f7c93ca6759
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: START_DATE_TIME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 67d4aa18-c1fe-4e51-95b8-f6118bfbcd5b
+              stepCounter: f8bf6be1-9b74-47f1-8aa3-9f7c93ca6759
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: END_DATE_TIME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SPORTS_SRC', 'SPORTS_LOAD_SUB_SEASONS') }}
+      name: SPORTS_LOAD_SUB_SEASONS
+      schema: ""
+      sqlType: Source
+      table: SPORTS_LOAD_SUB_SEASONS
+      type: sourceInput
+    stepCounter: f8bf6be1-9b74-47f1-8aa3-9f7c93ca6759

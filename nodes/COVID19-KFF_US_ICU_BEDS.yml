@@ -1,0 +1,154 @@
+steps:
+  KFF_US_ICU_BEDS-4de7ad89-d6e2-45df-8d89-a88002362b43:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ICU beds, US
+      locationID: ""
+      locationName: COVID19
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0e148e9a-ad07-427d-b4ec-3791e86d5f04
+              stepCounter: 4de7ad89-d6e2-45df-8d89-a88002362b43
+            config: {}
+            dataType: VARCHAR(8192)
+            defaultValue: ""
+            description: ISO-3166-1 entity name
+            name: COUNTRY_REGION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0166e9c7-7e4d-4d63-a382-24af0618161b
+              stepCounter: 4de7ad89-d6e2-45df-8d89-a88002362b43
+            config: {}
+            dataType: VARCHAR(8192)
+            defaultValue: ""
+            description: ISO-3166-1 code for geography of record
+            name: ISO3166_1
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: da4e0d3b-cf34-4823-a5da-a66ba1657d90
+              stepCounter: 4de7ad89-d6e2-45df-8d89-a88002362b43
+            config: {}
+            dataType: VARCHAR(8192)
+            defaultValue: ""
+            description: ISO-3166-2 code for geography of record
+            name: ISO3166_2
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3360b301-8e6f-4560-bce8-b7d89dc9abf2
+              stepCounter: 4de7ad89-d6e2-45df-8d89-a88002362b43
+            config: {}
+            dataType: VARCHAR(8192)
+            defaultValue: ""
+            description: Note/comment
+            name: NOTE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8961d6bc-ff76-4175-92c7-fd29572001a6
+              stepCounter: 4de7ad89-d6e2-45df-8d89-a88002362b43
+            config: {}
+            dataType: VARCHAR(8192)
+            defaultValue: ""
+            description: State
+            name: STATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6e22cdf8-3db0-4c8b-a64d-6ec80c6b53d0
+              stepCounter: 4de7ad89-d6e2-45df-8d89-a88002362b43
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Number of hospitals in geography of record
+            name: HOSPITALS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a76d286e-9967-49e1-8576-5617c742aecd
+              stepCounter: 4de7ad89-d6e2-45df-8d89-a88002362b43
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Number of ICU beds in geography of record
+            name: ICU_BEDS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7726fb23-2cc4-4e10-b429-83d5d0ed24f0
+              stepCounter: 4de7ad89-d6e2-45df-8d89-a88002362b43
+            config: {}
+            dataType: VARCHAR(8192)
+            defaultValue: ""
+            description: County
+            name: COUNTY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b1603db0-f7c9-4a05-9b74-a84e7e7ad2a9
+              stepCounter: 4de7ad89-d6e2-45df-8d89-a88002362b43
+            config: {}
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: FIPS code for geography of record
+            name: FIPS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('COVID19', 'KFF_US_ICU_BEDS') }}
+      name: KFF_US_ICU_BEDS
+      schema: ""
+      sqlType: Source
+      table: KFF_US_ICU_BEDS
+      type: sourceInput
+    stepCounter: 4de7ad89-d6e2-45df-8d89-a88002362b43

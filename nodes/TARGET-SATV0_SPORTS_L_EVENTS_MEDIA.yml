@@ -1,0 +1,93 @@
+steps:
+  SATV0_SPORTS_L_EVENTS_MEDIA-76f3a323-2aae-4273-b0f6-108a8f846a37:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 4cb3af9f-ba57-40a9-bf1d-866e2fa2cd15
+              stepCounter: 76f3a323-2aae-4273-b0f6-108a8f846a37
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_MEDIA
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 949d420c-092a-454e-99fc-4a00b0ed7a6f
+                    stepCounter: 7a2019ec-0e9f-41f3-bd6f-abdf81c527b9
+                transform: ""
+          - columnReference:
+              columnCounter: 88ba2c87-b9de-499a-872e-68de35c7a3da
+              stepCounter: 76f3a323-2aae-4273-b0f6-108a8f846a37
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 023dda40-2dfe-4286-8cca-218d7f7e4363
+                    stepCounter: 7a2019ec-0e9f-41f3-bd6f-abdf81c527b9
+                transform: ""
+          - columnReference:
+              columnCounter: 0d981deb-46ae-4cf6-b361-70157080b62e
+              stepCounter: 76f3a323-2aae-4273-b0f6-108a8f846a37
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 958ed0c4-a300-468a-aad1-4f293316acc2
+                    stepCounter: 7a2019ec-0e9f-41f3-bd6f-abdf81c527b9
+                transform: ""
+          - columnReference:
+              columnCounter: 9527ec0e-117d-475f-bc40-7b54cdb94f8c
+              stepCounter: 76f3a323-2aae-4273-b0f6-108a8f846a37
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 44eed494-2169-4107-8b9f-99d70b528931
+                    stepCounter: 7a2019ec-0e9f-41f3-bd6f-abdf81c527b9
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SPORTS_L_EVENTS_MEDIA
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SPORTS_L_EVENTS_MEDIA') }} "DVSTG_SPORTS_L_EVENTS_MEDIA"
+            name: SATV0_SPORTS_L_EVENTS_MEDIA
+            noLinkRefs: []
+      name: SATV0_SPORTS_L_EVENTS_MEDIA
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: 76f3a323-2aae-4273-b0f6-108a8f846a37

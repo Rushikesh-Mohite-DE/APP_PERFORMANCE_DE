@@ -1,0 +1,301 @@
+steps:
+  LINK_SCS_BE_DETAILED_HOSPITALISATIONS-d62118fd-3d43-44ef-9e91-625d9d9d2379:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: Hospitalisations and details on patient disposition
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 5f19bdca-c2c0-468b-9902-ac83b3a02303
+              stepCounter: d62118fd-3d43-44ef-9e91-625d9d9d2379
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_SCS_BE_DETAILED_HOSPITALISATIONS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 94924061-35cf-40f7-8c9f-4e1b70bd719e
+                    stepCounter: 0447b667-695e-42b9-ac42-defe8b568878
+                transform: ""
+          - columnReference:
+              columnCounter: 96a4cae0-8567-4db8-aa00-dfbc7d21d36f
+              stepCounter: d62118fd-3d43-44ef-9e91-625d9d9d2379
+            dataType: VARCHAR(128)
+            description: ISO-3166-3 entity name
+            hashColumns: []
+            hashDetails: null
+            name: PROVINCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e51c91a7-24b6-4b8e-87d8-02b62c4714f7
+                    stepCounter: 0447b667-695e-42b9-ac42-defe8b568878
+                transform: ""
+          - columnReference:
+              columnCounter: e27fbeb8-688f-4e7e-8e14-11d33c579448
+              stepCounter: d62118fd-3d43-44ef-9e91-625d9d9d2379
+            dataType: VARCHAR(128)
+            description: ISO-3166-2 entity name
+            hashColumns: []
+            hashDetails: null
+            name: REGION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2e696db0-a9c3-4c66-99ed-35d2e4f06fd1
+                    stepCounter: 0447b667-695e-42b9-ac42-defe8b568878
+                transform: ""
+          - columnReference:
+              columnCounter: a9a8ec8c-c0a6-4512-8b62-341b741c611d
+              stepCounter: d62118fd-3d43-44ef-9e91-625d9d9d2379
+            dataType: DATE
+            description: Date of record
+            hashColumns: []
+            hashDetails: null
+            name: DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6e06fa7c-2967-4084-80c4-7d6bb8517122
+                    stepCounter: 0447b667-695e-42b9-ac42-defe8b568878
+                transform: ""
+          - columnReference:
+              columnCounter: 7891e3bd-b1d1-40cc-bc54-181112834f48
+              stepCounter: d62118fd-3d43-44ef-9e91-625d9d9d2379
+            dataType: NUMBER(38,0)
+            description: Number of reporting institutions
+            hashColumns: []
+            hashDetails: null
+            name: NR_REPORTING
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: afa31100-5d53-45dd-968e-037ef595a51e
+                    stepCounter: 0447b667-695e-42b9-ac42-defe8b568878
+                transform: ""
+          - columnReference:
+              columnCounter: b6a70065-40fe-4345-91ca-b5771eaa4fe5
+              stepCounter: d62118fd-3d43-44ef-9e91-625d9d9d2379
+            dataType: NUMBER(38,0)
+            description: Total number of hospitalised patients
+            hashColumns: []
+            hashDetails: null
+            name: TOTAL_IN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4dfe6986-5843-460a-86c0-4079c4b391f4
+                    stepCounter: 0447b667-695e-42b9-ac42-defe8b568878
+                transform: ""
+          - columnReference:
+              columnCounter: d7af903c-1aba-4826-8395-1f43ad6e7765
+              stepCounter: d62118fd-3d43-44ef-9e91-625d9d9d2379
+            dataType: NUMBER(38,0)
+            description: Total number of hospitalised patients in intensive care
+            hashColumns: []
+            hashDetails: null
+            name: TOTAL_IN_ICU
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 061a5f6b-bffd-4c69-80c2-4fcd768e9561
+                    stepCounter: 0447b667-695e-42b9-ac42-defe8b568878
+                transform: ""
+          - columnReference:
+              columnCounter: b42e9a21-5d9d-4e80-8507-da6fdb7a6842
+              stepCounter: d62118fd-3d43-44ef-9e91-625d9d9d2379
+            dataType: NUMBER(38,0)
+            description: Total number of hospitalised patients on respiratory support
+            hashColumns: []
+            hashDetails: null
+            name: TOTAL_IN_RESP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3d3045f0-9bc3-414e-97b9-d0535fd68e4a
+                    stepCounter: 0447b667-695e-42b9-ac42-defe8b568878
+                transform: ""
+          - columnReference:
+              columnCounter: 5d9572e5-0528-4370-a79e-40b4c7d96b68
+              stepCounter: d62118fd-3d43-44ef-9e91-625d9d9d2379
+            dataType: NUMBER(38,0)
+            description: Total number of hospitalised patients receiving extracorporeal membrane oxygenation (ECMO) therapy
+            hashColumns: []
+            hashDetails: null
+            name: TOTAL_IN_ECMO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4b77e513-4a87-475a-930c-a815f9448839
+                    stepCounter: 0447b667-695e-42b9-ac42-defe8b568878
+                transform: ""
+          - columnReference:
+              columnCounter: e7a321c8-29a8-4f20-bce2-4c4125cd58db
+              stepCounter: d62118fd-3d43-44ef-9e91-625d9d9d2379
+            dataType: NUMBER(38,0)
+            description: Hospitalised patients since last date of record
+            hashColumns: []
+            hashDetails: null
+            name: NEW_IN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 168ce649-2cdb-42aa-8aa3-15760b768fd2
+                    stepCounter: 0447b667-695e-42b9-ac42-defe8b568878
+                transform: ""
+          - columnReference:
+              columnCounter: 39fe673f-e52d-439c-9cd0-22257f609df7
+              stepCounter: d62118fd-3d43-44ef-9e91-625d9d9d2379
+            dataType: NUMBER(38,0)
+            description: Discharged patients since last date of record
+            hashColumns: []
+            hashDetails: null
+            name: NEW_OUT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 61add60b-fd46-4b7d-b8dc-ad4cc4a85c62
+                    stepCounter: 0447b667-695e-42b9-ac42-defe8b568878
+                transform: ""
+          - columnReference:
+              columnCounter: 742feae8-ccbc-47f9-b298-caa559b360a3
+              stepCounter: d62118fd-3d43-44ef-9e91-625d9d9d2379
+            dataType: VARCHAR(2)
+            description: ISO-3166-1 code for geography of record
+            hashColumns: []
+            hashDetails: null
+            name: ISO3166_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: aef82ca5-7a75-4557-a93f-944f56b3a81a
+                    stepCounter: 0447b667-695e-42b9-ac42-defe8b568878
+                transform: ""
+          - columnReference:
+              columnCounter: aa46a070-34b3-44d0-a585-ad732aa3c292
+              stepCounter: d62118fd-3d43-44ef-9e91-625d9d9d2379
+            dataType: VARCHAR(3)
+            description: ISO-3166-2 code for geography of record
+            hashColumns: []
+            hashDetails: null
+            name: ISO3166_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bbe7d49d-c0cb-4297-beed-79a28ec269d2
+                    stepCounter: 0447b667-695e-42b9-ac42-defe8b568878
+                transform: ""
+          - columnReference:
+              columnCounter: 61d39d90-a999-4f51-b094-89e47d5133dc
+              stepCounter: d62118fd-3d43-44ef-9e91-625d9d9d2379
+            dataType: VARCHAR(3)
+            description: ISO-3166-3 code for geography of record
+            hashColumns: []
+            hashDetails: null
+            name: ISO3166_3
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cd725deb-f9e1-4375-833e-986085101a39
+                    stepCounter: 0447b667-695e-42b9-ac42-defe8b568878
+                transform: ""
+          - columnReference:
+              columnCounter: b6ee3024-bee7-4b51-9227-d0a706349929
+              stepCounter: d62118fd-3d43-44ef-9e91-625d9d9d2379
+            dataType: TIMESTAMP_NTZ(9)
+            description: Timestamp of last update
+            hashColumns: []
+            hashDetails: null
+            name: LAST_UPDATED_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 933ea6c2-8791-4257-ab73-3686ad7f122d
+                    stepCounter: 0447b667-695e-42b9-ac42-defe8b568878
+                transform: ""
+          - columnReference:
+              columnCounter: ff40bf3d-17b6-48e5-985d-53651d43c129
+              stepCounter: d62118fd-3d43-44ef-9e91-625d9d9d2379
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6502ffd9-9693-42c0-be6c-eaa279bb2269
+                    stepCounter: 0447b667-695e-42b9-ac42-defe8b568878
+                transform: ""
+          - columnReference:
+              columnCounter: 62040cda-02f6-40e2-b94e-23956b23a103
+              stepCounter: d62118fd-3d43-44ef-9e91-625d9d9d2379
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 82aba8b5-4b5c-48d9-9b02-fc2efa139ecf
+                    stepCounter: 0447b667-695e-42b9-ac42-defe8b568878
+                transform: ""
+          - columnReference:
+              columnCounter: 6e664fc0-9a42-499d-9622-5398851ca2e2
+              stepCounter: d62118fd-3d43-44ef-9e91-625d9d9d2379
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 32e7958c-7a55-40c7-b8aa-f6cb81769cb7
+                    stepCounter: 0447b667-695e-42b9-ac42-defe8b568878
+                transform: ""
+          - columnReference:
+              columnCounter: b7074d76-4646-4169-b476-dfebacc9e655
+              stepCounter: d62118fd-3d43-44ef-9e91-625d9d9d2379
+            config:
+              is_Link_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LNK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: af0c30c3-b21d-4e89-807d-e202ea2c16c7
+                    stepCounter: 0447b667-695e-42b9-ac42-defe8b568878
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SCS_BE_DETAILED_HOSPITALISATIONS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SCS_BE_DETAILED_HOSPITALISATIONS') }} "DVSTG_SCS_BE_DETAILED_HOSPITALISATIONS"
+            name: LINK_SCS_BE_DETAILED_HOSPITALISATIONS
+            noLinkRefs: []
+      name: LINK_SCS_BE_DETAILED_HOSPITALISATIONS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::7
+      type: sql
+    stepCounter: d62118fd-3d43-44ef-9e91-625d9d9d2379

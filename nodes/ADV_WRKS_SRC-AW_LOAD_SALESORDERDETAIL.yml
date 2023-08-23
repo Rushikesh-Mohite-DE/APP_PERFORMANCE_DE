@@ -1,0 +1,184 @@
+steps:
+  AW_LOAD_SALESORDERDETAIL-ab806a21-4e59-4471-ab9c-75fa0433f8b7:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: ADV_WRKS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7382a52f-ec9b-4c8e-b775-0e5ab2f32d9d
+              stepCounter: ab806a21-4e59-4471-ab9c-75fa0433f8b7
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Primary key. Foreign key to SalesOrderHeader.SalesOrderID.
+            name: SALESORDERID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: be7561d2-87cc-491e-96e0-b448d0692494
+              stepCounter: ab806a21-4e59-4471-ab9c-75fa0433f8b7
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Primary key. One incremental unique number per product sold.
+            name: SALESORDERDETAILID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9a567aa8-6f2a-4adc-929c-35516d86f901
+              stepCounter: ab806a21-4e59-4471-ab9c-75fa0433f8b7
+            config: {}
+            dataType: VARCHAR(25)
+            defaultValue: ""
+            description: Shipment tracking number supplied by the shipper.
+            name: CARRIERTRACKINGNUMBER
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3086b944-4942-4eba-9924-54668bd64bc0
+              stepCounter: ab806a21-4e59-4471-ab9c-75fa0433f8b7
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Quantity ordered per product.
+            name: ORDERQTY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 45ea6cc8-7075-4c03-9231-0fb75e293594
+              stepCounter: ab806a21-4e59-4471-ab9c-75fa0433f8b7
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Product sold to customer. Foreign key to Product.ProductID.
+            name: PRODUCTID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fb85321a-0536-4a3c-8bd6-d046d8e739f8
+              stepCounter: ab806a21-4e59-4471-ab9c-75fa0433f8b7
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Promotional code. Foreign key to SpecialOffer.SpecialOfferID.
+            name: SPECIALOFFERID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5c69821b-a535-45b9-b002-6ef5e21bfc93
+              stepCounter: ab806a21-4e59-4471-ab9c-75fa0433f8b7
+            config: {}
+            dataType: NUMBER(19,4)
+            defaultValue: ""
+            description: Selling price of a single product.
+            name: UNITPRICE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c67b447a-3859-447a-bc0e-859f8e2c6355
+              stepCounter: ab806a21-4e59-4471-ab9c-75fa0433f8b7
+            config: {}
+            dataType: NUMBER(19,4)
+            defaultValue: ""
+            description: Discount amount.
+            name: UNITPRICEDISCOUNT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 05f6b419-d938-448d-a874-aa8f0f8d0080
+              stepCounter: ab806a21-4e59-4471-ab9c-75fa0433f8b7
+            config: {}
+            dataType: NUMBER(38,6)
+            defaultValue: ""
+            description: Per product subtotal. Computed as UnitPrice * (1 - UnitPriceDiscount) * OrderQty.
+            name: LINETOTAL
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: db251836-e020-46bc-99eb-efac0ded89ed
+              stepCounter: ab806a21-4e59-4471-ab9c-75fa0433f8b7
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            name: ROWGUID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 20a095f9-07dc-4f8e-850f-47885bb2fe88
+              stepCounter: ab806a21-4e59-4471-ab9c-75fa0433f8b7
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_SALESORDERDETAIL') }}
+      name: AW_LOAD_SALESORDERDETAIL
+      schema: ""
+      sqlType: Source
+      table: AW_LOAD_SALESORDERDETAIL
+      type: sourceInput
+    stepCounter: ab806a21-4e59-4471-ab9c-75fa0433f8b7

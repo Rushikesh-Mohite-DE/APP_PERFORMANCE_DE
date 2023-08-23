@@ -1,0 +1,209 @@
+steps:
+  DVSTG_SPORTS_SUB_SEASONS-4fafca79-b668-4e9c-aa22-0ca22ed5c841:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 467365fa-8bf6-4cd6-b277-14e1d593484a
+              stepCounter: 4fafca79-b668-4e9c-aa22-0ca22ed5c841
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: c493bedd-6b88-4ecf-85ce-dc9895a7ee64
+                stepCounter: 4fafca79-b668-4e9c-aa22-0ca22ed5c841
+              - columnCounter: 5737d2b4-f206-4d3e-8d64-0a9299577920
+                stepCounter: 4fafca79-b668-4e9c-aa22-0ca22ed5c841
+              - columnCounter: 826ea206-2a3d-46e3-8daf-657ed2664106
+                stepCounter: 4fafca79-b668-4e9c-aa22-0ca22ed5c841
+            name: HK_SUB_SEASONS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 5737d2b4-f206-4d3e-8d64-0a9299577920
+              stepCounter: 4fafca79-b668-4e9c-aa22-0ca22ed5c841
+            dataType: VARCHAR(32)
+            description: ""
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: edc18608-1363-4101-a92f-4c30937b0090
+                    stepCounter: f8bf6be1-9b74-47f1-8aa3-9f7c93ca6759
+                transform: ""
+          - columnReference:
+              columnCounter: c493bedd-6b88-4ecf-85ce-dc9895a7ee64
+              stepCounter: 4fafca79-b668-4e9c-aa22-0ca22ed5c841
+            dataType: VARCHAR(100)
+            description: ""
+            name: SUB_SEASON_KEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 39884aab-e436-49aa-abd0-4b6d3a8c1247
+                    stepCounter: f8bf6be1-9b74-47f1-8aa3-9f7c93ca6759
+                transform: ""
+          - columnReference:
+              columnCounter: 826ea206-2a3d-46e3-8daf-657ed2664106
+              stepCounter: 4fafca79-b668-4e9c-aa22-0ca22ed5c841
+            dataType: NUMBER(38,0)
+            description: ""
+            name: SEASON_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8d2edaca-e9f0-4dc6-b633-aa91e1ab92db
+                    stepCounter: f8bf6be1-9b74-47f1-8aa3-9f7c93ca6759
+                transform: ""
+          - columnReference:
+              columnCounter: 58f4eb39-b4a5-4bf6-94b2-7b9ccea29ed6
+              stepCounter: 4fafca79-b668-4e9c-aa22-0ca22ed5c841
+            dataType: VARCHAR(100)
+            description: ""
+            name: SUB_SEASON_TYPE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f35e402f-ea9e-4db8-a066-3126da33dbc5
+                    stepCounter: f8bf6be1-9b74-47f1-8aa3-9f7c93ca6759
+                transform: ""
+          - columnReference:
+              columnCounter: bdfaef6e-c0e9-4ad4-abaf-1cb3cc2654f3
+              stepCounter: 4fafca79-b668-4e9c-aa22-0ca22ed5c841
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            name: START_DATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5c441e92-dbf1-448c-bed7-985a00988a50
+                    stepCounter: f8bf6be1-9b74-47f1-8aa3-9f7c93ca6759
+                transform: ""
+          - columnReference:
+              columnCounter: cd72cae1-decb-4842-a810-d7618537f7bc
+              stepCounter: 4fafca79-b668-4e9c-aa22-0ca22ed5c841
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            name: END_DATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 67d4aa18-c1fe-4e51-95b8-f6118bfbcd5b
+                    stepCounter: f8bf6be1-9b74-47f1-8aa3-9f7c93ca6759
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9362f9ec-53b1-4755-afd5-f530b8303564
+              stepCounter: 4fafca79-b668-4e9c-aa22-0ca22ed5c841
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: efcefec2-058a-453b-bbb8-8b7cd60ae636
+              stepCounter: 4fafca79-b668-4e9c-aa22-0ca22ed5c841
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e0f29d5b-e62e-4ce8-9694-ecddce595411
+              stepCounter: 4fafca79-b668-4e9c-aa22-0ca22ed5c841
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 58f4eb39-b4a5-4bf6-94b2-7b9ccea29ed6
+                stepCounter: 4fafca79-b668-4e9c-aa22-0ca22ed5c841
+              - columnCounter: bdfaef6e-c0e9-4ad4-abaf-1cb3cc2654f3
+                stepCounter: 4fafca79-b668-4e9c-aa22-0ca22ed5c841
+              - columnCounter: cd72cae1-decb-4842-a810-d7618537f7bc
+                stepCounter: 4fafca79-b668-4e9c-aa22-0ca22ed5c841
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4f67c2a3-8f98-4dd7-a12a-0863b46f0344
+              stepCounter: 4fafca79-b668-4e9c-aa22-0ca22ed5c841
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 826ea206-2a3d-46e3-8daf-657ed2664106
+                stepCounter: 4fafca79-b668-4e9c-aa22-0ca22ed5c841
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SPORTS_SRC
+                nodeName: SPORTS_LOAD_SUB_SEASONS
+            join:
+              joinCondition: FROM {{ ref('SPORTS_SRC', 'SPORTS_LOAD_SUB_SEASONS') }} "SPORTS_LOAD_SUB_SEASONS"
+            name: DVSTG_SPORTS_SUB_SEASONS
+            noLinkRefs: []
+      name: DVSTG_SPORTS_SUB_SEASONS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: 4fafca79-b668-4e9c-aa22-0ca22ed5c841

@@ -1,0 +1,307 @@
+steps:
+  DVSTG_SPORTS_WAGERING_ODDS_LINES-41e3a4df-ea89-4ee8-8d68-32ce98362a9f:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 37c351ee-971e-42a9-8966-b2a0ac8a6c92
+              stepCounter: 41e3a4df-ea89-4ee8-8d68-32ce98362a9f
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 661c3feb-5f29-43de-b24f-5d7d0c5f516d
+                stepCounter: 41e3a4df-ea89-4ee8-8d68-32ce98362a9f
+              - columnCounter: 05bb1ee4-7998-410a-babc-c41467af0ce2
+                stepCounter: 41e3a4df-ea89-4ee8-8d68-32ce98362a9f
+              - columnCounter: 43a2c267-e4f5-4138-a75c-9e8ea71b31ed
+                stepCounter: 41e3a4df-ea89-4ee8-8d68-32ce98362a9f
+              - columnCounter: 2b67e3e4-9392-408b-933b-f9b4c2deadc7
+                stepCounter: 41e3a4df-ea89-4ee8-8d68-32ce98362a9f
+              - columnCounter: ace0edc5-8f60-4cd0-87b0-65ec7a5b9334
+                stepCounter: 41e3a4df-ea89-4ee8-8d68-32ce98362a9f
+            name: HK_ODDS_LINES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 661c3feb-5f29-43de-b24f-5d7d0c5f516d
+              stepCounter: 41e3a4df-ea89-4ee8-8d68-32ce98362a9f
+            dataType: VARCHAR(32)
+            description: ""
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2d04dcf2-111a-4c86-9f90-e0e2826e7472
+                    stepCounter: ba3e29bf-4506-41a8-be48-0525e0278dbd
+                transform: ""
+          - columnReference:
+              columnCounter: 05bb1ee4-7998-410a-babc-c41467af0ce2
+              stepCounter: 41e3a4df-ea89-4ee8-8d68-32ce98362a9f
+            dataType: NUMBER(38,0)
+            description: ""
+            name: BOOKMAKER_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 389b62cd-9343-4575-a8cb-c3e7112df26e
+                    stepCounter: ba3e29bf-4506-41a8-be48-0525e0278dbd
+                transform: ""
+          - columnReference:
+              columnCounter: 43a2c267-e4f5-4138-a75c-9e8ea71b31ed
+              stepCounter: 41e3a4df-ea89-4ee8-8d68-32ce98362a9f
+            dataType: NUMBER(38,0)
+            description: ""
+            name: EVENT_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9361e364-484b-4f88-8d2f-38ac56f04f86
+                    stepCounter: ba3e29bf-4506-41a8-be48-0525e0278dbd
+                transform: ""
+          - columnReference:
+              columnCounter: 0542cc02-3ed2-4e90-80c9-b576cf70961c
+              stepCounter: 41e3a4df-ea89-4ee8-8d68-32ce98362a9f
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            name: DATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 780cac12-e377-4c7d-8995-596c00fb5ffb
+                    stepCounter: ba3e29bf-4506-41a8-be48-0525e0278dbd
+                transform: ""
+          - columnReference:
+              columnCounter: 2b67e3e4-9392-408b-933b-f9b4c2deadc7
+              stepCounter: 41e3a4df-ea89-4ee8-8d68-32ce98362a9f
+            dataType: NUMBER(38,0)
+            description: ""
+            name: TEAM_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: acedd754-c29a-4d78-b7ca-97f35b1c714b
+                    stepCounter: ba3e29bf-4506-41a8-be48-0525e0278dbd
+                transform: ""
+          - columnReference:
+              columnCounter: ace0edc5-8f60-4cd0-87b0-65ec7a5b9334
+              stepCounter: 41e3a4df-ea89-4ee8-8d68-32ce98362a9f
+            dataType: NUMBER(38,0)
+            description: ""
+            name: PERSON_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1404c1eb-f5c7-460e-aaa4-1f9c145c3f51
+                    stepCounter: ba3e29bf-4506-41a8-be48-0525e0278dbd
+                transform: ""
+          - columnReference:
+              columnCounter: 668e22ec-390d-4840-9e1c-d9a39f2651cb
+              stepCounter: 41e3a4df-ea89-4ee8-8d68-32ce98362a9f
+            dataType: VARCHAR(100)
+            description: ""
+            name: ROTATION_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0d6f7517-754f-4850-9bb9-a3bb2b49a310
+                    stepCounter: ba3e29bf-4506-41a8-be48-0525e0278dbd
+                transform: ""
+          - columnReference:
+              columnCounter: b3786922-ca4b-4da1-ab51-6e0ef5d40ec7
+              stepCounter: 41e3a4df-ea89-4ee8-8d68-32ce98362a9f
+            dataType: VARCHAR(100)
+            description: ""
+            name: comment
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f52094c5-c523-46ce-807d-dc17a8e52062
+                    stepCounter: ba3e29bf-4506-41a8-be48-0525e0278dbd
+                transform: ""
+          - columnReference:
+              columnCounter: af2ace84-8fbd-442d-b07e-229522d4c28c
+              stepCounter: 41e3a4df-ea89-4ee8-8d68-32ce98362a9f
+            dataType: VARCHAR(100)
+            description: ""
+            name: NUMERATOR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a7559f4c-1b35-4a17-871a-4df67be10996
+                    stepCounter: ba3e29bf-4506-41a8-be48-0525e0278dbd
+                transform: ""
+          - columnReference:
+              columnCounter: 50247a1d-df16-4728-9256-585850148b45
+              stepCounter: 41e3a4df-ea89-4ee8-8d68-32ce98362a9f
+            dataType: VARCHAR(100)
+            description: ""
+            name: DENOMINATOR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c719754b-bebf-494e-81b8-c02bc13622c8
+                    stepCounter: ba3e29bf-4506-41a8-be48-0525e0278dbd
+                transform: ""
+          - columnReference:
+              columnCounter: 3e2f7396-ab6e-4e14-97b5-d6cda69a8a7b
+              stepCounter: 41e3a4df-ea89-4ee8-8d68-32ce98362a9f
+            dataType: VARCHAR(100)
+            description: ""
+            name: PREDICTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9e6a3fce-daf6-4d71-9060-8e4a6f2a9ebc
+                    stepCounter: ba3e29bf-4506-41a8-be48-0525e0278dbd
+                transform: ""
+          - columnReference:
+              columnCounter: 7fc8d7aa-08df-4a6f-9592-c81f3cae0bf6
+              stepCounter: 41e3a4df-ea89-4ee8-8d68-32ce98362a9f
+            dataType: VARCHAR(100)
+            description: ""
+            name: PAYOUT_CALCULATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b13f7a29-9cbb-4797-8b22-45e683b6cc90
+                    stepCounter: ba3e29bf-4506-41a8-be48-0525e0278dbd
+                transform: ""
+          - columnReference:
+              columnCounter: f88b9808-0d39-4e1e-adca-352c2bf735c7
+              stepCounter: 41e3a4df-ea89-4ee8-8d68-32ce98362a9f
+            dataType: VARCHAR(100)
+            description: ""
+            name: PAYOUT_AMOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 01bd47ee-e1d7-4f52-beeb-170842d79da4
+                    stepCounter: ba3e29bf-4506-41a8-be48-0525e0278dbd
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7876d407-9d9f-4d84-8d2a-69e5154fcd85
+              stepCounter: 41e3a4df-ea89-4ee8-8d68-32ce98362a9f
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d02a2f64-bf9c-4403-a668-63b0ee5bc0f5
+              stepCounter: 41e3a4df-ea89-4ee8-8d68-32ce98362a9f
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: db63f842-536c-4074-8c3a-64db4dabefcc
+              stepCounter: 41e3a4df-ea89-4ee8-8d68-32ce98362a9f
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 0542cc02-3ed2-4e90-80c9-b576cf70961c
+                stepCounter: 41e3a4df-ea89-4ee8-8d68-32ce98362a9f
+              - columnCounter: 668e22ec-390d-4840-9e1c-d9a39f2651cb
+                stepCounter: 41e3a4df-ea89-4ee8-8d68-32ce98362a9f
+              - columnCounter: b3786922-ca4b-4da1-ab51-6e0ef5d40ec7
+                stepCounter: 41e3a4df-ea89-4ee8-8d68-32ce98362a9f
+              - columnCounter: af2ace84-8fbd-442d-b07e-229522d4c28c
+                stepCounter: 41e3a4df-ea89-4ee8-8d68-32ce98362a9f
+              - columnCounter: 50247a1d-df16-4728-9256-585850148b45
+                stepCounter: 41e3a4df-ea89-4ee8-8d68-32ce98362a9f
+              - columnCounter: 3e2f7396-ab6e-4e14-97b5-d6cda69a8a7b
+                stepCounter: 41e3a4df-ea89-4ee8-8d68-32ce98362a9f
+              - columnCounter: 7fc8d7aa-08df-4a6f-9592-c81f3cae0bf6
+                stepCounter: 41e3a4df-ea89-4ee8-8d68-32ce98362a9f
+              - columnCounter: f88b9808-0d39-4e1e-adca-352c2bf735c7
+                stepCounter: 41e3a4df-ea89-4ee8-8d68-32ce98362a9f
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a5e18a53-45cd-4a04-ab8c-c526742ec152
+              stepCounter: 41e3a4df-ea89-4ee8-8d68-32ce98362a9f
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: ace0edc5-8f60-4cd0-87b0-65ec7a5b9334
+                stepCounter: 41e3a4df-ea89-4ee8-8d68-32ce98362a9f
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SPORTS_SRC
+                nodeName: SPORTS_LOAD_WAGERING_ODDS_LINES
+            join:
+              joinCondition: FROM {{ ref('SPORTS_SRC', 'SPORTS_LOAD_WAGERING_ODDS_LINES') }} "SPORTS_LOAD_WAGERING_ODDS_LINES"
+            name: DVSTG_SPORTS_WAGERING_ODDS_LINES
+            noLinkRefs: []
+      name: DVSTG_SPORTS_WAGERING_ODDS_LINES
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: 41e3a4df-ea89-4ee8-8d68-32ce98362a9f

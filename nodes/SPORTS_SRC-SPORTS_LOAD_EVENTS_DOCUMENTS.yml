@@ -1,0 +1,49 @@
+steps:
+  SPORTS_LOAD_EVENTS_DOCUMENTS-04356a93-6f18-4ce2-93c8-1b7f048cceac:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SPORTS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f8115388-e70c-4056-8302-502633a6e0ba
+              stepCounter: 04356a93-6f18-4ce2-93c8-1b7f048cceac
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: EVENT_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d4b3e0f2-c960-4c47-9989-835447a55c58
+              stepCounter: 04356a93-6f18-4ce2-93c8-1b7f048cceac
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: DOCUMENT_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SPORTS_SRC', 'SPORTS_LOAD_EVENTS_DOCUMENTS') }}
+      name: SPORTS_LOAD_EVENTS_DOCUMENTS
+      schema: ""
+      sqlType: Source
+      table: SPORTS_LOAD_EVENTS_DOCUMENTS
+      type: sourceInput
+    stepCounter: 04356a93-6f18-4ce2-93c8-1b7f048cceac

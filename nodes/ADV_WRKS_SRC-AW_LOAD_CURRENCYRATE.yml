@@ -1,0 +1,124 @@
+steps:
+  AW_LOAD_CURRENCYRATE-d9ee64a6-c76f-422f-a23e-50d8273c625b:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: ADV_WRKS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 77854d3a-9358-44b8-8aa4-b8fad5259cfd
+              stepCounter: d9ee64a6-c76f-422f-a23e-50d8273c625b
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Primary key for CurrencyRate records.
+            name: CURRENCYRATEID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d6467a8f-23eb-42f9-b867-6615d69048f6
+              stepCounter: d9ee64a6-c76f-422f-a23e-50d8273c625b
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the exchange rate was obtained.
+            name: CURRENCYRATEDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 60e977da-2fbf-4dd5-abc9-656f33ed6228
+              stepCounter: d9ee64a6-c76f-422f-a23e-50d8273c625b
+            config: {}
+            dataType: VARCHAR(3)
+            defaultValue: ""
+            description: Exchange rate was converted from this currency code.
+            name: FROMCURRENCYCODE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5ca13061-43ee-49f1-80ef-7325656fd719
+              stepCounter: d9ee64a6-c76f-422f-a23e-50d8273c625b
+            config: {}
+            dataType: VARCHAR(3)
+            defaultValue: ""
+            description: Exchange rate was converted to this currency code.
+            name: TOCURRENCYCODE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 87266c4e-50b8-4225-b9b6-36bd5c33a08c
+              stepCounter: d9ee64a6-c76f-422f-a23e-50d8273c625b
+            config: {}
+            dataType: NUMBER(19,4)
+            defaultValue: ""
+            description: Average exchange rate for the day.
+            name: AVERAGERATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 23c0ba17-1492-45d3-83a1-32284b821205
+              stepCounter: d9ee64a6-c76f-422f-a23e-50d8273c625b
+            config: {}
+            dataType: NUMBER(19,4)
+            defaultValue: ""
+            description: Final exchange rate for the day.
+            name: ENDOFDAYRATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ed74061e-dfd6-4e06-96df-a76162d6c78a
+              stepCounter: d9ee64a6-c76f-422f-a23e-50d8273c625b
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_CURRENCYRATE') }}
+      name: AW_LOAD_CURRENCYRATE
+      schema: ""
+      sqlType: Source
+      table: AW_LOAD_CURRENCYRATE
+      type: sourceInput
+    stepCounter: d9ee64a6-c76f-422f-a23e-50d8273c625b

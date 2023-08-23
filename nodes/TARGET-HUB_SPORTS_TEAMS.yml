@@ -1,0 +1,105 @@
+steps:
+  HUB_SPORTS_TEAMS-aec3e545-1516-4c7a-8e0b-c6fc1f70af6f:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: fa600d2d-0850-49c4-887b-bfc97995eb29
+              stepCounter: aec3e545-1516-4c7a-8e0b-c6fc1f70af6f
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_SPORTS_TEAMS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 916bb314-fe95-483d-83d1-b5991f65d7be
+                    stepCounter: 47d0e572-0113-45f4-b43f-37ab69062b44
+                transform: ""
+          - columnReference:
+              columnCounter: 1d0a4803-6b1c-4188-aef2-47328c7d653c
+              stepCounter: aec3e545-1516-4c7a-8e0b-c6fc1f70af6f
+            dataType: VARCHAR(32)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b1db9144-1bef-4600-a7b6-c3f95e8cc46c
+                    stepCounter: 47d0e572-0113-45f4-b43f-37ab69062b44
+                transform: ""
+          - columnReference:
+              columnCounter: 4132386c-0ed9-4189-8c98-159ea70d3546
+              stepCounter: aec3e545-1516-4c7a-8e0b-c6fc1f70af6f
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PUBLISHER_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 472fe454-921e-452a-8641-da77986cc5f4
+                    stepCounter: 47d0e572-0113-45f4-b43f-37ab69062b44
+                transform: ""
+          - columnReference:
+              columnCounter: 7225304c-abdc-44fd-a6dc-d6d5e4e5d531
+              stepCounter: aec3e545-1516-4c7a-8e0b-c6fc1f70af6f
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bdb81cb9-d01c-4cbe-b77c-51c889b5960b
+                    stepCounter: 47d0e572-0113-45f4-b43f-37ab69062b44
+                transform: ""
+          - columnReference:
+              columnCounter: 21f9f25a-9d2b-4263-b00a-54cf7b6aad65
+              stepCounter: aec3e545-1516-4c7a-8e0b-c6fc1f70af6f
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b12638e1-dacc-4ebe-8413-07f74d34335f
+                    stepCounter: 47d0e572-0113-45f4-b43f-37ab69062b44
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SPORTS_TEAMS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SPORTS_TEAMS') }} "DVSTG_SPORTS_TEAMS"
+            name: HUB_SPORTS_TEAMS
+            noLinkRefs: []
+      name: HUB_SPORTS_TEAMS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: aec3e545-1516-4c7a-8e0b-c6fc1f70af6f

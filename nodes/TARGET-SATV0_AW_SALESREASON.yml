@@ -1,0 +1,135 @@
+steps:
+  SATV0_AW_SALESREASON-77a11ffb-b0d7-4383-812c-9ab1e748892a:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: d5f63536-dd33-42eb-9e63-2dd4db9e727d
+              stepCounter: 77a11ffb-b0d7-4383-812c-9ab1e748892a
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_SALESREASON
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1b86fa2e-1149-47d2-8e80-6af750e31aec
+                    stepCounter: a7fe383f-7c2e-443c-bb04-dd368e4dce2b
+                transform: ""
+          - columnReference:
+              columnCounter: a53a5dac-68b1-4d43-a40e-6c39e764a9e7
+              stepCounter: 77a11ffb-b0d7-4383-812c-9ab1e748892a
+            dataType: VARCHAR(16777216)
+            description: Sales reason description.
+            hashColumns: []
+            hashDetails: null
+            name: NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2ea74710-f87b-47a5-99c4-9dc3e6f5fd26
+                    stepCounter: a7fe383f-7c2e-443c-bb04-dd368e4dce2b
+                transform: ""
+          - columnReference:
+              columnCounter: 70d49018-176c-4046-ae1f-5cfba3516ede
+              stepCounter: 77a11ffb-b0d7-4383-812c-9ab1e748892a
+            dataType: VARCHAR(16777216)
+            description: Category the sales reason belongs to.
+            hashColumns: []
+            hashDetails: null
+            name: REASONTYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 285aae4e-0783-4bec-a12b-885c1b157108
+                    stepCounter: a7fe383f-7c2e-443c-bb04-dd368e4dce2b
+                transform: ""
+          - columnReference:
+              columnCounter: 51cca3b9-6e7c-4fff-973d-47e2c0cbb2da
+              stepCounter: 77a11ffb-b0d7-4383-812c-9ab1e748892a
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            hashColumns: []
+            hashDetails: null
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ec224713-161f-4955-aaf5-a7f33f812fdf
+                    stepCounter: a7fe383f-7c2e-443c-bb04-dd368e4dce2b
+                transform: ""
+          - columnReference:
+              columnCounter: a332b67e-71f0-46bb-8ff6-c9a8dd276568
+              stepCounter: 77a11ffb-b0d7-4383-812c-9ab1e748892a
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fe96e5b7-7059-400e-b4bf-0e1111e60c4a
+                    stepCounter: a7fe383f-7c2e-443c-bb04-dd368e4dce2b
+                transform: ""
+          - columnReference:
+              columnCounter: c619fbb9-1e2a-40f5-9d1b-dd993e735863
+              stepCounter: 77a11ffb-b0d7-4383-812c-9ab1e748892a
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 38bb64f9-7685-425f-b438-c59115a4007b
+                    stepCounter: a7fe383f-7c2e-443c-bb04-dd368e4dce2b
+                transform: ""
+          - columnReference:
+              columnCounter: 949a4ba5-344d-4f0f-8136-9cf374bb613d
+              stepCounter: 77a11ffb-b0d7-4383-812c-9ab1e748892a
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 009890f6-641f-4b18-8928-d9726a54be6e
+                    stepCounter: a7fe383f-7c2e-443c-bb04-dd368e4dce2b
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_SALESREASON
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_SALESREASON') }} "DVSTG_AW_SALESREASON"
+            name: SATV0_AW_SALESREASON
+            noLinkRefs: []
+      name: SATV0_AW_SALESREASON
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: 77a11ffb-b0d7-4383-812c-9ab1e748892a

@@ -1,0 +1,149 @@
+steps:
+  SATV0_SPORTS_TEAM_PHASES-af01d2b9-16a1-428e-a0a3-a75902f86bb7:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 83a8e83b-4439-4a7c-bb40-1c0819fcd616
+              stepCounter: af01d2b9-16a1-428e-a0a3-a75902f86bb7
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_TEAM_PHASES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 64a4d61e-7fa3-47c8-9564-3717b8e68ddd
+                    stepCounter: 5f006469-bace-43f9-b289-bab8108e39af
+                transform: ""
+          - columnReference:
+              columnCounter: f214b41f-2137-4130-b578-9a01c6f1edd3
+              stepCounter: af01d2b9-16a1-428e-a0a3-a75902f86bb7
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: START_DATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: eab48ad3-f42b-41a3-8a8d-9a8f361546eb
+                    stepCounter: 5f006469-bace-43f9-b289-bab8108e39af
+                transform: ""
+          - columnReference:
+              columnCounter: b2001337-86cb-402a-aab6-b393b4797519
+              stepCounter: af01d2b9-16a1-428e-a0a3-a75902f86bb7
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: END_DATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0f75c48c-22ef-463e-ac74-d473fa9011a7
+                    stepCounter: 5f006469-bace-43f9-b289-bab8108e39af
+                transform: ""
+          - columnReference:
+              columnCounter: 01e3ddc2-5bd6-43f2-b8c1-cb15709fdf90
+              stepCounter: af01d2b9-16a1-428e-a0a3-a75902f86bb7
+            dataType: VARCHAR(40)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PHASE_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0580dbfa-ea99-40d6-8665-24628cf0af48
+                    stepCounter: 5f006469-bace-43f9-b289-bab8108e39af
+                transform: ""
+          - columnReference:
+              columnCounter: 454e1654-d6ad-4e91-8a74-b491d00ebf0e
+              stepCounter: af01d2b9-16a1-428e-a0a3-a75902f86bb7
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROLE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9508df29-3a60-474a-bf10-2543bd318bae
+                    stepCounter: 5f006469-bace-43f9-b289-bab8108e39af
+                transform: ""
+          - columnReference:
+              columnCounter: 0c60c6eb-9eaf-4fe0-9da8-e27f8723fe1d
+              stepCounter: af01d2b9-16a1-428e-a0a3-a75902f86bb7
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 962fdc25-9c17-4037-b91a-3732e682cc8e
+                    stepCounter: 5f006469-bace-43f9-b289-bab8108e39af
+                transform: ""
+          - columnReference:
+              columnCounter: 97edd2ab-9d84-4724-a7b3-bd288c4dcad2
+              stepCounter: af01d2b9-16a1-428e-a0a3-a75902f86bb7
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: eecf3a93-bcd6-4f0c-8e8b-63c5a2106936
+                    stepCounter: 5f006469-bace-43f9-b289-bab8108e39af
+                transform: ""
+          - columnReference:
+              columnCounter: c31257b4-47a6-458b-a26b-4d9f202624c1
+              stepCounter: af01d2b9-16a1-428e-a0a3-a75902f86bb7
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e33fd179-e767-490f-a486-6698bb5156ae
+                    stepCounter: 5f006469-bace-43f9-b289-bab8108e39af
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SPORTS_TEAM_PHASES
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SPORTS_TEAM_PHASES') }} "DVSTG_SPORTS_TEAM_PHASES"
+            name: SATV0_SPORTS_TEAM_PHASES
+            noLinkRefs: []
+      name: SATV0_SPORTS_TEAM_PHASES
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: af01d2b9-16a1-428e-a0a3-a75902f86bb7

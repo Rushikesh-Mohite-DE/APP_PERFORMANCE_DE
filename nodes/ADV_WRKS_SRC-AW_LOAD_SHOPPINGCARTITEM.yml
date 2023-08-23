@@ -1,0 +1,109 @@
+steps:
+  AW_LOAD_SHOPPINGCARTITEM-a0c3cb1b-7ed2-4ed9-ae7e-dd03085527c5:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: ADV_WRKS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 720f7908-298c-4cab-8541-e8867cefb68a
+              stepCounter: a0c3cb1b-7ed2-4ed9-ae7e-dd03085527c5
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Primary key for ShoppingCartItem records.
+            name: SHOPPINGCARTITEMID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 36b0c0a5-e8ab-4f11-ad12-823517e1438c
+              stepCounter: a0c3cb1b-7ed2-4ed9-ae7e-dd03085527c5
+            config: {}
+            dataType: VARCHAR(50)
+            defaultValue: ""
+            description: Shopping cart identification number.
+            name: SHOPPINGCARTID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a804dd56-fbeb-4340-9fdb-ed8d2f107847
+              stepCounter: a0c3cb1b-7ed2-4ed9-ae7e-dd03085527c5
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Product quantity ordered.
+            name: QUANTITY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5ad50634-2444-4644-ba63-0bd3358c79ac
+              stepCounter: a0c3cb1b-7ed2-4ed9-ae7e-dd03085527c5
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Product ordered. Foreign key to Product.ProductID.
+            name: PRODUCTID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9b95d7be-f735-41a6-8ac5-2e6d2e2137f3
+              stepCounter: a0c3cb1b-7ed2-4ed9-ae7e-dd03085527c5
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date the time the record was created.
+            name: DATECREATED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4cf20db9-2573-4e44-a5d4-92006094b5e2
+              stepCounter: a0c3cb1b-7ed2-4ed9-ae7e-dd03085527c5
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_SHOPPINGCARTITEM') }}
+      name: AW_LOAD_SHOPPINGCARTITEM
+      schema: ""
+      sqlType: Source
+      table: AW_LOAD_SHOPPINGCARTITEM
+      type: sourceInput
+    stepCounter: a0c3cb1b-7ed2-4ed9-ae7e-dd03085527c5

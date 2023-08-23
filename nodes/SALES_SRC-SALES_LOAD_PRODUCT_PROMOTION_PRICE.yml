@@ -1,0 +1,109 @@
+steps:
+  SALES_LOAD_PRODUCT_PROMOTION_PRICE-b4384114-ac6d-4efb-a703-107a55cb4ce1:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SALES_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7d04c722-b3fd-44ab-99ea-aa738f30b271
+              stepCounter: b4384114-ac6d-4efb-a703-107a55cb4ce1
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: PRODUCT_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d54abeee-45b4-47d1-9c99-7dd753f662e7
+              stepCounter: b4384114-ac6d-4efb-a703-107a55cb4ce1
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: PROMOTION_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1f27b2a3-ef79-4160-8cd9-ecde162e0d10
+              stepCounter: b4384114-ac6d-4efb-a703-107a55cb4ce1
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: CREATING_EMPLOYEE_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d1c0a363-34b7-4b5c-8dd0-181fc0b41c90
+              stepCounter: b4384114-ac6d-4efb-a703-107a55cb4ce1
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: CREATED_DATETIME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 92de3a79-da99-4518-b62a-0c588fd25f86
+              stepCounter: b4384114-ac6d-4efb-a703-107a55cb4ce1
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: LAST_CHANGE_EMPLOYEE_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5564eea7-0391-42bb-af05-2f7f79734556
+              stepCounter: b4384114-ac6d-4efb-a703-107a55cb4ce1
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: LAST_CHANGE_DATETIME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SALES_SRC', 'SALES_LOAD_PRODUCT_PROMOTION_PRICE') }}
+      name: SALES_LOAD_PRODUCT_PROMOTION_PRICE
+      schema: ""
+      sqlType: Source
+      table: SALES_LOAD_PRODUCT_PROMOTION_PRICE
+      type: sourceInput
+    stepCounter: b4384114-ac6d-4efb-a703-107a55cb4ce1

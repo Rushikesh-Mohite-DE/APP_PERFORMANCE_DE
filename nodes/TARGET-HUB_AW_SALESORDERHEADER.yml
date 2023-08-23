@@ -1,0 +1,203 @@
+steps:
+  HUB_AW_SALESORDERHEADER-dd22cff3-dd4d-4c8e-82d5-62457edd2c8e:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 9b2bb929-9ce6-42f3-be87-f37f69254ebd
+              stepCounter: dd22cff3-dd4d-4c8e-82d5-62457edd2c8e
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_SALESORDERHEADER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c99b63fa-213e-4796-973d-17b95eb10770
+                    stepCounter: 39888188-26c9-4816-a22c-b34c32741bd5
+                transform: ""
+          - columnReference:
+              columnCounter: 765d9102-e4d8-4bda-8462-0f1d966e5181
+              stepCounter: dd22cff3-dd4d-4c8e-82d5-62457edd2c8e
+            dataType: NUMBER(38,0)
+            description: Primary key.
+            hashColumns: []
+            hashDetails: null
+            name: SALESORDERID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9bd19259-f74c-4d0a-ae1b-07f3e7260bd7
+                    stepCounter: 39888188-26c9-4816-a22c-b34c32741bd5
+                transform: ""
+          - columnReference:
+              columnCounter: 47e8425f-01a2-4c74-8d1c-31902620f9e3
+              stepCounter: dd22cff3-dd4d-4c8e-82d5-62457edd2c8e
+            dataType: NUMBER(38,0)
+            description: Customer identification number. Foreign key to Customer.BusinessEntityID.
+            hashColumns: []
+            hashDetails: null
+            name: CUSTOMERID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 26675af6-d0e1-465c-a76d-c5e77cb9e24f
+                    stepCounter: 39888188-26c9-4816-a22c-b34c32741bd5
+                transform: ""
+          - columnReference:
+              columnCounter: df69136b-d479-447b-a801-dba2e152ea44
+              stepCounter: dd22cff3-dd4d-4c8e-82d5-62457edd2c8e
+            dataType: VARCHAR(16777216)
+            description: Sales person who created the sales order. Foreign key to SalesPerson.BusinessEntityID.
+            hashColumns: []
+            hashDetails: null
+            name: SALESPERSONID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7022c6fd-9ee7-49c9-b2f9-7f798e1a3218
+                    stepCounter: 39888188-26c9-4816-a22c-b34c32741bd5
+                transform: ""
+          - columnReference:
+              columnCounter: 3abbf61a-90ed-4ea7-9d1c-0f89bd8fd364
+              stepCounter: dd22cff3-dd4d-4c8e-82d5-62457edd2c8e
+            dataType: NUMBER(38,0)
+            description: Territory in which the sale was made. Foreign key to SalesTerritory.SalesTerritoryID.
+            hashColumns: []
+            hashDetails: null
+            name: TERRITORYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 315cf07d-9ac9-4f8c-b3ed-a867ddf2f8e0
+                    stepCounter: 39888188-26c9-4816-a22c-b34c32741bd5
+                transform: ""
+          - columnReference:
+              columnCounter: 41a6ab9e-8fd0-468a-a3e3-b6be2cbfeaed
+              stepCounter: dd22cff3-dd4d-4c8e-82d5-62457edd2c8e
+            dataType: NUMBER(38,0)
+            description: Customer billing address. Foreign key to Address.AddressID.
+            hashColumns: []
+            hashDetails: null
+            name: BILLTOADDRESSID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7fa984e3-7025-4836-ae9d-046fb95379e8
+                    stepCounter: 39888188-26c9-4816-a22c-b34c32741bd5
+                transform: ""
+          - columnReference:
+              columnCounter: e16bf5c2-23bf-4041-9336-277551230b4e
+              stepCounter: dd22cff3-dd4d-4c8e-82d5-62457edd2c8e
+            dataType: NUMBER(38,0)
+            description: Customer shipping address. Foreign key to Address.AddressID.
+            hashColumns: []
+            hashDetails: null
+            name: SHIPTOADDRESSID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b118c9e6-0171-4be1-b5d5-5a5c2dc20dcd
+                    stepCounter: 39888188-26c9-4816-a22c-b34c32741bd5
+                transform: ""
+          - columnReference:
+              columnCounter: b8bd10da-4bab-405f-8f86-8a7d074f1f19
+              stepCounter: dd22cff3-dd4d-4c8e-82d5-62457edd2c8e
+            dataType: NUMBER(38,0)
+            description: Shipping method. Foreign key to ShipMethod.ShipMethodID.
+            hashColumns: []
+            hashDetails: null
+            name: SHIPMETHODID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7b4cdbc8-d2c9-490c-8742-e997c934e1c1
+                    stepCounter: 39888188-26c9-4816-a22c-b34c32741bd5
+                transform: ""
+          - columnReference:
+              columnCounter: 2e12459b-1642-413f-8fb7-be0d0c0570e3
+              stepCounter: dd22cff3-dd4d-4c8e-82d5-62457edd2c8e
+            dataType: VARCHAR(16777216)
+            description: Credit card identification number. Foreign key to CreditCard.CreditCardID.
+            hashColumns: []
+            hashDetails: null
+            name: CREDITCARDID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 430bc4a4-9feb-44f6-9725-a071c8391392
+                    stepCounter: 39888188-26c9-4816-a22c-b34c32741bd5
+                transform: ""
+          - columnReference:
+              columnCounter: 4896eb95-5b89-4744-a6a9-f9d60a1f592c
+              stepCounter: dd22cff3-dd4d-4c8e-82d5-62457edd2c8e
+            dataType: VARCHAR(16777216)
+            description: Currency exchange rate used. Foreign key to CurrencyRate.CurrencyRateID.
+            hashColumns: []
+            hashDetails: null
+            name: CURRENCYRATEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7a5b00d1-70c0-4f9c-a6e7-10e7a0709ace
+                    stepCounter: 39888188-26c9-4816-a22c-b34c32741bd5
+                transform: ""
+          - columnReference:
+              columnCounter: 8058c585-266c-4e77-b07c-52c2808d7e1b
+              stepCounter: dd22cff3-dd4d-4c8e-82d5-62457edd2c8e
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 730ce9c9-a13e-4e2e-9cb1-ea07f7353353
+                    stepCounter: 39888188-26c9-4816-a22c-b34c32741bd5
+                transform: ""
+          - columnReference:
+              columnCounter: c053cc88-21ab-4a12-af6a-19954663dead
+              stepCounter: dd22cff3-dd4d-4c8e-82d5-62457edd2c8e
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 52ee730a-443e-456f-bd2a-fe3f55760506
+                    stepCounter: 39888188-26c9-4816-a22c-b34c32741bd5
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_SALESORDERHEADER
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_SALESORDERHEADER') }} "DVSTG_AW_SALESORDERHEADER"
+            name: HUB_AW_SALESORDERHEADER
+            noLinkRefs: []
+      name: HUB_AW_SALESORDERHEADER
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: dd22cff3-dd4d-4c8e-82d5-62457edd2c8e

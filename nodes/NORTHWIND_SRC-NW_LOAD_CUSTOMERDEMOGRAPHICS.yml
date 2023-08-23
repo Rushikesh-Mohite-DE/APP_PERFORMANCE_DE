@@ -1,0 +1,49 @@
+steps:
+  NW_LOAD_CUSTOMERDEMOGRAPHICS-45cf0047-cb99-4fe6-9aed-1f2b1f4ffdb2:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: NORTHWIND_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d43dc3b7-b284-4fdc-ac62-214bf4c4bb2d
+              stepCounter: 45cf0047-cb99-4fe6-9aed-1f2b1f4ffdb2
+            config: {}
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: ""
+            name: CUSTOMERTYPEID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d0a61c89-0cc4-411b-9bd3-2ba277a7f3dd
+              stepCounter: 45cf0047-cb99-4fe6-9aed-1f2b1f4ffdb2
+            config: {}
+            dataType: VARCHAR(4000)
+            defaultValue: ""
+            description: ""
+            name: CUSTOMERDESC
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('NORTHWIND_SRC', 'NW_LOAD_CUSTOMERDEMOGRAPHICS') }}
+      name: NW_LOAD_CUSTOMERDEMOGRAPHICS
+      schema: ""
+      sqlType: Source
+      table: NW_LOAD_CUSTOMERDEMOGRAPHICS
+      type: sourceInput
+    stepCounter: 45cf0047-cb99-4fe6-9aed-1f2b1f4ffdb2

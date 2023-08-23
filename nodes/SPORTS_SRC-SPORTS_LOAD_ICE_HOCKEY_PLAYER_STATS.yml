@@ -1,0 +1,49 @@
+steps:
+  SPORTS_LOAD_ICE_HOCKEY_PLAYER_STATS-dbb09a5d-59e7-41df-86d6-f3de2775826e:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SPORTS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d2c20a03-f3ef-45e2-a194-de6a4966918f
+              stepCounter: dbb09a5d-59e7-41df-86d6-f3de2775826e
+            config: {}
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            name: ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4f087fe6-81ce-438c-9b9d-695667c4c111
+              stepCounter: dbb09a5d-59e7-41df-86d6-f3de2775826e
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: PLUS_MINUS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SPORTS_SRC', 'SPORTS_LOAD_ICE_HOCKEY_PLAYER_STATS') }}
+      name: SPORTS_LOAD_ICE_HOCKEY_PLAYER_STATS
+      schema: ""
+      sqlType: Source
+      table: SPORTS_LOAD_ICE_HOCKEY_PLAYER_STATS
+      type: sourceInput
+    stepCounter: dbb09a5d-59e7-41df-86d6-f3de2775826e

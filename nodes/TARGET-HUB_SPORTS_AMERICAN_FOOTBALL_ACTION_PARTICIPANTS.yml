@@ -1,0 +1,105 @@
+steps:
+  HUB_SPORTS_AMERICAN_FOOTBALL_ACTION_PARTICIPANTS-7a5bb4ad-0434-46ee-9025-7847c8b68c15:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 59c35247-fac1-4d95-bf5e-8a21409a01a5
+              stepCounter: 7a5bb4ad-0434-46ee-9025-7847c8b68c15
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_ACTION_PARTICIPANTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 22dc8cbb-1197-4f70-8024-d7403479c4e9
+                    stepCounter: 1733301d-1887-4ce1-a8ce-666e003bd498
+                transform: ""
+          - columnReference:
+              columnCounter: e1f0c3ec-9112-439b-8be1-efb6aacd136d
+              stepCounter: 7a5bb4ad-0434-46ee-9025-7847c8b68c15
+            dataType: VARCHAR(32)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a3524b70-3bd1-4526-9604-39c713a8b5fc
+                    stepCounter: 1733301d-1887-4ce1-a8ce-666e003bd498
+                transform: ""
+          - columnReference:
+              columnCounter: 6c35cb7d-cdb0-4787-960e-2534f44b3f8f
+              stepCounter: 7a5bb4ad-0434-46ee-9025-7847c8b68c15
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PERSON_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d1947b11-57c8-40fa-8551-4282308b89d3
+                    stepCounter: 1733301d-1887-4ce1-a8ce-666e003bd498
+                transform: ""
+          - columnReference:
+              columnCounter: 51ae8bfb-c556-4c44-99ed-e9e15fbb452b
+              stepCounter: 7a5bb4ad-0434-46ee-9025-7847c8b68c15
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4a24a1f3-3ed3-4bed-89ec-02bc2adc34f7
+                    stepCounter: 1733301d-1887-4ce1-a8ce-666e003bd498
+                transform: ""
+          - columnReference:
+              columnCounter: 4e5495f2-fc91-44b8-bda3-ce3085d06af6
+              stepCounter: 7a5bb4ad-0434-46ee-9025-7847c8b68c15
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d861ce79-b8ea-448d-8ded-605fd0340cbb
+                    stepCounter: 1733301d-1887-4ce1-a8ce-666e003bd498
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SPORTS_AMERICAN_FOOTBALL_ACTION_PARTICIPANTS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SPORTS_AMERICAN_FOOTBALL_ACTION_PARTICIPANTS') }} "DVSTG_SPORTS_AMERICAN_FOOTBALL_ACTION_PARTICIPANTS"
+            name: HUB_SPORTS_AMERICAN_FOOTBALL_ACTION_PARTICIPANTS
+            noLinkRefs: []
+      name: HUB_SPORTS_AMERICAN_FOOTBALL_ACTION_PARTICIPANTS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 7a5bb4ad-0434-46ee-9025-7847c8b68c15

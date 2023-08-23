@@ -1,0 +1,207 @@
+steps:
+  DVSTG_AW_SALESTERRITORYHISTORY-876a5b67-67fc-4c07-94ea-be6d320aac37:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6b3eee3d-9903-4249-b3a8-29abb10dcd85
+              stepCounter: 876a5b67-67fc-4c07-94ea-be6d320aac37
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 04e49b62-3dd1-4036-bcbf-4524e3ab9d79
+                stepCounter: 876a5b67-67fc-4c07-94ea-be6d320aac37
+              - columnCounter: 48cf15f0-8418-4167-b1dd-bc0617d808ca
+                stepCounter: 876a5b67-67fc-4c07-94ea-be6d320aac37
+            name: HK_SALESTERRITORYHISTORY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 04e49b62-3dd1-4036-bcbf-4524e3ab9d79
+              stepCounter: 876a5b67-67fc-4c07-94ea-be6d320aac37
+            dataType: NUMBER(38,0)
+            description: Primary key. The sales rep.  Foreign key to SalesPerson.BusinessEntityID.
+            name: BUSINESSENTITYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e80cbb22-a56c-45b0-9e2b-84335e43be03
+                    stepCounter: 102230f2-c538-4fa0-8638-dc5199ebea42
+                transform: ""
+          - columnReference:
+              columnCounter: 48cf15f0-8418-4167-b1dd-bc0617d808ca
+              stepCounter: 876a5b67-67fc-4c07-94ea-be6d320aac37
+            dataType: NUMBER(38,0)
+            description: Primary key. Territory identification number. Foreign key to SalesTerritory.SalesTerritoryID.
+            name: TERRITORYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 191d9760-f68a-43d6-b9fa-f83a0f9a032b
+                    stepCounter: 102230f2-c538-4fa0-8638-dc5199ebea42
+                transform: ""
+          - columnReference:
+              columnCounter: 45bcd373-cb91-487d-9867-3ae9db192b70
+              stepCounter: 876a5b67-67fc-4c07-94ea-be6d320aac37
+            dataType: TIMESTAMP_NTZ(9)
+            description: Primary key. Date the sales representive started work in the territory.
+            name: STARTDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d50acab6-23ed-4afa-8000-49a7734a5f0c
+                    stepCounter: 102230f2-c538-4fa0-8638-dc5199ebea42
+                transform: ""
+          - columnReference:
+              columnCounter: 934d3d18-6ef8-43d6-b935-b73694965759
+              stepCounter: 876a5b67-67fc-4c07-94ea-be6d320aac37
+            dataType: VARCHAR(16777216)
+            description: Date the sales representative left work in the territory.
+            name: ENDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7192d3f2-7eb6-4c31-97bf-ec8f22f10a41
+                    stepCounter: 102230f2-c538-4fa0-8638-dc5199ebea42
+                transform: ""
+          - columnReference:
+              columnCounter: 53097e9c-3fb3-487c-b073-dc05d6f76539
+              stepCounter: 876a5b67-67fc-4c07-94ea-be6d320aac37
+            dataType: VARCHAR(16777216)
+            description: ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            name: ROWGUID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 58b5659d-fcce-4744-835e-b9de46575f91
+                    stepCounter: 102230f2-c538-4fa0-8638-dc5199ebea42
+                transform: ""
+          - columnReference:
+              columnCounter: 9348edc3-9ac4-4614-ac6e-5e4eb9ffe730
+              stepCounter: 876a5b67-67fc-4c07-94ea-be6d320aac37
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4a6031b9-47b2-41a1-84c6-0ec81141c0f2
+                    stepCounter: 102230f2-c538-4fa0-8638-dc5199ebea42
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b69c57cb-6c89-414d-9037-628305394a55
+              stepCounter: 876a5b67-67fc-4c07-94ea-be6d320aac37
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d20f4b5c-5415-4864-9e59-4c1813b48f89
+              stepCounter: 876a5b67-67fc-4c07-94ea-be6d320aac37
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d5ccc60c-29db-4775-8c41-0fdb30fbd26e
+              stepCounter: 876a5b67-67fc-4c07-94ea-be6d320aac37
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 45bcd373-cb91-487d-9867-3ae9db192b70
+                stepCounter: 876a5b67-67fc-4c07-94ea-be6d320aac37
+              - columnCounter: 934d3d18-6ef8-43d6-b935-b73694965759
+                stepCounter: 876a5b67-67fc-4c07-94ea-be6d320aac37
+              - columnCounter: 53097e9c-3fb3-487c-b073-dc05d6f76539
+                stepCounter: 876a5b67-67fc-4c07-94ea-be6d320aac37
+              - columnCounter: 9348edc3-9ac4-4614-ac6e-5e4eb9ffe730
+                stepCounter: 876a5b67-67fc-4c07-94ea-be6d320aac37
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences: []
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5185a5ca-b0a5-4764-b33b-3208d09ef10e
+              stepCounter: 876a5b67-67fc-4c07-94ea-be6d320aac37
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 48cf15f0-8418-4167-b1dd-bc0617d808ca
+                stepCounter: 876a5b67-67fc-4c07-94ea-be6d320aac37
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: ADV_WRKS_SRC
+                nodeName: AW_LOAD_SALESTERRITORYHISTORY
+            join:
+              joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_SALESTERRITORYHISTORY') }} "AW_LOAD_SALESTERRITORYHISTORY"
+            name: DVSTG_AW_SALESTERRITORYHISTORY
+            noLinkRefs: []
+      name: DVSTG_AW_SALESTERRITORYHISTORY
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: 876a5b67-67fc-4c07-94ea-be6d320aac37

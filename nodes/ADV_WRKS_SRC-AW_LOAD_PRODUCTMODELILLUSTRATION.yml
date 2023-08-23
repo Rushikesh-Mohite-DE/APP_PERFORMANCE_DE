@@ -1,0 +1,64 @@
+steps:
+  AW_LOAD_PRODUCTMODELILLUSTRATION-5c3183c0-729d-427c-a926-ff5b48092919:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: ADV_WRKS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4b438a34-2858-4bc8-8528-eb400c147287
+              stepCounter: 5c3183c0-729d-427c-a926-ff5b48092919
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Primary key. Foreign key to ProductModel.ProductModelID.
+            name: PRODUCTMODELID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 00e8e098-d6ad-47a8-8420-8f1796406f4f
+              stepCounter: 5c3183c0-729d-427c-a926-ff5b48092919
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Primary key. Foreign key to Illustration.IllustrationID.
+            name: ILLUSTRATIONID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 901fa425-c2bc-4579-9a26-90217e8fb18a
+              stepCounter: 5c3183c0-729d-427c-a926-ff5b48092919
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_PRODUCTMODELILLUSTRATION') }}
+      name: AW_LOAD_PRODUCTMODELILLUSTRATION
+      schema: ""
+      sqlType: Source
+      table: AW_LOAD_PRODUCTMODELILLUSTRATION
+      type: sourceInput
+    stepCounter: 5c3183c0-729d-427c-a926-ff5b48092919

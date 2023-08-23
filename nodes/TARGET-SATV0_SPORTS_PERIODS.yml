@@ -1,0 +1,121 @@
+steps:
+  SATV0_SPORTS_PERIODS-e9b08325-95e3-4629-be45-ef5e10fe20f9:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 0e838df3-04a7-4bb1-81f2-ff0317381f60
+              stepCounter: e9b08325-95e3-4629-be45-ef5e10fe20f9
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_SPORTS_PERIODS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1065bd59-2089-4d8e-83d7-4f704437282d
+                    stepCounter: e6dbdbb9-86cb-4f3d-833f-2f1f78fb42a1
+                transform: ""
+          - columnReference:
+              columnCounter: df21be70-1a54-4307-afa3-26d255bb0d5c
+              stepCounter: e9b08325-95e3-4629-be45-ef5e10fe20f9
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PERIOD_VALUE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e005a627-32c0-41ac-985b-9bd745d7f002
+                    stepCounter: e6dbdbb9-86cb-4f3d-833f-2f1f78fb42a1
+                transform: ""
+          - columnReference:
+              columnCounter: 793325a0-500f-4393-a5f0-f29f754ec380
+              stepCounter: e9b08325-95e3-4629-be45-ef5e10fe20f9
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SCORE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8044d52c-5394-4d7d-a4c5-07fb752a470b
+                    stepCounter: e6dbdbb9-86cb-4f3d-833f-2f1f78fb42a1
+                transform: ""
+          - columnReference:
+              columnCounter: 9b80ae9e-cf67-4a5d-a80e-85b1381d2de9
+              stepCounter: e9b08325-95e3-4629-be45-ef5e10fe20f9
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a953ce8c-ffbd-4d18-a38c-c31d53f7ca21
+                    stepCounter: e6dbdbb9-86cb-4f3d-833f-2f1f78fb42a1
+                transform: ""
+          - columnReference:
+              columnCounter: 07755c97-d1fa-4413-8084-2b65e9e8e787
+              stepCounter: e9b08325-95e3-4629-be45-ef5e10fe20f9
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 01586637-a6f9-46c9-bcbe-16b7fd72503d
+                    stepCounter: e6dbdbb9-86cb-4f3d-833f-2f1f78fb42a1
+                transform: ""
+          - columnReference:
+              columnCounter: e478c8a3-8df4-4b86-af4f-dfcf3d1876b8
+              stepCounter: e9b08325-95e3-4629-be45-ef5e10fe20f9
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e90abe24-1457-4500-a55a-43800f3b731e
+                    stepCounter: e6dbdbb9-86cb-4f3d-833f-2f1f78fb42a1
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SPORTS_PERIODS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SPORTS_PERIODS') }} "DVSTG_SPORTS_PERIODS"
+            name: SATV0_SPORTS_PERIODS
+            noLinkRefs: []
+      name: SATV0_SPORTS_PERIODS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: e9b08325-95e3-4629-be45-ef5e10fe20f9

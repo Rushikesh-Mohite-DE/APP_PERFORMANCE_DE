@@ -1,0 +1,79 @@
+steps:
+  AW_LOAD_SALESREASON-49b3c9a5-2b18-4295-a48f-aa536af09840:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: ADV_WRKS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e638ecdb-bb61-4292-b760-a5a26f305710
+              stepCounter: 49b3c9a5-2b18-4295-a48f-aa536af09840
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Primary key for SalesReason records.
+            name: SALESREASONID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5e01813c-9783-477b-b310-e92bbdd6ccaf
+              stepCounter: 49b3c9a5-2b18-4295-a48f-aa536af09840
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: Sales reason description.
+            name: NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 912374d6-225c-4877-aa3b-87390552288a
+              stepCounter: 49b3c9a5-2b18-4295-a48f-aa536af09840
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: Category the sales reason belongs to.
+            name: REASONTYPE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3fd3a02b-7ec7-4a64-b149-3f85b6ec1a24
+              stepCounter: 49b3c9a5-2b18-4295-a48f-aa536af09840
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_SALESREASON') }}
+      name: AW_LOAD_SALESREASON
+      schema: ""
+      sqlType: Source
+      table: AW_LOAD_SALESREASON
+      type: sourceInput
+    stepCounter: 49b3c9a5-2b18-4295-a48f-aa536af09840

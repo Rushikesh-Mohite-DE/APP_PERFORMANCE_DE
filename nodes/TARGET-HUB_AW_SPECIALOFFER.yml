@@ -1,0 +1,91 @@
+steps:
+  HUB_AW_SPECIALOFFER-dda55f70-50c7-4139-9ba6-005305a2817c:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 57e8c444-9142-41a3-9269-ec25bf16cb95
+              stepCounter: dda55f70-50c7-4139-9ba6-005305a2817c
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_SPECIALOFFER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 354caad5-7c8a-4e60-a8f1-bb6a49193a3f
+                    stepCounter: 812d5c2d-10a4-459d-88d5-daf221d3d78c
+                transform: ""
+          - columnReference:
+              columnCounter: 9a7991b8-22e2-4db4-bbdc-38c989d4d5b4
+              stepCounter: dda55f70-50c7-4139-9ba6-005305a2817c
+            dataType: NUMBER(38,0)
+            description: Primary key for SpecialOffer records.
+            hashColumns: []
+            hashDetails: null
+            name: SPECIALOFFERID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d2cfc82f-04c7-48e0-986b-a7ed25bb4dea
+                    stepCounter: 812d5c2d-10a4-459d-88d5-daf221d3d78c
+                transform: ""
+          - columnReference:
+              columnCounter: 857490ef-c407-4dc1-bb54-2af55fe50607
+              stepCounter: dda55f70-50c7-4139-9ba6-005305a2817c
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b7fa2f90-6a55-4226-81b2-19f9735df9e5
+                    stepCounter: 812d5c2d-10a4-459d-88d5-daf221d3d78c
+                transform: ""
+          - columnReference:
+              columnCounter: 06dea819-0a00-4ea9-a435-9e7470b56081
+              stepCounter: dda55f70-50c7-4139-9ba6-005305a2817c
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5437e836-97c0-4e57-bae9-1b90230dc14a
+                    stepCounter: 812d5c2d-10a4-459d-88d5-daf221d3d78c
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_SPECIALOFFER
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_SPECIALOFFER') }} "DVSTG_AW_SPECIALOFFER"
+            name: HUB_AW_SPECIALOFFER
+            noLinkRefs: []
+      name: HUB_AW_SPECIALOFFER
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: dda55f70-50c7-4139-9ba6-005305a2817c

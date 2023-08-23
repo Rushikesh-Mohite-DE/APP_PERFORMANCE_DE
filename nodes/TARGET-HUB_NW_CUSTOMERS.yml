@@ -1,0 +1,91 @@
+steps:
+  HUB_NW_CUSTOMERS-f5b1ac00-449f-4a4d-8f4a-228d2fb17c74:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 78726c6e-120e-4b47-a2c9-51d93a14ec2d
+              stepCounter: f5b1ac00-449f-4a4d-8f4a-228d2fb17c74
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_NW_CUSTOMERS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 16195ca7-aee8-4b78-8f7d-f77dbb43370d
+                    stepCounter: 87052623-cdbd-437a-bade-d9e96e0feb4c
+                transform: ""
+          - columnReference:
+              columnCounter: c8f9f637-0a6f-4ff2-a206-fbb95b18c046
+              stepCounter: f5b1ac00-449f-4a4d-8f4a-228d2fb17c74
+            dataType: VARCHAR(5)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CUSTOMERID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0d139926-293f-407d-82dd-ff5a3a8b8958
+                    stepCounter: 87052623-cdbd-437a-bade-d9e96e0feb4c
+                transform: ""
+          - columnReference:
+              columnCounter: f1f5aa9e-f8d5-41d5-97d6-656129c8fafe
+              stepCounter: f5b1ac00-449f-4a4d-8f4a-228d2fb17c74
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8d035c56-6529-4791-9ade-3d6c443fbaad
+                    stepCounter: 87052623-cdbd-437a-bade-d9e96e0feb4c
+                transform: ""
+          - columnReference:
+              columnCounter: 59e251b0-be65-41a7-8cbe-19e2ac4744f4
+              stepCounter: f5b1ac00-449f-4a4d-8f4a-228d2fb17c74
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9be73918-d15d-45fc-a268-e5d374a50a12
+                    stepCounter: 87052623-cdbd-437a-bade-d9e96e0feb4c
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_NW_CUSTOMERS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_NW_CUSTOMERS') }} "DVSTG_NW_CUSTOMERS"
+            name: HUB_NW_CUSTOMERS
+            noLinkRefs: []
+      name: HUB_NW_CUSTOMERS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: f5b1ac00-449f-4a4d-8f4a-228d2fb17c74

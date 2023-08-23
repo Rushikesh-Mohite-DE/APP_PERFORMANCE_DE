@@ -1,0 +1,503 @@
+steps:
+  DVSTG_JHU_VACCINES-36176697-87fd-43f5-be9a-9e5f82c6245f:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0f369a2b-315b-4ad3-901b-aeea78399c62
+              stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 23db0ab7-d0b3-4228-9b20-2700bcbb08d3
+                stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+              - columnCounter: ae238f2d-2d87-458d-a9ca-6a4e4ddde7f7
+                stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+            name: HK_JHU_VACCINES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 929f0fd3-bbd6-4d96-be14-4241e8c59d92
+              stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+            dataType: DATE
+            description: ""
+            name: DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 479f42ae-e2bb-493b-a9cc-354364093f4e
+                    stepCounter: 4a235658-000b-430c-b1d5-995611ec892a
+                transform: ""
+          - columnReference:
+              columnCounter: 23db0ab7-d0b3-4228-9b20-2700bcbb08d3
+              stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+            dataType: VARCHAR(100)
+            description: ""
+            name: PROVINCE_STATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d245ea52-7d58-4f54-bd52-e5b4c17f59db
+                    stepCounter: 4a235658-000b-430c-b1d5-995611ec892a
+                transform: ""
+          - columnReference:
+              columnCounter: ae238f2d-2d87-458d-a9ca-6a4e4ddde7f7
+              stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+            dataType: NUMBER(38,0)
+            description: ""
+            name: FIPS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 32802408-0643-4e46-8d03-b55e1a439426
+                    stepCounter: 4a235658-000b-430c-b1d5-995611ec892a
+                transform: ""
+          - columnReference:
+              columnCounter: 59226489-a8b2-49d9-bbe8-1777d43fe792
+              stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+            dataType: NUMBER(38,0)
+            description: ""
+            name: DOSES_ALLOC_TOTAL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e2de145c-149d-4c20-a819-3c466f5ddb9c
+                    stepCounter: 4a235658-000b-430c-b1d5-995611ec892a
+                transform: ""
+          - columnReference:
+              columnCounter: 42d59be9-2e1e-4a0e-9628-5b276f81c179
+              stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+            dataType: NUMBER(38,0)
+            description: ""
+            name: DOSES_ALLOC_MODERNA
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 04296cad-ee59-4741-a067-b928f80d6ee6
+                    stepCounter: 4a235658-000b-430c-b1d5-995611ec892a
+                transform: ""
+          - columnReference:
+              columnCounter: a9f44c5e-decb-4d5d-a419-0d65310a2361
+              stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+            dataType: NUMBER(38,0)
+            description: ""
+            name: DOSES_ALLOC_PFIZER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3914ae51-5c96-4900-bd42-ca8c2a09c003
+                    stepCounter: 4a235658-000b-430c-b1d5-995611ec892a
+                transform: ""
+          - columnReference:
+              columnCounter: 52f2f6a7-9c18-4c13-8661-e3e1e3b1d4e1
+              stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+            dataType: NUMBER(38,0)
+            description: ""
+            name: DOSES_ALLOC_JOHNSON_AND_JOHNSON
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 73669a5b-1a4a-42f7-9152-ec95fb8db7ff
+                    stepCounter: 4a235658-000b-430c-b1d5-995611ec892a
+                transform: ""
+          - columnReference:
+              columnCounter: 880ae16d-1468-453c-a337-9558b0add89e
+              stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+            dataType: NUMBER(38,0)
+            description: ""
+            name: DOSES_ALLOC_UNASSIGNED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e670dd8b-76f8-465d-a47e-bbe530b08943
+                    stepCounter: 4a235658-000b-430c-b1d5-995611ec892a
+                transform: ""
+          - columnReference:
+              columnCounter: 3d2c652a-7ea6-4946-907a-b50a1d2ae8ce
+              stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+            dataType: NUMBER(38,0)
+            description: ""
+            name: DOSES_ALLOC_UNKNOWN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a84cc520-1c76-4a00-b7ce-40f80455a459
+                    stepCounter: 4a235658-000b-430c-b1d5-995611ec892a
+                transform: ""
+          - columnReference:
+              columnCounter: e943cc85-de80-4edb-bbf0-4325cf7ff2ff
+              stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+            dataType: NUMBER(38,0)
+            description: ""
+            name: DOSES_SHIPPED_TOTAL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fb63fbac-08cc-4047-bcd2-932b07aac0f6
+                    stepCounter: 4a235658-000b-430c-b1d5-995611ec892a
+                transform: ""
+          - columnReference:
+              columnCounter: f6d468e9-c20c-4c01-bc57-7a1f630a3674
+              stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+            dataType: NUMBER(38,0)
+            description: ""
+            name: DOSES_SHIPPED_MODERNA
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 62f1b8c2-2cfe-475f-8f0b-e03a47075ebb
+                    stepCounter: 4a235658-000b-430c-b1d5-995611ec892a
+                transform: ""
+          - columnReference:
+              columnCounter: 9dd858dd-3d84-4b1b-aa8c-c9939d782f85
+              stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+            dataType: NUMBER(38,0)
+            description: ""
+            name: DOSES_SHIPPED_PFIZER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b91d44ae-5f2e-4d11-be4b-70cb627e5abe
+                    stepCounter: 4a235658-000b-430c-b1d5-995611ec892a
+                transform: ""
+          - columnReference:
+              columnCounter: 43f10a62-61a1-4186-a6e2-039964032f50
+              stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+            dataType: NUMBER(38,0)
+            description: ""
+            name: DOSES_SHIPPED_JOHNSON_AND_JOHNSON
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 848e75da-429c-468e-82d6-874b74938a42
+                    stepCounter: 4a235658-000b-430c-b1d5-995611ec892a
+                transform: ""
+          - columnReference:
+              columnCounter: fbd4e466-ae02-456b-a073-63babb675ece
+              stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+            dataType: NUMBER(38,0)
+            description: ""
+            name: DOSES_SHIPPED_UNASSIGNED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3b5df79a-ae3d-4eab-9970-11e994df75ee
+                    stepCounter: 4a235658-000b-430c-b1d5-995611ec892a
+                transform: ""
+          - columnReference:
+              columnCounter: f8081ab8-e9fd-461c-9ce5-af72de9f6d85
+              stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+            dataType: NUMBER(38,0)
+            description: ""
+            name: DOSES_SHIPPED_UNKNOWN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8e04a2b9-3fcc-4aaf-8a61-4e2480bb4c40
+                    stepCounter: 4a235658-000b-430c-b1d5-995611ec892a
+                transform: ""
+          - columnReference:
+              columnCounter: b41bfb8d-ff4c-4234-bf09-f95ba11649b7
+              stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+            dataType: NUMBER(38,0)
+            description: ""
+            name: DOSES_ADMIN_TOTAL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 03386fe1-e6d6-4ad7-8e10-71adb00adc1f
+                    stepCounter: 4a235658-000b-430c-b1d5-995611ec892a
+                transform: ""
+          - columnReference:
+              columnCounter: 28fc7568-b65c-495d-8c71-a1dd7d5c31ff
+              stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+            dataType: NUMBER(38,0)
+            description: ""
+            name: DOSES_ADMIN_MODERNA
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 04381e48-7222-4d2e-bb96-cc79b58bbc26
+                    stepCounter: 4a235658-000b-430c-b1d5-995611ec892a
+                transform: ""
+          - columnReference:
+              columnCounter: 86f3a561-469f-4aa1-a21d-129ef85ffecb
+              stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+            dataType: NUMBER(38,0)
+            description: ""
+            name: DOSES_ADMIN_PFIZER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 85ec02bf-826f-4885-be79-00cda899487c
+                    stepCounter: 4a235658-000b-430c-b1d5-995611ec892a
+                transform: ""
+          - columnReference:
+              columnCounter: d9d69639-53ee-4bef-8951-caa15f35b4ea
+              stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+            dataType: NUMBER(38,0)
+            description: ""
+            name: DOSES_ADMIN_JOHNSON_AND_JOHNSON
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 44819d1d-e951-48d0-8d13-cbe85e0a97fd
+                    stepCounter: 4a235658-000b-430c-b1d5-995611ec892a
+                transform: ""
+          - columnReference:
+              columnCounter: 7aee9c0e-3077-47b7-931e-e7d82d80d046
+              stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+            dataType: NUMBER(38,0)
+            description: ""
+            name: DOSES_ADMIN_UNASSIGNED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ffb99d42-497e-4110-82c3-d52770b98eae
+                    stepCounter: 4a235658-000b-430c-b1d5-995611ec892a
+                transform: ""
+          - columnReference:
+              columnCounter: 50efb59f-8181-4949-9fd5-95594b84ccd3
+              stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+            dataType: NUMBER(38,0)
+            description: ""
+            name: DOSES_ADMIN_UNKNOWN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bc50de92-c8fe-4031-ad43-c2ced416298f
+                    stepCounter: 4a235658-000b-430c-b1d5-995611ec892a
+                transform: ""
+          - columnReference:
+              columnCounter: 44c01498-6f63-4fe2-ae07-9d2464010271
+              stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+            dataType: NUMBER(38,0)
+            description: ""
+            name: PEOPLE_TOTAL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1b471e87-f43e-47fe-b56b-91aae8289e73
+                    stepCounter: 4a235658-000b-430c-b1d5-995611ec892a
+                transform: ""
+          - columnReference:
+              columnCounter: 56a73d40-381c-4d48-b2f4-f1e883976b66
+              stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+            dataType: NUMBER(38,0)
+            description: ""
+            name: PEOPLE_TOTAL_2ND_DOSE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c3e8427d-c865-4570-9f14-8c6245ddba76
+                    stepCounter: 4a235658-000b-430c-b1d5-995611ec892a
+                transform: ""
+          - columnReference:
+              columnCounter: c6e056a3-4847-4b92-ad86-5f1ce0f3a6de
+              stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+            dataType: VARCHAR(10)
+            description: ""
+            name: COUNTRY_REGION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8fdefc20-b0ce-40dd-be6a-fe57ecbd07c8
+                    stepCounter: 4a235658-000b-430c-b1d5-995611ec892a
+                transform: ""
+          - columnReference:
+              columnCounter: a53681fd-0515-424d-866c-46b1e484116b
+              stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            name: LAST_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 762d4f08-2ef1-4569-be7a-e3efb5ebf380
+                    stepCounter: 4a235658-000b-430c-b1d5-995611ec892a
+                transform: ""
+          - columnReference:
+              columnCounter: e8c18946-6121-4241-bc13-8c57d71e47ff
+              stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+            dataType: BOOLEAN
+            description: ""
+            name: LAST_REPORTED_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: edfb346b-5ccf-4829-b7b0-b70f6580aaec
+                    stepCounter: 4a235658-000b-430c-b1d5-995611ec892a
+                transform: ""
+          - columnReference:
+              columnCounter: 8bacfdbd-271e-4cd2-aa6a-65bfcb587112
+              stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+            dataType: VARCHAR(2)
+            description: ""
+            name: STABBR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d68df5bf-653d-4c55-90c3-b6721a5f6ecb
+                    stepCounter: 4a235658-000b-430c-b1d5-995611ec892a
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c051be22-1276-402e-936d-aff5957504b9
+              stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9859a3cc-c5a7-49f5-a73f-2f80d62ffcb1
+              stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d2826919-3a2f-40de-be80-70d8aa05081f
+              stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 929f0fd3-bbd6-4d96-be14-4241e8c59d92
+                stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+              - columnCounter: 59226489-a8b2-49d9-bbe8-1777d43fe792
+                stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+              - columnCounter: 42d59be9-2e1e-4a0e-9628-5b276f81c179
+                stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+              - columnCounter: a9f44c5e-decb-4d5d-a419-0d65310a2361
+                stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+              - columnCounter: 52f2f6a7-9c18-4c13-8661-e3e1e3b1d4e1
+                stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+              - columnCounter: 880ae16d-1468-453c-a337-9558b0add89e
+                stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+              - columnCounter: 3d2c652a-7ea6-4946-907a-b50a1d2ae8ce
+                stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+              - columnCounter: e943cc85-de80-4edb-bbf0-4325cf7ff2ff
+                stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+              - columnCounter: f6d468e9-c20c-4c01-bc57-7a1f630a3674
+                stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+              - columnCounter: 9dd858dd-3d84-4b1b-aa8c-c9939d782f85
+                stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+              - columnCounter: 43f10a62-61a1-4186-a6e2-039964032f50
+                stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+              - columnCounter: fbd4e466-ae02-456b-a073-63babb675ece
+                stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+              - columnCounter: f8081ab8-e9fd-461c-9ce5-af72de9f6d85
+                stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+              - columnCounter: b41bfb8d-ff4c-4234-bf09-f95ba11649b7
+                stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+              - columnCounter: 28fc7568-b65c-495d-8c71-a1dd7d5c31ff
+                stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+              - columnCounter: 86f3a561-469f-4aa1-a21d-129ef85ffecb
+                stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+              - columnCounter: d9d69639-53ee-4bef-8951-caa15f35b4ea
+                stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+              - columnCounter: 7aee9c0e-3077-47b7-931e-e7d82d80d046
+                stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+              - columnCounter: 50efb59f-8181-4949-9fd5-95594b84ccd3
+                stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+              - columnCounter: 44c01498-6f63-4fe2-ae07-9d2464010271
+                stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+              - columnCounter: 56a73d40-381c-4d48-b2f4-f1e883976b66
+                stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+              - columnCounter: c6e056a3-4847-4b92-ad86-5f1ce0f3a6de
+                stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+              - columnCounter: a53681fd-0515-424d-866c-46b1e484116b
+                stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+              - columnCounter: e8c18946-6121-4241-bc13-8c57d71e47ff
+                stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+              - columnCounter: 8bacfdbd-271e-4cd2-aa6a-65bfcb587112
+                stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c268aefb-5698-4545-9f81-bdc3aa5b97eb
+              stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: ae238f2d-2d87-458d-a9ca-6a4e4ddde7f7
+                stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: COVID19
+                nodeName: JHU_VACCINES
+            join:
+              joinCondition: FROM {{ ref('COVID19', 'JHU_VACCINES') }} "JHU_VACCINES"
+            name: DVSTG_JHU_VACCINES
+            noLinkRefs: []
+      name: DVSTG_JHU_VACCINES
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f

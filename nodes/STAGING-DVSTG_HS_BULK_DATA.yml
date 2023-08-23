@@ -1,0 +1,237 @@
+steps:
+  DVSTG_HS_BULK_DATA-72618740-78f2-4c56-9bb6-7efdc4ee3ef3:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: Global data on healthcare providers
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 879e9619-5b45-42f9-a1ce-f5d06e8cf0a2
+              stepCounter: 72618740-78f2-4c56-9bb6-7efdc4ee3ef3
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 0b8a8d0f-f9d6-45d9-86c8-4d50e7433e1d
+                stepCounter: 72618740-78f2-4c56-9bb6-7efdc4ee3ef3
+              - columnCounter: 6156c4fa-7126-4485-a3c4-b320ddbd15af
+                stepCounter: 72618740-78f2-4c56-9bb6-7efdc4ee3ef3
+            name: HK_HS_BULK_DATA
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 0b8a8d0f-f9d6-45d9-86c8-4d50e7433e1d
+              stepCounter: 72618740-78f2-4c56-9bb6-7efdc4ee3ef3
+            dataType: FLOAT
+            description: Longitude
+            name: LONG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1af596f6-7edc-41ca-9105-ae02d5e346e2
+                    stepCounter: 97e748c1-af2d-4c15-b87f-4d68cc76bfb8
+                transform: ""
+          - columnReference:
+              columnCounter: 6156c4fa-7126-4485-a3c4-b320ddbd15af
+              stepCounter: 72618740-78f2-4c56-9bb6-7efdc4ee3ef3
+            dataType: FLOAT
+            description: Latitude
+            name: LAT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d9c99d4e-4c0d-470f-8335-71959954f4b2
+                    stepCounter: 97e748c1-af2d-4c15-b87f-4d68cc76bfb8
+                transform: ""
+          - columnReference:
+              columnCounter: c263ed3f-2ba8-4a2d-acf3-f3c230c0e133
+              stepCounter: 72618740-78f2-4c56-9bb6-7efdc4ee3ef3
+            dataType: VARCHAR(16777216)
+            description: Healthcare provider classification
+            name: HEALTHCARE_PROVIDER_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cfa05976-6086-460c-b618-7a7cb93ba620
+                    stepCounter: 97e748c1-af2d-4c15-b87f-4d68cc76bfb8
+                transform: ""
+          - columnReference:
+              columnCounter: 4368bc23-c877-4ac6-9104-0860fc1c3f56
+              stepCounter: 72618740-78f2-4c56-9bb6-7efdc4ee3ef3
+            dataType: VARCHAR(16777216)
+            description: Healthcare provider name
+            name: NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: de85d176-0355-46eb-9999-921d93d14da1
+                    stepCounter: 97e748c1-af2d-4c15-b87f-4d68cc76bfb8
+                transform: ""
+          - columnReference:
+              columnCounter: 93d1010d-7396-4fb1-b7e7-d0c048ccd15c
+              stepCounter: 72618740-78f2-4c56-9bb6-7efdc4ee3ef3
+            dataType: VARCHAR(16777216)
+            description: Operating entity name
+            name: OPERATOR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5fc8d74f-7df6-4069-a8d6-07a31865273e
+                    stepCounter: 97e748c1-af2d-4c15-b87f-4d68cc76bfb8
+                transform: ""
+          - columnReference:
+              columnCounter: cff2be22-d9aa-4b1c-a035-86f57ebb449a
+              stepCounter: 72618740-78f2-4c56-9bb6-7efdc4ee3ef3
+            dataType: NUMBER(38,0)
+            description: Inpatient bed capacity
+            name: BEDS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f3c38b75-9b80-4fe7-aea5-0a657993177e
+                    stepCounter: 97e748c1-af2d-4c15-b87f-4d68cc76bfb8
+                transform: ""
+          - columnReference:
+              columnCounter: e075965a-0f0e-4124-b41e-e5259fc2042b
+              stepCounter: 72618740-78f2-4c56-9bb6-7efdc4ee3ef3
+            dataType: NUMBER(38,0)
+            description: Medical staff (qualified physicians, M.D./D.O/MBBS or equivalent)
+            name: STAFF_MEDICAL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e26a3a96-feea-442a-bd4a-7e6e34b89cd7
+                    stepCounter: 97e748c1-af2d-4c15-b87f-4d68cc76bfb8
+                transform: ""
+          - columnReference:
+              columnCounter: 1be4b3d5-14b2-4c43-a515-67a7ecf73255
+              stepCounter: 72618740-78f2-4c56-9bb6-7efdc4ee3ef3
+            dataType: NUMBER(38,0)
+            description: Nursing staff (RN, LPN or equivalent)
+            name: STAFF_NURSING
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 98e1fe54-3758-489e-ac5e-bfe31e355192
+                    stepCounter: 97e748c1-af2d-4c15-b87f-4d68cc76bfb8
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 35e70372-ebfd-4ea6-8e64-c53cfcb2c2e8
+              stepCounter: 72618740-78f2-4c56-9bb6-7efdc4ee3ef3
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: df39dbaa-1b9b-40ca-937e-1fd3637f00a4
+              stepCounter: 72618740-78f2-4c56-9bb6-7efdc4ee3ef3
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: dacd9464-6cbe-4129-a6b9-245a3304a766
+              stepCounter: 72618740-78f2-4c56-9bb6-7efdc4ee3ef3
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: c263ed3f-2ba8-4a2d-acf3-f3c230c0e133
+                stepCounter: 72618740-78f2-4c56-9bb6-7efdc4ee3ef3
+              - columnCounter: 4368bc23-c877-4ac6-9104-0860fc1c3f56
+                stepCounter: 72618740-78f2-4c56-9bb6-7efdc4ee3ef3
+              - columnCounter: 93d1010d-7396-4fb1-b7e7-d0c048ccd15c
+                stepCounter: 72618740-78f2-4c56-9bb6-7efdc4ee3ef3
+              - columnCounter: cff2be22-d9aa-4b1c-a035-86f57ebb449a
+                stepCounter: 72618740-78f2-4c56-9bb6-7efdc4ee3ef3
+              - columnCounter: e075965a-0f0e-4124-b41e-e5259fc2042b
+                stepCounter: 72618740-78f2-4c56-9bb6-7efdc4ee3ef3
+              - columnCounter: 1be4b3d5-14b2-4c43-a515-67a7ecf73255
+                stepCounter: 72618740-78f2-4c56-9bb6-7efdc4ee3ef3
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: bdcb88b1-83a3-43ee-8fb7-2d6bf2ec9058
+              stepCounter: 72618740-78f2-4c56-9bb6-7efdc4ee3ef3
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 6156c4fa-7126-4485-a3c4-b320ddbd15af
+                stepCounter: 72618740-78f2-4c56-9bb6-7efdc4ee3ef3
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: COVID19
+                nodeName: HS_BULK_DATA
+            join:
+              joinCondition: FROM {{ ref('COVID19', 'HS_BULK_DATA') }} "HS_BULK_DATA"
+            name: DVSTG_HS_BULK_DATA
+            noLinkRefs: []
+      name: DVSTG_HS_BULK_DATA
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: 72618740-78f2-4c56-9bb6-7efdc4ee3ef3

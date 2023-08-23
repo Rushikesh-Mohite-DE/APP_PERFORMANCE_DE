@@ -1,0 +1,394 @@
+steps:
+  WWI_LOAD_INVOICES-c95cfb55-922c-4b84-a004-aec61e242965:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: WIDEWORLIMPORTES_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 534c1953-040a-48a4-a80c-0ba173d47c30
+              stepCounter: c95cfb55-922c-4b84-a004-aec61e242965
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Numeric ID used for reference to an invoice within the database
+            name: INVOICEID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0286a3fc-55db-4e67-a111-a8db6e2a6002
+              stepCounter: c95cfb55-922c-4b84-a004-aec61e242965
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Customer for this invoice
+            name: CUSTOMERID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d073a460-e3fd-4e66-8491-cd9a0dfa43be
+              stepCounter: c95cfb55-922c-4b84-a004-aec61e242965
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Bill to customer for this invoice (invoices might be billed to a head office)
+            name: BILLTOCUSTOMERID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0dbdf551-03da-4e00-8621-a0c5cc955c89
+              stepCounter: c95cfb55-922c-4b84-a004-aec61e242965
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Sales order (if any) for this invoice
+            name: ORDERID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e9c70052-cd1b-4461-9873-5cfc35e82be9
+              stepCounter: c95cfb55-922c-4b84-a004-aec61e242965
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: How these stock items are beign delivered
+            name: DELIVERYMETHODID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 043e97c6-ade5-4a81-b963-baea76d8a459
+              stepCounter: c95cfb55-922c-4b84-a004-aec61e242965
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Customer contact for this invoice
+            name: CONTACTPERSONID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8894f77e-1862-4d1f-b17f-a8cef0f20a88
+              stepCounter: c95cfb55-922c-4b84-a004-aec61e242965
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Customer accounts contact for this invoice
+            name: ACCOUNTSPERSONID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4c2b1828-655c-4075-957d-47b62c483afd
+              stepCounter: c95cfb55-922c-4b84-a004-aec61e242965
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Salesperson for this invoice
+            name: SALESPERSONPERSONID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0df5c7fa-0d9b-44ee-8365-c849580f96b1
+              stepCounter: c95cfb55-922c-4b84-a004-aec61e242965
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Person who packed this shipment (or checked the packing)
+            name: PACKEDBYPERSONID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0e121f9f-e849-46a7-8eea-2222462e62eb
+              stepCounter: c95cfb55-922c-4b84-a004-aec61e242965
+            config: {}
+            dataType: DATE
+            defaultValue: ""
+            description: Date that this invoice was raised
+            name: INVOICEDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5245fea5-15be-4da1-9a35-c653aeac78c0
+              stepCounter: c95cfb55-922c-4b84-a004-aec61e242965
+            config: {}
+            dataType: VARCHAR(20)
+            defaultValue: ""
+            description: Purchase Order Number received from customer
+            name: CUSTOMERPURCHASEORDERNUMBER
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 10bf1815-5d6a-448e-bea2-52134d958be0
+              stepCounter: c95cfb55-922c-4b84-a004-aec61e242965
+            config: {}
+            dataType: VARCHAR(20)
+            defaultValue: ""
+            description: Is this a credit note (rather than an invoice)
+            name: ISCREDITNOTE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7db5b729-6b93-45d3-af6f-13c002133b9d
+              stepCounter: c95cfb55-922c-4b84-a004-aec61e242965
+            config: {}
+            dataType: VARCHAR(4000)
+            defaultValue: ""
+            description: Reason that this credit note needed to be generated (if applicable)
+            name: CREDITNOTEREASON
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5aaad9c4-c034-446b-a8da-0e21e06bbf76
+              stepCounter: c95cfb55-922c-4b84-a004-aec61e242965
+            config: {}
+            dataType: VARCHAR(4000)
+            defaultValue: ""
+            description: Any comments related to this invoice (sent to customer)
+            name: COMMENTS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c156ec50-e856-49c3-a079-4aa72fe696b1
+              stepCounter: c95cfb55-922c-4b84-a004-aec61e242965
+            config: {}
+            dataType: VARCHAR(4000)
+            defaultValue: ""
+            description: Any comments related to delivery (sent to customer)
+            name: DELIVERYINSTRUCTIONS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 29d88b83-566e-45ed-b1c7-2faf286d2338
+              stepCounter: c95cfb55-922c-4b84-a004-aec61e242965
+            config: {}
+            dataType: VARCHAR(4000)
+            defaultValue: ""
+            description: Any internal comments related to this invoice (not sent to the customer)
+            name: INTERNALCOMMENTS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4f154fa1-b276-4831-b0dc-1dfd6465050d
+              stepCounter: c95cfb55-922c-4b84-a004-aec61e242965
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Total number of dry packages (information for the delivery driver)
+            name: TOTALDRYITEMS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 59851153-f555-4b31-abe6-6fe94a950fd9
+              stepCounter: c95cfb55-922c-4b84-a004-aec61e242965
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Total number of chiller packages (information for the delivery driver)
+            name: TOTALCHILLERITEMS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7253c25a-cd62-47e3-b03f-0a9631e03c79
+              stepCounter: c95cfb55-922c-4b84-a004-aec61e242965
+            config: {}
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: Delivery run for this shipment
+            name: DELIVERYRUN
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ef290612-f14e-4828-9e20-532d7f293996
+              stepCounter: c95cfb55-922c-4b84-a004-aec61e242965
+            config: {}
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: Position in the delivery run for this shipment
+            name: RUNPOSITION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1e7c3138-96b2-485d-b0ea-8cca50c6fa93
+              stepCounter: c95cfb55-922c-4b84-a004-aec61e242965
+            config: {}
+            dataType: VARCHAR(4000)
+            defaultValue: ""
+            description: JSON-structured data returned from delivery devices for deliveries made directly by the organization
+            name: RETURNEDDELIVERYDATA
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 41409782-1e84-4951-a5ea-7aa82891b53c
+              stepCounter: c95cfb55-922c-4b84-a004-aec61e242965
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: Confirmed delivery date and time promoted from JSON delivery data
+            name: CONFIRMEDDELIVERYTIME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c6dd3410-2db0-404c-b06b-bf1eeed7d6c2
+              stepCounter: c95cfb55-922c-4b84-a004-aec61e242965
+            config: {}
+            dataType: VARCHAR(4000)
+            defaultValue: ""
+            description: Confirmed receiver promoted from JSON delivery data
+            name: CONFIRMEDRECEIVEDBY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 875287c3-4841-41a7-b070-61a138dc0d78
+              stepCounter: c95cfb55-922c-4b84-a004-aec61e242965
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: LASTEDITEDBY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0564c52b-2229-41c3-8189-2079c62ed3c8
+              stepCounter: c95cfb55-922c-4b84-a004-aec61e242965
+            config: {}
+            dataType: DATE
+            defaultValue: ""
+            description: ""
+            name: LASTEDITEDWHEN
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('WIDEWORLIMPORTES_SRC', 'WWI_LOAD_INVOICES') }}
+      name: WWI_LOAD_INVOICES
+      schema: ""
+      sqlType: Source
+      table: WWI_LOAD_INVOICES
+      type: sourceInput
+    stepCounter: c95cfb55-922c-4b84-a004-aec61e242965

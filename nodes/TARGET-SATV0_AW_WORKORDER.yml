@@ -1,0 +1,191 @@
+steps:
+  SATV0_AW_WORKORDER-91c432fa-c02e-4e58-8149-627a1c8e3b9b:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 9da6f7b6-00ec-4314-8525-7f4d41eb0ffd
+              stepCounter: 91c432fa-c02e-4e58-8149-627a1c8e3b9b
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_WORKORDER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2b501594-4dcc-415c-9e36-c779b5c98b1c
+                    stepCounter: a245e499-12b9-46be-886f-2f1351b5ff7c
+                transform: ""
+          - columnReference:
+              columnCounter: 7f650bbd-962d-4d4e-8470-cfc6c3ffa553
+              stepCounter: 91c432fa-c02e-4e58-8149-627a1c8e3b9b
+            dataType: NUMBER(38,0)
+            description: Product quantity to build.
+            hashColumns: []
+            hashDetails: null
+            name: ORDERQTY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 30286614-29f3-4190-aead-73ee4fb85a75
+                    stepCounter: a245e499-12b9-46be-886f-2f1351b5ff7c
+                transform: ""
+          - columnReference:
+              columnCounter: 3039f1a7-416d-4c91-8c5d-000048ced448
+              stepCounter: 91c432fa-c02e-4e58-8149-627a1c8e3b9b
+            dataType: NUMBER(38,0)
+            description: Quantity built and put in inventory.
+            hashColumns: []
+            hashDetails: null
+            name: STOCKEDQTY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 42e89458-696f-4015-9148-f01e97d74938
+                    stepCounter: a245e499-12b9-46be-886f-2f1351b5ff7c
+                transform: ""
+          - columnReference:
+              columnCounter: 64254b08-acc4-4f0b-a5ea-bc6397449c33
+              stepCounter: 91c432fa-c02e-4e58-8149-627a1c8e3b9b
+            dataType: NUMBER(38,0)
+            description: Quantity that failed inspection.
+            hashColumns: []
+            hashDetails: null
+            name: SCRAPPEDQTY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6417835a-31fb-43f9-95fe-28c7621118fc
+                    stepCounter: a245e499-12b9-46be-886f-2f1351b5ff7c
+                transform: ""
+          - columnReference:
+              columnCounter: 1361429f-dd16-48b4-a14d-b7bf7d5efc61
+              stepCounter: 91c432fa-c02e-4e58-8149-627a1c8e3b9b
+            dataType: TIMESTAMP_NTZ(9)
+            description: Work order start date.
+            hashColumns: []
+            hashDetails: null
+            name: STARTDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a50187a8-1486-4f63-9992-2a912e3f23a5
+                    stepCounter: a245e499-12b9-46be-886f-2f1351b5ff7c
+                transform: ""
+          - columnReference:
+              columnCounter: 12dfee17-4680-497c-905b-c74daf4114fd
+              stepCounter: 91c432fa-c02e-4e58-8149-627a1c8e3b9b
+            dataType: TIMESTAMP_NTZ(9)
+            description: Work order end date.
+            hashColumns: []
+            hashDetails: null
+            name: ENDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 06e4cb2e-fd4c-4c75-92a0-e035ac94a15f
+                    stepCounter: a245e499-12b9-46be-886f-2f1351b5ff7c
+                transform: ""
+          - columnReference:
+              columnCounter: e3ed644a-c8d4-42b6-b5b2-5b7a1fac972f
+              stepCounter: 91c432fa-c02e-4e58-8149-627a1c8e3b9b
+            dataType: TIMESTAMP_NTZ(9)
+            description: Work order due date.
+            hashColumns: []
+            hashDetails: null
+            name: DUEDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a54f862a-d2ba-43e5-afb1-3dac0eedbc7c
+                    stepCounter: a245e499-12b9-46be-886f-2f1351b5ff7c
+                transform: ""
+          - columnReference:
+              columnCounter: 46a6d07b-7d28-417e-8d58-f8016b9634f1
+              stepCounter: 91c432fa-c02e-4e58-8149-627a1c8e3b9b
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            hashColumns: []
+            hashDetails: null
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 08a6ac52-c309-4f46-b447-2f29eae7cae3
+                    stepCounter: a245e499-12b9-46be-886f-2f1351b5ff7c
+                transform: ""
+          - columnReference:
+              columnCounter: 96c337ac-a418-40ff-8918-22b3cf9ac7e8
+              stepCounter: 91c432fa-c02e-4e58-8149-627a1c8e3b9b
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1c2098f0-85fb-4d17-a7a8-70f8419047cb
+                    stepCounter: a245e499-12b9-46be-886f-2f1351b5ff7c
+                transform: ""
+          - columnReference:
+              columnCounter: 6e23bbe3-cd39-4543-a38f-2e8512c9eff2
+              stepCounter: 91c432fa-c02e-4e58-8149-627a1c8e3b9b
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1fa90efa-9ca4-4f0c-b290-711710f6ca52
+                    stepCounter: a245e499-12b9-46be-886f-2f1351b5ff7c
+                transform: ""
+          - columnReference:
+              columnCounter: d58be539-f400-4c12-bb3c-8eadb699d730
+              stepCounter: 91c432fa-c02e-4e58-8149-627a1c8e3b9b
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 75fc57e4-dc61-42ee-a46b-19363d729df7
+                    stepCounter: a245e499-12b9-46be-886f-2f1351b5ff7c
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_WORKORDER
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_WORKORDER') }} "DVSTG_AW_WORKORDER"
+            name: SATV0_AW_WORKORDER
+            noLinkRefs: []
+      name: SATV0_AW_WORKORDER
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: 91c432fa-c02e-4e58-8149-627a1c8e3b9b

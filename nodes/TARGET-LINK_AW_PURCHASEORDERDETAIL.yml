@@ -1,0 +1,259 @@
+steps:
+  LINK_AW_PURCHASEORDERDETAIL-34f10ed9-7c3d-44a6-950d-82252f782dbf:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 53189918-78b2-4a12-a82e-c9d98bde2ee3
+              stepCounter: 34f10ed9-7c3d-44a6-950d-82252f782dbf
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_PURCHASEORDERDETAIL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bb6b0b05-144c-4872-8318-c8c873251af8
+                    stepCounter: edfdcead-0b60-415a-ab0e-7ce01176a474
+                transform: ""
+          - columnReference:
+              columnCounter: 61e576b3-e888-4fd2-808d-9c1077c128ba
+              stepCounter: 34f10ed9-7c3d-44a6-950d-82252f782dbf
+            dataType: NUMBER(38,0)
+            description: Primary key. Foreign key to PurchaseOrderHeader.PurchaseOrderID.
+            hashColumns: []
+            hashDetails: null
+            name: PURCHASEORDERID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d5148a39-1a2d-4d9d-9041-00ba6943c368
+                    stepCounter: edfdcead-0b60-415a-ab0e-7ce01176a474
+                transform: ""
+          - columnReference:
+              columnCounter: a2c151ea-5322-4fc1-9155-ab9de5376ee3
+              stepCounter: 34f10ed9-7c3d-44a6-950d-82252f782dbf
+            dataType: NUMBER(38,0)
+            description: Primary key. One line number per purchased product.
+            hashColumns: []
+            hashDetails: null
+            name: PURCHASEORDERDETAILID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2c568a34-ce81-433e-aba0-9c56648bab91
+                    stepCounter: edfdcead-0b60-415a-ab0e-7ce01176a474
+                transform: ""
+          - columnReference:
+              columnCounter: 7bc0b937-d1c4-46ed-a1dd-6808386cf847
+              stepCounter: 34f10ed9-7c3d-44a6-950d-82252f782dbf
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date the product is expected to be received.
+            hashColumns: []
+            hashDetails: null
+            name: DUEDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8f846d39-99b6-40ca-9487-983a52ff08f0
+                    stepCounter: edfdcead-0b60-415a-ab0e-7ce01176a474
+                transform: ""
+          - columnReference:
+              columnCounter: 6f3500c7-62bb-40be-afd2-11f698d0fa9f
+              stepCounter: 34f10ed9-7c3d-44a6-950d-82252f782dbf
+            dataType: NUMBER(38,0)
+            description: Quantity ordered.
+            hashColumns: []
+            hashDetails: null
+            name: ORDERQTY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: eabff0d8-92f0-4a30-a8f2-5578ed4a67fa
+                    stepCounter: edfdcead-0b60-415a-ab0e-7ce01176a474
+                transform: ""
+          - columnReference:
+              columnCounter: 718b9fd5-84a8-4dd6-af28-36b9200fbc59
+              stepCounter: 34f10ed9-7c3d-44a6-950d-82252f782dbf
+            dataType: NUMBER(38,0)
+            description: Product identification number. Foreign key to Product.ProductID.
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCTID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c018e86c-7fd2-4b9c-8fd9-f9dead7f09ae
+                    stepCounter: edfdcead-0b60-415a-ab0e-7ce01176a474
+                transform: ""
+          - columnReference:
+              columnCounter: 79a33931-d73e-420a-945a-0a581f10cc21
+              stepCounter: 34f10ed9-7c3d-44a6-950d-82252f782dbf
+            dataType: NUMBER(19,4)
+            description: Vendor''s selling price of a single product.
+            hashColumns: []
+            hashDetails: null
+            name: UNITPRICE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c4ea3085-64a2-4d22-b5a6-5592fc44fe5d
+                    stepCounter: edfdcead-0b60-415a-ab0e-7ce01176a474
+                transform: ""
+          - columnReference:
+              columnCounter: 31f67c44-a7f9-4329-9876-fc63552c35b7
+              stepCounter: 34f10ed9-7c3d-44a6-950d-82252f782dbf
+            dataType: NUMBER(19,4)
+            description: Per product subtotal. Computed as OrderQty * UnitPrice.
+            hashColumns: []
+            hashDetails: null
+            name: LINETOTAL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 80b79ba3-5051-479b-8fe8-d00738cb24bf
+                    stepCounter: edfdcead-0b60-415a-ab0e-7ce01176a474
+                transform: ""
+          - columnReference:
+              columnCounter: dba07cdf-67dd-408e-bb96-a56c867ca5ae
+              stepCounter: 34f10ed9-7c3d-44a6-950d-82252f782dbf
+            dataType: NUMBER(8,2)
+            description: Quantity actually received from the vendor.
+            hashColumns: []
+            hashDetails: null
+            name: RECEIVEDQTY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e3c87cb0-289c-4907-ab03-f112aa7fabaa
+                    stepCounter: edfdcead-0b60-415a-ab0e-7ce01176a474
+                transform: ""
+          - columnReference:
+              columnCounter: 1431b2b1-4037-4746-b702-3d2dba06fdfd
+              stepCounter: 34f10ed9-7c3d-44a6-950d-82252f782dbf
+            dataType: NUMBER(8,2)
+            description: Quantity rejected during inspection.
+            hashColumns: []
+            hashDetails: null
+            name: REJECTEDQTY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fa262611-60c5-4565-8dd0-2d271759684b
+                    stepCounter: edfdcead-0b60-415a-ab0e-7ce01176a474
+                transform: ""
+          - columnReference:
+              columnCounter: 21a60a88-a8ef-49fb-95da-dc8c5a7cf4a4
+              stepCounter: 34f10ed9-7c3d-44a6-950d-82252f782dbf
+            dataType: NUMBER(9,2)
+            description: Quantity accepted into inventory. Computed as ReceivedQty - RejectedQty.
+            hashColumns: []
+            hashDetails: null
+            name: STOCKEDQTY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 69a57946-818a-41e8-a3a4-4cb3264a2dd3
+                    stepCounter: edfdcead-0b60-415a-ab0e-7ce01176a474
+                transform: ""
+          - columnReference:
+              columnCounter: b3e2c325-e903-4233-918c-4f918485519e
+              stepCounter: 34f10ed9-7c3d-44a6-950d-82252f782dbf
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            hashColumns: []
+            hashDetails: null
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8934ebd8-c647-4be5-a74f-5e505c94d3a1
+                    stepCounter: edfdcead-0b60-415a-ab0e-7ce01176a474
+                transform: ""
+          - columnReference:
+              columnCounter: 31fa22e9-b3bc-4233-b92d-a28c05755cd0
+              stepCounter: 34f10ed9-7c3d-44a6-950d-82252f782dbf
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 661fdc0d-db3a-40d7-af51-4fa12aa1b490
+                    stepCounter: edfdcead-0b60-415a-ab0e-7ce01176a474
+                transform: ""
+          - columnReference:
+              columnCounter: 77a26ee1-53e3-490a-9517-cac72c317a25
+              stepCounter: 34f10ed9-7c3d-44a6-950d-82252f782dbf
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2accc57d-472f-4bf1-be90-6ee43eee25e5
+                    stepCounter: edfdcead-0b60-415a-ab0e-7ce01176a474
+                transform: ""
+          - columnReference:
+              columnCounter: a31c101d-d266-444f-935f-cb5f95afb4cd
+              stepCounter: 34f10ed9-7c3d-44a6-950d-82252f782dbf
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 22077718-45c5-4918-808c-1a01b1c4f140
+                    stepCounter: edfdcead-0b60-415a-ab0e-7ce01176a474
+                transform: ""
+          - columnReference:
+              columnCounter: 2c23863e-7180-43c7-99c5-9fb80c775a42
+              stepCounter: 34f10ed9-7c3d-44a6-950d-82252f782dbf
+            config:
+              is_Link_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LNK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d02cb6c9-effb-45d7-927b-8d5ed7b56394
+                    stepCounter: edfdcead-0b60-415a-ab0e-7ce01176a474
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_PURCHASEORDERDETAIL
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_PURCHASEORDERDETAIL') }} "DVSTG_AW_PURCHASEORDERDETAIL"
+            name: LINK_AW_PURCHASEORDERDETAIL
+            noLinkRefs: []
+      name: LINK_AW_PURCHASEORDERDETAIL
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::7
+      type: sql
+    stepCounter: 34f10ed9-7c3d-44a6-950d-82252f782dbf

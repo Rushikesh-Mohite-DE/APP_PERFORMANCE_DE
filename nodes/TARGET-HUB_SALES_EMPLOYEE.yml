@@ -1,0 +1,91 @@
+steps:
+  HUB_SALES_EMPLOYEE-12bbe88e-41ee-483d-8d84-4705b6ec5caa:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: af95b4a0-7fb3-43fe-82e4-ad4a2d146678
+              stepCounter: 12bbe88e-41ee-483d-8d84-4705b6ec5caa
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_SALES_EMPLOYEE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 73d8a651-b6e6-41d3-b24f-e2f88895d256
+                    stepCounter: 07a61494-ef9c-4144-bfe4-cbd7bbcce475
+                transform: ""
+          - columnReference:
+              columnCounter: 2612d8cf-f075-44a0-9c1c-63166c40f9f9
+              stepCounter: 12bbe88e-41ee-483d-8d84-4705b6ec5caa
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: EMPLOYEE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4016ac85-4d42-4fca-8feb-1e9d471b6329
+                    stepCounter: 07a61494-ef9c-4144-bfe4-cbd7bbcce475
+                transform: ""
+          - columnReference:
+              columnCounter: c6b8a81d-7665-45c4-a5d1-e8892a147533
+              stepCounter: 12bbe88e-41ee-483d-8d84-4705b6ec5caa
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 420622ed-4fb6-4d35-a4c5-fd7dfc4cfa6d
+                    stepCounter: 07a61494-ef9c-4144-bfe4-cbd7bbcce475
+                transform: ""
+          - columnReference:
+              columnCounter: 6fdb5305-04d2-43a3-9435-baab1bb5938e
+              stepCounter: 12bbe88e-41ee-483d-8d84-4705b6ec5caa
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9f430a6a-d2ec-4c12-a2ab-0fb9acb357e8
+                    stepCounter: 07a61494-ef9c-4144-bfe4-cbd7bbcce475
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SALES_EMPLOYEE
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SALES_EMPLOYEE') }} "DVSTG_SALES_EMPLOYEE"
+            name: HUB_SALES_EMPLOYEE
+            noLinkRefs: []
+      name: HUB_SALES_EMPLOYEE
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 12bbe88e-41ee-483d-8d84-4705b6ec5caa

@@ -1,0 +1,169 @@
+steps:
+  SPORTS_LOAD_PERSONS-ebac0071-1d83-4f95-a09a-8c011a05827c:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SPORTS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 20bd7411-7c4f-4c4d-999b-d1a0d5136234
+              stepCounter: ebac0071-1d83-4f95-a09a-8c011a05827c
+            config: {}
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            name: ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2502d220-9665-4ada-b888-0ec0033b8d4c
+              stepCounter: ebac0071-1d83-4f95-a09a-8c011a05827c
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: PERSON_KEY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 09580431-23b9-474b-920f-496fdba2db69
+              stepCounter: ebac0071-1d83-4f95-a09a-8c011a05827c
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: PUBLISHER_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6960d08c-708d-4190-b7a5-da3c62c03d78
+              stepCounter: ebac0071-1d83-4f95-a09a-8c011a05827c
+            config: {}
+            dataType: VARCHAR(20)
+            defaultValue: ""
+            description: ""
+            name: GENDER
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2ae2ab16-530b-4d2d-a857-b5bdaf2e15e6
+              stepCounter: ebac0071-1d83-4f95-a09a-8c011a05827c
+            config: {}
+            dataType: VARCHAR(30)
+            defaultValue: ""
+            description: ""
+            name: BIRTH_DATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e806e2bc-7f45-4add-98d1-0fc1fbb03938
+              stepCounter: ebac0071-1d83-4f95-a09a-8c011a05827c
+            config: {}
+            dataType: VARCHAR(30)
+            defaultValue: ""
+            description: ""
+            name: DEATH_DATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: dfeb9aef-6de1-4dcb-ba3c-a84641758df6
+              stepCounter: ebac0071-1d83-4f95-a09a-8c011a05827c
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: BIRTH_LOCATION_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e9f4e065-07e5-4d74-9c64-90c7cb7933d2
+              stepCounter: ebac0071-1d83-4f95-a09a-8c011a05827c
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: HOMETOWN_LOCATION_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e6bb8125-d74d-47de-b4da-33ad83d2eec9
+              stepCounter: ebac0071-1d83-4f95-a09a-8c011a05827c
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: RESIDENCE_LOCATION_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e8be9860-36e6-4d35-97e6-fd4bd5115bc5
+              stepCounter: ebac0071-1d83-4f95-a09a-8c011a05827c
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: DEATH_LOCATION_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SPORTS_SRC', 'SPORTS_LOAD_PERSONS') }}
+      name: SPORTS_LOAD_PERSONS
+      schema: ""
+      sqlType: Source
+      table: SPORTS_LOAD_PERSONS
+      type: sourceInput
+    stepCounter: ebac0071-1d83-4f95-a09a-8c011a05827c

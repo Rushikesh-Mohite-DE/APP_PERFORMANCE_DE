@@ -1,0 +1,154 @@
+steps:
+  SALES_LOAD_CUSTOMER_HIVE-6444ad3a-398c-410f-852c-b97692d90e11:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SALES_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: dd2af2cd-3add-4d0e-a2b5-03aea82b0802
+              stepCounter: 6444ad3a-398c-410f-852c-b97692d90e11
+            config: {}
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: customer code
+            name: CUSTOMER_CODE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ca0b03ac-d63a-4085-901a-27dba5c45a8d
+              stepCounter: 6444ad3a-398c-410f-852c-b97692d90e11
+            config: {}
+            dataType: VARCHAR(80)
+            defaultValue: ""
+            description: ""
+            name: CUSTOMER_NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3b4ef8b1-2feb-4f2f-b460-9519086e2b15
+              stepCounter: 6444ad3a-398c-410f-852c-b97692d90e11
+            config: {}
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            name: CUSTOMER_LEGAL_NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: af392a06-489a-4925-9bf8-13cb7dc8eba7
+              stepCounter: 6444ad3a-398c-410f-852c-b97692d90e11
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: row updated
+            name: TERRITORY_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7a0725e2-75f4-4b59-931d-eaf87ba7b89b
+              stepCounter: 6444ad3a-398c-410f-852c-b97692d90e11
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Ship-to Party
+            name: SHIP_TO_ADDRESS_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 361e3265-49b0-4cd1-801b-d4d39844d44b
+              stepCounter: 6444ad3a-398c-410f-852c-b97692d90e11
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: bill-to Party
+            name: BILL_TO_ADDRESS_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7d43c8e9-61bd-4723-afdf-3115629199be
+              stepCounter: 6444ad3a-398c-410f-852c-b97692d90e11
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: CREATED_DATETIME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 68a91d01-646f-4d72-aee9-17542bbf835b
+              stepCounter: 6444ad3a-398c-410f-852c-b97692d90e11
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: LAST_CHANGE_EMPLOYEE_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8843278b-50a3-4e2c-aea1-f7c96abaf9b8
+              stepCounter: 6444ad3a-398c-410f-852c-b97692d90e11
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: LAST_CHANGE_DATETIME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SALES_SRC', 'SALES_LOAD_CUSTOMER_HIVE') }}
+      name: SALES_LOAD_CUSTOMER_HIVE
+      schema: ""
+      sqlType: Source
+      table: SALES_LOAD_CUSTOMER_HIVE
+      type: sourceInput
+    stepCounter: 6444ad3a-398c-410f-852c-b97692d90e11

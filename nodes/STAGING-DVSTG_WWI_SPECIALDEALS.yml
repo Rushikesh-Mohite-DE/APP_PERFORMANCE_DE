@@ -1,0 +1,321 @@
+steps:
+  DVSTG_WWI_SPECIALDEALS-e1b0d532-b0cb-4daa-9c16-3ef76e3ebb37:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 12168cbb-b19a-4216-9433-d06b68ae6baa
+              stepCounter: e1b0d532-b0cb-4daa-9c16-3ef76e3ebb37
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 4d8c384f-e046-479c-b84f-9dc1b5d6376b
+                stepCounter: e1b0d532-b0cb-4daa-9c16-3ef76e3ebb37
+              - columnCounter: a9c82400-e45c-4cfd-9d4d-424f2e4de913
+                stepCounter: e1b0d532-b0cb-4daa-9c16-3ef76e3ebb37
+              - columnCounter: 66c486a5-81a9-49c8-a76b-100d389b1697
+                stepCounter: e1b0d532-b0cb-4daa-9c16-3ef76e3ebb37
+              - columnCounter: c345c672-beb5-40ee-822a-515025c0f606
+                stepCounter: e1b0d532-b0cb-4daa-9c16-3ef76e3ebb37
+              - columnCounter: 579ee9a4-5f3d-4d61-8a3d-080352a542bb
+                stepCounter: e1b0d532-b0cb-4daa-9c16-3ef76e3ebb37
+              - columnCounter: 74d29112-e818-45ff-b79f-0a1083b91e5f
+                stepCounter: e1b0d532-b0cb-4daa-9c16-3ef76e3ebb37
+            name: HK_SPECIALDEALS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 4d8c384f-e046-479c-b84f-9dc1b5d6376b
+              stepCounter: e1b0d532-b0cb-4daa-9c16-3ef76e3ebb37
+            dataType: NUMBER(38,0)
+            description: ID (sequence based) for a special deal
+            name: SPECIALDEALID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 85a19793-09cd-4fbb-b183-fba31fafd0e4
+                    stepCounter: a912f6fe-dd5c-4419-81a3-08e82b01a248
+                transform: ""
+          - columnReference:
+              columnCounter: a9c82400-e45c-4cfd-9d4d-424f2e4de913
+              stepCounter: e1b0d532-b0cb-4daa-9c16-3ef76e3ebb37
+            dataType: VARCHAR(16777216)
+            description: Stock item that the deal applies to (if NULL, then only discounts are permitted not unit prices)
+            name: STOCKITEMID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e8b559b8-d079-499a-a00f-0cf0edd40e7c
+                    stepCounter: a912f6fe-dd5c-4419-81a3-08e82b01a248
+                transform: ""
+          - columnReference:
+              columnCounter: c345c672-beb5-40ee-822a-515025c0f606
+              stepCounter: e1b0d532-b0cb-4daa-9c16-3ef76e3ebb37
+            dataType: VARCHAR(16777216)
+            description: ID of the customer that the special pricing applies to (if NULL then all customers)
+            name: CUSTOMERID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 55a4d519-6364-4db1-a771-63dce8586660
+                    stepCounter: a912f6fe-dd5c-4419-81a3-08e82b01a248
+                transform: ""
+          - columnReference:
+              columnCounter: 66c486a5-81a9-49c8-a76b-100d389b1697
+              stepCounter: e1b0d532-b0cb-4daa-9c16-3ef76e3ebb37
+            dataType: NUMBER(38,0)
+            description: ID of the buying group that the special pricing applies to (optional)
+            name: BUYINGGROUPID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: afdbafe0-3c3e-4732-90ce-6c72f4fd20e4
+                    stepCounter: a912f6fe-dd5c-4419-81a3-08e82b01a248
+                transform: ""
+          - columnReference:
+              columnCounter: 579ee9a4-5f3d-4d61-8a3d-080352a542bb
+              stepCounter: e1b0d532-b0cb-4daa-9c16-3ef76e3ebb37
+            dataType: VARCHAR(16777216)
+            description: ID of the customer category that the special pricing applies to (optional)
+            name: CUSTOMERCATEGORYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 22393504-e023-4f1e-8e04-85934957ef37
+                    stepCounter: a912f6fe-dd5c-4419-81a3-08e82b01a248
+                transform: ""
+          - columnReference:
+              columnCounter: 74d29112-e818-45ff-b79f-0a1083b91e5f
+              stepCounter: e1b0d532-b0cb-4daa-9c16-3ef76e3ebb37
+            dataType: NUMBER(38,0)
+            description: ID of the stock group that the special pricing applies to (optional)
+            name: STOCKGROUPID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3408f8e2-5f0e-4188-895b-b62d74e9c4d4
+                    stepCounter: a912f6fe-dd5c-4419-81a3-08e82b01a248
+                transform: ""
+          - columnReference:
+              columnCounter: e957effb-176a-452b-84d2-24e35e4e390b
+              stepCounter: e1b0d532-b0cb-4daa-9c16-3ef76e3ebb37
+            dataType: VARCHAR(30)
+            description: Description of the special deal
+            name: DEALDESCRIPTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: df5fad9e-bdcc-462b-9895-c55097ea16df
+                    stepCounter: a912f6fe-dd5c-4419-81a3-08e82b01a248
+                transform: ""
+          - columnReference:
+              columnCounter: 1c9faaa7-32be-4b51-8ef6-a8969139164b
+              stepCounter: e1b0d532-b0cb-4daa-9c16-3ef76e3ebb37
+            dataType: DATE
+            description: Date that the special pricing starts from
+            name: STARTDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a9fbd964-62ac-4624-aace-ea12af689e38
+                    stepCounter: a912f6fe-dd5c-4419-81a3-08e82b01a248
+                transform: ""
+          - columnReference:
+              columnCounter: c66afd02-7bcc-46a8-a630-32cdf43374db
+              stepCounter: e1b0d532-b0cb-4daa-9c16-3ef76e3ebb37
+            dataType: DATE
+            description: Date that the special pricing ends on
+            name: ENDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 87c5fab8-aab5-43b0-a20b-f67cea968588
+                    stepCounter: a912f6fe-dd5c-4419-81a3-08e82b01a248
+                transform: ""
+          - columnReference:
+              columnCounter: c262f32b-7643-4178-841a-6f36fb31a6fd
+              stepCounter: e1b0d532-b0cb-4daa-9c16-3ef76e3ebb37
+            dataType: VARCHAR(16777216)
+            description: Discount per unit to be applied to sale price (optional)
+            name: DISCOUNTAMOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 46736391-df88-48f5-bd8e-ce7f9cdfb797
+                    stepCounter: a912f6fe-dd5c-4419-81a3-08e82b01a248
+                transform: ""
+          - columnReference:
+              columnCounter: edcb6f3e-a292-4282-b8d3-d4b20d25d217
+              stepCounter: e1b0d532-b0cb-4daa-9c16-3ef76e3ebb37
+            dataType: NUMBER(18,3)
+            description: Discount percentage per unit to be applied to sale price (optional)
+            name: DISCOUNTPERCENTAGE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ced4123a-40fc-45a1-a746-fcec2536a584
+                    stepCounter: a912f6fe-dd5c-4419-81a3-08e82b01a248
+                transform: ""
+          - columnReference:
+              columnCounter: e29d9406-8128-4cc7-a953-297d8c5e23c3
+              stepCounter: e1b0d532-b0cb-4daa-9c16-3ef76e3ebb37
+            dataType: VARCHAR(16777216)
+            description: Special price per unit to be applied instead of sale price (optional)
+            name: UNITPRICE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4adc4aa3-cb1d-4f86-94c5-d1aa60d4933e
+                    stepCounter: a912f6fe-dd5c-4419-81a3-08e82b01a248
+                transform: ""
+          - columnReference:
+              columnCounter: 3d4e3a07-e1ed-4dfe-91b3-a74db0c96cfa
+              stepCounter: e1b0d532-b0cb-4daa-9c16-3ef76e3ebb37
+            dataType: NUMBER(38,0)
+            description: ""
+            name: LASTEDITEDBY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2ac03c3f-0bd4-4cc9-96dc-9f51eecca733
+                    stepCounter: a912f6fe-dd5c-4419-81a3-08e82b01a248
+                transform: ""
+          - columnReference:
+              columnCounter: 9ce6ec10-4d02-481d-9e25-e899451bbbb6
+              stepCounter: e1b0d532-b0cb-4daa-9c16-3ef76e3ebb37
+            dataType: DATE
+            description: ""
+            name: LASTEDITEDWHEN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 72720264-0b0a-40fe-b3a8-e7b892be0399
+                    stepCounter: a912f6fe-dd5c-4419-81a3-08e82b01a248
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2b938c32-1347-46b3-b480-7e7a0443e82e
+              stepCounter: e1b0d532-b0cb-4daa-9c16-3ef76e3ebb37
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b37989be-74e6-4814-95f2-9eb7b0664134
+              stepCounter: e1b0d532-b0cb-4daa-9c16-3ef76e3ebb37
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 28169154-c86e-4db5-a8c0-f62f16bc2f02
+              stepCounter: e1b0d532-b0cb-4daa-9c16-3ef76e3ebb37
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: e957effb-176a-452b-84d2-24e35e4e390b
+                stepCounter: e1b0d532-b0cb-4daa-9c16-3ef76e3ebb37
+              - columnCounter: 1c9faaa7-32be-4b51-8ef6-a8969139164b
+                stepCounter: e1b0d532-b0cb-4daa-9c16-3ef76e3ebb37
+              - columnCounter: c66afd02-7bcc-46a8-a630-32cdf43374db
+                stepCounter: e1b0d532-b0cb-4daa-9c16-3ef76e3ebb37
+              - columnCounter: c262f32b-7643-4178-841a-6f36fb31a6fd
+                stepCounter: e1b0d532-b0cb-4daa-9c16-3ef76e3ebb37
+              - columnCounter: edcb6f3e-a292-4282-b8d3-d4b20d25d217
+                stepCounter: e1b0d532-b0cb-4daa-9c16-3ef76e3ebb37
+              - columnCounter: e29d9406-8128-4cc7-a953-297d8c5e23c3
+                stepCounter: e1b0d532-b0cb-4daa-9c16-3ef76e3ebb37
+              - columnCounter: 3d4e3a07-e1ed-4dfe-91b3-a74db0c96cfa
+                stepCounter: e1b0d532-b0cb-4daa-9c16-3ef76e3ebb37
+              - columnCounter: 9ce6ec10-4d02-481d-9e25-e899451bbbb6
+                stepCounter: e1b0d532-b0cb-4daa-9c16-3ef76e3ebb37
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5c0c6666-d810-4f10-af81-9b493a1903a5
+              stepCounter: e1b0d532-b0cb-4daa-9c16-3ef76e3ebb37
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 579ee9a4-5f3d-4d61-8a3d-080352a542bb
+                stepCounter: e1b0d532-b0cb-4daa-9c16-3ef76e3ebb37
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: WIDEWORLIMPORTES_SRC
+                nodeName: WWI_LOAD_SPECIALDEALS
+            join:
+              joinCondition: FROM {{ ref('WIDEWORLIMPORTES_SRC', 'WWI_LOAD_SPECIALDEALS') }} "WWI_LOAD_SPECIALDEALS"
+            name: DVSTG_WWI_SPECIALDEALS
+            noLinkRefs: []
+      name: DVSTG_WWI_SPECIALDEALS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: e1b0d532-b0cb-4daa-9c16-3ef76e3ebb37

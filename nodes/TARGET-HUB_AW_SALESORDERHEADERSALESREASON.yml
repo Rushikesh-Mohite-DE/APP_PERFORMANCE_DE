@@ -1,0 +1,105 @@
+steps:
+  HUB_AW_SALESORDERHEADERSALESREASON-a3b13605-ccb6-422f-8e2d-3ef872df5341:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 56f4deaa-0a47-4705-babc-fcff72bbaf2c
+              stepCounter: a3b13605-ccb6-422f-8e2d-3ef872df5341
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_SALESORDERHEADERSALESREASON
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2ca0ffc9-5f5e-4923-b2d2-ca1f6ee14d91
+                    stepCounter: 0218bcfe-5f2b-4985-b7d3-53142048541a
+                transform: ""
+          - columnReference:
+              columnCounter: b647ded3-abe8-453e-8d2e-72c649fd52b4
+              stepCounter: a3b13605-ccb6-422f-8e2d-3ef872df5341
+            dataType: NUMBER(38,0)
+            description: Primary key. Foreign key to SalesOrderHeader.SalesOrderID.
+            hashColumns: []
+            hashDetails: null
+            name: SALESORDERID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bfa7e24e-9362-46aa-95ba-7436579558e5
+                    stepCounter: 0218bcfe-5f2b-4985-b7d3-53142048541a
+                transform: ""
+          - columnReference:
+              columnCounter: 3c412318-9aa9-4ed2-9222-c7f1138887d5
+              stepCounter: a3b13605-ccb6-422f-8e2d-3ef872df5341
+            dataType: NUMBER(38,0)
+            description: Primary key. Foreign key to SalesReason.SalesReasonID.
+            hashColumns: []
+            hashDetails: null
+            name: SALESREASONID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fbc9d2a6-4a7a-4236-a2aa-fa3a292db3ce
+                    stepCounter: 0218bcfe-5f2b-4985-b7d3-53142048541a
+                transform: ""
+          - columnReference:
+              columnCounter: 5c7c54a9-8bfc-45e8-97aa-a239a6c0c0d6
+              stepCounter: a3b13605-ccb6-422f-8e2d-3ef872df5341
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 66c4c8c5-807c-474b-87ac-4d04cbe340b0
+                    stepCounter: 0218bcfe-5f2b-4985-b7d3-53142048541a
+                transform: ""
+          - columnReference:
+              columnCounter: 2a424c06-de4c-42f3-872b-26fce1fe4bea
+              stepCounter: a3b13605-ccb6-422f-8e2d-3ef872df5341
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 19ff68e5-7fa0-4f89-bd8e-683b4e076ce0
+                    stepCounter: 0218bcfe-5f2b-4985-b7d3-53142048541a
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_SALESORDERHEADERSALESREASON
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_SALESORDERHEADERSALESREASON') }} "DVSTG_AW_SALESORDERHEADERSALESREASON"
+            name: HUB_AW_SALESORDERHEADERSALESREASON
+            noLinkRefs: []
+      name: HUB_AW_SALESORDERHEADERSALESREASON
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: a3b13605-ccb6-422f-8e2d-3ef872df5341

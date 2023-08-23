@@ -1,0 +1,91 @@
+steps:
+  HUB_AW_SALESTERRITORY-19c238db-7071-4b52-a830-9e61666cf2ba:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 790a37f5-c089-46d9-911c-db0f1cfb617d
+              stepCounter: 19c238db-7071-4b52-a830-9e61666cf2ba
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_SALESTERRITORY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 99eda253-4e9e-442d-a862-2be1deb297ef
+                    stepCounter: cc7d4ccd-1d58-45c5-9b57-cd35925295ee
+                transform: ""
+          - columnReference:
+              columnCounter: c1fb0d36-75cc-4c56-a759-37ded03f7207
+              stepCounter: 19c238db-7071-4b52-a830-9e61666cf2ba
+            dataType: NUMBER(38,0)
+            description: Primary key for SalesTerritory records.
+            hashColumns: []
+            hashDetails: null
+            name: TERRITORYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3d49889d-1e89-471e-978c-bb223455b7b8
+                    stepCounter: cc7d4ccd-1d58-45c5-9b57-cd35925295ee
+                transform: ""
+          - columnReference:
+              columnCounter: 40a45e7c-50fa-43cf-ae77-219fbd8c1b98
+              stepCounter: 19c238db-7071-4b52-a830-9e61666cf2ba
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 97d40a6a-4c62-412f-894c-0e484e04294a
+                    stepCounter: cc7d4ccd-1d58-45c5-9b57-cd35925295ee
+                transform: ""
+          - columnReference:
+              columnCounter: 9c4de5ad-6372-4904-a118-9a769e1470a6
+              stepCounter: 19c238db-7071-4b52-a830-9e61666cf2ba
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5736a5c4-849a-4a04-a874-5086a563f8b8
+                    stepCounter: cc7d4ccd-1d58-45c5-9b57-cd35925295ee
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_SALESTERRITORY
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_SALESTERRITORY') }} "DVSTG_AW_SALESTERRITORY"
+            name: HUB_AW_SALESTERRITORY
+            noLinkRefs: []
+      name: HUB_AW_SALESTERRITORY
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 19c238db-7071-4b52-a830-9e61666cf2ba

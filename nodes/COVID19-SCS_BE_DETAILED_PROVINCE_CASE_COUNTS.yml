@@ -1,0 +1,184 @@
+steps:
+  SCS_BE_DETAILED_PROVINCE_CASE_COUNTS-bee1300e-1db1-458f-8d5a-d1ccac6f7543:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: Detailed data on case counts in Belgium and Luxembourg
+      locationID: ""
+      locationName: COVID19
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9a9ccc1d-b11c-4d23-a151-8f705d33fe0b
+              stepCounter: bee1300e-1db1-458f-8d5a-d1ccac6f7543
+            config: {}
+            dataType: VARCHAR(128)
+            defaultValue: ""
+            description: ISO-3166-3 entity name
+            name: PROVINCE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f6938833-2ab6-47ab-8ff1-f0a56c6c45d0
+              stepCounter: bee1300e-1db1-458f-8d5a-d1ccac6f7543
+            config: {}
+            dataType: VARCHAR(128)
+            defaultValue: ""
+            description: ISO-3166-2 entity name
+            name: REGION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 90daf57e-cfa7-49f8-8880-2dbbf2d4d179
+              stepCounter: bee1300e-1db1-458f-8d5a-d1ccac6f7543
+            config: {}
+            dataType: VARCHAR(1)
+            defaultValue: ""
+            description: Sex of cohort
+            name: SEX
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 40522207-1b4b-4a89-80cc-85fe7bf66ef5
+              stepCounter: bee1300e-1db1-458f-8d5a-d1ccac6f7543
+            config: {}
+            dataType: VARCHAR(16)
+            defaultValue: ""
+            description: Age group of cohort
+            name: AGEGROUP
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 41ead380-50fd-4c9f-91f7-b839fbf95d99
+              stepCounter: bee1300e-1db1-458f-8d5a-d1ccac6f7543
+            config: {}
+            dataType: DATE
+            defaultValue: ""
+            description: Date of record
+            name: DATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: db029985-eff0-4f7e-93c1-37d43e46ac35
+              stepCounter: bee1300e-1db1-458f-8d5a-d1ccac6f7543
+            config: {}
+            dataType: VARCHAR(2)
+            defaultValue: ""
+            description: ISO-3166-1 code for geography of record
+            name: ISO3166_1
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fdce5ea7-f1cd-4bf6-aae8-f48db60501da
+              stepCounter: bee1300e-1db1-458f-8d5a-d1ccac6f7543
+            config: {}
+            dataType: VARCHAR(3)
+            defaultValue: ""
+            description: ISO-3166-2 code for geography of record
+            name: ISO3166_2
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 512a02a1-cd51-4e15-8050-74157e3bcfac
+              stepCounter: bee1300e-1db1-458f-8d5a-d1ccac6f7543
+            config: {}
+            dataType: VARCHAR(3)
+            defaultValue: ""
+            description: ISO-3166-3 code for geography of record
+            name: ISO3166_3
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e2a17af4-11bf-495f-80ec-9ff1c3811945
+              stepCounter: bee1300e-1db1-458f-8d5a-d1ccac6f7543
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: New cases since last date of record
+            name: NEW_CASES
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7f948d71-20fd-4e4f-9802-dba9e447f94f
+              stepCounter: bee1300e-1db1-458f-8d5a-d1ccac6f7543
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Total cases
+            name: TOTAL_CASES
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: bc54ede9-ae72-4964-8981-57b7325707c0
+              stepCounter: bee1300e-1db1-458f-8d5a-d1ccac6f7543
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Timestamp of last update
+            name: LAST_UPDATED_DATE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('COVID19', 'SCS_BE_DETAILED_PROVINCE_CASE_COUNTS') }}
+      name: SCS_BE_DETAILED_PROVINCE_CASE_COUNTS
+      schema: ""
+      sqlType: Source
+      table: SCS_BE_DETAILED_PROVINCE_CASE_COUNTS
+      type: sourceInput
+    stepCounter: bee1300e-1db1-458f-8d5a-d1ccac6f7543

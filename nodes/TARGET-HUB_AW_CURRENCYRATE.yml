@@ -1,0 +1,91 @@
+steps:
+  HUB_AW_CURRENCYRATE-cbd44b0c-edff-4d68-af7c-29c733863c35:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 70c85277-1b90-4fe3-b35e-d119fee6c261
+              stepCounter: cbd44b0c-edff-4d68-af7c-29c733863c35
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_CURRENCYRATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b68cf212-5589-4af5-a852-2f42cdc4f059
+                    stepCounter: f630f3e0-9df6-4f6b-8740-7fe4f4f23cd2
+                transform: ""
+          - columnReference:
+              columnCounter: 2277472c-3918-44ef-9cf0-df244cee5722
+              stepCounter: cbd44b0c-edff-4d68-af7c-29c733863c35
+            dataType: NUMBER(38,0)
+            description: Primary key for CurrencyRate records.
+            hashColumns: []
+            hashDetails: null
+            name: CURRENCYRATEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2db114a9-a079-4a18-8b73-9a0d18e70cb8
+                    stepCounter: f630f3e0-9df6-4f6b-8740-7fe4f4f23cd2
+                transform: ""
+          - columnReference:
+              columnCounter: a5b6b1f4-6179-4b9c-8e0d-98e84035da8a
+              stepCounter: cbd44b0c-edff-4d68-af7c-29c733863c35
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d4b1476d-947a-4230-926c-b368a3467f90
+                    stepCounter: f630f3e0-9df6-4f6b-8740-7fe4f4f23cd2
+                transform: ""
+          - columnReference:
+              columnCounter: 31d7187a-8de3-4461-ac2f-24d00473f91f
+              stepCounter: cbd44b0c-edff-4d68-af7c-29c733863c35
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e1116064-5453-4f0b-b3ca-d913c26bd886
+                    stepCounter: f630f3e0-9df6-4f6b-8740-7fe4f4f23cd2
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_CURRENCYRATE
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_CURRENCYRATE') }} "DVSTG_AW_CURRENCYRATE"
+            name: HUB_AW_CURRENCYRATE
+            noLinkRefs: []
+      name: HUB_AW_CURRENCYRATE
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: cbd44b0c-edff-4d68-af7c-29c733863c35

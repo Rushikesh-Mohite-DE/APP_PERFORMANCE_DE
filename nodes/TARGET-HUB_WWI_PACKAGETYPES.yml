@@ -1,0 +1,91 @@
+steps:
+  HUB_WWI_PACKAGETYPES-e8ec595f-34e3-4abc-b053-5dcc32e23460:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 12f64f32-d9a7-4521-b0ba-eebc81fe4b06
+              stepCounter: e8ec595f-34e3-4abc-b053-5dcc32e23460
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_PACKAGETYPES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fbd3a10c-978b-41c0-8aeb-d40b4bbb5dc7
+                    stepCounter: 9b4aeb2f-66cc-4829-b881-c12c8739f2b8
+                transform: ""
+          - columnReference:
+              columnCounter: a24dad2d-9685-4d24-b202-1da6c29cd974
+              stepCounter: e8ec595f-34e3-4abc-b053-5dcc32e23460
+            dataType: NUMBER(38,0)
+            description: Numeric ID used for reference to a package type within the database
+            hashColumns: []
+            hashDetails: null
+            name: PACKAGETYPEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 04d88d83-d10d-43e4-b848-acd2a40f8499
+                    stepCounter: 9b4aeb2f-66cc-4829-b881-c12c8739f2b8
+                transform: ""
+          - columnReference:
+              columnCounter: 78bbaf3f-d559-47cb-b996-dd2d15fa64c0
+              stepCounter: e8ec595f-34e3-4abc-b053-5dcc32e23460
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c7e236c9-5a81-4d6b-a99d-a50007ecebbf
+                    stepCounter: 9b4aeb2f-66cc-4829-b881-c12c8739f2b8
+                transform: ""
+          - columnReference:
+              columnCounter: 4ae870f6-082d-4d9b-805c-88a1a51bd999
+              stepCounter: e8ec595f-34e3-4abc-b053-5dcc32e23460
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 645ba33e-c419-496d-9ae8-ebfd3c4130a3
+                    stepCounter: 9b4aeb2f-66cc-4829-b881-c12c8739f2b8
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_WWI_PACKAGETYPES
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_WWI_PACKAGETYPES') }} "DVSTG_WWI_PACKAGETYPES"
+            name: HUB_WWI_PACKAGETYPES
+            noLinkRefs: []
+      name: HUB_WWI_PACKAGETYPES
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: e8ec595f-34e3-4abc-b053-5dcc32e23460

@@ -1,0 +1,124 @@
+steps:
+  AW_LOAD_PRODUCTINVENTORY-d453065b-91f6-4257-aa0b-3d3ecb68c3ba:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: ADV_WRKS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 184c70e3-815d-41d5-af36-b6832046513d
+              stepCounter: d453065b-91f6-4257-aa0b-3d3ecb68c3ba
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Product identification number. Foreign key to Product.ProductID.
+            name: PRODUCTID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 88c88554-bda3-4f04-991c-62abd532c4ac
+              stepCounter: d453065b-91f6-4257-aa0b-3d3ecb68c3ba
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Inventory location identification number. Foreign key to Location.LocationID.
+            name: LOCATIONID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4bb22d7e-1cf5-4677-9247-59626d991382
+              stepCounter: d453065b-91f6-4257-aa0b-3d3ecb68c3ba
+            config: {}
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: Storage compartment within an inventory location.
+            name: SHELF
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5e2dcb77-c629-4394-832f-f14851551d86
+              stepCounter: d453065b-91f6-4257-aa0b-3d3ecb68c3ba
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Storage container on a shelf in an inventory location.
+            name: BIN
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d6ca1c85-ba5f-4143-9791-9ecc10c667d1
+              stepCounter: d453065b-91f6-4257-aa0b-3d3ecb68c3ba
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Quantity of products in the inventory location.
+            name: QUANTITY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 853ccdd9-5892-4156-8a59-8a6b42829af7
+              stepCounter: d453065b-91f6-4257-aa0b-3d3ecb68c3ba
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            name: ROWGUID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 03537f9d-8ad2-49aa-b405-6a0da1bbbeba
+              stepCounter: d453065b-91f6-4257-aa0b-3d3ecb68c3ba
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_PRODUCTINVENTORY') }}
+      name: AW_LOAD_PRODUCTINVENTORY
+      schema: ""
+      sqlType: Source
+      table: AW_LOAD_PRODUCTINVENTORY
+      type: sourceInput
+    stepCounter: d453065b-91f6-4257-aa0b-3d3ecb68c3ba

@@ -1,0 +1,49 @@
+steps:
+  SPORTS_LOAD_KEY_ROOTS-eccd3808-143b-4f14-9e2c-fd16c87080ee:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SPORTS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8f8730ba-8238-4269-9b0d-da14f17e89cf
+              stepCounter: eccd3808-143b-4f14-9e2c-fd16c87080ee
+            config: {}
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            name: ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: de32262b-f068-4803-93ea-392dc59ca24a
+              stepCounter: eccd3808-143b-4f14-9e2c-fd16c87080ee
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: KEY_TYPE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SPORTS_SRC', 'SPORTS_LOAD_KEY_ROOTS') }}
+      name: SPORTS_LOAD_KEY_ROOTS
+      schema: ""
+      sqlType: Source
+      table: SPORTS_LOAD_KEY_ROOTS
+      type: sourceInput
+    stepCounter: eccd3808-143b-4f14-9e2c-fd16c87080ee

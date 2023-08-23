@@ -1,0 +1,105 @@
+steps:
+  HUB_AW_PRODUCTINVENTORY-1c6b4de0-db35-449c-a387-4c34364b7bf0:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 11950cd7-2b82-4407-93b7-3283b03b3039
+              stepCounter: 1c6b4de0-db35-449c-a387-4c34364b7bf0
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_PRODUCTINVENTORY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a3adc1fa-c653-4fca-a48b-8c9bc7a2c35f
+                    stepCounter: 10d3878b-be72-4090-ae6c-7f353758de04
+                transform: ""
+          - columnReference:
+              columnCounter: 4c36ac80-e1a8-40de-8248-697682b18c9d
+              stepCounter: 1c6b4de0-db35-449c-a387-4c34364b7bf0
+            dataType: NUMBER(38,0)
+            description: Product identification number. Foreign key to Product.ProductID.
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCTID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 799a93fa-8194-4a5f-ab8e-ce8b600900d2
+                    stepCounter: 10d3878b-be72-4090-ae6c-7f353758de04
+                transform: ""
+          - columnReference:
+              columnCounter: cf35be4a-9647-4205-b104-6e82eb4b6d7f
+              stepCounter: 1c6b4de0-db35-449c-a387-4c34364b7bf0
+            dataType: NUMBER(38,0)
+            description: Inventory location identification number. Foreign key to Location.LocationID.
+            hashColumns: []
+            hashDetails: null
+            name: LOCATIONID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9a0e3c19-5827-4d88-a696-139e0bfdbfd7
+                    stepCounter: 10d3878b-be72-4090-ae6c-7f353758de04
+                transform: ""
+          - columnReference:
+              columnCounter: 63a34624-bed8-4b3e-bfa5-26e27adf1329
+              stepCounter: 1c6b4de0-db35-449c-a387-4c34364b7bf0
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 57a71ced-5dd6-418e-8b3a-0679c493b123
+                    stepCounter: 10d3878b-be72-4090-ae6c-7f353758de04
+                transform: ""
+          - columnReference:
+              columnCounter: d91d8322-7bf4-489c-b332-e8f5b250acac
+              stepCounter: 1c6b4de0-db35-449c-a387-4c34364b7bf0
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 109288ac-1e20-4a3d-b9e3-f5c0ea6a4fce
+                    stepCounter: 10d3878b-be72-4090-ae6c-7f353758de04
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_PRODUCTINVENTORY
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_PRODUCTINVENTORY') }} "DVSTG_AW_PRODUCTINVENTORY"
+            name: HUB_AW_PRODUCTINVENTORY
+            noLinkRefs: []
+      name: HUB_AW_PRODUCTINVENTORY
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 1c6b4de0-db35-449c-a387-4c34364b7bf0

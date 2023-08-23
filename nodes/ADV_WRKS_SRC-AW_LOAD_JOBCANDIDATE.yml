@@ -1,0 +1,79 @@
+steps:
+  AW_LOAD_JOBCANDIDATE-27d5ba09-cf4f-4ea2-886c-da3c3385a59b:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: ADV_WRKS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: bc4a6a05-f68f-4284-b77e-55ff6a07dffd
+              stepCounter: 27d5ba09-cf4f-4ea2-886c-da3c3385a59b
+            config: {}
+            dataType: VARCHAR(50)
+            defaultValue: ""
+            description: Primary key for JobCandidate records.
+            name: JOBCANDIDATEID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: cec10bd4-d30e-4f76-8006-3697c2d50272
+              stepCounter: 27d5ba09-cf4f-4ea2-886c-da3c3385a59b
+            config: {}
+            dataType: VARCHAR(50)
+            defaultValue: ""
+            description: Employee identification number if applicant was hired. Foreign key to Employee.BusinessEntityID.
+            name: BUSINESSENTITYID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e7222fba-f2fc-447d-ae72-ad253006351b
+              stepCounter: 27d5ba09-cf4f-4ea2-886c-da3c3385a59b
+            config: {}
+            dataType: VARCHAR(500000)
+            defaultValue: ""
+            description: Résumé in XML format.
+            name: RESUME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 52ca7d5b-e61b-4d17-ac2a-3c09aa0fcb92
+              stepCounter: 27d5ba09-cf4f-4ea2-886c-da3c3385a59b
+            config: {}
+            dataType: VARCHAR(50)
+            defaultValue: ""
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_JOBCANDIDATE') }}
+      name: AW_LOAD_JOBCANDIDATE
+      schema: ""
+      sqlType: Source
+      table: AW_LOAD_JOBCANDIDATE
+      type: sourceInput
+    stepCounter: 27d5ba09-cf4f-4ea2-886c-da3c3385a59b

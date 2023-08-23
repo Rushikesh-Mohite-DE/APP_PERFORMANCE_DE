@@ -1,0 +1,91 @@
+steps:
+  HUB_WWI_CUSTOMERCATEGORIES-f58ce7db-46f6-4961-8ce3-1f909466d642:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 9fb9507a-7937-445f-b520-88330371917d
+              stepCounter: f58ce7db-46f6-4961-8ce3-1f909466d642
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_CUSTOMERCATEGORIES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e8d6b96f-b20c-4dec-8290-3bc16e8e7862
+                    stepCounter: b7c0aace-f1fd-4226-bb1d-16c086cc848b
+                transform: ""
+          - columnReference:
+              columnCounter: d3195772-70f2-416a-aa9d-a43849c06ec2
+              stepCounter: f58ce7db-46f6-4961-8ce3-1f909466d642
+            dataType: NUMBER(38,0)
+            description: Numeric ID used for reference to a customer category within the database
+            hashColumns: []
+            hashDetails: null
+            name: CUSTOMERCATEGORYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b36fa196-59a7-46cc-9bf8-f92e8162515c
+                    stepCounter: b7c0aace-f1fd-4226-bb1d-16c086cc848b
+                transform: ""
+          - columnReference:
+              columnCounter: 00f844e2-8d12-4072-85d2-cc5fda290c79
+              stepCounter: f58ce7db-46f6-4961-8ce3-1f909466d642
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 96aa25ab-87b7-4acd-b282-a79c432e6f99
+                    stepCounter: b7c0aace-f1fd-4226-bb1d-16c086cc848b
+                transform: ""
+          - columnReference:
+              columnCounter: b00c7e90-a026-4759-a3d9-c244fa9ae710
+              stepCounter: f58ce7db-46f6-4961-8ce3-1f909466d642
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 38bb7c26-c9bd-4345-80de-90d43af51582
+                    stepCounter: b7c0aace-f1fd-4226-bb1d-16c086cc848b
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_WWI_CUSTOMERCATEGORIES
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_WWI_CUSTOMERCATEGORIES') }} "DVSTG_WWI_CUSTOMERCATEGORIES"
+            name: HUB_WWI_CUSTOMERCATEGORIES
+            noLinkRefs: []
+      name: HUB_WWI_CUSTOMERCATEGORIES
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: f58ce7db-46f6-4961-8ce3-1f909466d642

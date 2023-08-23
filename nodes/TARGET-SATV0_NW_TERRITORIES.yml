@@ -1,0 +1,107 @@
+steps:
+  SATV0_NW_TERRITORIES-036131d8-a161-4d82-86a2-2b7475071461:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 061c9539-287d-4eee-a356-16e2806a3637
+              stepCounter: 036131d8-a161-4d82-86a2-2b7475071461
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_NW_TERRITORIES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8769132b-2c5c-4fca-9dec-debdd6249ca5
+                    stepCounter: ecedd8a8-de99-4578-b6ca-9bf10a8fa407
+                transform: ""
+          - columnReference:
+              columnCounter: bfb8ec47-aba2-429d-81fa-22d63281675b
+              stepCounter: 036131d8-a161-4d82-86a2-2b7475071461
+            dataType: VARCHAR(50)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: TERRITORYDESCRIPTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 229926f5-a0b0-47a8-a078-0b9dbf530636
+                    stepCounter: ecedd8a8-de99-4578-b6ca-9bf10a8fa407
+                transform: ""
+          - columnReference:
+              columnCounter: 7b87c2b9-5600-429a-978f-65848fab470f
+              stepCounter: 036131d8-a161-4d82-86a2-2b7475071461
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4c84c6ef-12a1-42d6-bd60-a7d0fda5d83d
+                    stepCounter: ecedd8a8-de99-4578-b6ca-9bf10a8fa407
+                transform: ""
+          - columnReference:
+              columnCounter: 8dd4c389-afc2-471a-9420-c030a64c2abe
+              stepCounter: 036131d8-a161-4d82-86a2-2b7475071461
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9ea263d3-281f-4067-b84e-5161b1746830
+                    stepCounter: ecedd8a8-de99-4578-b6ca-9bf10a8fa407
+                transform: ""
+          - columnReference:
+              columnCounter: f66ec566-3674-47cf-81b7-366fd2f88c3b
+              stepCounter: 036131d8-a161-4d82-86a2-2b7475071461
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 812eb59d-d8a9-4ad8-8834-ece4093476eb
+                    stepCounter: ecedd8a8-de99-4578-b6ca-9bf10a8fa407
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_NW_TERRITORIES
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_NW_TERRITORIES') }} "DVSTG_NW_TERRITORIES"
+            name: SATV0_NW_TERRITORIES
+            noLinkRefs: []
+      name: SATV0_NW_TERRITORIES
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: 036131d8-a161-4d82-86a2-2b7475071461

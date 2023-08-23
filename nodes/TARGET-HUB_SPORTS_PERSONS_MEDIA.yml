@@ -1,0 +1,91 @@
+steps:
+  HUB_SPORTS_PERSONS_MEDIA-682ba8e9-f5b2-438f-9ea6-e237d8df1005:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: d0efc271-8010-4de8-a729-32b6c33c4b73
+              stepCounter: 682ba8e9-f5b2-438f-9ea6-e237d8df1005
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_MEDIA
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 702e2593-fdd1-42eb-a1e4-0298b42a579b
+                    stepCounter: c08357ff-7d32-40b2-a259-295d7db79ee6
+                transform: ""
+          - columnReference:
+              columnCounter: e19bc5fd-8d61-4dc8-b37d-79f7c19402c3
+              stepCounter: 682ba8e9-f5b2-438f-9ea6-e237d8df1005
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: MEDIA_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d3b5f94e-944b-4ad5-b3f1-3b186dfee901
+                    stepCounter: c08357ff-7d32-40b2-a259-295d7db79ee6
+                transform: ""
+          - columnReference:
+              columnCounter: bffb9c7f-2efe-4feb-8ddd-5f966f0f93bf
+              stepCounter: 682ba8e9-f5b2-438f-9ea6-e237d8df1005
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a2d03424-8955-48cc-b228-0ecac35436a3
+                    stepCounter: c08357ff-7d32-40b2-a259-295d7db79ee6
+                transform: ""
+          - columnReference:
+              columnCounter: 40636cf9-30c8-4f94-accc-5b07b88123da
+              stepCounter: 682ba8e9-f5b2-438f-9ea6-e237d8df1005
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4462e631-cdc9-4599-abaa-c29a4302bb2a
+                    stepCounter: c08357ff-7d32-40b2-a259-295d7db79ee6
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SPORTS_PERSONS_MEDIA
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SPORTS_PERSONS_MEDIA') }} "DVSTG_SPORTS_PERSONS_MEDIA"
+            name: HUB_SPORTS_PERSONS_MEDIA
+            noLinkRefs: []
+      name: HUB_SPORTS_PERSONS_MEDIA
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 682ba8e9-f5b2-438f-9ea6-e237d8df1005

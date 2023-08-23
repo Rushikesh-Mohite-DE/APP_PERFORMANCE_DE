@@ -1,0 +1,154 @@
+steps:
+  AW_LOAD_BILLOFMATERIALS-86a5e84a-b4e4-4b29-b56d-2a852f3d7583:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: ADV_WRKS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 631035fb-b0a8-4e3a-9a73-5b5634cee357
+              stepCounter: 86a5e84a-b4e4-4b29-b56d-2a852f3d7583
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Primary key for BillOfMaterials records.
+            name: BILLOFMATERIALSID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7263b313-8a69-41fb-ad98-18366ac2cccd
+              stepCounter: 86a5e84a-b4e4-4b29-b56d-2a852f3d7583
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: Parent product identification number. Foreign key to Product.ProductID.
+            name: PRODUCTASSEMBLYID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 331f2434-6c6a-4a2f-9c1a-14a80ed17080
+              stepCounter: 86a5e84a-b4e4-4b29-b56d-2a852f3d7583
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Component identification number. Foreign key to Product.ProductID.
+            name: COMPONENTID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 01017ea4-8ab3-4c0a-bc5f-bfd158ee440b
+              stepCounter: 86a5e84a-b4e4-4b29-b56d-2a852f3d7583
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date the component started being used in the assembly item.
+            name: STARTDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 04d1bd15-fdc3-4e6b-9485-5d1446f6bc23
+              stepCounter: 86a5e84a-b4e4-4b29-b56d-2a852f3d7583
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: Date the component stopped being used in the assembly item.
+            name: ENDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 44b670b3-c871-4e34-9215-e1a96ac3efb8
+              stepCounter: 86a5e84a-b4e4-4b29-b56d-2a852f3d7583
+            config: {}
+            dataType: VARCHAR(3)
+            defaultValue: ""
+            description: Standard code identifying the unit of measure for the quantity.
+            name: UNITMEASURECODE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8fae2b78-f0cc-46ed-a8b3-040769c69a2d
+              stepCounter: 86a5e84a-b4e4-4b29-b56d-2a852f3d7583
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Indicates the depth the component is from its parent (AssemblyID).
+            name: BOMLEVEL
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 67e0b7dd-69e8-47fd-a41e-4704397e0a2f
+              stepCounter: 86a5e84a-b4e4-4b29-b56d-2a852f3d7583
+            config: {}
+            dataType: NUMBER(8,2)
+            defaultValue: ""
+            description: Quantity of the component needed to create the assembly.
+            name: PERASSEMBLYQTY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7fc04503-45fd-4346-949c-90c6ce663cc1
+              stepCounter: 86a5e84a-b4e4-4b29-b56d-2a852f3d7583
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_BILLOFMATERIALS') }}
+      name: AW_LOAD_BILLOFMATERIALS
+      schema: ""
+      sqlType: Source
+      table: AW_LOAD_BILLOFMATERIALS
+      type: sourceInput
+    stepCounter: 86a5e84a-b4e4-4b29-b56d-2a852f3d7583

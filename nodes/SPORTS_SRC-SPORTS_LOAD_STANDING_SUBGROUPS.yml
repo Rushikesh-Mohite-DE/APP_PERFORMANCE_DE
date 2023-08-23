@@ -1,0 +1,64 @@
+steps:
+  SPORTS_LOAD_STANDING_SUBGROUPS-fd3d984c-beb1-443b-b4ee-9b625dac5dd9:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SPORTS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 31683d5e-32b0-40a9-9e17-2ed3e8b55af2
+              stepCounter: fd3d984c-beb1-443b-b4ee-9b625dac5dd9
+            config: {}
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            name: ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: da060ed3-7e15-48b7-9daa-ec1eb73ba1b0
+              stepCounter: fd3d984c-beb1-443b-b4ee-9b625dac5dd9
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: STANDING_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2ad645b9-9e9a-4b66-915a-4c2c89004047
+              stepCounter: fd3d984c-beb1-443b-b4ee-9b625dac5dd9
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: AFFILIATION_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SPORTS_SRC', 'SPORTS_LOAD_STANDING_SUBGROUPS') }}
+      name: SPORTS_LOAD_STANDING_SUBGROUPS
+      schema: ""
+      sqlType: Source
+      table: SPORTS_LOAD_STANDING_SUBGROUPS
+      type: sourceInput
+    stepCounter: fd3d984c-beb1-443b-b4ee-9b625dac5dd9

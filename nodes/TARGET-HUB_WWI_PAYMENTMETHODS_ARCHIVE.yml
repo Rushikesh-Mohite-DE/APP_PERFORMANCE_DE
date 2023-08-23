@@ -1,0 +1,91 @@
+steps:
+  HUB_WWI_PAYMENTMETHODS_ARCHIVE-f06ef21c-2573-44b8-80b5-274f63d2c588:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 37a4227a-a21e-4d7f-b936-2302c940ad1a
+              stepCounter: f06ef21c-2573-44b8-80b5-274f63d2c588
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_PAYMENTMETHODS_ARCHIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2ce1f846-21e5-444e-9f61-b29df0710889
+                    stepCounter: 1af50b69-6c99-4ecd-a1ec-899b9a4b43f7
+                transform: ""
+          - columnReference:
+              columnCounter: d8d47900-3404-4558-a184-4b07496a2646
+              stepCounter: f06ef21c-2573-44b8-80b5-274f63d2c588
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PAYMENTMETHODID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 599ea6dc-4808-4a23-9e13-b09965cb602a
+                    stepCounter: 1af50b69-6c99-4ecd-a1ec-899b9a4b43f7
+                transform: ""
+          - columnReference:
+              columnCounter: 915d2ec7-8942-4e11-841d-0e366290957b
+              stepCounter: f06ef21c-2573-44b8-80b5-274f63d2c588
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3a5c5c05-556c-4f1b-aa70-e56034c40347
+                    stepCounter: 1af50b69-6c99-4ecd-a1ec-899b9a4b43f7
+                transform: ""
+          - columnReference:
+              columnCounter: 9a9479b8-8be4-422c-a70d-a771d4b926bd
+              stepCounter: f06ef21c-2573-44b8-80b5-274f63d2c588
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5505dabd-ad60-4f44-9b88-c0f70bb8b840
+                    stepCounter: 1af50b69-6c99-4ecd-a1ec-899b9a4b43f7
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_WWI_PAYMENTMETHODS_ARCHIVE
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_WWI_PAYMENTMETHODS_ARCHIVE') }} "DVSTG_WWI_PAYMENTMETHODS_ARCHIVE"
+            name: HUB_WWI_PAYMENTMETHODS_ARCHIVE
+            noLinkRefs: []
+      name: HUB_WWI_PAYMENTMETHODS_ARCHIVE
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: f06ef21c-2573-44b8-80b5-274f63d2c588

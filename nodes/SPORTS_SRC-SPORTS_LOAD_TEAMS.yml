@@ -1,0 +1,79 @@
+steps:
+  SPORTS_LOAD_TEAMS-51be0661-41d1-48d5-b852-d2f9b1cad025:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SPORTS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 289571bb-c6ce-4eb8-a3ce-05584b899e4a
+              stepCounter: 51be0661-41d1-48d5-b852-d2f9b1cad025
+            config: {}
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            name: ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 62339b72-306b-45e4-9939-5515de52ff56
+              stepCounter: 51be0661-41d1-48d5-b852-d2f9b1cad025
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: TEAM_KEY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ae71651c-bd82-40d1-a152-6a237b260152
+              stepCounter: 51be0661-41d1-48d5-b852-d2f9b1cad025
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: PUBLISHER_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 69d9fb27-528d-4f92-a1af-4643a888241e
+              stepCounter: 51be0661-41d1-48d5-b852-d2f9b1cad025
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: HOME_SITE_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SPORTS_SRC', 'SPORTS_LOAD_TEAMS') }}
+      name: SPORTS_LOAD_TEAMS
+      schema: ""
+      sqlType: Source
+      table: SPORTS_LOAD_TEAMS
+      type: sourceInput
+    stepCounter: 51be0661-41d1-48d5-b852-d2f9b1cad025

@@ -1,0 +1,149 @@
+steps:
+  SATV0_SPORTS_MEDIA_CAPTIONS-759ba677-8ec6-4ba9-a85d-32d563b76fb1:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 125f0202-cfca-4776-9f6e-4a5278c360b1
+              stepCounter: 759ba677-8ec6-4ba9-a85d-32d563b76fb1
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_CAPTIONS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: eb3dc99e-0303-4803-ac65-61334d506561
+                    stepCounter: 7325f932-98b9-423a-ad8b-5d8300229407
+                transform: ""
+          - columnReference:
+              columnCounter: e0aad386-73c3-4eec-83cc-d0b022da4327
+              stepCounter: 759ba677-8ec6-4ba9-a85d-32d563b76fb1
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CAPTION_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1608b2c8-a75a-480e-8d7e-064ee779127d
+                    stepCounter: 7325f932-98b9-423a-ad8b-5d8300229407
+                transform: ""
+          - columnReference:
+              columnCounter: 70f36d4a-faf8-449a-b0cb-a256db2d8d26
+              stepCounter: 759ba677-8ec6-4ba9-a85d-32d563b76fb1
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CAPTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2ee4bcac-ece1-4c57-9e53-fdb6f4072b1e
+                    stepCounter: 7325f932-98b9-423a-ad8b-5d8300229407
+                transform: ""
+          - columnReference:
+              columnCounter: 24759cc9-ee86-4bd1-a043-d5a5ecb88ea1
+              stepCounter: 759ba677-8ec6-4ba9-a85d-32d563b76fb1
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: language
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f140b3fb-ac25-473e-aad0-54a7916f21c8
+                    stepCounter: 7325f932-98b9-423a-ad8b-5d8300229407
+                transform: ""
+          - columnReference:
+              columnCounter: 5612434f-9f6a-4a48-a0e9-f927f086a69c
+              stepCounter: 759ba677-8ec6-4ba9-a85d-32d563b76fb1
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CAPTION_SIZE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ea57a818-504b-4185-962b-c7df072fbcf1
+                    stepCounter: 7325f932-98b9-423a-ad8b-5d8300229407
+                transform: ""
+          - columnReference:
+              columnCounter: 332df06b-0cef-421a-8386-5ba5a3f11b21
+              stepCounter: 759ba677-8ec6-4ba9-a85d-32d563b76fb1
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8cedd89d-1fc9-4f0d-8f4f-47bf17f3f703
+                    stepCounter: 7325f932-98b9-423a-ad8b-5d8300229407
+                transform: ""
+          - columnReference:
+              columnCounter: 4b051bf4-cb45-453a-9e59-fb314014cc34
+              stepCounter: 759ba677-8ec6-4ba9-a85d-32d563b76fb1
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1aa26948-5a44-4a02-ae07-fa67193d23ec
+                    stepCounter: 7325f932-98b9-423a-ad8b-5d8300229407
+                transform: ""
+          - columnReference:
+              columnCounter: af5c0f7c-83c3-4bba-972b-4040f7afd59b
+              stepCounter: 759ba677-8ec6-4ba9-a85d-32d563b76fb1
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8978054c-bac3-49ae-ad8d-d3d1843ff45c
+                    stepCounter: 7325f932-98b9-423a-ad8b-5d8300229407
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SPORTS_MEDIA_CAPTIONS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SPORTS_MEDIA_CAPTIONS') }} "DVSTG_SPORTS_MEDIA_CAPTIONS"
+            name: SATV0_SPORTS_MEDIA_CAPTIONS
+            noLinkRefs: []
+      name: SATV0_SPORTS_MEDIA_CAPTIONS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: 759ba677-8ec6-4ba9-a85d-32d563b76fb1

@@ -1,0 +1,181 @@
+steps:
+  DVSTG_AW_ADDRESSTYPE-12220650-d6b6-4063-885e-da849e366272:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4ef6beb8-7609-4a7f-88ba-e13d8377b088
+              stepCounter: 12220650-d6b6-4063-885e-da849e366272
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 393f7bba-3e35-463d-a9df-07c73459a78c
+                stepCounter: 12220650-d6b6-4063-885e-da849e366272
+            name: HK_ADDRESSTYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 393f7bba-3e35-463d-a9df-07c73459a78c
+              stepCounter: 12220650-d6b6-4063-885e-da849e366272
+            dataType: NUMBER(38,0)
+            description: Primary key for AddressType records.
+            name: ADDRESSTYPEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 24b91aa8-a4f4-47e1-99e2-d525f93b2320
+                    stepCounter: 7390ac2f-563d-40e9-84c3-e4287a81233c
+                transform: ""
+          - columnReference:
+              columnCounter: 1dc1c6ee-4215-4110-9dd7-61214f6db924
+              stepCounter: 12220650-d6b6-4063-885e-da849e366272
+            dataType: VARCHAR(16777216)
+            description: Address type description. For example, Billing, Home, or Shipping.
+            name: NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ed5bf9eb-8855-455c-991c-29c16af8e0d4
+                    stepCounter: 7390ac2f-563d-40e9-84c3-e4287a81233c
+                transform: ""
+          - columnReference:
+              columnCounter: 92aa2db0-d493-4b9d-9fcf-98f5d8ed9e42
+              stepCounter: 12220650-d6b6-4063-885e-da849e366272
+            dataType: VARCHAR(16777216)
+            description: ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            name: ROWGUID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0c7498f6-669a-45b1-8384-535b1b67f6d9
+                    stepCounter: 7390ac2f-563d-40e9-84c3-e4287a81233c
+                transform: ""
+          - columnReference:
+              columnCounter: f5f2199b-1810-4923-8202-2eb08b46b710
+              stepCounter: 12220650-d6b6-4063-885e-da849e366272
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 06b41d5d-3530-4a9c-8cd9-f6302c185773
+                    stepCounter: 7390ac2f-563d-40e9-84c3-e4287a81233c
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0a9bba83-5572-412f-b9ea-c3245478d872
+              stepCounter: 12220650-d6b6-4063-885e-da849e366272
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c974c9fa-be46-4829-948f-5b0c90cd138d
+              stepCounter: 12220650-d6b6-4063-885e-da849e366272
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: bf2524ab-9df0-456f-84e8-4d8a2d8391e0
+              stepCounter: 12220650-d6b6-4063-885e-da849e366272
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 1dc1c6ee-4215-4110-9dd7-61214f6db924
+                stepCounter: 12220650-d6b6-4063-885e-da849e366272
+              - columnCounter: 92aa2db0-d493-4b9d-9fcf-98f5d8ed9e42
+                stepCounter: 12220650-d6b6-4063-885e-da849e366272
+              - columnCounter: f5f2199b-1810-4923-8202-2eb08b46b710
+                stepCounter: 12220650-d6b6-4063-885e-da849e366272
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 731929f1-cd53-4289-8c8c-6d68b00ece1c
+              stepCounter: 12220650-d6b6-4063-885e-da849e366272
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 92aa2db0-d493-4b9d-9fcf-98f5d8ed9e42
+                stepCounter: 12220650-d6b6-4063-885e-da849e366272
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: ADV_WRKS_SRC
+                nodeName: AW_LOAD_ADDRESSTYPE
+            join:
+              joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_ADDRESSTYPE') }} "AW_LOAD_ADDRESSTYPE"
+            name: DVSTG_AW_ADDRESSTYPE
+            noLinkRefs: []
+      name: DVSTG_AW_ADDRESSTYPE
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: 12220650-d6b6-4063-885e-da849e366272

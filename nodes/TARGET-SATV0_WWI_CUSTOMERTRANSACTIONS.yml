@@ -1,0 +1,219 @@
+steps:
+  SATV0_WWI_CUSTOMERTRANSACTIONS-9c1b38c1-9260-4c1f-991d-3fa1ce86e996:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: b26432ba-1481-4c96-a5b2-ef8a75f5fb9f
+              stepCounter: 9c1b38c1-9260-4c1f-991d-3fa1ce86e996
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_CUSTOMERTRANSACTIONS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 44da329e-6d3e-48d4-9a5d-e415acdff37a
+                    stepCounter: 683bf3cc-b7fd-427d-a485-bef75af11589
+                transform: ""
+          - columnReference:
+              columnCounter: fac33023-49b5-4be0-b243-da214546b987
+              stepCounter: 9c1b38c1-9260-4c1f-991d-3fa1ce86e996
+            dataType: DATE
+            description: Date for the transaction
+            hashColumns: []
+            hashDetails: null
+            name: TRANSACTIONDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 557db682-84df-499d-9ed4-20ea60e0b4f5
+                    stepCounter: 683bf3cc-b7fd-427d-a485-bef75af11589
+                transform: ""
+          - columnReference:
+              columnCounter: 1d44b737-d355-4493-9c17-7a8bf30fb4d9
+              stepCounter: 9c1b38c1-9260-4c1f-991d-3fa1ce86e996
+            dataType: NUMBER(18,2)
+            description: Transaction amount (excluding tax)
+            hashColumns: []
+            hashDetails: null
+            name: AMOUNTEXCLUDINGTAX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7be771f5-ea18-403e-a4b7-c621b609218b
+                    stepCounter: 683bf3cc-b7fd-427d-a485-bef75af11589
+                transform: ""
+          - columnReference:
+              columnCounter: a2cc8e5e-6152-414c-80ce-72ed82f2e5dc
+              stepCounter: 9c1b38c1-9260-4c1f-991d-3fa1ce86e996
+            dataType: NUMBER(18,2)
+            description: Tax amount calculated
+            hashColumns: []
+            hashDetails: null
+            name: TAXAMOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1032bc49-8eef-408c-9f6f-0ba379debc1f
+                    stepCounter: 683bf3cc-b7fd-427d-a485-bef75af11589
+                transform: ""
+          - columnReference:
+              columnCounter: d48c7e8c-0477-4eea-9859-c9a6dfaac09c
+              stepCounter: 9c1b38c1-9260-4c1f-991d-3fa1ce86e996
+            dataType: NUMBER(18,2)
+            description: Transaction amount (including tax)
+            hashColumns: []
+            hashDetails: null
+            name: TRANSACTIONAMOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 30801f12-25df-42de-8157-e343324bb2ed
+                    stepCounter: 683bf3cc-b7fd-427d-a485-bef75af11589
+                transform: ""
+          - columnReference:
+              columnCounter: 9e9d2bd4-02d7-4b59-a821-e71a3a25ee8f
+              stepCounter: 9c1b38c1-9260-4c1f-991d-3fa1ce86e996
+            dataType: NUMBER(18,2)
+            description: Amount still outstanding for this transaction
+            hashColumns: []
+            hashDetails: null
+            name: OUTSTANDINGBALANCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0374560b-bcf6-4975-9087-d79e67c7be3a
+                    stepCounter: 683bf3cc-b7fd-427d-a485-bef75af11589
+                transform: ""
+          - columnReference:
+              columnCounter: ca4bdefb-8fc5-4469-abef-79eef51af612
+              stepCounter: 9c1b38c1-9260-4c1f-991d-3fa1ce86e996
+            dataType: VARCHAR(16777216)
+            description: Date that this transaction was finalized (if it has been)
+            hashColumns: []
+            hashDetails: null
+            name: FINALIZATIONDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4b2b87e1-f2b1-43c3-bab0-aafd2731c3ab
+                    stepCounter: 683bf3cc-b7fd-427d-a485-bef75af11589
+                transform: ""
+          - columnReference:
+              columnCounter: ee00cc73-964d-4dfa-b9b6-115b3e6d957e
+              stepCounter: 9c1b38c1-9260-4c1f-991d-3fa1ce86e996
+            dataType: VARCHAR(20)
+            description: Is this transaction finalized (invoices, credits and payments have been matched)
+            hashColumns: []
+            hashDetails: null
+            name: ISFINALIZED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a3458068-8414-4f4e-a0eb-295b6e90c8a6
+                    stepCounter: 683bf3cc-b7fd-427d-a485-bef75af11589
+                transform: ""
+          - columnReference:
+              columnCounter: 6206534d-e849-4b9f-baaf-0065a46467e3
+              stepCounter: 9c1b38c1-9260-4c1f-991d-3fa1ce86e996
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LASTEDITEDBY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 72ca3222-5739-416a-9fdf-0102d5b3974f
+                    stepCounter: 683bf3cc-b7fd-427d-a485-bef75af11589
+                transform: ""
+          - columnReference:
+              columnCounter: b948879b-7359-4488-a030-1ffdcecb33a8
+              stepCounter: 9c1b38c1-9260-4c1f-991d-3fa1ce86e996
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LASTEDITEDWHEN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 81b2f520-f9f6-4b9f-a1dc-e2fa650e220a
+                    stepCounter: 683bf3cc-b7fd-427d-a485-bef75af11589
+                transform: ""
+          - columnReference:
+              columnCounter: fbca36ef-38f4-4553-a1ef-1777a8f634fd
+              stepCounter: 9c1b38c1-9260-4c1f-991d-3fa1ce86e996
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e797f06d-13de-400e-a289-e6c974c30a35
+                    stepCounter: 683bf3cc-b7fd-427d-a485-bef75af11589
+                transform: ""
+          - columnReference:
+              columnCounter: cf5f59f1-5d0b-4797-9748-3d3949e4534b
+              stepCounter: 9c1b38c1-9260-4c1f-991d-3fa1ce86e996
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8d6511b3-dc6d-4b60-9cdf-0c2904cb0fbf
+                    stepCounter: 683bf3cc-b7fd-427d-a485-bef75af11589
+                transform: ""
+          - columnReference:
+              columnCounter: 50c7e7f5-7cc1-4eb5-98cc-02d3a71e851b
+              stepCounter: 9c1b38c1-9260-4c1f-991d-3fa1ce86e996
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5421089c-4398-4d49-bd4b-20dc6836b89a
+                    stepCounter: 683bf3cc-b7fd-427d-a485-bef75af11589
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_WWI_CUSTOMERTRANSACTIONS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_WWI_CUSTOMERTRANSACTIONS') }} "DVSTG_WWI_CUSTOMERTRANSACTIONS"
+            name: SATV0_WWI_CUSTOMERTRANSACTIONS
+            noLinkRefs: []
+      name: SATV0_WWI_CUSTOMERTRANSACTIONS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: 9c1b38c1-9260-4c1f-991d-3fa1ce86e996

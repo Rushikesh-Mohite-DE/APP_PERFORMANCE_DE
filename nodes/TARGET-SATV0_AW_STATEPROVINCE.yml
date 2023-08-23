@@ -1,0 +1,177 @@
+steps:
+  SATV0_AW_STATEPROVINCE-197b4621-b2bb-4159-bc26-80a3791ef7d9:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: aacd41ab-83d8-4bfd-a096-71d3c61cc15e
+              stepCounter: 197b4621-b2bb-4159-bc26-80a3791ef7d9
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_STATEPROVINCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c5687af0-f4fe-4eb6-9227-a920cc4ec613
+                    stepCounter: 15dcfaff-b654-47e6-a547-550033ca53ed
+                transform: ""
+          - columnReference:
+              columnCounter: ac6aebde-cb9f-4b2b-9dbc-cf386e88cd8d
+              stepCounter: 197b4621-b2bb-4159-bc26-80a3791ef7d9
+            dataType: VARCHAR(3)
+            description: ISO standard state or province code.
+            hashColumns: []
+            hashDetails: null
+            name: STATEPROVINCECODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 32012540-9842-48dc-8e73-709dc0d39e72
+                    stepCounter: 15dcfaff-b654-47e6-a547-550033ca53ed
+                transform: ""
+          - columnReference:
+              columnCounter: 85509de7-9e4f-48ab-964f-e49f6cdb1b1d
+              stepCounter: 197b4621-b2bb-4159-bc26-80a3791ef7d9
+            dataType: VARCHAR(3)
+            description: ISO standard country or region code. Foreign key to CountryRegion.CountryRegionCode.
+            hashColumns: []
+            hashDetails: null
+            name: COUNTRYREGIONCODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 98ca3dd1-8390-4701-b703-cfc7f4a10b9c
+                    stepCounter: 15dcfaff-b654-47e6-a547-550033ca53ed
+                transform: ""
+          - columnReference:
+              columnCounter: 614b1985-fa99-4c21-bc4c-cac8505776f3
+              stepCounter: 197b4621-b2bb-4159-bc26-80a3791ef7d9
+            dataType: VARCHAR(16777216)
+            description: 0 = StateProvinceCode exists. 1 = StateProvinceCode unavailable, using CountryRegionCode.
+            hashColumns: []
+            hashDetails: null
+            name: ISONLYSTATEPROVINCEFLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f9ed7ec5-837c-4e5c-aec5-2f1ea7f01121
+                    stepCounter: 15dcfaff-b654-47e6-a547-550033ca53ed
+                transform: ""
+          - columnReference:
+              columnCounter: 1946aa35-7fbc-45c9-97dc-ef36a382dc87
+              stepCounter: 197b4621-b2bb-4159-bc26-80a3791ef7d9
+            dataType: VARCHAR(16777216)
+            description: State or province description.
+            hashColumns: []
+            hashDetails: null
+            name: NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 89ad0909-25f6-4dc4-b885-39487df355f1
+                    stepCounter: 15dcfaff-b654-47e6-a547-550033ca53ed
+                transform: ""
+          - columnReference:
+              columnCounter: c892db81-46ea-4fc1-8254-9af347ce2941
+              stepCounter: 197b4621-b2bb-4159-bc26-80a3791ef7d9
+            dataType: VARCHAR(16777216)
+            description: ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            hashColumns: []
+            hashDetails: null
+            name: ROWGUID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9c6e879e-cf1d-439b-916e-f47d7c9bca8e
+                    stepCounter: 15dcfaff-b654-47e6-a547-550033ca53ed
+                transform: ""
+          - columnReference:
+              columnCounter: 63a18c97-a078-4673-abea-fbe5f85f1527
+              stepCounter: 197b4621-b2bb-4159-bc26-80a3791ef7d9
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            hashColumns: []
+            hashDetails: null
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 26fc65d1-5044-4d50-b52c-4053e0570449
+                    stepCounter: 15dcfaff-b654-47e6-a547-550033ca53ed
+                transform: ""
+          - columnReference:
+              columnCounter: 3e27381d-a60f-4d94-8905-5f2f508bd9f8
+              stepCounter: 197b4621-b2bb-4159-bc26-80a3791ef7d9
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e6ccefbf-9edb-4e6d-9e6d-fbd51ac17be3
+                    stepCounter: 15dcfaff-b654-47e6-a547-550033ca53ed
+                transform: ""
+          - columnReference:
+              columnCounter: 6bd4645f-2404-4f75-869a-95467a9ab094
+              stepCounter: 197b4621-b2bb-4159-bc26-80a3791ef7d9
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5af8372a-66cd-4f12-a881-a468ac3f4b5a
+                    stepCounter: 15dcfaff-b654-47e6-a547-550033ca53ed
+                transform: ""
+          - columnReference:
+              columnCounter: ba97f3b7-2127-4f25-82d9-f997a6ed9bae
+              stepCounter: 197b4621-b2bb-4159-bc26-80a3791ef7d9
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ed79e5b3-1636-4695-96a6-a641470239da
+                    stepCounter: 15dcfaff-b654-47e6-a547-550033ca53ed
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_STATEPROVINCE
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_STATEPROVINCE') }} "DVSTG_AW_STATEPROVINCE"
+            name: SATV0_AW_STATEPROVINCE
+            noLinkRefs: []
+      name: SATV0_AW_STATEPROVINCE
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: 197b4621-b2bb-4159-bc26-80a3791ef7d9

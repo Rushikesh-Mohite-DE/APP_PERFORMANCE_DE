@@ -1,0 +1,149 @@
+steps:
+  SATV0_AW_PRODUCTLISTPRICEHISTORY-7a0dbb52-01d7-40ec-9e19-bae7a50d335d:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 4e5729cb-4969-4fb3-815d-d19f07324b8a
+              stepCounter: 7a0dbb52-01d7-40ec-9e19-bae7a50d335d
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_PRODUCTLISTPRICEHISTORY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0638b576-8b58-4443-8846-9b32e214963b
+                    stepCounter: cee3d2ac-6ac9-4b22-9327-6a4012001e38
+                transform: ""
+          - columnReference:
+              columnCounter: 9ef791e4-f536-4946-8ed3-39ec46090a31
+              stepCounter: 7a0dbb52-01d7-40ec-9e19-bae7a50d335d
+            dataType: TIMESTAMP_NTZ(9)
+            description: List price start date.
+            hashColumns: []
+            hashDetails: null
+            name: STARTDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6d671bd0-6dee-4cd6-a79a-364b9075f488
+                    stepCounter: cee3d2ac-6ac9-4b22-9327-6a4012001e38
+                transform: ""
+          - columnReference:
+              columnCounter: 77afbc1f-4e2c-473f-97fe-4d8a676f8cf1
+              stepCounter: 7a0dbb52-01d7-40ec-9e19-bae7a50d335d
+            dataType: VARCHAR(16777216)
+            description: List price end date
+            hashColumns: []
+            hashDetails: null
+            name: ENDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5de688c5-19ca-4e22-9f73-031b32d55853
+                    stepCounter: cee3d2ac-6ac9-4b22-9327-6a4012001e38
+                transform: ""
+          - columnReference:
+              columnCounter: b319fada-7383-48d3-9ef4-e69973088fa8
+              stepCounter: 7a0dbb52-01d7-40ec-9e19-bae7a50d335d
+            dataType: NUMBER(19,4)
+            description: Product list price.
+            hashColumns: []
+            hashDetails: null
+            name: LISTPRICE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ff933777-cc88-41ff-be7d-b83e24d201f5
+                    stepCounter: cee3d2ac-6ac9-4b22-9327-6a4012001e38
+                transform: ""
+          - columnReference:
+              columnCounter: 04410c5f-44d3-4714-b354-43b18ea69a42
+              stepCounter: 7a0dbb52-01d7-40ec-9e19-bae7a50d335d
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            hashColumns: []
+            hashDetails: null
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: dd897a8b-6b51-4df6-be69-47f402d510e7
+                    stepCounter: cee3d2ac-6ac9-4b22-9327-6a4012001e38
+                transform: ""
+          - columnReference:
+              columnCounter: 6b1d4151-c43a-4a07-ac06-60e613f4f5d5
+              stepCounter: 7a0dbb52-01d7-40ec-9e19-bae7a50d335d
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1846bbb4-ffd4-4b9e-8f4d-cd69b944ff18
+                    stepCounter: cee3d2ac-6ac9-4b22-9327-6a4012001e38
+                transform: ""
+          - columnReference:
+              columnCounter: b94c3beb-bb13-4ee1-9573-3fda00930c22
+              stepCounter: 7a0dbb52-01d7-40ec-9e19-bae7a50d335d
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 460ef0e7-e6db-478f-91b6-a5ad9280dcbc
+                    stepCounter: cee3d2ac-6ac9-4b22-9327-6a4012001e38
+                transform: ""
+          - columnReference:
+              columnCounter: b6faef4b-b0d7-4f8e-8710-fe2eec52463b
+              stepCounter: 7a0dbb52-01d7-40ec-9e19-bae7a50d335d
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 51870e3a-0071-4a17-ab3a-9fadc08a7a54
+                    stepCounter: cee3d2ac-6ac9-4b22-9327-6a4012001e38
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_PRODUCTLISTPRICEHISTORY
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_PRODUCTLISTPRICEHISTORY') }} "DVSTG_AW_PRODUCTLISTPRICEHISTORY"
+            name: SATV0_AW_PRODUCTLISTPRICEHISTORY
+            noLinkRefs: []
+      name: SATV0_AW_PRODUCTLISTPRICEHISTORY
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: 7a0dbb52-01d7-40ec-9e19-bae7a50d335d

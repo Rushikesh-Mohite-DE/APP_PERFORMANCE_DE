@@ -1,0 +1,91 @@
+steps:
+  HUB_AW_ILLUSTRATION-4977033a-8089-40e9-80ba-e8f408f0fbe2:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 4dff6944-44dc-430f-b44e-e006b5f4dcb2
+              stepCounter: 4977033a-8089-40e9-80ba-e8f408f0fbe2
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_ILLUSTRATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 79ffe398-aee4-4511-a4e7-29b8aa676397
+                    stepCounter: 3f39385d-f60e-4027-ba7e-cc8e46194e00
+                transform: ""
+          - columnReference:
+              columnCounter: a548e487-42f6-492c-8553-8d0b08343147
+              stepCounter: 4977033a-8089-40e9-80ba-e8f408f0fbe2
+            dataType: NUMBER(38,0)
+            description: Primary key for Illustration records.
+            hashColumns: []
+            hashDetails: null
+            name: ILLUSTRATIONID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6df84394-6cd4-4561-ae54-6caec0e8261b
+                    stepCounter: 3f39385d-f60e-4027-ba7e-cc8e46194e00
+                transform: ""
+          - columnReference:
+              columnCounter: 5ac8ca16-3eb7-48b9-bc20-9ee2f08b985f
+              stepCounter: 4977033a-8089-40e9-80ba-e8f408f0fbe2
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 34d11982-9ec6-4f1d-8ded-10071a14df6c
+                    stepCounter: 3f39385d-f60e-4027-ba7e-cc8e46194e00
+                transform: ""
+          - columnReference:
+              columnCounter: 6ae2f592-645a-4a2f-910d-4f2f6f0e9707
+              stepCounter: 4977033a-8089-40e9-80ba-e8f408f0fbe2
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 25737a6a-e3ff-4aad-93d2-74d950fc0c03
+                    stepCounter: 3f39385d-f60e-4027-ba7e-cc8e46194e00
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_ILLUSTRATION
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_ILLUSTRATION') }} "DVSTG_AW_ILLUSTRATION"
+            name: HUB_AW_ILLUSTRATION
+            noLinkRefs: []
+      name: HUB_AW_ILLUSTRATION
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 4977033a-8089-40e9-80ba-e8f408f0fbe2

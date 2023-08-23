@@ -1,0 +1,265 @@
+steps:
+  DVSTG_AW_WORKORDER-a245e499-12b9-46be-886f-2f1351b5ff7c:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2b501594-4dcc-415c-9e36-c779b5c98b1c
+              stepCounter: a245e499-12b9-46be-886f-2f1351b5ff7c
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: d408b051-47e5-4ee1-9900-fef33d1c91de
+                stepCounter: a245e499-12b9-46be-886f-2f1351b5ff7c
+              - columnCounter: 6cdadee8-7051-419d-9cd7-eee7639be3dd
+                stepCounter: a245e499-12b9-46be-886f-2f1351b5ff7c
+              - columnCounter: c0849ae1-676a-4405-bd7d-c4245dac4a6d
+                stepCounter: a245e499-12b9-46be-886f-2f1351b5ff7c
+            name: HK_WORKORDER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: d408b051-47e5-4ee1-9900-fef33d1c91de
+              stepCounter: a245e499-12b9-46be-886f-2f1351b5ff7c
+            dataType: NUMBER(38,0)
+            description: Primary key for WorkOrder records.
+            name: WORKORDERID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a4b722f5-3fb3-48d3-829e-edc832add197
+                    stepCounter: 319e4905-c87c-47be-89a2-96742896ad20
+                transform: ""
+          - columnReference:
+              columnCounter: 6cdadee8-7051-419d-9cd7-eee7639be3dd
+              stepCounter: a245e499-12b9-46be-886f-2f1351b5ff7c
+            dataType: NUMBER(38,0)
+            description: Product identification number. Foreign key to Product.ProductID.
+            name: PRODUCTID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ffa540e6-8524-4995-95b4-5fbf78f617be
+                    stepCounter: 319e4905-c87c-47be-89a2-96742896ad20
+                transform: ""
+          - columnReference:
+              columnCounter: 30286614-29f3-4190-aead-73ee4fb85a75
+              stepCounter: a245e499-12b9-46be-886f-2f1351b5ff7c
+            dataType: NUMBER(38,0)
+            description: Product quantity to build.
+            name: ORDERQTY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4ccf5ee9-873d-43b3-adb4-bdd6bd579ef0
+                    stepCounter: 319e4905-c87c-47be-89a2-96742896ad20
+                transform: ""
+          - columnReference:
+              columnCounter: 42e89458-696f-4015-9148-f01e97d74938
+              stepCounter: a245e499-12b9-46be-886f-2f1351b5ff7c
+            dataType: NUMBER(38,0)
+            description: Quantity built and put in inventory.
+            name: STOCKEDQTY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3229b6bf-1a31-4e2f-9607-5e164e6c2803
+                    stepCounter: 319e4905-c87c-47be-89a2-96742896ad20
+                transform: ""
+          - columnReference:
+              columnCounter: 6417835a-31fb-43f9-95fe-28c7621118fc
+              stepCounter: a245e499-12b9-46be-886f-2f1351b5ff7c
+            dataType: NUMBER(38,0)
+            description: Quantity that failed inspection.
+            name: SCRAPPEDQTY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ef7e29ec-1e00-4308-9cb7-179e065cbc90
+                    stepCounter: 319e4905-c87c-47be-89a2-96742896ad20
+                transform: ""
+          - columnReference:
+              columnCounter: a50187a8-1486-4f63-9992-2a912e3f23a5
+              stepCounter: a245e499-12b9-46be-886f-2f1351b5ff7c
+            dataType: TIMESTAMP_NTZ(9)
+            description: Work order start date.
+            name: STARTDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ebd95317-d10b-418e-a718-7561d26bf023
+                    stepCounter: 319e4905-c87c-47be-89a2-96742896ad20
+                transform: ""
+          - columnReference:
+              columnCounter: 06e4cb2e-fd4c-4c75-92a0-e035ac94a15f
+              stepCounter: a245e499-12b9-46be-886f-2f1351b5ff7c
+            dataType: TIMESTAMP_NTZ(9)
+            description: Work order end date.
+            name: ENDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 68423722-7368-4f18-ac4f-d4e0df5988b2
+                    stepCounter: 319e4905-c87c-47be-89a2-96742896ad20
+                transform: ""
+          - columnReference:
+              columnCounter: a54f862a-d2ba-43e5-afb1-3dac0eedbc7c
+              stepCounter: a245e499-12b9-46be-886f-2f1351b5ff7c
+            dataType: TIMESTAMP_NTZ(9)
+            description: Work order due date.
+            name: DUEDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9128d2e3-c592-4864-bb94-5bbd711a03df
+                    stepCounter: 319e4905-c87c-47be-89a2-96742896ad20
+                transform: ""
+          - columnReference:
+              columnCounter: c0849ae1-676a-4405-bd7d-c4245dac4a6d
+              stepCounter: a245e499-12b9-46be-886f-2f1351b5ff7c
+            dataType: VARCHAR(16777216)
+            description: Reason for inspection failure.
+            name: SCRAPREASONID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a812fd61-5808-4027-b905-23767d66b869
+                    stepCounter: 319e4905-c87c-47be-89a2-96742896ad20
+                transform: ""
+          - columnReference:
+              columnCounter: 08a6ac52-c309-4f46-b447-2f29eae7cae3
+              stepCounter: a245e499-12b9-46be-886f-2f1351b5ff7c
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 05a20b51-1ea8-4482-b738-8c1e20d29349
+                    stepCounter: 319e4905-c87c-47be-89a2-96742896ad20
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1c2098f0-85fb-4d17-a7a8-70f8419047cb
+              stepCounter: a245e499-12b9-46be-886f-2f1351b5ff7c
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1fa90efa-9ca4-4f0c-b290-711710f6ca52
+              stepCounter: a245e499-12b9-46be-886f-2f1351b5ff7c
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 75fc57e4-dc61-42ee-a46b-19363d729df7
+              stepCounter: a245e499-12b9-46be-886f-2f1351b5ff7c
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 30286614-29f3-4190-aead-73ee4fb85a75
+                stepCounter: a245e499-12b9-46be-886f-2f1351b5ff7c
+              - columnCounter: 42e89458-696f-4015-9148-f01e97d74938
+                stepCounter: a245e499-12b9-46be-886f-2f1351b5ff7c
+              - columnCounter: 6417835a-31fb-43f9-95fe-28c7621118fc
+                stepCounter: a245e499-12b9-46be-886f-2f1351b5ff7c
+              - columnCounter: a50187a8-1486-4f63-9992-2a912e3f23a5
+                stepCounter: a245e499-12b9-46be-886f-2f1351b5ff7c
+              - columnCounter: 06e4cb2e-fd4c-4c75-92a0-e035ac94a15f
+                stepCounter: a245e499-12b9-46be-886f-2f1351b5ff7c
+              - columnCounter: a54f862a-d2ba-43e5-afb1-3dac0eedbc7c
+                stepCounter: a245e499-12b9-46be-886f-2f1351b5ff7c
+              - columnCounter: c0849ae1-676a-4405-bd7d-c4245dac4a6d
+                stepCounter: a245e499-12b9-46be-886f-2f1351b5ff7c
+              - columnCounter: 08a6ac52-c309-4f46-b447-2f29eae7cae3
+                stepCounter: a245e499-12b9-46be-886f-2f1351b5ff7c
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences: []
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: af8ed7a1-5d41-4003-a4e6-8ae77189d2b9
+              stepCounter: a245e499-12b9-46be-886f-2f1351b5ff7c
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 6cdadee8-7051-419d-9cd7-eee7639be3dd
+                stepCounter: a245e499-12b9-46be-886f-2f1351b5ff7c
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: ADV_WRKS_SRC
+                nodeName: AW_LOAD_WORKORDER
+            join:
+              joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_WORKORDER') }} "AW_LOAD_WORKORDER"
+            name: DVSTG_AW_WORKORDER
+            noLinkRefs: []
+      name: DVSTG_AW_WORKORDER
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: a245e499-12b9-46be-886f-2f1351b5ff7c

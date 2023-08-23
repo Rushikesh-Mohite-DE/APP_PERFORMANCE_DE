@@ -1,0 +1,135 @@
+steps:
+  SATV0_AW_EMPLOYEEDEPARTMENTHISTORY-9f4a7155-7863-409c-afbb-ccc70431421c:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 815f7ed7-d8c6-4806-bff7-f7eafb26ae83
+              stepCounter: 9f4a7155-7863-409c-afbb-ccc70431421c
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_EMPLOYEEDEPARTMENTHISTORY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a023e9c6-b26c-41ea-9ba8-2a68346c7f32
+                    stepCounter: 229fe3a6-5c42-4ab6-a1de-1ca9a6c0241a
+                transform: ""
+          - columnReference:
+              columnCounter: da89661b-c7b3-4d7c-9da7-054bd79c9a1d
+              stepCounter: 9f4a7155-7863-409c-afbb-ccc70431421c
+            dataType: VARCHAR(50)
+            description: Date the employee started work in the department.
+            hashColumns: []
+            hashDetails: null
+            name: STARTDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f4eae3fc-1efe-4fc6-8abb-0cce804acc0d
+                    stepCounter: 229fe3a6-5c42-4ab6-a1de-1ca9a6c0241a
+                transform: ""
+          - columnReference:
+              columnCounter: f27d6540-276c-4d0c-bc10-916ea4b9e237
+              stepCounter: 9f4a7155-7863-409c-afbb-ccc70431421c
+            dataType: VARCHAR(50)
+            description: Date the employee left the department. NULL = Current department.
+            hashColumns: []
+            hashDetails: null
+            name: ENDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0c24e348-a9a9-4622-b003-ef242155a02a
+                    stepCounter: 229fe3a6-5c42-4ab6-a1de-1ca9a6c0241a
+                transform: ""
+          - columnReference:
+              columnCounter: 1970deca-10d1-4e9c-b6fc-09836a5d4592
+              stepCounter: 9f4a7155-7863-409c-afbb-ccc70431421c
+            dataType: VARCHAR(50)
+            description: Date and time the record was last updated.
+            hashColumns: []
+            hashDetails: null
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 70e26f39-56fe-47cb-b2d9-4c0ff2643c00
+                    stepCounter: 229fe3a6-5c42-4ab6-a1de-1ca9a6c0241a
+                transform: ""
+          - columnReference:
+              columnCounter: 398a06bb-d47a-4191-beda-ac1cf092e995
+              stepCounter: 9f4a7155-7863-409c-afbb-ccc70431421c
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 214b747a-1eec-4983-93ae-138c9e44ac4d
+                    stepCounter: 229fe3a6-5c42-4ab6-a1de-1ca9a6c0241a
+                transform: ""
+          - columnReference:
+              columnCounter: 675601d4-7d1b-4371-b3fa-fe06ad06fd75
+              stepCounter: 9f4a7155-7863-409c-afbb-ccc70431421c
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 60113a05-c410-4eb6-8f73-d686e00fc0df
+                    stepCounter: 229fe3a6-5c42-4ab6-a1de-1ca9a6c0241a
+                transform: ""
+          - columnReference:
+              columnCounter: 222d2593-1cbc-4bda-a5ec-31699bb2fd0b
+              stepCounter: 9f4a7155-7863-409c-afbb-ccc70431421c
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HOUSE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0746da87-ada2-47ff-a52c-33298c55104d
+                    stepCounter: 229fe3a6-5c42-4ab6-a1de-1ca9a6c0241a
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_EMPLOYEEDEPARTMENTHISTORY
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_EMPLOYEEDEPARTMENTHISTORY') }} "DVSTG_AW_EMPLOYEEDEPARTMENTHISTORY"
+            name: SATV0_AW_EMPLOYEEDEPARTMENTHISTORY
+            noLinkRefs: []
+      name: SATV0_AW_EMPLOYEEDEPARTMENTHISTORY
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: 9f4a7155-7863-409c-afbb-ccc70431421c

@@ -1,0 +1,139 @@
+steps:
+  AW_LOAD_PRODUCTREVIEW-81150051-daaa-4cdf-bc68-fe66b3a0ab83:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: ADV_WRKS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fa62dd4d-c905-4c1a-abc3-e5d78a5c1456
+              stepCounter: 81150051-daaa-4cdf-bc68-fe66b3a0ab83
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Primary key for ProductReview records.
+            name: PRODUCTREVIEWID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4c6e3df9-7c00-458c-ac15-a70978768777
+              stepCounter: 81150051-daaa-4cdf-bc68-fe66b3a0ab83
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Product identification number. Foreign key to Product.ProductID.
+            name: PRODUCTID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 34c3ae7a-df7c-4459-bbab-93cd4c4ae7c8
+              stepCounter: 81150051-daaa-4cdf-bc68-fe66b3a0ab83
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: Name of the reviewer.
+            name: REVIEWERNAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6482f229-1de9-4b8b-a8f9-6c72734b9d7a
+              stepCounter: 81150051-daaa-4cdf-bc68-fe66b3a0ab83
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date review was submitted.
+            name: REVIEWDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b2b11fc8-c765-4eb3-bbc5-eb6c1a434908
+              stepCounter: 81150051-daaa-4cdf-bc68-fe66b3a0ab83
+            config: {}
+            dataType: VARCHAR(50)
+            defaultValue: ""
+            description: Reviewer's e-mail address.
+            name: EMAILADDRESS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7627fd76-7f06-4c56-a5ce-2ccfed9efd65
+              stepCounter: 81150051-daaa-4cdf-bc68-fe66b3a0ab83
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Product rating given by the reviewer. Scale is 1 to 5 with 5 as the highest rating.
+            name: RATING
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9027f5c1-541a-429f-b2d4-3166508157cc
+              stepCounter: 81150051-daaa-4cdf-bc68-fe66b3a0ab83
+            config: {}
+            dataType: VARCHAR(3850)
+            defaultValue: ""
+            description: Reviewer's comments
+            name: COMMENTS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d5064f77-0262-44d2-b851-193f6077144f
+              stepCounter: 81150051-daaa-4cdf-bc68-fe66b3a0ab83
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_PRODUCTREVIEW') }}
+      name: AW_LOAD_PRODUCTREVIEW
+      schema: ""
+      sqlType: Source
+      table: AW_LOAD_PRODUCTREVIEW
+      type: sourceInput
+    stepCounter: 81150051-daaa-4cdf-bc68-fe66b3a0ab83

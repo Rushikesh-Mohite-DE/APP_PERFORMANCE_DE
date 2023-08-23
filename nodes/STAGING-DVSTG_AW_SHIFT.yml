@@ -1,0 +1,195 @@
+steps:
+  DVSTG_AW_SHIFT-3e7c765e-f435-4a33-83b9-dacd5caffe8a:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c7d2e2cd-faf0-4609-a832-0ba800c8e7b7
+              stepCounter: 3e7c765e-f435-4a33-83b9-dacd5caffe8a
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: f60f1c36-62a7-43b0-8e16-d52de56c82ac
+                stepCounter: 3e7c765e-f435-4a33-83b9-dacd5caffe8a
+            name: HK_SHIFT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: f60f1c36-62a7-43b0-8e16-d52de56c82ac
+              stepCounter: 3e7c765e-f435-4a33-83b9-dacd5caffe8a
+            dataType: NUMBER(38,0)
+            description: Primary key for Shift records.
+            name: SHIFTID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: dcf7d522-6d09-4b63-bd09-0e7274af5f85
+                    stepCounter: 63b5159e-3629-4715-9a24-e790f37312bb
+                transform: ""
+          - columnReference:
+              columnCounter: d4eb9e48-bbb0-4ada-b70e-5ca71b0955cb
+              stepCounter: 3e7c765e-f435-4a33-83b9-dacd5caffe8a
+            dataType: VARCHAR(16777216)
+            description: Shift description.
+            name: NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8cf846d9-9b0b-4b10-a952-fa39d103be65
+                    stepCounter: 63b5159e-3629-4715-9a24-e790f37312bb
+                transform: ""
+          - columnReference:
+              columnCounter: 0dd85e71-7b2b-4786-92f0-3cb04655cbae
+              stepCounter: 3e7c765e-f435-4a33-83b9-dacd5caffe8a
+            dataType: VARCHAR(20)
+            description: Shift start time.
+            name: STARTTIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 66770cfb-f383-40af-9303-834257c8be70
+                    stepCounter: 63b5159e-3629-4715-9a24-e790f37312bb
+                transform: ""
+          - columnReference:
+              columnCounter: 2b05826a-ac29-4700-919f-5aa556606ce1
+              stepCounter: 3e7c765e-f435-4a33-83b9-dacd5caffe8a
+            dataType: VARCHAR(20)
+            description: Shift end time.
+            name: ENDTIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4527b39d-0db1-4aef-a23a-e64c0f2e5fa5
+                    stepCounter: 63b5159e-3629-4715-9a24-e790f37312bb
+                transform: ""
+          - columnReference:
+              columnCounter: 9028df0e-9fc1-4e61-95e1-92e365523839
+              stepCounter: 3e7c765e-f435-4a33-83b9-dacd5caffe8a
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9bfd50f5-c88c-4771-89da-5e164e1eceb7
+                    stepCounter: 63b5159e-3629-4715-9a24-e790f37312bb
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 48d48211-bd97-41ed-95e9-6e4a5825b678
+              stepCounter: 3e7c765e-f435-4a33-83b9-dacd5caffe8a
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2478aef8-05e8-498c-9029-911851541426
+              stepCounter: 3e7c765e-f435-4a33-83b9-dacd5caffe8a
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 388781a9-3a65-4139-82e9-185192c6ae07
+              stepCounter: 3e7c765e-f435-4a33-83b9-dacd5caffe8a
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: d4eb9e48-bbb0-4ada-b70e-5ca71b0955cb
+                stepCounter: 3e7c765e-f435-4a33-83b9-dacd5caffe8a
+              - columnCounter: 9028df0e-9fc1-4e61-95e1-92e365523839
+                stepCounter: 3e7c765e-f435-4a33-83b9-dacd5caffe8a
+              - columnCounter: 0dd85e71-7b2b-4786-92f0-3cb04655cbae
+                stepCounter: 3e7c765e-f435-4a33-83b9-dacd5caffe8a
+              - columnCounter: 2b05826a-ac29-4700-919f-5aa556606ce1
+                stepCounter: 3e7c765e-f435-4a33-83b9-dacd5caffe8a
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f0b76db6-ee4a-477c-9de3-3fed12202be9
+              stepCounter: 3e7c765e-f435-4a33-83b9-dacd5caffe8a
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: d4eb9e48-bbb0-4ada-b70e-5ca71b0955cb
+                stepCounter: 3e7c765e-f435-4a33-83b9-dacd5caffe8a
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: ADV_WRKS_SRC
+                nodeName: AW_LOAD_SHIFT
+            join:
+              joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_SHIFT') }} "AW_LOAD_SHIFT"
+            name: DVSTG_AW_SHIFT
+            noLinkRefs: []
+      name: DVSTG_AW_SHIFT
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: 3e7c765e-f435-4a33-83b9-dacd5caffe8a

@@ -1,0 +1,105 @@
+steps:
+  HUB_RKI_GER_COVID19_DASHBOARD-16904199-8dec-4547-a973-3e1d7c2eb8be:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: Detailed district (Kreis) level data for Germany from the Robert Koch Institut
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 7f6c8f64-db80-4d1a-b4b2-ac05fa753e2f
+              stepCounter: 16904199-8dec-4547-a973-3e1d7c2eb8be
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_GER_COVID19_DASHBOARD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 03d8adbc-3bd2-4da0-98fa-cf53d93b63c9
+                    stepCounter: 8aab7262-f455-4674-b104-24b174e43b48
+                transform: ""
+          - columnReference:
+              columnCounter: bb06b4a3-2946-4303-8379-909f797ec98d
+              stepCounter: 16904199-8dec-4547-a973-3e1d7c2eb8be
+            dataType: VARCHAR(5)
+            description: District identifier
+            hashColumns: []
+            hashDetails: null
+            name: DISTRICT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0253b8a9-060b-4b64-b6cd-3468a0db936a
+                    stepCounter: 8aab7262-f455-4674-b104-24b174e43b48
+                transform: ""
+          - columnReference:
+              columnCounter: 0479f25e-6052-454c-9464-ba8ac216885d
+              stepCounter: 16904199-8dec-4547-a973-3e1d7c2eb8be
+            dataType: VARCHAR(5)
+            description: Federal subject (state) identifier
+            hashColumns: []
+            hashDetails: null
+            name: STATE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e443071e-afa9-434f-8c34-8bc2c0d085b8
+                    stepCounter: 8aab7262-f455-4674-b104-24b174e43b48
+                transform: ""
+          - columnReference:
+              columnCounter: 77585f61-f418-452c-babd-e2dc88ced107
+              stepCounter: 16904199-8dec-4547-a973-3e1d7c2eb8be
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7d260ff4-5b40-42a1-9716-6ed82f322453
+                    stepCounter: 8aab7262-f455-4674-b104-24b174e43b48
+                transform: ""
+          - columnReference:
+              columnCounter: 79524cd7-05e0-486f-abc6-72ca7ce3a2f2
+              stepCounter: 16904199-8dec-4547-a973-3e1d7c2eb8be
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 85e23b7d-fc56-4496-95d2-c7f787560750
+                    stepCounter: 8aab7262-f455-4674-b104-24b174e43b48
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_RKI_GER_COVID19_DASHBOARD
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_RKI_GER_COVID19_DASHBOARD') }} "DVSTG_RKI_GER_COVID19_DASHBOARD"
+            name: HUB_RKI_GER_COVID19_DASHBOARD
+            noLinkRefs: []
+      name: HUB_RKI_GER_COVID19_DASHBOARD
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 16904199-8dec-4547-a973-3e1d7c2eb8be

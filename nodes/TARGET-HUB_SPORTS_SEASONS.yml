@@ -1,0 +1,119 @@
+steps:
+  HUB_SPORTS_SEASONS-a820c12e-b827-46b9-8146-ad14fc8da9d0:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 2af75dfd-934b-4e4f-be8d-ee1328023721
+              stepCounter: a820c12e-b827-46b9-8146-ad14fc8da9d0
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_SEASONS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 980dd5f9-39e3-4c35-bd7b-b3a63a9a064e
+                    stepCounter: b2997375-e342-49b5-97c9-2ddba160f170
+                transform: ""
+          - columnReference:
+              columnCounter: 48263dd1-9329-4fc9-afa9-0393e1e2875f
+              stepCounter: a820c12e-b827-46b9-8146-ad14fc8da9d0
+            dataType: VARCHAR(32)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a05e3242-23b9-4c0f-9bb6-75de508adadc
+                    stepCounter: b2997375-e342-49b5-97c9-2ddba160f170
+                transform: ""
+          - columnReference:
+              columnCounter: f461f329-ef36-4967-ada3-282d4e1401c4
+              stepCounter: a820c12e-b827-46b9-8146-ad14fc8da9d0
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PUBLISHER_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 447cd8eb-68a6-4a29-a485-4814391c7243
+                    stepCounter: b2997375-e342-49b5-97c9-2ddba160f170
+                transform: ""
+          - columnReference:
+              columnCounter: 562b0179-d0af-4a98-b238-7762ec26c380
+              stepCounter: a820c12e-b827-46b9-8146-ad14fc8da9d0
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LEAGUE_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 57bbe13f-9fc8-45bd-834f-957f95f9067b
+                    stepCounter: b2997375-e342-49b5-97c9-2ddba160f170
+                transform: ""
+          - columnReference:
+              columnCounter: 2e1f1e7f-fbe0-40cc-baf4-290d22f1d39c
+              stepCounter: a820c12e-b827-46b9-8146-ad14fc8da9d0
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b252849e-4e4b-4a00-bd0c-8f359248bd4e
+                    stepCounter: b2997375-e342-49b5-97c9-2ddba160f170
+                transform: ""
+          - columnReference:
+              columnCounter: 9f8ac302-63fb-4ba0-9ba2-1a05206ec81e
+              stepCounter: a820c12e-b827-46b9-8146-ad14fc8da9d0
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7c834339-57f8-46ff-ace1-decc645d29f9
+                    stepCounter: b2997375-e342-49b5-97c9-2ddba160f170
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SPORTS_SEASONS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SPORTS_SEASONS') }} "DVSTG_SPORTS_SEASONS"
+            name: HUB_SPORTS_SEASONS
+            noLinkRefs: []
+      name: HUB_SPORTS_SEASONS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: a820c12e-b827-46b9-8146-ad14fc8da9d0

@@ -1,0 +1,109 @@
+steps:
+  AW_LOAD_EMPLOYEEDEPARTMENTHISTORY-e7cc2779-5703-4224-9b55-e4b46eb5f47e:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: ADV_WRKS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6f22c423-28dd-43ee-b185-b572759d2766
+              stepCounter: e7cc2779-5703-4224-9b55-e4b46eb5f47e
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Employee identification number. Foreign key to Employee.BusinessEntityID.
+            name: BUSINESSENTITYID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 94bc5101-83c0-4582-b75e-5c9e001d766d
+              stepCounter: e7cc2779-5703-4224-9b55-e4b46eb5f47e
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Department in which the employee worked including currently. Foreign key to Department.DepartmentID.
+            name: DEPARTMENTID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7c41ecd1-380d-45e4-899b-964be755bcf7
+              stepCounter: e7cc2779-5703-4224-9b55-e4b46eb5f47e
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Identifies which 8-hour shift the employee works. Foreign key to Shift.Shift.ID.
+            name: SHIFTID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b6a21dfd-20f1-4407-9dc3-cd3ac5874303
+              stepCounter: e7cc2779-5703-4224-9b55-e4b46eb5f47e
+            config: {}
+            dataType: VARCHAR(50)
+            defaultValue: ""
+            description: Date the employee started work in the department.
+            name: STARTDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 62d17bbb-af7f-4b98-8f69-518f77078936
+              stepCounter: e7cc2779-5703-4224-9b55-e4b46eb5f47e
+            config: {}
+            dataType: VARCHAR(50)
+            defaultValue: ""
+            description: Date the employee left the department. NULL = Current department.
+            name: ENDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0c355e79-81f7-4ce1-91c3-f91a58962237
+              stepCounter: e7cc2779-5703-4224-9b55-e4b46eb5f47e
+            config: {}
+            dataType: VARCHAR(50)
+            defaultValue: ""
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_EMPLOYEEDEPARTMENTHISTORY') }}
+      name: AW_LOAD_EMPLOYEEDEPARTMENTHISTORY
+      schema: ""
+      sqlType: Source
+      table: AW_LOAD_EMPLOYEEDEPARTMENTHISTORY
+      type: sourceInput
+    stepCounter: e7cc2779-5703-4224-9b55-e4b46eb5f47e

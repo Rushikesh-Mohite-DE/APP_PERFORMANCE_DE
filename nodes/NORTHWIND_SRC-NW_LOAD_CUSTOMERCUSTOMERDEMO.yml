@@ -1,0 +1,49 @@
+steps:
+  NW_LOAD_CUSTOMERCUSTOMERDEMO-02b4d54e-fb22-483a-8c99-e8f5211297f7:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: NORTHWIND_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5e4bbdb8-c1fe-410b-aa21-6338b015ddac
+              stepCounter: 02b4d54e-fb22-483a-8c99-e8f5211297f7
+            config: {}
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            name: CUSTOMERID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e8fb61e5-0ccf-4a5c-a8ab-aa966e2a3fb2
+              stepCounter: 02b4d54e-fb22-483a-8c99-e8f5211297f7
+            config: {}
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: ""
+            name: CUSTOMERTYPEID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('NORTHWIND_SRC', 'NW_LOAD_CUSTOMERCUSTOMERDEMO') }}
+      name: NW_LOAD_CUSTOMERCUSTOMERDEMO
+      schema: ""
+      sqlType: Source
+      table: NW_LOAD_CUSTOMERCUSTOMERDEMO
+      type: sourceInput
+    stepCounter: 02b4d54e-fb22-483a-8c99-e8f5211297f7

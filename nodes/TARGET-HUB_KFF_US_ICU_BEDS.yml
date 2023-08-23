@@ -1,0 +1,119 @@
+steps:
+  HUB_KFF_US_ICU_BEDS-b8e9dfaa-3a2e-4865-8db4-bf90d433f7db:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ICU beds, US
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: c92dc2d4-271a-47b2-9e19-608acde7addb
+              stepCounter: b8e9dfaa-3a2e-4865-8db4-bf90d433f7db
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_KFF_US_ICU_BEDS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 793cf6ce-25a4-4989-91a6-932fdc50fd21
+                    stepCounter: 13d388a6-e7a1-487f-be1d-47fe4003dcde
+                transform: ""
+          - columnReference:
+              columnCounter: 39b172ee-23d4-4133-ad7b-a7fa72b7b55c
+              stepCounter: b8e9dfaa-3a2e-4865-8db4-bf90d433f7db
+            dataType: VARCHAR(8192)
+            description: ISO-3166-1 entity name
+            hashColumns: []
+            hashDetails: null
+            name: COUNTRY_REGION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1861e6e6-10e2-4460-b2eb-4fa004b20ee5
+                    stepCounter: 13d388a6-e7a1-487f-be1d-47fe4003dcde
+                transform: ""
+          - columnReference:
+              columnCounter: 15de7ab5-d35a-4c11-869f-41a66eae71c9
+              stepCounter: b8e9dfaa-3a2e-4865-8db4-bf90d433f7db
+            dataType: VARCHAR(8192)
+            description: ISO-3166-1 code for geography of record
+            hashColumns: []
+            hashDetails: null
+            name: ISO3166_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 76e26d07-92f7-47f0-9bf6-05580e0f4985
+                    stepCounter: 13d388a6-e7a1-487f-be1d-47fe4003dcde
+                transform: ""
+          - columnReference:
+              columnCounter: fbf90e59-1007-4af7-ab93-7a1966cefa57
+              stepCounter: b8e9dfaa-3a2e-4865-8db4-bf90d433f7db
+            dataType: VARCHAR(8192)
+            description: ISO-3166-2 code for geography of record
+            hashColumns: []
+            hashDetails: null
+            name: ISO3166_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c05252e7-2d31-4ef9-b715-32dc1d0ebd24
+                    stepCounter: 13d388a6-e7a1-487f-be1d-47fe4003dcde
+                transform: ""
+          - columnReference:
+              columnCounter: 2e077eb1-3226-4e9d-9ed5-03d277389dbb
+              stepCounter: b8e9dfaa-3a2e-4865-8db4-bf90d433f7db
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 47b6d468-2f1c-46b7-b2e4-595be67d42cb
+                    stepCounter: 13d388a6-e7a1-487f-be1d-47fe4003dcde
+                transform: ""
+          - columnReference:
+              columnCounter: 6e3f031c-5835-4e5a-bdde-76a8ca3eebc5
+              stepCounter: b8e9dfaa-3a2e-4865-8db4-bf90d433f7db
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d463b061-156e-4222-ac5e-f8b36407ece5
+                    stepCounter: 13d388a6-e7a1-487f-be1d-47fe4003dcde
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_KFF_US_ICU_BEDS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_KFF_US_ICU_BEDS') }} "DVSTG_KFF_US_ICU_BEDS"
+            name: HUB_KFF_US_ICU_BEDS
+            noLinkRefs: []
+      name: HUB_KFF_US_ICU_BEDS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: b8e9dfaa-3a2e-4865-8db4-bf90d433f7db

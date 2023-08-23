@@ -1,0 +1,91 @@
+steps:
+  HUB_AW_SCRAPREASON-91dcd521-acd7-4bfa-af9d-8f30f7a20f4f:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 74e612f7-7657-44b0-85c4-0e4b2cc50faa
+              stepCounter: 91dcd521-acd7-4bfa-af9d-8f30f7a20f4f
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_SCRAPREASON
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9e57556d-d4a0-4344-bf1b-e4235e3f21e6
+                    stepCounter: ef68e7c0-0faf-4c8e-9aec-b218fbc8f719
+                transform: ""
+          - columnReference:
+              columnCounter: ad060a5e-9416-408f-9768-ad085c839cdc
+              stepCounter: 91dcd521-acd7-4bfa-af9d-8f30f7a20f4f
+            dataType: NUMBER(38,0)
+            description: Primary key for ScrapReason records.
+            hashColumns: []
+            hashDetails: null
+            name: SCRAPREASONID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a910ff58-8b4e-4c35-a837-b5d58a7f2667
+                    stepCounter: ef68e7c0-0faf-4c8e-9aec-b218fbc8f719
+                transform: ""
+          - columnReference:
+              columnCounter: abfc78d2-9d69-485a-af47-b0e86a178a92
+              stepCounter: 91dcd521-acd7-4bfa-af9d-8f30f7a20f4f
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 29bf3a74-e66f-4efd-afea-54d89918b307
+                    stepCounter: ef68e7c0-0faf-4c8e-9aec-b218fbc8f719
+                transform: ""
+          - columnReference:
+              columnCounter: b6e87e36-a9aa-4041-bdf1-d2f7b58603b4
+              stepCounter: 91dcd521-acd7-4bfa-af9d-8f30f7a20f4f
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5f0086fa-80d2-4f95-bd81-3d13be8900fe
+                    stepCounter: ef68e7c0-0faf-4c8e-9aec-b218fbc8f719
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_SCRAPREASON
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_SCRAPREASON') }} "DVSTG_AW_SCRAPREASON"
+            name: HUB_AW_SCRAPREASON
+            noLinkRefs: []
+      name: HUB_AW_SCRAPREASON
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 91dcd521-acd7-4bfa-af9d-8f30f7a20f4f

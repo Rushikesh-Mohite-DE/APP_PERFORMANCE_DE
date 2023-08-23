@@ -1,0 +1,91 @@
+steps:
+  HUB_HDX_ACAPS-660f28c5-e83f-4e02-a1c1-f32a35644acd:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ACAPS data on international public health measures
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: a74b228d-6056-4097-a3ff-cc4f4bdbc776
+              stepCounter: 660f28c5-e83f-4e02-a1c1-f32a35644acd
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_HDX_ACAPS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b2698241-b871-4b13-8c1b-1d43fa39db68
+                    stepCounter: 87a1a526-4b16-4765-9621-0cd83aafeba0
+                transform: ""
+          - columnReference:
+              columnCounter: 09029df1-662b-40b5-933f-e6d0d9ec76e9
+              stepCounter: 660f28c5-e83f-4e02-a1c1-f32a35644acd
+            dataType: VARCHAR(128)
+            description: ISO-3166-1 entity name
+            hashColumns: []
+            hashDetails: null
+            name: COUNTRY_STATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f66a0f03-2ee2-4918-a7f8-377e97dc2e85
+                    stepCounter: 87a1a526-4b16-4765-9621-0cd83aafeba0
+                transform: ""
+          - columnReference:
+              columnCounter: bcc19919-8cc6-4084-a56e-4c9659c00a6a
+              stepCounter: 660f28c5-e83f-4e02-a1c1-f32a35644acd
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 194b5356-e68d-4b92-8876-906d958e07b3
+                    stepCounter: 87a1a526-4b16-4765-9621-0cd83aafeba0
+                transform: ""
+          - columnReference:
+              columnCounter: 080f0d28-05a8-4b13-ba6f-2773c23db8a7
+              stepCounter: 660f28c5-e83f-4e02-a1c1-f32a35644acd
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d6d5b896-9add-41f3-968b-5641d8b6b3ac
+                    stepCounter: 87a1a526-4b16-4765-9621-0cd83aafeba0
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_HDX_ACAPS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_HDX_ACAPS') }} "DVSTG_HDX_ACAPS"
+            name: HUB_HDX_ACAPS
+            noLinkRefs: []
+      name: HUB_HDX_ACAPS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 660f28c5-e83f-4e02-a1c1-f32a35644acd

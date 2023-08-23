@@ -1,0 +1,91 @@
+steps:
+  HUB_WWI_SUPPLIERCATEGORIES_ARCHIVE-334230d4-50ad-41f5-89a4-db9f2f38b4d6:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 5d36c967-7d09-4dcf-aa77-9b58860ca75b
+              stepCounter: 334230d4-50ad-41f5-89a4-db9f2f38b4d6
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_SUPPLIERCATEGORIES_ARCHIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d87b0c79-3b35-46ae-b5a8-a575e64dad00
+                    stepCounter: bfb41813-79a8-41ce-980c-319a343308ff
+                transform: ""
+          - columnReference:
+              columnCounter: f0b1b1a3-2683-4411-9dff-6646163bacac
+              stepCounter: 334230d4-50ad-41f5-89a4-db9f2f38b4d6
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SUPPLIERCATEGORYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3dab72ba-67fc-455d-8356-4541d44edf25
+                    stepCounter: bfb41813-79a8-41ce-980c-319a343308ff
+                transform: ""
+          - columnReference:
+              columnCounter: 67683d58-06ca-45a0-ac1b-f835ad2e39ce
+              stepCounter: 334230d4-50ad-41f5-89a4-db9f2f38b4d6
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 060a4a3f-994f-42ef-b2cb-a5bdb708deb7
+                    stepCounter: bfb41813-79a8-41ce-980c-319a343308ff
+                transform: ""
+          - columnReference:
+              columnCounter: c8825299-a520-4855-8f1f-9c8ad4e9a123
+              stepCounter: 334230d4-50ad-41f5-89a4-db9f2f38b4d6
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5c446397-e28e-4375-99c0-0874cbca657d
+                    stepCounter: bfb41813-79a8-41ce-980c-319a343308ff
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_WWI_SUPPLIERCATEGORIES_ARCHIVE
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_WWI_SUPPLIERCATEGORIES_ARCHIVE') }} "DVSTG_WWI_SUPPLIERCATEGORIES_ARCHIVE"
+            name: HUB_WWI_SUPPLIERCATEGORIES_ARCHIVE
+            noLinkRefs: []
+      name: HUB_WWI_SUPPLIERCATEGORIES_ARCHIVE
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 334230d4-50ad-41f5-89a4-db9f2f38b4d6

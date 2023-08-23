@@ -1,0 +1,105 @@
+steps:
+  HUB_SPORTS_BASKETBALL_EVENT_STATES-0198b3ef-a5a4-42b8-a215-f604331efb1d:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: f8a2f334-2615-42be-88a2-93c5a3995398
+              stepCounter: 0198b3ef-a5a4-42b8-a215-f604331efb1d
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_EVENT_STATES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cdd6f70d-ecdc-4c51-b7fc-75c320c4d43b
+                    stepCounter: d3fa774c-5d13-483e-994d-be96cec7c8cb
+                transform: ""
+          - columnReference:
+              columnCounter: 9ac8fd58-a876-46dc-a49a-858ff6ae8b62
+              stepCounter: 0198b3ef-a5a4-42b8-a215-f604331efb1d
+            dataType: VARCHAR(32)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0b398ea0-1fd9-4927-884a-14e9ac68e1ff
+                    stepCounter: d3fa774c-5d13-483e-994d-be96cec7c8cb
+                transform: ""
+          - columnReference:
+              columnCounter: 2d0bcdc7-82de-4eaa-ae36-a57951a5bc8b
+              stepCounter: 0198b3ef-a5a4-42b8-a215-f604331efb1d
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: EVENT_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b707815a-cc9f-48e3-b3c0-7e859a9adce8
+                    stepCounter: d3fa774c-5d13-483e-994d-be96cec7c8cb
+                transform: ""
+          - columnReference:
+              columnCounter: 3dd3ffea-26b0-4bfa-ab86-cc28eb427aeb
+              stepCounter: 0198b3ef-a5a4-42b8-a215-f604331efb1d
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6334f159-8a12-4a65-9092-c21b0a48ba1f
+                    stepCounter: d3fa774c-5d13-483e-994d-be96cec7c8cb
+                transform: ""
+          - columnReference:
+              columnCounter: c7bea19d-bf4a-4695-94fc-266a314c90e0
+              stepCounter: 0198b3ef-a5a4-42b8-a215-f604331efb1d
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 542ed771-90b2-4996-87b7-c05990c4f1c1
+                    stepCounter: d3fa774c-5d13-483e-994d-be96cec7c8cb
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SPORTS_BASKETBALL_EVENT_STATES
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SPORTS_BASKETBALL_EVENT_STATES') }} "DVSTG_SPORTS_BASKETBALL_EVENT_STATES"
+            name: HUB_SPORTS_BASKETBALL_EVENT_STATES
+            noLinkRefs: []
+      name: HUB_SPORTS_BASKETBALL_EVENT_STATES
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 0198b3ef-a5a4-42b8-a215-f604331efb1d

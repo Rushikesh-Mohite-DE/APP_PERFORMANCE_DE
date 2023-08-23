@@ -1,0 +1,149 @@
+steps:
+  SATV0_WWI_PACKAGETYPES-6d4ab102-f36a-438a-a2a1-036f0b9fbac0:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 70a4b1d8-2ace-425a-8db9-9c53cb44e5dc
+              stepCounter: 6d4ab102-f36a-438a-a2a1-036f0b9fbac0
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_PACKAGETYPES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fbd3a10c-978b-41c0-8aeb-d40b4bbb5dc7
+                    stepCounter: 9b4aeb2f-66cc-4829-b881-c12c8739f2b8
+                transform: ""
+          - columnReference:
+              columnCounter: 7826c3d5-150f-467a-844e-c2ffa13210b4
+              stepCounter: 6d4ab102-f36a-438a-a2a1-036f0b9fbac0
+            dataType: VARCHAR(50)
+            description: Full name of package types that stock items can be purchased in or sold in
+            hashColumns: []
+            hashDetails: null
+            name: PACKAGETYPENAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 039a1ba9-3a81-4d45-a30a-23d7e1f43f7a
+                    stepCounter: 9b4aeb2f-66cc-4829-b881-c12c8739f2b8
+                transform: ""
+          - columnReference:
+              columnCounter: 12fe76b9-577d-499b-a266-3964a8a69ac3
+              stepCounter: 6d4ab102-f36a-438a-a2a1-036f0b9fbac0
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LASTEDITEDBY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8e909f6f-883a-4afc-b622-2934ae387efc
+                    stepCounter: 9b4aeb2f-66cc-4829-b881-c12c8739f2b8
+                transform: ""
+          - columnReference:
+              columnCounter: bb1dad15-7325-423d-8061-795b5643d68f
+              stepCounter: 6d4ab102-f36a-438a-a2a1-036f0b9fbac0
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: VALIDFROM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a37df964-87e7-45d3-bcd8-e4d4fbab7c3b
+                    stepCounter: 9b4aeb2f-66cc-4829-b881-c12c8739f2b8
+                transform: ""
+          - columnReference:
+              columnCounter: 7d6266c6-a457-4e31-8adc-574868e301c1
+              stepCounter: 6d4ab102-f36a-438a-a2a1-036f0b9fbac0
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: VALIDTO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 704ba1a0-43e8-4f9a-a3b6-231adf272681
+                    stepCounter: 9b4aeb2f-66cc-4829-b881-c12c8739f2b8
+                transform: ""
+          - columnReference:
+              columnCounter: 6fd0d785-2fa8-419a-aa36-56cf805397d9
+              stepCounter: 6d4ab102-f36a-438a-a2a1-036f0b9fbac0
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c7e236c9-5a81-4d6b-a99d-a50007ecebbf
+                    stepCounter: 9b4aeb2f-66cc-4829-b881-c12c8739f2b8
+                transform: ""
+          - columnReference:
+              columnCounter: 13fae028-0121-4928-b202-802b216b9da6
+              stepCounter: 6d4ab102-f36a-438a-a2a1-036f0b9fbac0
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 645ba33e-c419-496d-9ae8-ebfd3c4130a3
+                    stepCounter: 9b4aeb2f-66cc-4829-b881-c12c8739f2b8
+                transform: ""
+          - columnReference:
+              columnCounter: e8487d0e-1f62-4287-abe1-786e6aa7183e
+              stepCounter: 6d4ab102-f36a-438a-a2a1-036f0b9fbac0
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 35a5a4c7-e497-4d8d-b5e7-1f484a7e616f
+                    stepCounter: 9b4aeb2f-66cc-4829-b881-c12c8739f2b8
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_WWI_PACKAGETYPES
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_WWI_PACKAGETYPES') }} "DVSTG_WWI_PACKAGETYPES"
+            name: SATV0_WWI_PACKAGETYPES
+            noLinkRefs: []
+      name: SATV0_WWI_PACKAGETYPES
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: 6d4ab102-f36a-438a-a2a1-036f0b9fbac0

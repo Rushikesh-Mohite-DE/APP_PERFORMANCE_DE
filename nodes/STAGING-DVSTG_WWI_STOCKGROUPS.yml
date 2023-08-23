@@ -1,0 +1,195 @@
+steps:
+  DVSTG_WWI_STOCKGROUPS-3dade1c3-b778-4730-851b-acaed5429f8d:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2d7ac0c0-b22b-4d0d-9adb-fff4dfdd0eb2
+              stepCounter: 3dade1c3-b778-4730-851b-acaed5429f8d
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: cf9dd5c2-99ef-4dd7-ac2a-e62b1062029c
+                stepCounter: 3dade1c3-b778-4730-851b-acaed5429f8d
+            name: HK_STOCKGROUPS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: cf9dd5c2-99ef-4dd7-ac2a-e62b1062029c
+              stepCounter: 3dade1c3-b778-4730-851b-acaed5429f8d
+            dataType: NUMBER(38,0)
+            description: Numeric ID used for reference to a stock group within the database
+            name: STOCKGROUPID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ccdf7205-f63b-4350-b1e1-adcb52284563
+                    stepCounter: b82ee7e4-82a5-4809-9c27-14c492c1f261
+                transform: ""
+          - columnReference:
+              columnCounter: f93c3636-a73b-49ae-abb7-5e24178d1aca
+              stepCounter: 3dade1c3-b778-4730-851b-acaed5429f8d
+            dataType: VARCHAR(50)
+            description: Full name of groups used to categorize stock items
+            name: STOCKGROUPNAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4347978f-02f8-46d2-8620-dafc9ed64416
+                    stepCounter: b82ee7e4-82a5-4809-9c27-14c492c1f261
+                transform: ""
+          - columnReference:
+              columnCounter: 80192358-9e6a-4766-b9ad-4694620d5dbf
+              stepCounter: 3dade1c3-b778-4730-851b-acaed5429f8d
+            dataType: NUMBER(38,0)
+            description: ""
+            name: LASTEDITEDBY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: be8bc333-df16-4729-80e6-19b8f435c067
+                    stepCounter: b82ee7e4-82a5-4809-9c27-14c492c1f261
+                transform: ""
+          - columnReference:
+              columnCounter: 72800bf9-0f80-412b-835e-66adb2a071b7
+              stepCounter: 3dade1c3-b778-4730-851b-acaed5429f8d
+            dataType: DATE
+            description: ""
+            name: VALIDFROM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4ca7894e-0193-4f5d-9740-f03611fcb4c6
+                    stepCounter: b82ee7e4-82a5-4809-9c27-14c492c1f261
+                transform: ""
+          - columnReference:
+              columnCounter: 1f154fbf-b5ae-4aec-875f-f313004b5935
+              stepCounter: 3dade1c3-b778-4730-851b-acaed5429f8d
+            dataType: DATE
+            description: ""
+            name: VALIDTO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 19d64997-2220-491a-b309-71beb173619b
+                    stepCounter: b82ee7e4-82a5-4809-9c27-14c492c1f261
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 72aed774-feac-4df0-a2b6-27a03196a4d4
+              stepCounter: 3dade1c3-b778-4730-851b-acaed5429f8d
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: bac543e6-79ea-4c54-a347-167abecaf9d5
+              stepCounter: 3dade1c3-b778-4730-851b-acaed5429f8d
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ee8ad6db-94c4-49bd-a361-1777e5438146
+              stepCounter: 3dade1c3-b778-4730-851b-acaed5429f8d
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: f93c3636-a73b-49ae-abb7-5e24178d1aca
+                stepCounter: 3dade1c3-b778-4730-851b-acaed5429f8d
+              - columnCounter: 80192358-9e6a-4766-b9ad-4694620d5dbf
+                stepCounter: 3dade1c3-b778-4730-851b-acaed5429f8d
+              - columnCounter: 72800bf9-0f80-412b-835e-66adb2a071b7
+                stepCounter: 3dade1c3-b778-4730-851b-acaed5429f8d
+              - columnCounter: 1f154fbf-b5ae-4aec-875f-f313004b5935
+                stepCounter: 3dade1c3-b778-4730-851b-acaed5429f8d
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 690fe875-519e-4eb7-9943-5271973af5af
+              stepCounter: 3dade1c3-b778-4730-851b-acaed5429f8d
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: cf9dd5c2-99ef-4dd7-ac2a-e62b1062029c
+                stepCounter: 3dade1c3-b778-4730-851b-acaed5429f8d
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: WIDEWORLIMPORTES_SRC
+                nodeName: WWI_LOAD_STOCKGROUPS
+            join:
+              joinCondition: FROM {{ ref('WIDEWORLIMPORTES_SRC', 'WWI_LOAD_STOCKGROUPS') }} "WWI_LOAD_STOCKGROUPS"
+            name: DVSTG_WWI_STOCKGROUPS
+            noLinkRefs: []
+      name: DVSTG_WWI_STOCKGROUPS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: 3dade1c3-b778-4730-851b-acaed5429f8d

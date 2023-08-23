@@ -1,0 +1,169 @@
+steps:
+  WWI_LOAD_STATEPROVINCES-62ab0f44-afdb-4cbd-becf-7a85e05498dd:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: WIDEWORLIMPORTES_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9033b321-0737-41fb-a5d1-c8aa33282ba1
+              stepCounter: 62ab0f44-afdb-4cbd-becf-7a85e05498dd
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Numeric ID used for reference to a state or province within the database
+            name: STATEPROVINCEID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e3777e2c-6022-439d-ab72-5262d6926afb
+              stepCounter: 62ab0f44-afdb-4cbd-becf-7a85e05498dd
+            config: {}
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: Common code for this state or province (such as WA - Washington for the USA)
+            name: STATEPROVINCECODE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 66d9097b-1220-4f9c-b825-40e4dd44f479
+              stepCounter: 62ab0f44-afdb-4cbd-becf-7a85e05498dd
+            config: {}
+            dataType: VARCHAR(50)
+            defaultValue: ""
+            description: Formal name of the state or province
+            name: STATEPROVINCENAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0a38ba69-ffa9-42b2-8341-ca302128395c
+              stepCounter: 62ab0f44-afdb-4cbd-becf-7a85e05498dd
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Country for this StateProvince
+            name: COUNTRYID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5de02e36-ecbb-4426-a56e-f64a76fe0dd9
+              stepCounter: 62ab0f44-afdb-4cbd-becf-7a85e05498dd
+            config: {}
+            dataType: VARCHAR(50)
+            defaultValue: ""
+            description: Sales territory for this StateProvince
+            name: SALESTERRITORY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: df6da9ae-7562-4932-8012-c46d76fb8b60
+              stepCounter: 62ab0f44-afdb-4cbd-becf-7a85e05498dd
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: Geographic boundary of the state or province
+            name: BORDER
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: de03a4af-75b8-49d1-8652-34e6a45261f0
+              stepCounter: 62ab0f44-afdb-4cbd-becf-7a85e05498dd
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Latest available population for the StateProvince
+            name: LATESTRECORDEDPOPULATION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4c90f224-1356-4c1d-abda-1d5ce8cb3dbf
+              stepCounter: 62ab0f44-afdb-4cbd-becf-7a85e05498dd
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: LASTEDITEDBY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f7f22d46-994e-4b01-87e3-510e23d5ca91
+              stepCounter: 62ab0f44-afdb-4cbd-becf-7a85e05498dd
+            config: {}
+            dataType: DATE
+            defaultValue: ""
+            description: ""
+            name: VALIDFROM
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f6f1ad22-8407-4c41-b10d-9eda44db4399
+              stepCounter: 62ab0f44-afdb-4cbd-becf-7a85e05498dd
+            config: {}
+            dataType: DATE
+            defaultValue: ""
+            description: ""
+            name: VALIDTO
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('WIDEWORLIMPORTES_SRC', 'WWI_LOAD_STATEPROVINCES') }}
+      name: WWI_LOAD_STATEPROVINCES
+      schema: ""
+      sqlType: Source
+      table: WWI_LOAD_STATEPROVINCES
+      type: sourceInput
+    stepCounter: 62ab0f44-afdb-4cbd-becf-7a85e05498dd

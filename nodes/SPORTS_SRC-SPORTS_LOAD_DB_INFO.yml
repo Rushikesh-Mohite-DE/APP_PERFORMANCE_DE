@@ -1,0 +1,34 @@
+steps:
+  SPORTS_LOAD_DB_INFO-51727a60-5854-44f0-aa97-9439359bfe0a:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SPORTS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 09f456d3-3af0-4baf-97e3-a894e19dae6f
+              stepCounter: 51727a60-5854-44f0-aa97-9439359bfe0a
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: VERSION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SPORTS_SRC', 'SPORTS_LOAD_DB_INFO') }}
+      name: SPORTS_LOAD_DB_INFO
+      schema: ""
+      sqlType: Source
+      table: SPORTS_LOAD_DB_INFO
+      type: sourceInput
+    stepCounter: 51727a60-5854-44f0-aa97-9439359bfe0a

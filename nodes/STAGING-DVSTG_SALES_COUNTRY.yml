@@ -1,0 +1,209 @@
+steps:
+  DVSTG_SALES_COUNTRY-54f826c5-d752-4ed9-8999-d165db066e29:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9376df03-cb5d-4c00-819d-5901af52995b
+              stepCounter: 54f826c5-d752-4ed9-8999-d165db066e29
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 1fffe55d-dcbf-405c-b624-95d2604a793e
+                stepCounter: 54f826c5-d752-4ed9-8999-d165db066e29
+            name: HK_SALES_COUNTRY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 1fffe55d-dcbf-405c-b624-95d2604a793e
+              stepCounter: 54f826c5-d752-4ed9-8999-d165db066e29
+            dataType: VARCHAR(3)
+            description: ""
+            name: COUNTRY_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9cfa76aa-5815-4034-9a74-5a8839f03215
+                    stepCounter: 498056d9-fbde-4815-bb28-9ea24983b509
+                transform: ""
+          - columnReference:
+              columnCounter: 443d2b8e-8642-4ec9-b9d1-e1f018466a19
+              stepCounter: 54f826c5-d752-4ed9-8999-d165db066e29
+            dataType: VARCHAR(80)
+            description: ""
+            name: COUNTRY_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bdb85844-dd19-4191-9875-9c9b5898a51f
+                    stepCounter: 498056d9-fbde-4815-bb28-9ea24983b509
+                transform: ""
+          - columnReference:
+              columnCounter: e73ea69d-187d-4937-bfdd-c2ecdbf8859e
+              stepCounter: 54f826c5-d752-4ed9-8999-d165db066e29
+            dataType: NUMBER(38,0)
+            description: ""
+            name: CREATING_EMPLOYEE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d38c456e-6b9a-4a9c-ae14-7a2652e9aec7
+                    stepCounter: 498056d9-fbde-4815-bb28-9ea24983b509
+                transform: ""
+          - columnReference:
+              columnCounter: bf13b33e-ec8b-43f6-b5c5-9261be0d275a
+              stepCounter: 54f826c5-d752-4ed9-8999-d165db066e29
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            name: CREATED_DATETIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8e98f084-65eb-4284-8b47-6f9fd0ff7413
+                    stepCounter: 498056d9-fbde-4815-bb28-9ea24983b509
+                transform: ""
+          - columnReference:
+              columnCounter: 0401852d-f43c-457d-862b-b9ba2107d689
+              stepCounter: 54f826c5-d752-4ed9-8999-d165db066e29
+            dataType: NUMBER(38,0)
+            description: ""
+            name: LAST_CHANGE_EMPLOYEE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 00b7fc7b-1643-4d77-973e-45ce22b4324b
+                    stepCounter: 498056d9-fbde-4815-bb28-9ea24983b509
+                transform: ""
+          - columnReference:
+              columnCounter: cfc2c9c3-acec-4029-84d9-61bf3d44a092
+              stepCounter: 54f826c5-d752-4ed9-8999-d165db066e29
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            name: LAST_CHANGE_DATETIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7a65ac96-e5af-4862-bb37-5f13e61bf8cc
+                    stepCounter: 498056d9-fbde-4815-bb28-9ea24983b509
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c32fcc6c-c4d9-4971-a23a-43a9ac1b5f8d
+              stepCounter: 54f826c5-d752-4ed9-8999-d165db066e29
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d5db5c63-b51f-4442-a58e-322e99976ffd
+              stepCounter: 54f826c5-d752-4ed9-8999-d165db066e29
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 63f341d3-9164-4ec1-88a9-9b8efe2c9b89
+              stepCounter: 54f826c5-d752-4ed9-8999-d165db066e29
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 443d2b8e-8642-4ec9-b9d1-e1f018466a19
+                stepCounter: 54f826c5-d752-4ed9-8999-d165db066e29
+              - columnCounter: e73ea69d-187d-4937-bfdd-c2ecdbf8859e
+                stepCounter: 54f826c5-d752-4ed9-8999-d165db066e29
+              - columnCounter: bf13b33e-ec8b-43f6-b5c5-9261be0d275a
+                stepCounter: 54f826c5-d752-4ed9-8999-d165db066e29
+              - columnCounter: 0401852d-f43c-457d-862b-b9ba2107d689
+                stepCounter: 54f826c5-d752-4ed9-8999-d165db066e29
+              - columnCounter: cfc2c9c3-acec-4029-84d9-61bf3d44a092
+                stepCounter: 54f826c5-d752-4ed9-8999-d165db066e29
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 16d02820-2bac-4fa5-8446-fb3c20a504fa
+              stepCounter: 54f826c5-d752-4ed9-8999-d165db066e29
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: e73ea69d-187d-4937-bfdd-c2ecdbf8859e
+                stepCounter: 54f826c5-d752-4ed9-8999-d165db066e29
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SALES_SRC
+                nodeName: SALES_LOAD_COUNTRY
+            join:
+              joinCondition: FROM {{ ref('SALES_SRC', 'SALES_LOAD_COUNTRY') }} "SALES_LOAD_COUNTRY"
+            name: DVSTG_SALES_COUNTRY
+            noLinkRefs: []
+      name: DVSTG_SALES_COUNTRY
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: 54f826c5-d752-4ed9-8999-d165db066e29

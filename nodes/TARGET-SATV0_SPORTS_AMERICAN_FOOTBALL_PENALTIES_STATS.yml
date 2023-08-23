@@ -1,0 +1,135 @@
+steps:
+  SATV0_SPORTS_AMERICAN_FOOTBALL_PENALTIES_STATS-a1e201f8-216e-42eb-a0ce-a681770c007f:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 2abb89a7-e58e-4bab-baf5-019848cf61a8
+              stepCounter: a1e201f8-216e-42eb-a0ce-a681770c007f
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_PENALTIES_STATS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5deee254-30f0-4bde-a03f-1d37cba10144
+                    stepCounter: d41ad6f4-fb41-4ecd-a243-6126e6591ef9
+                transform: ""
+          - columnReference:
+              columnCounter: 6f030c09-617b-4467-9cb9-06d84380a72d
+              stepCounter: a1e201f8-216e-42eb-a0ce-a681770c007f
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PENALTIES_TOTAL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0bbdeef9-f189-4a93-902a-5e15e3b0992e
+                    stepCounter: d41ad6f4-fb41-4ecd-a243-6126e6591ef9
+                transform: ""
+          - columnReference:
+              columnCounter: 022c298d-c1ff-408a-8b28-8881fe1e6847
+              stepCounter: a1e201f8-216e-42eb-a0ce-a681770c007f
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PENALTY_YARDS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fdf4a007-00b2-4f3e-b0a5-8cc716b328a1
+                    stepCounter: d41ad6f4-fb41-4ecd-a243-6126e6591ef9
+                transform: ""
+          - columnReference:
+              columnCounter: 476b5ee2-090a-48a9-bd8d-57ef546ff308
+              stepCounter: a1e201f8-216e-42eb-a0ce-a681770c007f
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PENALTY_FIRST_DOWNS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b758a5bb-f9fa-4e44-ac95-601fdc8753c2
+                    stepCounter: d41ad6f4-fb41-4ecd-a243-6126e6591ef9
+                transform: ""
+          - columnReference:
+              columnCounter: d53e8175-a284-4bd4-8e7b-19a30e4c6cd8
+              stepCounter: a1e201f8-216e-42eb-a0ce-a681770c007f
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: aa30ca44-9f73-4d17-bd82-32e961a2063c
+                    stepCounter: d41ad6f4-fb41-4ecd-a243-6126e6591ef9
+                transform: ""
+          - columnReference:
+              columnCounter: 5162d9fa-1ef1-4fe6-98e5-9f4f1eecd2ec
+              stepCounter: a1e201f8-216e-42eb-a0ce-a681770c007f
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cd427842-b46b-49d5-a6fc-94fbf79c0c7d
+                    stepCounter: d41ad6f4-fb41-4ecd-a243-6126e6591ef9
+                transform: ""
+          - columnReference:
+              columnCounter: a2a45d30-a927-46d8-8909-e80a15556cbb
+              stepCounter: a1e201f8-216e-42eb-a0ce-a681770c007f
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 31a31de7-fd70-49d8-bd23-77296b0003e2
+                    stepCounter: d41ad6f4-fb41-4ecd-a243-6126e6591ef9
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SPORTS_AMERICAN_FOOTBALL_PENALTIES_STATS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SPORTS_AMERICAN_FOOTBALL_PENALTIES_STATS') }} "DVSTG_SPORTS_AMERICAN_FOOTBALL_PENALTIES_STATS"
+            name: SATV0_SPORTS_AMERICAN_FOOTBALL_PENALTIES_STATS
+            noLinkRefs: []
+      name: SATV0_SPORTS_AMERICAN_FOOTBALL_PENALTIES_STATS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: a1e201f8-216e-42eb-a0ce-a681770c007f

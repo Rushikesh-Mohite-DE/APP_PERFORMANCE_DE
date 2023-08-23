@@ -1,0 +1,91 @@
+steps:
+  HUB_HS_BULK_DATA-728f2f74-db09-4e81-a71d-4ac451f1814e:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: Global data on healthcare providers
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 8cd940f5-6a75-4c8f-8401-fbf3af2f7fdf
+              stepCounter: 728f2f74-db09-4e81-a71d-4ac451f1814e
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_HS_BULK_DATA
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 879e9619-5b45-42f9-a1ce-f5d06e8cf0a2
+                    stepCounter: 72618740-78f2-4c56-9bb6-7efdc4ee3ef3
+                transform: ""
+          - columnReference:
+              columnCounter: 4a27f876-7e75-4ff2-b02b-75f121a8b61a
+              stepCounter: 728f2f74-db09-4e81-a71d-4ac451f1814e
+            dataType: FLOAT
+            description: Longitude
+            hashColumns: []
+            hashDetails: null
+            name: LONG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0b8a8d0f-f9d6-45d9-86c8-4d50e7433e1d
+                    stepCounter: 72618740-78f2-4c56-9bb6-7efdc4ee3ef3
+                transform: ""
+          - columnReference:
+              columnCounter: b657cf5e-3962-4124-9e13-8bfaa3cc08ec
+              stepCounter: 728f2f74-db09-4e81-a71d-4ac451f1814e
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 35e70372-ebfd-4ea6-8e64-c53cfcb2c2e8
+                    stepCounter: 72618740-78f2-4c56-9bb6-7efdc4ee3ef3
+                transform: ""
+          - columnReference:
+              columnCounter: 22e19142-9ab2-4fda-90e6-8d2ac2ac827d
+              stepCounter: 728f2f74-db09-4e81-a71d-4ac451f1814e
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: df39dbaa-1b9b-40ca-937e-1fd3637f00a4
+                    stepCounter: 72618740-78f2-4c56-9bb6-7efdc4ee3ef3
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_HS_BULK_DATA
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_HS_BULK_DATA') }} "DVSTG_HS_BULK_DATA"
+            name: HUB_HS_BULK_DATA
+            noLinkRefs: []
+      name: HUB_HS_BULK_DATA
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 728f2f74-db09-4e81-a71d-4ac451f1814e

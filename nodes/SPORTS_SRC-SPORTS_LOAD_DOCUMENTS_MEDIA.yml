@@ -1,0 +1,79 @@
+steps:
+  SPORTS_LOAD_DOCUMENTS_MEDIA-a867b7c3-cb97-49ac-9767-efd2f9704ab1:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SPORTS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: adc10b4b-5d2c-4807-9ebd-889c04941e6a
+              stepCounter: a867b7c3-cb97-49ac-9767-efd2f9704ab1
+            config: {}
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            name: ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9c453fc6-3b46-46c3-a3af-5cdbd6be02a6
+              stepCounter: a867b7c3-cb97-49ac-9767-efd2f9704ab1
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: DOCUMENT_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f15c043d-b9fe-4981-8955-413d0d2bdac1
+              stepCounter: a867b7c3-cb97-49ac-9767-efd2f9704ab1
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: MEDIA_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 20791581-04ae-4238-9a65-8f2fc29286cb
+              stepCounter: a867b7c3-cb97-49ac-9767-efd2f9704ab1
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: MEDIA_CAPTION_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SPORTS_SRC', 'SPORTS_LOAD_DOCUMENTS_MEDIA') }}
+      name: SPORTS_LOAD_DOCUMENTS_MEDIA
+      schema: ""
+      sqlType: Source
+      table: SPORTS_LOAD_DOCUMENTS_MEDIA
+      type: sourceInput
+    stepCounter: a867b7c3-cb97-49ac-9767-efd2f9704ab1

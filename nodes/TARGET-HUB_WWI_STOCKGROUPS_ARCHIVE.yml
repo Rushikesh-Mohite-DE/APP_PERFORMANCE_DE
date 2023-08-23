@@ -1,0 +1,91 @@
+steps:
+  HUB_WWI_STOCKGROUPS_ARCHIVE-4e2c0228-9a2d-4a59-95e1-4b51df8fa967:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 289df783-a8d9-47d4-aa14-20b3a87f1f30
+              stepCounter: 4e2c0228-9a2d-4a59-95e1-4b51df8fa967
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_STOCKGROUPS_ARCHIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 498fce94-4405-4102-a5ae-6170e87dbb42
+                    stepCounter: 900786e0-1b55-4d91-9a2d-cc91d40e93d5
+                transform: ""
+          - columnReference:
+              columnCounter: a351348e-a28f-4ee3-8e94-3a18a6a01720
+              stepCounter: 4e2c0228-9a2d-4a59-95e1-4b51df8fa967
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: STOCKGROUPID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9a08f555-1ed1-47c3-8913-d04b32c8badc
+                    stepCounter: 900786e0-1b55-4d91-9a2d-cc91d40e93d5
+                transform: ""
+          - columnReference:
+              columnCounter: 35d5a5b9-775f-4013-8dc9-6d92b3696629
+              stepCounter: 4e2c0228-9a2d-4a59-95e1-4b51df8fa967
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 576653f3-afa8-466c-ad7b-47166c2be8dd
+                    stepCounter: 900786e0-1b55-4d91-9a2d-cc91d40e93d5
+                transform: ""
+          - columnReference:
+              columnCounter: 7a371efc-23da-4cad-981c-741b58519508
+              stepCounter: 4e2c0228-9a2d-4a59-95e1-4b51df8fa967
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 63c957f3-3e2f-4c5d-8131-50e8940fa072
+                    stepCounter: 900786e0-1b55-4d91-9a2d-cc91d40e93d5
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_WWI_STOCKGROUPS_ARCHIVE
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_WWI_STOCKGROUPS_ARCHIVE') }} "DVSTG_WWI_STOCKGROUPS_ARCHIVE"
+            name: HUB_WWI_STOCKGROUPS_ARCHIVE
+            noLinkRefs: []
+      name: HUB_WWI_STOCKGROUPS_ARCHIVE
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 4e2c0228-9a2d-4a59-95e1-4b51df8fa967

@@ -1,0 +1,207 @@
+steps:
+  DVSTG_AW_STORE-7f4df18c-b787-4819-97e8-681f64a57028:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 43b646a3-8edc-438c-9d0d-47031396f6d5
+              stepCounter: 7f4df18c-b787-4819-97e8-681f64a57028
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: c921b5ed-e282-42d3-a22a-9d3ac59009dd
+                stepCounter: 7f4df18c-b787-4819-97e8-681f64a57028
+              - columnCounter: 503bf752-2e84-4219-b921-924508dad97c
+                stepCounter: 7f4df18c-b787-4819-97e8-681f64a57028
+            name: HK_STORE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: c921b5ed-e282-42d3-a22a-9d3ac59009dd
+              stepCounter: 7f4df18c-b787-4819-97e8-681f64a57028
+            dataType: NUMBER(38,0)
+            description: Primary key. Foreign key to Customer.BusinessEntityID.
+            name: BUSINESSENTITYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 57edd87d-eb9e-4170-9b4e-f205060b0ead
+                    stepCounter: cc77440b-b178-4fc5-b779-b0129f7221d2
+                transform: ""
+          - columnReference:
+              columnCounter: d9cb27f8-20fb-4849-ae16-71b34a699025
+              stepCounter: 7f4df18c-b787-4819-97e8-681f64a57028
+            dataType: VARCHAR(16777216)
+            description: Name of the store.
+            name: NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b1f19d14-37e6-40b4-8779-e89c10fe2646
+                    stepCounter: cc77440b-b178-4fc5-b779-b0129f7221d2
+                transform: ""
+          - columnReference:
+              columnCounter: 503bf752-2e84-4219-b921-924508dad97c
+              stepCounter: 7f4df18c-b787-4819-97e8-681f64a57028
+            dataType: NUMBER(38,0)
+            description: ID of the sales person assigned to the customer. Foreign key to SalesPerson.BusinessEntityID.
+            name: SALESPERSONID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7c9c8f2d-73da-48cc-8fe5-c6b9d4d59761
+                    stepCounter: cc77440b-b178-4fc5-b779-b0129f7221d2
+                transform: ""
+          - columnReference:
+              columnCounter: 383ea422-de78-4b7e-97c1-1d26738e9bc5
+              stepCounter: 7f4df18c-b787-4819-97e8-681f64a57028
+            dataType: VARCHAR(16777216)
+            description: Demographic informationg about the store such as the number of employees, annual sales and store type.
+            name: DEMOGRAPHICS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f84be6af-7e20-4462-928f-eacd4c65f4e7
+                    stepCounter: cc77440b-b178-4fc5-b779-b0129f7221d2
+                transform: ""
+          - columnReference:
+              columnCounter: b6f0ee34-c384-4928-bd5a-ec51948c6a89
+              stepCounter: 7f4df18c-b787-4819-97e8-681f64a57028
+            dataType: VARCHAR(16777216)
+            description: ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            name: ROWGUID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a145a157-38d3-41a2-a067-5fa922379f1e
+                    stepCounter: cc77440b-b178-4fc5-b779-b0129f7221d2
+                transform: ""
+          - columnReference:
+              columnCounter: a6309b41-c40a-40b3-a995-c531c1dd591c
+              stepCounter: 7f4df18c-b787-4819-97e8-681f64a57028
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5d9464d6-e81d-4d75-9241-10ef61308f7e
+                    stepCounter: cc77440b-b178-4fc5-b779-b0129f7221d2
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: db3375e1-032c-4da2-90f1-7597416aa40a
+              stepCounter: 7f4df18c-b787-4819-97e8-681f64a57028
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3ba4e39d-5f21-4b03-aa58-c2ecde86fcac
+              stepCounter: 7f4df18c-b787-4819-97e8-681f64a57028
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fe4d8291-3eb3-4977-a5d2-6a9a47f24e83
+              stepCounter: 7f4df18c-b787-4819-97e8-681f64a57028
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: d9cb27f8-20fb-4849-ae16-71b34a699025
+                stepCounter: 7f4df18c-b787-4819-97e8-681f64a57028
+              - columnCounter: 383ea422-de78-4b7e-97c1-1d26738e9bc5
+                stepCounter: 7f4df18c-b787-4819-97e8-681f64a57028
+              - columnCounter: b6f0ee34-c384-4928-bd5a-ec51948c6a89
+                stepCounter: 7f4df18c-b787-4819-97e8-681f64a57028
+              - columnCounter: a6309b41-c40a-40b3-a995-c531c1dd591c
+                stepCounter: 7f4df18c-b787-4819-97e8-681f64a57028
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences: []
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d2dc98e4-e541-4577-8774-925e992fdb64
+              stepCounter: 7f4df18c-b787-4819-97e8-681f64a57028
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 503bf752-2e84-4219-b921-924508dad97c
+                stepCounter: 7f4df18c-b787-4819-97e8-681f64a57028
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: ADV_WRKS_SRC
+                nodeName: AW_LOAD_STORE
+            join:
+              joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_STORE') }} "AW_LOAD_STORE"
+            name: DVSTG_AW_STORE
+            noLinkRefs: []
+      name: DVSTG_AW_STORE
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: 7f4df18c-b787-4819-97e8-681f64a57028

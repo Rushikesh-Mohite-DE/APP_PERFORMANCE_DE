@@ -1,0 +1,105 @@
+steps:
+  HUB_KFF_US_REOPENING_TIMELINE_INCREMENT-f2e8ece8-62fd-46ca-9c56-ff2468777f95:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 7ff0369d-654c-471f-bf58-eac06f2988d8
+              stepCounter: f2e8ece8-62fd-46ca-9c56-ff2468777f95
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_US_REOPENING_TIMELINE_INCREMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1391fcb5-f06b-4005-a0c6-4b6ae28f159a
+                    stepCounter: e164550b-12b5-4661-a2a3-cdb9be79bf76
+                transform: ""
+          - columnReference:
+              columnCounter: cae95755-8b73-45a6-885f-93e09d502a82
+              stepCounter: f2e8ece8-62fd-46ca-9c56-ff2468777f95
+            dataType: VARCHAR(255)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: COUNTRY_REGION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9f2f4e2a-1b4d-4a7f-8af4-b8b70aed7a8c
+                    stepCounter: e164550b-12b5-4661-a2a3-cdb9be79bf76
+                transform: ""
+          - columnReference:
+              columnCounter: 8f58d1ea-58bb-448e-9221-82c598519be5
+              stepCounter: f2e8ece8-62fd-46ca-9c56-ff2468777f95
+            dataType: VARCHAR(255)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PROVINCE_STATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 451e0be0-93e9-43b5-b7d0-6bf1ed8d24d0
+                    stepCounter: e164550b-12b5-4661-a2a3-cdb9be79bf76
+                transform: ""
+          - columnReference:
+              columnCounter: 86399dd5-0707-4b4a-a604-a96732f4fae2
+              stepCounter: f2e8ece8-62fd-46ca-9c56-ff2468777f95
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ac561a17-cb7a-40f7-a765-1096df141409
+                    stepCounter: e164550b-12b5-4661-a2a3-cdb9be79bf76
+                transform: ""
+          - columnReference:
+              columnCounter: 7d8c81ad-a511-4141-865d-22aa60847247
+              stepCounter: f2e8ece8-62fd-46ca-9c56-ff2468777f95
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4da3d511-7ea6-4567-b0c0-c462eb3cd4a3
+                    stepCounter: e164550b-12b5-4661-a2a3-cdb9be79bf76
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_KFF_US_REOPENING_TIMELINE_INCREMENT
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_KFF_US_REOPENING_TIMELINE_INCREMENT') }} "DVSTG_KFF_US_REOPENING_TIMELINE_INCREMENT"
+            name: HUB_KFF_US_REOPENING_TIMELINE_INCREMENT
+            noLinkRefs: []
+      name: HUB_KFF_US_REOPENING_TIMELINE_INCREMENT
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: f2e8ece8-62fd-46ca-9c56-ff2468777f95

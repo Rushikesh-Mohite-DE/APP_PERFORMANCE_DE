@@ -1,0 +1,175 @@
+steps:
+  LINK_AW_EMPLOYEEPAYHISTORY-6582e59e-ba38-49e1-abd5-bace13620f93:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 952de455-8010-446d-b725-036ed47b4fd7
+              stepCounter: 6582e59e-ba38-49e1-abd5-bace13620f93
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_EMPLOYEEPAYHISTORY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 63bf1a49-ed31-49c5-b8b1-0181782b573a
+                    stepCounter: ea440c7a-0d29-444e-9793-f2b2f7ed5c7b
+                transform: ""
+          - columnReference:
+              columnCounter: 4bce4f74-b9bf-42db-8265-8690bf8e63f7
+              stepCounter: 6582e59e-ba38-49e1-abd5-bace13620f93
+            dataType: NUMBER(38,0)
+            description: Employee identification number. Foreign key to Employee.BusinessEntityID.
+            hashColumns: []
+            hashDetails: null
+            name: BUSINESSENTITYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4f504768-5626-44df-9735-cb24b232f45e
+                    stepCounter: ea440c7a-0d29-444e-9793-f2b2f7ed5c7b
+                transform: ""
+          - columnReference:
+              columnCounter: fc64c2ee-b7ec-4e35-9813-253f299e9b47
+              stepCounter: 6582e59e-ba38-49e1-abd5-bace13620f93
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date the change in pay is effective
+            hashColumns: []
+            hashDetails: null
+            name: RATECHANGEDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0c733925-886e-4d22-8ea5-9965c9b61a3f
+                    stepCounter: ea440c7a-0d29-444e-9793-f2b2f7ed5c7b
+                transform: ""
+          - columnReference:
+              columnCounter: 166a611b-5e77-41c5-b58e-39068db01290
+              stepCounter: 6582e59e-ba38-49e1-abd5-bace13620f93
+            dataType: NUMBER(19,4)
+            description: Salary hourly rate.
+            hashColumns: []
+            hashDetails: null
+            name: RATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b20975a2-538c-4a6e-8e74-91fb6cb86b70
+                    stepCounter: ea440c7a-0d29-444e-9793-f2b2f7ed5c7b
+                transform: ""
+          - columnReference:
+              columnCounter: 4ce0ba4e-3134-4613-aa07-5c1b41f9630f
+              stepCounter: 6582e59e-ba38-49e1-abd5-bace13620f93
+            dataType: NUMBER(38,0)
+            description: 1 = Salary received monthly, 2 = Salary received biweekly
+            hashColumns: []
+            hashDetails: null
+            name: PAYFREQUENCY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 50eeaa02-e36c-495e-b33e-fcc72fb1fa0d
+                    stepCounter: ea440c7a-0d29-444e-9793-f2b2f7ed5c7b
+                transform: ""
+          - columnReference:
+              columnCounter: bb4a5b70-a565-4ee8-901c-f016bc53bd95
+              stepCounter: 6582e59e-ba38-49e1-abd5-bace13620f93
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            hashColumns: []
+            hashDetails: null
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 031e11be-7cc0-4ab0-9f67-459c1d650399
+                    stepCounter: ea440c7a-0d29-444e-9793-f2b2f7ed5c7b
+                transform: ""
+          - columnReference:
+              columnCounter: 0f2aea00-0912-4d25-9f84-79c2c3acef92
+              stepCounter: 6582e59e-ba38-49e1-abd5-bace13620f93
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f0ff4af7-810b-40c7-b058-c88c5d62e7ab
+                    stepCounter: ea440c7a-0d29-444e-9793-f2b2f7ed5c7b
+                transform: ""
+          - columnReference:
+              columnCounter: 972dcae0-a0a6-4a07-805a-38104b72504f
+              stepCounter: 6582e59e-ba38-49e1-abd5-bace13620f93
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 23ea62af-8fc9-4714-a7bd-09a80c192118
+                    stepCounter: ea440c7a-0d29-444e-9793-f2b2f7ed5c7b
+                transform: ""
+          - columnReference:
+              columnCounter: 4106a07f-f438-49ea-9431-38e81437b02e
+              stepCounter: 6582e59e-ba38-49e1-abd5-bace13620f93
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8c32cdd3-c0c9-419e-abaf-fbf2e1d9e24e
+                    stepCounter: ea440c7a-0d29-444e-9793-f2b2f7ed5c7b
+                transform: ""
+          - columnReference:
+              columnCounter: a21d37bd-6874-487a-9e13-7e57d71a1b4c
+              stepCounter: 6582e59e-ba38-49e1-abd5-bace13620f93
+            config:
+              is_Link_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LNK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fd905c4c-aa57-49c2-882b-0ce57ed8a276
+                    stepCounter: ea440c7a-0d29-444e-9793-f2b2f7ed5c7b
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_EMPLOYEEPAYHISTORY
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_EMPLOYEEPAYHISTORY') }} "DVSTG_AW_EMPLOYEEPAYHISTORY"
+            name: LINK_AW_EMPLOYEEPAYHISTORY
+            noLinkRefs: []
+      name: LINK_AW_EMPLOYEEPAYHISTORY
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::7
+      type: sql
+    stepCounter: 6582e59e-ba38-49e1-abd5-bace13620f93

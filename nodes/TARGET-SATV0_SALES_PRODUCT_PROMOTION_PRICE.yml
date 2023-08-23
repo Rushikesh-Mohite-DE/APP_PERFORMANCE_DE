@@ -1,0 +1,149 @@
+steps:
+  SATV0_SALES_PRODUCT_PROMOTION_PRICE-12d82bf5-6800-44e0-b229-408bec599f86:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: b04bf36f-8a60-4579-8305-864eb24039ac
+              stepCounter: 12d82bf5-6800-44e0-b229-408bec599f86
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_SALES_PRODUCT_PROMOTION_PRICE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 137fd068-c46d-4578-b7c1-7469d3d98e44
+                    stepCounter: 54cadaaf-d47d-4502-951b-3a46f381279b
+                transform: ""
+          - columnReference:
+              columnCounter: 8e4a9b44-cfd6-4568-86db-ddc510cd10ee
+              stepCounter: 12d82bf5-6800-44e0-b229-408bec599f86
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CREATING_EMPLOYEE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: eb83eb08-62e0-4958-9fac-146cf728da17
+                    stepCounter: 54cadaaf-d47d-4502-951b-3a46f381279b
+                transform: ""
+          - columnReference:
+              columnCounter: 01c1b9bf-9353-42e4-905e-ae592dc00581
+              stepCounter: 12d82bf5-6800-44e0-b229-408bec599f86
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CREATED_DATETIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bb0b4c8f-692f-4f97-9946-76e50f834dc8
+                    stepCounter: 54cadaaf-d47d-4502-951b-3a46f381279b
+                transform: ""
+          - columnReference:
+              columnCounter: 77f8a549-d6c3-421c-87c7-e3b6505439bc
+              stepCounter: 12d82bf5-6800-44e0-b229-408bec599f86
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LAST_CHANGE_EMPLOYEE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3582f49c-8b0e-4a31-b6bb-9f6d913ac899
+                    stepCounter: 54cadaaf-d47d-4502-951b-3a46f381279b
+                transform: ""
+          - columnReference:
+              columnCounter: a4293501-c7be-4499-8b24-04753312e3d8
+              stepCounter: 12d82bf5-6800-44e0-b229-408bec599f86
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LAST_CHANGE_DATETIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 85cf7f35-13be-49e3-93e3-acb736525f7b
+                    stepCounter: 54cadaaf-d47d-4502-951b-3a46f381279b
+                transform: ""
+          - columnReference:
+              columnCounter: f47f86f8-8f37-4433-adf0-e4f7c2005762
+              stepCounter: 12d82bf5-6800-44e0-b229-408bec599f86
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6d76d6c8-260e-4a8a-a5d2-ac23ef3e8815
+                    stepCounter: 54cadaaf-d47d-4502-951b-3a46f381279b
+                transform: ""
+          - columnReference:
+              columnCounter: 97330d4f-fe13-4949-9670-ca32ca435352
+              stepCounter: 12d82bf5-6800-44e0-b229-408bec599f86
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 70527048-2d10-4aa0-b083-75cb00d90a36
+                    stepCounter: 54cadaaf-d47d-4502-951b-3a46f381279b
+                transform: ""
+          - columnReference:
+              columnCounter: 6f09bffa-3364-45d8-9ef0-bb5570e0abb9
+              stepCounter: 12d82bf5-6800-44e0-b229-408bec599f86
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5ccf0d06-e109-4cf8-8f32-5849a5ddff66
+                    stepCounter: 54cadaaf-d47d-4502-951b-3a46f381279b
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SALES_PRODUCT_PROMOTION_PRICE
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SALES_PRODUCT_PROMOTION_PRICE') }} "DVSTG_SALES_PRODUCT_PROMOTION_PRICE"
+            name: SATV0_SALES_PRODUCT_PROMOTION_PRICE
+            noLinkRefs: []
+      name: SATV0_SALES_PRODUCT_PROMOTION_PRICE
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: 12d82bf5-6800-44e0-b229-408bec599f86

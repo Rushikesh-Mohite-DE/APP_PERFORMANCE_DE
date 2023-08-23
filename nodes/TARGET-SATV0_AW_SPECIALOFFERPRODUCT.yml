@@ -1,0 +1,121 @@
+steps:
+  SATV0_AW_SPECIALOFFERPRODUCT-9fcf05b3-bdca-4592-84e1-63ee989a255f:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 3d55f7ab-8f54-43be-9b60-03f6accede0c
+              stepCounter: 9fcf05b3-bdca-4592-84e1-63ee989a255f
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_SPECIALOFFERPRODUCT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 866941d9-15fb-4ddd-8804-c33425c77220
+                    stepCounter: 34976aa1-44ea-4543-bad6-fcb688c5b4a2
+                transform: ""
+          - columnReference:
+              columnCounter: 37bbf1e2-b99e-43fe-a4b2-0f0b63742afd
+              stepCounter: 9fcf05b3-bdca-4592-84e1-63ee989a255f
+            dataType: VARCHAR(16777216)
+            description: ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            hashColumns: []
+            hashDetails: null
+            name: ROWGUID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 04e7c02e-760a-41fc-8d15-873ce6306f9c
+                    stepCounter: 34976aa1-44ea-4543-bad6-fcb688c5b4a2
+                transform: ""
+          - columnReference:
+              columnCounter: bd18d1ed-2568-4fd4-aa16-2930d2817075
+              stepCounter: 9fcf05b3-bdca-4592-84e1-63ee989a255f
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            hashColumns: []
+            hashDetails: null
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8f947514-b8cf-4773-8604-36125fd3f2ce
+                    stepCounter: 34976aa1-44ea-4543-bad6-fcb688c5b4a2
+                transform: ""
+          - columnReference:
+              columnCounter: 23ad0be4-9fb9-41e2-9b5f-10ff8fea9bbd
+              stepCounter: 9fcf05b3-bdca-4592-84e1-63ee989a255f
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a7957066-708c-46d7-b8e6-6f86c0a77784
+                    stepCounter: 34976aa1-44ea-4543-bad6-fcb688c5b4a2
+                transform: ""
+          - columnReference:
+              columnCounter: 886e6f36-a54f-4273-b995-5d9de64dd822
+              stepCounter: 9fcf05b3-bdca-4592-84e1-63ee989a255f
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6a7e1721-0f89-4d6e-9844-857be4f892dc
+                    stepCounter: 34976aa1-44ea-4543-bad6-fcb688c5b4a2
+                transform: ""
+          - columnReference:
+              columnCounter: 12ff1306-376f-4170-9c7b-dfa4cc294821
+              stepCounter: 9fcf05b3-bdca-4592-84e1-63ee989a255f
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c677e24e-b29c-449f-b2ca-040e9284d129
+                    stepCounter: 34976aa1-44ea-4543-bad6-fcb688c5b4a2
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_SPECIALOFFERPRODUCT
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_SPECIALOFFERPRODUCT') }} "DVSTG_AW_SPECIALOFFERPRODUCT"
+            name: SATV0_AW_SPECIALOFFERPRODUCT
+            noLinkRefs: []
+      name: SATV0_AW_SPECIALOFFERPRODUCT
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: 9fcf05b3-bdca-4592-84e1-63ee989a255f

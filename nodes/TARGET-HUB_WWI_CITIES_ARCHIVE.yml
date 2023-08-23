@@ -1,0 +1,105 @@
+steps:
+  HUB_WWI_CITIES_ARCHIVE-86e9f6e7-0a1c-4af8-9674-70b8bcecdf17:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 50caaaf6-c447-4c45-a9d7-75da5f2ff5c7
+              stepCounter: 86e9f6e7-0a1c-4af8-9674-70b8bcecdf17
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_CITIES_ARCHIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fe79407e-4d09-4e2b-a424-1efdad698503
+                    stepCounter: 894fcab9-6b4b-4426-bf6a-a2f295c75079
+                transform: ""
+          - columnReference:
+              columnCounter: 003cbc91-9ac8-4ded-80ae-eb8ee64413f5
+              stepCounter: 86e9f6e7-0a1c-4af8-9674-70b8bcecdf17
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CITYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: dd97ccc0-7ecd-4aa0-964c-b492e16a8845
+                    stepCounter: 894fcab9-6b4b-4426-bf6a-a2f295c75079
+                transform: ""
+          - columnReference:
+              columnCounter: 0ef4b917-7650-4abf-bf67-6e06a5da7e1e
+              stepCounter: 86e9f6e7-0a1c-4af8-9674-70b8bcecdf17
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: STATEPROVINCEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7a68ada5-7090-4bb5-9a69-b6be4f87cf61
+                    stepCounter: 894fcab9-6b4b-4426-bf6a-a2f295c75079
+                transform: ""
+          - columnReference:
+              columnCounter: 0eb80555-e3c7-4013-9e08-3e1c2ed7a7d3
+              stepCounter: 86e9f6e7-0a1c-4af8-9674-70b8bcecdf17
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: de5debb1-2886-419d-b06b-9ecd69194750
+                    stepCounter: 894fcab9-6b4b-4426-bf6a-a2f295c75079
+                transform: ""
+          - columnReference:
+              columnCounter: 49556cd7-a822-4d8e-84a1-2c52fec9f292
+              stepCounter: 86e9f6e7-0a1c-4af8-9674-70b8bcecdf17
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a144c750-787d-434e-88cc-af53ce89ac62
+                    stepCounter: 894fcab9-6b4b-4426-bf6a-a2f295c75079
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_WWI_CITIES_ARCHIVE
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_WWI_CITIES_ARCHIVE') }} "DVSTG_WWI_CITIES_ARCHIVE"
+            name: HUB_WWI_CITIES_ARCHIVE
+            noLinkRefs: []
+      name: HUB_WWI_CITIES_ARCHIVE
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 86e9f6e7-0a1c-4af8-9674-70b8bcecdf17

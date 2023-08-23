@@ -1,0 +1,193 @@
+steps:
+  DVSTG_AW_EMPLOYEEPAYHISTORY-ea440c7a-0d29-444e-9793-f2b2f7ed5c7b:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 63bf1a49-ed31-49c5-b8b1-0181782b573a
+              stepCounter: ea440c7a-0d29-444e-9793-f2b2f7ed5c7b
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 4f504768-5626-44df-9735-cb24b232f45e
+                stepCounter: ea440c7a-0d29-444e-9793-f2b2f7ed5c7b
+            name: HK_EMPLOYEEPAYHISTORY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 4f504768-5626-44df-9735-cb24b232f45e
+              stepCounter: ea440c7a-0d29-444e-9793-f2b2f7ed5c7b
+            dataType: NUMBER(38,0)
+            description: Employee identification number. Foreign key to Employee.BusinessEntityID.
+            name: BUSINESSENTITYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 80e0139d-682a-4aa5-bd04-04d20108b2c3
+                    stepCounter: 79802b98-d66e-472d-9c6b-66b2a337980b
+                transform: ""
+          - columnReference:
+              columnCounter: 0c733925-886e-4d22-8ea5-9965c9b61a3f
+              stepCounter: ea440c7a-0d29-444e-9793-f2b2f7ed5c7b
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date the change in pay is effective
+            name: RATECHANGEDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0fa60539-47a1-49d5-9e77-00c7c4ea5d73
+                    stepCounter: 79802b98-d66e-472d-9c6b-66b2a337980b
+                transform: ""
+          - columnReference:
+              columnCounter: b20975a2-538c-4a6e-8e74-91fb6cb86b70
+              stepCounter: ea440c7a-0d29-444e-9793-f2b2f7ed5c7b
+            dataType: NUMBER(19,4)
+            description: Salary hourly rate.
+            name: RATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 46bdaf1c-4333-495a-ac45-b6a661f011db
+                    stepCounter: 79802b98-d66e-472d-9c6b-66b2a337980b
+                transform: ""
+          - columnReference:
+              columnCounter: 50eeaa02-e36c-495e-b33e-fcc72fb1fa0d
+              stepCounter: ea440c7a-0d29-444e-9793-f2b2f7ed5c7b
+            dataType: NUMBER(38,0)
+            description: 1 = Salary received monthly, 2 = Salary received biweekly
+            name: PAYFREQUENCY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 802f00ee-eb27-4c10-8695-b4837be16b34
+                    stepCounter: 79802b98-d66e-472d-9c6b-66b2a337980b
+                transform: ""
+          - columnReference:
+              columnCounter: 031e11be-7cc0-4ab0-9f67-459c1d650399
+              stepCounter: ea440c7a-0d29-444e-9793-f2b2f7ed5c7b
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 730bcafe-9843-4d5e-9871-7c11aee33941
+                    stepCounter: 79802b98-d66e-472d-9c6b-66b2a337980b
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f0ff4af7-810b-40c7-b058-c88c5d62e7ab
+              stepCounter: ea440c7a-0d29-444e-9793-f2b2f7ed5c7b
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 23ea62af-8fc9-4714-a7bd-09a80c192118
+              stepCounter: ea440c7a-0d29-444e-9793-f2b2f7ed5c7b
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8c32cdd3-c0c9-419e-abaf-fbf2e1d9e24e
+              stepCounter: ea440c7a-0d29-444e-9793-f2b2f7ed5c7b
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 0c733925-886e-4d22-8ea5-9965c9b61a3f
+                stepCounter: ea440c7a-0d29-444e-9793-f2b2f7ed5c7b
+              - columnCounter: b20975a2-538c-4a6e-8e74-91fb6cb86b70
+                stepCounter: ea440c7a-0d29-444e-9793-f2b2f7ed5c7b
+              - columnCounter: 50eeaa02-e36c-495e-b33e-fcc72fb1fa0d
+                stepCounter: ea440c7a-0d29-444e-9793-f2b2f7ed5c7b
+              - columnCounter: 031e11be-7cc0-4ab0-9f67-459c1d650399
+                stepCounter: ea440c7a-0d29-444e-9793-f2b2f7ed5c7b
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences: []
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fd905c4c-aa57-49c2-882b-0ce57ed8a276
+              stepCounter: ea440c7a-0d29-444e-9793-f2b2f7ed5c7b
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 4f504768-5626-44df-9735-cb24b232f45e
+                stepCounter: ea440c7a-0d29-444e-9793-f2b2f7ed5c7b
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: ADV_WRKS_SRC
+                nodeName: AW_LOAD_EMPLOYEEPAYHISTORY
+            join:
+              joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_EMPLOYEEPAYHISTORY') }} "AW_LOAD_EMPLOYEEPAYHISTORY"
+            name: DVSTG_AW_EMPLOYEEPAYHISTORY
+            noLinkRefs: []
+      name: DVSTG_AW_EMPLOYEEPAYHISTORY
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: ea440c7a-0d29-444e-9793-f2b2f7ed5c7b

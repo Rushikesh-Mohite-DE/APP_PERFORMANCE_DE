@@ -1,0 +1,184 @@
+steps:
+  AW_LOAD_PURCHASEORDERDETAIL-28ba5ede-fa6e-4d8d-aa71-88dd4f35c02c:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: ADV_WRKS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d85efd17-f195-4ad4-80ba-cba0f16dc2af
+              stepCounter: 28ba5ede-fa6e-4d8d-aa71-88dd4f35c02c
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Primary key. Foreign key to PurchaseOrderHeader.PurchaseOrderID.
+            name: PURCHASEORDERID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 257c750e-fe3a-487b-8140-c7157e46c964
+              stepCounter: 28ba5ede-fa6e-4d8d-aa71-88dd4f35c02c
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Primary key. One line number per purchased product.
+            name: PURCHASEORDERDETAILID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 815ad9fb-ecc0-4762-9c3b-5f83bf303003
+              stepCounter: 28ba5ede-fa6e-4d8d-aa71-88dd4f35c02c
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date the product is expected to be received.
+            name: DUEDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1229c3b0-94f9-406d-95f7-c627161ff3bb
+              stepCounter: 28ba5ede-fa6e-4d8d-aa71-88dd4f35c02c
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Quantity ordered.
+            name: ORDERQTY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 73e21962-d5a3-489a-af02-321873ed8f6e
+              stepCounter: 28ba5ede-fa6e-4d8d-aa71-88dd4f35c02c
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Product identification number. Foreign key to Product.ProductID.
+            name: PRODUCTID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8b9e6fe1-b8bf-49c5-879f-248288da0e1e
+              stepCounter: 28ba5ede-fa6e-4d8d-aa71-88dd4f35c02c
+            config: {}
+            dataType: NUMBER(19,4)
+            defaultValue: ""
+            description: Vendor's selling price of a single product.
+            name: UNITPRICE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b0e5d390-adfe-47c9-b47d-bfc5aae9897c
+              stepCounter: 28ba5ede-fa6e-4d8d-aa71-88dd4f35c02c
+            config: {}
+            dataType: NUMBER(19,4)
+            defaultValue: ""
+            description: Per product subtotal. Computed as OrderQty * UnitPrice.
+            name: LINETOTAL
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b98977b2-e488-4730-8f85-0655f303c7b3
+              stepCounter: 28ba5ede-fa6e-4d8d-aa71-88dd4f35c02c
+            config: {}
+            dataType: NUMBER(8,2)
+            defaultValue: ""
+            description: Quantity actually received from the vendor.
+            name: RECEIVEDQTY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3e289320-2722-49cd-8be1-3501b2a1c1d8
+              stepCounter: 28ba5ede-fa6e-4d8d-aa71-88dd4f35c02c
+            config: {}
+            dataType: NUMBER(8,2)
+            defaultValue: ""
+            description: Quantity rejected during inspection.
+            name: REJECTEDQTY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3e78a913-1892-446c-9ff4-0c70509b14f0
+              stepCounter: 28ba5ede-fa6e-4d8d-aa71-88dd4f35c02c
+            config: {}
+            dataType: NUMBER(9,2)
+            defaultValue: ""
+            description: Quantity accepted into inventory. Computed as ReceivedQty - RejectedQty.
+            name: STOCKEDQTY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4bf3c62e-2b94-455b-a64a-49c2a41ba4ac
+              stepCounter: 28ba5ede-fa6e-4d8d-aa71-88dd4f35c02c
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_PURCHASEORDERDETAIL') }}
+      name: AW_LOAD_PURCHASEORDERDETAIL
+      schema: ""
+      sqlType: Source
+      table: AW_LOAD_PURCHASEORDERDETAIL
+      type: sourceInput
+    stepCounter: 28ba5ede-fa6e-4d8d-aa71-88dd4f35c02c

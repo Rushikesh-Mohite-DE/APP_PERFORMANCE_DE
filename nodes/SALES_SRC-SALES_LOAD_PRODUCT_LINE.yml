@@ -1,0 +1,109 @@
+steps:
+  SALES_LOAD_PRODUCT_LINE-058820e7-73c6-4ba7-afc4-4c10668bd42b:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SALES_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8dfd2ec7-67fc-4f7b-a01e-df1021d88858
+              stepCounter: 058820e7-73c6-4ba7-afc4-4c10668bd42b
+            config: {}
+            dataType: VARCHAR(20)
+            defaultValue: ""
+            description: ""
+            name: PRODUCT_LINE_CODE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4bea7db3-8ff8-40d0-aef1-13fd00afc5f1
+              stepCounter: 058820e7-73c6-4ba7-afc4-4c10668bd42b
+            config: {}
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            name: PRODUCT_LINE_DESCRIPTION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b3cc8869-1f92-4d3a-aadb-d1be18f1ad21
+              stepCounter: 058820e7-73c6-4ba7-afc4-4c10668bd42b
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: CREATING_EMPLOYEE_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 984e4d09-e171-44b3-a2d0-ae766bae1219
+              stepCounter: 058820e7-73c6-4ba7-afc4-4c10668bd42b
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: CREATED_DATETIME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ab2e55f0-7f72-494a-934c-31c3256c75d9
+              stepCounter: 058820e7-73c6-4ba7-afc4-4c10668bd42b
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: LAST_CHANGE_EMPLOYEE_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 58fcc3bc-24eb-45f6-8a6f-eb07f2450202
+              stepCounter: 058820e7-73c6-4ba7-afc4-4c10668bd42b
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: LAST_CHANGE_DATETIME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SALES_SRC', 'SALES_LOAD_PRODUCT_LINE') }}
+      name: SALES_LOAD_PRODUCT_LINE
+      schema: ""
+      sqlType: Source
+      table: SALES_LOAD_PRODUCT_LINE
+      type: sourceInput
+    stepCounter: 058820e7-73c6-4ba7-afc4-4c10668bd42b

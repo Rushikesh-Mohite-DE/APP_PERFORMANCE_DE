@@ -1,0 +1,195 @@
+steps:
+  DVSTG_WWI_PACKAGETYPES-9b4aeb2f-66cc-4829-b881-c12c8739f2b8:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fbd3a10c-978b-41c0-8aeb-d40b4bbb5dc7
+              stepCounter: 9b4aeb2f-66cc-4829-b881-c12c8739f2b8
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 04d88d83-d10d-43e4-b848-acd2a40f8499
+                stepCounter: 9b4aeb2f-66cc-4829-b881-c12c8739f2b8
+            name: HK_PACKAGETYPES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 04d88d83-d10d-43e4-b848-acd2a40f8499
+              stepCounter: 9b4aeb2f-66cc-4829-b881-c12c8739f2b8
+            dataType: NUMBER(38,0)
+            description: Numeric ID used for reference to a package type within the database
+            name: PACKAGETYPEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 56fbd8d9-b1a9-48fc-9c3f-0c6e07d31af0
+                    stepCounter: eb4335d5-4a3b-42ad-abc3-12cffcdf3e5a
+                transform: ""
+          - columnReference:
+              columnCounter: 039a1ba9-3a81-4d45-a30a-23d7e1f43f7a
+              stepCounter: 9b4aeb2f-66cc-4829-b881-c12c8739f2b8
+            dataType: VARCHAR(50)
+            description: Full name of package types that stock items can be purchased in or sold in
+            name: PACKAGETYPENAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 265bd012-48c7-4906-b27b-700248ac0fc4
+                    stepCounter: eb4335d5-4a3b-42ad-abc3-12cffcdf3e5a
+                transform: ""
+          - columnReference:
+              columnCounter: 8e909f6f-883a-4afc-b622-2934ae387efc
+              stepCounter: 9b4aeb2f-66cc-4829-b881-c12c8739f2b8
+            dataType: NUMBER(38,0)
+            description: ""
+            name: LASTEDITEDBY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6ce590dd-0772-46da-8147-70846545ccb6
+                    stepCounter: eb4335d5-4a3b-42ad-abc3-12cffcdf3e5a
+                transform: ""
+          - columnReference:
+              columnCounter: a37df964-87e7-45d3-bcd8-e4d4fbab7c3b
+              stepCounter: 9b4aeb2f-66cc-4829-b881-c12c8739f2b8
+            dataType: DATE
+            description: ""
+            name: VALIDFROM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 37849415-5e62-4596-8136-79f0af88b25f
+                    stepCounter: eb4335d5-4a3b-42ad-abc3-12cffcdf3e5a
+                transform: ""
+          - columnReference:
+              columnCounter: 704ba1a0-43e8-4f9a-a3b6-231adf272681
+              stepCounter: 9b4aeb2f-66cc-4829-b881-c12c8739f2b8
+            dataType: DATE
+            description: ""
+            name: VALIDTO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 69ea216e-638d-401f-8414-d1337c1b9552
+                    stepCounter: eb4335d5-4a3b-42ad-abc3-12cffcdf3e5a
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c7e236c9-5a81-4d6b-a99d-a50007ecebbf
+              stepCounter: 9b4aeb2f-66cc-4829-b881-c12c8739f2b8
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 645ba33e-c419-496d-9ae8-ebfd3c4130a3
+              stepCounter: 9b4aeb2f-66cc-4829-b881-c12c8739f2b8
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 35a5a4c7-e497-4d8d-b5e7-1f484a7e616f
+              stepCounter: 9b4aeb2f-66cc-4829-b881-c12c8739f2b8
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 039a1ba9-3a81-4d45-a30a-23d7e1f43f7a
+                stepCounter: 9b4aeb2f-66cc-4829-b881-c12c8739f2b8
+              - columnCounter: 8e909f6f-883a-4afc-b622-2934ae387efc
+                stepCounter: 9b4aeb2f-66cc-4829-b881-c12c8739f2b8
+              - columnCounter: a37df964-87e7-45d3-bcd8-e4d4fbab7c3b
+                stepCounter: 9b4aeb2f-66cc-4829-b881-c12c8739f2b8
+              - columnCounter: 704ba1a0-43e8-4f9a-a3b6-231adf272681
+                stepCounter: 9b4aeb2f-66cc-4829-b881-c12c8739f2b8
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7d731a9a-2164-4904-add4-e7875e68c4c7
+              stepCounter: 9b4aeb2f-66cc-4829-b881-c12c8739f2b8
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 04d88d83-d10d-43e4-b848-acd2a40f8499
+                stepCounter: 9b4aeb2f-66cc-4829-b881-c12c8739f2b8
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: WIDEWORLIMPORTES_SRC
+                nodeName: WWI_LOAD_PACKAGETYPES
+            join:
+              joinCondition: FROM {{ ref('WIDEWORLIMPORTES_SRC', 'WWI_LOAD_PACKAGETYPES') }} "WWI_LOAD_PACKAGETYPES"
+            name: DVSTG_WWI_PACKAGETYPES
+            noLinkRefs: []
+      name: DVSTG_WWI_PACKAGETYPES
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: 9b4aeb2f-66cc-4829-b881-c12c8739f2b8

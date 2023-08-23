@@ -1,0 +1,189 @@
+steps:
+  LINK_AW_EMPLOYEEDEPARTMENTHISTORY-5cff15bf-21de-4433-bcc2-b0be50d54954:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 8dfc9dc3-9f93-469f-b44d-67913214832e
+              stepCounter: 5cff15bf-21de-4433-bcc2-b0be50d54954
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_EMPLOYEEDEPARTMENTHISTORY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a023e9c6-b26c-41ea-9ba8-2a68346c7f32
+                    stepCounter: 229fe3a6-5c42-4ab6-a1de-1ca9a6c0241a
+                transform: ""
+          - columnReference:
+              columnCounter: b45cb77b-c775-431e-baf0-c26829be38b0
+              stepCounter: 5cff15bf-21de-4433-bcc2-b0be50d54954
+            dataType: NUMBER(38,0)
+            description: Employee identification number. Foreign key to Employee.BusinessEntityID.
+            hashColumns: []
+            hashDetails: null
+            name: BUSINESSENTITYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: afa21337-d500-422a-b119-588d48caebf7
+                    stepCounter: 229fe3a6-5c42-4ab6-a1de-1ca9a6c0241a
+                transform: ""
+          - columnReference:
+              columnCounter: fca86e55-34c5-44f0-9f1c-74abe2352f4f
+              stepCounter: 5cff15bf-21de-4433-bcc2-b0be50d54954
+            dataType: NUMBER(38,0)
+            description: Department in which the employee worked including currently. Foreign key to Department.DepartmentID.
+            hashColumns: []
+            hashDetails: null
+            name: DEPARTMENTID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c68b07de-7fa6-44f3-8557-a611a3a8fb32
+                    stepCounter: 229fe3a6-5c42-4ab6-a1de-1ca9a6c0241a
+                transform: ""
+          - columnReference:
+              columnCounter: f7c90cc0-37ee-4c48-a66f-e19685d37efa
+              stepCounter: 5cff15bf-21de-4433-bcc2-b0be50d54954
+            dataType: NUMBER(38,0)
+            description: Identifies which 8-hour shift the employee works. Foreign key to Shift.Shift.ID.
+            hashColumns: []
+            hashDetails: null
+            name: SHIFTID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3ec371a8-b66c-4b5a-9343-985c99b86573
+                    stepCounter: 229fe3a6-5c42-4ab6-a1de-1ca9a6c0241a
+                transform: ""
+          - columnReference:
+              columnCounter: e0d5bd03-c215-42c8-b3f6-c69751bb5d19
+              stepCounter: 5cff15bf-21de-4433-bcc2-b0be50d54954
+            dataType: VARCHAR(50)
+            description: Date the employee started work in the department.
+            hashColumns: []
+            hashDetails: null
+            name: STARTDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f4eae3fc-1efe-4fc6-8abb-0cce804acc0d
+                    stepCounter: 229fe3a6-5c42-4ab6-a1de-1ca9a6c0241a
+                transform: ""
+          - columnReference:
+              columnCounter: 21b97807-bc07-48b6-bb27-8e6e9948cf9e
+              stepCounter: 5cff15bf-21de-4433-bcc2-b0be50d54954
+            dataType: VARCHAR(50)
+            description: Date the employee left the department. NULL = Current department.
+            hashColumns: []
+            hashDetails: null
+            name: ENDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0c24e348-a9a9-4622-b003-ef242155a02a
+                    stepCounter: 229fe3a6-5c42-4ab6-a1de-1ca9a6c0241a
+                transform: ""
+          - columnReference:
+              columnCounter: 80f70dde-343f-4e63-b854-4d4d7fc575cb
+              stepCounter: 5cff15bf-21de-4433-bcc2-b0be50d54954
+            dataType: VARCHAR(50)
+            description: Date and time the record was last updated.
+            hashColumns: []
+            hashDetails: null
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 70e26f39-56fe-47cb-b2d9-4c0ff2643c00
+                    stepCounter: 229fe3a6-5c42-4ab6-a1de-1ca9a6c0241a
+                transform: ""
+          - columnReference:
+              columnCounter: 5f558f32-6857-45fc-918e-e1b9dfba8d91
+              stepCounter: 5cff15bf-21de-4433-bcc2-b0be50d54954
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 214b747a-1eec-4983-93ae-138c9e44ac4d
+                    stepCounter: 229fe3a6-5c42-4ab6-a1de-1ca9a6c0241a
+                transform: ""
+          - columnReference:
+              columnCounter: c21362ef-6a26-4369-8d3f-2bfa6bf2a050
+              stepCounter: 5cff15bf-21de-4433-bcc2-b0be50d54954
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 60113a05-c410-4eb6-8f73-d686e00fc0df
+                    stepCounter: 229fe3a6-5c42-4ab6-a1de-1ca9a6c0241a
+                transform: ""
+          - columnReference:
+              columnCounter: b89948e4-0d24-4105-9da6-31a1e46adad3
+              stepCounter: 5cff15bf-21de-4433-bcc2-b0be50d54954
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HOUSE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0746da87-ada2-47ff-a52c-33298c55104d
+                    stepCounter: 229fe3a6-5c42-4ab6-a1de-1ca9a6c0241a
+                transform: ""
+          - columnReference:
+              columnCounter: f9bc95b0-0974-4b3a-9c77-fcfb7818b6d8
+              stepCounter: 5cff15bf-21de-4433-bcc2-b0be50d54954
+            config:
+              is_Link_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LNK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ff9479ca-34a1-4535-bdef-a45adaa7a077
+                    stepCounter: 229fe3a6-5c42-4ab6-a1de-1ca9a6c0241a
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_EMPLOYEEDEPARTMENTHISTORY
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_EMPLOYEEDEPARTMENTHISTORY') }} "DVSTG_AW_EMPLOYEEDEPARTMENTHISTORY"
+            name: LINK_AW_EMPLOYEEDEPARTMENTHISTORY
+            noLinkRefs: []
+      name: LINK_AW_EMPLOYEEDEPARTMENTHISTORY
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::7
+      type: sql
+    stepCounter: 5cff15bf-21de-4433-bcc2-b0be50d54954

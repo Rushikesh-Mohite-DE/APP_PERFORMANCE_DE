@@ -1,0 +1,79 @@
+steps:
+  AW_LOAD_DEPARTMENT-135d1291-c02a-4963-8e5d-077800d7edfe:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: ADV_WRKS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6dac3021-5bff-4b61-8aca-bbcb514e783d
+              stepCounter: 135d1291-c02a-4963-8e5d-077800d7edfe
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Primary key for Department records.
+            name: DEPARTMENTID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0cbb4075-fc8d-4262-ad85-258196a3aff5
+              stepCounter: 135d1291-c02a-4963-8e5d-077800d7edfe
+            config: {}
+            dataType: VARCHAR(50)
+            defaultValue: ""
+            description: Name of the department.
+            name: NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 179c5e3e-d8eb-4110-bb40-85972772f242
+              stepCounter: 135d1291-c02a-4963-8e5d-077800d7edfe
+            config: {}
+            dataType: VARCHAR(50)
+            defaultValue: ""
+            description: Name of the group to which the department belongs.
+            name: GROUPNAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d653e408-af14-40dd-82d3-0481801ac423
+              stepCounter: 135d1291-c02a-4963-8e5d-077800d7edfe
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_DEPARTMENT') }}
+      name: AW_LOAD_DEPARTMENT
+      schema: ""
+      sqlType: Source
+      table: AW_LOAD_DEPARTMENT
+      type: sourceInput
+    stepCounter: 135d1291-c02a-4963-8e5d-077800d7edfe

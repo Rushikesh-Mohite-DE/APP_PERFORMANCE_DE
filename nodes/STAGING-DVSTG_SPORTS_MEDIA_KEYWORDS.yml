@@ -1,0 +1,167 @@
+steps:
+  DVSTG_SPORTS_MEDIA_KEYWORDS-6fe8e058-fdf5-4a09-985f-a3343605bcb7:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4963991c-829f-48f5-bf77-5987c1392c34
+              stepCounter: 6fe8e058-fdf5-4a09-985f-a3343605bcb7
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: ebfe4b59-ec31-4e33-8397-2d99aeba3ee8
+                stepCounter: 6fe8e058-fdf5-4a09-985f-a3343605bcb7
+              - columnCounter: c1058b57-0004-4563-a472-1531b32cea72
+                stepCounter: 6fe8e058-fdf5-4a09-985f-a3343605bcb7
+            name: HK_MEDIA_KEYWORDS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: ebfe4b59-ec31-4e33-8397-2d99aeba3ee8
+              stepCounter: 6fe8e058-fdf5-4a09-985f-a3343605bcb7
+            dataType: VARCHAR(32)
+            description: ""
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d4ad92ff-5fa9-4c93-a307-af01b9830b64
+                    stepCounter: 97b028b4-e249-4eec-a847-b5fcd84e7720
+                transform: ""
+          - columnReference:
+              columnCounter: f94ba4e4-7099-4248-bb57-450dde5e480b
+              stepCounter: 6fe8e058-fdf5-4a09-985f-a3343605bcb7
+            dataType: VARCHAR(100)
+            description: ""
+            name: KEYWORD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 88f3583f-285f-4892-a0f3-76469ce56bde
+                    stepCounter: 97b028b4-e249-4eec-a847-b5fcd84e7720
+                transform: ""
+          - columnReference:
+              columnCounter: c1058b57-0004-4563-a472-1531b32cea72
+              stepCounter: 6fe8e058-fdf5-4a09-985f-a3343605bcb7
+            dataType: NUMBER(38,0)
+            description: ""
+            name: MEDIA_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3e5c18a6-0ae0-4455-a677-2a64d1216d8d
+                    stepCounter: 97b028b4-e249-4eec-a847-b5fcd84e7720
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 480491c3-7b41-4f8a-b1bc-5ae6d0a375af
+              stepCounter: 6fe8e058-fdf5-4a09-985f-a3343605bcb7
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3eb30587-d348-41e3-9a2c-81af52713e11
+              stepCounter: 6fe8e058-fdf5-4a09-985f-a3343605bcb7
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 17806af8-e82b-4e45-bede-b1bc889ced64
+              stepCounter: 6fe8e058-fdf5-4a09-985f-a3343605bcb7
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: f94ba4e4-7099-4248-bb57-450dde5e480b
+                stepCounter: 6fe8e058-fdf5-4a09-985f-a3343605bcb7
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: be956903-bf5c-4e19-ab57-01d1a71458a0
+              stepCounter: 6fe8e058-fdf5-4a09-985f-a3343605bcb7
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: c1058b57-0004-4563-a472-1531b32cea72
+                stepCounter: 6fe8e058-fdf5-4a09-985f-a3343605bcb7
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SPORTS_SRC
+                nodeName: SPORTS_LOAD_MEDIA_KEYWORDS
+            join:
+              joinCondition: FROM {{ ref('SPORTS_SRC', 'SPORTS_LOAD_MEDIA_KEYWORDS') }} "SPORTS_LOAD_MEDIA_KEYWORDS"
+            name: DVSTG_SPORTS_MEDIA_KEYWORDS
+            noLinkRefs: []
+      name: DVSTG_SPORTS_MEDIA_KEYWORDS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: 6fe8e058-fdf5-4a09-985f-a3343605bcb7

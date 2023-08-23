@@ -1,0 +1,105 @@
+steps:
+  HUB_WHO_TIMESERIES-1b6d186c-51ab-4b2f-b438-5537f5a96f25:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 069f7916-d440-41f4-aec8-a65c72186fca
+              stepCounter: 1b6d186c-51ab-4b2f-b438-5537f5a96f25
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_WHO_TIMESERIES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 10d4aa62-9f6c-4547-bd17-1956a21bf561
+                    stepCounter: 2e479ade-1550-4668-b070-d7e6569bb9ea
+                transform: ""
+          - columnReference:
+              columnCounter: 426c1378-a48b-4ab1-abea-739b4605172c
+              stepCounter: 1b6d186c-51ab-4b2f-b438-5537f5a96f25
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: COUNTRY_REGION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 29343cf9-6e00-4d79-8989-3913b4e76ae2
+                    stepCounter: 2e479ade-1550-4668-b070-d7e6569bb9ea
+                transform: ""
+          - columnReference:
+              columnCounter: e52810a9-72f0-4c21-b961-0546d6c32223
+              stepCounter: 1b6d186c-51ab-4b2f-b438-5537f5a96f25
+            dataType: VARCHAR(2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ISO3166_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cb1bc534-e8ce-47b5-8943-6e78f6085d24
+                    stepCounter: 2e479ade-1550-4668-b070-d7e6569bb9ea
+                transform: ""
+          - columnReference:
+              columnCounter: 367dcce6-89cf-479d-ac85-a6541316f9db
+              stepCounter: 1b6d186c-51ab-4b2f-b438-5537f5a96f25
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 36525ec0-8f12-4791-8b23-d48009e1196b
+                    stepCounter: 2e479ade-1550-4668-b070-d7e6569bb9ea
+                transform: ""
+          - columnReference:
+              columnCounter: c74b57ef-dcd2-415e-945c-459e5c5c8ea7
+              stepCounter: 1b6d186c-51ab-4b2f-b438-5537f5a96f25
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3c57904e-a5c7-48d8-9870-dd7aad1dd2d8
+                    stepCounter: 2e479ade-1550-4668-b070-d7e6569bb9ea
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_WHO_TIMESERIES
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_WHO_TIMESERIES') }} "DVSTG_WHO_TIMESERIES"
+            name: HUB_WHO_TIMESERIES
+            noLinkRefs: []
+      name: HUB_WHO_TIMESERIES
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 1b6d186c-51ab-4b2f-b438-5537f5a96f25

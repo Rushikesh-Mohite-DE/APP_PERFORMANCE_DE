@@ -1,0 +1,94 @@
+steps:
+  AW_LOAD_BUSINESSENTITYADDRESS-d3d7d819-cc93-448d-979a-9db1826c222a:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: ADV_WRKS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 857be457-8320-4fbc-819f-1545fa1ac17b
+              stepCounter: d3d7d819-cc93-448d-979a-9db1826c222a
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Primary key. Foreign key to BusinessEntity.BusinessEntityID.
+            name: BUSINESSENTITYID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9a992f47-970e-4724-9162-92b49f63487b
+              stepCounter: d3d7d819-cc93-448d-979a-9db1826c222a
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Primary key. Foreign key to Address.AddressID.
+            name: ADDRESSID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: cf79c87e-7e73-4473-89ed-f838822f4083
+              stepCounter: d3d7d819-cc93-448d-979a-9db1826c222a
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Primary key. Foreign key to AddressType.AddressTypeID.
+            name: ADDRESSTYPEID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 13f6cc40-d65a-4fe5-b27b-11636eacd606
+              stepCounter: d3d7d819-cc93-448d-979a-9db1826c222a
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            name: ROWGUID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 235b18a8-9414-4214-96d7-7aa003f35d8e
+              stepCounter: d3d7d819-cc93-448d-979a-9db1826c222a
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_BUSINESSENTITYADDRESS') }}
+      name: AW_LOAD_BUSINESSENTITYADDRESS
+      schema: ""
+      sqlType: Source
+      table: AW_LOAD_BUSINESSENTITYADDRESS
+      type: sourceInput
+    stepCounter: d3d7d819-cc93-448d-979a-9db1826c222a

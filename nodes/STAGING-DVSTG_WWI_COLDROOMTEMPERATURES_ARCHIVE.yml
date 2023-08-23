@@ -1,0 +1,209 @@
+steps:
+  DVSTG_WWI_COLDROOMTEMPERATURES_ARCHIVE-4e82c9e9-2a36-41f3-a299-a393434b5ca4:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: cc535a3b-7481-4f15-b7c3-ea3174723ea9
+              stepCounter: 4e82c9e9-2a36-41f3-a299-a393434b5ca4
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 9361859b-1ff9-45b1-87f2-60940e427522
+                stepCounter: 4e82c9e9-2a36-41f3-a299-a393434b5ca4
+            name: HK_COLDROOMTEMPERATURES_ARCHIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 9361859b-1ff9-45b1-87f2-60940e427522
+              stepCounter: 4e82c9e9-2a36-41f3-a299-a393434b5ca4
+            dataType: NUMBER(38,0)
+            description: ""
+            name: COLDROOMTEMPERATUREID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c03d9473-4df7-4bc5-89e5-f1e258c60d8b
+                    stepCounter: ab7b06bd-a9eb-47c2-baee-72ba3c7d91a8
+                transform: ""
+          - columnReference:
+              columnCounter: d11ee145-e4be-47a3-8fa2-55955b4c1984
+              stepCounter: 4e82c9e9-2a36-41f3-a299-a393434b5ca4
+            dataType: NUMBER(38,0)
+            description: ""
+            name: COLDROOMSENSORNUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 924a1111-9956-463f-a37d-e13ea5b61be0
+                    stepCounter: ab7b06bd-a9eb-47c2-baee-72ba3c7d91a8
+                transform: ""
+          - columnReference:
+              columnCounter: 7d2bd9b9-2013-42d9-b8fa-0fd8243e2b1b
+              stepCounter: 4e82c9e9-2a36-41f3-a299-a393434b5ca4
+            dataType: DATE
+            description: ""
+            name: RECORDEDWHEN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2a8e1721-f08f-4b30-8662-8f8425f8516c
+                    stepCounter: ab7b06bd-a9eb-47c2-baee-72ba3c7d91a8
+                transform: ""
+          - columnReference:
+              columnCounter: 6299851f-0ee7-4aeb-9fd1-28d9af190fdc
+              stepCounter: 4e82c9e9-2a36-41f3-a299-a393434b5ca4
+            dataType: NUMBER(10,2)
+            description: ""
+            name: TEMPERATURE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6a0b7c3f-7205-4a78-8d76-1d581577b8cb
+                    stepCounter: ab7b06bd-a9eb-47c2-baee-72ba3c7d91a8
+                transform: ""
+          - columnReference:
+              columnCounter: ade6cf1e-6be7-4ace-b0ec-edaa52d48614
+              stepCounter: 4e82c9e9-2a36-41f3-a299-a393434b5ca4
+            dataType: DATE
+            description: ""
+            name: VALIDFROM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0095f0c9-8b97-4bc7-b060-f2ff84ab6d54
+                    stepCounter: ab7b06bd-a9eb-47c2-baee-72ba3c7d91a8
+                transform: ""
+          - columnReference:
+              columnCounter: aaf35343-9f30-4f9b-9fa3-d5c6850d5367
+              stepCounter: 4e82c9e9-2a36-41f3-a299-a393434b5ca4
+            dataType: DATE
+            description: ""
+            name: VALIDTO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a007a934-693b-4fb2-ac2e-4b4a80a84da9
+                    stepCounter: ab7b06bd-a9eb-47c2-baee-72ba3c7d91a8
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6ac7dfc1-2c31-48cd-beb1-d8a75821455a
+              stepCounter: 4e82c9e9-2a36-41f3-a299-a393434b5ca4
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c7eba497-adf6-4b6d-a2a1-7af0d24828b1
+              stepCounter: 4e82c9e9-2a36-41f3-a299-a393434b5ca4
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3792e7ed-52c1-46cc-bb64-ce732d3fc8a8
+              stepCounter: 4e82c9e9-2a36-41f3-a299-a393434b5ca4
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: d11ee145-e4be-47a3-8fa2-55955b4c1984
+                stepCounter: 4e82c9e9-2a36-41f3-a299-a393434b5ca4
+              - columnCounter: 7d2bd9b9-2013-42d9-b8fa-0fd8243e2b1b
+                stepCounter: 4e82c9e9-2a36-41f3-a299-a393434b5ca4
+              - columnCounter: 6299851f-0ee7-4aeb-9fd1-28d9af190fdc
+                stepCounter: 4e82c9e9-2a36-41f3-a299-a393434b5ca4
+              - columnCounter: ade6cf1e-6be7-4ace-b0ec-edaa52d48614
+                stepCounter: 4e82c9e9-2a36-41f3-a299-a393434b5ca4
+              - columnCounter: aaf35343-9f30-4f9b-9fa3-d5c6850d5367
+                stepCounter: 4e82c9e9-2a36-41f3-a299-a393434b5ca4
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d227f402-1859-4fb0-bf3a-240e45ce279f
+              stepCounter: 4e82c9e9-2a36-41f3-a299-a393434b5ca4
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 9361859b-1ff9-45b1-87f2-60940e427522
+                stepCounter: 4e82c9e9-2a36-41f3-a299-a393434b5ca4
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: WIDEWORLIMPORTES_SRC
+                nodeName: WWI_LOAD_COLDROOMTEMPERATURES_ARCHIVE
+            join:
+              joinCondition: FROM {{ ref('WIDEWORLIMPORTES_SRC', 'WWI_LOAD_COLDROOMTEMPERATURES_ARCHIVE') }} "WWI_LOAD_COLDROOMTEMPERATURES_ARCHIVE"
+            name: DVSTG_WWI_COLDROOMTEMPERATURES_ARCHIVE
+            noLinkRefs: []
+      name: DVSTG_WWI_COLDROOMTEMPERATURES_ARCHIVE
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: 4e82c9e9-2a36-41f3-a299-a393434b5ca4

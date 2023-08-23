@@ -1,0 +1,105 @@
+steps:
+  HUB_SCS_BE_DETAILED_HOSPITALISATIONS-cb3660c9-dea1-41e0-b74b-55c2b098d3c1:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: Hospitalisations and details on patient disposition
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 51d96fc1-613e-4225-8777-d7d2af9e7f35
+              stepCounter: cb3660c9-dea1-41e0-b74b-55c2b098d3c1
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_SCS_BE_DETAILED_HOSPITALISATIONS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 94924061-35cf-40f7-8c9f-4e1b70bd719e
+                    stepCounter: 0447b667-695e-42b9-ac42-defe8b568878
+                transform: ""
+          - columnReference:
+              columnCounter: f2c44abe-5692-4765-b185-fe37e0f2a67f
+              stepCounter: cb3660c9-dea1-41e0-b74b-55c2b098d3c1
+            dataType: VARCHAR(128)
+            description: ISO-3166-3 entity name
+            hashColumns: []
+            hashDetails: null
+            name: PROVINCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e51c91a7-24b6-4b8e-87d8-02b62c4714f7
+                    stepCounter: 0447b667-695e-42b9-ac42-defe8b568878
+                transform: ""
+          - columnReference:
+              columnCounter: dfc526e9-e129-47ab-a88d-5ef8281a0399
+              stepCounter: cb3660c9-dea1-41e0-b74b-55c2b098d3c1
+            dataType: VARCHAR(128)
+            description: ISO-3166-2 entity name
+            hashColumns: []
+            hashDetails: null
+            name: REGION
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2e696db0-a9c3-4c66-99ed-35d2e4f06fd1
+                    stepCounter: 0447b667-695e-42b9-ac42-defe8b568878
+                transform: ""
+          - columnReference:
+              columnCounter: d07d19e6-d678-4729-9c2f-815870b1a503
+              stepCounter: cb3660c9-dea1-41e0-b74b-55c2b098d3c1
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6502ffd9-9693-42c0-be6c-eaa279bb2269
+                    stepCounter: 0447b667-695e-42b9-ac42-defe8b568878
+                transform: ""
+          - columnReference:
+              columnCounter: a7f13bbc-c047-4e60-a090-5a180fb952a9
+              stepCounter: cb3660c9-dea1-41e0-b74b-55c2b098d3c1
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 82aba8b5-4b5c-48d9-9b02-fc2efa139ecf
+                    stepCounter: 0447b667-695e-42b9-ac42-defe8b568878
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SCS_BE_DETAILED_HOSPITALISATIONS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SCS_BE_DETAILED_HOSPITALISATIONS') }} "DVSTG_SCS_BE_DETAILED_HOSPITALISATIONS"
+            name: HUB_SCS_BE_DETAILED_HOSPITALISATIONS
+            noLinkRefs: []
+      name: HUB_SCS_BE_DETAILED_HOSPITALISATIONS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: cb3660c9-dea1-41e0-b74b-55c2b098d3c1

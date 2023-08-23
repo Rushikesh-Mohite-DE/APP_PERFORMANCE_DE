@@ -1,0 +1,91 @@
+steps:
+  HUB_SPORTS_AMERICAN_FOOTBALL_PENALTIES_STATS-7a0da0dc-dc95-4968-9da4-0949fcb1f4c9:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 865d6190-292d-4d60-8768-7a4b1246e4d4
+              stepCounter: 7a0da0dc-dc95-4968-9da4-0949fcb1f4c9
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_PENALTIES_STATS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5deee254-30f0-4bde-a03f-1d37cba10144
+                    stepCounter: d41ad6f4-fb41-4ecd-a243-6126e6591ef9
+                transform: ""
+          - columnReference:
+              columnCounter: 07f0bdfd-9b2b-409f-8154-83df33813983
+              stepCounter: 7a0da0dc-dc95-4968-9da4-0949fcb1f4c9
+            dataType: VARCHAR(32)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a4d4d86b-a305-4252-aff3-a40b8247689b
+                    stepCounter: d41ad6f4-fb41-4ecd-a243-6126e6591ef9
+                transform: ""
+          - columnReference:
+              columnCounter: 474b0631-a72c-41ef-b1b9-d4961921065a
+              stepCounter: 7a0da0dc-dc95-4968-9da4-0949fcb1f4c9
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: aa30ca44-9f73-4d17-bd82-32e961a2063c
+                    stepCounter: d41ad6f4-fb41-4ecd-a243-6126e6591ef9
+                transform: ""
+          - columnReference:
+              columnCounter: f0038e1c-e5ef-4460-8283-8f4a67b36a39
+              stepCounter: 7a0da0dc-dc95-4968-9da4-0949fcb1f4c9
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cd427842-b46b-49d5-a6fc-94fbf79c0c7d
+                    stepCounter: d41ad6f4-fb41-4ecd-a243-6126e6591ef9
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SPORTS_AMERICAN_FOOTBALL_PENALTIES_STATS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SPORTS_AMERICAN_FOOTBALL_PENALTIES_STATS') }} "DVSTG_SPORTS_AMERICAN_FOOTBALL_PENALTIES_STATS"
+            name: HUB_SPORTS_AMERICAN_FOOTBALL_PENALTIES_STATS
+            noLinkRefs: []
+      name: HUB_SPORTS_AMERICAN_FOOTBALL_PENALTIES_STATS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 7a0da0dc-dc95-4968-9da4-0949fcb1f4c9

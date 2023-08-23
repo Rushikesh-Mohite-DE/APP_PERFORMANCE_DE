@@ -1,0 +1,333 @@
+steps:
+  DVSTG_GOOG_GLOBAL_MOBILITY_REPORT-76fcdab5-63cb-499e-be4d-10690112130d:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: Community Mobility Reports aim to provide insights into what has changed in response to policies aimed at combating COVID-19. The reports chart movement trends over time by geography, across different categories of places such as retail and recreation, groceries and pharmacies, parks, transit stations, workplaces, and residential
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ee429c07-d161-4ada-95c1-426f8fb3aa97
+              stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 5e6c796d-4028-4a46-8e00-66c987b7b769
+                stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+              - columnCounter: f9d36d37-645d-4d60-8c53-abc0a421ee32
+                stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+            name: HK_GOOG_GLOBAL_MOBILITY_REPORT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 5e6c796d-4028-4a46-8e00-66c987b7b769
+              stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+            dataType: VARCHAR(250)
+            description: Source Country
+            name: COUNTRY_REGION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ebeb799e-c427-4d76-be12-ac225a3c4fd7
+                    stepCounter: 84ec3094-2d34-4e0c-aa4c-785eec57be16
+                transform: ""
+          - columnReference:
+              columnCounter: f9d36d37-645d-4d60-8c53-abc0a421ee32
+              stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+            dataType: VARCHAR(250)
+            description: State or Province
+            name: PROVINCE_STATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 925cc4d8-1fe0-4584-9a79-df3c0099ebd2
+                    stepCounter: 84ec3094-2d34-4e0c-aa4c-785eec57be16
+                transform: ""
+          - columnReference:
+              columnCounter: 261c53ec-6ffa-49ed-b56a-31e0d2a516ed
+              stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+            dataType: VARCHAR(2)
+            description: 2 Letters Country code
+            name: ISO_3166_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 59f5411a-f23b-423c-9a29-27977607a5a9
+                    stepCounter: 84ec3094-2d34-4e0c-aa4c-785eec57be16
+                transform: ""
+          - columnReference:
+              columnCounter: d315b94e-4d12-490d-aa90-978bc805d2c5
+              stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+            dataType: VARCHAR(5)
+            description: 2 Letters State/Province code
+            name: ISO_3166_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bd0a28ec-1cb3-4ae5-b092-406f0fd50261
+                    stepCounter: 84ec3094-2d34-4e0c-aa4c-785eec57be16
+                transform: ""
+          - columnReference:
+              columnCounter: 022e1f69-f2d7-4005-9277-b32d32632d23
+              stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+            dataType: DATE
+            description: Date of report
+            name: DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: dec1cb93-0614-4e6c-b107-5fb9391c063e
+                    stepCounter: 84ec3094-2d34-4e0c-aa4c-785eec57be16
+                transform: ""
+          - columnReference:
+              columnCounter: 4bab02f3-cd3e-47fb-a9e7-273cebd0eef2
+              stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+            dataType: FLOAT
+            description: |+
+              Mobility trends for places like grocery markets, food warehouses, farmers markets, specialty food shops, drug stores, and pharmacies.
+
+            name: GROCERY_AND_PHARMACY_CHANGE_PERC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b8834e43-e869-424c-a095-85abc4c9ea8b
+                    stepCounter: 84ec3094-2d34-4e0c-aa4c-785eec57be16
+                transform: ""
+          - columnReference:
+              columnCounter: d03b6410-ed66-4551-b54a-ab5482bb5542
+              stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+            dataType: FLOAT
+            description: |+
+              Mobility trends for places like local parks, national parks, public beaches, marinas, dog parks, plazas, and public gardens.
+
+            name: PARKS_CHANGE_PERC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8050da33-cbcd-4d47-a72b-76eef58c3ea9
+                    stepCounter: 84ec3094-2d34-4e0c-aa4c-785eec57be16
+                transform: ""
+          - columnReference:
+              columnCounter: 7f7cd516-3687-4287-8880-7b38aafd6ddd
+              stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+            dataType: FLOAT
+            description: |+
+              Mobility trends for places like restaurants, cafes, shopping centers, theme parks, museums, libraries, and movie theaters.
+
+            name: RESIDENTIAL_CHANGE_PERC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 64e1d521-891b-44e2-9382-1eff023db0cd
+                    stepCounter: 84ec3094-2d34-4e0c-aa4c-785eec57be16
+                transform: ""
+          - columnReference:
+              columnCounter: eb65b326-c7f8-426b-bf0d-3453f2774c06
+              stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+            dataType: FLOAT
+            description: |+
+              Mobility trends for places of residence.
+
+            name: RETAIL_AND_RECREATION_CHANGE_PERC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5eecd896-a3ee-4b4b-8aa7-4e52009ff08a
+                    stepCounter: 84ec3094-2d34-4e0c-aa4c-785eec57be16
+                transform: ""
+          - columnReference:
+              columnCounter: 37565086-d494-4f27-b2c7-3822b6e0cadb
+              stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+            dataType: FLOAT
+            description: |+
+              Mobility trends for places like public transport hubs such as subway, bus, and train stations.
+
+            name: TRANSIT_STATIONS_CHANGE_PERC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5bf5dc73-874b-4f60-be62-021910bbb09e
+                    stepCounter: 84ec3094-2d34-4e0c-aa4c-785eec57be16
+                transform: ""
+          - columnReference:
+              columnCounter: 7ff2353c-0041-4252-9457-3ede3b6f49e7
+              stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+            dataType: FLOAT
+            description: |+
+              Mobility trends for places of work.
+
+            name: WORKPLACES_CHANGE_PERC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 55e7c9cf-b1ff-4c76-8778-d783330571ac
+                    stepCounter: 84ec3094-2d34-4e0c-aa4c-785eec57be16
+                transform: ""
+          - columnReference:
+              columnCounter: bc3e0324-7d6d-471d-a8da-d62c880beec8
+              stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date of last upload to the database
+            name: LAST_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a9f6071a-4e40-43df-8279-dc8a9e6de92d
+                    stepCounter: 84ec3094-2d34-4e0c-aa4c-785eec57be16
+                transform: ""
+          - columnReference:
+              columnCounter: 2823e7c1-c1f3-488e-b4bb-c7a9370b7875
+              stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+            dataType: BOOLEAN
+            description: Indicates data from last available reporting date
+            name: LAST_REPORTED_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 296c4d5a-2cdd-4d05-9cbb-a7ca5a2fbd71
+                    stepCounter: 84ec3094-2d34-4e0c-aa4c-785eec57be16
+                transform: ""
+          - columnReference:
+              columnCounter: a1f0ef92-762b-452c-b38f-9a26813c0315
+              stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+            dataType: VARCHAR(256)
+            description: ""
+            name: SUB_REGION_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d88d8020-ca17-43a7-b0b7-9f2e154aa92c
+                    stepCounter: 84ec3094-2d34-4e0c-aa4c-785eec57be16
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 685adbb6-b151-4b57-bc57-175edea1d499
+              stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a79e4dc4-4b95-4110-ad08-e5c1fd1ea613
+              stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 76d5f3bc-075b-4d5e-b769-5379729a3a08
+              stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 261c53ec-6ffa-49ed-b56a-31e0d2a516ed
+                stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+              - columnCounter: d315b94e-4d12-490d-aa90-978bc805d2c5
+                stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+              - columnCounter: 022e1f69-f2d7-4005-9277-b32d32632d23
+                stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+              - columnCounter: 4bab02f3-cd3e-47fb-a9e7-273cebd0eef2
+                stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+              - columnCounter: d03b6410-ed66-4551-b54a-ab5482bb5542
+                stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+              - columnCounter: 7f7cd516-3687-4287-8880-7b38aafd6ddd
+                stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+              - columnCounter: eb65b326-c7f8-426b-bf0d-3453f2774c06
+                stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+              - columnCounter: 37565086-d494-4f27-b2c7-3822b6e0cadb
+                stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+              - columnCounter: 7ff2353c-0041-4252-9457-3ede3b6f49e7
+                stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+              - columnCounter: bc3e0324-7d6d-471d-a8da-d62c880beec8
+                stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+              - columnCounter: 2823e7c1-c1f3-488e-b4bb-c7a9370b7875
+                stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+              - columnCounter: a1f0ef92-762b-452c-b38f-9a26813c0315
+                stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: bb41485a-5c9a-49e1-ba31-0509ddfae162
+              stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 261c53ec-6ffa-49ed-b56a-31e0d2a516ed
+                stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: COVID19
+                nodeName: GOOG_GLOBAL_MOBILITY_REPORT
+            join:
+              joinCondition: FROM {{ ref('COVID19', 'GOOG_GLOBAL_MOBILITY_REPORT') }} "GOOG_GLOBAL_MOBILITY_REPORT"
+            name: DVSTG_GOOG_GLOBAL_MOBILITY_REPORT
+            noLinkRefs: []
+      name: DVSTG_GOOG_GLOBAL_MOBILITY_REPORT
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d

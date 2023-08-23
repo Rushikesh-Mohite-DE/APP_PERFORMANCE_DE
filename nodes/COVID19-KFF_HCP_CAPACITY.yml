@@ -1,0 +1,109 @@
+steps:
+  KFF_HCP_CAPACITY-ef13aa94-bc28-4cf8-bde5-85732d96e10a:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: US healthcare capacity by state, 2018
+      locationID: ""
+      locationName: COVID19
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 66864af3-0ab2-4bed-a9b2-5b1968aea916
+              stepCounter: ef13aa94-bc28-4cf8-bde5-85732d96e10a
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ISO-3166-1 entity name
+            name: COUNTRY_REGION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4ee92c15-1d51-40eb-92e5-7274817055a0
+              stepCounter: ef13aa94-bc28-4cf8-bde5-85732d96e10a
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ISO-3166-2 entity name
+            name: PROVINCE_STATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e6f4b77b-3c76-4a8f-8237-d65bdc763586
+              stepCounter: ef13aa94-bc28-4cf8-bde5-85732d96e10a
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Total hospital beds, 2018
+            name: TOTAL_HOSPITAL_BEDS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: afbd3818-476f-4321-9759-3aad1859f3ac
+              stepCounter: ef13aa94-bc28-4cf8-bde5-85732d96e10a
+            config: {}
+            dataType: NUMBER(8,3)
+            defaultValue: ""
+            description: Hospital beds per 1,000 population, 2018
+            name: HOSPITAL_BEDS_PER_1000_POPULATION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a578d0bc-304f-49ca-b1c9-a81a79faa9e8
+              stepCounter: ef13aa94-bc28-4cf8-bde5-85732d96e10a
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Number of community health centers
+            name: TOTAL_CHCS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9d468b1b-22c6-4b7e-95eb-5e604ea637b9
+              stepCounter: ef13aa94-bc28-4cf8-bde5-85732d96e10a
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Number of community health center delivery sites
+            name: CHC_SERVICE_DELIVERY_SITES
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('COVID19', 'KFF_HCP_CAPACITY') }}
+      name: KFF_HCP_CAPACITY
+      schema: ""
+      sqlType: Source
+      table: KFF_HCP_CAPACITY
+      type: sourceInput
+    stepCounter: ef13aa94-bc28-4cf8-bde5-85732d96e10a

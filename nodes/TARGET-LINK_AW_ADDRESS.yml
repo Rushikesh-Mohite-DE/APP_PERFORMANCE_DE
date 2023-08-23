@@ -1,0 +1,231 @@
+steps:
+  LINK_AW_ADDRESS-a098d01c-7e5f-488e-b749-34364cc34e1f:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: aeddccdf-7c60-4b49-8645-93d4da1096fd
+              stepCounter: a098d01c-7e5f-488e-b749-34364cc34e1f
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_ADDRESS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 83619c4e-b9e8-42f4-be10-5d0185658365
+                    stepCounter: 75301f6e-fbf4-44bb-b612-8c7d9a84450b
+                transform: ""
+          - columnReference:
+              columnCounter: 9484d75c-23db-4736-ad67-b044f5035fd8
+              stepCounter: a098d01c-7e5f-488e-b749-34364cc34e1f
+            dataType: NUMBER(38,0)
+            description: Primary key for Address records.
+            hashColumns: []
+            hashDetails: null
+            name: ADDRESSID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3fccb291-e014-42d9-978d-95f1a8f360da
+                    stepCounter: 75301f6e-fbf4-44bb-b612-8c7d9a84450b
+                transform: ""
+          - columnReference:
+              columnCounter: a22a1a32-7b26-4f5d-ab06-35a552427577
+              stepCounter: a098d01c-7e5f-488e-b749-34364cc34e1f
+            dataType: VARCHAR(60)
+            description: First street address line.
+            hashColumns: []
+            hashDetails: null
+            name: ADDRESSLINE1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c9262bc0-6d91-4b85-b980-d4055b14bd26
+                    stepCounter: 75301f6e-fbf4-44bb-b612-8c7d9a84450b
+                transform: ""
+          - columnReference:
+              columnCounter: e4541585-7f84-43d5-8938-a222c4314fc9
+              stepCounter: a098d01c-7e5f-488e-b749-34364cc34e1f
+            dataType: VARCHAR(60)
+            description: Second street address line.
+            hashColumns: []
+            hashDetails: null
+            name: ADDRESSLINE2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 53533bae-e8aa-4191-be8b-93734bd8b112
+                    stepCounter: 75301f6e-fbf4-44bb-b612-8c7d9a84450b
+                transform: ""
+          - columnReference:
+              columnCounter: 48329515-27a1-4f43-acb1-b50fa6964be2
+              stepCounter: a098d01c-7e5f-488e-b749-34364cc34e1f
+            dataType: VARCHAR(30)
+            description: Name of the city.
+            hashColumns: []
+            hashDetails: null
+            name: CITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a1fd45da-bc60-4487-879b-d7f303291683
+                    stepCounter: 75301f6e-fbf4-44bb-b612-8c7d9a84450b
+                transform: ""
+          - columnReference:
+              columnCounter: bcab533c-8d36-49e7-83bf-0c5da82dd4e8
+              stepCounter: a098d01c-7e5f-488e-b749-34364cc34e1f
+            dataType: NUMBER(38,0)
+            description: Unique identification number for the state or province. Foreign key to StateProvince table.
+            hashColumns: []
+            hashDetails: null
+            name: STATEPROVINCEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d3ee762c-8138-465b-b7e1-4fefafe0f1cb
+                    stepCounter: 75301f6e-fbf4-44bb-b612-8c7d9a84450b
+                transform: ""
+          - columnReference:
+              columnCounter: eadc3025-59da-4286-9f17-df90c7a21cbc
+              stepCounter: a098d01c-7e5f-488e-b749-34364cc34e1f
+            dataType: VARCHAR(15)
+            description: Postal code for the street address.
+            hashColumns: []
+            hashDetails: null
+            name: POSTALCODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8f559614-4d76-489f-bb4d-330a4208cb94
+                    stepCounter: 75301f6e-fbf4-44bb-b612-8c7d9a84450b
+                transform: ""
+          - columnReference:
+              columnCounter: 30366b14-fc81-434d-b669-48e0bece2f94
+              stepCounter: a098d01c-7e5f-488e-b749-34364cc34e1f
+            dataType: VARCHAR(50)
+            description: Latitude and longitude of this address.
+            hashColumns: []
+            hashDetails: null
+            name: SPATIALLOCATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11f67fb3-36fa-4e9e-98fc-2666ab132e2e
+                    stepCounter: 75301f6e-fbf4-44bb-b612-8c7d9a84450b
+                transform: ""
+          - columnReference:
+              columnCounter: b308cb8a-3666-4156-939a-49ef683c0d24
+              stepCounter: a098d01c-7e5f-488e-b749-34364cc34e1f
+            dataType: VARCHAR(16777216)
+            description: ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            hashColumns: []
+            hashDetails: null
+            name: ROWGUID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d5562318-34f6-491c-8d23-514197512360
+                    stepCounter: 75301f6e-fbf4-44bb-b612-8c7d9a84450b
+                transform: ""
+          - columnReference:
+              columnCounter: 1ddff039-7abf-492f-8c87-d79874d0a987
+              stepCounter: a098d01c-7e5f-488e-b749-34364cc34e1f
+            dataType: VARCHAR(50)
+            description: Date and time the record was last updated.
+            hashColumns: []
+            hashDetails: null
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9155d8c3-7957-4e50-995a-6440ed8542f1
+                    stepCounter: 75301f6e-fbf4-44bb-b612-8c7d9a84450b
+                transform: ""
+          - columnReference:
+              columnCounter: c166b993-7f9b-4ccf-82e7-57a778245314
+              stepCounter: a098d01c-7e5f-488e-b749-34364cc34e1f
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 639a4b35-3290-415d-a9c6-47ba99832d8f
+                    stepCounter: 75301f6e-fbf4-44bb-b612-8c7d9a84450b
+                transform: ""
+          - columnReference:
+              columnCounter: 4f4aaaa9-4e0a-48d0-a8cf-a2ac16123217
+              stepCounter: a098d01c-7e5f-488e-b749-34364cc34e1f
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bfe9bed2-1248-43f2-93ee-08d11d36ab00
+                    stepCounter: 75301f6e-fbf4-44bb-b612-8c7d9a84450b
+                transform: ""
+          - columnReference:
+              columnCounter: 3b817e23-150a-4211-acaf-1f86b65487e5
+              stepCounter: a098d01c-7e5f-488e-b749-34364cc34e1f
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 20b03a4e-b784-46d3-947a-3e64599c98fb
+                    stepCounter: 75301f6e-fbf4-44bb-b612-8c7d9a84450b
+                transform: ""
+          - columnReference:
+              columnCounter: 51b9994d-0544-4f5c-973d-c58ba18d3783
+              stepCounter: a098d01c-7e5f-488e-b749-34364cc34e1f
+            config:
+              is_Link_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LNK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8f6294f6-66aa-406f-b9e2-b1c8aefda82c
+                    stepCounter: 75301f6e-fbf4-44bb-b612-8c7d9a84450b
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_ADDRESS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_ADDRESS') }} "DVSTG_AW_ADDRESS"
+            name: LINK_AW_ADDRESS
+            noLinkRefs: []
+      name: LINK_AW_ADDRESS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::7
+      type: sql
+    stepCounter: a098d01c-7e5f-488e-b749-34364cc34e1f

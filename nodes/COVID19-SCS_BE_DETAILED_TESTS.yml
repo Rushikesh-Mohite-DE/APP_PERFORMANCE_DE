@@ -1,0 +1,64 @@
+steps:
+  SCS_BE_DETAILED_TESTS-d0958ba9-4a70-48a4-8029-6e6fc7b4882e:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: Day-to-day time series on tests performed
+      locationID: ""
+      locationName: COVID19
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0a5b1ced-ea2a-4a76-ad88-025eb64e1587
+              stepCounter: d0958ba9-4a70-48a4-8029-6e6fc7b4882e
+            config: {}
+            dataType: DATE
+            defaultValue: ""
+            description: Date of data point
+            name: DATE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d1f15e4a-a2c0-401c-aa27-8bfdf2fc2ca6
+              stepCounter: d0958ba9-4a70-48a4-8029-6e6fc7b4882e
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Number of tests performed on the date of record
+            name: TESTS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9420a2e1-b24f-45a0-8896-7045f217e6f9
+              stepCounter: d0958ba9-4a70-48a4-8029-6e6fc7b4882e
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Timestamp of last update
+            name: LAST_UPDATED_DATE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('COVID19', 'SCS_BE_DETAILED_TESTS') }}
+      name: SCS_BE_DETAILED_TESTS
+      schema: ""
+      sqlType: Source
+      table: SCS_BE_DETAILED_TESTS
+      type: sourceInput
+    stepCounter: d0958ba9-4a70-48a4-8029-6e6fc7b4882e

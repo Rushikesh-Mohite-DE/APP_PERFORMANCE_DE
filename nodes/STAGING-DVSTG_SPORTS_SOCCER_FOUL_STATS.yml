@@ -1,0 +1,237 @@
+steps:
+  DVSTG_SPORTS_SOCCER_FOUL_STATS-cbc360ff-af3e-4d59-9474-cc2ec053ac7e:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 294db44b-08bb-4213-a480-a3afdf0f3b74
+              stepCounter: cbc360ff-af3e-4d59-9474-cc2ec053ac7e
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: dfce5557-d538-43b3-a6e6-0d152f713649
+                stepCounter: cbc360ff-af3e-4d59-9474-cc2ec053ac7e
+            name: HK_FOUL_STATS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: dfce5557-d538-43b3-a6e6-0d152f713649
+              stepCounter: cbc360ff-af3e-4d59-9474-cc2ec053ac7e
+            dataType: VARCHAR(32)
+            description: ""
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 378b3266-df7b-457b-bd5c-caa027a3961a
+                    stepCounter: 33617ce0-8251-4c73-a2f2-408ca19fbe96
+                transform: ""
+          - columnReference:
+              columnCounter: 4661339f-cf53-4b1c-a217-778320acfa23
+              stepCounter: cbc360ff-af3e-4d59-9474-cc2ec053ac7e
+            dataType: VARCHAR(100)
+            description: ""
+            name: FOULS_SUFFERED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c63f1030-9336-44a5-8320-af0e71c77d47
+                    stepCounter: 33617ce0-8251-4c73-a2f2-408ca19fbe96
+                transform: ""
+          - columnReference:
+              columnCounter: a70029ec-79c2-478e-a1c2-cf18ec29142a
+              stepCounter: cbc360ff-af3e-4d59-9474-cc2ec053ac7e
+            dataType: VARCHAR(100)
+            description: ""
+            name: FOULS_COMMITED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f6c1a179-b51c-48ef-87d7-af0df7d0bd46
+                    stepCounter: 33617ce0-8251-4c73-a2f2-408ca19fbe96
+                transform: ""
+          - columnReference:
+              columnCounter: 0ec4762d-30dd-4428-b0fd-014fa63f96cf
+              stepCounter: cbc360ff-af3e-4d59-9474-cc2ec053ac7e
+            dataType: VARCHAR(100)
+            description: ""
+            name: CAUTIONS_TOTAL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1bac2eb9-6939-4278-9374-878822b03acd
+                    stepCounter: 33617ce0-8251-4c73-a2f2-408ca19fbe96
+                transform: ""
+          - columnReference:
+              columnCounter: 823c3515-e512-4668-aba4-795287ce065f
+              stepCounter: cbc360ff-af3e-4d59-9474-cc2ec053ac7e
+            dataType: VARCHAR(100)
+            description: ""
+            name: CAUTIONS_PENDING
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: eff6cedf-f9fa-47ea-8263-e138722c34d8
+                    stepCounter: 33617ce0-8251-4c73-a2f2-408ca19fbe96
+                transform: ""
+          - columnReference:
+              columnCounter: 58742569-c32a-4660-9288-618f0f870368
+              stepCounter: cbc360ff-af3e-4d59-9474-cc2ec053ac7e
+            dataType: VARCHAR(100)
+            description: ""
+            name: CAUTION_POINTS_TOTAL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8ab80ef7-5069-43a9-81a3-4b9bf4d86d09
+                    stepCounter: 33617ce0-8251-4c73-a2f2-408ca19fbe96
+                transform: ""
+          - columnReference:
+              columnCounter: 0327ace1-ad7e-4114-8d0b-51cc22747ec8
+              stepCounter: cbc360ff-af3e-4d59-9474-cc2ec053ac7e
+            dataType: VARCHAR(100)
+            description: ""
+            name: CAUTION_POINTS_PENDING
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 78dc5757-561c-4142-880e-5b20df431f6f
+                    stepCounter: 33617ce0-8251-4c73-a2f2-408ca19fbe96
+                transform: ""
+          - columnReference:
+              columnCounter: 74bd3a59-7966-4059-a581-b97d4a865844
+              stepCounter: cbc360ff-af3e-4d59-9474-cc2ec053ac7e
+            dataType: VARCHAR(100)
+            description: ""
+            name: EJECTIONS_TOTAL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c7a79f6d-ee94-4386-943c-b978e41066ae
+                    stepCounter: 33617ce0-8251-4c73-a2f2-408ca19fbe96
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ab82040e-d9b3-4922-915f-4d2b66a3b845
+              stepCounter: cbc360ff-af3e-4d59-9474-cc2ec053ac7e
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 260b9cea-726c-4c22-b038-764045eea6a9
+              stepCounter: cbc360ff-af3e-4d59-9474-cc2ec053ac7e
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 63966fdc-2b61-483e-b63e-a0e517248c99
+              stepCounter: cbc360ff-af3e-4d59-9474-cc2ec053ac7e
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 4661339f-cf53-4b1c-a217-778320acfa23
+                stepCounter: cbc360ff-af3e-4d59-9474-cc2ec053ac7e
+              - columnCounter: a70029ec-79c2-478e-a1c2-cf18ec29142a
+                stepCounter: cbc360ff-af3e-4d59-9474-cc2ec053ac7e
+              - columnCounter: 0ec4762d-30dd-4428-b0fd-014fa63f96cf
+                stepCounter: cbc360ff-af3e-4d59-9474-cc2ec053ac7e
+              - columnCounter: 823c3515-e512-4668-aba4-795287ce065f
+                stepCounter: cbc360ff-af3e-4d59-9474-cc2ec053ac7e
+              - columnCounter: 58742569-c32a-4660-9288-618f0f870368
+                stepCounter: cbc360ff-af3e-4d59-9474-cc2ec053ac7e
+              - columnCounter: 0327ace1-ad7e-4114-8d0b-51cc22747ec8
+                stepCounter: cbc360ff-af3e-4d59-9474-cc2ec053ac7e
+              - columnCounter: 74bd3a59-7966-4059-a581-b97d4a865844
+                stepCounter: cbc360ff-af3e-4d59-9474-cc2ec053ac7e
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ef37cb30-fd53-4647-bc5b-4b7f4a347bb2
+              stepCounter: cbc360ff-af3e-4d59-9474-cc2ec053ac7e
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: a70029ec-79c2-478e-a1c2-cf18ec29142a
+                stepCounter: cbc360ff-af3e-4d59-9474-cc2ec053ac7e
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SPORTS_SRC
+                nodeName: SPORTS_LOAD_SOCCER_FOUL_STATS
+            join:
+              joinCondition: FROM {{ ref('SPORTS_SRC', 'SPORTS_LOAD_SOCCER_FOUL_STATS') }} "SPORTS_LOAD_SOCCER_FOUL_STATS"
+            name: DVSTG_SPORTS_SOCCER_FOUL_STATS
+            noLinkRefs: []
+      name: DVSTG_SPORTS_SOCCER_FOUL_STATS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: cbc360ff-af3e-4d59-9474-cc2ec053ac7e

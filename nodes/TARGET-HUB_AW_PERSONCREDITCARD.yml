@@ -1,0 +1,105 @@
+steps:
+  HUB_AW_PERSONCREDITCARD-3b421336-e3b3-47ad-9f78-d58ad4f56882:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 920b99d5-4d28-42fe-8abb-53c1d635506e
+              stepCounter: 3b421336-e3b3-47ad-9f78-d58ad4f56882
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_PERSONCREDITCARD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e562795f-b572-4647-b422-61fa08ad3ffc
+                    stepCounter: c0c442c9-466b-495b-ad95-f9b9e3f08367
+                transform: ""
+          - columnReference:
+              columnCounter: 9bad8544-b657-40dc-8e23-a72bb83457e4
+              stepCounter: 3b421336-e3b3-47ad-9f78-d58ad4f56882
+            dataType: NUMBER(38,0)
+            description: Business entity identification number. Foreign key to Person.BusinessEntityID.
+            hashColumns: []
+            hashDetails: null
+            name: BUSINESSENTITYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bfe0bf5f-1802-4a28-8f50-6c51c4e464f3
+                    stepCounter: c0c442c9-466b-495b-ad95-f9b9e3f08367
+                transform: ""
+          - columnReference:
+              columnCounter: 34d6acb9-d702-4fd7-a30b-87dedf708a2a
+              stepCounter: 3b421336-e3b3-47ad-9f78-d58ad4f56882
+            dataType: NUMBER(38,0)
+            description: Credit card identification number. Foreign key to CreditCard.CreditCardID.
+            hashColumns: []
+            hashDetails: null
+            name: CREDITCARDID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f78dc87d-4805-46d3-b4e3-7fab6396a755
+                    stepCounter: c0c442c9-466b-495b-ad95-f9b9e3f08367
+                transform: ""
+          - columnReference:
+              columnCounter: 295d6fb3-482d-40bf-b622-b61f45542e46
+              stepCounter: 3b421336-e3b3-47ad-9f78-d58ad4f56882
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 988b339e-73b8-4d3c-a227-7d1e051438c3
+                    stepCounter: c0c442c9-466b-495b-ad95-f9b9e3f08367
+                transform: ""
+          - columnReference:
+              columnCounter: b268b14a-220c-4dc6-982b-0266d4da8685
+              stepCounter: 3b421336-e3b3-47ad-9f78-d58ad4f56882
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 39471504-681a-48ac-a585-7eb963d632b9
+                    stepCounter: c0c442c9-466b-495b-ad95-f9b9e3f08367
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_PERSONCREDITCARD
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_PERSONCREDITCARD') }} "DVSTG_AW_PERSONCREDITCARD"
+            name: HUB_AW_PERSONCREDITCARD
+            noLinkRefs: []
+      name: HUB_AW_PERSONCREDITCARD
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 3b421336-e3b3-47ad-9f78-d58ad4f56882

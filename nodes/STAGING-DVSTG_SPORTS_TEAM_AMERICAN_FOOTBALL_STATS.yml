@@ -1,0 +1,209 @@
+steps:
+  DVSTG_SPORTS_TEAM_AMERICAN_FOOTBALL_STATS-f5deb0b6-7263-43e0-82cb-3298e792a6eb:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 24101a64-6a0f-4afa-a9e0-5aa117060464
+              stepCounter: f5deb0b6-7263-43e0-82cb-3298e792a6eb
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: aa412bb6-0af0-4610-94d0-7488ef9d086a
+                stepCounter: f5deb0b6-7263-43e0-82cb-3298e792a6eb
+            name: HK_AMERICAN_FOOTBALL_STATS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: aa412bb6-0af0-4610-94d0-7488ef9d086a
+              stepCounter: f5deb0b6-7263-43e0-82cb-3298e792a6eb
+            dataType: VARCHAR(32)
+            description: ""
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1fc61326-b73e-4604-b820-2f5d1b689a43
+                    stepCounter: 4709b7d7-fa99-43d0-ae56-f8ba7106d231
+                transform: ""
+          - columnReference:
+              columnCounter: 9b1b8d9e-7e62-40ca-a716-8c33f7b80d45
+              stepCounter: f5deb0b6-7263-43e0-82cb-3298e792a6eb
+            dataType: VARCHAR(100)
+            description: ""
+            name: YARDS_PER_ATTEMPT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 519eadb4-3475-47f4-ab48-ec711814107a
+                    stepCounter: 4709b7d7-fa99-43d0-ae56-f8ba7106d231
+                transform: ""
+          - columnReference:
+              columnCounter: a0e512a0-431e-40b7-a381-878996c0eec2
+              stepCounter: f5deb0b6-7263-43e0-82cb-3298e792a6eb
+            dataType: VARCHAR(100)
+            description: ""
+            name: AVERAGE_STARTING_POSITION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4f4214e2-8949-4cf1-bc76-29c8b8452b8c
+                    stepCounter: 4709b7d7-fa99-43d0-ae56-f8ba7106d231
+                transform: ""
+          - columnReference:
+              columnCounter: 9204672d-cd8b-4c15-808f-e7d3c71f5fa3
+              stepCounter: f5deb0b6-7263-43e0-82cb-3298e792a6eb
+            dataType: VARCHAR(100)
+            description: ""
+            name: TIMEOUTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5d5b5f74-db9c-4234-a61e-9f95f60e4d11
+                    stepCounter: 4709b7d7-fa99-43d0-ae56-f8ba7106d231
+                transform: ""
+          - columnReference:
+              columnCounter: aa907b00-0814-4fb0-a9a4-90902d20dbcd
+              stepCounter: f5deb0b6-7263-43e0-82cb-3298e792a6eb
+            dataType: VARCHAR(100)
+            description: ""
+            name: TIME_OF_POSSESSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 62071156-e153-4cb4-b5e1-b31f7783f96c
+                    stepCounter: 4709b7d7-fa99-43d0-ae56-f8ba7106d231
+                transform: ""
+          - columnReference:
+              columnCounter: f8f7a169-1b0a-4034-8c66-9a68aa22c518
+              stepCounter: f5deb0b6-7263-43e0-82cb-3298e792a6eb
+            dataType: VARCHAR(100)
+            description: ""
+            name: TURNOVER_RATIO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2ac2ddb0-eb4e-403d-a44e-1a6123d893eb
+                    stepCounter: 4709b7d7-fa99-43d0-ae56-f8ba7106d231
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 803d8dfa-6826-4a98-ac11-cc2027190949
+              stepCounter: f5deb0b6-7263-43e0-82cb-3298e792a6eb
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1683d51e-6701-48b9-a39c-a8bed279d3db
+              stepCounter: f5deb0b6-7263-43e0-82cb-3298e792a6eb
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f660a57e-4b9d-4af5-be48-e100cc4e0bc0
+              stepCounter: f5deb0b6-7263-43e0-82cb-3298e792a6eb
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 9b1b8d9e-7e62-40ca-a716-8c33f7b80d45
+                stepCounter: f5deb0b6-7263-43e0-82cb-3298e792a6eb
+              - columnCounter: a0e512a0-431e-40b7-a381-878996c0eec2
+                stepCounter: f5deb0b6-7263-43e0-82cb-3298e792a6eb
+              - columnCounter: 9204672d-cd8b-4c15-808f-e7d3c71f5fa3
+                stepCounter: f5deb0b6-7263-43e0-82cb-3298e792a6eb
+              - columnCounter: aa907b00-0814-4fb0-a9a4-90902d20dbcd
+                stepCounter: f5deb0b6-7263-43e0-82cb-3298e792a6eb
+              - columnCounter: f8f7a169-1b0a-4034-8c66-9a68aa22c518
+                stepCounter: f5deb0b6-7263-43e0-82cb-3298e792a6eb
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b1c99532-7b64-41c4-bcbb-ce9798d6c1be
+              stepCounter: f5deb0b6-7263-43e0-82cb-3298e792a6eb
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: a0e512a0-431e-40b7-a381-878996c0eec2
+                stepCounter: f5deb0b6-7263-43e0-82cb-3298e792a6eb
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SPORTS_SRC
+                nodeName: SPORTS_LOAD_TEAM_AMERICAN_FOOTBALL_STATS
+            join:
+              joinCondition: FROM {{ ref('SPORTS_SRC', 'SPORTS_LOAD_TEAM_AMERICAN_FOOTBALL_STATS') }} "SPORTS_LOAD_TEAM_AMERICAN_FOOTBALL_STATS"
+            name: DVSTG_SPORTS_TEAM_AMERICAN_FOOTBALL_STATS
+            noLinkRefs: []
+      name: DVSTG_SPORTS_TEAM_AMERICAN_FOOTBALL_STATS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: f5deb0b6-7263-43e0-82cb-3298e792a6eb

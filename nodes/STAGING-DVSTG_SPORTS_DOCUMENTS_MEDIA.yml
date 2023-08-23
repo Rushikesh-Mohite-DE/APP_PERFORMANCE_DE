@@ -1,0 +1,181 @@
+steps:
+  DVSTG_SPORTS_DOCUMENTS_MEDIA-eeb6e599-b6bf-4d0f-bae6-57b9f9b407ae:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4ea53ec7-5c7b-4bce-914f-44a805478a13
+              stepCounter: eeb6e599-b6bf-4d0f-bae6-57b9f9b407ae
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: e89c6f8f-b94f-4103-81d8-00314c9a0814
+                stepCounter: eeb6e599-b6bf-4d0f-bae6-57b9f9b407ae
+              - columnCounter: 7d8b640a-58c4-4fe5-adc3-1825146e73a2
+                stepCounter: eeb6e599-b6bf-4d0f-bae6-57b9f9b407ae
+            name: HK_DOCUMENTS_MEDIA
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: e89c6f8f-b94f-4103-81d8-00314c9a0814
+              stepCounter: eeb6e599-b6bf-4d0f-bae6-57b9f9b407ae
+            dataType: VARCHAR(32)
+            description: ""
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: adc10b4b-5d2c-4807-9ebd-889c04941e6a
+                    stepCounter: a867b7c3-cb97-49ac-9767-efd2f9704ab1
+                transform: ""
+          - columnReference:
+              columnCounter: 7d8b640a-58c4-4fe5-adc3-1825146e73a2
+              stepCounter: eeb6e599-b6bf-4d0f-bae6-57b9f9b407ae
+            dataType: NUMBER(38,0)
+            description: ""
+            name: DOCUMENT_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9c453fc6-3b46-46c3-a3af-5cdbd6be02a6
+                    stepCounter: a867b7c3-cb97-49ac-9767-efd2f9704ab1
+                transform: ""
+          - columnReference:
+              columnCounter: ce68a958-a9ed-4459-b5d5-06b79a233f3b
+              stepCounter: eeb6e599-b6bf-4d0f-bae6-57b9f9b407ae
+            dataType: NUMBER(38,0)
+            description: ""
+            name: MEDIA_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f15c043d-b9fe-4981-8955-413d0d2bdac1
+                    stepCounter: a867b7c3-cb97-49ac-9767-efd2f9704ab1
+                transform: ""
+          - columnReference:
+              columnCounter: 363c4b71-7cbd-4449-999c-286395513233
+              stepCounter: eeb6e599-b6bf-4d0f-bae6-57b9f9b407ae
+            dataType: NUMBER(38,0)
+            description: ""
+            name: MEDIA_CAPTION_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 20791581-04ae-4238-9a65-8f2fc29286cb
+                    stepCounter: a867b7c3-cb97-49ac-9767-efd2f9704ab1
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1b7ba0d2-fbd2-48d9-9a51-a2ead1c9bd8c
+              stepCounter: eeb6e599-b6bf-4d0f-bae6-57b9f9b407ae
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2738ad92-6dc0-4b85-a8f6-bed0d8c89bbc
+              stepCounter: eeb6e599-b6bf-4d0f-bae6-57b9f9b407ae
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f6ac1991-6a17-4ec8-b643-79337ae82ceb
+              stepCounter: eeb6e599-b6bf-4d0f-bae6-57b9f9b407ae
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: ce68a958-a9ed-4459-b5d5-06b79a233f3b
+                stepCounter: eeb6e599-b6bf-4d0f-bae6-57b9f9b407ae
+              - columnCounter: 363c4b71-7cbd-4449-999c-286395513233
+                stepCounter: eeb6e599-b6bf-4d0f-bae6-57b9f9b407ae
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: cbf9333f-1c3c-47d8-adc6-7423b3e8a9b8
+              stepCounter: eeb6e599-b6bf-4d0f-bae6-57b9f9b407ae
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: ce68a958-a9ed-4459-b5d5-06b79a233f3b
+                stepCounter: eeb6e599-b6bf-4d0f-bae6-57b9f9b407ae
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SPORTS_SRC
+                nodeName: SPORTS_LOAD_DOCUMENTS_MEDIA
+            join:
+              joinCondition: FROM {{ ref('SPORTS_SRC', 'SPORTS_LOAD_DOCUMENTS_MEDIA') }} "SPORTS_LOAD_DOCUMENTS_MEDIA"
+            name: DVSTG_SPORTS_DOCUMENTS_MEDIA
+            noLinkRefs: []
+      name: DVSTG_SPORTS_DOCUMENTS_MEDIA
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: eeb6e599-b6bf-4d0f-bae6-57b9f9b407ae

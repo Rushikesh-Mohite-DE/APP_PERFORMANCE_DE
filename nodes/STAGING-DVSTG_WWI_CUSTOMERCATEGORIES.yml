@@ -1,0 +1,195 @@
+steps:
+  DVSTG_WWI_CUSTOMERCATEGORIES-b7c0aace-f1fd-4226-bb1d-16c086cc848b:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e8d6b96f-b20c-4dec-8290-3bc16e8e7862
+              stepCounter: b7c0aace-f1fd-4226-bb1d-16c086cc848b
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: b36fa196-59a7-46cc-9bf8-f92e8162515c
+                stepCounter: b7c0aace-f1fd-4226-bb1d-16c086cc848b
+            name: HK_CUSTOMERCATEGORIES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: b36fa196-59a7-46cc-9bf8-f92e8162515c
+              stepCounter: b7c0aace-f1fd-4226-bb1d-16c086cc848b
+            dataType: NUMBER(38,0)
+            description: Numeric ID used for reference to a customer category within the database
+            name: CUSTOMERCATEGORYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9b20db6d-505f-41b6-af28-db45bf860a96
+                    stepCounter: 28fd0874-0edc-4b05-8246-102553ff4fd9
+                transform: ""
+          - columnReference:
+              columnCounter: cb9fdd01-4405-48ea-981b-cccadc461315
+              stepCounter: b7c0aace-f1fd-4226-bb1d-16c086cc848b
+            dataType: VARCHAR(50)
+            description: Full name of the category that customers can be assigned to
+            name: CUSTOMERCATEGORYNAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f66aeb7c-34f2-4445-94cc-4f4ea1c1420c
+                    stepCounter: 28fd0874-0edc-4b05-8246-102553ff4fd9
+                transform: ""
+          - columnReference:
+              columnCounter: 0eafd93d-5295-4252-8cc7-1ea1c8645c1b
+              stepCounter: b7c0aace-f1fd-4226-bb1d-16c086cc848b
+            dataType: NUMBER(38,0)
+            description: ""
+            name: LASTEDITEDBY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 75b34eae-9505-466c-b07d-60ab70b89bc8
+                    stepCounter: 28fd0874-0edc-4b05-8246-102553ff4fd9
+                transform: ""
+          - columnReference:
+              columnCounter: ced536a9-6f32-4147-96d5-4a6a21106db6
+              stepCounter: b7c0aace-f1fd-4226-bb1d-16c086cc848b
+            dataType: DATE
+            description: ""
+            name: VALIDFROM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ee4c82a3-0334-4461-ad06-ad715d1bb9fd
+                    stepCounter: 28fd0874-0edc-4b05-8246-102553ff4fd9
+                transform: ""
+          - columnReference:
+              columnCounter: 383ccc72-3a28-4c24-8733-f5e65fa00e4e
+              stepCounter: b7c0aace-f1fd-4226-bb1d-16c086cc848b
+            dataType: DATE
+            description: ""
+            name: VALIDTO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 57fa19ff-d0c8-4372-89da-eeec39e9b106
+                    stepCounter: 28fd0874-0edc-4b05-8246-102553ff4fd9
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 96aa25ab-87b7-4acd-b282-a79c432e6f99
+              stepCounter: b7c0aace-f1fd-4226-bb1d-16c086cc848b
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 38bb7c26-c9bd-4345-80de-90d43af51582
+              stepCounter: b7c0aace-f1fd-4226-bb1d-16c086cc848b
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e45870da-d3cf-4786-a2b8-0cd1b4b3d0a6
+              stepCounter: b7c0aace-f1fd-4226-bb1d-16c086cc848b
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: cb9fdd01-4405-48ea-981b-cccadc461315
+                stepCounter: b7c0aace-f1fd-4226-bb1d-16c086cc848b
+              - columnCounter: 0eafd93d-5295-4252-8cc7-1ea1c8645c1b
+                stepCounter: b7c0aace-f1fd-4226-bb1d-16c086cc848b
+              - columnCounter: ced536a9-6f32-4147-96d5-4a6a21106db6
+                stepCounter: b7c0aace-f1fd-4226-bb1d-16c086cc848b
+              - columnCounter: 383ccc72-3a28-4c24-8733-f5e65fa00e4e
+                stepCounter: b7c0aace-f1fd-4226-bb1d-16c086cc848b
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 91a54e48-0275-464e-906a-80adc4e55639
+              stepCounter: b7c0aace-f1fd-4226-bb1d-16c086cc848b
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: b36fa196-59a7-46cc-9bf8-f92e8162515c
+                stepCounter: b7c0aace-f1fd-4226-bb1d-16c086cc848b
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: WIDEWORLIMPORTES_SRC
+                nodeName: WWI_LOAD_CUSTOMERCATEGORIES
+            join:
+              joinCondition: FROM {{ ref('WIDEWORLIMPORTES_SRC', 'WWI_LOAD_CUSTOMERCATEGORIES') }} "WWI_LOAD_CUSTOMERCATEGORIES"
+            name: DVSTG_WWI_CUSTOMERCATEGORIES
+            noLinkRefs: []
+      name: DVSTG_WWI_CUSTOMERCATEGORIES
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: b7c0aace-f1fd-4226-bb1d-16c086cc848b

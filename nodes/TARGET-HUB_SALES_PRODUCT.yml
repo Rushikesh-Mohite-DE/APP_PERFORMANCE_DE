@@ -1,0 +1,105 @@
+steps:
+  HUB_SALES_PRODUCT-b4afd35a-5edf-443c-bdb4-ec4a3afed28c:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 672c786f-cad9-4b2b-9f7e-c5c7cff39b19
+              stepCounter: b4afd35a-5edf-443c-bdb4-ec4a3afed28c
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_SALES_PRODUCT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7e150d23-273d-4807-ac90-97d5b3998dad
+                    stepCounter: ce1584b0-47a9-4a5e-83e9-4808730f474e
+                transform: ""
+          - columnReference:
+              columnCounter: 6914f9db-85ea-436a-9e3e-fc3add82d830
+              stepCounter: b4afd35a-5edf-443c-bdb4-ec4a3afed28c
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6cb121b2-19f4-45ed-a4c1-138ee78c22a6
+                    stepCounter: ce1584b0-47a9-4a5e-83e9-4808730f474e
+                transform: ""
+          - columnReference:
+              columnCounter: 976beecb-697f-4ba5-911d-799b75e6cbf4
+              stepCounter: b4afd35a-5edf-443c-bdb4-ec4a3afed28c
+            dataType: VARCHAR(30)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCT_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 47d09e43-4093-42ec-8b6b-c8c5ca1cd307
+                    stepCounter: ce1584b0-47a9-4a5e-83e9-4808730f474e
+                transform: ""
+          - columnReference:
+              columnCounter: bfc0375e-74cb-406d-bec8-fef3bc889f0f
+              stepCounter: b4afd35a-5edf-443c-bdb4-ec4a3afed28c
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: aca5ee36-c3ba-4466-9420-c793fe5589d3
+                    stepCounter: ce1584b0-47a9-4a5e-83e9-4808730f474e
+                transform: ""
+          - columnReference:
+              columnCounter: e355d267-8e6d-4c07-be5b-351ed0bfc16c
+              stepCounter: b4afd35a-5edf-443c-bdb4-ec4a3afed28c
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b4389046-8d60-48a7-96e6-ff882e80c18e
+                    stepCounter: ce1584b0-47a9-4a5e-83e9-4808730f474e
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SALES_PRODUCT
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SALES_PRODUCT') }} "DVSTG_SALES_PRODUCT"
+            name: HUB_SALES_PRODUCT
+            noLinkRefs: []
+      name: HUB_SALES_PRODUCT
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: b4afd35a-5edf-443c-bdb4-ec4a3afed28c

@@ -1,0 +1,105 @@
+steps:
+  HUB_SCS_BE_DETAILED_PROVINCE_CASE_COUNTS-73f05e9f-873d-478d-a1a5-d873eebbb71e:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: Detailed data on case counts in Belgium and Luxembourg
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 45b8e14f-28c5-4189-bfff-9b3d8bf8dcfd
+              stepCounter: 73f05e9f-873d-478d-a1a5-d873eebbb71e
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_SCS_BE_DETAILED_PROVINCE_CASE_COUNTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 13ccd719-50e8-4162-8039-fee3bfafc2e5
+                    stepCounter: 9c8b93f5-1f15-46c8-a6e4-57de98a355e0
+                transform: ""
+          - columnReference:
+              columnCounter: 7b39b04f-c564-4854-965f-3886efd93448
+              stepCounter: 73f05e9f-873d-478d-a1a5-d873eebbb71e
+            dataType: VARCHAR(128)
+            description: ISO-3166-3 entity name
+            hashColumns: []
+            hashDetails: null
+            name: PROVINCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 35e40238-cccd-46a4-9d4c-fba169a55f8c
+                    stepCounter: 9c8b93f5-1f15-46c8-a6e4-57de98a355e0
+                transform: ""
+          - columnReference:
+              columnCounter: 6bfbf3d5-5f7b-415d-9ef3-0c4a51c26ecd
+              stepCounter: 73f05e9f-873d-478d-a1a5-d873eebbb71e
+            dataType: VARCHAR(128)
+            description: ISO-3166-2 entity name
+            hashColumns: []
+            hashDetails: null
+            name: REGION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 78bc9f04-0d1b-4377-b48c-a3c9a84c7a9e
+                    stepCounter: 9c8b93f5-1f15-46c8-a6e4-57de98a355e0
+                transform: ""
+          - columnReference:
+              columnCounter: e315d684-c722-44ac-8e65-4b036b286a4f
+              stepCounter: 73f05e9f-873d-478d-a1a5-d873eebbb71e
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4a9a544f-fc58-4c31-b771-88dd65e4a727
+                    stepCounter: 9c8b93f5-1f15-46c8-a6e4-57de98a355e0
+                transform: ""
+          - columnReference:
+              columnCounter: 17febca6-3b7c-4ef6-9a27-4cc730e2494f
+              stepCounter: 73f05e9f-873d-478d-a1a5-d873eebbb71e
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 08abe06c-597f-4e27-8de3-b2810d47da9b
+                    stepCounter: 9c8b93f5-1f15-46c8-a6e4-57de98a355e0
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SCS_BE_DETAILED_PROVINCE_CASE_COUNTS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SCS_BE_DETAILED_PROVINCE_CASE_COUNTS') }} "DVSTG_SCS_BE_DETAILED_PROVINCE_CASE_COUNTS"
+            name: HUB_SCS_BE_DETAILED_PROVINCE_CASE_COUNTS
+            noLinkRefs: []
+      name: HUB_SCS_BE_DETAILED_PROVINCE_CASE_COUNTS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 73f05e9f-873d-478d-a1a5-d873eebbb71e

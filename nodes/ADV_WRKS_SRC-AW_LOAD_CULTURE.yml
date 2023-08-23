@@ -1,0 +1,64 @@
+steps:
+  AW_LOAD_CULTURE-c7ba6bae-67eb-4bc8-838c-deced28068c3:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: ADV_WRKS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 83848860-e91e-4ccd-8e25-d47532156d22
+              stepCounter: c7ba6bae-67eb-4bc8-838c-deced28068c3
+            config: {}
+            dataType: VARCHAR(6)
+            defaultValue: ""
+            description: Primary key for Culture records.
+            name: CULTUREID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8735c3ba-a554-446b-a8f3-150b629d76ab
+              stepCounter: c7ba6bae-67eb-4bc8-838c-deced28068c3
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: Culture description.
+            name: NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 73b15bbe-5371-4829-aaa1-e1ae910a0ee7
+              stepCounter: c7ba6bae-67eb-4bc8-838c-deced28068c3
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_CULTURE') }}
+      name: AW_LOAD_CULTURE
+      schema: ""
+      sqlType: Source
+      table: AW_LOAD_CULTURE
+      type: sourceInput
+    stepCounter: c7ba6bae-67eb-4bc8-838c-deced28068c3

@@ -1,0 +1,245 @@
+steps:
+  LINK_HUM_RESTRICTIONS_COUNTRY-c449af73-9764-4de4-ac0b-cb2ebc458e44:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: COVID-19 travel restrictions by country
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 13385ddb-5632-4493-b9f6-43c43f53f687
+              stepCounter: c449af73-9764-4de4-ac0b-cb2ebc458e44
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_HUM_RESTRICTIONS_COUNTRY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 70078b48-6222-4dfd-adbc-c31c96a8c97f
+                    stepCounter: 61c4e4c8-6456-48cd-a954-5c4b4050eeae
+                transform: ""
+          - columnReference:
+              columnCounter: 2bb7bf1a-48a5-4f74-a14b-1573f48133c3
+              stepCounter: c449af73-9764-4de4-ac0b-cb2ebc458e44
+            dataType: VARCHAR(16777216)
+            description: ISO-3166-1 entity name
+            hashColumns: []
+            hashDetails: null
+            name: COUNTRY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e43b3254-d501-4d69-8966-629e12bd8a3f
+                    stepCounter: 61c4e4c8-6456-48cd-a954-5c4b4050eeae
+                transform: ""
+          - columnReference:
+              columnCounter: 2cf98106-8545-42d0-b2b5-be1bd131df9d
+              stepCounter: c449af73-9764-4de4-ac0b-cb2ebc458e44
+            dataType: VARCHAR(16777216)
+            description: ISO-3166-1 code for geography of record
+            hashColumns: []
+            hashDetails: null
+            name: ISO3166_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9adbc488-eec7-443f-946f-c59ac1c22a26
+                    stepCounter: 61c4e4c8-6456-48cd-a954-5c4b4050eeae
+                transform: ""
+          - columnReference:
+              columnCounter: 223ce250-b4ba-428d-bcd8-c2c7993c32cd
+              stepCounter: c449af73-9764-4de4-ac0b-cb2ebc458e44
+            dataType: FLOAT
+            description: Indicative longitude of geography (centroid)
+            hashColumns: []
+            hashDetails: null
+            name: LONG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2a1ec587-8d65-451c-bb96-88e3bb56bd9e
+                    stepCounter: 61c4e4c8-6456-48cd-a954-5c4b4050eeae
+                transform: ""
+          - columnReference:
+              columnCounter: f5b6369e-ad30-48e1-bdb9-0bd9eede94dd
+              stepCounter: c449af73-9764-4de4-ac0b-cb2ebc458e44
+            dataType: FLOAT
+            description: Indicative latitude of geography (centroid)
+            hashColumns: []
+            hashDetails: null
+            name: LAT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bedc547b-782d-4b83-8e4b-54d99a018db3
+                    stepCounter: 61c4e4c8-6456-48cd-a954-5c4b4050eeae
+                transform: ""
+          - columnReference:
+              columnCounter: 0e09e044-4996-429f-8340-31d5dc1fab64
+              stepCounter: c449af73-9764-4de4-ac0b-cb2ebc458e44
+            dataType: DATE
+            description: Date restrictions were published
+            hashColumns: []
+            hashDetails: null
+            name: PUBLISHED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 96beb3b9-dca9-4d19-8837-c3818b262df6
+                    stepCounter: 61c4e4c8-6456-48cd-a954-5c4b4050eeae
+                transform: ""
+          - columnReference:
+              columnCounter: 9ac0e391-06d6-40bd-a391-510b669e22eb
+              stepCounter: c449af73-9764-4de4-ac0b-cb2ebc458e44
+            dataType: VARCHAR(16777216)
+            description: Sources of restrictions (URL)
+            hashColumns: []
+            hashDetails: null
+            name: SOURCES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b6c9738a-3174-4b61-b950-3b820a9b4b62
+                    stepCounter: 61c4e4c8-6456-48cd-a954-5c4b4050eeae
+                transform: ""
+          - columnReference:
+              columnCounter: 4dff25fa-b153-4a5d-b087-532f6fd80217
+              stepCounter: c449af73-9764-4de4-ac0b-cb2ebc458e44
+            dataType: VARCHAR(16777216)
+            description: Detailed text of restrictions
+            hashColumns: []
+            hashDetails: null
+            name: RESTRICTION_TEXT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5a3e8897-48bd-4f21-9e21-370c4d1321ac
+                    stepCounter: 61c4e4c8-6456-48cd-a954-5c4b4050eeae
+                transform: ""
+          - columnReference:
+              columnCounter: 15db5be3-3591-4476-94f0-aef413da4e72
+              stepCounter: c449af73-9764-4de4-ac0b-cb2ebc458e44
+            dataType: DATE
+            description: Date of information
+            hashColumns: []
+            hashDetails: null
+            name: INFO_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d5af0e28-37d5-47b5-b1e3-47d80aabc512
+                    stepCounter: 61c4e4c8-6456-48cd-a954-5c4b4050eeae
+                transform: ""
+          - columnReference:
+              columnCounter: ffb24ef9-1387-4a6f-a360-76d7382a703b
+              stepCounter: c449af73-9764-4de4-ac0b-cb2ebc458e44
+            dataType: VARCHAR(16777216)
+            description: Quarantine ordinances
+            hashColumns: []
+            hashDetails: null
+            name: QUARANTINE_TEXT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c53261ec-363e-404e-a37a-39a3c9183b10
+                    stepCounter: 61c4e4c8-6456-48cd-a954-5c4b4050eeae
+                transform: ""
+          - columnReference:
+              columnCounter: f15e0312-0c0a-4cca-83ee-db081410e5f3
+              stepCounter: c449af73-9764-4de4-ac0b-cb2ebc458e44
+            dataType: TIMESTAMP_NTZ(9)
+            description: Timestamp of last update (UTC)
+            hashColumns: []
+            hashDetails: null
+            name: LAST_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4b01c15b-8693-49a3-b1fa-6e6e598fdb9c
+                    stepCounter: 61c4e4c8-6456-48cd-a954-5c4b4050eeae
+                transform: ""
+          - columnReference:
+              columnCounter: 27e21aee-85a7-4e75-9703-2d09d5e49249
+              stepCounter: c449af73-9764-4de4-ac0b-cb2ebc458e44
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5d278137-9741-426b-9543-ad2ecd59e77c
+                    stepCounter: 61c4e4c8-6456-48cd-a954-5c4b4050eeae
+                transform: ""
+          - columnReference:
+              columnCounter: 41f08be4-98f5-4b53-ba15-d903113aee55
+              stepCounter: c449af73-9764-4de4-ac0b-cb2ebc458e44
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: df698f5a-8763-4b31-9154-a58c88748bbd
+                    stepCounter: 61c4e4c8-6456-48cd-a954-5c4b4050eeae
+                transform: ""
+          - columnReference:
+              columnCounter: 87a58f50-ee07-424d-b522-4bea65f09b29
+              stepCounter: c449af73-9764-4de4-ac0b-cb2ebc458e44
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: aed4fa33-185f-47e6-838b-30af7fd28a66
+                    stepCounter: 61c4e4c8-6456-48cd-a954-5c4b4050eeae
+                transform: ""
+          - columnReference:
+              columnCounter: 3dae09ca-95ec-422c-9326-61a57805605d
+              stepCounter: c449af73-9764-4de4-ac0b-cb2ebc458e44
+            config:
+              is_Link_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LNK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4c6a7957-ebc6-444f-b0ea-2414f69f384a
+                    stepCounter: 61c4e4c8-6456-48cd-a954-5c4b4050eeae
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_HUM_RESTRICTIONS_COUNTRY
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_HUM_RESTRICTIONS_COUNTRY') }} "DVSTG_HUM_RESTRICTIONS_COUNTRY"
+            name: LINK_HUM_RESTRICTIONS_COUNTRY
+            noLinkRefs: []
+      name: LINK_HUM_RESTRICTIONS_COUNTRY
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::7
+      type: sql
+    stepCounter: c449af73-9764-4de4-ac0b-cb2ebc458e44

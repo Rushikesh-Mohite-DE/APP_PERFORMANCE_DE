@@ -1,0 +1,91 @@
+steps:
+  HUB_AW_SHIPMETHOD-f1536fa8-6907-4278-9203-94b41ccffb6b:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 147d2b86-96e1-4c0e-a3b2-68ff0badbe3a
+              stepCounter: f1536fa8-6907-4278-9203-94b41ccffb6b
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_SHIPMETHOD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: add68eea-982c-4278-82bf-953f8605ad82
+                    stepCounter: 6b66270d-b59d-4aac-8c25-33cc33d921fc
+                transform: ""
+          - columnReference:
+              columnCounter: 5c7eda18-6e4a-4dcb-90b2-d0771eb02b24
+              stepCounter: f1536fa8-6907-4278-9203-94b41ccffb6b
+            dataType: NUMBER(38,0)
+            description: Primary key for ShipMethod records.
+            hashColumns: []
+            hashDetails: null
+            name: SHIPMETHODID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 28c22a0e-9e4e-4272-ba6a-5604f1d0a74d
+                    stepCounter: 6b66270d-b59d-4aac-8c25-33cc33d921fc
+                transform: ""
+          - columnReference:
+              columnCounter: 3346e663-715d-42f4-84f9-1e09d655c6a8
+              stepCounter: f1536fa8-6907-4278-9203-94b41ccffb6b
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 25f0be82-f5ac-4f71-9908-dedb438529c6
+                    stepCounter: 6b66270d-b59d-4aac-8c25-33cc33d921fc
+                transform: ""
+          - columnReference:
+              columnCounter: 90b313f3-48d4-480b-8c0f-76ec28682f13
+              stepCounter: f1536fa8-6907-4278-9203-94b41ccffb6b
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e3b29dbf-e82f-4b82-8dec-4b9f59bd4fa8
+                    stepCounter: 6b66270d-b59d-4aac-8c25-33cc33d921fc
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_SHIPMETHOD
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_SHIPMETHOD') }} "DVSTG_AW_SHIPMETHOD"
+            name: HUB_AW_SHIPMETHOD
+            noLinkRefs: []
+      name: HUB_AW_SHIPMETHOD
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: f1536fa8-6907-4278-9203-94b41ccffb6b

@@ -1,0 +1,289 @@
+steps:
+  SATV0_AW_EMPLOYEE-e24dffc2-42b7-4c8e-b9d3-512267800ed6:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 56468c60-773b-4ac0-afb7-17ad60bcba72
+              stepCounter: e24dffc2-42b7-4c8e-b9d3-512267800ed6
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_EMPLOYEE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 198a0ab2-fe17-4358-900b-9d8692f39fb1
+                    stepCounter: 70f0cdf6-7f03-44ff-b77e-1565d28d6fb8
+                transform: ""
+          - columnReference:
+              columnCounter: 4ae3ad2a-8b1b-41c7-9e3d-8b2e5cd505f4
+              stepCounter: e24dffc2-42b7-4c8e-b9d3-512267800ed6
+            dataType: VARCHAR(15)
+            description: Unique national identification number such as a social security number.
+            hashColumns: []
+            hashDetails: null
+            name: NATIONALIDNUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 36fc154d-7bfe-45cb-8e4c-71171ae5860d
+                    stepCounter: 70f0cdf6-7f03-44ff-b77e-1565d28d6fb8
+                transform: ""
+          - columnReference:
+              columnCounter: 53fcf4ad-4896-4e6d-9a1c-0185c5fe4427
+              stepCounter: e24dffc2-42b7-4c8e-b9d3-512267800ed6
+            dataType: NUMBER(38,0)
+            description: Where the employee is located in corporate hierarchy.
+            hashColumns: []
+            hashDetails: null
+            name: ORGANIZATIONNODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: aa63cce1-f6f9-4617-8638-01f5a290a46a
+                    stepCounter: 70f0cdf6-7f03-44ff-b77e-1565d28d6fb8
+                transform: ""
+          - columnReference:
+              columnCounter: 9bf6e4ea-56bd-4706-ad5a-7b7e3b8df4aa
+              stepCounter: e24dffc2-42b7-4c8e-b9d3-512267800ed6
+            dataType: VARCHAR(50)
+            description: The depth of the employee in the corporate hierarchy.
+            hashColumns: []
+            hashDetails: null
+            name: ORGANIZATIONLEVEL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 73dbfc21-f52b-4561-ac22-65e92eef7b1a
+                    stepCounter: 70f0cdf6-7f03-44ff-b77e-1565d28d6fb8
+                transform: ""
+          - columnReference:
+              columnCounter: 03d1ab0e-d257-4e80-b916-02edc7650e0e
+              stepCounter: e24dffc2-42b7-4c8e-b9d3-512267800ed6
+            dataType: VARCHAR(50)
+            description: Work title such as Buyer or Sales Representative.
+            hashColumns: []
+            hashDetails: null
+            name: JOBTITLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a256eceb-3318-4ac7-8b1e-e5e8056e1e8c
+                    stepCounter: 70f0cdf6-7f03-44ff-b77e-1565d28d6fb8
+                transform: ""
+          - columnReference:
+              columnCounter: 1bb42642-6b89-4aa4-9519-63989b9518ce
+              stepCounter: e24dffc2-42b7-4c8e-b9d3-512267800ed6
+            dataType: DATE
+            description: Date of birth.
+            hashColumns: []
+            hashDetails: null
+            name: BIRTHDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2a6477c6-4594-4736-b077-2d28b8022496
+                    stepCounter: 70f0cdf6-7f03-44ff-b77e-1565d28d6fb8
+                transform: ""
+          - columnReference:
+              columnCounter: 0eba0550-829a-4c72-af32-a7c05f89e5d9
+              stepCounter: e24dffc2-42b7-4c8e-b9d3-512267800ed6
+            dataType: VARCHAR(1)
+            description: M = Married, S = Single
+            hashColumns: []
+            hashDetails: null
+            name: MARITALSTATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: dbbcdb02-4e3b-49d7-9051-cdbaf92152ff
+                    stepCounter: 70f0cdf6-7f03-44ff-b77e-1565d28d6fb8
+                transform: ""
+          - columnReference:
+              columnCounter: b86a8b9a-646b-4ccc-b39b-93ba9388f170
+              stepCounter: e24dffc2-42b7-4c8e-b9d3-512267800ed6
+            dataType: VARCHAR(1)
+            description: M = Male, F = Female
+            hashColumns: []
+            hashDetails: null
+            name: GENDER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b6c5e1f3-103f-475e-9e03-7a7647269789
+                    stepCounter: 70f0cdf6-7f03-44ff-b77e-1565d28d6fb8
+                transform: ""
+          - columnReference:
+              columnCounter: 8a77e1cb-1cbc-41a7-a6d1-0f192877be3b
+              stepCounter: e24dffc2-42b7-4c8e-b9d3-512267800ed6
+            dataType: DATE
+            description: Employee hired on this date.
+            hashColumns: []
+            hashDetails: null
+            name: HIREDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4a1fe186-062d-41f1-9df1-eb805aac898e
+                    stepCounter: 70f0cdf6-7f03-44ff-b77e-1565d28d6fb8
+                transform: ""
+          - columnReference:
+              columnCounter: b7aaf64a-7dd0-4779-8c21-02c34bdb46c4
+              stepCounter: e24dffc2-42b7-4c8e-b9d3-512267800ed6
+            dataType: VARCHAR(16777216)
+            description: Job classification. 0 = Hourly, not exempt from collective bargaining. 1 = Salaried, exempt from collective bargaining.
+            hashColumns: []
+            hashDetails: null
+            name: SALARIEDFLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8d1dd44f-c7e8-4995-a389-e7a3e0496c31
+                    stepCounter: 70f0cdf6-7f03-44ff-b77e-1565d28d6fb8
+                transform: ""
+          - columnReference:
+              columnCounter: 46e28525-cfb7-402d-8efc-6454e7923262
+              stepCounter: e24dffc2-42b7-4c8e-b9d3-512267800ed6
+            dataType: NUMBER(38,0)
+            description: Number of available vacation hours.
+            hashColumns: []
+            hashDetails: null
+            name: VACATIONHOURS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 67fde565-daa0-4757-b736-1c1cb330d8f8
+                    stepCounter: 70f0cdf6-7f03-44ff-b77e-1565d28d6fb8
+                transform: ""
+          - columnReference:
+              columnCounter: 567e6000-fb97-4e37-ab94-d44dd3955d18
+              stepCounter: e24dffc2-42b7-4c8e-b9d3-512267800ed6
+            dataType: NUMBER(38,0)
+            description: Number of available sick leave hours.
+            hashColumns: []
+            hashDetails: null
+            name: SICKLEAVEHOURS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 80343593-f4a7-440f-a2fe-07902cf6c5a2
+                    stepCounter: 70f0cdf6-7f03-44ff-b77e-1565d28d6fb8
+                transform: ""
+          - columnReference:
+              columnCounter: 3d36a268-929f-4522-bd20-f2c1e4b0de45
+              stepCounter: e24dffc2-42b7-4c8e-b9d3-512267800ed6
+            dataType: VARCHAR(4)
+            description: 0 = Inactive, 1 = Active
+            hashColumns: []
+            hashDetails: null
+            name: CURRENTFLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b6dd2085-aac1-4341-92e8-e57ecc2e04a5
+                    stepCounter: 70f0cdf6-7f03-44ff-b77e-1565d28d6fb8
+                transform: ""
+          - columnReference:
+              columnCounter: 5eb7f5ce-fa0b-4e2e-a6f9-408b0adf082b
+              stepCounter: e24dffc2-42b7-4c8e-b9d3-512267800ed6
+            dataType: VARCHAR(16777216)
+            description: ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            hashColumns: []
+            hashDetails: null
+            name: ROWGUID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a0dfdd42-f4f3-4590-98be-769182442349
+                    stepCounter: 70f0cdf6-7f03-44ff-b77e-1565d28d6fb8
+                transform: ""
+          - columnReference:
+              columnCounter: 94c3901d-65b8-4149-8268-f52a5cff78ab
+              stepCounter: e24dffc2-42b7-4c8e-b9d3-512267800ed6
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            hashColumns: []
+            hashDetails: null
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f3041788-d0d4-4db2-b08a-116fd22f667c
+                    stepCounter: 70f0cdf6-7f03-44ff-b77e-1565d28d6fb8
+                transform: ""
+          - columnReference:
+              columnCounter: 592a03cc-01c5-413a-a9d2-3a029b25bed9
+              stepCounter: e24dffc2-42b7-4c8e-b9d3-512267800ed6
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e7631f2a-58dd-4d13-b8c8-2e7686a0e1d6
+                    stepCounter: 70f0cdf6-7f03-44ff-b77e-1565d28d6fb8
+                transform: ""
+          - columnReference:
+              columnCounter: afd744f3-e675-4436-a0cd-8a995ac853fd
+              stepCounter: e24dffc2-42b7-4c8e-b9d3-512267800ed6
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6fc49559-dba4-4331-9595-c918fa4c3db6
+                    stepCounter: 70f0cdf6-7f03-44ff-b77e-1565d28d6fb8
+                transform: ""
+          - columnReference:
+              columnCounter: 3f86d9c6-b97e-463d-96d3-79de39414646
+              stepCounter: e24dffc2-42b7-4c8e-b9d3-512267800ed6
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2fb149fe-9cca-408f-ac43-b032863b1c35
+                    stepCounter: 70f0cdf6-7f03-44ff-b77e-1565d28d6fb8
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_EMPLOYEE
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_EMPLOYEE') }} "DVSTG_AW_EMPLOYEE"
+            name: SATV0_AW_EMPLOYEE
+            noLinkRefs: []
+      name: SATV0_AW_EMPLOYEE
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: e24dffc2-42b7-4c8e-b9d3-512267800ed6

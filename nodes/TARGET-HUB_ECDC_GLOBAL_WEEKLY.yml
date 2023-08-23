@@ -1,0 +1,105 @@
+steps:
+  HUB_ECDC_GLOBAL_WEEKLY-22ac5df9-c152-4f8d-8207-aaa0060f47d1:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 8a4cb593-9c29-4040-a997-0e6d353edb04
+              stepCounter: 22ac5df9-c152-4f8d-8207-aaa0060f47d1
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_ECDC_GLOBAL_WEEKLY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c9a23846-8560-43cc-8379-e86b9968359b
+                    stepCounter: 4b803b4d-3349-4141-8cf8-6acb9f911739
+                transform: ""
+          - columnReference:
+              columnCounter: 68374c2b-87a8-4fe7-8a17-e0e755cdeb93
+              stepCounter: 22ac5df9-c152-4f8d-8207-aaa0060f47d1
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: COUNTRY_REGION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d79b94ed-91b3-453e-ac9e-767f190c028e
+                    stepCounter: 4b803b4d-3349-4141-8cf8-6acb9f911739
+                transform: ""
+          - columnReference:
+              columnCounter: 56076ef4-d25e-4f71-bbec-758c92561a34
+              stepCounter: 22ac5df9-c152-4f8d-8207-aaa0060f47d1
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CONTINENTEXP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fc7b951b-fea0-40a3-a366-bc6362de088b
+                    stepCounter: 4b803b4d-3349-4141-8cf8-6acb9f911739
+                transform: ""
+          - columnReference:
+              columnCounter: 14cbd48c-6ea1-49df-ab6f-172fd32d5995
+              stepCounter: 22ac5df9-c152-4f8d-8207-aaa0060f47d1
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 84352ac6-66f8-4152-8661-9a5d8375b42e
+                    stepCounter: 4b803b4d-3349-4141-8cf8-6acb9f911739
+                transform: ""
+          - columnReference:
+              columnCounter: 629e9f3c-ca74-45a0-aea2-5b6d52eb4467
+              stepCounter: 22ac5df9-c152-4f8d-8207-aaa0060f47d1
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 57ba0665-9ed7-414a-9e54-9a60f1095eb5
+                    stepCounter: 4b803b4d-3349-4141-8cf8-6acb9f911739
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_ECDC_GLOBAL_WEEKLY
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_ECDC_GLOBAL_WEEKLY') }} "DVSTG_ECDC_GLOBAL_WEEKLY"
+            name: HUB_ECDC_GLOBAL_WEEKLY
+            noLinkRefs: []
+      name: HUB_ECDC_GLOBAL_WEEKLY
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 22ac5df9-c152-4f8d-8207-aaa0060f47d1

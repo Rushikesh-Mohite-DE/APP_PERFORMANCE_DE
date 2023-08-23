@@ -1,0 +1,91 @@
+steps:
+  HUB_WWI_PEOPLE_ARCHIVE-6c5b16a6-a7e2-484a-a5cc-17b3f12c09cc:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 02a15df6-7dd5-4e5d-b3e3-9e0bb2c62fd9
+              stepCounter: 6c5b16a6-a7e2-484a-a5cc-17b3f12c09cc
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_PEOPLE_ARCHIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8cb0e4d7-7a55-4c38-bc67-1d4ca70e238c
+                    stepCounter: 9a3776e8-17ee-4275-a8d9-66d204c46540
+                transform: ""
+          - columnReference:
+              columnCounter: cbeb7905-a2fe-4aac-9058-508d242481da
+              stepCounter: 6c5b16a6-a7e2-484a-a5cc-17b3f12c09cc
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PERSONID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7e2838d1-28eb-473f-ba16-85e33b44284d
+                    stepCounter: 9a3776e8-17ee-4275-a8d9-66d204c46540
+                transform: ""
+          - columnReference:
+              columnCounter: 3736c9cb-3876-42f5-8a73-dfaa9ab106ef
+              stepCounter: 6c5b16a6-a7e2-484a-a5cc-17b3f12c09cc
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f73b51bb-4342-41b7-a2b4-ef0d01ea7949
+                    stepCounter: 9a3776e8-17ee-4275-a8d9-66d204c46540
+                transform: ""
+          - columnReference:
+              columnCounter: 9ca90a02-8ca3-49e8-9e1e-bd30cb6bde63
+              stepCounter: 6c5b16a6-a7e2-484a-a5cc-17b3f12c09cc
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5bbd0112-5242-4096-8cec-93c8384f2c54
+                    stepCounter: 9a3776e8-17ee-4275-a8d9-66d204c46540
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_WWI_PEOPLE_ARCHIVE
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_WWI_PEOPLE_ARCHIVE') }} "DVSTG_WWI_PEOPLE_ARCHIVE"
+            name: HUB_WWI_PEOPLE_ARCHIVE
+            noLinkRefs: []
+      name: HUB_WWI_PEOPLE_ARCHIVE
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 6c5b16a6-a7e2-484a-a5cc-17b3f12c09cc

@@ -1,0 +1,79 @@
+steps:
+  SPORTS_LOAD_AMERICAN_FOOTBALL_PENALTIES_STATS-c2f14182-51c3-49e5-a5e8-78f401f0ba1a:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SPORTS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 418816b8-4184-4260-bf4b-3a4c342af862
+              stepCounter: c2f14182-51c3-49e5-a5e8-78f401f0ba1a
+            config: {}
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            name: ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e1ab3e4b-8e82-4bdc-97da-e24a5c8a2313
+              stepCounter: c2f14182-51c3-49e5-a5e8-78f401f0ba1a
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: PENALTIES_TOTAL
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e3e19774-a5b3-4ca5-85d5-de0009d47db6
+              stepCounter: c2f14182-51c3-49e5-a5e8-78f401f0ba1a
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: PENALTY_YARDS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 70caf8ec-208c-47db-8060-0c6ee65fb181
+              stepCounter: c2f14182-51c3-49e5-a5e8-78f401f0ba1a
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: PENALTY_FIRST_DOWNS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SPORTS_SRC', 'SPORTS_LOAD_AMERICAN_FOOTBALL_PENALTIES_STATS') }}
+      name: SPORTS_LOAD_AMERICAN_FOOTBALL_PENALTIES_STATS
+      schema: ""
+      sqlType: Source
+      table: SPORTS_LOAD_AMERICAN_FOOTBALL_PENALTIES_STATS
+      type: sourceInput
+    stepCounter: c2f14182-51c3-49e5-a5e8-78f401f0ba1a

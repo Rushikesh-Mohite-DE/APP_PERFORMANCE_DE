@@ -1,0 +1,105 @@
+steps:
+  HUB_SALES_PRODUCT_PROMOTION_PRICE-6c3fcacf-d8ec-40da-b41b-ea5e739b5f93:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 927b1cc5-f7b2-4ef7-8d56-07c0c23f3066
+              stepCounter: 6c3fcacf-d8ec-40da-b41b-ea5e739b5f93
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_SALES_PRODUCT_PROMOTION_PRICE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 137fd068-c46d-4578-b7c1-7469d3d98e44
+                    stepCounter: 54cadaaf-d47d-4502-951b-3a46f381279b
+                transform: ""
+          - columnReference:
+              columnCounter: f20752e5-de6f-4f7a-bfbc-f0a6389faed4
+              stepCounter: 6c3fcacf-d8ec-40da-b41b-ea5e739b5f93
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: dc5d1c38-d144-45ce-a451-009e680e4c5e
+                    stepCounter: 54cadaaf-d47d-4502-951b-3a46f381279b
+                transform: ""
+          - columnReference:
+              columnCounter: 49644fe6-0ea9-41a3-8284-08644db42358
+              stepCounter: 6c3fcacf-d8ec-40da-b41b-ea5e739b5f93
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PROMOTION_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ded466c7-996d-4e17-9ef0-42579a846dab
+                    stepCounter: 54cadaaf-d47d-4502-951b-3a46f381279b
+                transform: ""
+          - columnReference:
+              columnCounter: fa391a39-0ff6-47af-be3b-d8f792d0ccd2
+              stepCounter: 6c3fcacf-d8ec-40da-b41b-ea5e739b5f93
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6d76d6c8-260e-4a8a-a5d2-ac23ef3e8815
+                    stepCounter: 54cadaaf-d47d-4502-951b-3a46f381279b
+                transform: ""
+          - columnReference:
+              columnCounter: 28bb349f-8b3a-4f3a-930f-9599b9283d0e
+              stepCounter: 6c3fcacf-d8ec-40da-b41b-ea5e739b5f93
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 70527048-2d10-4aa0-b083-75cb00d90a36
+                    stepCounter: 54cadaaf-d47d-4502-951b-3a46f381279b
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SALES_PRODUCT_PROMOTION_PRICE
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SALES_PRODUCT_PROMOTION_PRICE') }} "DVSTG_SALES_PRODUCT_PROMOTION_PRICE"
+            name: HUB_SALES_PRODUCT_PROMOTION_PRICE
+            noLinkRefs: []
+      name: HUB_SALES_PRODUCT_PROMOTION_PRICE
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 6c3fcacf-d8ec-40da-b41b-ea5e739b5f93

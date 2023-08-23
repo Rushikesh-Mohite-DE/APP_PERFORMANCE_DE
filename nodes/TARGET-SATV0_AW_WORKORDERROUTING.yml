@@ -1,0 +1,219 @@
+steps:
+  SATV0_AW_WORKORDERROUTING-2cbbfc52-036f-4f38-893d-40af0ee93f75:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 85f8b910-7f2c-4f13-bc87-42eab592bbb2
+              stepCounter: 2cbbfc52-036f-4f38-893d-40af0ee93f75
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_WORKORDERROUTING
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4f14bf7d-71c8-4825-8194-364b3d065467
+                    stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+                transform: ""
+          - columnReference:
+              columnCounter: c8aa61fd-2a1a-4d42-89b6-e6f99bdf3ed1
+              stepCounter: 2cbbfc52-036f-4f38-893d-40af0ee93f75
+            dataType: NUMBER(38,0)
+            description: Primary key. Indicates the manufacturing process sequence.
+            hashColumns: []
+            hashDetails: null
+            name: OPERATIONSEQUENCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 81d181b1-8128-4093-aa1b-2f9b6bffb3a3
+                    stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+                transform: ""
+          - columnReference:
+              columnCounter: aefe960f-abad-49e1-bfb3-2ef3e86e5774
+              stepCounter: 2cbbfc52-036f-4f38-893d-40af0ee93f75
+            dataType: TIMESTAMP_NTZ(9)
+            description: Planned manufacturing start date.
+            hashColumns: []
+            hashDetails: null
+            name: SCHEDULEDSTARTDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ae5b4a95-a644-4dc2-8f68-3c1807f257ac
+                    stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+                transform: ""
+          - columnReference:
+              columnCounter: 06ce4c2a-549e-4ac1-bd03-40a89858b7f3
+              stepCounter: 2cbbfc52-036f-4f38-893d-40af0ee93f75
+            dataType: TIMESTAMP_NTZ(9)
+            description: Planned manufacturing end date.
+            hashColumns: []
+            hashDetails: null
+            name: SCHEDULEDENDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 67d64e23-8844-4afb-9aad-fb23708e5044
+                    stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+                transform: ""
+          - columnReference:
+              columnCounter: d16b6d74-d488-4fa1-ac46-0010ed531042
+              stepCounter: 2cbbfc52-036f-4f38-893d-40af0ee93f75
+            dataType: TIMESTAMP_NTZ(9)
+            description: Actual start date.
+            hashColumns: []
+            hashDetails: null
+            name: ACTUALSTARTDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a73ceabb-8d34-4598-be83-a4f12ef8a3e5
+                    stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+                transform: ""
+          - columnReference:
+              columnCounter: c7a5ba96-a04d-4156-93e9-7706aba53f73
+              stepCounter: 2cbbfc52-036f-4f38-893d-40af0ee93f75
+            dataType: TIMESTAMP_NTZ(9)
+            description: Actual end date.
+            hashColumns: []
+            hashDetails: null
+            name: ACTUALENDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ffd86c32-e507-4a89-a326-b4f9357a66f7
+                    stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+                transform: ""
+          - columnReference:
+              columnCounter: 8fb5e343-9618-4adc-878e-74e8148bc140
+              stepCounter: 2cbbfc52-036f-4f38-893d-40af0ee93f75
+            dataType: NUMBER(9,4)
+            description: Number of manufacturing hours used.
+            hashColumns: []
+            hashDetails: null
+            name: ACTUALRESOURCEHRS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a5bb5e9a-ad0e-418d-a21e-6187501eefcf
+                    stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+                transform: ""
+          - columnReference:
+              columnCounter: 5c5ebd78-c010-4fb3-92e3-95d12b478911
+              stepCounter: 2cbbfc52-036f-4f38-893d-40af0ee93f75
+            dataType: NUMBER(19,4)
+            description: Estimated manufacturing cost.
+            hashColumns: []
+            hashDetails: null
+            name: PLANNEDCOST
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ca977fb1-0cd6-4289-8616-c7ba9a5c1efc
+                    stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+                transform: ""
+          - columnReference:
+              columnCounter: c538e416-d28f-4455-a98d-9ad478260a4f
+              stepCounter: 2cbbfc52-036f-4f38-893d-40af0ee93f75
+            dataType: NUMBER(19,4)
+            description: Actual manufacturing cost.
+            hashColumns: []
+            hashDetails: null
+            name: ACTUALCOST
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 64109720-ab91-491e-8d33-ae2440c114a4
+                    stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+                transform: ""
+          - columnReference:
+              columnCounter: 7bafd837-5c2e-49b0-ad7e-903c4fec6f7f
+              stepCounter: 2cbbfc52-036f-4f38-893d-40af0ee93f75
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            hashColumns: []
+            hashDetails: null
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fae22fd1-7251-47b4-b276-18d3ae119e29
+                    stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+                transform: ""
+          - columnReference:
+              columnCounter: ddce70ff-d463-4e2a-a324-25475c00427a
+              stepCounter: 2cbbfc52-036f-4f38-893d-40af0ee93f75
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 48ea3eeb-4638-4be0-8571-41dcdd7f4662
+                    stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+                transform: ""
+          - columnReference:
+              columnCounter: 56e18b3b-16b3-44b9-90ca-b962f6cc58cd
+              stepCounter: 2cbbfc52-036f-4f38-893d-40af0ee93f75
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: dc1afe64-22f7-4e00-a04a-81d62ee710f7
+                    stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+                transform: ""
+          - columnReference:
+              columnCounter: 2e0a0753-630e-4d46-b4a9-a0ccbcec7b36
+              stepCounter: 2cbbfc52-036f-4f38-893d-40af0ee93f75
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 910a3d84-e461-45af-9606-7ec63bb49076
+                    stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_WORKORDERROUTING
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_WORKORDERROUTING') }} "DVSTG_AW_WORKORDERROUTING"
+            name: SATV0_AW_WORKORDERROUTING
+            noLinkRefs: []
+      name: SATV0_AW_WORKORDERROUTING
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: 2cbbfc52-036f-4f38-893d-40af0ee93f75

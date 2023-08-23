@@ -1,0 +1,64 @@
+steps:
+  AW_LOAD_CONTACTTYPE-071aa48d-33a3-42a1-8e55-a2947afb4d4c:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: ADV_WRKS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 64c31767-b0e4-496e-af2b-0374467b01d2
+              stepCounter: 071aa48d-33a3-42a1-8e55-a2947afb4d4c
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Primary key for ContactType records.
+            name: CONTACTTYPEID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: eb2bc6ee-dcf8-46f6-976e-09ffe251778e
+              stepCounter: 071aa48d-33a3-42a1-8e55-a2947afb4d4c
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: Contact type description.
+            name: NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 557a31a6-3f47-4ae6-ba88-a0f9f30b0f2c
+              stepCounter: 071aa48d-33a3-42a1-8e55-a2947afb4d4c
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_CONTACTTYPE') }}
+      name: AW_LOAD_CONTACTTYPE
+      schema: ""
+      sqlType: Source
+      table: AW_LOAD_CONTACTTYPE
+      type: sourceInput
+    stepCounter: 071aa48d-33a3-42a1-8e55-a2947afb4d4c

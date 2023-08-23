@@ -1,0 +1,91 @@
+steps:
+  HUB_SALES_CURRENCY_RATE-34c8eadc-8aa3-4de4-acb4-47c553077f12:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 0d1de378-faf7-49f1-b561-dd77ce01614e
+              stepCounter: 34c8eadc-8aa3-4de4-acb4-47c553077f12
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_SALES_CURRENCY_RATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c5af6504-f6e1-40c7-9a09-3cdef7f15bb8
+                    stepCounter: 98b08145-5423-4cfd-917e-709c376929ea
+                transform: ""
+          - columnReference:
+              columnCounter: e3f07725-6c30-44c2-a85e-0299c8524d0d
+              stepCounter: 34c8eadc-8aa3-4de4-acb4-47c553077f12
+            dataType: VARCHAR(5)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ORIGINATING_CURRENCY_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d42f715d-b9cc-452b-ad36-13ee48e7ffca
+                    stepCounter: 98b08145-5423-4cfd-917e-709c376929ea
+                transform: ""
+          - columnReference:
+              columnCounter: 1281bf35-3aaa-4c33-8a1d-0bc1ab8a478f
+              stepCounter: 34c8eadc-8aa3-4de4-acb4-47c553077f12
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0080e624-d4db-42b6-8154-aacdb9d50233
+                    stepCounter: 98b08145-5423-4cfd-917e-709c376929ea
+                transform: ""
+          - columnReference:
+              columnCounter: 869b3f86-157d-4e7f-ba34-845f3278dca3
+              stepCounter: 34c8eadc-8aa3-4de4-acb4-47c553077f12
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2396206c-7018-4e77-a1f5-84d0e39539fa
+                    stepCounter: 98b08145-5423-4cfd-917e-709c376929ea
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SALES_CURRENCY_RATE
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SALES_CURRENCY_RATE') }} "DVSTG_SALES_CURRENCY_RATE"
+            name: HUB_SALES_CURRENCY_RATE
+            noLinkRefs: []
+      name: HUB_SALES_CURRENCY_RATE
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 34c8eadc-8aa3-4de4-acb4-47c553077f12

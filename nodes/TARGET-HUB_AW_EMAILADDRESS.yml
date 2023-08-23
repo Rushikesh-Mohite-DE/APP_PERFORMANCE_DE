@@ -1,0 +1,105 @@
+steps:
+  HUB_AW_EMAILADDRESS-67a25364-9fbf-4e2d-9c18-7db56176b2e6:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 35016ba3-bdcd-4c70-8777-d47f52cf4efd
+              stepCounter: 67a25364-9fbf-4e2d-9c18-7db56176b2e6
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_EMAILADDRESS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9a90dac8-d639-4b41-8151-7743d99ece33
+                    stepCounter: 0f4788c3-842f-43d8-8dfc-d08810af08ad
+                transform: ""
+          - columnReference:
+              columnCounter: 3451f781-451d-4aef-b949-8a262b881c6a
+              stepCounter: 67a25364-9fbf-4e2d-9c18-7db56176b2e6
+            dataType: NUMBER(38,0)
+            description: Primary key. Person associated with this email address.  Foreign key to Person.BusinessEntityID
+            hashColumns: []
+            hashDetails: null
+            name: BUSINESSENTITYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 225ff203-b473-4fab-9c63-33a45dd94949
+                    stepCounter: 0f4788c3-842f-43d8-8dfc-d08810af08ad
+                transform: ""
+          - columnReference:
+              columnCounter: bee05062-48a5-4388-98fe-4540dfa66da8
+              stepCounter: 67a25364-9fbf-4e2d-9c18-7db56176b2e6
+            dataType: NUMBER(38,0)
+            description: Primary key. ID of this email address.
+            hashColumns: []
+            hashDetails: null
+            name: EMAILADDRESSID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 782195f8-a1dc-4224-9ddf-43e3fe928024
+                    stepCounter: 0f4788c3-842f-43d8-8dfc-d08810af08ad
+                transform: ""
+          - columnReference:
+              columnCounter: 76ab8d35-dac8-4e17-ad65-e2b3e02efdd0
+              stepCounter: 67a25364-9fbf-4e2d-9c18-7db56176b2e6
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 63e5eb88-1f40-4488-acd3-351c72f22e6b
+                    stepCounter: 0f4788c3-842f-43d8-8dfc-d08810af08ad
+                transform: ""
+          - columnReference:
+              columnCounter: 765eafa1-3db2-4d83-8ddc-11a837317c22
+              stepCounter: 67a25364-9fbf-4e2d-9c18-7db56176b2e6
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a50d770b-1b8c-4507-a2a3-e99c1a2c6dac
+                    stepCounter: 0f4788c3-842f-43d8-8dfc-d08810af08ad
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_EMAILADDRESS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_EMAILADDRESS') }} "DVSTG_AW_EMAILADDRESS"
+            name: HUB_AW_EMAILADDRESS
+            noLinkRefs: []
+      name: HUB_AW_EMAILADDRESS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 67a25364-9fbf-4e2d-9c18-7db56176b2e6

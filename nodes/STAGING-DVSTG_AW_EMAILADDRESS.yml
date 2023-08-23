@@ -1,0 +1,195 @@
+steps:
+  DVSTG_AW_EMAILADDRESS-0f4788c3-842f-43d8-8dfc-d08810af08ad:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9a90dac8-d639-4b41-8151-7743d99ece33
+              stepCounter: 0f4788c3-842f-43d8-8dfc-d08810af08ad
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 225ff203-b473-4fab-9c63-33a45dd94949
+                stepCounter: 0f4788c3-842f-43d8-8dfc-d08810af08ad
+              - columnCounter: 782195f8-a1dc-4224-9ddf-43e3fe928024
+                stepCounter: 0f4788c3-842f-43d8-8dfc-d08810af08ad
+            name: HK_EMAILADDRESS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 225ff203-b473-4fab-9c63-33a45dd94949
+              stepCounter: 0f4788c3-842f-43d8-8dfc-d08810af08ad
+            dataType: NUMBER(38,0)
+            description: Primary key. Person associated with this email address.  Foreign key to Person.BusinessEntityID
+            name: BUSINESSENTITYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bf00cfea-1269-4f1d-9ac7-06e07c3d55a4
+                    stepCounter: e311125c-3104-4e1e-86de-24e0950dc472
+                transform: ""
+          - columnReference:
+              columnCounter: 782195f8-a1dc-4224-9ddf-43e3fe928024
+              stepCounter: 0f4788c3-842f-43d8-8dfc-d08810af08ad
+            dataType: NUMBER(38,0)
+            description: Primary key. ID of this email address.
+            name: EMAILADDRESSID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a8ad5a5c-0e8b-4cfd-b9d1-8884a429cc2d
+                    stepCounter: e311125c-3104-4e1e-86de-24e0950dc472
+                transform: ""
+          - columnReference:
+              columnCounter: 3362c36f-4099-4358-9c70-081b416a4ffe
+              stepCounter: 0f4788c3-842f-43d8-8dfc-d08810af08ad
+            dataType: VARCHAR(50)
+            description: E-mail address for the person.
+            name: EMAILADDRESS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a35d66eb-829f-4170-8f31-a8eb45ca483e
+                    stepCounter: e311125c-3104-4e1e-86de-24e0950dc472
+                transform: ""
+          - columnReference:
+              columnCounter: 287b5efe-3c8d-475e-8113-96f3c06e468a
+              stepCounter: 0f4788c3-842f-43d8-8dfc-d08810af08ad
+            dataType: VARCHAR(16777216)
+            description: ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            name: ROWGUID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8211a88f-cac5-42a1-8b14-6f178004c61c
+                    stepCounter: e311125c-3104-4e1e-86de-24e0950dc472
+                transform: ""
+          - columnReference:
+              columnCounter: 494147e3-1561-49ac-ac9a-e641f9eb4a49
+              stepCounter: 0f4788c3-842f-43d8-8dfc-d08810af08ad
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 291aeb74-cc65-4242-a705-7116c445fa21
+                    stepCounter: e311125c-3104-4e1e-86de-24e0950dc472
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 63e5eb88-1f40-4488-acd3-351c72f22e6b
+              stepCounter: 0f4788c3-842f-43d8-8dfc-d08810af08ad
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a50d770b-1b8c-4507-a2a3-e99c1a2c6dac
+              stepCounter: 0f4788c3-842f-43d8-8dfc-d08810af08ad
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 019c654a-6963-445c-bfa5-5eb03a8110a6
+              stepCounter: 0f4788c3-842f-43d8-8dfc-d08810af08ad
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 3362c36f-4099-4358-9c70-081b416a4ffe
+                stepCounter: 0f4788c3-842f-43d8-8dfc-d08810af08ad
+              - columnCounter: 287b5efe-3c8d-475e-8113-96f3c06e468a
+                stepCounter: 0f4788c3-842f-43d8-8dfc-d08810af08ad
+              - columnCounter: 494147e3-1561-49ac-ac9a-e641f9eb4a49
+                stepCounter: 0f4788c3-842f-43d8-8dfc-d08810af08ad
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5d78c4a4-66af-4ddb-bf54-dc9f0ad1cfac
+              stepCounter: 0f4788c3-842f-43d8-8dfc-d08810af08ad
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 782195f8-a1dc-4224-9ddf-43e3fe928024
+                stepCounter: 0f4788c3-842f-43d8-8dfc-d08810af08ad
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: ADV_WRKS_SRC
+                nodeName: AW_LOAD_EMAILADDRESS
+            join:
+              joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_EMAILADDRESS') }} "AW_LOAD_EMAILADDRESS"
+            name: DVSTG_AW_EMAILADDRESS
+            noLinkRefs: []
+      name: DVSTG_AW_EMAILADDRESS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: 0f4788c3-842f-43d8-8dfc-d08810af08ad

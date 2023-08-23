@@ -1,0 +1,207 @@
+steps:
+  DVSTG_AW_SHIPMETHOD-6b66270d-b59d-4aac-8c25-33cc33d921fc:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: add68eea-982c-4278-82bf-953f8605ad82
+              stepCounter: 6b66270d-b59d-4aac-8c25-33cc33d921fc
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 28c22a0e-9e4e-4272-ba6a-5604f1d0a74d
+                stepCounter: 6b66270d-b59d-4aac-8c25-33cc33d921fc
+            name: HK_SHIPMETHOD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 28c22a0e-9e4e-4272-ba6a-5604f1d0a74d
+              stepCounter: 6b66270d-b59d-4aac-8c25-33cc33d921fc
+            dataType: NUMBER(38,0)
+            description: Primary key for ShipMethod records.
+            name: SHIPMETHODID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 86bef072-d504-4bba-901a-75aaa3442bd1
+                    stepCounter: 4ecb5ff9-d48e-4e30-a40e-ce1a691c3fde
+                transform: ""
+          - columnReference:
+              columnCounter: e4b90828-afc3-4783-b6fa-3ab5fbebbb25
+              stepCounter: 6b66270d-b59d-4aac-8c25-33cc33d921fc
+            dataType: VARCHAR(16777216)
+            description: Shipping company name.
+            name: NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2c6f8b6a-4140-4efd-9f3f-4187398da24d
+                    stepCounter: 4ecb5ff9-d48e-4e30-a40e-ce1a691c3fde
+                transform: ""
+          - columnReference:
+              columnCounter: 0a5281e2-c8b8-4da1-a91a-270ba8a015b9
+              stepCounter: 6b66270d-b59d-4aac-8c25-33cc33d921fc
+            dataType: NUMBER(19,4)
+            description: Minimum shipping charge.
+            name: SHIPBASE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a6fdb38d-30f5-436a-a489-682c8f13b800
+                    stepCounter: 4ecb5ff9-d48e-4e30-a40e-ce1a691c3fde
+                transform: ""
+          - columnReference:
+              columnCounter: 93fb08d8-db55-4657-82b7-bd6e8c8d00e5
+              stepCounter: 6b66270d-b59d-4aac-8c25-33cc33d921fc
+            dataType: NUMBER(19,4)
+            description: Shipping charge per pound.
+            name: SHIPRATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d3a0b469-be4e-4697-a2d1-7c20846eaa57
+                    stepCounter: 4ecb5ff9-d48e-4e30-a40e-ce1a691c3fde
+                transform: ""
+          - columnReference:
+              columnCounter: 9838b30f-8c84-4295-b98d-dff01e2f53fe
+              stepCounter: 6b66270d-b59d-4aac-8c25-33cc33d921fc
+            dataType: VARCHAR(16777216)
+            description: ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            name: ROWGUID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d28ca250-e7ec-46ab-8565-1b3d1a6a3ca3
+                    stepCounter: 4ecb5ff9-d48e-4e30-a40e-ce1a691c3fde
+                transform: ""
+          - columnReference:
+              columnCounter: ed528d46-9a07-4f5f-b0a4-044005673926
+              stepCounter: 6b66270d-b59d-4aac-8c25-33cc33d921fc
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fcd4ee2e-eb9e-4eeb-b509-00ab95479139
+                    stepCounter: 4ecb5ff9-d48e-4e30-a40e-ce1a691c3fde
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 25f0be82-f5ac-4f71-9908-dedb438529c6
+              stepCounter: 6b66270d-b59d-4aac-8c25-33cc33d921fc
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e3b29dbf-e82f-4b82-8dec-4b9f59bd4fa8
+              stepCounter: 6b66270d-b59d-4aac-8c25-33cc33d921fc
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7e3e2790-43c4-49c9-859e-0b174c4ec52c
+              stepCounter: 6b66270d-b59d-4aac-8c25-33cc33d921fc
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: e4b90828-afc3-4783-b6fa-3ab5fbebbb25
+                stepCounter: 6b66270d-b59d-4aac-8c25-33cc33d921fc
+              - columnCounter: 0a5281e2-c8b8-4da1-a91a-270ba8a015b9
+                stepCounter: 6b66270d-b59d-4aac-8c25-33cc33d921fc
+              - columnCounter: 93fb08d8-db55-4657-82b7-bd6e8c8d00e5
+                stepCounter: 6b66270d-b59d-4aac-8c25-33cc33d921fc
+              - columnCounter: 9838b30f-8c84-4295-b98d-dff01e2f53fe
+                stepCounter: 6b66270d-b59d-4aac-8c25-33cc33d921fc
+              - columnCounter: ed528d46-9a07-4f5f-b0a4-044005673926
+                stepCounter: 6b66270d-b59d-4aac-8c25-33cc33d921fc
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences: []
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e9afbdff-b9f2-4cf8-b616-251ce27f914b
+              stepCounter: 6b66270d-b59d-4aac-8c25-33cc33d921fc
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 0a5281e2-c8b8-4da1-a91a-270ba8a015b9
+                stepCounter: 6b66270d-b59d-4aac-8c25-33cc33d921fc
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: ADV_WRKS_SRC
+                nodeName: AW_LOAD_SHIPMETHOD
+            join:
+              joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_SHIPMETHOD') }} "AW_LOAD_SHIPMETHOD"
+            name: DVSTG_AW_SHIPMETHOD
+            noLinkRefs: []
+      name: DVSTG_AW_SHIPMETHOD
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: 6b66270d-b59d-4aac-8c25-33cc33d921fc

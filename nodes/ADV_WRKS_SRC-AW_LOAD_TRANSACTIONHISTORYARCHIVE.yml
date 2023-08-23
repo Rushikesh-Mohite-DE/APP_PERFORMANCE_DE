@@ -1,0 +1,154 @@
+steps:
+  AW_LOAD_TRANSACTIONHISTORYARCHIVE-e817ae95-b26f-476f-9890-ad323d31088e:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: ADV_WRKS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 639c1ec6-70ce-4cd5-86ab-6d6a05730f2f
+              stepCounter: e817ae95-b26f-476f-9890-ad323d31088e
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Primary key for TransactionHistoryArchive records.
+            name: TRANSACTIONID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5d08f1b0-244a-415a-89ee-e9a8cd138e28
+              stepCounter: e817ae95-b26f-476f-9890-ad323d31088e
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Product identification number. Foreign key to Product.ProductID.
+            name: PRODUCTID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 90297ae9-8d6a-4b0f-8cea-fa61f06a32b1
+              stepCounter: e817ae95-b26f-476f-9890-ad323d31088e
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Purchase order, sales order, or work order identification number.
+            name: REFERENCEORDERID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8c0bc86b-8a7a-4509-aa38-447736300dc6
+              stepCounter: e817ae95-b26f-476f-9890-ad323d31088e
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Line number associated with the purchase order, sales order, or work order.
+            name: REFERENCEORDERLINEID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 29ccfef9-5cfc-40e9-af9f-e7cc92c512e7
+              stepCounter: e817ae95-b26f-476f-9890-ad323d31088e
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time of the transaction.
+            name: TRANSACTIONDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ac65e002-44b3-48b0-88ea-c37a373db71e
+              stepCounter: e817ae95-b26f-476f-9890-ad323d31088e
+            config: {}
+            dataType: VARCHAR(1)
+            defaultValue: ""
+            description: W = Work Order, S = Sales Order, P = Purchase Order
+            name: TRANSACTIONTYPE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e81e189d-513b-44b1-8f62-8bcd93dade32
+              stepCounter: e817ae95-b26f-476f-9890-ad323d31088e
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Product quantity.
+            name: QUANTITY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a6756166-a598-4a8e-bcb8-83094795eaa2
+              stepCounter: e817ae95-b26f-476f-9890-ad323d31088e
+            config: {}
+            dataType: NUMBER(19,4)
+            defaultValue: ""
+            description: Product cost.
+            name: ACTUALCOST
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a3410c4d-8fc6-4e49-8552-8de0b4234bd4
+              stepCounter: e817ae95-b26f-476f-9890-ad323d31088e
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_TRANSACTIONHISTORYARCHIVE') }}
+      name: AW_LOAD_TRANSACTIONHISTORYARCHIVE
+      schema: ""
+      sqlType: Source
+      table: AW_LOAD_TRANSACTIONHISTORYARCHIVE
+      type: sourceInput
+    stepCounter: e817ae95-b26f-476f-9890-ad323d31088e

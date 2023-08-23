@@ -1,0 +1,105 @@
+steps:
+  HUB_AW_JOBCANDIDATE-6d4097ad-122a-4c26-8e5d-f759d8119897:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: e97be932-667b-4a69-8c83-0fee2f75778a
+              stepCounter: 6d4097ad-122a-4c26-8e5d-f759d8119897
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_JOBCANDIDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8d369eca-fffb-4fe0-8ae1-9d51d737558a
+                    stepCounter: 206a67a5-5023-44fa-8951-97c07fef4686
+                transform: ""
+          - columnReference:
+              columnCounter: 0da6f262-b765-45e6-9b2e-d5e01a89e1a2
+              stepCounter: 6d4097ad-122a-4c26-8e5d-f759d8119897
+            dataType: VARCHAR(50)
+            description: Primary key for JobCandidate records.
+            hashColumns: []
+            hashDetails: null
+            name: JOBCANDIDATEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1700d11b-80aa-434c-891e-7c1c2735e21d
+                    stepCounter: 206a67a5-5023-44fa-8951-97c07fef4686
+                transform: ""
+          - columnReference:
+              columnCounter: 16b4e20f-daed-43e6-8af5-1f6af6f0d714
+              stepCounter: 6d4097ad-122a-4c26-8e5d-f759d8119897
+            dataType: VARCHAR(50)
+            description: Employee identification number if applicant was hired. Foreign key to Employee.BusinessEntityID.
+            hashColumns: []
+            hashDetails: null
+            name: BUSINESSENTITYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1428b455-217b-4d5f-b0cc-a05de0f1bdbe
+                    stepCounter: 206a67a5-5023-44fa-8951-97c07fef4686
+                transform: ""
+          - columnReference:
+              columnCounter: 974f9bb3-135e-464a-84bd-53fbcbd0f311
+              stepCounter: 6d4097ad-122a-4c26-8e5d-f759d8119897
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8ba6157d-237d-4831-8978-fb2619f07ca4
+                    stepCounter: 206a67a5-5023-44fa-8951-97c07fef4686
+                transform: ""
+          - columnReference:
+              columnCounter: 53b72ff2-8329-4710-9b88-5a1f34f9dac8
+              stepCounter: 6d4097ad-122a-4c26-8e5d-f759d8119897
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 56cca5a5-60b3-4029-abf3-e8d5515b918c
+                    stepCounter: 206a67a5-5023-44fa-8951-97c07fef4686
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_JOBCANDIDATE
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_JOBCANDIDATE') }} "DVSTG_AW_JOBCANDIDATE"
+            name: HUB_AW_JOBCANDIDATE
+            noLinkRefs: []
+      name: HUB_AW_JOBCANDIDATE
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 6d4097ad-122a-4c26-8e5d-f759d8119897

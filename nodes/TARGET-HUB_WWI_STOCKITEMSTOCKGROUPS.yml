@@ -1,0 +1,119 @@
+steps:
+  HUB_WWI_STOCKITEMSTOCKGROUPS-343324d1-6768-40ae-b731-1f1b8354cd65:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 03e4fc4a-aa9e-440a-bcf0-7e8fadba0021
+              stepCounter: 343324d1-6768-40ae-b731-1f1b8354cd65
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_STOCKITEMSTOCKGROUPS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9b07908a-a921-4c62-82dc-9d4e0834ff62
+                    stepCounter: 949d6202-e44b-47cc-9897-465c73eee3a0
+                transform: ""
+          - columnReference:
+              columnCounter: 711bda16-cf5a-4555-9440-122c1c2594b3
+              stepCounter: 343324d1-6768-40ae-b731-1f1b8354cd65
+            dataType: NUMBER(38,0)
+            description: Internal reference for this linking row
+            hashColumns: []
+            hashDetails: null
+            name: STOCKITEMSTOCKGROUPID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 930e7c3f-1beb-4646-883a-01d68cc0bc23
+                    stepCounter: 949d6202-e44b-47cc-9897-465c73eee3a0
+                transform: ""
+          - columnReference:
+              columnCounter: 7ddeea5c-e91e-483a-b71e-013836510dc9
+              stepCounter: 343324d1-6768-40ae-b731-1f1b8354cd65
+            dataType: NUMBER(38,0)
+            description: Stock item assigned to this stock group (FK indexed via unique constraint)
+            hashColumns: []
+            hashDetails: null
+            name: STOCKITEMID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8292f1ee-c97a-4f9f-becb-c418ebe9bee1
+                    stepCounter: 949d6202-e44b-47cc-9897-465c73eee3a0
+                transform: ""
+          - columnReference:
+              columnCounter: 526f09cf-0344-4a85-8e58-8aefc56b5895
+              stepCounter: 343324d1-6768-40ae-b731-1f1b8354cd65
+            dataType: NUMBER(38,0)
+            description: StockGroup assigned to this stock item (FK indexed via unique constraint)
+            hashColumns: []
+            hashDetails: null
+            name: STOCKGROUPID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fa8aea98-5ebb-4981-b1c1-fb8223a392ec
+                    stepCounter: 949d6202-e44b-47cc-9897-465c73eee3a0
+                transform: ""
+          - columnReference:
+              columnCounter: 39f781cf-af2e-40f2-b78e-a27026021dfa
+              stepCounter: 343324d1-6768-40ae-b731-1f1b8354cd65
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 92e9023f-885f-4784-993a-13b5dbdd6491
+                    stepCounter: 949d6202-e44b-47cc-9897-465c73eee3a0
+                transform: ""
+          - columnReference:
+              columnCounter: 48c4f234-5e18-4eb0-bd58-077ce04c8dfc
+              stepCounter: 343324d1-6768-40ae-b731-1f1b8354cd65
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3c699d23-e043-47bd-9703-f4b3e49d13df
+                    stepCounter: 949d6202-e44b-47cc-9897-465c73eee3a0
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_WWI_STOCKITEMSTOCKGROUPS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_WWI_STOCKITEMSTOCKGROUPS') }} "DVSTG_WWI_STOCKITEMSTOCKGROUPS"
+            name: HUB_WWI_STOCKITEMSTOCKGROUPS
+            noLinkRefs: []
+      name: HUB_WWI_STOCKITEMSTOCKGROUPS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 343324d1-6768-40ae-b731-1f1b8354cd65

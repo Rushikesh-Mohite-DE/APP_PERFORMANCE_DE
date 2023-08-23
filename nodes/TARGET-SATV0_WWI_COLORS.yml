@@ -1,0 +1,149 @@
+steps:
+  SATV0_WWI_COLORS-1b8f0ede-f218-41a7-9de1-c44007a34470:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 853c0d5e-0ffa-4e0d-b4ce-a51c98781272
+              stepCounter: 1b8f0ede-f218-41a7-9de1-c44007a34470
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_COLORS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fded8348-d197-4c11-a923-4c3ae9932cab
+                    stepCounter: 7b5729f5-024b-488d-b1ea-7e12a1cc3d94
+                transform: ""
+          - columnReference:
+              columnCounter: 4c5a8092-521c-4696-b313-40040afd2373
+              stepCounter: 1b8f0ede-f218-41a7-9de1-c44007a34470
+            dataType: VARCHAR(20)
+            description: Full name of a color that can be used to describe stock items
+            hashColumns: []
+            hashDetails: null
+            name: COLORNAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3f82ab6c-5dfa-42ae-8e91-63f75bb4bc6b
+                    stepCounter: 7b5729f5-024b-488d-b1ea-7e12a1cc3d94
+                transform: ""
+          - columnReference:
+              columnCounter: 180189cc-f4b3-47ac-b6b9-ba1724f71c4d
+              stepCounter: 1b8f0ede-f218-41a7-9de1-c44007a34470
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LASTEDITEDBY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e165e48e-7f9d-4402-8260-eda21eb4fd36
+                    stepCounter: 7b5729f5-024b-488d-b1ea-7e12a1cc3d94
+                transform: ""
+          - columnReference:
+              columnCounter: 4e0b4201-1bfe-461c-bc0d-f9a9ef734f62
+              stepCounter: 1b8f0ede-f218-41a7-9de1-c44007a34470
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: VALIDFROM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7058dcac-9adf-4d14-971b-7f9c1e4dbd07
+                    stepCounter: 7b5729f5-024b-488d-b1ea-7e12a1cc3d94
+                transform: ""
+          - columnReference:
+              columnCounter: 0b47d434-6699-41db-912c-0fa551e1584c
+              stepCounter: 1b8f0ede-f218-41a7-9de1-c44007a34470
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: VALIDTO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e31722e4-ca58-4af7-b553-6e75ad601ecb
+                    stepCounter: 7b5729f5-024b-488d-b1ea-7e12a1cc3d94
+                transform: ""
+          - columnReference:
+              columnCounter: 164ed72d-5a7d-4882-a2d1-7bba19643e68
+              stepCounter: 1b8f0ede-f218-41a7-9de1-c44007a34470
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 38570267-876a-44be-be0d-cc24cf02d217
+                    stepCounter: 7b5729f5-024b-488d-b1ea-7e12a1cc3d94
+                transform: ""
+          - columnReference:
+              columnCounter: b21faa39-644e-493a-98ef-b01be5224cf4
+              stepCounter: 1b8f0ede-f218-41a7-9de1-c44007a34470
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a9182119-33d8-48f6-9aaa-3c64204562ae
+                    stepCounter: 7b5729f5-024b-488d-b1ea-7e12a1cc3d94
+                transform: ""
+          - columnReference:
+              columnCounter: 039bb644-e6ee-4827-a224-d5ca79761556
+              stepCounter: 1b8f0ede-f218-41a7-9de1-c44007a34470
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 544a7f55-b350-4d6a-ae06-ab5751bf338b
+                    stepCounter: 7b5729f5-024b-488d-b1ea-7e12a1cc3d94
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_WWI_COLORS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_WWI_COLORS') }} "DVSTG_WWI_COLORS"
+            name: SATV0_WWI_COLORS
+            noLinkRefs: []
+      name: SATV0_WWI_COLORS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: 1b8f0ede-f218-41a7-9de1-c44007a34470

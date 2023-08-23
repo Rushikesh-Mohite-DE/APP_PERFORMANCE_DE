@@ -1,0 +1,109 @@
+steps:
+  AW_LOAD_SALESTERRITORYHISTORY-102230f2-c538-4fa0-8638-dc5199ebea42:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: ADV_WRKS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e80cbb22-a56c-45b0-9e2b-84335e43be03
+              stepCounter: 102230f2-c538-4fa0-8638-dc5199ebea42
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Primary key. The sales rep.  Foreign key to SalesPerson.BusinessEntityID.
+            name: BUSINESSENTITYID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 191d9760-f68a-43d6-b9fa-f83a0f9a032b
+              stepCounter: 102230f2-c538-4fa0-8638-dc5199ebea42
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Primary key. Territory identification number. Foreign key to SalesTerritory.SalesTerritoryID.
+            name: TERRITORYID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d50acab6-23ed-4afa-8000-49a7734a5f0c
+              stepCounter: 102230f2-c538-4fa0-8638-dc5199ebea42
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Primary key. Date the sales representive started work in the territory.
+            name: STARTDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7192d3f2-7eb6-4c31-97bf-ec8f22f10a41
+              stepCounter: 102230f2-c538-4fa0-8638-dc5199ebea42
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: Date the sales representative left work in the territory.
+            name: ENDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 58b5659d-fcce-4744-835e-b9de46575f91
+              stepCounter: 102230f2-c538-4fa0-8638-dc5199ebea42
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            name: ROWGUID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4a6031b9-47b2-41a1-84c6-0ec81141c0f2
+              stepCounter: 102230f2-c538-4fa0-8638-dc5199ebea42
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_SALESTERRITORYHISTORY') }}
+      name: AW_LOAD_SALESTERRITORYHISTORY
+      schema: ""
+      sqlType: Source
+      table: AW_LOAD_SALESTERRITORYHISTORY
+      type: sourceInput
+    stepCounter: 102230f2-c538-4fa0-8638-dc5199ebea42

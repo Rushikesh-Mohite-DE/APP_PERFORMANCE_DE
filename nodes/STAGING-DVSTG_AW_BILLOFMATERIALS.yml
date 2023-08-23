@@ -1,0 +1,249 @@
+steps:
+  DVSTG_AW_BILLOFMATERIALS-ea0b7ffb-794a-4538-aee8-8bed3aecade9:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 38960c03-6586-4fed-98e7-0705e7a406a6
+              stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: a77f738a-1f20-466f-92e8-597bb912fa15
+                stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
+              - columnCounter: fef785b6-5ba3-4efc-9ef1-b201fdf6c47f
+                stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
+              - columnCounter: 991d17f7-766b-431d-af1b-5537c30b6347
+                stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
+            name: HK_BILLOFMATERIALS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: a77f738a-1f20-466f-92e8-597bb912fa15
+              stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
+            dataType: NUMBER(38,0)
+            description: Primary key for BillOfMaterials records.
+            name: BILLOFMATERIALSID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 631035fb-b0a8-4e3a-9a73-5b5634cee357
+                    stepCounter: 86a5e84a-b4e4-4b29-b56d-2a852f3d7583
+                transform: ""
+          - columnReference:
+              columnCounter: fef785b6-5ba3-4efc-9ef1-b201fdf6c47f
+              stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
+            dataType: VARCHAR(16777216)
+            description: Parent product identification number. Foreign key to Product.ProductID.
+            name: PRODUCTASSEMBLYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7263b313-8a69-41fb-ad98-18366ac2cccd
+                    stepCounter: 86a5e84a-b4e4-4b29-b56d-2a852f3d7583
+                transform: ""
+          - columnReference:
+              columnCounter: 991d17f7-766b-431d-af1b-5537c30b6347
+              stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
+            dataType: NUMBER(38,0)
+            description: Component identification number. Foreign key to Product.ProductID.
+            name: COMPONENTID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 331f2434-6c6a-4a2f-9c1a-14a80ed17080
+                    stepCounter: 86a5e84a-b4e4-4b29-b56d-2a852f3d7583
+                transform: ""
+          - columnReference:
+              columnCounter: be398c37-76ed-4414-b983-f16738f9abfc
+              stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date the component started being used in the assembly item.
+            name: STARTDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 01017ea4-8ab3-4c0a-bc5f-bfd158ee440b
+                    stepCounter: 86a5e84a-b4e4-4b29-b56d-2a852f3d7583
+                transform: ""
+          - columnReference:
+              columnCounter: 523afda7-aa57-4ab6-9e29-525a1982d155
+              stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
+            dataType: VARCHAR(16777216)
+            description: Date the component stopped being used in the assembly item.
+            name: ENDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 04d1bd15-fdc3-4e6b-9485-5d1446f6bc23
+                    stepCounter: 86a5e84a-b4e4-4b29-b56d-2a852f3d7583
+                transform: ""
+          - columnReference:
+              columnCounter: b94e9d95-3e2c-432e-9373-881cddbe4c4e
+              stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
+            dataType: VARCHAR(3)
+            description: Standard code identifying the unit of measure for the quantity.
+            name: UNITMEASURECODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 44b670b3-c871-4e34-9215-e1a96ac3efb8
+                    stepCounter: 86a5e84a-b4e4-4b29-b56d-2a852f3d7583
+                transform: ""
+          - columnReference:
+              columnCounter: ad673452-2fee-4b68-91ec-0ac9bb0e2931
+              stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
+            dataType: NUMBER(38,0)
+            description: Indicates the depth the component is from its parent (AssemblyID).
+            name: BOMLEVEL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8fae2b78-f0cc-46ed-a8b3-040769c69a2d
+                    stepCounter: 86a5e84a-b4e4-4b29-b56d-2a852f3d7583
+                transform: ""
+          - columnReference:
+              columnCounter: 5317b1c9-5d8d-4104-8454-b677cc759fc6
+              stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
+            dataType: NUMBER(8,2)
+            description: Quantity of the component needed to create the assembly.
+            name: PERASSEMBLYQTY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 67e0b7dd-69e8-47fd-a41e-4704397e0a2f
+                    stepCounter: 86a5e84a-b4e4-4b29-b56d-2a852f3d7583
+                transform: ""
+          - columnReference:
+              columnCounter: 5d0ab978-07c7-4439-8d19-56eb465a3729
+              stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7fc04503-45fd-4346-949c-90c6ce663cc1
+                    stepCounter: 86a5e84a-b4e4-4b29-b56d-2a852f3d7583
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 15f64856-dec4-4c52-a6b8-f3c290a7ea45
+              stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1deefa52-5b15-4d48-bb85-812788ee2f4d
+              stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d17be4ea-a0a8-470c-b566-72e94ba0ec6d
+              stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: be398c37-76ed-4414-b983-f16738f9abfc
+                stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
+              - columnCounter: 523afda7-aa57-4ab6-9e29-525a1982d155
+                stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
+              - columnCounter: b94e9d95-3e2c-432e-9373-881cddbe4c4e
+                stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
+              - columnCounter: ad673452-2fee-4b68-91ec-0ac9bb0e2931
+                stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
+              - columnCounter: 5317b1c9-5d8d-4104-8454-b677cc759fc6
+                stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
+              - columnCounter: 5d0ab978-07c7-4439-8d19-56eb465a3729
+                stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
+            name: HASH_ROW
+            nullable: true
+            sourceColumnReferences: []
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a41e355e-ab2a-49ef-8f2f-00d38891997a
+              stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: fef785b6-5ba3-4efc-9ef1-b201fdf6c47f
+                stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: ADV_WRKS_SRC
+                nodeName: AW_LOAD_BILLOFMATERIALS
+            join:
+              joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_BILLOFMATERIALS') }} "AW_LOAD_BILLOFMATERIALS"
+            name: DVSTG_AW_BILLOFMATERIALS
+            noLinkRefs: []
+      name: DVSTG_AW_BILLOFMATERIALS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9

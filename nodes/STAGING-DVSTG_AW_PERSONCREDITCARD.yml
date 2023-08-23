@@ -1,0 +1,167 @@
+steps:
+  DVSTG_AW_PERSONCREDITCARD-c0c442c9-466b-495b-ad95-f9b9e3f08367:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e562795f-b572-4647-b422-61fa08ad3ffc
+              stepCounter: c0c442c9-466b-495b-ad95-f9b9e3f08367
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: bfe0bf5f-1802-4a28-8f50-6c51c4e464f3
+                stepCounter: c0c442c9-466b-495b-ad95-f9b9e3f08367
+              - columnCounter: f78dc87d-4805-46d3-b4e3-7fab6396a755
+                stepCounter: c0c442c9-466b-495b-ad95-f9b9e3f08367
+            name: HK_PERSONCREDITCARD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: bfe0bf5f-1802-4a28-8f50-6c51c4e464f3
+              stepCounter: c0c442c9-466b-495b-ad95-f9b9e3f08367
+            dataType: NUMBER(38,0)
+            description: Business entity identification number. Foreign key to Person.BusinessEntityID.
+            name: BUSINESSENTITYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: dc1a0aa2-c964-4f08-8e97-08d0d3a42db1
+                    stepCounter: 2e707f63-eaba-4c9e-b0eb-93e8a9dcc1ad
+                transform: ""
+          - columnReference:
+              columnCounter: f78dc87d-4805-46d3-b4e3-7fab6396a755
+              stepCounter: c0c442c9-466b-495b-ad95-f9b9e3f08367
+            dataType: NUMBER(38,0)
+            description: Credit card identification number. Foreign key to CreditCard.CreditCardID.
+            name: CREDITCARDID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c2971839-d9c2-44a2-98f9-035b1b41f40d
+                    stepCounter: 2e707f63-eaba-4c9e-b0eb-93e8a9dcc1ad
+                transform: ""
+          - columnReference:
+              columnCounter: 1eaf40fb-eead-42e1-804b-d2bf90db6459
+              stepCounter: c0c442c9-466b-495b-ad95-f9b9e3f08367
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 88ee642f-939a-4c6c-979a-24bdd00b0ed3
+                    stepCounter: 2e707f63-eaba-4c9e-b0eb-93e8a9dcc1ad
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 988b339e-73b8-4d3c-a227-7d1e051438c3
+              stepCounter: c0c442c9-466b-495b-ad95-f9b9e3f08367
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 39471504-681a-48ac-a585-7eb963d632b9
+              stepCounter: c0c442c9-466b-495b-ad95-f9b9e3f08367
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ff5305a3-3238-4c9a-a427-cf1344a9d6d9
+              stepCounter: c0c442c9-466b-495b-ad95-f9b9e3f08367
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 1eaf40fb-eead-42e1-804b-d2bf90db6459
+                stepCounter: c0c442c9-466b-495b-ad95-f9b9e3f08367
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 23a5a91e-45be-4913-96a1-1102cde32976
+              stepCounter: c0c442c9-466b-495b-ad95-f9b9e3f08367
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: f78dc87d-4805-46d3-b4e3-7fab6396a755
+                stepCounter: c0c442c9-466b-495b-ad95-f9b9e3f08367
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: ADV_WRKS_SRC
+                nodeName: AW_LOAD_PERSONCREDITCARD
+            join:
+              joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_PERSONCREDITCARD') }} "AW_LOAD_PERSONCREDITCARD"
+            name: DVSTG_AW_PERSONCREDITCARD
+            noLinkRefs: []
+      name: DVSTG_AW_PERSONCREDITCARD
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: c0c442c9-466b-495b-ad95-f9b9e3f08367

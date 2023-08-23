@@ -1,0 +1,64 @@
+steps:
+  AW_LOAD_CURRENCY-efebb44d-26b5-4995-9fe2-7f21615f784b:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: ADV_WRKS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7751eaf2-9e26-4bf6-a454-f7819748cd5e
+              stepCounter: efebb44d-26b5-4995-9fe2-7f21615f784b
+            config: {}
+            dataType: VARCHAR(3)
+            defaultValue: ""
+            description: The ISO code for the Currency.
+            name: CURRENCYCODE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3ec4bcb2-6261-4b0b-914d-7278dd6d2a5b
+              stepCounter: efebb44d-26b5-4995-9fe2-7f21615f784b
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: Currency name.
+            name: NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: caaca121-5a00-4205-a11b-c23a335e9320
+              stepCounter: efebb44d-26b5-4995-9fe2-7f21615f784b
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_CURRENCY') }}
+      name: AW_LOAD_CURRENCY
+      schema: ""
+      sqlType: Source
+      table: AW_LOAD_CURRENCY
+      type: sourceInput
+    stepCounter: efebb44d-26b5-4995-9fe2-7f21615f784b

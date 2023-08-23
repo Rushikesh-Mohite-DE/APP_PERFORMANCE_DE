@@ -1,0 +1,79 @@
+steps:
+  SPORTS_LOAD_DOCUMENT_CONTENTS-fad4dade-cb48-4c10-835d-d8b01623f1ea:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SPORTS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 00b6b805-9050-4f3e-8a11-e289a8e386f9
+              stepCounter: fad4dade-cb48-4c10-835d-d8b01623f1ea
+            config: {}
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            name: ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 83615f51-eda4-463c-9a31-80905c31521c
+              stepCounter: fad4dade-cb48-4c10-835d-d8b01623f1ea
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: DOCUMENT_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d7787501-dba9-4512-b31f-a899995e6076
+              stepCounter: fad4dade-cb48-4c10-835d-d8b01623f1ea
+            config: {}
+            dataType: VARCHAR(200)
+            defaultValue: ""
+            description: ""
+            name: SPORTSML
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 00a2a8ae-2437-42f7-afdc-9218d1092ccb
+              stepCounter: fad4dade-cb48-4c10-835d-d8b01623f1ea
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: ABSTRACT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SPORTS_SRC', 'SPORTS_LOAD_DOCUMENT_CONTENTS') }}
+      name: SPORTS_LOAD_DOCUMENT_CONTENTS
+      schema: ""
+      sqlType: Source
+      table: SPORTS_LOAD_DOCUMENT_CONTENTS
+      type: sourceInput
+    stepCounter: fad4dade-cb48-4c10-835d-d8b01623f1ea

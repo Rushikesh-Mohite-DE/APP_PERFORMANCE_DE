@@ -1,0 +1,77 @@
+steps:
+  HUB_AW_UNITMEASURE-9bda1fa3-19b6-43e9-b5df-1aa293ccf224:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 484727c6-5426-456e-8927-650f76bb3f11
+              stepCounter: 9bda1fa3-19b6-43e9-b5df-1aa293ccf224
+            config:
+              is_Hub_hk: true
+            dataType: VARCHAR(3)
+            description: Primary key.
+            hashColumns: []
+            hashDetails: null
+            name: UNITMEASURECODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b9d08cca-8a56-4867-a53b-0ecd7d66f5f7
+                    stepCounter: fd420096-64cc-4524-83c8-092b75bfe2d1
+                transform: ""
+          - columnReference:
+              columnCounter: f8d2d1ab-a07b-4d09-809d-3335c5fb1883
+              stepCounter: 9bda1fa3-19b6-43e9-b5df-1aa293ccf224
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1abe1ea9-0c8a-4964-accb-853172e88f8d
+                    stepCounter: fd420096-64cc-4524-83c8-092b75bfe2d1
+                transform: ""
+          - columnReference:
+              columnCounter: 0902f4d0-d09d-41f9-8006-3a56c04f196e
+              stepCounter: 9bda1fa3-19b6-43e9-b5df-1aa293ccf224
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 06ef9bc7-145e-487b-bf46-82dae997a98f
+                    stepCounter: fd420096-64cc-4524-83c8-092b75bfe2d1
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_UNITMEASURE
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_UNITMEASURE') }} "DVSTG_AW_UNITMEASURE"
+            name: HUB_AW_UNITMEASURE
+            noLinkRefs: []
+      name: HUB_AW_UNITMEASURE
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 9bda1fa3-19b6-43e9-b5df-1aa293ccf224

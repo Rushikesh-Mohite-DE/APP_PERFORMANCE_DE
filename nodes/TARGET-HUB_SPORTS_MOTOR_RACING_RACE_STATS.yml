@@ -1,0 +1,91 @@
+steps:
+  HUB_SPORTS_MOTOR_RACING_RACE_STATS-e54175c6-149b-4dc2-82ff-5fcca438e41f:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 9fb0e783-14c5-40ba-a5d6-f2accfdd14d8
+              stepCounter: e54175c6-149b-4dc2-82ff-5fcca438e41f
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_SPORTS_MOTOR_RACING_RACE_STATS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 04d9079a-e23a-48d3-bbcd-8496d423f01c
+                    stepCounter: f95d189d-f84d-4225-86cf-4b22360f9968
+                transform: ""
+          - columnReference:
+              columnCounter: 043e9079-1690-4d10-9e96-c72b4e726f19
+              stepCounter: e54175c6-149b-4dc2-82ff-5fcca438e41f
+            dataType: VARCHAR(32)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a4df41b9-0b0a-42f5-b3ef-59fbae8d8376
+                    stepCounter: f95d189d-f84d-4225-86cf-4b22360f9968
+                transform: ""
+          - columnReference:
+              columnCounter: 264c93cb-76fb-4610-959e-498688c3c84f
+              stepCounter: e54175c6-149b-4dc2-82ff-5fcca438e41f
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: abe4635f-fbf9-4d04-b2f4-3d148ca84e38
+                    stepCounter: f95d189d-f84d-4225-86cf-4b22360f9968
+                transform: ""
+          - columnReference:
+              columnCounter: 228bf2a1-09d9-45e3-be8c-b11323ece052
+              stepCounter: e54175c6-149b-4dc2-82ff-5fcca438e41f
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b1d49d08-a450-4fd3-9cd5-dcaacc4fde40
+                    stepCounter: f95d189d-f84d-4225-86cf-4b22360f9968
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SPORTS_MOTOR_RACING_RACE_STATS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SPORTS_MOTOR_RACING_RACE_STATS') }} "DVSTG_SPORTS_MOTOR_RACING_RACE_STATS"
+            name: HUB_SPORTS_MOTOR_RACING_RACE_STATS
+            noLinkRefs: []
+      name: HUB_SPORTS_MOTOR_RACING_RACE_STATS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: e54175c6-149b-4dc2-82ff-5fcca438e41f

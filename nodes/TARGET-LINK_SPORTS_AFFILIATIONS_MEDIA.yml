@@ -1,0 +1,133 @@
+steps:
+  LINK_SPORTS_AFFILIATIONS_MEDIA-f2ab74db-bf9b-41a2-b82d-d04157e79cef:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 58742ac5-f58c-4c4c-8359-7a4823ffa726
+              stepCounter: f2ab74db-bf9b-41a2-b82d-d04157e79cef
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_AFFILIATIONS_MEDIA
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 80d7d817-e107-49ac-8104-8d2bee8ccc59
+                    stepCounter: 5ce8c8a8-fa97-48ae-9a85-5e65aa34b040
+                transform: ""
+          - columnReference:
+              columnCounter: a36bc31c-c8db-4204-bd68-9fa6bc10b158
+              stepCounter: f2ab74db-bf9b-41a2-b82d-d04157e79cef
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: AFFILIATION_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e4fb6d57-ef63-4326-a95c-3e3cd11f5fde
+                    stepCounter: 5ce8c8a8-fa97-48ae-9a85-5e65aa34b040
+                transform: ""
+          - columnReference:
+              columnCounter: f83c7662-8f49-46b3-90fa-bdc2eb3cb925
+              stepCounter: f2ab74db-bf9b-41a2-b82d-d04157e79cef
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: MEDIA_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 73f19cc0-c5e8-4ed1-ad10-e324cd87dd72
+                    stepCounter: 5ce8c8a8-fa97-48ae-9a85-5e65aa34b040
+                transform: ""
+          - columnReference:
+              columnCounter: 5a3bb894-7c77-48c0-b4de-c7ccd759ee87
+              stepCounter: f2ab74db-bf9b-41a2-b82d-d04157e79cef
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 551f4fba-581c-4ab5-b59f-e60be121aff1
+                    stepCounter: 5ce8c8a8-fa97-48ae-9a85-5e65aa34b040
+                transform: ""
+          - columnReference:
+              columnCounter: 9688ca35-7cf1-4788-b695-27320be363c8
+              stepCounter: f2ab74db-bf9b-41a2-b82d-d04157e79cef
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 015f8664-bede-4367-a9b8-578337edf3eb
+                    stepCounter: 5ce8c8a8-fa97-48ae-9a85-5e65aa34b040
+                transform: ""
+          - columnReference:
+              columnCounter: 388650ba-c303-4fe8-91f3-43001b78b629
+              stepCounter: f2ab74db-bf9b-41a2-b82d-d04157e79cef
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1b75115e-58e8-434d-aad6-179a08e479d1
+                    stepCounter: 5ce8c8a8-fa97-48ae-9a85-5e65aa34b040
+                transform: ""
+          - columnReference:
+              columnCounter: 8ad260f9-5905-4cfd-8ed5-ff12f9b4ee7a
+              stepCounter: f2ab74db-bf9b-41a2-b82d-d04157e79cef
+            config:
+              is_Link_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LNK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 411063fb-f053-4ad1-8f1e-2eeb54085b88
+                    stepCounter: 5ce8c8a8-fa97-48ae-9a85-5e65aa34b040
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SPORTS_AFFILIATIONS_MEDIA
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SPORTS_AFFILIATIONS_MEDIA') }} "DVSTG_SPORTS_AFFILIATIONS_MEDIA"
+            name: LINK_SPORTS_AFFILIATIONS_MEDIA
+            noLinkRefs: []
+      name: LINK_SPORTS_AFFILIATIONS_MEDIA
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::7
+      type: sql
+    stepCounter: f2ab74db-bf9b-41a2-b82d-d04157e79cef

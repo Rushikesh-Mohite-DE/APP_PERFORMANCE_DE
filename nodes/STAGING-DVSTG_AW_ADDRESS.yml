@@ -1,0 +1,251 @@
+steps:
+  DVSTG_AW_ADDRESS-75301f6e-fbf4-44bb-b612-8c7d9a84450b:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 83619c4e-b9e8-42f4-be10-5d0185658365
+              stepCounter: 75301f6e-fbf4-44bb-b612-8c7d9a84450b
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 3fccb291-e014-42d9-978d-95f1a8f360da
+                stepCounter: 75301f6e-fbf4-44bb-b612-8c7d9a84450b
+              - columnCounter: d3ee762c-8138-465b-b7e1-4fefafe0f1cb
+                stepCounter: 75301f6e-fbf4-44bb-b612-8c7d9a84450b
+            name: HK_ADDRESS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 3fccb291-e014-42d9-978d-95f1a8f360da
+              stepCounter: 75301f6e-fbf4-44bb-b612-8c7d9a84450b
+            dataType: NUMBER(38,0)
+            description: Primary key for Address records.
+            name: ADDRESSID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f06e5b1e-3b61-4289-affa-6b1e3f4da788
+                    stepCounter: dedddbcc-0311-46aa-96a3-4c66fb3a2357
+                transform: ""
+          - columnReference:
+              columnCounter: c9262bc0-6d91-4b85-b980-d4055b14bd26
+              stepCounter: 75301f6e-fbf4-44bb-b612-8c7d9a84450b
+            dataType: VARCHAR(60)
+            description: First street address line.
+            name: ADDRESSLINE1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e9a1ecc1-0861-4382-ab4d-993b531abbd1
+                    stepCounter: dedddbcc-0311-46aa-96a3-4c66fb3a2357
+                transform: ""
+          - columnReference:
+              columnCounter: 53533bae-e8aa-4191-be8b-93734bd8b112
+              stepCounter: 75301f6e-fbf4-44bb-b612-8c7d9a84450b
+            dataType: VARCHAR(60)
+            description: Second street address line.
+            name: ADDRESSLINE2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0839b509-a890-4514-8531-e6388b9138cf
+                    stepCounter: dedddbcc-0311-46aa-96a3-4c66fb3a2357
+                transform: ""
+          - columnReference:
+              columnCounter: a1fd45da-bc60-4487-879b-d7f303291683
+              stepCounter: 75301f6e-fbf4-44bb-b612-8c7d9a84450b
+            dataType: VARCHAR(30)
+            description: Name of the city.
+            name: CITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3007264c-ee02-4c55-b3f1-9556e9662259
+                    stepCounter: dedddbcc-0311-46aa-96a3-4c66fb3a2357
+                transform: ""
+          - columnReference:
+              columnCounter: d3ee762c-8138-465b-b7e1-4fefafe0f1cb
+              stepCounter: 75301f6e-fbf4-44bb-b612-8c7d9a84450b
+            dataType: NUMBER(38,0)
+            description: Unique identification number for the state or province. Foreign key to StateProvince table.
+            name: STATEPROVINCEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b2888b06-4337-4ef0-b539-7ccdc75e8dda
+                    stepCounter: dedddbcc-0311-46aa-96a3-4c66fb3a2357
+                transform: ""
+          - columnReference:
+              columnCounter: 8f559614-4d76-489f-bb4d-330a4208cb94
+              stepCounter: 75301f6e-fbf4-44bb-b612-8c7d9a84450b
+            dataType: VARCHAR(15)
+            description: Postal code for the street address.
+            name: POSTALCODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 455addd2-4b88-4e31-a92d-16a950cd8755
+                    stepCounter: dedddbcc-0311-46aa-96a3-4c66fb3a2357
+                transform: ""
+          - columnReference:
+              columnCounter: 11f67fb3-36fa-4e9e-98fc-2666ab132e2e
+              stepCounter: 75301f6e-fbf4-44bb-b612-8c7d9a84450b
+            dataType: VARCHAR(50)
+            description: Latitude and longitude of this address.
+            name: SPATIALLOCATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 34721957-5295-4b52-bdf4-b1cbcc5ef927
+                    stepCounter: dedddbcc-0311-46aa-96a3-4c66fb3a2357
+                transform: ""
+          - columnReference:
+              columnCounter: d5562318-34f6-491c-8d23-514197512360
+              stepCounter: 75301f6e-fbf4-44bb-b612-8c7d9a84450b
+            dataType: VARCHAR(16777216)
+            description: ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            name: ROWGUID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9da7e6a7-e567-4ecf-9cd1-57cb9db90b98
+                    stepCounter: dedddbcc-0311-46aa-96a3-4c66fb3a2357
+                transform: ""
+          - columnReference:
+              columnCounter: 9155d8c3-7957-4e50-995a-6440ed8542f1
+              stepCounter: 75301f6e-fbf4-44bb-b612-8c7d9a84450b
+            dataType: VARCHAR(50)
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8f9807ac-0ede-49d2-9469-f576811cd86b
+                    stepCounter: dedddbcc-0311-46aa-96a3-4c66fb3a2357
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 639a4b35-3290-415d-a9c6-47ba99832d8f
+              stepCounter: 75301f6e-fbf4-44bb-b612-8c7d9a84450b
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: bfe9bed2-1248-43f2-93ee-08d11d36ab00
+              stepCounter: 75301f6e-fbf4-44bb-b612-8c7d9a84450b
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 20b03a4e-b784-46d3-947a-3e64599c98fb
+              stepCounter: 75301f6e-fbf4-44bb-b612-8c7d9a84450b
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: c9262bc0-6d91-4b85-b980-d4055b14bd26
+                stepCounter: 75301f6e-fbf4-44bb-b612-8c7d9a84450b
+              - columnCounter: 53533bae-e8aa-4191-be8b-93734bd8b112
+                stepCounter: 75301f6e-fbf4-44bb-b612-8c7d9a84450b
+              - columnCounter: a1fd45da-bc60-4487-879b-d7f303291683
+                stepCounter: 75301f6e-fbf4-44bb-b612-8c7d9a84450b
+              - columnCounter: 8f559614-4d76-489f-bb4d-330a4208cb94
+                stepCounter: 75301f6e-fbf4-44bb-b612-8c7d9a84450b
+              - columnCounter: 11f67fb3-36fa-4e9e-98fc-2666ab132e2e
+                stepCounter: 75301f6e-fbf4-44bb-b612-8c7d9a84450b
+              - columnCounter: d5562318-34f6-491c-8d23-514197512360
+                stepCounter: 75301f6e-fbf4-44bb-b612-8c7d9a84450b
+              - columnCounter: 9155d8c3-7957-4e50-995a-6440ed8542f1
+                stepCounter: 75301f6e-fbf4-44bb-b612-8c7d9a84450b
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8f6294f6-66aa-406f-b9e2-b1c8aefda82c
+              stepCounter: 75301f6e-fbf4-44bb-b612-8c7d9a84450b
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: d3ee762c-8138-465b-b7e1-4fefafe0f1cb
+                stepCounter: 75301f6e-fbf4-44bb-b612-8c7d9a84450b
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: ADV_WRKS_SRC
+                nodeName: AW_LOAD_ADDRESS
+            join:
+              joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_ADDRESS') }} "AW_LOAD_ADDRESS"
+            name: DVSTG_AW_ADDRESS
+            noLinkRefs: []
+      name: DVSTG_AW_ADDRESS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: 75301f6e-fbf4-44bb-b612-8c7d9a84450b

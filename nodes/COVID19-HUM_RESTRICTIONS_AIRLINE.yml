@@ -1,0 +1,154 @@
+steps:
+  HUM_RESTRICTIONS_AIRLINE-0379f4c7-6c19-4419-a22e-78d75096a2db:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: COVID-19 travel restrictions by airline
+      locationID: ""
+      locationName: COVID19
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 29e83e28-8099-4f16-a737-811f177f8619
+              stepCounter: 0379f4c7-6c19-4419-a22e-78d75096a2db
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ISO-3166-1 entity name
+            name: COUNTRY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a57283a2-adf9-433e-91d4-aa3f78bbc993
+              stepCounter: 0379f4c7-6c19-4419-a22e-78d75096a2db
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ISO-3166-1 code for geography of record
+            name: ISO3166_1
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c8b663af-3806-4d57-86dc-e59c31c0963b
+              stepCounter: 0379f4c7-6c19-4419-a22e-78d75096a2db
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: Indicative longitude of geography (centroid)
+            name: LONG
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1be63967-661f-493c-bacf-637fe3a02133
+              stepCounter: 0379f4c7-6c19-4419-a22e-78d75096a2db
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: Indicative latitude of geography (centroid)
+            name: LAT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e1a3c913-c677-45d1-9afc-a75865be1dbe
+              stepCounter: 0379f4c7-6c19-4419-a22e-78d75096a2db
+            config: {}
+            dataType: DATE
+            defaultValue: ""
+            description: Date restrictions were published
+            name: PUBLISHED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a4b5262f-cc35-4794-8daf-8dd43b9b8266
+              stepCounter: 0379f4c7-6c19-4419-a22e-78d75096a2db
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: Source of restrictions (URL)
+            name: SOURCES
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6da3771e-7a29-4160-ad18-3ba6bcb82afe
+              stepCounter: 0379f4c7-6c19-4419-a22e-78d75096a2db
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: Airline(s)
+            name: AIRLINE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a675d570-b818-4ce0-8aa6-c03532e9878b
+              stepCounter: 0379f4c7-6c19-4419-a22e-78d75096a2db
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: Detailed text of restrictions
+            name: RESTRICTION_TEXT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d34d25a2-0848-4431-9a98-9c2bcb05d6f3
+              stepCounter: 0379f4c7-6c19-4419-a22e-78d75096a2db
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Timestamp of last update (UTC)
+            name: LAST_UPDATE_DATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('COVID19', 'HUM_RESTRICTIONS_AIRLINE') }}
+      name: HUM_RESTRICTIONS_AIRLINE
+      schema: ""
+      sqlType: Source
+      table: HUM_RESTRICTIONS_AIRLINE
+      type: sourceInput
+    stepCounter: 0379f4c7-6c19-4419-a22e-78d75096a2db

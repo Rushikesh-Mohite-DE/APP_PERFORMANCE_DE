@@ -1,0 +1,105 @@
+steps:
+  HUB_ECDC_GLOBAL-cb5d3233-7eaa-4e47-81fc-75d63908ccec:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 57a5a53c-9f11-46aa-a602-b80d795461d1
+              stepCounter: cb5d3233-7eaa-4e47-81fc-75d63908ccec
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_ECDC_GLOBAL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7deb91f3-0c01-4c97-9d2f-446e13d4c5b2
+                    stepCounter: 99960c00-0b04-48ca-acd6-53fce186d983
+                transform: ""
+          - columnReference:
+              columnCounter: 6d5d5631-1b67-4c39-a4ed-c02639237c1b
+              stepCounter: cb5d3233-7eaa-4e47-81fc-75d63908ccec
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: COUNTRY_REGION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 96ca7d1f-6bbd-4138-b9de-edf3b1709d49
+                    stepCounter: 99960c00-0b04-48ca-acd6-53fce186d983
+                transform: ""
+          - columnReference:
+              columnCounter: 36e95c53-63d5-4c15-94e2-d2e71103cd5f
+              stepCounter: cb5d3233-7eaa-4e47-81fc-75d63908ccec
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CONTINENTEXP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d9a777ce-ed3d-410d-9abf-ab701638e0cc
+                    stepCounter: 99960c00-0b04-48ca-acd6-53fce186d983
+                transform: ""
+          - columnReference:
+              columnCounter: bfa3f5ea-c926-4780-8961-b5cf1e0a2ad9
+              stepCounter: cb5d3233-7eaa-4e47-81fc-75d63908ccec
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c06eb984-9f6f-480f-8ef3-9124e86621da
+                    stepCounter: 99960c00-0b04-48ca-acd6-53fce186d983
+                transform: ""
+          - columnReference:
+              columnCounter: 3241d948-92d9-4780-96c9-cb5a5a655765
+              stepCounter: cb5d3233-7eaa-4e47-81fc-75d63908ccec
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d37cb4ff-1915-4e09-8674-519c31c8743a
+                    stepCounter: 99960c00-0b04-48ca-acd6-53fce186d983
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_ECDC_GLOBAL
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_ECDC_GLOBAL') }} "DVSTG_ECDC_GLOBAL"
+            name: HUB_ECDC_GLOBAL
+            noLinkRefs: []
+      name: HUB_ECDC_GLOBAL
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: cb5d3233-7eaa-4e47-81fc-75d63908ccec

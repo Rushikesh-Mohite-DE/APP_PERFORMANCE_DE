@@ -1,0 +1,94 @@
+steps:
+  AW_LOAD_EMAILADDRESS-e311125c-3104-4e1e-86de-24e0950dc472:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: ADV_WRKS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: bf00cfea-1269-4f1d-9ac7-06e07c3d55a4
+              stepCounter: e311125c-3104-4e1e-86de-24e0950dc472
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Primary key. Person associated with this email address.  Foreign key to Person.BusinessEntityID
+            name: BUSINESSENTITYID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a8ad5a5c-0e8b-4cfd-b9d1-8884a429cc2d
+              stepCounter: e311125c-3104-4e1e-86de-24e0950dc472
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Primary key. ID of this email address.
+            name: EMAILADDRESSID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a35d66eb-829f-4170-8f31-a8eb45ca483e
+              stepCounter: e311125c-3104-4e1e-86de-24e0950dc472
+            config: {}
+            dataType: VARCHAR(50)
+            defaultValue: ""
+            description: E-mail address for the person.
+            name: EMAILADDRESS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8211a88f-cac5-42a1-8b14-6f178004c61c
+              stepCounter: e311125c-3104-4e1e-86de-24e0950dc472
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            name: ROWGUID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 291aeb74-cc65-4242-a705-7116c445fa21
+              stepCounter: e311125c-3104-4e1e-86de-24e0950dc472
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_EMAILADDRESS') }}
+      name: AW_LOAD_EMAILADDRESS
+      schema: ""
+      sqlType: Source
+      table: AW_LOAD_EMAILADDRESS
+      type: sourceInput
+    stepCounter: e311125c-3104-4e1e-86de-24e0950dc472

@@ -1,0 +1,169 @@
+steps:
+  DEMOGRAPHICS-db2866ff-db7d-4cfd-a1da-7df7b208448d:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: Demographic data, 2019
+      locationID: ""
+      locationName: COVID19
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 389af1df-4b2e-4f0d-977b-b02e2c94d4af
+              stepCounter: db2866ff-db7d-4cfd-a1da-7df7b208448d
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ISO-3166-1 code for geography of record
+            name: ISO3166_1
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: bef77770-d30d-4a7d-ab6f-0d7b1a615e1e
+              stepCounter: db2866ff-db7d-4cfd-a1da-7df7b208448d
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ISO-3166-2 code for geography of record
+            name: ISO3166_2
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ede9b71e-34be-437e-ba3d-10b2593d3908
+              stepCounter: db2866ff-db7d-4cfd-a1da-7df7b208448d
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: County FIPS code
+            name: FIPS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 17f73bef-0bc4-4ba0-a208-0ef965a2ec48
+              stepCounter: db2866ff-db7d-4cfd-a1da-7df7b208448d
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: Latitude of the county
+            name: LATITUDE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: be4f9b85-07a3-4b7b-8567-daaadc7b4858
+              stepCounter: db2866ff-db7d-4cfd-a1da-7df7b208448d
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: Longitude of the county
+            name: LONGITUDE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 315ad4a1-c9a3-4614-a3aa-6cc5dcc06061
+              stepCounter: db2866ff-db7d-4cfd-a1da-7df7b208448d
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: US Census State Code
+            name: STATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5d25047e-79ba-4b8c-960e-d63ea36956fe
+              stepCounter: db2866ff-db7d-4cfd-a1da-7df7b208448d
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: US Census County Name
+            name: COUNTY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4e8c1aa3-1fea-4e92-ad68-4e8df55c58aa
+              stepCounter: db2866ff-db7d-4cfd-a1da-7df7b208448d
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Total population for the FIPS code
+            name: TOTAL_POPULATION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7024c572-4cf2-4083-a75d-4662c2bc0db4
+              stepCounter: db2866ff-db7d-4cfd-a1da-7df7b208448d
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Total male population for the FIPS code
+            name: TOTAL_MALE_POPULATION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6f53a50b-c3fc-431b-885f-bc8ca275a76e
+              stepCounter: db2866ff-db7d-4cfd-a1da-7df7b208448d
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Total female population for the FIPS code
+            name: TOTAL_FEMALE_POPULATION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('COVID19', 'DEMOGRAPHICS') }}
+      name: DEMOGRAPHICS
+      schema: ""
+      sqlType: Source
+      table: DEMOGRAPHICS
+      type: sourceInput
+    stepCounter: db2866ff-db7d-4cfd-a1da-7df7b208448d

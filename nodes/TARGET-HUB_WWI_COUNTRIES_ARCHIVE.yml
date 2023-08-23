@@ -1,0 +1,91 @@
+steps:
+  HUB_WWI_COUNTRIES_ARCHIVE-029fc300-aa31-493f-b3c9-65491e04b9bf:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: e10e360e-8907-4723-85ee-e6761cdf61c2
+              stepCounter: 029fc300-aa31-493f-b3c9-65491e04b9bf
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_COUNTRIES_ARCHIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f8dd9e6d-bc8b-4cc2-b1a4-d9aaccec7d9d
+                    stepCounter: 12307025-a964-4cdd-abd7-65bee545ede6
+                transform: ""
+          - columnReference:
+              columnCounter: 6b2324d1-4553-4b84-954e-1230d2431c44
+              stepCounter: 029fc300-aa31-493f-b3c9-65491e04b9bf
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: COUNTRYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 21757941-16aa-4445-85fa-5530c9b12815
+                    stepCounter: 12307025-a964-4cdd-abd7-65bee545ede6
+                transform: ""
+          - columnReference:
+              columnCounter: 9d12495e-305f-44d1-b8c7-7b7d4bdff2a1
+              stepCounter: 029fc300-aa31-493f-b3c9-65491e04b9bf
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fe8b779e-1e0f-435f-ab1b-5d1f3a77b827
+                    stepCounter: 12307025-a964-4cdd-abd7-65bee545ede6
+                transform: ""
+          - columnReference:
+              columnCounter: 8f10889f-998c-489f-96c9-1088c1f5f312
+              stepCounter: 029fc300-aa31-493f-b3c9-65491e04b9bf
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0eb358d4-87d7-454c-a2da-6a9103e0becb
+                    stepCounter: 12307025-a964-4cdd-abd7-65bee545ede6
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_WWI_COUNTRIES_ARCHIVE
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_WWI_COUNTRIES_ARCHIVE') }} "DVSTG_WWI_COUNTRIES_ARCHIVE"
+            name: HUB_WWI_COUNTRIES_ARCHIVE
+            noLinkRefs: []
+      name: HUB_WWI_COUNTRIES_ARCHIVE
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 029fc300-aa31-493f-b3c9-65491e04b9bf

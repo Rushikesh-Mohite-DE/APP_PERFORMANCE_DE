@@ -1,0 +1,237 @@
+steps:
+  DVSTG_SCS_BE_DETAILED_MORTALITY-98b9e85b-6bda-4374-a0bb-a708d7cc23d7:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: Detailed data on mortality
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ccd3d455-7dc3-4545-928d-499ad89bdc5b
+              stepCounter: 98b9e85b-6bda-4374-a0bb-a708d7cc23d7
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 48e98b28-9925-4e00-853f-dc8ff2b16afc
+                stepCounter: 98b9e85b-6bda-4374-a0bb-a708d7cc23d7
+              - columnCounter: 7acfab61-6eba-40e2-905b-0caec939db49
+                stepCounter: 98b9e85b-6bda-4374-a0bb-a708d7cc23d7
+              - columnCounter: 19301ecc-59a4-4550-a7b4-dcb0a9d00d83
+                stepCounter: 98b9e85b-6bda-4374-a0bb-a708d7cc23d7
+            name: HK_SCS_BE_DETAILED_MORTALITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 48e98b28-9925-4e00-853f-dc8ff2b16afc
+              stepCounter: 98b9e85b-6bda-4374-a0bb-a708d7cc23d7
+            dataType: VARCHAR(128)
+            description: ISO-3166-2 entity name
+            name: REGION
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 42ed19ea-ddcd-4035-a9dc-9dcacf1085e7
+                    stepCounter: 7281455b-da7c-4ed4-bb6a-21ef0e7426dc
+                transform: ""
+          - columnReference:
+              columnCounter: 82c00680-5aaa-4df1-8c27-63404702f148
+              stepCounter: 98b9e85b-6bda-4374-a0bb-a708d7cc23d7
+            dataType: VARCHAR(1)
+            description: Sex of cohort
+            name: SEX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 38065f6a-a369-4d0f-827e-a3e47171169d
+                    stepCounter: 7281455b-da7c-4ed4-bb6a-21ef0e7426dc
+                transform: ""
+          - columnReference:
+              columnCounter: 69737b04-cc1c-4ab4-861a-e9f27ee80be4
+              stepCounter: 98b9e85b-6bda-4374-a0bb-a708d7cc23d7
+            dataType: VARCHAR(16)
+            description: Age group of cohort
+            name: AGEGROUP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e0a24fee-bd3e-4c32-a34e-7e90a0776cbc
+                    stepCounter: 7281455b-da7c-4ed4-bb6a-21ef0e7426dc
+                transform: ""
+          - columnReference:
+              columnCounter: ae15a4b0-ea01-4495-904a-9fb2b3e2ff49
+              stepCounter: 98b9e85b-6bda-4374-a0bb-a708d7cc23d7
+            dataType: DATE
+            description: Date of data point
+            name: DATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d52d1108-ec83-4bbe-b3f4-249a1d743685
+                    stepCounter: 7281455b-da7c-4ed4-bb6a-21ef0e7426dc
+                transform: ""
+          - columnReference:
+              columnCounter: 7f6f1ccb-d2e3-47a8-8b93-a8241c2b2044
+              stepCounter: 98b9e85b-6bda-4374-a0bb-a708d7cc23d7
+            dataType: NUMBER(38,0)
+            description: Number of deaths
+            name: DEATHS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12de28bf-600e-4740-bffd-ac4baf4373ac
+                    stepCounter: 7281455b-da7c-4ed4-bb6a-21ef0e7426dc
+                transform: ""
+          - columnReference:
+              columnCounter: 7acfab61-6eba-40e2-905b-0caec939db49
+              stepCounter: 98b9e85b-6bda-4374-a0bb-a708d7cc23d7
+            dataType: VARCHAR(2)
+            description: ISO-3166-1 code for geography of record
+            name: ISO3166_1
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1e370cd8-0bb2-4d01-b038-65e0f5185627
+                    stepCounter: 7281455b-da7c-4ed4-bb6a-21ef0e7426dc
+                transform: ""
+          - columnReference:
+              columnCounter: 19301ecc-59a4-4550-a7b4-dcb0a9d00d83
+              stepCounter: 98b9e85b-6bda-4374-a0bb-a708d7cc23d7
+            dataType: VARCHAR(3)
+            description: ISO-3166-2 code for geography of record
+            name: ISO3166_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1c361cb5-9d12-4c34-9b74-edfd7133b62f
+                    stepCounter: 7281455b-da7c-4ed4-bb6a-21ef0e7426dc
+                transform: ""
+          - columnReference:
+              columnCounter: 10b9f49c-bdc2-4381-9366-12eec090d5db
+              stepCounter: 98b9e85b-6bda-4374-a0bb-a708d7cc23d7
+            dataType: TIMESTAMP_NTZ(9)
+            description: Timestamp of last update
+            name: LAST_UPDATED_DATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f4f6861c-af28-4d15-84f7-fc934f29026f
+                    stepCounter: 7281455b-da7c-4ed4-bb6a-21ef0e7426dc
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5b08da77-953c-4bc1-9978-941a60e6dc94
+              stepCounter: 98b9e85b-6bda-4374-a0bb-a708d7cc23d7
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0acb519e-7d7a-4f56-9dad-347127bab170
+              stepCounter: 98b9e85b-6bda-4374-a0bb-a708d7cc23d7
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 02e96986-aa35-4a34-ac6f-cca2ef9a5324
+              stepCounter: 98b9e85b-6bda-4374-a0bb-a708d7cc23d7
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 82c00680-5aaa-4df1-8c27-63404702f148
+                stepCounter: 98b9e85b-6bda-4374-a0bb-a708d7cc23d7
+              - columnCounter: 69737b04-cc1c-4ab4-861a-e9f27ee80be4
+                stepCounter: 98b9e85b-6bda-4374-a0bb-a708d7cc23d7
+              - columnCounter: ae15a4b0-ea01-4495-904a-9fb2b3e2ff49
+                stepCounter: 98b9e85b-6bda-4374-a0bb-a708d7cc23d7
+              - columnCounter: 7f6f1ccb-d2e3-47a8-8b93-a8241c2b2044
+                stepCounter: 98b9e85b-6bda-4374-a0bb-a708d7cc23d7
+              - columnCounter: 10b9f49c-bdc2-4381-9366-12eec090d5db
+                stepCounter: 98b9e85b-6bda-4374-a0bb-a708d7cc23d7
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5546dea2-765a-4dce-b9f1-6bc2f70cd555
+              stepCounter: 98b9e85b-6bda-4374-a0bb-a708d7cc23d7
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 7acfab61-6eba-40e2-905b-0caec939db49
+                stepCounter: 98b9e85b-6bda-4374-a0bb-a708d7cc23d7
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: COVID19
+                nodeName: SCS_BE_DETAILED_MORTALITY
+            join:
+              joinCondition: FROM {{ ref('COVID19', 'SCS_BE_DETAILED_MORTALITY') }} "SCS_BE_DETAILED_MORTALITY"
+            name: DVSTG_SCS_BE_DETAILED_MORTALITY
+            noLinkRefs: []
+      name: DVSTG_SCS_BE_DETAILED_MORTALITY
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: 98b9e85b-6bda-4374-a0bb-a708d7cc23d7

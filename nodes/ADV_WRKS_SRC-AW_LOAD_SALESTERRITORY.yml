@@ -1,0 +1,169 @@
+steps:
+  AW_LOAD_SALESTERRITORY-845ecd73-4582-464c-92c3-4881085ad0ad:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: ADV_WRKS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 301211d4-b1c0-4872-a7d3-c72f788b25a5
+              stepCounter: 845ecd73-4582-464c-92c3-4881085ad0ad
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Primary key for SalesTerritory records.
+            name: TERRITORYID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 88c234b2-2b5f-4bec-9e16-627816b74757
+              stepCounter: 845ecd73-4582-464c-92c3-4881085ad0ad
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: Sales territory description
+            name: NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6b57d99f-5071-480e-aa23-d9100024d6d2
+              stepCounter: 845ecd73-4582-464c-92c3-4881085ad0ad
+            config: {}
+            dataType: VARCHAR(3)
+            defaultValue: ""
+            description: ISO standard country or region code. Foreign key to CountryRegion.CountryRegionCode.
+            name: COUNTRYREGIONCODE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 187a617e-1226-4fe2-8a65-681faa4973e6
+              stepCounter: 845ecd73-4582-464c-92c3-4881085ad0ad
+            config: {}
+            dataType: VARCHAR(50)
+            defaultValue: ""
+            description: Geographic area to which the sales territory belong.
+            name: SF_GROUP
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 329c9347-5b21-4500-b66a-80c4a6ed1d9d
+              stepCounter: 845ecd73-4582-464c-92c3-4881085ad0ad
+            config: {}
+            dataType: NUMBER(19,4)
+            defaultValue: ""
+            description: Sales in the territory year to date.
+            name: SALESYTD
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 14b52562-0683-4b42-8aa1-f3ff336c98e9
+              stepCounter: 845ecd73-4582-464c-92c3-4881085ad0ad
+            config: {}
+            dataType: NUMBER(19,4)
+            defaultValue: ""
+            description: Sales in the territory the previous year.
+            name: SALESLASTYEAR
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d60fd253-6c0a-44c2-8d9c-9340f9e6f7a4
+              stepCounter: 845ecd73-4582-464c-92c3-4881085ad0ad
+            config: {}
+            dataType: NUMBER(19,4)
+            defaultValue: ""
+            description: Business costs in the territory year to date.
+            name: COSTYTD
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 11853f2d-df40-4c1b-a9a9-93260724b416
+              stepCounter: 845ecd73-4582-464c-92c3-4881085ad0ad
+            config: {}
+            dataType: NUMBER(19,4)
+            defaultValue: ""
+            description: Business costs in the territory the previous year.
+            name: COSTLASTYEAR
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 260f7abf-46c0-4adc-b0e9-770da26be6c9
+              stepCounter: 845ecd73-4582-464c-92c3-4881085ad0ad
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            name: ROWGUID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 964686d6-c44a-4a9a-9d9f-4b09e34c3555
+              stepCounter: 845ecd73-4582-464c-92c3-4881085ad0ad
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_SALESTERRITORY') }}
+      name: AW_LOAD_SALESTERRITORY
+      schema: ""
+      sqlType: Source
+      table: AW_LOAD_SALESTERRITORY
+      type: sourceInput
+    stepCounter: 845ecd73-4582-464c-92c3-4881085ad0ad

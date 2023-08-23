@@ -1,0 +1,221 @@
+steps:
+  DVSTG_SPORTS_MEDIA_CAPTIONS-7325f932-98b9-423a-ad8b-5d8300229407:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: eb3dc99e-0303-4803-ac65-61334d506561
+              stepCounter: 7325f932-98b9-423a-ad8b-5d8300229407
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: ef4d60ab-81fc-47fa-842b-72353fb3228c
+                stepCounter: 7325f932-98b9-423a-ad8b-5d8300229407
+              - columnCounter: 1c82eeb8-e2ef-4b66-90f8-200b216700ff
+                stepCounter: 7325f932-98b9-423a-ad8b-5d8300229407
+              - columnCounter: 4cc16bca-2318-4700-9dc6-6fa341535c8c
+                stepCounter: 7325f932-98b9-423a-ad8b-5d8300229407
+            name: HK_CAPTIONS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: ef4d60ab-81fc-47fa-842b-72353fb3228c
+              stepCounter: 7325f932-98b9-423a-ad8b-5d8300229407
+            dataType: VARCHAR(32)
+            description: ""
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 351f3b6c-c227-4bb4-b770-1fc4ec7e9e08
+                    stepCounter: a800ea7f-034d-400a-8225-a5309e696f97
+                transform: ""
+          - columnReference:
+              columnCounter: 1c82eeb8-e2ef-4b66-90f8-200b216700ff
+              stepCounter: 7325f932-98b9-423a-ad8b-5d8300229407
+            dataType: NUMBER(38,0)
+            description: ""
+            name: MEDIA_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d991374c-d600-4d1e-b84a-affeb9802a6d
+                    stepCounter: a800ea7f-034d-400a-8225-a5309e696f97
+                transform: ""
+          - columnReference:
+              columnCounter: 1608b2c8-a75a-480e-8d7e-064ee779127d
+              stepCounter: 7325f932-98b9-423a-ad8b-5d8300229407
+            dataType: VARCHAR(100)
+            description: ""
+            name: CAPTION_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 189af5a2-7487-42a6-86b7-b37fa1d1105c
+                    stepCounter: a800ea7f-034d-400a-8225-a5309e696f97
+                transform: ""
+          - columnReference:
+              columnCounter: 2ee4bcac-ece1-4c57-9e53-fdb6f4072b1e
+              stepCounter: 7325f932-98b9-423a-ad8b-5d8300229407
+            dataType: VARCHAR(100)
+            description: ""
+            name: CAPTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d10db3db-ec42-46a1-9ea1-378952c90340
+                    stepCounter: a800ea7f-034d-400a-8225-a5309e696f97
+                transform: ""
+          - columnReference:
+              columnCounter: 4cc16bca-2318-4700-9dc6-6fa341535c8c
+              stepCounter: 7325f932-98b9-423a-ad8b-5d8300229407
+            dataType: NUMBER(38,0)
+            description: ""
+            name: CAPTION_AUTHOR_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bfb4e308-4f4a-41c2-bd68-22e8efb38973
+                    stepCounter: a800ea7f-034d-400a-8225-a5309e696f97
+                transform: ""
+          - columnReference:
+              columnCounter: f140b3fb-ac25-473e-aad0-54a7916f21c8
+              stepCounter: 7325f932-98b9-423a-ad8b-5d8300229407
+            dataType: VARCHAR(100)
+            description: ""
+            name: language
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3e6af07d-9e93-44e8-8408-42dca8d9fda2
+                    stepCounter: a800ea7f-034d-400a-8225-a5309e696f97
+                transform: ""
+          - columnReference:
+              columnCounter: ea57a818-504b-4185-962b-c7df072fbcf1
+              stepCounter: 7325f932-98b9-423a-ad8b-5d8300229407
+            dataType: VARCHAR(100)
+            description: ""
+            name: CAPTION_SIZE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 360f91bd-0f32-44fc-b9d9-e3af34c33061
+                    stepCounter: a800ea7f-034d-400a-8225-a5309e696f97
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8cedd89d-1fc9-4f0d-8f4f-47bf17f3f703
+              stepCounter: 7325f932-98b9-423a-ad8b-5d8300229407
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1aa26948-5a44-4a02-ae07-fa67193d23ec
+              stepCounter: 7325f932-98b9-423a-ad8b-5d8300229407
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8978054c-bac3-49ae-ad8d-d3d1843ff45c
+              stepCounter: 7325f932-98b9-423a-ad8b-5d8300229407
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 1608b2c8-a75a-480e-8d7e-064ee779127d
+                stepCounter: 7325f932-98b9-423a-ad8b-5d8300229407
+              - columnCounter: 2ee4bcac-ece1-4c57-9e53-fdb6f4072b1e
+                stepCounter: 7325f932-98b9-423a-ad8b-5d8300229407
+              - columnCounter: ea57a818-504b-4185-962b-c7df072fbcf1
+                stepCounter: 7325f932-98b9-423a-ad8b-5d8300229407
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b100da90-9c93-44d9-bf65-95cfc8ad85a3
+              stepCounter: 7325f932-98b9-423a-ad8b-5d8300229407
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 4cc16bca-2318-4700-9dc6-6fa341535c8c
+                stepCounter: 7325f932-98b9-423a-ad8b-5d8300229407
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SPORTS_SRC
+                nodeName: SPORTS_LOAD_MEDIA_CAPTIONS
+            join:
+              joinCondition: FROM {{ ref('SPORTS_SRC', 'SPORTS_LOAD_MEDIA_CAPTIONS') }} "SPORTS_LOAD_MEDIA_CAPTIONS"
+            name: DVSTG_SPORTS_MEDIA_CAPTIONS
+            noLinkRefs: []
+      name: DVSTG_SPORTS_MEDIA_CAPTIONS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: 7325f932-98b9-423a-ad8b-5d8300229407

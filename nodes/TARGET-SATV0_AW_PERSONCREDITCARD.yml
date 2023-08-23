@@ -1,0 +1,107 @@
+steps:
+  SATV0_AW_PERSONCREDITCARD-03e02b03-c90e-4fc1-b9a6-a744312d8382:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: c356e484-445b-4b15-ae62-8c2a5692a7e4
+              stepCounter: 03e02b03-c90e-4fc1-b9a6-a744312d8382
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_PERSONCREDITCARD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e562795f-b572-4647-b422-61fa08ad3ffc
+                    stepCounter: c0c442c9-466b-495b-ad95-f9b9e3f08367
+                transform: ""
+          - columnReference:
+              columnCounter: 207b3050-5da3-49a4-9f68-2de61a26c12c
+              stepCounter: 03e02b03-c90e-4fc1-b9a6-a744312d8382
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            hashColumns: []
+            hashDetails: null
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1eaf40fb-eead-42e1-804b-d2bf90db6459
+                    stepCounter: c0c442c9-466b-495b-ad95-f9b9e3f08367
+                transform: ""
+          - columnReference:
+              columnCounter: 96805093-d29b-4445-8f2a-e10c8901b958
+              stepCounter: 03e02b03-c90e-4fc1-b9a6-a744312d8382
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 988b339e-73b8-4d3c-a227-7d1e051438c3
+                    stepCounter: c0c442c9-466b-495b-ad95-f9b9e3f08367
+                transform: ""
+          - columnReference:
+              columnCounter: c599ab2e-d49e-44fe-ba6b-dbdff836b844
+              stepCounter: 03e02b03-c90e-4fc1-b9a6-a744312d8382
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 39471504-681a-48ac-a585-7eb963d632b9
+                    stepCounter: c0c442c9-466b-495b-ad95-f9b9e3f08367
+                transform: ""
+          - columnReference:
+              columnCounter: c27261e0-1e54-41bb-81b2-28e5f03b09d0
+              stepCounter: 03e02b03-c90e-4fc1-b9a6-a744312d8382
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ff5305a3-3238-4c9a-a427-cf1344a9d6d9
+                    stepCounter: c0c442c9-466b-495b-ad95-f9b9e3f08367
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_PERSONCREDITCARD
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_PERSONCREDITCARD') }} "DVSTG_AW_PERSONCREDITCARD"
+            name: SATV0_AW_PERSONCREDITCARD
+            noLinkRefs: []
+      name: SATV0_AW_PERSONCREDITCARD
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: 03e02b03-c90e-4fc1-b9a6-a744312d8382

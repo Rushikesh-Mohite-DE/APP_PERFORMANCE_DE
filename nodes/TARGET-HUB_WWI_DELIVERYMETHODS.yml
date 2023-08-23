@@ -1,0 +1,91 @@
+steps:
+  HUB_WWI_DELIVERYMETHODS-4d24819b-ddca-42e2-a8ff-3a43df7d9183:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: e0a06345-f2fa-4218-badc-0e21df37f763
+              stepCounter: 4d24819b-ddca-42e2-a8ff-3a43df7d9183
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_DELIVERYMETHODS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 17d0b6cb-808e-4d35-9e20-060abd9c9c7a
+                    stepCounter: a6d22354-8827-40dc-9395-725f20516957
+                transform: ""
+          - columnReference:
+              columnCounter: c5e61ac5-6b47-4eae-b7be-d36334f2f30e
+              stepCounter: 4d24819b-ddca-42e2-a8ff-3a43df7d9183
+            dataType: NUMBER(38,0)
+            description: Numeric ID used for reference to a delivery method within the database
+            hashColumns: []
+            hashDetails: null
+            name: DELIVERYMETHODID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d57872cc-fe3c-431d-b6f1-13fa08cf61d3
+                    stepCounter: a6d22354-8827-40dc-9395-725f20516957
+                transform: ""
+          - columnReference:
+              columnCounter: 3cd1a7c1-2d9f-48e8-a033-a3d9b2a5cb82
+              stepCounter: 4d24819b-ddca-42e2-a8ff-3a43df7d9183
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 58c915d8-0832-48b5-8466-c0aee78221b9
+                    stepCounter: a6d22354-8827-40dc-9395-725f20516957
+                transform: ""
+          - columnReference:
+              columnCounter: d09706c8-81bf-4ba9-8483-68b9c3dd1f6f
+              stepCounter: 4d24819b-ddca-42e2-a8ff-3a43df7d9183
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c3f3dcf3-b994-4c84-84d8-5c8020c89f40
+                    stepCounter: a6d22354-8827-40dc-9395-725f20516957
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_WWI_DELIVERYMETHODS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_WWI_DELIVERYMETHODS') }} "DVSTG_WWI_DELIVERYMETHODS"
+            name: HUB_WWI_DELIVERYMETHODS
+            noLinkRefs: []
+      name: HUB_WWI_DELIVERYMETHODS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 4d24819b-ddca-42e2-a8ff-3a43df7d9183

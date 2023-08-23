@@ -1,0 +1,124 @@
+steps:
+  AW_LOAD_SALESTAXRATE-de530ecd-3824-4959-a2e0-75e7c6e554a6:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: ADV_WRKS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 046d335e-1251-488f-94c1-589c839d11ba
+              stepCounter: de530ecd-3824-4959-a2e0-75e7c6e554a6
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Primary key for SalesTaxRate records.
+            name: SALESTAXRATEID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 20e83b9a-6bf6-4ace-8741-2fae44364120
+              stepCounter: de530ecd-3824-4959-a2e0-75e7c6e554a6
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: State, province, or country/region the sales tax applies to.
+            name: STATEPROVINCEID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8541d826-a504-45fd-b57f-0fdfcbfe0244
+              stepCounter: de530ecd-3824-4959-a2e0-75e7c6e554a6
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: 1 = Tax applied to retail transactions, 2 = Tax applied to wholesale transactions, 3 = Tax applied to all sales (retail and wholesale) transactions.
+            name: TAXTYPE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 066cd8cc-f174-485c-afd4-8b61501bdbea
+              stepCounter: de530ecd-3824-4959-a2e0-75e7c6e554a6
+            config: {}
+            dataType: NUMBER(10,4)
+            defaultValue: ""
+            description: Tax rate amount.
+            name: TAXRATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1206a155-4dac-4480-ba9f-af6c64f01d9b
+              stepCounter: de530ecd-3824-4959-a2e0-75e7c6e554a6
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: Tax rate description.
+            name: NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8e019f7b-81a4-4052-afe3-12887add7517
+              stepCounter: de530ecd-3824-4959-a2e0-75e7c6e554a6
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            name: ROWGUID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0066f69d-7afe-43e8-96c4-1d6cd33ead41
+              stepCounter: de530ecd-3824-4959-a2e0-75e7c6e554a6
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_SALESTAXRATE') }}
+      name: AW_LOAD_SALESTAXRATE
+      schema: ""
+      sqlType: Source
+      table: AW_LOAD_SALESTAXRATE
+      type: sourceInput
+    stepCounter: de530ecd-3824-4959-a2e0-75e7c6e554a6

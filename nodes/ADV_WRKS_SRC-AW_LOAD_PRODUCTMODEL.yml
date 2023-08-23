@@ -1,0 +1,109 @@
+steps:
+  AW_LOAD_PRODUCTMODEL-7efdb080-ed74-4c50-97d3-7bdeb957692f:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: ADV_WRKS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 04ee5390-4050-4c07-b1db-e319127edf42
+              stepCounter: 7efdb080-ed74-4c50-97d3-7bdeb957692f
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Primary key for ProductModel records.
+            name: PRODUCTMODELID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6576ac09-b212-4c5b-b0fc-aeca4585e4cc
+              stepCounter: 7efdb080-ed74-4c50-97d3-7bdeb957692f
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: Product model description.
+            name: NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9194e95b-41bb-4474-b2e5-08eaefb0aea0
+              stepCounter: 7efdb080-ed74-4c50-97d3-7bdeb957692f
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: Detailed product catalog information in xml format.
+            name: CATALOGDESCRIPTION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 91affbd1-50de-411e-a338-2f60d0e6c375
+              stepCounter: 7efdb080-ed74-4c50-97d3-7bdeb957692f
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: Manufacturing instructions in xml format.
+            name: INSTRUCTIONS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a72dcdc7-f6d1-4399-8393-1247584aa6dd
+              stepCounter: 7efdb080-ed74-4c50-97d3-7bdeb957692f
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            name: ROWGUID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 201cf924-1f59-4f84-a554-bf7b02caaed9
+              stepCounter: 7efdb080-ed74-4c50-97d3-7bdeb957692f
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_PRODUCTMODEL') }}
+      name: AW_LOAD_PRODUCTMODEL
+      schema: ""
+      sqlType: Source
+      table: AW_LOAD_PRODUCTMODEL
+      type: sourceInput
+    stepCounter: 7efdb080-ed74-4c50-97d3-7bdeb957692f

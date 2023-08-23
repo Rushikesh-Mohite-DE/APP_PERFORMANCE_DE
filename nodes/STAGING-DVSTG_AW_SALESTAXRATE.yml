@@ -1,0 +1,223 @@
+steps:
+  DVSTG_AW_SALESTAXRATE-144db9f0-2fba-415b-86ab-377e839d8993:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 95a55293-2329-42fd-a3bc-428faf38b23c
+              stepCounter: 144db9f0-2fba-415b-86ab-377e839d8993
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 764ff3f8-2153-4e45-8248-27eb44407f1b
+                stepCounter: 144db9f0-2fba-415b-86ab-377e839d8993
+              - columnCounter: afdfea7c-cd73-4f18-81ed-e6e5aef253c3
+                stepCounter: 144db9f0-2fba-415b-86ab-377e839d8993
+            name: HK_SALESTAXRATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 764ff3f8-2153-4e45-8248-27eb44407f1b
+              stepCounter: 144db9f0-2fba-415b-86ab-377e839d8993
+            dataType: NUMBER(38,0)
+            description: Primary key for SalesTaxRate records.
+            name: SALESTAXRATEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 046d335e-1251-488f-94c1-589c839d11ba
+                    stepCounter: de530ecd-3824-4959-a2e0-75e7c6e554a6
+                transform: ""
+          - columnReference:
+              columnCounter: afdfea7c-cd73-4f18-81ed-e6e5aef253c3
+              stepCounter: 144db9f0-2fba-415b-86ab-377e839d8993
+            dataType: NUMBER(38,0)
+            description: State, province, or country/region the sales tax applies to.
+            name: STATEPROVINCEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 20e83b9a-6bf6-4ace-8741-2fae44364120
+                    stepCounter: de530ecd-3824-4959-a2e0-75e7c6e554a6
+                transform: ""
+          - columnReference:
+              columnCounter: f692cb71-0aac-4706-bfb5-8185c9e5e2a3
+              stepCounter: 144db9f0-2fba-415b-86ab-377e839d8993
+            dataType: NUMBER(38,0)
+            description: 1 = Tax applied to retail transactions, 2 = Tax applied to wholesale transactions, 3 = Tax applied to all sales (retail and wholesale) transactions.
+            name: TAXTYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8541d826-a504-45fd-b57f-0fdfcbfe0244
+                    stepCounter: de530ecd-3824-4959-a2e0-75e7c6e554a6
+                transform: ""
+          - columnReference:
+              columnCounter: 62078a11-7c3f-4538-b5c8-d069abd1f060
+              stepCounter: 144db9f0-2fba-415b-86ab-377e839d8993
+            dataType: NUMBER(10,4)
+            description: Tax rate amount.
+            name: TAXRATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 066cd8cc-f174-485c-afd4-8b61501bdbea
+                    stepCounter: de530ecd-3824-4959-a2e0-75e7c6e554a6
+                transform: ""
+          - columnReference:
+              columnCounter: 137418b3-1857-4b38-a3c4-97cdcab349a6
+              stepCounter: 144db9f0-2fba-415b-86ab-377e839d8993
+            dataType: VARCHAR(16777216)
+            description: Tax rate description.
+            name: NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1206a155-4dac-4480-ba9f-af6c64f01d9b
+                    stepCounter: de530ecd-3824-4959-a2e0-75e7c6e554a6
+                transform: ""
+          - columnReference:
+              columnCounter: e3e4f80e-c73d-4c3d-8b77-d57caf602887
+              stepCounter: 144db9f0-2fba-415b-86ab-377e839d8993
+            dataType: VARCHAR(16777216)
+            description: ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            name: ROWGUID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8e019f7b-81a4-4052-afe3-12887add7517
+                    stepCounter: de530ecd-3824-4959-a2e0-75e7c6e554a6
+                transform: ""
+          - columnReference:
+              columnCounter: 1ced875b-605d-42e5-9a41-407115b6c83a
+              stepCounter: 144db9f0-2fba-415b-86ab-377e839d8993
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0066f69d-7afe-43e8-96c4-1d6cd33ead41
+                    stepCounter: de530ecd-3824-4959-a2e0-75e7c6e554a6
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e35e8497-671a-48fb-99f6-d8e484908061
+              stepCounter: 144db9f0-2fba-415b-86ab-377e839d8993
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a5a1e70f-12e8-4dd3-99e3-1bff83730fa2
+              stepCounter: 144db9f0-2fba-415b-86ab-377e839d8993
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 99e23bce-5fd6-4273-b25f-13b4da995ae8
+              stepCounter: 144db9f0-2fba-415b-86ab-377e839d8993
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: f692cb71-0aac-4706-bfb5-8185c9e5e2a3
+                stepCounter: 144db9f0-2fba-415b-86ab-377e839d8993
+              - columnCounter: 62078a11-7c3f-4538-b5c8-d069abd1f060
+                stepCounter: 144db9f0-2fba-415b-86ab-377e839d8993
+              - columnCounter: 137418b3-1857-4b38-a3c4-97cdcab349a6
+                stepCounter: 144db9f0-2fba-415b-86ab-377e839d8993
+              - columnCounter: e3e4f80e-c73d-4c3d-8b77-d57caf602887
+                stepCounter: 144db9f0-2fba-415b-86ab-377e839d8993
+              - columnCounter: 1ced875b-605d-42e5-9a41-407115b6c83a
+                stepCounter: 144db9f0-2fba-415b-86ab-377e839d8993
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d2b5c1aa-7f1c-4dcb-8f2e-565a955db132
+              stepCounter: 144db9f0-2fba-415b-86ab-377e839d8993
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: afdfea7c-cd73-4f18-81ed-e6e5aef253c3
+                stepCounter: 144db9f0-2fba-415b-86ab-377e839d8993
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: ADV_WRKS_SRC
+                nodeName: AW_LOAD_SALESTAXRATE
+            join:
+              joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_SALESTAXRATE') }} "AW_LOAD_SALESTAXRATE"
+            name: DVSTG_AW_SALESTAXRATE
+            noLinkRefs: []
+      name: DVSTG_AW_SALESTAXRATE
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: 144db9f0-2fba-415b-86ab-377e839d8993

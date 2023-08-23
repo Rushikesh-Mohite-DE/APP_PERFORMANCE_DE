@@ -1,0 +1,147 @@
+steps:
+  HUB_WWI_SUPPLIERTRANSACTIONS-a0fd5123-1de7-4c7a-8bbc-602bea8c8168:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 1a0658b5-8256-4a9b-a693-79c9de5faf63
+              stepCounter: a0fd5123-1de7-4c7a-8bbc-602bea8c8168
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_SUPPLIERTRANSACTIONS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9b4a912e-599b-4efc-91a5-35afd9558ffe
+                    stepCounter: 754fecc8-637c-4407-9fc4-16068c14f2d8
+                transform: ""
+          - columnReference:
+              columnCounter: bc24f7ae-4075-42b9-aa34-396269275a14
+              stepCounter: a0fd5123-1de7-4c7a-8bbc-602bea8c8168
+            dataType: NUMBER(38,0)
+            description: Numeric ID used to refer to a supplier transaction within the database
+            hashColumns: []
+            hashDetails: null
+            name: SUPPLIERTRANSACTIONID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 022c470a-b819-4c97-ba70-c5bd2a7b044a
+                    stepCounter: 754fecc8-637c-4407-9fc4-16068c14f2d8
+                transform: ""
+          - columnReference:
+              columnCounter: 8289a2af-129a-4aaf-aeaf-28e98df7a851
+              stepCounter: a0fd5123-1de7-4c7a-8bbc-602bea8c8168
+            dataType: NUMBER(38,0)
+            description: Supplier for this transaction
+            hashColumns: []
+            hashDetails: null
+            name: SUPPLIERID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: df241d6f-016b-4afa-bace-eadd0889c2d7
+                    stepCounter: 754fecc8-637c-4407-9fc4-16068c14f2d8
+                transform: ""
+          - columnReference:
+              columnCounter: 3f324942-cf87-45f1-8b75-907b9f486fd6
+              stepCounter: a0fd5123-1de7-4c7a-8bbc-602bea8c8168
+            dataType: NUMBER(38,0)
+            description: Type of transaction
+            hashColumns: []
+            hashDetails: null
+            name: TRANSACTIONTYPEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8e09297b-602d-435c-bdff-9d285260b364
+                    stepCounter: 754fecc8-637c-4407-9fc4-16068c14f2d8
+                transform: ""
+          - columnReference:
+              columnCounter: 5bbfd333-3a62-4d96-afdd-1509e29ff496
+              stepCounter: a0fd5123-1de7-4c7a-8bbc-602bea8c8168
+            dataType: VARCHAR(16777216)
+            description: ID of an purchase order (for transactions associated with a purchase order)
+            hashColumns: []
+            hashDetails: null
+            name: PURCHASEORDERID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 62638606-7fce-4a9a-88bc-641bf1ce22e8
+                    stepCounter: 754fecc8-637c-4407-9fc4-16068c14f2d8
+                transform: ""
+          - columnReference:
+              columnCounter: cf9b2b76-37e5-41b5-97e3-193e1cebb2a2
+              stepCounter: a0fd5123-1de7-4c7a-8bbc-602bea8c8168
+            dataType: NUMBER(38,0)
+            description: ID of a payment method (for transactions involving payments)
+            hashColumns: []
+            hashDetails: null
+            name: PAYMENTMETHODID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 25762b27-70f8-454b-8c49-aa89bed35a51
+                    stepCounter: 754fecc8-637c-4407-9fc4-16068c14f2d8
+                transform: ""
+          - columnReference:
+              columnCounter: c9e6c8fb-6bc7-47cb-b06d-1d8160123257
+              stepCounter: a0fd5123-1de7-4c7a-8bbc-602bea8c8168
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1d30e20e-3b3a-4a53-a0b9-a6d50a338a09
+                    stepCounter: 754fecc8-637c-4407-9fc4-16068c14f2d8
+                transform: ""
+          - columnReference:
+              columnCounter: a7347d50-973b-4cb3-b86d-f32d2fe135fe
+              stepCounter: a0fd5123-1de7-4c7a-8bbc-602bea8c8168
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6dada523-9fea-48ac-a33d-0fcc1f7aec86
+                    stepCounter: 754fecc8-637c-4407-9fc4-16068c14f2d8
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_WWI_SUPPLIERTRANSACTIONS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_WWI_SUPPLIERTRANSACTIONS') }} "DVSTG_WWI_SUPPLIERTRANSACTIONS"
+            name: HUB_WWI_SUPPLIERTRANSACTIONS
+            noLinkRefs: []
+      name: HUB_WWI_SUPPLIERTRANSACTIONS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: a0fd5123-1de7-4c7a-8bbc-602bea8c8168

@@ -1,0 +1,64 @@
+steps:
+  SPORTS_LOAD_AMERICAN_FOOTBALL_SACKS_AGAINST_STATS-434bc3df-9de9-471c-abf4-e929134533c8:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SPORTS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 79ed8fc7-95a9-4a7b-920a-58c843c2d6d9
+              stepCounter: 434bc3df-9de9-471c-abf4-e929134533c8
+            config: {}
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            name: ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f593e85e-6aac-4320-b2b3-3c5653713942
+              stepCounter: 434bc3df-9de9-471c-abf4-e929134533c8
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: SACKS_AGAINST_YARDS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ce1fe048-9dce-4f33-a2c4-a798f349dc60
+              stepCounter: 434bc3df-9de9-471c-abf4-e929134533c8
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: SACKS_AGAINST_TOTAL
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SPORTS_SRC', 'SPORTS_LOAD_AMERICAN_FOOTBALL_SACKS_AGAINST_STATS') }}
+      name: SPORTS_LOAD_AMERICAN_FOOTBALL_SACKS_AGAINST_STATS
+      schema: ""
+      sqlType: Source
+      table: SPORTS_LOAD_AMERICAN_FOOTBALL_SACKS_AGAINST_STATS
+      type: sourceInput
+    stepCounter: 434bc3df-9de9-471c-abf4-e929134533c8

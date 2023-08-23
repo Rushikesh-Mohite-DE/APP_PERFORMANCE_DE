@@ -1,0 +1,105 @@
+steps:
+  HUB_SPORTS_PERIODS-ce3d0735-6ba5-4532-b5c5-1f2afc06baff:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 3908044e-1336-42cf-8aca-31597ee544b2
+              stepCounter: ce3d0735-6ba5-4532-b5c5-1f2afc06baff
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_SPORTS_PERIODS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1065bd59-2089-4d8e-83d7-4f704437282d
+                    stepCounter: e6dbdbb9-86cb-4f3d-833f-2f1f78fb42a1
+                transform: ""
+          - columnReference:
+              columnCounter: f96b6974-310b-4d78-84c6-ed99001c5b90
+              stepCounter: ce3d0735-6ba5-4532-b5c5-1f2afc06baff
+            dataType: VARCHAR(32)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 41b50944-de84-451d-bc39-6b838b005728
+                    stepCounter: e6dbdbb9-86cb-4f3d-833f-2f1f78fb42a1
+                transform: ""
+          - columnReference:
+              columnCounter: 01df3e9d-0608-42bd-b467-446fb53dff71
+              stepCounter: ce3d0735-6ba5-4532-b5c5-1f2afc06baff
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PARTICIPANT_EVENT_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 77adabc2-6124-4e26-a454-746662be80a5
+                    stepCounter: e6dbdbb9-86cb-4f3d-833f-2f1f78fb42a1
+                transform: ""
+          - columnReference:
+              columnCounter: 4b5845a1-714b-4f97-97c0-c34add217ac7
+              stepCounter: ce3d0735-6ba5-4532-b5c5-1f2afc06baff
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a953ce8c-ffbd-4d18-a38c-c31d53f7ca21
+                    stepCounter: e6dbdbb9-86cb-4f3d-833f-2f1f78fb42a1
+                transform: ""
+          - columnReference:
+              columnCounter: 4df4acad-c0af-409c-a07b-f21e0bc14983
+              stepCounter: ce3d0735-6ba5-4532-b5c5-1f2afc06baff
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 01586637-a6f9-46c9-bcbe-16b7fd72503d
+                    stepCounter: e6dbdbb9-86cb-4f3d-833f-2f1f78fb42a1
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SPORTS_PERIODS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SPORTS_PERIODS') }} "DVSTG_SPORTS_PERIODS"
+            name: HUB_SPORTS_PERIODS
+            noLinkRefs: []
+      name: HUB_SPORTS_PERIODS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: ce3d0735-6ba5-4532-b5c5-1f2afc06baff

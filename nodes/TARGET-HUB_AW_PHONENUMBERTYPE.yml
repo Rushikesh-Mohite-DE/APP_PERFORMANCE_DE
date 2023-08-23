@@ -1,0 +1,91 @@
+steps:
+  HUB_AW_PHONENUMBERTYPE-246e9013-9ecd-4762-8aab-3ef1b159e649:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 75982e62-1f20-4dc5-b032-d7601a5840cd
+              stepCounter: 246e9013-9ecd-4762-8aab-3ef1b159e649
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_PHONENUMBERTYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4ed285f2-610e-4780-b001-f6b203c53c33
+                    stepCounter: d19e6a06-8738-4bab-83f0-32e546f0b016
+                transform: ""
+          - columnReference:
+              columnCounter: af23bbeb-658a-48a2-a837-77855305041d
+              stepCounter: 246e9013-9ecd-4762-8aab-3ef1b159e649
+            dataType: NUMBER(38,0)
+            description: Primary key for telephone number type records.
+            hashColumns: []
+            hashDetails: null
+            name: PHONENUMBERTYPEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 78b2781e-e2a5-4080-8645-2727756ec447
+                    stepCounter: d19e6a06-8738-4bab-83f0-32e546f0b016
+                transform: ""
+          - columnReference:
+              columnCounter: 8d1bfad8-f801-4203-ad2d-90ab5a4f6221
+              stepCounter: 246e9013-9ecd-4762-8aab-3ef1b159e649
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: eba029b5-228d-4556-942e-3b7d286ea8ed
+                    stepCounter: d19e6a06-8738-4bab-83f0-32e546f0b016
+                transform: ""
+          - columnReference:
+              columnCounter: 519e8c9e-5e15-4827-b2f6-51c74c7c0ba1
+              stepCounter: 246e9013-9ecd-4762-8aab-3ef1b159e649
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 49bf22a1-e7a2-4221-b369-9c332424eab9
+                    stepCounter: d19e6a06-8738-4bab-83f0-32e546f0b016
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_PHONENUMBERTYPE
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_PHONENUMBERTYPE') }} "DVSTG_AW_PHONENUMBERTYPE"
+            name: HUB_AW_PHONENUMBERTYPE
+            noLinkRefs: []
+      name: HUB_AW_PHONENUMBERTYPE
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 246e9013-9ecd-4762-8aab-3ef1b159e649

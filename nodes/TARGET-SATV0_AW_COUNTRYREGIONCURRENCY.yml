@@ -1,0 +1,121 @@
+steps:
+  SATV0_AW_COUNTRYREGIONCURRENCY-74eea7a7-615e-4148-a514-416b0e9e9e24:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 77a3b225-6fcd-4b47-805c-207e61616e99
+              stepCounter: 74eea7a7-615e-4148-a514-416b0e9e9e24
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_COUNTRYREGIONCURRENCY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 15f218ac-52d8-4011-a470-c69d8664c99b
+                    stepCounter: 3215ee1c-9601-4213-88b3-85994ccc49fa
+                transform: ""
+          - columnReference:
+              columnCounter: 98967ace-40cb-487c-91af-37080556ccef
+              stepCounter: 74eea7a7-615e-4148-a514-416b0e9e9e24
+            dataType: VARCHAR(3)
+            description: ISO standard currency code. Foreign key to Currency.CurrencyCode.
+            hashColumns: []
+            hashDetails: null
+            name: CURRENCYCODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e5304421-e4fb-41d5-98bc-409820dffc84
+                    stepCounter: 3215ee1c-9601-4213-88b3-85994ccc49fa
+                transform: ""
+          - columnReference:
+              columnCounter: 1fe74f9b-aff1-4166-b51b-d305dde279b2
+              stepCounter: 74eea7a7-615e-4148-a514-416b0e9e9e24
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            hashColumns: []
+            hashDetails: null
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 230062ff-4537-4577-80b2-8d1cb529c8db
+                    stepCounter: 3215ee1c-9601-4213-88b3-85994ccc49fa
+                transform: ""
+          - columnReference:
+              columnCounter: dcb9c83e-297f-43c6-96fc-1e188b5b9c24
+              stepCounter: 74eea7a7-615e-4148-a514-416b0e9e9e24
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 24e093f4-d465-4939-9c43-ece94cb6e93a
+                    stepCounter: 3215ee1c-9601-4213-88b3-85994ccc49fa
+                transform: ""
+          - columnReference:
+              columnCounter: ab8a7c3e-7139-4263-9754-d337c034eddf
+              stepCounter: 74eea7a7-615e-4148-a514-416b0e9e9e24
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7cfbe548-2de8-4e75-95d9-7559f9b70707
+                    stepCounter: 3215ee1c-9601-4213-88b3-85994ccc49fa
+                transform: ""
+          - columnReference:
+              columnCounter: 7438899e-cab6-4c7d-9db4-14fa79d2720e
+              stepCounter: 74eea7a7-615e-4148-a514-416b0e9e9e24
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 279e294c-65c1-4fcd-8fe6-7387307542df
+                    stepCounter: 3215ee1c-9601-4213-88b3-85994ccc49fa
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_COUNTRYREGIONCURRENCY
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_COUNTRYREGIONCURRENCY') }} "DVSTG_AW_COUNTRYREGIONCURRENCY"
+            name: SATV0_AW_COUNTRYREGIONCURRENCY
+            noLinkRefs: []
+      name: SATV0_AW_COUNTRYREGIONCURRENCY
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: 74eea7a7-615e-4148-a514-416b0e9e9e24

@@ -1,0 +1,105 @@
+steps:
+  HUB_KFF_US_POLICY_ACTIONS-6f1c84fb-f8ce-499e-84a1-4f8f82e606f2:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: d4906898-023a-47b5-89a2-9d63be45d208
+              stepCounter: 6f1c84fb-f8ce-499e-84a1-4f8f82e606f2
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_KFF_US_POLICY_ACTIONS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4f5c3518-4e91-4c14-8135-2426579f13bc
+                    stepCounter: 73d7fd7d-877b-480a-a76d-bd67818df779
+                transform: ""
+          - columnReference:
+              columnCounter: 4e983e94-f119-4d1e-964e-e820a10ff388
+              stepCounter: 6f1c84fb-f8ce-499e-84a1-4f8f82e606f2
+            dataType: VARCHAR(255)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: COUNTRY_REGION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8fddef2d-22ac-4b64-b588-2b8f9008280d
+                    stepCounter: 73d7fd7d-877b-480a-a76d-bd67818df779
+                transform: ""
+          - columnReference:
+              columnCounter: f1243592-43eb-4c39-a64c-747bf26b5839
+              stepCounter: 6f1c84fb-f8ce-499e-84a1-4f8f82e606f2
+            dataType: VARCHAR(255)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PROVINCE_STATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0d19fe11-a3c8-4b16-acd4-863b0cc8a542
+                    stepCounter: 73d7fd7d-877b-480a-a76d-bd67818df779
+                transform: ""
+          - columnReference:
+              columnCounter: 0dcb8973-3f3e-41a4-a490-f408f55a083f
+              stepCounter: 6f1c84fb-f8ce-499e-84a1-4f8f82e606f2
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: af67cdb1-b914-48d8-91e6-5c6b81458362
+                    stepCounter: 73d7fd7d-877b-480a-a76d-bd67818df779
+                transform: ""
+          - columnReference:
+              columnCounter: 9cbe7acc-6a50-496e-8e04-71a70bbf6501
+              stepCounter: 6f1c84fb-f8ce-499e-84a1-4f8f82e606f2
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 33d8f269-05e2-4162-8bb4-fefed556b2b9
+                    stepCounter: 73d7fd7d-877b-480a-a76d-bd67818df779
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_KFF_US_POLICY_ACTIONS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_KFF_US_POLICY_ACTIONS') }} "DVSTG_KFF_US_POLICY_ACTIONS"
+            name: HUB_KFF_US_POLICY_ACTIONS
+            noLinkRefs: []
+      name: HUB_KFF_US_POLICY_ACTIONS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 6f1c84fb-f8ce-499e-84a1-4f8f82e606f2

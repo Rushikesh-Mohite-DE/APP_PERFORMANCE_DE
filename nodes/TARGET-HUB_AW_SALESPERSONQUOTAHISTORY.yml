@@ -1,0 +1,91 @@
+steps:
+  HUB_AW_SALESPERSONQUOTAHISTORY-a6efcb90-99e0-4134-a4ff-0022cef27e1d:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 6a724a0b-4368-4160-9c4e-dde312d7ae8e
+              stepCounter: a6efcb90-99e0-4134-a4ff-0022cef27e1d
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_SALESPERSONQUOTAHISTORY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11a124ac-a2e9-4e3b-9731-74117a089bdc
+                    stepCounter: 3cabfd0a-fa56-4f0c-8e03-4adeedafe927
+                transform: ""
+          - columnReference:
+              columnCounter: f71ae3df-b8a1-42f5-9512-ddcd8a46f9b7
+              stepCounter: a6efcb90-99e0-4134-a4ff-0022cef27e1d
+            dataType: NUMBER(38,0)
+            description: Sales person identification number. Foreign key to SalesPerson.BusinessEntityID.
+            hashColumns: []
+            hashDetails: null
+            name: BUSINESSENTITYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ded39f65-a357-4323-b173-fa79e0a8ca30
+                    stepCounter: 3cabfd0a-fa56-4f0c-8e03-4adeedafe927
+                transform: ""
+          - columnReference:
+              columnCounter: 5cdca1c8-fc0c-46c9-a6f8-55ad82650a76
+              stepCounter: a6efcb90-99e0-4134-a4ff-0022cef27e1d
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5e6459fd-1958-4228-82dd-bda1735d262a
+                    stepCounter: 3cabfd0a-fa56-4f0c-8e03-4adeedafe927
+                transform: ""
+          - columnReference:
+              columnCounter: b388228a-256b-44ab-88a5-f190c23d78d8
+              stepCounter: a6efcb90-99e0-4134-a4ff-0022cef27e1d
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f9f0ead1-06a1-47a8-85b3-be908e83240a
+                    stepCounter: 3cabfd0a-fa56-4f0c-8e03-4adeedafe927
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_SALESPERSONQUOTAHISTORY
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_SALESPERSONQUOTAHISTORY') }} "DVSTG_AW_SALESPERSONQUOTAHISTORY"
+            name: HUB_AW_SALESPERSONQUOTAHISTORY
+            noLinkRefs: []
+      name: HUB_AW_SALESPERSONQUOTAHISTORY
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: a6efcb90-99e0-4134-a4ff-0022cef27e1d

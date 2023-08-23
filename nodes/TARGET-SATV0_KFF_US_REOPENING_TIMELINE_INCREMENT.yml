@@ -1,0 +1,121 @@
+steps:
+  SATV0_KFF_US_REOPENING_TIMELINE_INCREMENT-36f3d56c-320f-4582-9e0a-c437e3b3d3a0:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 86c034c5-5aa5-4a08-8378-6d97c664a3e2
+              stepCounter: 36f3d56c-320f-4582-9e0a-c437e3b3d3a0
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_US_REOPENING_TIMELINE_INCREMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1391fcb5-f06b-4005-a0c6-4b6ae28f159a
+                    stepCounter: e164550b-12b5-4661-a2a3-cdb9be79bf76
+                transform: ""
+          - columnReference:
+              columnCounter: 373773ed-0e33-40ef-9223-cd5615d376d7
+              stepCounter: 36f3d56c-320f-4582-9e0a-c437e3b3d3a0
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 63ec8192-111b-4892-b572-ae57a594723f
+                    stepCounter: e164550b-12b5-4661-a2a3-cdb9be79bf76
+                transform: ""
+          - columnReference:
+              columnCounter: b58da0a6-8f29-451a-a4bb-d9be3744a1d9
+              stepCounter: 36f3d56c-320f-4582-9e0a-c437e3b3d3a0
+            dataType: VARCHAR(255)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4d2eb51b-d234-4ff0-81f1-f6aeb0ab78a4
+                    stepCounter: e164550b-12b5-4661-a2a3-cdb9be79bf76
+                transform: ""
+          - columnReference:
+              columnCounter: a89b2c95-c6f8-40e5-ad8a-8e3f22586f20
+              stepCounter: 36f3d56c-320f-4582-9e0a-c437e3b3d3a0
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ac561a17-cb7a-40f7-a765-1096df141409
+                    stepCounter: e164550b-12b5-4661-a2a3-cdb9be79bf76
+                transform: ""
+          - columnReference:
+              columnCounter: a46e6cdb-55d7-4940-a987-de0310ba301e
+              stepCounter: 36f3d56c-320f-4582-9e0a-c437e3b3d3a0
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4da3d511-7ea6-4567-b0c0-c462eb3cd4a3
+                    stepCounter: e164550b-12b5-4661-a2a3-cdb9be79bf76
+                transform: ""
+          - columnReference:
+              columnCounter: abdd52a8-215a-45cc-905a-764c28c7a50c
+              stepCounter: 36f3d56c-320f-4582-9e0a-c437e3b3d3a0
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0a05a198-4067-4368-aa99-20889e4b1c12
+                    stepCounter: e164550b-12b5-4661-a2a3-cdb9be79bf76
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_KFF_US_REOPENING_TIMELINE_INCREMENT
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_KFF_US_REOPENING_TIMELINE_INCREMENT') }} "DVSTG_KFF_US_REOPENING_TIMELINE_INCREMENT"
+            name: SATV0_KFF_US_REOPENING_TIMELINE_INCREMENT
+            noLinkRefs: []
+      name: SATV0_KFF_US_REOPENING_TIMELINE_INCREMENT
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: 36f3d56c-320f-4582-9e0a-c437e3b3d3a0

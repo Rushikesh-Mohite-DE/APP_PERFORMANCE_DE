@@ -1,0 +1,135 @@
+steps:
+  SATV0_AW_EMAILADDRESS-5ffefc78-3f91-40e3-b0b4-d6dc443921d6:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: d3271c35-b9ef-4080-8486-937945b0b43b
+              stepCounter: 5ffefc78-3f91-40e3-b0b4-d6dc443921d6
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_EMAILADDRESS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9a90dac8-d639-4b41-8151-7743d99ece33
+                    stepCounter: 0f4788c3-842f-43d8-8dfc-d08810af08ad
+                transform: ""
+          - columnReference:
+              columnCounter: 4fa012e9-6c97-4912-a3f9-5c4872b47d96
+              stepCounter: 5ffefc78-3f91-40e3-b0b4-d6dc443921d6
+            dataType: VARCHAR(50)
+            description: E-mail address for the person.
+            hashColumns: []
+            hashDetails: null
+            name: EMAILADDRESS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3362c36f-4099-4358-9c70-081b416a4ffe
+                    stepCounter: 0f4788c3-842f-43d8-8dfc-d08810af08ad
+                transform: ""
+          - columnReference:
+              columnCounter: 2d70adeb-6851-4fb3-b3ff-5b84b4797837
+              stepCounter: 5ffefc78-3f91-40e3-b0b4-d6dc443921d6
+            dataType: VARCHAR(16777216)
+            description: ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            hashColumns: []
+            hashDetails: null
+            name: ROWGUID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 287b5efe-3c8d-475e-8113-96f3c06e468a
+                    stepCounter: 0f4788c3-842f-43d8-8dfc-d08810af08ad
+                transform: ""
+          - columnReference:
+              columnCounter: 1a85a263-17de-4d12-b796-81e7ef671612
+              stepCounter: 5ffefc78-3f91-40e3-b0b4-d6dc443921d6
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            hashColumns: []
+            hashDetails: null
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 494147e3-1561-49ac-ac9a-e641f9eb4a49
+                    stepCounter: 0f4788c3-842f-43d8-8dfc-d08810af08ad
+                transform: ""
+          - columnReference:
+              columnCounter: 53e13e28-b190-47e0-855d-ecea3d7608ee
+              stepCounter: 5ffefc78-3f91-40e3-b0b4-d6dc443921d6
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 63e5eb88-1f40-4488-acd3-351c72f22e6b
+                    stepCounter: 0f4788c3-842f-43d8-8dfc-d08810af08ad
+                transform: ""
+          - columnReference:
+              columnCounter: 073c31c2-4f1b-4cdc-86dd-3e6d24b2339d
+              stepCounter: 5ffefc78-3f91-40e3-b0b4-d6dc443921d6
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a50d770b-1b8c-4507-a2a3-e99c1a2c6dac
+                    stepCounter: 0f4788c3-842f-43d8-8dfc-d08810af08ad
+                transform: ""
+          - columnReference:
+              columnCounter: a7ad8da8-edd6-4def-8e96-a50a9b00eee5
+              stepCounter: 5ffefc78-3f91-40e3-b0b4-d6dc443921d6
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 019c654a-6963-445c-bfa5-5eb03a8110a6
+                    stepCounter: 0f4788c3-842f-43d8-8dfc-d08810af08ad
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_EMAILADDRESS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_EMAILADDRESS') }} "DVSTG_AW_EMAILADDRESS"
+            name: SATV0_AW_EMAILADDRESS
+            noLinkRefs: []
+      name: SATV0_AW_EMAILADDRESS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: 5ffefc78-3f91-40e3-b0b4-d6dc443921d6

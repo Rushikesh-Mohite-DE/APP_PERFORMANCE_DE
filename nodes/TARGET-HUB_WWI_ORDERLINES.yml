@@ -1,0 +1,133 @@
+steps:
+  HUB_WWI_ORDERLINES-7a68244c-c4bf-4a6b-91fb-befcdadd56a2:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: fa8e7850-9ca0-4bd6-b7e9-3f7db233e8e9
+              stepCounter: 7a68244c-c4bf-4a6b-91fb-befcdadd56a2
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_ORDERLINES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d5c5a6ce-ef6c-4841-8caf-5f2e45a146db
+                    stepCounter: 88bdb143-8db3-434b-b06e-35d6db84b735
+                transform: ""
+          - columnReference:
+              columnCounter: b45c2cf7-ecc1-483f-8103-2d3566aed88a
+              stepCounter: 7a68244c-c4bf-4a6b-91fb-befcdadd56a2
+            dataType: NUMBER(38,0)
+            description: Numeric ID used for reference to a line on an Order within the database
+            hashColumns: []
+            hashDetails: null
+            name: ORDERLINEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e3887fd2-03c3-4737-9c52-2f07c861b54b
+                    stepCounter: 88bdb143-8db3-434b-b06e-35d6db84b735
+                transform: ""
+          - columnReference:
+              columnCounter: 7a34310b-8e81-402d-93b3-2acaf55493f6
+              stepCounter: 7a68244c-c4bf-4a6b-91fb-befcdadd56a2
+            dataType: NUMBER(38,0)
+            description: Order that this line is associated with
+            hashColumns: []
+            hashDetails: null
+            name: ORDERID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 876035ff-f9f5-45ff-8566-d5d79d6415c2
+                    stepCounter: 88bdb143-8db3-434b-b06e-35d6db84b735
+                transform: ""
+          - columnReference:
+              columnCounter: 61da9b57-9cee-488d-9152-328873611a56
+              stepCounter: 7a68244c-c4bf-4a6b-91fb-befcdadd56a2
+            dataType: NUMBER(38,0)
+            description: Stock item for this order line (FK not indexed as separate index exists)
+            hashColumns: []
+            hashDetails: null
+            name: STOCKITEMID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c9374e7c-3738-402b-84f3-521a237c1dec
+                    stepCounter: 88bdb143-8db3-434b-b06e-35d6db84b735
+                transform: ""
+          - columnReference:
+              columnCounter: a86fc4e9-890b-41eb-9a26-bbb1030e1d39
+              stepCounter: 7a68244c-c4bf-4a6b-91fb-befcdadd56a2
+            dataType: NUMBER(38,0)
+            description: Type of package to be supplied
+            hashColumns: []
+            hashDetails: null
+            name: PACKAGETYPEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cb786f1a-f3c2-459f-b3e9-9a67d0d6d531
+                    stepCounter: 88bdb143-8db3-434b-b06e-35d6db84b735
+                transform: ""
+          - columnReference:
+              columnCounter: 9e8fece6-07ea-4fa1-8cd5-91eef0c8a39f
+              stepCounter: 7a68244c-c4bf-4a6b-91fb-befcdadd56a2
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 91a16a5a-5a83-43f1-ba53-8f8c45ff69f5
+                    stepCounter: 88bdb143-8db3-434b-b06e-35d6db84b735
+                transform: ""
+          - columnReference:
+              columnCounter: fa0d57c6-3344-4fac-bcc6-cb58ae16e814
+              stepCounter: 7a68244c-c4bf-4a6b-91fb-befcdadd56a2
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c5f03d3f-f34d-451f-8a8a-c7c72131178b
+                    stepCounter: 88bdb143-8db3-434b-b06e-35d6db84b735
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_WWI_ORDERLINES
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_WWI_ORDERLINES') }} "DVSTG_WWI_ORDERLINES"
+            name: HUB_WWI_ORDERLINES
+            noLinkRefs: []
+      name: HUB_WWI_ORDERLINES
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 7a68244c-c4bf-4a6b-91fb-befcdadd56a2

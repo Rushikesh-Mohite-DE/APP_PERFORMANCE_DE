@@ -1,0 +1,139 @@
+steps:
+  AW_LOAD_VENDOR-edbf41d5-9f2d-4c1f-9cf9-1521453aeb77:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: ADV_WRKS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8cf1d5bc-0f3f-4484-9cba-fbe091b31407
+              stepCounter: edbf41d5-9f2d-4c1f-9cf9-1521453aeb77
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Primary key for Vendor records.  Foreign key to BusinessEntity.BusinessEntityID
+            name: BUSINESSENTITYID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b5f27a5d-cfe1-45c4-a1d0-b9685b59c6b0
+              stepCounter: edbf41d5-9f2d-4c1f-9cf9-1521453aeb77
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: Vendor account (identification) number.
+            name: ACCOUNTNUMBER
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 714d2565-0f56-4676-a661-50e22cbb3524
+              stepCounter: edbf41d5-9f2d-4c1f-9cf9-1521453aeb77
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: Company name.
+            name: NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6ae32626-96d2-40db-bbc2-6c4a70561f45
+              stepCounter: edbf41d5-9f2d-4c1f-9cf9-1521453aeb77
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: 1 = Superior, 2 = Excellent, 3 = Above average, 4 = Average, 5 = Below average
+            name: CREDITRATING
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 831d41a8-892e-4456-936e-6faac0900236
+              stepCounter: edbf41d5-9f2d-4c1f-9cf9-1521453aeb77
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: 0 = Do not use if another vendor is available. 1 = Preferred over other vendors supplying the same product.
+            name: PREFERREDVENDORSTATUS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2595241e-ad79-4b33-ab03-b439f3985d92
+              stepCounter: edbf41d5-9f2d-4c1f-9cf9-1521453aeb77
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: 0 = Vendor no longer used. 1 = Vendor is actively used.
+            name: ACTIVEFLAG
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2175b2ff-2e3b-4f79-a0ea-a5680a4db859
+              stepCounter: edbf41d5-9f2d-4c1f-9cf9-1521453aeb77
+            config: {}
+            dataType: VARCHAR(1024)
+            defaultValue: ""
+            description: Vendor URL.
+            name: PURCHASINGWEBSERVICEURL
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 944f7c93-8b4e-4bf5-89f8-4610f1ff07d3
+              stepCounter: edbf41d5-9f2d-4c1f-9cf9-1521453aeb77
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_VENDOR') }}
+      name: AW_LOAD_VENDOR
+      schema: ""
+      sqlType: Source
+      table: AW_LOAD_VENDOR
+      type: sourceInput
+    stepCounter: edbf41d5-9f2d-4c1f-9cf9-1521453aeb77

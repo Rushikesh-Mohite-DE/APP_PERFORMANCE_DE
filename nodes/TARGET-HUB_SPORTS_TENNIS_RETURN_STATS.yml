@@ -1,0 +1,91 @@
+steps:
+  HUB_SPORTS_TENNIS_RETURN_STATS-cf123d2f-545a-41d2-b308-46bfe140beaf:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: c771aa43-1842-41fd-8475-42ae9097cd2a
+              stepCounter: cf123d2f-545a-41d2-b308-46bfe140beaf
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_RETURN_STATS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5c080461-17f4-4141-9963-25f1aa47f98b
+                    stepCounter: 1123f56a-8f9b-4d20-aeb5-926f32e0a135
+                transform: ""
+          - columnReference:
+              columnCounter: b7956d0c-b40a-4ee0-a66a-2f808156a37a
+              stepCounter: cf123d2f-545a-41d2-b308-46bfe140beaf
+            dataType: VARCHAR(32)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: dba40300-12dd-4403-907b-534964611f6c
+                    stepCounter: 1123f56a-8f9b-4d20-aeb5-926f32e0a135
+                transform: ""
+          - columnReference:
+              columnCounter: db5ee014-e372-4812-9154-91d2a377d1e5
+              stepCounter: cf123d2f-545a-41d2-b308-46bfe140beaf
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4c2a4c08-3706-48ad-875f-467e4f1380be
+                    stepCounter: 1123f56a-8f9b-4d20-aeb5-926f32e0a135
+                transform: ""
+          - columnReference:
+              columnCounter: 90b5e396-98f5-44a8-9712-9fd297518d7c
+              stepCounter: cf123d2f-545a-41d2-b308-46bfe140beaf
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b709f2f8-dc41-44c9-81da-f52cd83a1470
+                    stepCounter: 1123f56a-8f9b-4d20-aeb5-926f32e0a135
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SPORTS_TENNIS_RETURN_STATS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SPORTS_TENNIS_RETURN_STATS') }} "DVSTG_SPORTS_TENNIS_RETURN_STATS"
+            name: HUB_SPORTS_TENNIS_RETURN_STATS
+            noLinkRefs: []
+      name: HUB_SPORTS_TENNIS_RETURN_STATS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: cf123d2f-545a-41d2-b308-46bfe140beaf

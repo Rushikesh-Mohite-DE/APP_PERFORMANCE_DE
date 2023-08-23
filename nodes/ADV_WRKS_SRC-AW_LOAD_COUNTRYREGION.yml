@@ -1,0 +1,64 @@
+steps:
+  AW_LOAD_COUNTRYREGION-f6359f3c-fa09-4cdc-ab32-d5f3d2440475:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: ADV_WRKS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 96558633-5e39-4389-aedb-289fb559175a
+              stepCounter: f6359f3c-fa09-4cdc-ab32-d5f3d2440475
+            config: {}
+            dataType: VARCHAR(3)
+            defaultValue: ""
+            description: ISO standard code for countries and regions.
+            name: COUNTRYREGIONCODE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ef49cee4-039b-4fe2-a3c2-e2dbe39f9c81
+              stepCounter: f6359f3c-fa09-4cdc-ab32-d5f3d2440475
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: Country or region name.
+            name: NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8cfdcdd1-db39-4b3e-996b-8148df4be137
+              stepCounter: f6359f3c-fa09-4cdc-ab32-d5f3d2440475
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_COUNTRYREGION') }}
+      name: AW_LOAD_COUNTRYREGION
+      schema: ""
+      sqlType: Source
+      table: AW_LOAD_COUNTRYREGION
+      type: sourceInput
+    stepCounter: f6359f3c-fa09-4cdc-ab32-d5f3d2440475

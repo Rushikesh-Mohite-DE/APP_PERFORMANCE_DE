@@ -1,0 +1,214 @@
+steps:
+  AW_LOAD_PURCHASEORDERHEADER-4bd37d48-ea93-4025-ad2d-af2e8d2f4bee:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: ADV_WRKS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0ee44db4-f6ac-4bb7-9627-cee8ddee3486
+              stepCounter: 4bd37d48-ea93-4025-ad2d-af2e8d2f4bee
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Primary key.
+            name: PURCHASEORDERID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 506c55d0-1650-4a64-b98a-af40c355d96f
+              stepCounter: 4bd37d48-ea93-4025-ad2d-af2e8d2f4bee
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Incremental number to track changes to the purchase order over time.
+            name: REVISIONNUMBER
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6a7e254a-818b-43cd-9c22-1a91595bb768
+              stepCounter: 4bd37d48-ea93-4025-ad2d-af2e8d2f4bee
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Order current status. 1 = Pending; 2 = Approved; 3 = Rejected; 4 = Complete
+            name: STATUS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: eeb7b6d5-86d1-46d4-aca4-62b31e9a7eef
+              stepCounter: 4bd37d48-ea93-4025-ad2d-af2e8d2f4bee
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Employee who created the purchase order. Foreign key to Employee.BusinessEntityID.
+            name: EMPLOYEEID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3fad6cf9-6c77-4b06-9e96-a1e99d3778af
+              stepCounter: 4bd37d48-ea93-4025-ad2d-af2e8d2f4bee
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Vendor with whom the purchase order is placed. Foreign key to Vendor.BusinessEntityID.
+            name: VENDORID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 07f6cf1d-faff-4682-b413-241e530feff5
+              stepCounter: 4bd37d48-ea93-4025-ad2d-af2e8d2f4bee
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Shipping method. Foreign key to ShipMethod.ShipMethodID.
+            name: SHIPMETHODID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 71e6ca05-de4e-4d42-bceb-abbb63e265db
+              stepCounter: 4bd37d48-ea93-4025-ad2d-af2e8d2f4bee
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Purchase order creation date.
+            name: ORDERDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: aa31a7b2-ce23-44d5-96e9-36f1d3dc0a94
+              stepCounter: 4bd37d48-ea93-4025-ad2d-af2e8d2f4bee
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Estimated shipment date from the vendor.
+            name: SHIPDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 63b7e340-6af2-4324-bdd1-cf4b1c15bac9
+              stepCounter: 4bd37d48-ea93-4025-ad2d-af2e8d2f4bee
+            config: {}
+            dataType: NUMBER(19,4)
+            defaultValue: ""
+            description: Purchase order subtotal. Computed as SUM(PurchaseOrderDetail.LineTotal)for the appropriate PurchaseOrderID.
+            name: SUBTOTAL
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c823cfb3-a3e7-45dd-84fe-69d2edb082e9
+              stepCounter: 4bd37d48-ea93-4025-ad2d-af2e8d2f4bee
+            config: {}
+            dataType: NUMBER(19,4)
+            defaultValue: ""
+            description: Tax amount.
+            name: TAXAMT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f483fe07-4667-4165-935c-f96b7eb73a78
+              stepCounter: 4bd37d48-ea93-4025-ad2d-af2e8d2f4bee
+            config: {}
+            dataType: NUMBER(19,4)
+            defaultValue: ""
+            description: Shipping cost.
+            name: FREIGHT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4f56d4b1-51f9-44a0-9f6a-bcbca81b53fe
+              stepCounter: 4bd37d48-ea93-4025-ad2d-af2e8d2f4bee
+            config: {}
+            dataType: NUMBER(19,4)
+            defaultValue: ""
+            description: Total due to vendor. Computed as Subtotal + TaxAmt + Freight.
+            name: TOTALDUE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 458b685e-b12e-432b-bc92-a4686b6ce9ed
+              stepCounter: 4bd37d48-ea93-4025-ad2d-af2e8d2f4bee
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_PURCHASEORDERHEADER') }}
+      name: AW_LOAD_PURCHASEORDERHEADER
+      schema: ""
+      sqlType: Source
+      table: AW_LOAD_PURCHASEORDERHEADER
+      type: sourceInput
+    stepCounter: 4bd37d48-ea93-4025-ad2d-af2e8d2f4bee

@@ -1,0 +1,49 @@
+steps:
+  SPORTS_LOAD_AFFILIATIONS_MEDIA-aa2a5c7f-e3c1-4da9-8b92-6f2311113bf2:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SPORTS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 649deff4-787c-4fb1-9189-75b3202e94ba
+              stepCounter: aa2a5c7f-e3c1-4da9-8b92-6f2311113bf2
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: AFFILIATION_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c38e5bc3-2ac3-4f5a-aff0-187602cde926
+              stepCounter: aa2a5c7f-e3c1-4da9-8b92-6f2311113bf2
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: MEDIA_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SPORTS_SRC', 'SPORTS_LOAD_AFFILIATIONS_MEDIA') }}
+      name: SPORTS_LOAD_AFFILIATIONS_MEDIA
+      schema: ""
+      sqlType: Source
+      table: SPORTS_LOAD_AFFILIATIONS_MEDIA
+      type: sourceInput
+    stepCounter: aa2a5c7f-e3c1-4da9-8b92-6f2311113bf2

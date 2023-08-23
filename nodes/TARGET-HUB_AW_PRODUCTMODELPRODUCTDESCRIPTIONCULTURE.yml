@@ -1,0 +1,91 @@
+steps:
+  HUB_AW_PRODUCTMODELPRODUCTDESCRIPTIONCULTURE-5aeb7a03-efbc-4115-a2d1-3ad65be5a358:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 00f25f11-6c38-428c-939a-f8710b497b02
+              stepCounter: 5aeb7a03-efbc-4115-a2d1-3ad65be5a358
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_PRODUCTMODELPRODUCTDESCRIPTIONCULTURE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f0f4ae2e-9f7d-48fe-bb24-c1b1789d7fb1
+                    stepCounter: f78b9b04-6ed6-47cb-a646-3d71c3e10035
+                transform: ""
+          - columnReference:
+              columnCounter: 2cc671b9-55ce-4f5a-ad47-70b233c50ef8
+              stepCounter: 5aeb7a03-efbc-4115-a2d1-3ad65be5a358
+            dataType: NUMBER(38,0)
+            description: Primary key. Foreign key to ProductModel.ProductModelID.
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCTMODELID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0ac8821a-188f-4e17-a909-a5ce8b9b9fbd
+                    stepCounter: f78b9b04-6ed6-47cb-a646-3d71c3e10035
+                transform: ""
+          - columnReference:
+              columnCounter: 3d766a7a-a881-4fb6-ad21-41ad75156057
+              stepCounter: 5aeb7a03-efbc-4115-a2d1-3ad65be5a358
+            dataType: NUMBER(38,0)
+            description: Primary key. Foreign key to ProductDescription.ProductDescriptionID.
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCTDESCRIPTIONID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 13080e17-382d-49a8-826d-61e0b31adce6
+                    stepCounter: f78b9b04-6ed6-47cb-a646-3d71c3e10035
+                transform: ""
+          - columnReference:
+              columnCounter: 9cb0a6b4-312d-466d-86a1-c52292d9bb43
+              stepCounter: 5aeb7a03-efbc-4115-a2d1-3ad65be5a358
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c927165b-89a6-45ad-8e59-d481a62ec4fe
+                    stepCounter: f78b9b04-6ed6-47cb-a646-3d71c3e10035
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_PRODUCTMODELPRODUCTDESCRIPTIONCULTURE
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_PRODUCTMODELPRODUCTDESCRIPTIONCULTURE') }} "DVSTG_AW_PRODUCTMODELPRODUCTDESCRIPTIONCULTURE"
+            name: HUB_AW_PRODUCTMODELPRODUCTDESCRIPTIONCULTURE
+            noLinkRefs: []
+      name: HUB_AW_PRODUCTMODELPRODUCTDESCRIPTIONCULTURE
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 5aeb7a03-efbc-4115-a2d1-3ad65be5a358

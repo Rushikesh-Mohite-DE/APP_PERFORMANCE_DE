@@ -1,0 +1,94 @@
+steps:
+  SPORTS_LOAD_BASKETBALL_TEAM_STATS-0abf1abd-a5d4-4fee-9d6a-94976705b1f0:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SPORTS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0ecbb0ae-8ac6-41aa-bedb-29f43e7eea06
+              stepCounter: 0abf1abd-a5d4-4fee-9d6a-94976705b1f0
+            config: {}
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            name: ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c0bda401-6357-4100-9168-e83568d155a0
+              stepCounter: 0abf1abd-a5d4-4fee-9d6a-94976705b1f0
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: TIMEOUTS_LEFT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ffbb924c-3679-4ec6-b9a9-00eaca4ae1f0
+              stepCounter: 0abf1abd-a5d4-4fee-9d6a-94976705b1f0
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: LARGEST_LEAD
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 498b8a41-ced7-468c-98fe-34bef923cd43
+              stepCounter: 0abf1abd-a5d4-4fee-9d6a-94976705b1f0
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: FOULS_TOTAL
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 93c555eb-c10f-476b-88c3-729141053000
+              stepCounter: 0abf1abd-a5d4-4fee-9d6a-94976705b1f0
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: TURNOVER_MARGIN
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SPORTS_SRC', 'SPORTS_LOAD_BASKETBALL_TEAM_STATS') }}
+      name: SPORTS_LOAD_BASKETBALL_TEAM_STATS
+      schema: ""
+      sqlType: Source
+      table: SPORTS_LOAD_BASKETBALL_TEAM_STATS
+      type: sourceInput
+    stepCounter: 0abf1abd-a5d4-4fee-9d6a-94976705b1f0

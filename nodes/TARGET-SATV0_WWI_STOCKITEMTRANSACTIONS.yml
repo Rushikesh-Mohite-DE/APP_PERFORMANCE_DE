@@ -1,0 +1,149 @@
+steps:
+  SATV0_WWI_STOCKITEMTRANSACTIONS-3d5772b7-e970-4019-9bcf-b028a475d9af:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 7e959310-aa7b-4cce-849a-fb19d933d06c
+              stepCounter: 3d5772b7-e970-4019-9bcf-b028a475d9af
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_STOCKITEMTRANSACTIONS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b147a7ad-e851-4cc6-b30d-c7cc0fcbfea3
+                    stepCounter: 33ddb5b4-8fb8-4732-9279-36a5f31ec518
+                transform: ""
+          - columnReference:
+              columnCounter: 2eb63728-8154-4ea6-84f0-942b468a4be7
+              stepCounter: 3d5772b7-e970-4019-9bcf-b028a475d9af
+            dataType: DATE
+            description: Date and time when the transaction occurred
+            hashColumns: []
+            hashDetails: null
+            name: TRANSACTIONOCCURREDWHEN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2f75c032-97a8-4b9f-8ffe-757c6cf10804
+                    stepCounter: 33ddb5b4-8fb8-4732-9279-36a5f31ec518
+                transform: ""
+          - columnReference:
+              columnCounter: dc0b367a-5e66-4672-b68a-7e81318029d1
+              stepCounter: 3d5772b7-e970-4019-9bcf-b028a475d9af
+            dataType: NUMBER(18,3)
+            description: Quantity of stock movement (positive is incoming stock, negative is outgoing)
+            hashColumns: []
+            hashDetails: null
+            name: QUANTITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ad094491-9123-4212-b6c7-2cef63b162c2
+                    stepCounter: 33ddb5b4-8fb8-4732-9279-36a5f31ec518
+                transform: ""
+          - columnReference:
+              columnCounter: fae12a74-d993-4ae1-9950-ea24d0218a7b
+              stepCounter: 3d5772b7-e970-4019-9bcf-b028a475d9af
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LASTEDITEDBY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ecaf98e7-780a-4eae-8e23-93167dc53dfb
+                    stepCounter: 33ddb5b4-8fb8-4732-9279-36a5f31ec518
+                transform: ""
+          - columnReference:
+              columnCounter: 48b42846-9cb1-4a03-9e37-3f4cf927bb68
+              stepCounter: 3d5772b7-e970-4019-9bcf-b028a475d9af
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LASTEDITEDWHEN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 59d916f4-626c-4bab-99d6-9d1a69a51e9d
+                    stepCounter: 33ddb5b4-8fb8-4732-9279-36a5f31ec518
+                transform: ""
+          - columnReference:
+              columnCounter: 359a7194-b38d-4648-afb1-71f77760ae17
+              stepCounter: 3d5772b7-e970-4019-9bcf-b028a475d9af
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 70e4bef1-b94f-4f7e-a673-0ee307e5f273
+                    stepCounter: 33ddb5b4-8fb8-4732-9279-36a5f31ec518
+                transform: ""
+          - columnReference:
+              columnCounter: b0fcb914-5bf0-479f-909a-8a07d5bf6ecd
+              stepCounter: 3d5772b7-e970-4019-9bcf-b028a475d9af
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fc1e8e99-6171-495e-8595-def261d892f6
+                    stepCounter: 33ddb5b4-8fb8-4732-9279-36a5f31ec518
+                transform: ""
+          - columnReference:
+              columnCounter: 742f05eb-7e14-469d-bad0-99dc5215593c
+              stepCounter: 3d5772b7-e970-4019-9bcf-b028a475d9af
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 439d56be-3f1e-4b9e-b48e-9ef849637070
+                    stepCounter: 33ddb5b4-8fb8-4732-9279-36a5f31ec518
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_WWI_STOCKITEMTRANSACTIONS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_WWI_STOCKITEMTRANSACTIONS') }} "DVSTG_WWI_STOCKITEMTRANSACTIONS"
+            name: SATV0_WWI_STOCKITEMTRANSACTIONS
+            noLinkRefs: []
+      name: SATV0_WWI_STOCKITEMTRANSACTIONS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: 3d5772b7-e970-4019-9bcf-b028a475d9af

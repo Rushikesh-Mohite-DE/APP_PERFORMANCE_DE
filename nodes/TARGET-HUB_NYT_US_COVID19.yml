@@ -1,0 +1,119 @@
+steps:
+  HUB_NYT_US_COVID19-2f48ac56-8540-46f9-b975-84feb54fa212:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: COVID-19 cases and deaths, US, county level
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 0552a553-9edf-4573-af09-ce936c74b395
+              stepCounter: 2f48ac56-8540-46f9-b975-84feb54fa212
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_NYT_US_COVID19
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9bb990ad-5eef-440e-986d-98c1c2c644dc
+                    stepCounter: 3e21c3f7-dd6e-4d21-ba1b-f9e9af9c043d
+                transform: ""
+          - columnReference:
+              columnCounter: 0e5e1212-b9fd-4544-9ca6-0b11690cb6a2
+              stepCounter: 2f48ac56-8540-46f9-b975-84feb54fa212
+            dataType: VARCHAR(16777216)
+            description: County name
+            hashColumns: []
+            hashDetails: null
+            name: COUNTY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 61f5aa0f-01f2-4ae7-b85f-8a7ace1bae0c
+                    stepCounter: 3e21c3f7-dd6e-4d21-ba1b-f9e9af9c043d
+                transform: ""
+          - columnReference:
+              columnCounter: a17e3029-e6ba-4fc9-a62b-c895b84d50d0
+              stepCounter: 2f48ac56-8540-46f9-b975-84feb54fa212
+            dataType: VARCHAR(10)
+            description: ISO 3166-1 code for geography of record
+            hashColumns: []
+            hashDetails: null
+            name: ISO3166_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6dbf7737-9297-43ea-ba6d-9a37c030337d
+                    stepCounter: 3e21c3f7-dd6e-4d21-ba1b-f9e9af9c043d
+                transform: ""
+          - columnReference:
+              columnCounter: dfb0d049-c49b-49b5-a8b6-c7fbd9cdac8e
+              stepCounter: 2f48ac56-8540-46f9-b975-84feb54fa212
+            dataType: VARCHAR(10)
+            description: ISO 3166-2 code for geography of record
+            hashColumns: []
+            hashDetails: null
+            name: ISO3166_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9f38a148-f602-45de-b15e-c7f703ba8787
+                    stepCounter: 3e21c3f7-dd6e-4d21-ba1b-f9e9af9c043d
+                transform: ""
+          - columnReference:
+              columnCounter: 06fa81b9-deef-4b2a-a1b6-0984c27bfd9b
+              stepCounter: 2f48ac56-8540-46f9-b975-84feb54fa212
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f7942768-6490-4c31-8e7a-55bbffeaf068
+                    stepCounter: 3e21c3f7-dd6e-4d21-ba1b-f9e9af9c043d
+                transform: ""
+          - columnReference:
+              columnCounter: 0fcd5d2a-9d66-471b-a6ce-636752d23a39
+              stepCounter: 2f48ac56-8540-46f9-b975-84feb54fa212
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b398b22a-3783-48c8-8593-0f0d418b6b3c
+                    stepCounter: 3e21c3f7-dd6e-4d21-ba1b-f9e9af9c043d
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_NYT_US_COVID19
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_NYT_US_COVID19') }} "DVSTG_NYT_US_COVID19"
+            name: HUB_NYT_US_COVID19
+            noLinkRefs: []
+      name: HUB_NYT_US_COVID19
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 2f48ac56-8540-46f9-b975-84feb54fa212

@@ -1,0 +1,209 @@
+steps:
+  DVSTG_SALES_SALES_TAX_TYPE-2d4058bc-e6be-4247-8c31-afd6b1e2dc79:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6acc9c7f-eff8-4871-bbfd-f399d0f629c9
+              stepCounter: 2d4058bc-e6be-4247-8c31-afd6b1e2dc79
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 50c8fe4c-65f1-487a-a38b-956e397b735a
+                stepCounter: 2d4058bc-e6be-4247-8c31-afd6b1e2dc79
+            name: HK_SALES_SALES_TAX_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 50c8fe4c-65f1-487a-a38b-956e397b735a
+              stepCounter: 2d4058bc-e6be-4247-8c31-afd6b1e2dc79
+            dataType: VARCHAR(10)
+            description: ""
+            name: SALES_TAX_TYPE_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f50b1f93-1eb1-4289-84c4-de7072c3854d
+                    stepCounter: 36651c9f-dd7a-4c25-9faf-17024de85bec
+                transform: ""
+          - columnReference:
+              columnCounter: 76495f92-e69e-47d2-8aab-8763fb9d2aca
+              stepCounter: 2d4058bc-e6be-4247-8c31-afd6b1e2dc79
+            dataType: VARCHAR(80)
+            description: ""
+            name: SALES_TAX_TYPE_DESCRIPTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6f41fa64-2bf8-4346-883d-11fe90670492
+                    stepCounter: 36651c9f-dd7a-4c25-9faf-17024de85bec
+                transform: ""
+          - columnReference:
+              columnCounter: 41ec45bd-d956-4e15-a962-63f42b39957a
+              stepCounter: 2d4058bc-e6be-4247-8c31-afd6b1e2dc79
+            dataType: NUMBER(38,0)
+            description: ""
+            name: CREATING_EMPLOYEE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8bba06b6-e75c-4336-b39f-028cf5c87ae0
+                    stepCounter: 36651c9f-dd7a-4c25-9faf-17024de85bec
+                transform: ""
+          - columnReference:
+              columnCounter: e2e62022-4f4d-46ed-9863-3687fd7e926c
+              stepCounter: 2d4058bc-e6be-4247-8c31-afd6b1e2dc79
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            name: CREATED_DATETIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 318f7bcc-9189-4d7c-90d7-9254beb52c38
+                    stepCounter: 36651c9f-dd7a-4c25-9faf-17024de85bec
+                transform: ""
+          - columnReference:
+              columnCounter: e44d8c7f-7a2f-491f-ab58-c33bbdd3e340
+              stepCounter: 2d4058bc-e6be-4247-8c31-afd6b1e2dc79
+            dataType: NUMBER(38,0)
+            description: ""
+            name: LAST_CHANGE_EMPLOYEE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f522b524-7edf-446f-a058-69f1ce138759
+                    stepCounter: 36651c9f-dd7a-4c25-9faf-17024de85bec
+                transform: ""
+          - columnReference:
+              columnCounter: a367a1ad-701d-4b9f-9916-84bb3c4188a5
+              stepCounter: 2d4058bc-e6be-4247-8c31-afd6b1e2dc79
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            name: LAST_CHANGE_DATETIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0b264e84-bba8-442d-8ebd-d0605841868e
+                    stepCounter: 36651c9f-dd7a-4c25-9faf-17024de85bec
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ffca85e5-7f7f-4e93-9337-09b71146aee7
+              stepCounter: 2d4058bc-e6be-4247-8c31-afd6b1e2dc79
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: bdd0d7c5-9c07-4996-913d-669d905a819e
+              stepCounter: 2d4058bc-e6be-4247-8c31-afd6b1e2dc79
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 24068d4f-0c2e-4a28-aa83-02992c7fe703
+              stepCounter: 2d4058bc-e6be-4247-8c31-afd6b1e2dc79
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 76495f92-e69e-47d2-8aab-8763fb9d2aca
+                stepCounter: 2d4058bc-e6be-4247-8c31-afd6b1e2dc79
+              - columnCounter: 41ec45bd-d956-4e15-a962-63f42b39957a
+                stepCounter: 2d4058bc-e6be-4247-8c31-afd6b1e2dc79
+              - columnCounter: e2e62022-4f4d-46ed-9863-3687fd7e926c
+                stepCounter: 2d4058bc-e6be-4247-8c31-afd6b1e2dc79
+              - columnCounter: e44d8c7f-7a2f-491f-ab58-c33bbdd3e340
+                stepCounter: 2d4058bc-e6be-4247-8c31-afd6b1e2dc79
+              - columnCounter: a367a1ad-701d-4b9f-9916-84bb3c4188a5
+                stepCounter: 2d4058bc-e6be-4247-8c31-afd6b1e2dc79
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4e6dc9e5-3e88-48e0-a55b-72a8cc0061aa
+              stepCounter: 2d4058bc-e6be-4247-8c31-afd6b1e2dc79
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: e44d8c7f-7a2f-491f-ab58-c33bbdd3e340
+                stepCounter: 2d4058bc-e6be-4247-8c31-afd6b1e2dc79
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SALES_SRC
+                nodeName: SALES_LOAD_SALES_TAX_TYPE
+            join:
+              joinCondition: FROM {{ ref('SALES_SRC', 'SALES_LOAD_SALES_TAX_TYPE') }} "SALES_LOAD_SALES_TAX_TYPE"
+            name: DVSTG_SALES_SALES_TAX_TYPE
+            noLinkRefs: []
+      name: DVSTG_SALES_SALES_TAX_TYPE
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: 2d4058bc-e6be-4247-8c31-afd6b1e2dc79

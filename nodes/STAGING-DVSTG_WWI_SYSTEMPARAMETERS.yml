@@ -1,0 +1,307 @@
+steps:
+  DVSTG_WWI_SYSTEMPARAMETERS-eba4cd77-ebde-4d6e-8413-3561b02810a8:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c6ce6dba-c763-46fd-a9d9-d0bf266f78d5
+              stepCounter: eba4cd77-ebde-4d6e-8413-3561b02810a8
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: a85e61df-5d8e-402e-beae-b4d3b19346fc
+                stepCounter: eba4cd77-ebde-4d6e-8413-3561b02810a8
+              - columnCounter: 166cbd38-820a-49b4-bcc4-3d28fbe4a29e
+                stepCounter: eba4cd77-ebde-4d6e-8413-3561b02810a8
+              - columnCounter: ae446ae8-4fb7-427e-92af-9448a0dd8d7a
+                stepCounter: eba4cd77-ebde-4d6e-8413-3561b02810a8
+            name: HK_SYSTEMPARAMETERS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: a85e61df-5d8e-402e-beae-b4d3b19346fc
+              stepCounter: eba4cd77-ebde-4d6e-8413-3561b02810a8
+            dataType: NUMBER(38,0)
+            description: Numeric ID used for row holding system parameters
+            name: SYSTEMPARAMETERID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5970cbe3-8782-40c0-8c77-f1775ded0688
+                    stepCounter: 8e0c71fc-d45b-4aaa-a5f2-f54f4c3a1b4f
+                transform: ""
+          - columnReference:
+              columnCounter: 8272ebe7-f720-4a7d-ac8e-8cac11ef5f70
+              stepCounter: eba4cd77-ebde-4d6e-8413-3561b02810a8
+            dataType: VARCHAR(60)
+            description: First address line for the company
+            name: DELIVERYADDRESSLINE1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 73e97696-3fdb-43ca-a974-b0740a5dff86
+                    stepCounter: 8e0c71fc-d45b-4aaa-a5f2-f54f4c3a1b4f
+                transform: ""
+          - columnReference:
+              columnCounter: 9d12d00a-e6a4-4ffd-982e-af5ca7938b8d
+              stepCounter: eba4cd77-ebde-4d6e-8413-3561b02810a8
+            dataType: VARCHAR(60)
+            description: Second address line for the company
+            name: DELIVERYADDRESSLINE2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 770f42ca-4793-4665-981f-1e6c9369bab3
+                    stepCounter: 8e0c71fc-d45b-4aaa-a5f2-f54f4c3a1b4f
+                transform: ""
+          - columnReference:
+              columnCounter: 166cbd38-820a-49b4-bcc4-3d28fbe4a29e
+              stepCounter: eba4cd77-ebde-4d6e-8413-3561b02810a8
+            dataType: NUMBER(38,0)
+            description: ID of the city for this address
+            name: DELIVERYCITYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1d4f0759-3c5c-4d09-9ef3-1bf9b1a37c36
+                    stepCounter: 8e0c71fc-d45b-4aaa-a5f2-f54f4c3a1b4f
+                transform: ""
+          - columnReference:
+              columnCounter: b08c5e1e-1260-4644-a00f-ad795c81faca
+              stepCounter: eba4cd77-ebde-4d6e-8413-3561b02810a8
+            dataType: VARCHAR(10)
+            description: Postal code for the company
+            name: DELIVERYPOSTALCODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5d87bfc5-4708-472b-a6f5-84dd398ae9ee
+                    stepCounter: 8e0c71fc-d45b-4aaa-a5f2-f54f4c3a1b4f
+                transform: ""
+          - columnReference:
+              columnCounter: 822f0b76-b81e-46ac-95c2-76c9e72f543c
+              stepCounter: eba4cd77-ebde-4d6e-8413-3561b02810a8
+            dataType: VARCHAR(16777216)
+            description: Geographic location for the company office
+            name: DELIVERYLOCATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b0e2bb7c-03c5-40ed-b58b-446a550475f3
+                    stepCounter: 8e0c71fc-d45b-4aaa-a5f2-f54f4c3a1b4f
+                transform: ""
+          - columnReference:
+              columnCounter: f0ff32a5-b9a8-43b5-8780-ba5b52ab97e8
+              stepCounter: eba4cd77-ebde-4d6e-8413-3561b02810a8
+            dataType: VARCHAR(60)
+            description: First postal address line for the company
+            name: POSTALADDRESSLINE1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7c211fc7-cfc6-4cc2-9189-ab44d1506210
+                    stepCounter: 8e0c71fc-d45b-4aaa-a5f2-f54f4c3a1b4f
+                transform: ""
+          - columnReference:
+              columnCounter: 2e331565-47b1-44e6-a86f-839a478c8544
+              stepCounter: eba4cd77-ebde-4d6e-8413-3561b02810a8
+            dataType: VARCHAR(60)
+            description: Second postaladdress line for the company
+            name: POSTALADDRESSLINE2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f54d86b5-ce79-4dd5-b5b4-c28e83b5b6eb
+                    stepCounter: 8e0c71fc-d45b-4aaa-a5f2-f54f4c3a1b4f
+                transform: ""
+          - columnReference:
+              columnCounter: ae446ae8-4fb7-427e-92af-9448a0dd8d7a
+              stepCounter: eba4cd77-ebde-4d6e-8413-3561b02810a8
+            dataType: NUMBER(38,0)
+            description: ID of the city for this postaladdress
+            name: POSTALCITYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 44fdf8a9-3630-4bba-8315-db01fd46d93e
+                    stepCounter: 8e0c71fc-d45b-4aaa-a5f2-f54f4c3a1b4f
+                transform: ""
+          - columnReference:
+              columnCounter: 449a23e9-124e-4a34-a07a-252e4004acbd
+              stepCounter: eba4cd77-ebde-4d6e-8413-3561b02810a8
+            dataType: VARCHAR(10)
+            description: Postal code for the company when sending via mail
+            name: POSTALPOSTALCODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 00304a57-fbbf-4fd7-a400-cfcf2b9e3614
+                    stepCounter: 8e0c71fc-d45b-4aaa-a5f2-f54f4c3a1b4f
+                transform: ""
+          - columnReference:
+              columnCounter: a09412aa-0507-466b-b892-313ca8efacf0
+              stepCounter: eba4cd77-ebde-4d6e-8413-3561b02810a8
+            dataType: VARCHAR(4000)
+            description: JSON-structured application settings
+            name: APPLICATIONSETTINGS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 28dbedb6-7c3e-4599-9d23-6582247504f9
+                    stepCounter: 8e0c71fc-d45b-4aaa-a5f2-f54f4c3a1b4f
+                transform: ""
+          - columnReference:
+              columnCounter: bd37c64a-c0d2-44c5-9654-5cec72e94b21
+              stepCounter: eba4cd77-ebde-4d6e-8413-3561b02810a8
+            dataType: NUMBER(38,0)
+            description: ""
+            name: LASTEDITEDBY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 36bac503-7778-4aa1-b46a-a7e325010d93
+                    stepCounter: 8e0c71fc-d45b-4aaa-a5f2-f54f4c3a1b4f
+                transform: ""
+          - columnReference:
+              columnCounter: 1add689f-249a-48a6-a298-51b3def05513
+              stepCounter: eba4cd77-ebde-4d6e-8413-3561b02810a8
+            dataType: DATE
+            description: ""
+            name: LASTEDITEDWHEN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fe484874-86a8-45cd-ab0e-5c0369ab3b7c
+                    stepCounter: 8e0c71fc-d45b-4aaa-a5f2-f54f4c3a1b4f
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ac6a9f83-588b-45b7-ade1-128c905dd161
+              stepCounter: eba4cd77-ebde-4d6e-8413-3561b02810a8
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1cfadb0c-217f-461b-bdec-8ea0ffd05c5a
+              stepCounter: eba4cd77-ebde-4d6e-8413-3561b02810a8
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: bcb0acf9-7025-4e80-a1ad-78bb299f6ea6
+              stepCounter: eba4cd77-ebde-4d6e-8413-3561b02810a8
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 8272ebe7-f720-4a7d-ac8e-8cac11ef5f70
+                stepCounter: eba4cd77-ebde-4d6e-8413-3561b02810a8
+              - columnCounter: 9d12d00a-e6a4-4ffd-982e-af5ca7938b8d
+                stepCounter: eba4cd77-ebde-4d6e-8413-3561b02810a8
+              - columnCounter: b08c5e1e-1260-4644-a00f-ad795c81faca
+                stepCounter: eba4cd77-ebde-4d6e-8413-3561b02810a8
+              - columnCounter: 822f0b76-b81e-46ac-95c2-76c9e72f543c
+                stepCounter: eba4cd77-ebde-4d6e-8413-3561b02810a8
+              - columnCounter: f0ff32a5-b9a8-43b5-8780-ba5b52ab97e8
+                stepCounter: eba4cd77-ebde-4d6e-8413-3561b02810a8
+              - columnCounter: 2e331565-47b1-44e6-a86f-839a478c8544
+                stepCounter: eba4cd77-ebde-4d6e-8413-3561b02810a8
+              - columnCounter: 449a23e9-124e-4a34-a07a-252e4004acbd
+                stepCounter: eba4cd77-ebde-4d6e-8413-3561b02810a8
+              - columnCounter: a09412aa-0507-466b-b892-313ca8efacf0
+                stepCounter: eba4cd77-ebde-4d6e-8413-3561b02810a8
+              - columnCounter: bd37c64a-c0d2-44c5-9654-5cec72e94b21
+                stepCounter: eba4cd77-ebde-4d6e-8413-3561b02810a8
+              - columnCounter: 1add689f-249a-48a6-a298-51b3def05513
+                stepCounter: eba4cd77-ebde-4d6e-8413-3561b02810a8
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a9145e01-3fab-419f-b21f-fb2773c40fac
+              stepCounter: eba4cd77-ebde-4d6e-8413-3561b02810a8
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: ae446ae8-4fb7-427e-92af-9448a0dd8d7a
+                stepCounter: eba4cd77-ebde-4d6e-8413-3561b02810a8
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: WIDEWORLIMPORTES_SRC
+                nodeName: WWI_LOAD_SYSTEMPARAMETERS
+            join:
+              joinCondition: FROM {{ ref('WIDEWORLIMPORTES_SRC', 'WWI_LOAD_SYSTEMPARAMETERS') }} "WWI_LOAD_SYSTEMPARAMETERS"
+            name: DVSTG_WWI_SYSTEMPARAMETERS
+            noLinkRefs: []
+      name: DVSTG_WWI_SYSTEMPARAMETERS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: eba4cd77-ebde-4d6e-8413-3561b02810a8

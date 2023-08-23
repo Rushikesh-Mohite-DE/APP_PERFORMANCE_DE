@@ -1,0 +1,109 @@
+steps:
+  AW_LOAD_CREDITCARD-25618659-ef3e-4d99-878c-80aae7729749:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: ADV_WRKS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8a60636d-b5c4-4d4f-88d2-ad1cdf88565f
+              stepCounter: 25618659-ef3e-4d99-878c-80aae7729749
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Primary key for CreditCard records.
+            name: CREDITCARDID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 39dd235b-9e4a-42cc-9e87-4efc9eb90cc7
+              stepCounter: 25618659-ef3e-4d99-878c-80aae7729749
+            config: {}
+            dataType: VARCHAR(50)
+            defaultValue: ""
+            description: Credit card name.
+            name: CARDTYPE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4ab861b3-e889-48ba-9ebe-3c6000646d9f
+              stepCounter: 25618659-ef3e-4d99-878c-80aae7729749
+            config: {}
+            dataType: VARCHAR(25)
+            defaultValue: ""
+            description: Credit card number.
+            name: CARDNUMBER
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2a29e137-f0b0-4f34-bd24-1ad40959360d
+              stepCounter: 25618659-ef3e-4d99-878c-80aae7729749
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Credit card expiration month.
+            name: EXPMONTH
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 41001e86-dd5c-481b-82ec-bfe997e08269
+              stepCounter: 25618659-ef3e-4d99-878c-80aae7729749
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Credit card expiration year.
+            name: EXPYEAR
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4911213c-54ca-41b7-90d0-b7ab4eab7867
+              stepCounter: 25618659-ef3e-4d99-878c-80aae7729749
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_CREDITCARD') }}
+      name: AW_LOAD_CREDITCARD
+      schema: ""
+      sqlType: Source
+      table: AW_LOAD_CREDITCARD
+      type: sourceInput
+    stepCounter: 25618659-ef3e-4d99-878c-80aae7729749

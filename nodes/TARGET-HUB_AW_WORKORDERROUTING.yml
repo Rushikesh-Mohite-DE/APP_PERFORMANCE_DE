@@ -1,0 +1,119 @@
+steps:
+  HUB_AW_WORKORDERROUTING-9ef06191-4ee8-460d-b6bd-df993ea72ead:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: d99a6ec9-0120-4f9d-aa3e-2a9b786cd5d6
+              stepCounter: 9ef06191-4ee8-460d-b6bd-df993ea72ead
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_WORKORDERROUTING
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4f14bf7d-71c8-4825-8194-364b3d065467
+                    stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+                transform: ""
+          - columnReference:
+              columnCounter: 55d96f31-692a-44e6-9ae0-fd8ab7245435
+              stepCounter: 9ef06191-4ee8-460d-b6bd-df993ea72ead
+            dataType: NUMBER(38,0)
+            description: Primary key. Foreign key to WorkOrder.WorkOrderID.
+            hashColumns: []
+            hashDetails: null
+            name: WORKORDERID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: aa18c2d0-bb33-4366-85f0-60293beb80f4
+                    stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+                transform: ""
+          - columnReference:
+              columnCounter: 01c3b84d-40be-40a8-b2e0-06dcc86c5236
+              stepCounter: 9ef06191-4ee8-460d-b6bd-df993ea72ead
+            dataType: NUMBER(38,0)
+            description: Primary key. Foreign key to Product.ProductID.
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCTID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9e64f108-39ad-4f76-89a7-df5d9ecf1e66
+                    stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+                transform: ""
+          - columnReference:
+              columnCounter: a058b8ff-ab9e-4721-8dfb-c7a2a96219c0
+              stepCounter: 9ef06191-4ee8-460d-b6bd-df993ea72ead
+            dataType: NUMBER(38,0)
+            description: Manufacturing location where the part is processed. Foreign key to Location.LocationID.
+            hashColumns: []
+            hashDetails: null
+            name: LOCATIONID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c37abc10-ccf2-4ce1-87eb-aa8d521b3d4c
+                    stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+                transform: ""
+          - columnReference:
+              columnCounter: d0ce5ca1-8974-4ae0-93ee-86b793729071
+              stepCounter: 9ef06191-4ee8-460d-b6bd-df993ea72ead
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 48ea3eeb-4638-4be0-8571-41dcdd7f4662
+                    stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+                transform: ""
+          - columnReference:
+              columnCounter: 9cb82400-470c-4dc3-80dc-81ed8613cefe
+              stepCounter: 9ef06191-4ee8-460d-b6bd-df993ea72ead
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: dc1afe64-22f7-4e00-a04a-81d62ee710f7
+                    stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_WORKORDERROUTING
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_WORKORDERROUTING') }} "DVSTG_AW_WORKORDERROUTING"
+            name: HUB_AW_WORKORDERROUTING
+            noLinkRefs: []
+      name: HUB_AW_WORKORDERROUTING
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 9ef06191-4ee8-460d-b6bd-df993ea72ead

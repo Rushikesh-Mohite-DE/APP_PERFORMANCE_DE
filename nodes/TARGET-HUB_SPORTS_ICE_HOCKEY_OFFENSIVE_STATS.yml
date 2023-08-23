@@ -1,0 +1,91 @@
+steps:
+  HUB_SPORTS_ICE_HOCKEY_OFFENSIVE_STATS-5bc04031-7363-4c2b-8c4d-d40216ec11f4:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 42fbdb5b-786a-4eae-acab-fe0b831c1a55
+              stepCounter: 5bc04031-7363-4c2b-8c4d-d40216ec11f4
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_OFFENSIVE_STATS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8851039d-207a-4f48-a04e-9ae6d6fb22cc
+                    stepCounter: 576b42f5-5ca5-4a25-b4c5-1a6d13896d94
+                transform: ""
+          - columnReference:
+              columnCounter: 283139dd-43cc-498b-ae53-196a0b7bde44
+              stepCounter: 5bc04031-7363-4c2b-8c4d-d40216ec11f4
+            dataType: VARCHAR(32)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: eae1e3cd-3804-4673-9f8f-837205afbb3a
+                    stepCounter: 576b42f5-5ca5-4a25-b4c5-1a6d13896d94
+                transform: ""
+          - columnReference:
+              columnCounter: 0defa63b-5676-4b56-a879-62e62818cf94
+              stepCounter: 5bc04031-7363-4c2b-8c4d-d40216ec11f4
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 97de008a-8591-490f-aa25-e10c56b5e7b8
+                    stepCounter: 576b42f5-5ca5-4a25-b4c5-1a6d13896d94
+                transform: ""
+          - columnReference:
+              columnCounter: 8bb228ec-99a7-40ab-af5b-027b71a1fcc4
+              stepCounter: 5bc04031-7363-4c2b-8c4d-d40216ec11f4
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9531cc7c-87e8-4132-9fe3-fe39edb328b5
+                    stepCounter: 576b42f5-5ca5-4a25-b4c5-1a6d13896d94
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SPORTS_ICE_HOCKEY_OFFENSIVE_STATS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SPORTS_ICE_HOCKEY_OFFENSIVE_STATS') }} "DVSTG_SPORTS_ICE_HOCKEY_OFFENSIVE_STATS"
+            name: HUB_SPORTS_ICE_HOCKEY_OFFENSIVE_STATS
+            noLinkRefs: []
+      name: HUB_SPORTS_ICE_HOCKEY_OFFENSIVE_STATS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 5bc04031-7363-4c2b-8c4d-d40216ec11f4

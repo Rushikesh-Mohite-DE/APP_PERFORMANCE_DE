@@ -1,0 +1,139 @@
+steps:
+  HS_BULK_DATA-97e748c1-af2d-4c15-b87f-4d68cc76bfb8:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: Global data on healthcare providers
+      locationID: ""
+      locationName: COVID19
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1af596f6-7edc-41ca-9105-ae02d5e346e2
+              stepCounter: 97e748c1-af2d-4c15-b87f-4d68cc76bfb8
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: Longitude
+            name: LONG
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d9c99d4e-4c0d-470f-8335-71959954f4b2
+              stepCounter: 97e748c1-af2d-4c15-b87f-4d68cc76bfb8
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: Latitude
+            name: LAT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: cfa05976-6086-460c-b618-7a7cb93ba620
+              stepCounter: 97e748c1-af2d-4c15-b87f-4d68cc76bfb8
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: Healthcare provider classification
+            name: HEALTHCARE_PROVIDER_TYPE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: de85d176-0355-46eb-9999-921d93d14da1
+              stepCounter: 97e748c1-af2d-4c15-b87f-4d68cc76bfb8
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: Healthcare provider name
+            name: NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5fc8d74f-7df6-4069-a8d6-07a31865273e
+              stepCounter: 97e748c1-af2d-4c15-b87f-4d68cc76bfb8
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: Operating entity name
+            name: OPERATOR
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f3c38b75-9b80-4fe7-aea5-0a657993177e
+              stepCounter: 97e748c1-af2d-4c15-b87f-4d68cc76bfb8
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Inpatient bed capacity
+            name: BEDS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e26a3a96-feea-442a-bd4a-7e6e34b89cd7
+              stepCounter: 97e748c1-af2d-4c15-b87f-4d68cc76bfb8
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Medical staff (qualified physicians, M.D./D.O/MBBS or equivalent)
+            name: STAFF_MEDICAL
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 98e1fe54-3758-489e-ac5e-bfe31e355192
+              stepCounter: 97e748c1-af2d-4c15-b87f-4d68cc76bfb8
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Nursing staff (RN, LPN or equivalent)
+            name: STAFF_NURSING
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('COVID19', 'HS_BULK_DATA') }}
+      name: HS_BULK_DATA
+      schema: ""
+      sqlType: Source
+      table: HS_BULK_DATA
+      type: sourceInput
+    stepCounter: 97e748c1-af2d-4c15-b87f-4d68cc76bfb8

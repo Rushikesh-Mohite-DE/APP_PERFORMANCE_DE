@@ -1,0 +1,91 @@
+steps:
+  HUB_NYT_US_REOPEN_STATUS-0af91334-5cc9-4bf9-a4f5-dd8ea0a235c3:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 3fa81385-67cd-4c30-ad00-dfa3e51e47f7
+              stepCounter: 0af91334-5cc9-4bf9-a4f5-dd8ea0a235c3
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_US_REOPEN_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0f2c5e4a-605a-4dfd-91fe-3a330b1a729d
+                    stepCounter: e3b6cb14-d998-4903-8bd5-135fb7432cba
+                transform: ""
+          - columnReference:
+              columnCounter: ff251e3b-40d1-411a-987b-a1c2558139be
+              stepCounter: 0af91334-5cc9-4bf9-a4f5-dd8ea0a235c3
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: STATE_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 37c0f52a-b57f-46e7-9a9d-1bea9ba4ac21
+                    stepCounter: e3b6cb14-d998-4903-8bd5-135fb7432cba
+                transform: ""
+          - columnReference:
+              columnCounter: 62fc48bd-2ebf-413f-b752-130dd59d7c85
+              stepCounter: 0af91334-5cc9-4bf9-a4f5-dd8ea0a235c3
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c0562d33-5d37-41ac-90e6-b24408c61540
+                    stepCounter: e3b6cb14-d998-4903-8bd5-135fb7432cba
+                transform: ""
+          - columnReference:
+              columnCounter: bfe43f29-91c9-4f3f-bba5-1f51b3eff2dc
+              stepCounter: 0af91334-5cc9-4bf9-a4f5-dd8ea0a235c3
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 09a054af-9179-4be5-bb19-921c9f1ba90b
+                    stepCounter: e3b6cb14-d998-4903-8bd5-135fb7432cba
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_NYT_US_REOPEN_STATUS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_NYT_US_REOPEN_STATUS') }} "DVSTG_NYT_US_REOPEN_STATUS"
+            name: HUB_NYT_US_REOPEN_STATUS
+            noLinkRefs: []
+      name: HUB_NYT_US_REOPEN_STATUS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 0af91334-5cc9-4bf9-a4f5-dd8ea0a235c3

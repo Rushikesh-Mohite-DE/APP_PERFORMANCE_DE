@@ -1,0 +1,263 @@
+steps:
+  DVSTG_SALES_PROMOTION-f484fe2b-c0fa-40f6-868f-ef08373fc36a:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 68b357e2-7df7-465e-af2a-087b6cfac596
+              stepCounter: f484fe2b-c0fa-40f6-868f-ef08373fc36a
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 839de7aa-ea54-467d-b341-948e8d75fea4
+                stepCounter: f484fe2b-c0fa-40f6-868f-ef08373fc36a
+              - columnCounter: 4adb6625-145f-4a2e-9bc1-ce71e3feaeb5
+                stepCounter: f484fe2b-c0fa-40f6-868f-ef08373fc36a
+              - columnCounter: 6cbdafad-525b-4ed2-8df3-e6da003fa66b
+                stepCounter: f484fe2b-c0fa-40f6-868f-ef08373fc36a
+            name: HK_SALESPROMOTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 839de7aa-ea54-467d-b341-948e8d75fea4
+              stepCounter: f484fe2b-c0fa-40f6-868f-ef08373fc36a
+            dataType: NUMBER(38,0)
+            description: ""
+            name: PROMOTION_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6feb1f9e-fdc8-4426-9bbe-08e45c8b2a1d
+                    stepCounter: 592f6a1b-b9c8-4bc2-9b9a-71689f40dd83
+                transform: ""
+          - columnReference:
+              columnCounter: f5fdb718-bfbc-4ac1-8f68-048a58bc9363
+              stepCounter: f484fe2b-c0fa-40f6-868f-ef08373fc36a
+            dataType: VARCHAR(30)
+            description: ""
+            name: PROMOTION_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 060428a3-920f-4252-a225-cb40307d9f35
+                    stepCounter: 592f6a1b-b9c8-4bc2-9b9a-71689f40dd83
+                transform: ""
+          - columnReference:
+              columnCounter: ef426580-7ede-4af9-9a21-f9ef9d0722c2
+              stepCounter: f484fe2b-c0fa-40f6-868f-ef08373fc36a
+            dataType: VARCHAR(255)
+            description: ""
+            name: PROMOTION_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0b9753bd-6734-4225-bdd0-ab1417aee5fa
+                    stepCounter: 592f6a1b-b9c8-4bc2-9b9a-71689f40dd83
+                transform: ""
+          - columnReference:
+              columnCounter: 7a36a54c-c8e3-4f6f-977f-bb765929a2c9
+              stepCounter: f484fe2b-c0fa-40f6-868f-ef08373fc36a
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            name: EFFECTIVE_FROM_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d7bbfa3a-8a54-44d0-95b2-5c84f4f793de
+                    stepCounter: 592f6a1b-b9c8-4bc2-9b9a-71689f40dd83
+                transform: ""
+          - columnReference:
+              columnCounter: bf2ef25c-8dda-4aff-ac61-64b98eb09bae
+              stepCounter: f484fe2b-c0fa-40f6-868f-ef08373fc36a
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            name: THRU_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fab9fae4-6ad5-46ee-8d40-d864ba6571a8
+                    stepCounter: 592f6a1b-b9c8-4bc2-9b9a-71689f40dd83
+                transform: ""
+          - columnReference:
+              columnCounter: b40c948a-9a0f-42ab-be61-d34281f0f241
+              stepCounter: f484fe2b-c0fa-40f6-868f-ef08373fc36a
+            dataType: VARCHAR(1)
+            description: ""
+            name: ACTIVE_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 69dd6c1b-a8af-4891-bee0-8bab87dee797
+                    stepCounter: 592f6a1b-b9c8-4bc2-9b9a-71689f40dd83
+                transform: ""
+          - columnReference:
+              columnCounter: 4adb6625-145f-4a2e-9bc1-ce71e3feaeb5
+              stepCounter: f484fe2b-c0fa-40f6-868f-ef08373fc36a
+            dataType: NUMBER(38,0)
+            description: ""
+            name: CREATING_EMPLOYEE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: aea67133-1c1a-4541-99f2-015370b9bdc6
+                    stepCounter: 592f6a1b-b9c8-4bc2-9b9a-71689f40dd83
+                transform: ""
+          - columnReference:
+              columnCounter: 22496f1a-22d6-43dd-8570-ccc9f8240b8d
+              stepCounter: f484fe2b-c0fa-40f6-868f-ef08373fc36a
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            name: CREATED_DATETIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1e293eec-9a01-42dd-913a-ac939e5d72a9
+                    stepCounter: 592f6a1b-b9c8-4bc2-9b9a-71689f40dd83
+                transform: ""
+          - columnReference:
+              columnCounter: 6cbdafad-525b-4ed2-8df3-e6da003fa66b
+              stepCounter: f484fe2b-c0fa-40f6-868f-ef08373fc36a
+            dataType: NUMBER(38,0)
+            description: ""
+            name: LAST_CHANGE_EMPLOYEE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 03d6ab17-fdd5-4c32-96ac-d443f96173aa
+                    stepCounter: 592f6a1b-b9c8-4bc2-9b9a-71689f40dd83
+                transform: ""
+          - columnReference:
+              columnCounter: 66291ec4-3bf3-4c29-8a8f-6f02ca99d020
+              stepCounter: f484fe2b-c0fa-40f6-868f-ef08373fc36a
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            name: LAST_CHANGE_DATETIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1f695bf6-de41-4bf2-8e24-c5df8941be6f
+                    stepCounter: 592f6a1b-b9c8-4bc2-9b9a-71689f40dd83
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 76fe27b5-5f03-404c-9459-0409202924c6
+              stepCounter: f484fe2b-c0fa-40f6-868f-ef08373fc36a
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: cbe3ba59-6b3c-4ebf-b109-e50fdb697d46
+              stepCounter: f484fe2b-c0fa-40f6-868f-ef08373fc36a
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 437279ec-fca8-4023-9198-398ebc80a56f
+              stepCounter: f484fe2b-c0fa-40f6-868f-ef08373fc36a
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: f5fdb718-bfbc-4ac1-8f68-048a58bc9363
+                stepCounter: f484fe2b-c0fa-40f6-868f-ef08373fc36a
+              - columnCounter: ef426580-7ede-4af9-9a21-f9ef9d0722c2
+                stepCounter: f484fe2b-c0fa-40f6-868f-ef08373fc36a
+              - columnCounter: 7a36a54c-c8e3-4f6f-977f-bb765929a2c9
+                stepCounter: f484fe2b-c0fa-40f6-868f-ef08373fc36a
+              - columnCounter: bf2ef25c-8dda-4aff-ac61-64b98eb09bae
+                stepCounter: f484fe2b-c0fa-40f6-868f-ef08373fc36a
+              - columnCounter: b40c948a-9a0f-42ab-be61-d34281f0f241
+                stepCounter: f484fe2b-c0fa-40f6-868f-ef08373fc36a
+              - columnCounter: 22496f1a-22d6-43dd-8570-ccc9f8240b8d
+                stepCounter: f484fe2b-c0fa-40f6-868f-ef08373fc36a
+              - columnCounter: 66291ec4-3bf3-4c29-8a8f-6f02ca99d020
+                stepCounter: f484fe2b-c0fa-40f6-868f-ef08373fc36a
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences: []
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4e2afab4-854d-482c-a2e1-b6f7b7c37ee0
+              stepCounter: f484fe2b-c0fa-40f6-868f-ef08373fc36a
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 4adb6625-145f-4a2e-9bc1-ce71e3feaeb5
+                stepCounter: f484fe2b-c0fa-40f6-868f-ef08373fc36a
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SALES_SRC
+                nodeName: SALES_LOAD_PROMOTION
+            join:
+              joinCondition: FROM {{ ref('SALES_SRC', 'SALES_LOAD_PROMOTION') }} "SALES_LOAD_PROMOTION"
+            name: DVSTG_SALES_PROMOTION
+            noLinkRefs: []
+      name: DVSTG_SALES_PROMOTION
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: f484fe2b-c0fa-40f6-868f-ef08373fc36a

@@ -1,0 +1,154 @@
+steps:
+  WWI_LOAD_STOCKITEMHOLDINGS-02944dec-4d50-49fd-a0da-dc98a046bc92:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: WIDEWORLIMPORTES_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: df316a64-a477-4f02-bf62-9f569c324676
+              stepCounter: 02944dec-4d50-49fd-a0da-dc98a046bc92
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ID of the stock item that this holding relates to (this table holds non-temporal columns for stock)
+            name: STOCKITEMID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2d3b4ff7-cf6b-47c6-ad33-352a6afdfd46
+              stepCounter: 02944dec-4d50-49fd-a0da-dc98a046bc92
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Quantity currently on hand (if tracked)
+            name: QUANTITYONHAND
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6c1e11d4-ba4d-47eb-a37d-ba1303f2ad78
+              stepCounter: 02944dec-4d50-49fd-a0da-dc98a046bc92
+            config: {}
+            dataType: VARCHAR(20)
+            defaultValue: ""
+            description: Bin location (ie location of this stock item within the depot)
+            name: BINLOCATION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 00068ecc-c98e-46c4-9df6-324474f914e4
+              stepCounter: 02944dec-4d50-49fd-a0da-dc98a046bc92
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Quantity at last stocktake (if tracked)
+            name: LASTSTOCKTAKEQUANTITY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b667ac5c-dea8-42ac-b53e-aed4111a275a
+              stepCounter: 02944dec-4d50-49fd-a0da-dc98a046bc92
+            config: {}
+            dataType: NUMBER(18,2)
+            defaultValue: ""
+            description: Unit cost price the last time this stock item was purchased
+            name: LASTCOSTPRICE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c9fd6a38-e2b0-4fa8-9592-8ea62b522750
+              stepCounter: 02944dec-4d50-49fd-a0da-dc98a046bc92
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Quantity below which reordering should take place
+            name: REORDERLEVEL
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e0bf2f93-a104-41f7-b675-192802e6ce21
+              stepCounter: 02944dec-4d50-49fd-a0da-dc98a046bc92
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Typical quantity ordered
+            name: TARGETSTOCKLEVEL
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: afe604a3-a926-40de-aecd-0f94fafa39ec
+              stepCounter: 02944dec-4d50-49fd-a0da-dc98a046bc92
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: LASTEDITEDBY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fcf07bde-954a-4da7-b3ac-88ac8c359cff
+              stepCounter: 02944dec-4d50-49fd-a0da-dc98a046bc92
+            config: {}
+            dataType: DATE
+            defaultValue: ""
+            description: ""
+            name: LASTEDITEDWHEN
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('WIDEWORLIMPORTES_SRC', 'WWI_LOAD_STOCKITEMHOLDINGS') }}
+      name: WWI_LOAD_STOCKITEMHOLDINGS
+      schema: ""
+      sqlType: Source
+      table: WWI_LOAD_STOCKITEMHOLDINGS
+      type: sourceInput
+    stepCounter: 02944dec-4d50-49fd-a0da-dc98a046bc92

@@ -1,0 +1,265 @@
+steps:
+  DVSTG_SALES_CURRENCY_RATE-98b08145-5423-4cfd-917e-709c376929ea:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c5af6504-f6e1-40c7-9a09-3cdef7f15bb8
+              stepCounter: 98b08145-5423-4cfd-917e-709c376929ea
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: d42f715d-b9cc-452b-ad36-13ee48e7ffca
+                stepCounter: 98b08145-5423-4cfd-917e-709c376929ea
+              - columnCounter: 918c57c8-a2aa-40ce-9448-2a5f0e2a34a8
+                stepCounter: 98b08145-5423-4cfd-917e-709c376929ea
+              - columnCounter: 48e8a63c-ce46-4f95-b6e2-60dfec824827
+                stepCounter: 98b08145-5423-4cfd-917e-709c376929ea
+            name: HK_SALES_CURRENCY_RATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: d42f715d-b9cc-452b-ad36-13ee48e7ffca
+              stepCounter: 98b08145-5423-4cfd-917e-709c376929ea
+            dataType: VARCHAR(5)
+            description: ""
+            name: ORIGINATING_CURRENCY_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6a89ec42-dd8b-4dd3-9ec3-43dcccf53ac1
+                    stepCounter: 12eb8b12-ad10-434f-a404-10719a7687bf
+                transform: ""
+          - columnReference:
+              columnCounter: cdaeb807-5aaf-4ace-b600-e50902093498
+              stepCounter: 98b08145-5423-4cfd-917e-709c376929ea
+            dataType: VARCHAR(5)
+            description: ""
+            name: DESTINATION_CURRENCY_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6928ca01-ad4e-467c-b829-f8f65fe5cb34
+                    stepCounter: 12eb8b12-ad10-434f-a404-10719a7687bf
+                transform: ""
+          - columnReference:
+              columnCounter: be92d695-380b-4c15-8bfb-b4f1bfc4d514
+              stepCounter: 98b08145-5423-4cfd-917e-709c376929ea
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            name: EFFECTIVE_FROM_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 26465caf-3ef3-411d-8b22-c71fefdaa80d
+                    stepCounter: 12eb8b12-ad10-434f-a404-10719a7687bf
+                transform: ""
+          - columnReference:
+              columnCounter: e55cd62f-c130-4e39-8757-766248a2e3cb
+              stepCounter: 98b08145-5423-4cfd-917e-709c376929ea
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            name: THRU_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: be840f88-6af1-4913-a1f9-f9b8a065f816
+                    stepCounter: 12eb8b12-ad10-434f-a404-10719a7687bf
+                transform: ""
+          - columnReference:
+              columnCounter: f87964d5-05fd-4eeb-a4d3-7414a184540a
+              stepCounter: 98b08145-5423-4cfd-917e-709c376929ea
+            dataType: NUMBER(18,10)
+            description: ""
+            name: EXCHANGE_RATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 10dada82-785f-48c7-b9f4-72dbda54851a
+                    stepCounter: 12eb8b12-ad10-434f-a404-10719a7687bf
+                transform: ""
+          - columnReference:
+              columnCounter: 21cfded9-ef24-4bab-ba8b-eaa7984c7ffe
+              stepCounter: 98b08145-5423-4cfd-917e-709c376929ea
+            dataType: NUMBER(38,0)
+            description: ""
+            name: EXCHANGE_RATE_MULTIPLIER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c7e6d6af-5c01-42ad-94f5-c8b7e0dc640c
+                    stepCounter: 12eb8b12-ad10-434f-a404-10719a7687bf
+                transform: ""
+          - columnReference:
+              columnCounter: 918c57c8-a2aa-40ce-9448-2a5f0e2a34a8
+              stepCounter: 98b08145-5423-4cfd-917e-709c376929ea
+            dataType: NUMBER(38,0)
+            description: ""
+            name: CREATING_EMPLOYEE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9847ed3c-b4e7-4197-a375-0adace955e66
+                    stepCounter: 12eb8b12-ad10-434f-a404-10719a7687bf
+                transform: ""
+          - columnReference:
+              columnCounter: 2b5b81f2-d0e2-46a1-847c-ea52f3e15490
+              stepCounter: 98b08145-5423-4cfd-917e-709c376929ea
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            name: CREATED_DATETIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: dc9177e4-2475-4363-be87-82542779aea0
+                    stepCounter: 12eb8b12-ad10-434f-a404-10719a7687bf
+                transform: ""
+          - columnReference:
+              columnCounter: 48e8a63c-ce46-4f95-b6e2-60dfec824827
+              stepCounter: 98b08145-5423-4cfd-917e-709c376929ea
+            dataType: NUMBER(38,0)
+            description: ""
+            name: LAST_CHANGE_EMPLOYEE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 175b787d-3f8a-4d9a-aa30-0c7c2ed0e3eb
+                    stepCounter: 12eb8b12-ad10-434f-a404-10719a7687bf
+                transform: ""
+          - columnReference:
+              columnCounter: 391be6f0-6f6d-47fe-83e8-70a89eb909f9
+              stepCounter: 98b08145-5423-4cfd-917e-709c376929ea
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            name: LAST_CHANGE_DATETIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 729205a5-6b63-4878-89f0-82979a31f7b5
+                    stepCounter: 12eb8b12-ad10-434f-a404-10719a7687bf
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0080e624-d4db-42b6-8154-aacdb9d50233
+              stepCounter: 98b08145-5423-4cfd-917e-709c376929ea
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2396206c-7018-4e77-a1f5-84d0e39539fa
+              stepCounter: 98b08145-5423-4cfd-917e-709c376929ea
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 106485c0-8d84-4aad-b72a-8479fecdd080
+              stepCounter: 98b08145-5423-4cfd-917e-709c376929ea
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: cdaeb807-5aaf-4ace-b600-e50902093498
+                stepCounter: 98b08145-5423-4cfd-917e-709c376929ea
+              - columnCounter: be92d695-380b-4c15-8bfb-b4f1bfc4d514
+                stepCounter: 98b08145-5423-4cfd-917e-709c376929ea
+              - columnCounter: e55cd62f-c130-4e39-8757-766248a2e3cb
+                stepCounter: 98b08145-5423-4cfd-917e-709c376929ea
+              - columnCounter: f87964d5-05fd-4eeb-a4d3-7414a184540a
+                stepCounter: 98b08145-5423-4cfd-917e-709c376929ea
+              - columnCounter: 21cfded9-ef24-4bab-ba8b-eaa7984c7ffe
+                stepCounter: 98b08145-5423-4cfd-917e-709c376929ea
+              - columnCounter: 2b5b81f2-d0e2-46a1-847c-ea52f3e15490
+                stepCounter: 98b08145-5423-4cfd-917e-709c376929ea
+              - columnCounter: 391be6f0-6f6d-47fe-83e8-70a89eb909f9
+                stepCounter: 98b08145-5423-4cfd-917e-709c376929ea
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3be86fd1-16fc-4b43-8933-c7aecaf94edb
+              stepCounter: 98b08145-5423-4cfd-917e-709c376929ea
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 918c57c8-a2aa-40ce-9448-2a5f0e2a34a8
+                stepCounter: 98b08145-5423-4cfd-917e-709c376929ea
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SALES_SRC
+                nodeName: SALES_LOAD_CURRENCY_RATE
+            join:
+              joinCondition: FROM {{ ref('SALES_SRC', 'SALES_LOAD_CURRENCY_RATE') }} "SALES_LOAD_CURRENCY_RATE"
+            name: DVSTG_SALES_CURRENCY_RATE
+            noLinkRefs: []
+      name: DVSTG_SALES_CURRENCY_RATE
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: 98b08145-5423-4cfd-917e-709c376929ea

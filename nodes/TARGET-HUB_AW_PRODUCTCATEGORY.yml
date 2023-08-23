@@ -1,0 +1,91 @@
+steps:
+  HUB_AW_PRODUCTCATEGORY-0236a5e8-affd-4991-824d-bb5415dde19d:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 89d9b01e-70e1-470a-a7b8-2a23c50602fa
+              stepCounter: 0236a5e8-affd-4991-824d-bb5415dde19d
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_PRODUCTCATEGORY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 41a0b464-67e6-42f4-b5b3-fe37cf66a362
+                    stepCounter: ce3aaa27-e765-4dba-a239-138b4e204dcc
+                transform: ""
+          - columnReference:
+              columnCounter: 9669a54c-5b43-4c24-84cf-d4b4baa6c5e7
+              stepCounter: 0236a5e8-affd-4991-824d-bb5415dde19d
+            dataType: NUMBER(38,0)
+            description: Primary key for ProductCategory records.
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCTCATEGORYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: af0e8dec-3aa6-41fd-8b68-27ef6b6c25a4
+                    stepCounter: ce3aaa27-e765-4dba-a239-138b4e204dcc
+                transform: ""
+          - columnReference:
+              columnCounter: 08386daf-f9c7-4c8f-a2eb-958948e433eb
+              stepCounter: 0236a5e8-affd-4991-824d-bb5415dde19d
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a5ddc54b-7c12-4090-b715-901f1c28cfa3
+                    stepCounter: ce3aaa27-e765-4dba-a239-138b4e204dcc
+                transform: ""
+          - columnReference:
+              columnCounter: 13801723-aba6-42e7-93dd-a3bf5b46f86c
+              stepCounter: 0236a5e8-affd-4991-824d-bb5415dde19d
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 744ee4f3-8807-40bd-9087-bb537684a06e
+                    stepCounter: ce3aaa27-e765-4dba-a239-138b4e204dcc
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_PRODUCTCATEGORY
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_PRODUCTCATEGORY') }} "DVSTG_AW_PRODUCTCATEGORY"
+            name: HUB_AW_PRODUCTCATEGORY
+            noLinkRefs: []
+      name: HUB_AW_PRODUCTCATEGORY
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 0236a5e8-affd-4991-824d-bb5415dde19d

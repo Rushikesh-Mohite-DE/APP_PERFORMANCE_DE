@@ -1,0 +1,91 @@
+steps:
+  HUB_AW_PERSON-410ebbd8-c236-41d3-be3b-680b624e4cf9:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: c554a5db-aa33-4225-b75b-a1c473f7fb2f
+              stepCounter: 410ebbd8-c236-41d3-be3b-680b624e4cf9
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_PERSON
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cdd6d04c-ba57-4982-ba6c-990b9c0bc9ac
+                    stepCounter: 4d696f37-1be5-4446-9717-18e7c877839c
+                transform: ""
+          - columnReference:
+              columnCounter: 62a2f5f3-61d4-47f4-a828-0146417b6afc
+              stepCounter: 410ebbd8-c236-41d3-be3b-680b624e4cf9
+            dataType: NUMBER(38,0)
+            description: Primary key for Person records.
+            hashColumns: []
+            hashDetails: null
+            name: BUSINESSENTITYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c26fb7bc-b15f-4287-b116-e57750466409
+                    stepCounter: 4d696f37-1be5-4446-9717-18e7c877839c
+                transform: ""
+          - columnReference:
+              columnCounter: 6015fa51-5a59-4f95-b8aa-49890a528c84
+              stepCounter: 410ebbd8-c236-41d3-be3b-680b624e4cf9
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1c5ead89-d26e-423e-9feb-754b69eec215
+                    stepCounter: 4d696f37-1be5-4446-9717-18e7c877839c
+                transform: ""
+          - columnReference:
+              columnCounter: 2a32b74e-25bd-480a-923c-2dcde1c5e31d
+              stepCounter: 410ebbd8-c236-41d3-be3b-680b624e4cf9
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b0a7c7a3-f0a0-4639-a657-0ceeaf713eb1
+                    stepCounter: 4d696f37-1be5-4446-9717-18e7c877839c
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_PERSON
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_PERSON') }} "DVSTG_AW_PERSON"
+            name: HUB_AW_PERSON
+            noLinkRefs: []
+      name: HUB_AW_PERSON
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 410ebbd8-c236-41d3-be3b-680b624e4cf9

@@ -1,0 +1,105 @@
+steps:
+  HUB_DEMOGRAPHICS-92686e97-5f48-4267-8fd2-028f1d846bc4:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: Demographic data, 2019
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 033cafee-6621-43d9-b113-80427e8735bf
+              stepCounter: 92686e97-5f48-4267-8fd2-028f1d846bc4
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_DEMOGRAPHICS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: afecaa98-e312-4026-97ec-03e0ebae1809
+                    stepCounter: 7f26c522-088c-48cc-bdc4-efa4a6111439
+                transform: ""
+          - columnReference:
+              columnCounter: 23312fbb-c9c7-4cca-955a-da0ce851715c
+              stepCounter: 92686e97-5f48-4267-8fd2-028f1d846bc4
+            dataType: VARCHAR(16777216)
+            description: ISO-3166-1 code for geography of record
+            hashColumns: []
+            hashDetails: null
+            name: ISO3166_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a82eba5e-498f-43de-aec7-a6149af121c5
+                    stepCounter: 7f26c522-088c-48cc-bdc4-efa4a6111439
+                transform: ""
+          - columnReference:
+              columnCounter: e74d7b9b-419a-4bb3-8075-426ee65c8094
+              stepCounter: 92686e97-5f48-4267-8fd2-028f1d846bc4
+            dataType: VARCHAR(16777216)
+            description: ISO-3166-2 code for geography of record
+            hashColumns: []
+            hashDetails: null
+            name: ISO3166_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0b54d2c4-dc5f-45e0-aa8e-6f4125665c60
+                    stepCounter: 7f26c522-088c-48cc-bdc4-efa4a6111439
+                transform: ""
+          - columnReference:
+              columnCounter: e7cd621b-db0c-4d53-b9b8-2efe5ecc3043
+              stepCounter: 92686e97-5f48-4267-8fd2-028f1d846bc4
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1263ba65-8987-4856-a17f-c44d5401cc98
+                    stepCounter: 7f26c522-088c-48cc-bdc4-efa4a6111439
+                transform: ""
+          - columnReference:
+              columnCounter: 4b3cc429-e335-4a17-ac42-b5013e19b138
+              stepCounter: 92686e97-5f48-4267-8fd2-028f1d846bc4
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 127e44a8-7aaf-4c41-b8e8-51380952f3fc
+                    stepCounter: 7f26c522-088c-48cc-bdc4-efa4a6111439
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_DEMOGRAPHICS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_DEMOGRAPHICS') }} "DVSTG_DEMOGRAPHICS"
+            name: HUB_DEMOGRAPHICS
+            noLinkRefs: []
+      name: HUB_DEMOGRAPHICS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 92686e97-5f48-4267-8fd2-028f1d846bc4

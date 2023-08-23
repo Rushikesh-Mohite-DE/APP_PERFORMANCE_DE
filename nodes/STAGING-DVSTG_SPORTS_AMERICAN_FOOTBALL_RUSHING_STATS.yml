@@ -1,0 +1,223 @@
+steps:
+  DVSTG_SPORTS_AMERICAN_FOOTBALL_RUSHING_STATS-9fe8b619-b07e-4da8-a381-a79b6c5ec9f4:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 06784c7c-875c-4a95-a1c9-c7336dc8a216
+              stepCounter: 9fe8b619-b07e-4da8-a381-a79b6c5ec9f4
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: ea0f3307-e1b1-4947-a67e-e59886b28731
+                stepCounter: 9fe8b619-b07e-4da8-a381-a79b6c5ec9f4
+            name: HK_STATS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: ea0f3307-e1b1-4947-a67e-e59886b28731
+              stepCounter: 9fe8b619-b07e-4da8-a381-a79b6c5ec9f4
+            dataType: VARCHAR(32)
+            description: ""
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3cc8c9ed-6956-465f-8815-eddaffa75b25
+                    stepCounter: a832beec-3d97-4e9d-ae96-1fcdc6e8b854
+                transform: ""
+          - columnReference:
+              columnCounter: 8b6cbf8e-d947-4d96-a574-c383701679aa
+              stepCounter: 9fe8b619-b07e-4da8-a381-a79b6c5ec9f4
+            dataType: VARCHAR(100)
+            description: ""
+            name: RUSHES_ATTEMPTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e89bebdd-8d90-40f5-9270-4345040f6de5
+                    stepCounter: a832beec-3d97-4e9d-ae96-1fcdc6e8b854
+                transform: ""
+          - columnReference:
+              columnCounter: fdd54167-627b-4fe2-9800-a948e9714dfc
+              stepCounter: 9fe8b619-b07e-4da8-a381-a79b6c5ec9f4
+            dataType: VARCHAR(100)
+            description: ""
+            name: RUSHES_YARDS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b42a0bb9-cf17-480a-b4a2-25a4ddef6de8
+                    stepCounter: a832beec-3d97-4e9d-ae96-1fcdc6e8b854
+                transform: ""
+          - columnReference:
+              columnCounter: b2efe1e0-df44-492e-89ea-dac919bb00dd
+              stepCounter: 9fe8b619-b07e-4da8-a381-a79b6c5ec9f4
+            dataType: VARCHAR(100)
+            description: ""
+            name: RUSHES_TOUCHDOWNS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9f6cbdfe-1f4a-4978-a2f8-e577088b4585
+                    stepCounter: a832beec-3d97-4e9d-ae96-1fcdc6e8b854
+                transform: ""
+          - columnReference:
+              columnCounter: f7ac3534-4feb-4a5f-be7a-f3253a6e03dd
+              stepCounter: 9fe8b619-b07e-4da8-a381-a79b6c5ec9f4
+            dataType: VARCHAR(100)
+            description: ""
+            name: RUSHING_AVERAGE_YARDS_PER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 77a852aa-665f-4377-bfc0-3302fc14ec9f
+                    stepCounter: a832beec-3d97-4e9d-ae96-1fcdc6e8b854
+                transform: ""
+          - columnReference:
+              columnCounter: f0f86c2a-628d-4b8c-b2ea-3a2a320c31ae
+              stepCounter: 9fe8b619-b07e-4da8-a381-a79b6c5ec9f4
+            dataType: VARCHAR(100)
+            description: ""
+            name: RUSHES_FIRST_DOWN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f72af445-f5a3-4710-b99d-67f50535bb32
+                    stepCounter: a832beec-3d97-4e9d-ae96-1fcdc6e8b854
+                transform: ""
+          - columnReference:
+              columnCounter: ed762d2b-8747-4619-93f1-d3638ab20bcb
+              stepCounter: 9fe8b619-b07e-4da8-a381-a79b6c5ec9f4
+            dataType: VARCHAR(100)
+            description: ""
+            name: RUSHES_LONGEST
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 273a2d48-a2e0-4ab9-890c-3fdaf047d65b
+                    stepCounter: a832beec-3d97-4e9d-ae96-1fcdc6e8b854
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a3292206-9f68-4580-b167-85d7050f2f24
+              stepCounter: 9fe8b619-b07e-4da8-a381-a79b6c5ec9f4
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ca6b84df-75a0-44f9-94bb-34050db29ff0
+              stepCounter: 9fe8b619-b07e-4da8-a381-a79b6c5ec9f4
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3b6e9e3f-e304-4cc7-b4bc-e69e1dbc8541
+              stepCounter: 9fe8b619-b07e-4da8-a381-a79b6c5ec9f4
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 8b6cbf8e-d947-4d96-a574-c383701679aa
+                stepCounter: 9fe8b619-b07e-4da8-a381-a79b6c5ec9f4
+              - columnCounter: fdd54167-627b-4fe2-9800-a948e9714dfc
+                stepCounter: 9fe8b619-b07e-4da8-a381-a79b6c5ec9f4
+              - columnCounter: b2efe1e0-df44-492e-89ea-dac919bb00dd
+                stepCounter: 9fe8b619-b07e-4da8-a381-a79b6c5ec9f4
+              - columnCounter: f7ac3534-4feb-4a5f-be7a-f3253a6e03dd
+                stepCounter: 9fe8b619-b07e-4da8-a381-a79b6c5ec9f4
+              - columnCounter: f0f86c2a-628d-4b8c-b2ea-3a2a320c31ae
+                stepCounter: 9fe8b619-b07e-4da8-a381-a79b6c5ec9f4
+              - columnCounter: ed762d2b-8747-4619-93f1-d3638ab20bcb
+                stepCounter: 9fe8b619-b07e-4da8-a381-a79b6c5ec9f4
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 73ec9781-b657-4a17-8aa0-822153356de8
+              stepCounter: 9fe8b619-b07e-4da8-a381-a79b6c5ec9f4
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: f7ac3534-4feb-4a5f-be7a-f3253a6e03dd
+                stepCounter: 9fe8b619-b07e-4da8-a381-a79b6c5ec9f4
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SPORTS_SRC
+                nodeName: SPORTS_LOAD_AMERICAN_FOOTBALL_RUSHING_STATS
+            join:
+              joinCondition: FROM {{ ref('SPORTS_SRC', 'SPORTS_LOAD_AMERICAN_FOOTBALL_RUSHING_STATS') }} "SPORTS_LOAD_AMERICAN_FOOTBALL_RUSHING_STATS"
+            name: DVSTG_SPORTS_AMERICAN_FOOTBALL_RUSHING_STATS
+            noLinkRefs: []
+      name: DVSTG_SPORTS_AMERICAN_FOOTBALL_RUSHING_STATS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: 9fe8b619-b07e-4da8-a381-a79b6c5ec9f4

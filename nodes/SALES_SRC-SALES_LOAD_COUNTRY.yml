@@ -1,0 +1,109 @@
+steps:
+  SALES_LOAD_COUNTRY-498056d9-fbde-4815-bb28-9ea24983b509:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SALES_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9cfa76aa-5815-4034-9a74-5a8839f03215
+              stepCounter: 498056d9-fbde-4815-bb28-9ea24983b509
+            config: {}
+            dataType: VARCHAR(3)
+            defaultValue: ""
+            description: ""
+            name: COUNTRY_CODE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: bdb85844-dd19-4191-9875-9c9b5898a51f
+              stepCounter: 498056d9-fbde-4815-bb28-9ea24983b509
+            config: {}
+            dataType: VARCHAR(80)
+            defaultValue: ""
+            description: ""
+            name: COUNTRY_NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d38c456e-6b9a-4a9c-ae14-7a2652e9aec7
+              stepCounter: 498056d9-fbde-4815-bb28-9ea24983b509
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: CREATING_EMPLOYEE_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8e98f084-65eb-4284-8b47-6f9fd0ff7413
+              stepCounter: 498056d9-fbde-4815-bb28-9ea24983b509
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: CREATED_DATETIME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 00b7fc7b-1643-4d77-973e-45ce22b4324b
+              stepCounter: 498056d9-fbde-4815-bb28-9ea24983b509
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: LAST_CHANGE_EMPLOYEE_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7a65ac96-e5af-4862-bb37-5f13e61bf8cc
+              stepCounter: 498056d9-fbde-4815-bb28-9ea24983b509
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: LAST_CHANGE_DATETIME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SALES_SRC', 'SALES_LOAD_COUNTRY') }}
+      name: SALES_LOAD_COUNTRY
+      schema: ""
+      sqlType: Source
+      table: SALES_LOAD_COUNTRY
+      type: sourceInput
+    stepCounter: 498056d9-fbde-4815-bb28-9ea24983b509

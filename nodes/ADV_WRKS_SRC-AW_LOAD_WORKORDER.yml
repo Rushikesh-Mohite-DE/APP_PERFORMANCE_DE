@@ -1,0 +1,169 @@
+steps:
+  AW_LOAD_WORKORDER-319e4905-c87c-47be-89a2-96742896ad20:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: ADV_WRKS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a4b722f5-3fb3-48d3-829e-edc832add197
+              stepCounter: 319e4905-c87c-47be-89a2-96742896ad20
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Primary key for WorkOrder records.
+            name: WORKORDERID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ffa540e6-8524-4995-95b4-5fbf78f617be
+              stepCounter: 319e4905-c87c-47be-89a2-96742896ad20
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Product identification number. Foreign key to Product.ProductID.
+            name: PRODUCTID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4ccf5ee9-873d-43b3-adb4-bdd6bd579ef0
+              stepCounter: 319e4905-c87c-47be-89a2-96742896ad20
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Product quantity to build.
+            name: ORDERQTY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3229b6bf-1a31-4e2f-9607-5e164e6c2803
+              stepCounter: 319e4905-c87c-47be-89a2-96742896ad20
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Quantity built and put in inventory.
+            name: STOCKEDQTY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ef7e29ec-1e00-4308-9cb7-179e065cbc90
+              stepCounter: 319e4905-c87c-47be-89a2-96742896ad20
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Quantity that failed inspection.
+            name: SCRAPPEDQTY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ebd95317-d10b-418e-a718-7561d26bf023
+              stepCounter: 319e4905-c87c-47be-89a2-96742896ad20
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Work order start date.
+            name: STARTDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 68423722-7368-4f18-ac4f-d4e0df5988b2
+              stepCounter: 319e4905-c87c-47be-89a2-96742896ad20
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Work order end date.
+            name: ENDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9128d2e3-c592-4864-bb94-5bbd711a03df
+              stepCounter: 319e4905-c87c-47be-89a2-96742896ad20
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Work order due date.
+            name: DUEDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a812fd61-5808-4027-b905-23767d66b869
+              stepCounter: 319e4905-c87c-47be-89a2-96742896ad20
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: Reason for inspection failure.
+            name: SCRAPREASONID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 05a20b51-1ea8-4482-b738-8c1e20d29349
+              stepCounter: 319e4905-c87c-47be-89a2-96742896ad20
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_WORKORDER') }}
+      name: AW_LOAD_WORKORDER
+      schema: ""
+      sqlType: Source
+      table: AW_LOAD_WORKORDER
+      type: sourceInput
+    stepCounter: 319e4905-c87c-47be-89a2-96742896ad20

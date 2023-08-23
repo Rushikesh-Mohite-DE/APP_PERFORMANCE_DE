@@ -1,0 +1,184 @@
+steps:
+  WWI_LOAD_STOCKITEMTRANSACTIONS-7e225a1b-3d19-4fc6-90e5-843910288688:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: WIDEWORLIMPORTES_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4a08c03d-887c-4fff-8239-c553e80516b8
+              stepCounter: 7e225a1b-3d19-4fc6-90e5-843910288688
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Numeric ID used to refer to a stock item transaction within the database
+            name: STOCKITEMTRANSACTIONID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 11045166-a686-4a9f-b3f9-60d01f4292b2
+              stepCounter: 7e225a1b-3d19-4fc6-90e5-843910288688
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: StockItem for this transaction
+            name: STOCKITEMID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 594cbfaa-9e82-49c5-b120-66aa181576e9
+              stepCounter: 7e225a1b-3d19-4fc6-90e5-843910288688
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Type of transaction
+            name: TRANSACTIONTYPEID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c3fbf296-6411-4422-82c1-0d01603f0b14
+              stepCounter: 7e225a1b-3d19-4fc6-90e5-843910288688
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: Customer for this transaction (if applicable)
+            name: CUSTOMERID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 430b0e48-fa04-4326-952c-e3bc7792c2dd
+              stepCounter: 7e225a1b-3d19-4fc6-90e5-843910288688
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ID of an invoice (for transactions associated with an invoice)
+            name: INVOICEID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 27e616eb-0c8c-4186-9ab8-8cfd551b62a5
+              stepCounter: 7e225a1b-3d19-4fc6-90e5-843910288688
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: Supplier for this stock transaction (if applicable)
+            name: SUPPLIERID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 17d7b9d9-61ad-45d6-b59f-4498681fe410
+              stepCounter: 7e225a1b-3d19-4fc6-90e5-843910288688
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ID of an purchase order (for transactions associated with a purchase order)
+            name: PURCHASEORDERID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 94aa0584-42c8-4d51-9b3e-ce0aa0322999
+              stepCounter: 7e225a1b-3d19-4fc6-90e5-843910288688
+            config: {}
+            dataType: DATE
+            defaultValue: ""
+            description: Date and time when the transaction occurred
+            name: TRANSACTIONOCCURREDWHEN
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 43c3ca98-2450-4866-9b38-fdf750a6a57c
+              stepCounter: 7e225a1b-3d19-4fc6-90e5-843910288688
+            config: {}
+            dataType: NUMBER(18,3)
+            defaultValue: ""
+            description: Quantity of stock movement (positive is incoming stock, negative is outgoing)
+            name: QUANTITY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 45043b8b-4940-4bdb-a703-6e59366302ad
+              stepCounter: 7e225a1b-3d19-4fc6-90e5-843910288688
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: LASTEDITEDBY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fac9582b-ed20-4fbe-adac-de6cc56e0e59
+              stepCounter: 7e225a1b-3d19-4fc6-90e5-843910288688
+            config: {}
+            dataType: DATE
+            defaultValue: ""
+            description: ""
+            name: LASTEDITEDWHEN
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('WIDEWORLIMPORTES_SRC', 'WWI_LOAD_STOCKITEMTRANSACTIONS') }}
+      name: WWI_LOAD_STOCKITEMTRANSACTIONS
+      schema: ""
+      sqlType: Source
+      table: WWI_LOAD_STOCKITEMTRANSACTIONS
+      type: sourceInput
+    stepCounter: 7e225a1b-3d19-4fc6-90e5-843910288688

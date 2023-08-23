@@ -1,0 +1,199 @@
+steps:
+  SPORTS_LOAD_WAGERING_STRAIGHT_SPREAD_LINES-8994cb13-d5ac-447b-8795-6a0fcfdc2dd0:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SPORTS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: de417b31-58e1-4a57-b7b1-0d06b73b2879
+              stepCounter: 8994cb13-d5ac-447b-8795-6a0fcfdc2dd0
+            config: {}
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            name: ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 196f1572-a7de-4e0d-8970-edd9dcea2005
+              stepCounter: 8994cb13-d5ac-447b-8795-6a0fcfdc2dd0
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: BOOKMAKER_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ca65710d-4a85-4b84-8d1e-a94b5b7a0226
+              stepCounter: 8994cb13-d5ac-447b-8795-6a0fcfdc2dd0
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: EVENT_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b49e2375-ba56-472b-a088-4b407b5381eb
+              stepCounter: 8994cb13-d5ac-447b-8795-6a0fcfdc2dd0
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: DATE_TIME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 25b3a0d6-5ef2-41ba-97f0-f5700ddefe2b
+              stepCounter: 8994cb13-d5ac-447b-8795-6a0fcfdc2dd0
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: TEAM_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8cae9795-6bb8-4900-bb38-7e8ee677140b
+              stepCounter: 8994cb13-d5ac-447b-8795-6a0fcfdc2dd0
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: PERSON_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ceec5588-9ac0-4d6a-a649-3275a5bb5e41
+              stepCounter: 8994cb13-d5ac-447b-8795-6a0fcfdc2dd0
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: ROTATION_KEY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 31f890fe-fa52-42f2-a7fd-f21ed552ce00
+              stepCounter: 8994cb13-d5ac-447b-8795-6a0fcfdc2dd0
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: comment
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6ad2ab20-5ea2-4ff1-a128-753915ddf507
+              stepCounter: 8994cb13-d5ac-447b-8795-6a0fcfdc2dd0
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: VIGORISH
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1d47de18-96d4-4fd5-bbca-e699820225ce
+              stepCounter: 8994cb13-d5ac-447b-8795-6a0fcfdc2dd0
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: LINE_VALUE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6f5bd903-90f4-4aca-8470-1927df6afb09
+              stepCounter: 8994cb13-d5ac-447b-8795-6a0fcfdc2dd0
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: LINE_VALUE_OPENING
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4859640d-902a-4394-b0c4-76a45a9703ce
+              stepCounter: 8994cb13-d5ac-447b-8795-6a0fcfdc2dd0
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: PREDICTION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SPORTS_SRC', 'SPORTS_LOAD_WAGERING_STRAIGHT_SPREAD_LINES') }}
+      name: SPORTS_LOAD_WAGERING_STRAIGHT_SPREAD_LINES
+      schema: ""
+      sqlType: Source
+      table: SPORTS_LOAD_WAGERING_STRAIGHT_SPREAD_LINES
+      type: sourceInput
+    stepCounter: 8994cb13-d5ac-447b-8795-6a0fcfdc2dd0

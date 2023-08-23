@@ -1,0 +1,94 @@
+steps:
+  AW_LOAD_PRODUCTCOSTHISTORY-29a503f7-15c2-40fa-9590-acff4f48af22:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: ADV_WRKS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 28ad7972-1c25-4545-8325-50e28567d3aa
+              stepCounter: 29a503f7-15c2-40fa-9590-acff4f48af22
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Product identification number. Foreign key to Product.ProductID
+            name: PRODUCTID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 77110b9b-b2fb-4715-a7b4-5b10394b6da1
+              stepCounter: 29a503f7-15c2-40fa-9590-acff4f48af22
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Product cost start date.
+            name: STARTDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b8a26d95-0045-4048-b198-42999af38d92
+              stepCounter: 29a503f7-15c2-40fa-9590-acff4f48af22
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: Product cost end date.
+            name: ENDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 90def0fb-eccb-40ff-b18d-35fb6bab321c
+              stepCounter: 29a503f7-15c2-40fa-9590-acff4f48af22
+            config: {}
+            dataType: NUMBER(19,4)
+            defaultValue: ""
+            description: Standard cost of the product.
+            name: STANDARDCOST
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: bb89af4f-404d-4f0a-b9fc-29b6ddaa694c
+              stepCounter: 29a503f7-15c2-40fa-9590-acff4f48af22
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_PRODUCTCOSTHISTORY') }}
+      name: AW_LOAD_PRODUCTCOSTHISTORY
+      schema: ""
+      sqlType: Source
+      table: AW_LOAD_PRODUCTCOSTHISTORY
+      type: sourceInput
+    stepCounter: 29a503f7-15c2-40fa-9590-acff4f48af22

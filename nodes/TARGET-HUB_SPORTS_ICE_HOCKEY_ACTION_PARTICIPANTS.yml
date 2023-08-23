@@ -1,0 +1,119 @@
+steps:
+  HUB_SPORTS_ICE_HOCKEY_ACTION_PARTICIPANTS-4833928d-a9c2-469e-9f2c-724ce81ffe78:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: f9a67f34-ffd3-418e-bb99-f162be80300b
+              stepCounter: 4833928d-a9c2-469e-9f2c-724ce81ffe78
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_PARTICIPANTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fab674e3-4a06-4205-ac61-8934157f8aac
+                    stepCounter: c6b99a5c-8d28-42fb-8e0b-ce7ee4f92afb
+                transform: ""
+          - columnReference:
+              columnCounter: c78d6b61-51d7-4512-b1de-30e0127b0409
+              stepCounter: 4833928d-a9c2-469e-9f2c-724ce81ffe78
+            dataType: VARCHAR(32)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2c68b022-2b57-4571-b05e-1e0571e96991
+                    stepCounter: c6b99a5c-8d28-42fb-8e0b-ce7ee4f92afb
+                transform: ""
+          - columnReference:
+              columnCounter: e56049f9-bd61-4281-877a-913bc69f38bc
+              stepCounter: 4833928d-a9c2-469e-9f2c-724ce81ffe78
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ICE_HOCKEY_ACTION_PLAY_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cfb4785d-d175-4f3f-8209-0308c02bd1ab
+                    stepCounter: c6b99a5c-8d28-42fb-8e0b-ce7ee4f92afb
+                transform: ""
+          - columnReference:
+              columnCounter: e68c1114-784f-40c3-b7d1-eda9a445f611
+              stepCounter: 4833928d-a9c2-469e-9f2c-724ce81ffe78
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PERSON_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c9a3f790-855b-4383-9469-382a3d89e285
+                    stepCounter: c6b99a5c-8d28-42fb-8e0b-ce7ee4f92afb
+                transform: ""
+          - columnReference:
+              columnCounter: 892ed502-3bef-4324-a57a-4cc43cf80a5c
+              stepCounter: 4833928d-a9c2-469e-9f2c-724ce81ffe78
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8e0a53d2-086d-4410-9eaf-4d6e3b5adc3b
+                    stepCounter: c6b99a5c-8d28-42fb-8e0b-ce7ee4f92afb
+                transform: ""
+          - columnReference:
+              columnCounter: 92bcd3f7-c7de-455a-9c37-84b561d33a9f
+              stepCounter: 4833928d-a9c2-469e-9f2c-724ce81ffe78
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3d8a5d37-6288-4f94-b0c9-0238df0931e0
+                    stepCounter: c6b99a5c-8d28-42fb-8e0b-ce7ee4f92afb
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SPORTS_ICE_HOCKEY_ACTION_PARTICIPANTS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SPORTS_ICE_HOCKEY_ACTION_PARTICIPANTS') }} "DVSTG_SPORTS_ICE_HOCKEY_ACTION_PARTICIPANTS"
+            name: HUB_SPORTS_ICE_HOCKEY_ACTION_PARTICIPANTS
+            noLinkRefs: []
+      name: HUB_SPORTS_ICE_HOCKEY_ACTION_PARTICIPANTS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 4833928d-a9c2-469e-9f2c-724ce81ffe78

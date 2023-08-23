@@ -1,0 +1,105 @@
+steps:
+  HUB_WWI_CITIES-c7846257-9fef-4258-b449-1816fd7b3b5f:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: f3380889-1dfd-49d8-aea4-83fe8c12c8ab
+              stepCounter: c7846257-9fef-4258-b449-1816fd7b3b5f
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_CITIES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 36ca0152-43d2-4c2b-b833-888b071e3c9c
+                    stepCounter: 32abdc9b-69ed-4145-b02a-ac1410ecf052
+                transform: ""
+          - columnReference:
+              columnCounter: 48112dc5-5b2d-49ab-ac60-e9d1879bb78a
+              stepCounter: c7846257-9fef-4258-b449-1816fd7b3b5f
+            dataType: NUMBER(38,0)
+            description: Numeric ID used for reference to a city within the database
+            hashColumns: []
+            hashDetails: null
+            name: CITYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ebf930b7-0d9c-4788-8d61-3707bbc7b6ef
+                    stepCounter: 32abdc9b-69ed-4145-b02a-ac1410ecf052
+                transform: ""
+          - columnReference:
+              columnCounter: 8dfa3022-abd5-488a-ac81-b44638bdf99f
+              stepCounter: c7846257-9fef-4258-b449-1816fd7b3b5f
+            dataType: NUMBER(38,0)
+            description: State or province for this city
+            hashColumns: []
+            hashDetails: null
+            name: STATEPROVINCEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: dcb3623b-878e-400c-8bec-d5b31a34d059
+                    stepCounter: 32abdc9b-69ed-4145-b02a-ac1410ecf052
+                transform: ""
+          - columnReference:
+              columnCounter: f8fde5ef-41b3-4d08-b109-dcda860816e0
+              stepCounter: c7846257-9fef-4258-b449-1816fd7b3b5f
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c556b236-9e9a-4bbe-86d5-86b509f434fb
+                    stepCounter: 32abdc9b-69ed-4145-b02a-ac1410ecf052
+                transform: ""
+          - columnReference:
+              columnCounter: 7add86e8-8819-46b1-a831-19c91ee4bfe2
+              stepCounter: c7846257-9fef-4258-b449-1816fd7b3b5f
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ba1fda55-b770-4fb6-84e9-b37889da63f7
+                    stepCounter: 32abdc9b-69ed-4145-b02a-ac1410ecf052
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_WWI_CITIES
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_WWI_CITIES') }} "DVSTG_WWI_CITIES"
+            name: HUB_WWI_CITIES
+            noLinkRefs: []
+      name: HUB_WWI_CITIES
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: c7846257-9fef-4258-b449-1816fd7b3b5f

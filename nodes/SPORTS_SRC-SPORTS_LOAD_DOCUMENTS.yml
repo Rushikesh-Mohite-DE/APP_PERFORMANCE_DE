@@ -1,0 +1,199 @@
+steps:
+  SPORTS_LOAD_DOCUMENTS-5dacad9e-20d6-4afd-bdc5-40c189883249:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SPORTS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1d2039ac-f8f1-4010-80de-74d3b9eb740e
+              stepCounter: 5dacad9e-20d6-4afd-bdc5-40c189883249
+            config: {}
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            name: ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 38f757b8-6809-4deb-bc47-dcffebad10d3
+              stepCounter: 5dacad9e-20d6-4afd-bdc5-40c189883249
+            config: {}
+            dataType: VARCHAR(75)
+            defaultValue: ""
+            description: ""
+            name: DOC_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9b57c388-ba34-4489-9bc8-4784317a0689
+              stepCounter: 5dacad9e-20d6-4afd-bdc5-40c189883249
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: PUBLISHER_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c4fa71c9-d339-43f7-827e-44934fa1efa1
+              stepCounter: 5dacad9e-20d6-4afd-bdc5-40c189883249
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: DATE_TIME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: aad9e9f1-b76d-437c-9f70-97c1893d575a
+              stepCounter: 5dacad9e-20d6-4afd-bdc5-40c189883249
+            config: {}
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            name: TITLE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 53d55385-ffb2-444a-a640-f4c3714d45f4
+              stepCounter: 5dacad9e-20d6-4afd-bdc5-40c189883249
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: language
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fbd12452-817a-476a-8124-9d101455f637
+              stepCounter: 5dacad9e-20d6-4afd-bdc5-40c189883249
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: PRIORITY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4dd3d9a3-3fb7-4cf5-9cbd-ec33fb026852
+              stepCounter: 5dacad9e-20d6-4afd-bdc5-40c189883249
+            config: {}
+            dataType: VARCHAR(75)
+            defaultValue: ""
+            description: ""
+            name: REVISION_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c55dadee-6c05-4d89-b236-4fb54affe75f
+              stepCounter: 5dacad9e-20d6-4afd-bdc5-40c189883249
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: STATS_COVERAGE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a3197d72-53ef-4ffa-8ff8-c32128fb3811
+              stepCounter: 5dacad9e-20d6-4afd-bdc5-40c189883249
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: DOCUMENT_FIXTURE_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: cfe2e687-91c5-47ed-9302-2ecb118ae12c
+              stepCounter: 5dacad9e-20d6-4afd-bdc5-40c189883249
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: SOURCE_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 75881ce2-5e77-4621-8b5b-d74df32992ff
+              stepCounter: 5dacad9e-20d6-4afd-bdc5-40c189883249
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: DB_LOADING_DATE_TIME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SPORTS_SRC', 'SPORTS_LOAD_DOCUMENTS') }}
+      name: SPORTS_LOAD_DOCUMENTS
+      schema: ""
+      sqlType: Source
+      table: SPORTS_LOAD_DOCUMENTS
+      type: sourceInput
+    stepCounter: 5dacad9e-20d6-4afd-bdc5-40c189883249

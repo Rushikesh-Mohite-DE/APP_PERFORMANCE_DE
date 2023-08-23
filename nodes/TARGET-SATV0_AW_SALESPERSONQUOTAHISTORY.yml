@@ -1,0 +1,149 @@
+steps:
+  SATV0_AW_SALESPERSONQUOTAHISTORY-791fdec7-d325-43e7-ae1e-31e50c5097ed:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 0ad8b024-f3ad-4413-bf97-7575735a0060
+              stepCounter: 791fdec7-d325-43e7-ae1e-31e50c5097ed
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_SALESPERSONQUOTAHISTORY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11a124ac-a2e9-4e3b-9731-74117a089bdc
+                    stepCounter: 3cabfd0a-fa56-4f0c-8e03-4adeedafe927
+                transform: ""
+          - columnReference:
+              columnCounter: 2df03f5b-ce57-47f7-96bc-8580722d74f0
+              stepCounter: 791fdec7-d325-43e7-ae1e-31e50c5097ed
+            dataType: TIMESTAMP_NTZ(9)
+            description: Sales quota date.
+            hashColumns: []
+            hashDetails: null
+            name: QUOTADATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ca5a5897-b027-41f6-ab0d-0fd58dda2e6f
+                    stepCounter: 3cabfd0a-fa56-4f0c-8e03-4adeedafe927
+                transform: ""
+          - columnReference:
+              columnCounter: ed384c4e-5300-4f69-bc51-2b246f72de42
+              stepCounter: 791fdec7-d325-43e7-ae1e-31e50c5097ed
+            dataType: NUMBER(19,4)
+            description: Sales quota amount.
+            hashColumns: []
+            hashDetails: null
+            name: SALESQUOTA
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b9b206c3-f13e-4702-8a78-bab6fc437b01
+                    stepCounter: 3cabfd0a-fa56-4f0c-8e03-4adeedafe927
+                transform: ""
+          - columnReference:
+              columnCounter: 2a590a6f-4a17-493d-89ed-c6d8909e16fd
+              stepCounter: 791fdec7-d325-43e7-ae1e-31e50c5097ed
+            dataType: VARCHAR(16777216)
+            description: ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            hashColumns: []
+            hashDetails: null
+            name: ROWGUID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e8970b3c-035e-4151-b3ca-c5408cf53856
+                    stepCounter: 3cabfd0a-fa56-4f0c-8e03-4adeedafe927
+                transform: ""
+          - columnReference:
+              columnCounter: c6e95b62-7960-4eae-8dd4-eabc847ac53e
+              stepCounter: 791fdec7-d325-43e7-ae1e-31e50c5097ed
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            hashColumns: []
+            hashDetails: null
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9769c127-1e84-466f-90ec-ddf6e38fb1b2
+                    stepCounter: 3cabfd0a-fa56-4f0c-8e03-4adeedafe927
+                transform: ""
+          - columnReference:
+              columnCounter: f0f5440d-220d-43f6-8550-b3444b5071c1
+              stepCounter: 791fdec7-d325-43e7-ae1e-31e50c5097ed
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5e6459fd-1958-4228-82dd-bda1735d262a
+                    stepCounter: 3cabfd0a-fa56-4f0c-8e03-4adeedafe927
+                transform: ""
+          - columnReference:
+              columnCounter: a4e54a97-b806-4c3a-b5e1-e47efbd8ab20
+              stepCounter: 791fdec7-d325-43e7-ae1e-31e50c5097ed
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f9f0ead1-06a1-47a8-85b3-be908e83240a
+                    stepCounter: 3cabfd0a-fa56-4f0c-8e03-4adeedafe927
+                transform: ""
+          - columnReference:
+              columnCounter: e26aa4fe-4b69-40c5-824d-40d1ec7b4382
+              stepCounter: 791fdec7-d325-43e7-ae1e-31e50c5097ed
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d34441d3-05e9-4811-bb43-2752c41a5a36
+                    stepCounter: 3cabfd0a-fa56-4f0c-8e03-4adeedafe927
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_SALESPERSONQUOTAHISTORY
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_SALESPERSONQUOTAHISTORY') }} "DVSTG_AW_SALESPERSONQUOTAHISTORY"
+            name: SATV0_AW_SALESPERSONQUOTAHISTORY
+            noLinkRefs: []
+      name: SATV0_AW_SALESPERSONQUOTAHISTORY
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: 791fdec7-d325-43e7-ae1e-31e50c5097ed

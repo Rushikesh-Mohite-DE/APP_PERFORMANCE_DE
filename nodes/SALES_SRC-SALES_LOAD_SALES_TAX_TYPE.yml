@@ -1,0 +1,109 @@
+steps:
+  SALES_LOAD_SALES_TAX_TYPE-36651c9f-dd7a-4c25-9faf-17024de85bec:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SALES_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f50b1f93-1eb1-4289-84c4-de7072c3854d
+              stepCounter: 36651c9f-dd7a-4c25-9faf-17024de85bec
+            config: {}
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: ""
+            name: SALES_TAX_TYPE_CODE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6f41fa64-2bf8-4346-883d-11fe90670492
+              stepCounter: 36651c9f-dd7a-4c25-9faf-17024de85bec
+            config: {}
+            dataType: VARCHAR(80)
+            defaultValue: ""
+            description: ""
+            name: SALES_TAX_TYPE_DESCRIPTION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8bba06b6-e75c-4336-b39f-028cf5c87ae0
+              stepCounter: 36651c9f-dd7a-4c25-9faf-17024de85bec
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: CREATING_EMPLOYEE_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 318f7bcc-9189-4d7c-90d7-9254beb52c38
+              stepCounter: 36651c9f-dd7a-4c25-9faf-17024de85bec
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: CREATED_DATETIME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f522b524-7edf-446f-a058-69f1ce138759
+              stepCounter: 36651c9f-dd7a-4c25-9faf-17024de85bec
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: LAST_CHANGE_EMPLOYEE_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0b264e84-bba8-442d-8ebd-d0605841868e
+              stepCounter: 36651c9f-dd7a-4c25-9faf-17024de85bec
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: LAST_CHANGE_DATETIME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SALES_SRC', 'SALES_LOAD_SALES_TAX_TYPE') }}
+      name: SALES_LOAD_SALES_TAX_TYPE
+      schema: ""
+      sqlType: Source
+      table: SALES_LOAD_SALES_TAX_TYPE
+      type: sourceInput
+    stepCounter: 36651c9f-dd7a-4c25-9faf-17024de85bec

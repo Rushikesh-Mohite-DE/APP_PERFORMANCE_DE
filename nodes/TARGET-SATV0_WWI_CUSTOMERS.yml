@@ -1,0 +1,401 @@
+steps:
+  SATV0_WWI_CUSTOMERS-2517724e-290f-4dc7-9825-c5b5cef5a0bf:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: ef6a2fca-1343-4e21-bc81-4bd6253d8c74
+              stepCounter: 2517724e-290f-4dc7-9825-c5b5cef5a0bf
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_CUSTOMERS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 00831db2-950d-419f-abf1-40acdcb31edd
+                    stepCounter: 87356c49-b994-4b03-a266-660e51c44c15
+                transform: ""
+          - columnReference:
+              columnCounter: 2acfedf5-979b-4052-b8f7-071606b05b00
+              stepCounter: 2517724e-290f-4dc7-9825-c5b5cef5a0bf
+            dataType: VARCHAR(100)
+            description: Customers full name (usually a trading name)
+            hashColumns: []
+            hashDetails: null
+            name: CUSTOMERNAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5cf09127-a398-4fde-bc3e-a8db2f7a5eca
+                    stepCounter: 87356c49-b994-4b03-a266-660e51c44c15
+                transform: ""
+          - columnReference:
+              columnCounter: e516e3d2-ed88-48ac-8f34-b9e4d2068f5b
+              stepCounter: 2517724e-290f-4dc7-9825-c5b5cef5a0bf
+            dataType: VARCHAR(16777216)
+            description: Credit limit for this customer (NULL if unlimited)
+            hashColumns: []
+            hashDetails: null
+            name: CREDITLIMIT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c61c4dc5-49f7-40e6-baff-85e6b6794ba9
+                    stepCounter: 87356c49-b994-4b03-a266-660e51c44c15
+                transform: ""
+          - columnReference:
+              columnCounter: bf2fe0d3-783b-41c6-bcdd-ee28572c200e
+              stepCounter: 2517724e-290f-4dc7-9825-c5b5cef5a0bf
+            dataType: DATE
+            description: Date this customer account was opened
+            hashColumns: []
+            hashDetails: null
+            name: ACCOUNTOPENEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f8814931-bc84-466e-b97f-280c70b78a01
+                    stepCounter: 87356c49-b994-4b03-a266-660e51c44c15
+                transform: ""
+          - columnReference:
+              columnCounter: ec8af18b-eaa6-47e6-8ff7-5b4f70f34d5b
+              stepCounter: 2517724e-290f-4dc7-9825-c5b5cef5a0bf
+            dataType: NUMBER(18,3)
+            description: Standard discount offered to this customer
+            hashColumns: []
+            hashDetails: null
+            name: STANDARDDISCOUNTPERCENTAGE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a1673517-9bb3-4755-ae31-f13421bc1e51
+                    stepCounter: 87356c49-b994-4b03-a266-660e51c44c15
+                transform: ""
+          - columnReference:
+              columnCounter: 206ec1f4-4c27-4dd3-8059-9bc3a14cae6e
+              stepCounter: 2517724e-290f-4dc7-9825-c5b5cef5a0bf
+            dataType: VARCHAR(20)
+            description: Is a statement sent to this customer? (Or do they just pay on each invoice?)
+            hashColumns: []
+            hashDetails: null
+            name: ISSTATEMENTSENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: efc784f5-f36e-4f3d-81af-251d32ae2ab4
+                    stepCounter: 87356c49-b994-4b03-a266-660e51c44c15
+                transform: ""
+          - columnReference:
+              columnCounter: 4a7b8829-5a7c-4b7d-8c97-ff809da90c93
+              stepCounter: 2517724e-290f-4dc7-9825-c5b5cef5a0bf
+            dataType: VARCHAR(20)
+            description: Is this customer on credit hold? (Prevents further deliveries to this customer)
+            hashColumns: []
+            hashDetails: null
+            name: ISONCREDITHOLD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9f33e40c-5588-4dca-8d45-3d054f9664ef
+                    stepCounter: 87356c49-b994-4b03-a266-660e51c44c15
+                transform: ""
+          - columnReference:
+              columnCounter: 6f10e89f-07d1-4368-9b3f-5163c11ca911
+              stepCounter: 2517724e-290f-4dc7-9825-c5b5cef5a0bf
+            dataType: NUMBER(38,0)
+            description: Number of days for payment of an invoice (ie payment terms)
+            hashColumns: []
+            hashDetails: null
+            name: PAYMENTDAYS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f223cfb7-485e-41b1-884b-1ce2917768b1
+                    stepCounter: 87356c49-b994-4b03-a266-660e51c44c15
+                transform: ""
+          - columnReference:
+              columnCounter: 1218ddee-3073-460b-bba6-37b2c5f2e1f9
+              stepCounter: 2517724e-290f-4dc7-9825-c5b5cef5a0bf
+            dataType: VARCHAR(20)
+            description: Phone number
+            hashColumns: []
+            hashDetails: null
+            name: PHONENUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5038102c-23a2-45c4-a270-c2c6ea492efd
+                    stepCounter: 87356c49-b994-4b03-a266-660e51c44c15
+                transform: ""
+          - columnReference:
+              columnCounter: 89331059-64c1-420e-8cba-959754117c0e
+              stepCounter: 2517724e-290f-4dc7-9825-c5b5cef5a0bf
+            dataType: VARCHAR(20)
+            description: Fax number
+            hashColumns: []
+            hashDetails: null
+            name: FAXNUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 270a5523-2181-4b63-9855-61c87cedce08
+                    stepCounter: 87356c49-b994-4b03-a266-660e51c44c15
+                transform: ""
+          - columnReference:
+              columnCounter: 96b10aaa-ba70-489d-b1bc-3eeca40634d6
+              stepCounter: 2517724e-290f-4dc7-9825-c5b5cef5a0bf
+            dataType: VARCHAR(5)
+            description: Normal delivery run for this customer
+            hashColumns: []
+            hashDetails: null
+            name: DELIVERYRUN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 87988236-c454-4afb-aa53-f29120b0551f
+                    stepCounter: 87356c49-b994-4b03-a266-660e51c44c15
+                transform: ""
+          - columnReference:
+              columnCounter: 3627f8e8-5147-4d8e-a0b4-8a1cb1aa5e2b
+              stepCounter: 2517724e-290f-4dc7-9825-c5b5cef5a0bf
+            dataType: VARCHAR(5)
+            description: Normal position in the delivery run for this customer
+            hashColumns: []
+            hashDetails: null
+            name: RUNPOSITION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7ff3225b-0417-4016-978f-360a87143fe4
+                    stepCounter: 87356c49-b994-4b03-a266-660e51c44c15
+                transform: ""
+          - columnReference:
+              columnCounter: 864e849e-486c-428a-a857-e1ebe9f86203
+              stepCounter: 2517724e-290f-4dc7-9825-c5b5cef5a0bf
+            dataType: VARCHAR(256)
+            description: URL for the website for this customer
+            hashColumns: []
+            hashDetails: null
+            name: WEBSITEURL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d11f1b12-43ca-43a1-bebe-dab143956438
+                    stepCounter: 87356c49-b994-4b03-a266-660e51c44c15
+                transform: ""
+          - columnReference:
+              columnCounter: f51678f3-3d54-4240-8c38-1da3396497ff
+              stepCounter: 2517724e-290f-4dc7-9825-c5b5cef5a0bf
+            dataType: VARCHAR(60)
+            description: First delivery address line for the customer
+            hashColumns: []
+            hashDetails: null
+            name: DELIVERYADDRESSLINE1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f5f29e13-2384-49ce-8d48-2501da9fd430
+                    stepCounter: 87356c49-b994-4b03-a266-660e51c44c15
+                transform: ""
+          - columnReference:
+              columnCounter: dfc3c575-f5ec-4a81-99c4-a024746c2bec
+              stepCounter: 2517724e-290f-4dc7-9825-c5b5cef5a0bf
+            dataType: VARCHAR(60)
+            description: Second delivery address line for the customer
+            hashColumns: []
+            hashDetails: null
+            name: DELIVERYADDRESSLINE2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: dd21dfb8-b33e-4d12-9a08-94f29577d0d5
+                    stepCounter: 87356c49-b994-4b03-a266-660e51c44c15
+                transform: ""
+          - columnReference:
+              columnCounter: 675b2fca-7fda-40c3-9cde-9f8b8b0411cb
+              stepCounter: 2517724e-290f-4dc7-9825-c5b5cef5a0bf
+            dataType: VARCHAR(10)
+            description: Delivery postal code for the customer
+            hashColumns: []
+            hashDetails: null
+            name: DELIVERYPOSTALCODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8743ab4b-ee49-427d-8548-d88457ea6351
+                    stepCounter: 87356c49-b994-4b03-a266-660e51c44c15
+                transform: ""
+          - columnReference:
+              columnCounter: c3c00d3d-0232-438a-94c0-93703bb13386
+              stepCounter: 2517724e-290f-4dc7-9825-c5b5cef5a0bf
+            dataType: VARCHAR(16777216)
+            description: Geographic location for the customers office/warehouse
+            hashColumns: []
+            hashDetails: null
+            name: DELIVERYLOCATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a3eea1bb-3fcf-4ae4-ba38-b0bb35f4781a
+                    stepCounter: 87356c49-b994-4b03-a266-660e51c44c15
+                transform: ""
+          - columnReference:
+              columnCounter: 7b52d97a-e911-4ceb-9efe-6f8559156156
+              stepCounter: 2517724e-290f-4dc7-9825-c5b5cef5a0bf
+            dataType: VARCHAR(60)
+            description: First postal address line for the customer
+            hashColumns: []
+            hashDetails: null
+            name: POSTALADDRESSLINE1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 315cde11-cfbc-452c-a6a0-984c690a5d98
+                    stepCounter: 87356c49-b994-4b03-a266-660e51c44c15
+                transform: ""
+          - columnReference:
+              columnCounter: 2a45bacf-3d72-4431-9b8f-09bfe77bd27d
+              stepCounter: 2517724e-290f-4dc7-9825-c5b5cef5a0bf
+            dataType: VARCHAR(60)
+            description: Second postal address line for the customer
+            hashColumns: []
+            hashDetails: null
+            name: POSTALADDRESSLINE2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a62f4eb8-13c8-4d3a-9afa-e027e458ee5f
+                    stepCounter: 87356c49-b994-4b03-a266-660e51c44c15
+                transform: ""
+          - columnReference:
+              columnCounter: 025f350b-ac32-4d0a-86f5-e172e4c84553
+              stepCounter: 2517724e-290f-4dc7-9825-c5b5cef5a0bf
+            dataType: VARCHAR(10)
+            description: Postal code for the customer when sending by mail
+            hashColumns: []
+            hashDetails: null
+            name: POSTALPOSTALCODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 82e2495c-2edf-4a4f-bea1-6be7697c4eb9
+                    stepCounter: 87356c49-b994-4b03-a266-660e51c44c15
+                transform: ""
+          - columnReference:
+              columnCounter: a1f6bead-8076-4057-ac79-495e33781b89
+              stepCounter: 2517724e-290f-4dc7-9825-c5b5cef5a0bf
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LASTEDITEDBY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 76aae39c-3bf2-4274-904a-de02287c7747
+                    stepCounter: 87356c49-b994-4b03-a266-660e51c44c15
+                transform: ""
+          - columnReference:
+              columnCounter: 1a04d2fb-76c2-4042-b351-ec50e01eb496
+              stepCounter: 2517724e-290f-4dc7-9825-c5b5cef5a0bf
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: VALIDFROM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f64b9161-e868-4de1-bc57-0589b87620a4
+                    stepCounter: 87356c49-b994-4b03-a266-660e51c44c15
+                transform: ""
+          - columnReference:
+              columnCounter: c04dbc14-7725-4012-a37c-66a55dc84da2
+              stepCounter: 2517724e-290f-4dc7-9825-c5b5cef5a0bf
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: VALIDTO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 968c0b47-f31c-4e10-bd10-78f60bde673f
+                    stepCounter: 87356c49-b994-4b03-a266-660e51c44c15
+                transform: ""
+          - columnReference:
+              columnCounter: cf925667-0682-4665-94fd-932e1af48037
+              stepCounter: 2517724e-290f-4dc7-9825-c5b5cef5a0bf
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: be23fa2a-a14e-481a-b623-9df94bfcb6f1
+                    stepCounter: 87356c49-b994-4b03-a266-660e51c44c15
+                transform: ""
+          - columnReference:
+              columnCounter: 90382d46-655d-484d-9923-4c3ef6a24004
+              stepCounter: 2517724e-290f-4dc7-9825-c5b5cef5a0bf
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9439cd4f-92f8-486e-a6ea-782cb98918e0
+                    stepCounter: 87356c49-b994-4b03-a266-660e51c44c15
+                transform: ""
+          - columnReference:
+              columnCounter: d4b0ddf1-bede-4e11-9f7c-d132fd72f0d8
+              stepCounter: 2517724e-290f-4dc7-9825-c5b5cef5a0bf
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: facd5141-36ac-4e5c-a36e-167d67b0f3de
+                    stepCounter: 87356c49-b994-4b03-a266-660e51c44c15
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_WWI_CUSTOMERS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_WWI_CUSTOMERS') }} "DVSTG_WWI_CUSTOMERS"
+            name: SATV0_WWI_CUSTOMERS
+            noLinkRefs: []
+      name: SATV0_WWI_CUSTOMERS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: 2517724e-290f-4dc7-9825-c5b5cef5a0bf

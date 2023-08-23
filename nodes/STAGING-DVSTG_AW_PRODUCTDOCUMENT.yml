@@ -1,0 +1,167 @@
+steps:
+  DVSTG_AW_PRODUCTDOCUMENT-33f7d0d6-c21a-4491-906f-003f902f0c0b:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e535c679-da35-484f-972d-759ef76efd35
+              stepCounter: 33f7d0d6-c21a-4491-906f-003f902f0c0b
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 5590d1d6-a863-4145-836e-fd87d73afe3e
+                stepCounter: 33f7d0d6-c21a-4491-906f-003f902f0c0b
+            name: HK_PRODUCTDOCUMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 5590d1d6-a863-4145-836e-fd87d73afe3e
+              stepCounter: 33f7d0d6-c21a-4491-906f-003f902f0c0b
+            dataType: NUMBER(38,0)
+            description: Product identification number. Foreign key to Product.ProductID.
+            name: PRODUCTID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a2c75477-e966-43a8-9fb8-bc4f2b3a2a34
+                    stepCounter: aa3824a2-33a4-4fca-8ad4-f586015c5cc4
+                transform: ""
+          - columnReference:
+              columnCounter: 08c0b9d7-5f33-4f8f-8ae2-d6032241153e
+              stepCounter: 33f7d0d6-c21a-4491-906f-003f902f0c0b
+            dataType: VARCHAR(16777216)
+            description: Document identification number. Foreign key to Document.DocumentNode.
+            name: DOCUMENTNODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e35b655f-b23d-4da1-bd7e-d84f38c45a7c
+                    stepCounter: aa3824a2-33a4-4fca-8ad4-f586015c5cc4
+                transform: ""
+          - columnReference:
+              columnCounter: 6105b6f1-b0d3-4713-b264-049b351edca2
+              stepCounter: 33f7d0d6-c21a-4491-906f-003f902f0c0b
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 13c28089-b84c-4519-a339-191060510401
+                    stepCounter: aa3824a2-33a4-4fca-8ad4-f586015c5cc4
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e6194a0e-3778-4f8e-b7df-c5ce4d6062e0
+              stepCounter: 33f7d0d6-c21a-4491-906f-003f902f0c0b
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 79d039db-3f8e-45db-9f53-3808700e3062
+              stepCounter: 33f7d0d6-c21a-4491-906f-003f902f0c0b
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3b6f0a31-bcd8-46e2-9f72-b3a6818d3e7f
+              stepCounter: 33f7d0d6-c21a-4491-906f-003f902f0c0b
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 08c0b9d7-5f33-4f8f-8ae2-d6032241153e
+                stepCounter: 33f7d0d6-c21a-4491-906f-003f902f0c0b
+              - columnCounter: 6105b6f1-b0d3-4713-b264-049b351edca2
+                stepCounter: 33f7d0d6-c21a-4491-906f-003f902f0c0b
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 621b389c-8a20-455d-87a4-aa9910c1c322
+              stepCounter: 33f7d0d6-c21a-4491-906f-003f902f0c0b
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 08c0b9d7-5f33-4f8f-8ae2-d6032241153e
+                stepCounter: 33f7d0d6-c21a-4491-906f-003f902f0c0b
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: ADV_WRKS_SRC
+                nodeName: AW_LOAD_PRODUCTDOCUMENT
+            join:
+              joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_PRODUCTDOCUMENT') }} "AW_LOAD_PRODUCTDOCUMENT"
+            name: DVSTG_AW_PRODUCTDOCUMENT
+            noLinkRefs: []
+      name: DVSTG_AW_PRODUCTDOCUMENT
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: 33f7d0d6-c21a-4491-906f-003f902f0c0b

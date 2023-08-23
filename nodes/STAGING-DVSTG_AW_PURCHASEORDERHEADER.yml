@@ -1,0 +1,307 @@
+steps:
+  DVSTG_AW_PURCHASEORDERHEADER-570eb8a3-c265-4a26-b39c-ea13cb17d887:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a6dcc6ac-9e34-4d0e-b25d-aa721166e5e1
+              stepCounter: 570eb8a3-c265-4a26-b39c-ea13cb17d887
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 970f12dc-dbe2-41b6-a389-fe1913d27621
+                stepCounter: 570eb8a3-c265-4a26-b39c-ea13cb17d887
+              - columnCounter: 43adc214-ebc0-4668-ab82-608db8a26688
+                stepCounter: 570eb8a3-c265-4a26-b39c-ea13cb17d887
+              - columnCounter: 8d63fa7c-5209-484c-bb9e-c6019f00a3cf
+                stepCounter: 570eb8a3-c265-4a26-b39c-ea13cb17d887
+              - columnCounter: af17aab1-1b84-494a-aac8-20dade8918fc
+                stepCounter: 570eb8a3-c265-4a26-b39c-ea13cb17d887
+            name: HK_PURCHASEORDERHEADER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 970f12dc-dbe2-41b6-a389-fe1913d27621
+              stepCounter: 570eb8a3-c265-4a26-b39c-ea13cb17d887
+            dataType: NUMBER(38,0)
+            description: Primary key.
+            name: PURCHASEORDERID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0ee44db4-f6ac-4bb7-9627-cee8ddee3486
+                    stepCounter: 4bd37d48-ea93-4025-ad2d-af2e8d2f4bee
+                transform: ""
+          - columnReference:
+              columnCounter: 70dc4f56-2bc5-4f6f-8e9f-662430e7b411
+              stepCounter: 570eb8a3-c265-4a26-b39c-ea13cb17d887
+            dataType: NUMBER(38,0)
+            description: Incremental number to track changes to the purchase order over time.
+            name: REVISIONNUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 506c55d0-1650-4a64-b98a-af40c355d96f
+                    stepCounter: 4bd37d48-ea93-4025-ad2d-af2e8d2f4bee
+                transform: ""
+          - columnReference:
+              columnCounter: 589c5513-84b1-4c59-9004-b3c992614310
+              stepCounter: 570eb8a3-c265-4a26-b39c-ea13cb17d887
+            dataType: NUMBER(38,0)
+            description: Order current status. 1 = Pending; 2 = Approved; 3 = Rejected; 4 = Complete
+            name: STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6a7e254a-818b-43cd-9c22-1a91595bb768
+                    stepCounter: 4bd37d48-ea93-4025-ad2d-af2e8d2f4bee
+                transform: ""
+          - columnReference:
+              columnCounter: 43adc214-ebc0-4668-ab82-608db8a26688
+              stepCounter: 570eb8a3-c265-4a26-b39c-ea13cb17d887
+            dataType: NUMBER(38,0)
+            description: Employee who created the purchase order. Foreign key to Employee.BusinessEntityID.
+            name: EMPLOYEEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: eeb7b6d5-86d1-46d4-aca4-62b31e9a7eef
+                    stepCounter: 4bd37d48-ea93-4025-ad2d-af2e8d2f4bee
+                transform: ""
+          - columnReference:
+              columnCounter: 8d63fa7c-5209-484c-bb9e-c6019f00a3cf
+              stepCounter: 570eb8a3-c265-4a26-b39c-ea13cb17d887
+            dataType: NUMBER(38,0)
+            description: Vendor with whom the purchase order is placed. Foreign key to Vendor.BusinessEntityID.
+            name: VENDORID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3fad6cf9-6c77-4b06-9e96-a1e99d3778af
+                    stepCounter: 4bd37d48-ea93-4025-ad2d-af2e8d2f4bee
+                transform: ""
+          - columnReference:
+              columnCounter: af17aab1-1b84-494a-aac8-20dade8918fc
+              stepCounter: 570eb8a3-c265-4a26-b39c-ea13cb17d887
+            dataType: NUMBER(38,0)
+            description: Shipping method. Foreign key to ShipMethod.ShipMethodID.
+            name: SHIPMETHODID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 07f6cf1d-faff-4682-b413-241e530feff5
+                    stepCounter: 4bd37d48-ea93-4025-ad2d-af2e8d2f4bee
+                transform: ""
+          - columnReference:
+              columnCounter: a9d953ca-97ca-472b-8dcb-03a62c9c1ccd
+              stepCounter: 570eb8a3-c265-4a26-b39c-ea13cb17d887
+            dataType: TIMESTAMP_NTZ(9)
+            description: Purchase order creation date.
+            name: ORDERDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 71e6ca05-de4e-4d42-bceb-abbb63e265db
+                    stepCounter: 4bd37d48-ea93-4025-ad2d-af2e8d2f4bee
+                transform: ""
+          - columnReference:
+              columnCounter: bc4f02db-0ef2-4fb6-8426-d047d7d2fde6
+              stepCounter: 570eb8a3-c265-4a26-b39c-ea13cb17d887
+            dataType: TIMESTAMP_NTZ(9)
+            description: Estimated shipment date from the vendor.
+            name: SHIPDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: aa31a7b2-ce23-44d5-96e9-36f1d3dc0a94
+                    stepCounter: 4bd37d48-ea93-4025-ad2d-af2e8d2f4bee
+                transform: ""
+          - columnReference:
+              columnCounter: 13e8012f-1319-44f9-9003-05297a315e3d
+              stepCounter: 570eb8a3-c265-4a26-b39c-ea13cb17d887
+            dataType: NUMBER(19,4)
+            description: Purchase order subtotal. Computed as SUM(PurchaseOrderDetail.LineTotal)for the appropriate PurchaseOrderID.
+            name: SUBTOTAL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 63b7e340-6af2-4324-bdd1-cf4b1c15bac9
+                    stepCounter: 4bd37d48-ea93-4025-ad2d-af2e8d2f4bee
+                transform: ""
+          - columnReference:
+              columnCounter: b11ab269-aa16-4b24-9af0-015094985fb3
+              stepCounter: 570eb8a3-c265-4a26-b39c-ea13cb17d887
+            dataType: NUMBER(19,4)
+            description: Tax amount.
+            name: TAXAMT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c823cfb3-a3e7-45dd-84fe-69d2edb082e9
+                    stepCounter: 4bd37d48-ea93-4025-ad2d-af2e8d2f4bee
+                transform: ""
+          - columnReference:
+              columnCounter: 66f47bb3-b246-4d5b-9907-74a590e6b1df
+              stepCounter: 570eb8a3-c265-4a26-b39c-ea13cb17d887
+            dataType: NUMBER(19,4)
+            description: Shipping cost.
+            name: FREIGHT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f483fe07-4667-4165-935c-f96b7eb73a78
+                    stepCounter: 4bd37d48-ea93-4025-ad2d-af2e8d2f4bee
+                transform: ""
+          - columnReference:
+              columnCounter: 42cd2a60-7a00-4e1a-8563-12fe4c61b29b
+              stepCounter: 570eb8a3-c265-4a26-b39c-ea13cb17d887
+            dataType: NUMBER(19,4)
+            description: Total due to vendor. Computed as Subtotal + TaxAmt + Freight.
+            name: TOTALDUE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4f56d4b1-51f9-44a0-9f6a-bcbca81b53fe
+                    stepCounter: 4bd37d48-ea93-4025-ad2d-af2e8d2f4bee
+                transform: ""
+          - columnReference:
+              columnCounter: d71cc36b-0ca2-4c80-b2d0-16f4978f6874
+              stepCounter: 570eb8a3-c265-4a26-b39c-ea13cb17d887
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 458b685e-b12e-432b-bc92-a4686b6ce9ed
+                    stepCounter: 4bd37d48-ea93-4025-ad2d-af2e8d2f4bee
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 787748c8-72ad-47b6-8503-5a3a54260d0c
+              stepCounter: 570eb8a3-c265-4a26-b39c-ea13cb17d887
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1442bfd7-3188-437e-b3e2-568b8a126f05
+              stepCounter: 570eb8a3-c265-4a26-b39c-ea13cb17d887
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b438262e-27aa-4b68-94b0-c302e89053e0
+              stepCounter: 570eb8a3-c265-4a26-b39c-ea13cb17d887
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 70dc4f56-2bc5-4f6f-8e9f-662430e7b411
+                stepCounter: 570eb8a3-c265-4a26-b39c-ea13cb17d887
+              - columnCounter: 589c5513-84b1-4c59-9004-b3c992614310
+                stepCounter: 570eb8a3-c265-4a26-b39c-ea13cb17d887
+              - columnCounter: a9d953ca-97ca-472b-8dcb-03a62c9c1ccd
+                stepCounter: 570eb8a3-c265-4a26-b39c-ea13cb17d887
+              - columnCounter: bc4f02db-0ef2-4fb6-8426-d047d7d2fde6
+                stepCounter: 570eb8a3-c265-4a26-b39c-ea13cb17d887
+              - columnCounter: 13e8012f-1319-44f9-9003-05297a315e3d
+                stepCounter: 570eb8a3-c265-4a26-b39c-ea13cb17d887
+              - columnCounter: 66f47bb3-b246-4d5b-9907-74a590e6b1df
+                stepCounter: 570eb8a3-c265-4a26-b39c-ea13cb17d887
+              - columnCounter: 42cd2a60-7a00-4e1a-8563-12fe4c61b29b
+                stepCounter: 570eb8a3-c265-4a26-b39c-ea13cb17d887
+              - columnCounter: d71cc36b-0ca2-4c80-b2d0-16f4978f6874
+                stepCounter: 570eb8a3-c265-4a26-b39c-ea13cb17d887
+              - columnCounter: b11ab269-aa16-4b24-9af0-015094985fb3
+                stepCounter: 570eb8a3-c265-4a26-b39c-ea13cb17d887
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: aba2327a-e202-40e8-a581-b08a307a2fc8
+              stepCounter: 570eb8a3-c265-4a26-b39c-ea13cb17d887
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: af17aab1-1b84-494a-aac8-20dade8918fc
+                stepCounter: 570eb8a3-c265-4a26-b39c-ea13cb17d887
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: ADV_WRKS_SRC
+                nodeName: AW_LOAD_PURCHASEORDERHEADER
+            join:
+              joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_PURCHASEORDERHEADER') }} "AW_LOAD_PURCHASEORDERHEADER"
+            name: DVSTG_AW_PURCHASEORDERHEADER
+            noLinkRefs: []
+      name: DVSTG_AW_PURCHASEORDERHEADER
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: 570eb8a3-c265-4a26-b39c-ea13cb17d887

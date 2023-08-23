@@ -1,0 +1,1021 @@
+steps:
+  DVSTG_CDC_REPORTED_PATIENT_IMPACT-d69da4ce-bf59-4575-a588-6ddf7183fe73:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1bfcec8e-bcec-406b-9bf3-8edbc6c8bbd6
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 60f86e04-d237-4485-844c-e954b3202c11
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: 863f2038-346d-4025-8fb4-344576bc5d00
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: d5f02e63-5cb5-4955-a5b3-3538950d1f0f
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            name: HK_CDC_REPORTED_PATIENT_IMPACT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 60f86e04-d237-4485-844c-e954b3202c11
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: VARCHAR(2)
+            description: ""
+            name: STATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c0eb3cb1-ecb8-4042-b4ac-02c9ba50599d
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: ace8f482-fd14-4a1b-83c3-2c24fafa3d1b
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: CRITICAL_STAFFING_SHORTAGE_TODAY_YES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 98e2c927-c72f-4d60-ba02-ca533eef9b8d
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: fc9f2d7a-6767-4c2d-89e6-2905d9ad9cba
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: CRITICAL_STAFFING_SHORTAGE_TODAY_NO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a5e4a352-f447-4c0a-9aac-a9515252cbde
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: 7f899352-d2ed-4ff3-84f0-0e2cc653fa06
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: CRITICAL_STAFFING_SHORTAGE_TODAY_NOT_REPORTED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b3711c0a-9d10-4dc6-b215-f8c9a14a629b
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: 0aa8f278-f47d-41fc-a1ed-558cc04c8232
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: CRITICAL_STAFFING_SHORTAGE_ANTICIPATED_WITHIN_WEEK_YES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 18c247af-0d3f-4ac0-bb3a-cb18fcce7642
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: 1fa0f1a9-6224-4b43-870c-0e54e096344f
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: CRITICAL_STAFFING_SHORTAGE_ANTICIPATED_WITHIN_WEEK_NO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4a345a58-ffac-49f1-b8b0-ecb1165b8dfd
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: 74af9152-89ae-471c-baec-a1f22115fcec
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: CRITICAL_STAFFING_SHORTAGE_ANTICIPATED_WITHIN_WEEK_NOT_REPORTED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2cdb49d2-d2c3-4509-9375-d1cd47f8355e
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: e46689d3-e46f-41e5-a931-5aee77ebe2e2
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: HOSPITAL_ONSET_COVID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e9067ebb-e71c-4c04-aeac-530bc3ecf5c3
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: 11406f09-12a8-4cb0-a818-5eef68b1d528
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: HOSPITAL_ONSET_COVID_COVERAGE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 53af0634-8a84-452d-b8ee-6010023246f8
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: a2143d5a-0ba0-46c0-99b3-c37833920f98
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: INPATIENT_BEDS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c28b27d0-cae5-4808-976e-1fe6f0f1d3ea
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: 6ab60c18-3745-42b5-9971-7c962899395c
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: INPATIENT_BEDS_COVERAGE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bd92744d-8105-4a41-b6fc-376f0b502f7f
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: 0cdfb2ca-2f2e-4a75-b207-d3087b30a981
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: INPATIENT_BEDS_USED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 21b6d851-c561-494b-8c73-02b57db00fd7
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: a331ea9b-872c-437f-95db-f86baad07fbb
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: INPATIENT_BEDS_USED_COVERAGE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b9b8be0b-f7d6-4e83-8039-c8818975b0e8
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: 5b25cb4b-8a3c-4ce7-90f6-0bd94da25237
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: INPATIENT_BEDS_USED_COVID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8f37add1-6f5b-4117-bce0-03ddde781c7a
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: 77f76ddd-745e-44a4-9436-5a9ba5554a5f
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: INPATIENT_BEDS_USED_COVID_COVERAGE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9b217583-b851-44b7-97a3-62af4fc730d4
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: 70e1ff55-5cf1-401f-89b7-09b4bd94d9e6
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: PREVIOUS_DAY_ADMISSION_ADULT_COVID_CONFIRMED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 89a1cac5-9ede-4f3f-b049-2f0596498193
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: 900387bc-f141-479f-8cd9-814f6567ea40
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: PREVIOUS_DAY_ADMISSION_ADULT_COVID_CONFIRMED_COVERAGE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 40b47e81-6aea-4d7e-8099-d8d924c6e927
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: 4a763cae-253b-4b69-a074-65e0c0c02382
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: PREVIOUS_DAY_ADMISSION_ADULT_COVID_SUSPECTED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c346b655-9d40-4162-b1f8-2a3e65e9820c
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: 0033ce06-1b9b-4798-ae46-839c23bb21cf
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: PREVIOUS_DAY_ADMISSION_ADULT_COVID_SUSPECTED_COVERAGE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bc0fa236-8df3-44aa-b887-69a5a75d9e5c
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: ae1ae64f-cb51-4d9e-be1f-88b36f58d73e
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: PREVIOUS_DAY_ADMISSION_PEDIATRIC_COVID_CONFIRMED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6772bb0b-31c8-443a-bd60-5077fc5787e9
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: db39a493-69e9-4b66-a39c-25654719cae4
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: PREVIOUS_DAY_ADMISSION_PEDIATRIC_COVID_CONFIRMED_COVERAGE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d7ce4257-0fa6-46c9-9932-3fa65b202102
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: f7c3c23f-785e-4f18-b191-9775748948cc
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: PREVIOUS_DAY_ADMISSION_PEDIATRIC_COVID_SUSPECTED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5da70e51-5c7f-4849-863d-c2188abc1c90
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: a3cc7bb2-e3d3-4323-b6a9-3d0f8f826050
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: PREVIOUS_DAY_ADMISSION_PEDIATRIC_COVID_SUSPECTED_COVERAGE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7a0c2475-9d0c-4c66-b111-1acfeafa7e22
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: 2cedc008-52bd-4cf2-8ad2-4b1e106166f4
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: STAFFED_ADULT_ICU_BED_OCCUPANCY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 368fc4f7-a6ba-4dcf-823c-f6cba9b05e4c
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: e0dac90a-4411-47c7-b906-e80bb24bd8eb
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: STAFFED_ADULT_ICU_BED_OCCUPANCY_COVERAGE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e5242556-082a-4187-8ee1-31a8b3f1f914
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: 7e493f16-07cb-42c4-92ef-0f37d5c207eb
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: STAFFED_ICU_ADULT_PATIENTS_CONFIRMED_AND_SUSPECTED_COVID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f4e89e2a-720b-4f5f-865d-ff0c00de50ac
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: 2959628f-270d-41f7-870a-809bc13f4099
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: STAFFED_ICU_ADULT_PATIENTS_CONFIRMED_AND_SUSPECTED_COVID_COVERAGE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b11a8b72-f683-4668-a4a4-71d67d9f6a7b
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: 8d9feac8-7aed-4e39-8928-f4639b9a16a2
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: STAFFED_ICU_ADULT_PATIENTS_CONFIRMED_COVID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0b8485ca-076e-46ab-a95a-e0b5c801c227
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: 7c4906b8-3eb3-43f0-a9da-edbe386d7aa1
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: STAFFED_ICU_ADULT_PATIENTS_CONFIRMED_COVID_COVERAGE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a6833e2a-3f51-4cb3-a665-4d89f543456b
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: 4d7d2698-acf7-492d-8ed6-9f15f8acd297
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: TOTAL_ADULT_PATIENTS_HOSPITALIZED_CONFIRMED_AND_SUSPECTED_COVID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b5e68e42-d5d5-49dd-8b7a-680e33194cf1
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: 601467c8-f0a7-4eb2-bb79-c11012c4789b
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: TOTAL_ADULT_PATIENTS_HOSPITALIZED_CONFIRMED_AND_SUSPECTED_COVID_COVERAGE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7dc6cecd-53f2-440e-811c-7a1de4c48d92
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: 456d6c35-d434-4014-95a2-b3028d13ff67
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: TOTAL_ADULT_PATIENTS_HOSPITALIZED_CONFIRMED_COVID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ab6a21ef-88de-40fb-97f9-f301c2a7e8df
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: cbcfd376-ce51-452e-9c21-00b5fb1cc3d4
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: TOTAL_ADULT_PATIENTS_HOSPITALIZED_CONFIRMED_COVID_COVERAGE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f64c3b9d-fe91-4423-b83e-be9243cdc86e
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: ebfcc9c8-e735-4d57-a589-0b20e03e0d8c
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: TOTAL_PEDIATRIC_PATIENTS_HOSPITALIZED_CONFIRMED_AND_SUSPECTED_COVID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4f15aca8-59e4-484c-b0f9-f6044753d71a
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: abaf2c24-3bc6-4fab-b6e8-db0e74458858
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: TOTAL_PEDIATRIC_PATIENTS_HOSPITALIZED_CONFIRMED_AND_SUSPECTED_COVID_COVERAGE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e97f65bf-b845-43e4-be73-889920d6b651
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: 10014f5c-ccaf-4122-9a46-53541ebcbc21
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: TOTAL_PEDIATRIC_PATIENTS_HOSPITALIZED_CONFIRMED_COVID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 267cd24f-a10f-4f64-8af7-d2d24aaa48fe
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: 4ad23f0b-16b3-4e71-b40a-01a6f2b06169
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: TOTAL_PEDIATRIC_PATIENTS_HOSPITALIZED_CONFIRMED_COVID_COVERAGE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d2342a82-8bd7-42ea-a130-d45e70593de5
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: f542f8ff-07e0-428d-bd51-9b11de8fa2b2
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: TOTAL_STAFFED_ADULT_ICU_BEDS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d9074a2c-4629-45ac-a40a-9c9e94187660
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: f2766928-0513-423d-b2ff-ee8f696f09bd
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: TOTAL_STAFFED_ADULT_ICU_BEDS_COVERAGE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d8436d79-d713-46c3-b843-acf6de92298e
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: 8206f916-c6cd-45b5-97cc-946c4723b23b
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: FLOAT
+            description: ""
+            name: INPATIENT_BEDS_UTILIZATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 941fa07c-14ec-493d-a9b9-e0710b2d7151
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: 40db897f-aeac-499f-9ca6-83813934adaf
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: INPATIENT_BEDS_UTILIZATION_COVERAGE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4cd0e096-c2a4-4568-95a0-dfef581ad60c
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: aa3b2c50-e60c-4d3e-91a1-ae416d3e9c8b
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: INPATIENT_BEDS_UTILIZATION_NUMERATOR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 58db3d86-fc7a-4195-a5ff-e8fc7c03ced4
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: da3bc534-9ff8-4f5c-a6f7-722a3f1a0895
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: INPATIENT_BEDS_UTILIZATION_DENOMINATOR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cdb157a0-5fe4-41fc-b754-8dee05a4200d
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: b6c608e9-088a-44a0-ae1f-b155d1609a14
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: FLOAT
+            description: ""
+            name: PERCENT_OF_INPATIENTS_WITH_COVID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a1ea8005-ac85-4ca0-a7bc-620d57837c7d
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: e107cb9a-9aae-45b6-a465-129306a70458
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: PERCENT_OF_INPATIENTS_WITH_COVID_COVERAGE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c33baf37-442c-45d6-9cd9-950bf17340ee
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: 431574e5-ad4c-4690-8aa7-13e891271dd4
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: PERCENT_OF_INPATIENTS_WITH_COVID_NUMERATOR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fb9f6ecd-8029-417a-ae3e-089c6fdee197
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: abbefac7-2445-46cf-a6d0-36f327bc5d00
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: PERCENT_OF_INPATIENTS_WITH_COVID_DENOMINATOR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 59be64b0-895a-475b-98a6-b9819006a4a0
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: 2a71f1c4-b614-4a20-986e-89d671fe7b3b
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: FLOAT
+            description: ""
+            name: INPATIENT_BED_COVID_UTILIZATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6da4fa89-8ea8-4621-8030-5cd444246aba
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: eb58fc2c-275d-46c2-ab42-9dd9281b033c
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: INPATIENT_BED_COVID_UTILIZATION_COVERAGE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 45705db7-add4-4ed6-bd56-8171bc92f325
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: dc489f0b-7a4d-4bf0-8e33-72ba410f6921
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: INPATIENT_BED_COVID_UTILIZATION_NUMERATOR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: adb55929-1432-4679-b39e-7752d8acc5cc
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: a0e8a484-ceaf-4786-89ef-5290615bf0ad
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: INPATIENT_BED_COVID_UTILIZATION_DENOMINATOR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6164cf38-4ef7-4a8c-af27-08d849fa307f
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: fb10dbe3-2ea9-4df5-ad40-f534c607a61b
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: FLOAT
+            description: ""
+            name: ADULT_ICU_BED_COVID_UTILIZATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f6db4366-654e-41e0-a2b7-2c49487f06ec
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: a2a63f0c-0b6d-4823-8064-2b9b7ac7192c
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: ADULT_ICU_BED_COVID_UTILIZATION_COVERAGE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8df1df8f-3f7c-4ba3-8f7a-3252865cf9b1
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: 05f45f2f-913d-494f-8432-15e147be187e
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: ADULT_ICU_BED_COVID_UTILIZATION_NUMERATOR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2bcb4452-368e-41a8-9760-9f966469f75b
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: a0cb3f67-51cc-421b-b16b-e2a6a662c0e5
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: ADULT_ICU_BED_COVID_UTILIZATION_DENOMINATOR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b3ad8ef9-4843-4e56-81cb-287f15b50e06
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: 2c799dcd-71e9-4033-94db-74d86cff7dbf
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: FLOAT
+            description: ""
+            name: ADULT_ICU_BED_UTILIZATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 143dda8e-c8e4-4eae-ad03-c1fe16f04de2
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: 16efefc7-4cbd-4256-9470-c08fffd094c9
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: ADULT_ICU_BED_UTILIZATION_COVERAGE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f606ecec-5100-4bf2-b1de-20b3b1467755
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: 24e5dd49-fcf0-4249-8bf0-6da124cccc7a
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: ADULT_ICU_BED_UTILIZATION_NUMERATOR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 481e10b8-7e84-4dc4-854b-6699f6539e4c
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: 3c91ad37-befa-4ac8-95d8-ab4ef3a08e04
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: NUMBER(38,0)
+            description: ""
+            name: ADULT_ICU_BED_UTILIZATION_DENOMINATOR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1d888f42-2712-4816-bbce-c3237626b5c4
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: 43fb06aa-32ee-4147-b045-69a5ceeca568
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            name: DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cd2691ac-81d3-4328-ad51-c0be4f9a9a16
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: 863f2038-346d-4025-8fb4-344576bc5d00
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: VARCHAR(2)
+            description: ""
+            name: ISO3166_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 751ea8d3-31de-4266-ac95-07bcfe814d4a
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: d5f02e63-5cb5-4955-a5b3-3538950d1f0f
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: VARCHAR(2)
+            description: ""
+            name: ISO3166_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3223b262-941d-4323-88a4-b0879b48b5ce
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: cb666b71-f51d-43b3-92d2-dcdb770287e3
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            name: LAST_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 475a9279-6d38-4fed-971d-fa43a9ade643
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - columnReference:
+              columnCounter: 4f6d6237-618b-4a83-a39f-7654ffe5b8f3
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            dataType: BOOLEAN
+            description: ""
+            name: LAST_REPORTED_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2dcc8cec-d974-4a97-8163-862a47673f3e
+                    stepCounter: ba725ded-cdda-4fc1-823f-0526f84d0bda
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2c47d6fc-8e76-4f80-bab9-21c8856e076e
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a18fa0b9-5b99-4776-80f9-0c1082c1260b
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 233fb987-07ed-4a74-8cbb-31a5262397cd
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: ace8f482-fd14-4a1b-83c3-2c24fafa3d1b
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: fc9f2d7a-6767-4c2d-89e6-2905d9ad9cba
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: 7f899352-d2ed-4ff3-84f0-0e2cc653fa06
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: 0aa8f278-f47d-41fc-a1ed-558cc04c8232
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: 1fa0f1a9-6224-4b43-870c-0e54e096344f
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: 74af9152-89ae-471c-baec-a1f22115fcec
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: e46689d3-e46f-41e5-a931-5aee77ebe2e2
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: 11406f09-12a8-4cb0-a818-5eef68b1d528
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: a2143d5a-0ba0-46c0-99b3-c37833920f98
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: 6ab60c18-3745-42b5-9971-7c962899395c
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: 0cdfb2ca-2f2e-4a75-b207-d3087b30a981
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: a331ea9b-872c-437f-95db-f86baad07fbb
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: 5b25cb4b-8a3c-4ce7-90f6-0bd94da25237
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: 77f76ddd-745e-44a4-9436-5a9ba5554a5f
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: 70e1ff55-5cf1-401f-89b7-09b4bd94d9e6
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: 900387bc-f141-479f-8cd9-814f6567ea40
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: 4a763cae-253b-4b69-a074-65e0c0c02382
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: 0033ce06-1b9b-4798-ae46-839c23bb21cf
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: ae1ae64f-cb51-4d9e-be1f-88b36f58d73e
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: db39a493-69e9-4b66-a39c-25654719cae4
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: f7c3c23f-785e-4f18-b191-9775748948cc
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: a3cc7bb2-e3d3-4323-b6a9-3d0f8f826050
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: 2cedc008-52bd-4cf2-8ad2-4b1e106166f4
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: e0dac90a-4411-47c7-b906-e80bb24bd8eb
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: 7e493f16-07cb-42c4-92ef-0f37d5c207eb
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: 2959628f-270d-41f7-870a-809bc13f4099
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: 8d9feac8-7aed-4e39-8928-f4639b9a16a2
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: 7c4906b8-3eb3-43f0-a9da-edbe386d7aa1
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: 4d7d2698-acf7-492d-8ed6-9f15f8acd297
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: 601467c8-f0a7-4eb2-bb79-c11012c4789b
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: 456d6c35-d434-4014-95a2-b3028d13ff67
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: cbcfd376-ce51-452e-9c21-00b5fb1cc3d4
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: ebfcc9c8-e735-4d57-a589-0b20e03e0d8c
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: abaf2c24-3bc6-4fab-b6e8-db0e74458858
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: 10014f5c-ccaf-4122-9a46-53541ebcbc21
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: 4ad23f0b-16b3-4e71-b40a-01a6f2b06169
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: f542f8ff-07e0-428d-bd51-9b11de8fa2b2
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: f2766928-0513-423d-b2ff-ee8f696f09bd
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: 8206f916-c6cd-45b5-97cc-946c4723b23b
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: 40db897f-aeac-499f-9ca6-83813934adaf
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: aa3b2c50-e60c-4d3e-91a1-ae416d3e9c8b
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: da3bc534-9ff8-4f5c-a6f7-722a3f1a0895
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: b6c608e9-088a-44a0-ae1f-b155d1609a14
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: e107cb9a-9aae-45b6-a465-129306a70458
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: 431574e5-ad4c-4690-8aa7-13e891271dd4
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: abbefac7-2445-46cf-a6d0-36f327bc5d00
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: 2a71f1c4-b614-4a20-986e-89d671fe7b3b
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: eb58fc2c-275d-46c2-ab42-9dd9281b033c
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: dc489f0b-7a4d-4bf0-8e33-72ba410f6921
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: a0e8a484-ceaf-4786-89ef-5290615bf0ad
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: fb10dbe3-2ea9-4df5-ad40-f534c607a61b
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: a2a63f0c-0b6d-4823-8064-2b9b7ac7192c
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: 05f45f2f-913d-494f-8432-15e147be187e
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: a0cb3f67-51cc-421b-b16b-e2a6a662c0e5
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: 2c799dcd-71e9-4033-94db-74d86cff7dbf
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: 16efefc7-4cbd-4256-9470-c08fffd094c9
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: 24e5dd49-fcf0-4249-8bf0-6da124cccc7a
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: 3c91ad37-befa-4ac8-95d8-ab4ef3a08e04
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: 43fb06aa-32ee-4147-b045-69a5ceeca568
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: cb666b71-f51d-43b3-92d2-dcdb770287e3
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+              - columnCounter: 4f6d6237-618b-4a83-a39f-7654ffe5b8f3
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: eeee8075-ff8e-4db5-a780-fbe8a094e10c
+              stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: e46689d3-e46f-41e5-a931-5aee77ebe2e2
+                stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: COVID19
+                nodeName: CDC_REPORTED_PATIENT_IMPACT
+            join:
+              joinCondition: FROM {{ ref('COVID19', 'CDC_REPORTED_PATIENT_IMPACT') }} "CDC_REPORTED_PATIENT_IMPACT"
+            name: DVSTG_CDC_REPORTED_PATIENT_IMPACT
+            noLinkRefs: []
+      name: DVSTG_CDC_REPORTED_PATIENT_IMPACT
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: d69da4ce-bf59-4575-a588-6ddf7183fe73

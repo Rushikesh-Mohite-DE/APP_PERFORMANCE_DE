@@ -1,0 +1,124 @@
+steps:
+  SPORTS_LOAD_AFFILIATION_PHASES-d55294b3-39ac-41d3-94cd-aa9c6ee9ee47:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SPORTS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: db152386-af36-42ba-950e-c3839d160a12
+              stepCounter: d55294b3-39ac-41d3-94cd-aa9c6ee9ee47
+            config: {}
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            name: ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 633ebfef-828b-4f7e-acc3-ec0727847ec6
+              stepCounter: d55294b3-39ac-41d3-94cd-aa9c6ee9ee47
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: AFFILIATION_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 897c0d10-46d4-430a-bc0a-9e289234c66c
+              stepCounter: d55294b3-39ac-41d3-94cd-aa9c6ee9ee47
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: ANCESTOR_AFFILIATION_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 73984f15-28f0-44fb-9dd8-86a5d77aa554
+              stepCounter: d55294b3-39ac-41d3-94cd-aa9c6ee9ee47
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: START_SEASON_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e6aa4448-39f1-4162-b130-3c3405c26e0f
+              stepCounter: d55294b3-39ac-41d3-94cd-aa9c6ee9ee47
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: START_DATE_TIME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6e17e881-8c41-4191-9158-b4376d562540
+              stepCounter: d55294b3-39ac-41d3-94cd-aa9c6ee9ee47
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: END_SEASON_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 077aaa8b-32f9-4f03-ae29-25fe9231d465
+              stepCounter: d55294b3-39ac-41d3-94cd-aa9c6ee9ee47
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: END_DATE_TIME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SPORTS_SRC', 'SPORTS_LOAD_AFFILIATION_PHASES') }}
+      name: SPORTS_LOAD_AFFILIATION_PHASES
+      schema: ""
+      sqlType: Source
+      table: SPORTS_LOAD_AFFILIATION_PHASES
+      type: sourceInput
+    stepCounter: d55294b3-39ac-41d3-94cd-aa9c6ee9ee47

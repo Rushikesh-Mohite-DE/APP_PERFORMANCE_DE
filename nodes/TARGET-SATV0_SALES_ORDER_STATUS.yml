@@ -1,0 +1,163 @@
+steps:
+  SATV0_SALES_ORDER_STATUS-0ef3f34f-068d-4972-929d-f2a48828c45f:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 5fa425e5-c1fe-4ac2-ba91-64d7a5f411b6
+              stepCounter: 0ef3f34f-068d-4972-929d-f2a48828c45f
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_SALES_ORDER_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e8078a3e-e6b8-4609-b3d0-19a8ce02378f
+                    stepCounter: 5be8b6aa-c45f-4d47-9506-008e8e5c746f
+                transform: ""
+          - columnReference:
+              columnCounter: 86f87aef-3ca5-4ef2-bf95-df649aae36e4
+              stepCounter: 0ef3f34f-068d-4972-929d-f2a48828c45f
+            dataType: VARCHAR(255)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ORDER_STATUS_DESCRIPTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9ad5234e-83a6-4d6f-86f5-4d7b4b643c0d
+                    stepCounter: 5be8b6aa-c45f-4d47-9506-008e8e5c746f
+                transform: ""
+          - columnReference:
+              columnCounter: 2b72de6a-05f1-40ea-8edb-05b5dfa1f0f5
+              stepCounter: 0ef3f34f-068d-4972-929d-f2a48828c45f
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CREATING_EMPLOYEE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 472cd145-1a05-4f95-abd0-5014251dce30
+                    stepCounter: 5be8b6aa-c45f-4d47-9506-008e8e5c746f
+                transform: ""
+          - columnReference:
+              columnCounter: 42c1afd2-950d-49ed-8364-8bba937b8d2d
+              stepCounter: 0ef3f34f-068d-4972-929d-f2a48828c45f
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CREATED_DATETIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e334d1c7-4481-42f3-8b2e-a5131e46539e
+                    stepCounter: 5be8b6aa-c45f-4d47-9506-008e8e5c746f
+                transform: ""
+          - columnReference:
+              columnCounter: e09666da-4217-4260-ab86-c5f699510a5f
+              stepCounter: 0ef3f34f-068d-4972-929d-f2a48828c45f
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LAST_CHANGE_EMPLOYEE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ff530ee1-06a1-46b9-8c83-58426cf948cc
+                    stepCounter: 5be8b6aa-c45f-4d47-9506-008e8e5c746f
+                transform: ""
+          - columnReference:
+              columnCounter: c3b0a9c6-28d5-4970-a429-60e4c1aac098
+              stepCounter: 0ef3f34f-068d-4972-929d-f2a48828c45f
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LAST_CHANGE_DATETIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c10479ef-01ee-4cb4-ad03-20ee82bef887
+                    stepCounter: 5be8b6aa-c45f-4d47-9506-008e8e5c746f
+                transform: ""
+          - columnReference:
+              columnCounter: 463c1729-4800-4f4d-a66f-4dc02cc1e005
+              stepCounter: 0ef3f34f-068d-4972-929d-f2a48828c45f
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f5759bc2-ca17-4c42-bba7-50c2f10a3fc0
+                    stepCounter: 5be8b6aa-c45f-4d47-9506-008e8e5c746f
+                transform: ""
+          - columnReference:
+              columnCounter: 72b517f0-06f8-48b9-910a-2a87c82a9222
+              stepCounter: 0ef3f34f-068d-4972-929d-f2a48828c45f
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a65ba58c-a5aa-4f08-ae58-934ae545b068
+                    stepCounter: 5be8b6aa-c45f-4d47-9506-008e8e5c746f
+                transform: ""
+          - columnReference:
+              columnCounter: 4743cabc-a47c-4d3e-b10f-deffb4e6c3c3
+              stepCounter: 0ef3f34f-068d-4972-929d-f2a48828c45f
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3aa1e3f7-e787-4876-8d62-622fd3bce0e7
+                    stepCounter: 5be8b6aa-c45f-4d47-9506-008e8e5c746f
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SALES_ORDER_STATUS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SALES_ORDER_STATUS') }} "DVSTG_SALES_ORDER_STATUS"
+            name: SATV0_SALES_ORDER_STATUS
+            noLinkRefs: []
+      name: SATV0_SALES_ORDER_STATUS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: 0ef3f34f-068d-4972-929d-f2a48828c45f

@@ -1,0 +1,107 @@
+steps:
+  SATV0_NW_CUSTOMERDEMOGRAPHICS-d34e8b1a-d4b2-4e45-8232-918c00f2092c:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 8591e1f4-ac47-4d8e-9ac6-ab38611146a0
+              stepCounter: d34e8b1a-d4b2-4e45-8232-918c00f2092c
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_NW_CUSTOMERDEMOGRAPHICS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d52c568d-ff70-4cf0-8351-677f972ab907
+                    stepCounter: 0c16bdda-a417-4cca-bdc4-3f6643f95826
+                transform: ""
+          - columnReference:
+              columnCounter: a88cb946-4d1e-4f73-8c19-5c7bf633f83b
+              stepCounter: d34e8b1a-d4b2-4e45-8232-918c00f2092c
+            dataType: VARCHAR(4000)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CUSTOMERDESC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 910b7e70-79e2-4868-baa9-f5c35906c8d7
+                    stepCounter: 0c16bdda-a417-4cca-bdc4-3f6643f95826
+                transform: ""
+          - columnReference:
+              columnCounter: db944a38-0034-4c0e-b334-4fea31ad2e61
+              stepCounter: d34e8b1a-d4b2-4e45-8232-918c00f2092c
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3384e9e7-06d9-4322-a915-59fffbefafc3
+                    stepCounter: 0c16bdda-a417-4cca-bdc4-3f6643f95826
+                transform: ""
+          - columnReference:
+              columnCounter: 540c0844-7642-43bd-bfa1-5081c8d167da
+              stepCounter: d34e8b1a-d4b2-4e45-8232-918c00f2092c
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 07aa968f-3dfd-45c2-9324-b7ac842c9e9a
+                    stepCounter: 0c16bdda-a417-4cca-bdc4-3f6643f95826
+                transform: ""
+          - columnReference:
+              columnCounter: b1888fe5-74e5-405c-b7ac-fde961a98d25
+              stepCounter: d34e8b1a-d4b2-4e45-8232-918c00f2092c
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6b0035c8-08a4-40cd-b0be-ea49cd9085f0
+                    stepCounter: 0c16bdda-a417-4cca-bdc4-3f6643f95826
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_NW_CUSTOMERDEMOGRAPHICS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_NW_CUSTOMERDEMOGRAPHICS') }} "DVSTG_NW_CUSTOMERDEMOGRAPHICS"
+            name: SATV0_NW_CUSTOMERDEMOGRAPHICS
+            noLinkRefs: []
+      name: SATV0_NW_CUSTOMERDEMOGRAPHICS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: d34e8b1a-d4b2-4e45-8232-918c00f2092c

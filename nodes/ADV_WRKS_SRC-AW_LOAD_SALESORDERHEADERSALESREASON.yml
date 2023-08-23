@@ -1,0 +1,64 @@
+steps:
+  AW_LOAD_SALESORDERHEADERSALESREASON-34fec249-fbf4-4b49-b08a-cd0872dd5972:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: ADV_WRKS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5f470e54-b8d1-4293-b701-8a9023ecee74
+              stepCounter: 34fec249-fbf4-4b49-b08a-cd0872dd5972
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Primary key. Foreign key to SalesOrderHeader.SalesOrderID.
+            name: SALESORDERID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 63e115ba-6e48-43b7-9db2-36db0ebaac8c
+              stepCounter: 34fec249-fbf4-4b49-b08a-cd0872dd5972
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Primary key. Foreign key to SalesReason.SalesReasonID.
+            name: SALESREASONID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0be8989b-c3b5-4828-9dee-0385e0a0b0cc
+              stepCounter: 34fec249-fbf4-4b49-b08a-cd0872dd5972
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_SALESORDERHEADERSALESREASON') }}
+      name: AW_LOAD_SALESORDERHEADERSALESREASON
+      schema: ""
+      sqlType: Source
+      table: AW_LOAD_SALESORDERHEADERSALESREASON
+      type: sourceInput
+    stepCounter: 34fec249-fbf4-4b49-b08a-cd0872dd5972

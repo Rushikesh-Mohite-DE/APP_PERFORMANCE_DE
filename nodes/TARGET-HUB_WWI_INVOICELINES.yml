@@ -1,0 +1,119 @@
+steps:
+  HUB_WWI_INVOICELINES-2bec99c3-178e-44a2-9b8f-d636d775f695:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 1823eada-64ef-47e9-bf17-06f83ee31e79
+              stepCounter: 2bec99c3-178e-44a2-9b8f-d636d775f695
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_INVOICELINES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5b376cd4-b1b2-4f0c-94d4-199ec619bb33
+                    stepCounter: 1b4141b7-ebd0-4bfc-9ac1-d1a0c1d8c1b7
+                transform: ""
+          - columnReference:
+              columnCounter: 05777c38-2dfc-4a48-b9a0-9d91a211652c
+              stepCounter: 2bec99c3-178e-44a2-9b8f-d636d775f695
+            dataType: NUMBER(38,0)
+            description: Numeric ID used for reference to a line on an invoice within the database
+            hashColumns: []
+            hashDetails: null
+            name: INVOICELINEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 040c3ea8-7ab6-4906-bf21-e1d7f1a63f9c
+                    stepCounter: 1b4141b7-ebd0-4bfc-9ac1-d1a0c1d8c1b7
+                transform: ""
+          - columnReference:
+              columnCounter: 1dd9691a-d94f-4ae6-a543-778baf10f73d
+              stepCounter: 2bec99c3-178e-44a2-9b8f-d636d775f695
+            dataType: NUMBER(38,0)
+            description: Stock item for this invoice line
+            hashColumns: []
+            hashDetails: null
+            name: STOCKITEMID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 70e55730-f2cc-49bb-ad4f-51c8aa82ffd9
+                    stepCounter: 1b4141b7-ebd0-4bfc-9ac1-d1a0c1d8c1b7
+                transform: ""
+          - columnReference:
+              columnCounter: 6766955b-b9d1-4c01-b9c8-a13a2ac8703d
+              stepCounter: 2bec99c3-178e-44a2-9b8f-d636d775f695
+            dataType: NUMBER(38,0)
+            description: Type of package supplied
+            hashColumns: []
+            hashDetails: null
+            name: PACKAGETYPEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a7eba32e-9ab3-4c12-92b3-7f473bf5ef55
+                    stepCounter: 1b4141b7-ebd0-4bfc-9ac1-d1a0c1d8c1b7
+                transform: ""
+          - columnReference:
+              columnCounter: 2147c431-73e2-4f7c-8ca9-523e66a52d45
+              stepCounter: 2bec99c3-178e-44a2-9b8f-d636d775f695
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a3cfd6ff-8828-40e7-b792-fdae3cc4440a
+                    stepCounter: 1b4141b7-ebd0-4bfc-9ac1-d1a0c1d8c1b7
+                transform: ""
+          - columnReference:
+              columnCounter: 4ccfbb64-8065-4ee7-b846-666e226cbeb6
+              stepCounter: 2bec99c3-178e-44a2-9b8f-d636d775f695
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8d33df21-2850-426e-9cb5-bebcc9d40e95
+                    stepCounter: 1b4141b7-ebd0-4bfc-9ac1-d1a0c1d8c1b7
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_WWI_INVOICELINES
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_WWI_INVOICELINES') }} "DVSTG_WWI_INVOICELINES"
+            name: HUB_WWI_INVOICELINES
+            noLinkRefs: []
+      name: HUB_WWI_INVOICELINES
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 2bec99c3-178e-44a2-9b8f-d636d775f695

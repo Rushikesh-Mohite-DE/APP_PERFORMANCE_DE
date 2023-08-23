@@ -1,0 +1,64 @@
+steps:
+  NW_LOAD_SHIPPERS-f7bd8b91-95ca-47a4-b9a5-ebd33540471f:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: NORTHWIND_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4ac5d09f-3958-4444-9877-b2e9af23b2d5
+              stepCounter: f7bd8b91-95ca-47a4-b9a5-ebd33540471f
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: SHIPPERID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 52929800-4146-4319-82b4-05b17e6109c1
+              stepCounter: f7bd8b91-95ca-47a4-b9a5-ebd33540471f
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: COMPANYNAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 57bbf497-f2bc-4709-abee-eeca90066b3a
+              stepCounter: f7bd8b91-95ca-47a4-b9a5-ebd33540471f
+            config: {}
+            dataType: VARCHAR(24)
+            defaultValue: ""
+            description: ""
+            name: PHONE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('NORTHWIND_SRC', 'NW_LOAD_SHIPPERS') }}
+      name: NW_LOAD_SHIPPERS
+      schema: ""
+      sqlType: Source
+      table: NW_LOAD_SHIPPERS
+      type: sourceInput
+    stepCounter: f7bd8b91-95ca-47a4-b9a5-ebd33540471f

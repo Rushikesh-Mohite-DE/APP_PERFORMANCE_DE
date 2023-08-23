@@ -1,0 +1,121 @@
+steps:
+  SATV0_AW_SCRAPREASON-3962e80d-7a18-4d4d-bfcb-c9ab14021216:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: a94cc4de-8afe-44ba-9858-8d300151bb87
+              stepCounter: 3962e80d-7a18-4d4d-bfcb-c9ab14021216
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_SCRAPREASON
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9e57556d-d4a0-4344-bf1b-e4235e3f21e6
+                    stepCounter: ef68e7c0-0faf-4c8e-9aec-b218fbc8f719
+                transform: ""
+          - columnReference:
+              columnCounter: 60dd157a-efb5-4b2d-a1a5-22adf76cf514
+              stepCounter: 3962e80d-7a18-4d4d-bfcb-c9ab14021216
+            dataType: VARCHAR(16777216)
+            description: Failure description.
+            hashColumns: []
+            hashDetails: null
+            name: NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1ff17fd8-2e29-4699-bdc0-9a8a816efe37
+                    stepCounter: ef68e7c0-0faf-4c8e-9aec-b218fbc8f719
+                transform: ""
+          - columnReference:
+              columnCounter: 654d17d5-a72d-4415-9b01-881055785ff0
+              stepCounter: 3962e80d-7a18-4d4d-bfcb-c9ab14021216
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            hashColumns: []
+            hashDetails: null
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 69bfa9f6-1874-4da9-95e5-ddc85325db6c
+                    stepCounter: ef68e7c0-0faf-4c8e-9aec-b218fbc8f719
+                transform: ""
+          - columnReference:
+              columnCounter: 4db3c8a7-5fa8-4a08-8a0a-f50fcf58f977
+              stepCounter: 3962e80d-7a18-4d4d-bfcb-c9ab14021216
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 29bf3a74-e66f-4efd-afea-54d89918b307
+                    stepCounter: ef68e7c0-0faf-4c8e-9aec-b218fbc8f719
+                transform: ""
+          - columnReference:
+              columnCounter: cc377374-8980-4ed6-9c71-98862a3ec612
+              stepCounter: 3962e80d-7a18-4d4d-bfcb-c9ab14021216
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5f0086fa-80d2-4f95-bd81-3d13be8900fe
+                    stepCounter: ef68e7c0-0faf-4c8e-9aec-b218fbc8f719
+                transform: ""
+          - columnReference:
+              columnCounter: 592d61cc-5cb8-4587-9e3b-f9d269b3a916
+              stepCounter: 3962e80d-7a18-4d4d-bfcb-c9ab14021216
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12278a0e-02a0-4b1f-bb98-b62be9f42ccd
+                    stepCounter: ef68e7c0-0faf-4c8e-9aec-b218fbc8f719
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_SCRAPREASON
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_SCRAPREASON') }} "DVSTG_AW_SCRAPREASON"
+            name: SATV0_AW_SCRAPREASON
+            noLinkRefs: []
+      name: SATV0_AW_SCRAPREASON
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: 3962e80d-7a18-4d4d-bfcb-c9ab14021216

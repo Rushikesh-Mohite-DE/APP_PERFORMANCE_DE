@@ -1,0 +1,49 @@
+steps:
+  SPORTS_LOAD_EVENTS_SUB_SEASONS-b7694d83-fded-4938-96c4-d0320ce7a6e1:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SPORTS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7eee7065-e0e0-480d-852d-d07bb2c7ab8e
+              stepCounter: b7694d83-fded-4938-96c4-d0320ce7a6e1
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: EVENT_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 68b941bc-d78e-420b-a3d2-bc31cacfcc17
+              stepCounter: b7694d83-fded-4938-96c4-d0320ce7a6e1
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: SUB_SEASON_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SPORTS_SRC', 'SPORTS_LOAD_EVENTS_SUB_SEASONS') }}
+      name: SPORTS_LOAD_EVENTS_SUB_SEASONS
+      schema: ""
+      sqlType: Source
+      table: SPORTS_LOAD_EVENTS_SUB_SEASONS
+      type: sourceInput
+    stepCounter: b7694d83-fded-4938-96c4-d0320ce7a6e1

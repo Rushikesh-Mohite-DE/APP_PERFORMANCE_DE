@@ -1,0 +1,149 @@
+steps:
+  SATV0_WWI_DELIVERYMETHODS-eff187a6-bf62-4320-a792-ed544f357642:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 565fff68-af8f-4ba9-a442-39840967e49f
+              stepCounter: eff187a6-bf62-4320-a792-ed544f357642
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_DELIVERYMETHODS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 17d0b6cb-808e-4d35-9e20-060abd9c9c7a
+                    stepCounter: a6d22354-8827-40dc-9395-725f20516957
+                transform: ""
+          - columnReference:
+              columnCounter: ab03b960-2eb7-4dd8-8c94-acba9fbf5a83
+              stepCounter: eff187a6-bf62-4320-a792-ed544f357642
+            dataType: VARCHAR(50)
+            description: Full name of methods that can be used for delivery of customer orders
+            hashColumns: []
+            hashDetails: null
+            name: DELIVERYMETHODNAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5800660d-e523-4208-adeb-d94ce830ce41
+                    stepCounter: a6d22354-8827-40dc-9395-725f20516957
+                transform: ""
+          - columnReference:
+              columnCounter: 7bbb8ebb-5ac6-4ab9-ba34-9e2e8920e96b
+              stepCounter: eff187a6-bf62-4320-a792-ed544f357642
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LASTEDITEDBY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 699c91eb-4cc5-4aba-9f42-de15ea3654e8
+                    stepCounter: a6d22354-8827-40dc-9395-725f20516957
+                transform: ""
+          - columnReference:
+              columnCounter: 833443c4-92d7-4917-a417-8a2255f2ad72
+              stepCounter: eff187a6-bf62-4320-a792-ed544f357642
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: VALIDFROM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3f75afa2-7fe4-4268-b82e-f30c3eab208f
+                    stepCounter: a6d22354-8827-40dc-9395-725f20516957
+                transform: ""
+          - columnReference:
+              columnCounter: 4040c4ba-20bb-4d49-b196-502fc030ab33
+              stepCounter: eff187a6-bf62-4320-a792-ed544f357642
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: VALIDTO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 07506144-6511-49b1-9cde-552a9303b17a
+                    stepCounter: a6d22354-8827-40dc-9395-725f20516957
+                transform: ""
+          - columnReference:
+              columnCounter: 471da5df-d427-4807-9205-aa789f811843
+              stepCounter: eff187a6-bf62-4320-a792-ed544f357642
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 58c915d8-0832-48b5-8466-c0aee78221b9
+                    stepCounter: a6d22354-8827-40dc-9395-725f20516957
+                transform: ""
+          - columnReference:
+              columnCounter: 539dba94-659d-4b37-bcb4-5d9089885224
+              stepCounter: eff187a6-bf62-4320-a792-ed544f357642
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c3f3dcf3-b994-4c84-84d8-5c8020c89f40
+                    stepCounter: a6d22354-8827-40dc-9395-725f20516957
+                transform: ""
+          - columnReference:
+              columnCounter: 813151b0-9d44-427b-92d1-652fc40a3653
+              stepCounter: eff187a6-bf62-4320-a792-ed544f357642
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0247f2cd-2450-4a27-a06e-18ff206bcb00
+                    stepCounter: a6d22354-8827-40dc-9395-725f20516957
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_WWI_DELIVERYMETHODS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_WWI_DELIVERYMETHODS') }} "DVSTG_WWI_DELIVERYMETHODS"
+            name: SATV0_WWI_DELIVERYMETHODS
+            noLinkRefs: []
+      name: SATV0_WWI_DELIVERYMETHODS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: eff187a6-bf62-4320-a792-ed544f357642

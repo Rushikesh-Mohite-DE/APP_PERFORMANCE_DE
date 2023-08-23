@@ -1,0 +1,135 @@
+steps:
+  SATV0_AW_DEPARTMENT-7ee9f5ea-bd9b-4b66-9fd3-0564745c54b0:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 58188538-e92d-42e3-b099-388aa8cc8866
+              stepCounter: 7ee9f5ea-bd9b-4b66-9fd3-0564745c54b0
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_DEPARTMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fa0eefdc-85ed-406d-9407-b8447e5f6198
+                    stepCounter: 22557de4-83c6-4b87-bfb2-4699126ae766
+                transform: ""
+          - columnReference:
+              columnCounter: 41a1d5b0-cebb-4121-8fde-a60ab0fcc8ef
+              stepCounter: 7ee9f5ea-bd9b-4b66-9fd3-0564745c54b0
+            dataType: VARCHAR(50)
+            description: Name of the department.
+            hashColumns: []
+            hashDetails: null
+            name: NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 196a05d4-372a-46c8-a205-26ccc596bb4e
+                    stepCounter: 22557de4-83c6-4b87-bfb2-4699126ae766
+                transform: ""
+          - columnReference:
+              columnCounter: 805f7495-fa72-4a16-8386-784d69bd09b4
+              stepCounter: 7ee9f5ea-bd9b-4b66-9fd3-0564745c54b0
+            dataType: VARCHAR(50)
+            description: Name of the group to which the department belongs.
+            hashColumns: []
+            hashDetails: null
+            name: GROUPNAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 09160c87-dd76-425a-83e9-62a4aa9f5317
+                    stepCounter: 22557de4-83c6-4b87-bfb2-4699126ae766
+                transform: ""
+          - columnReference:
+              columnCounter: 523ee9bb-c927-4ada-9000-6a045441048f
+              stepCounter: 7ee9f5ea-bd9b-4b66-9fd3-0564745c54b0
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            hashColumns: []
+            hashDetails: null
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f002a164-7526-43b5-850b-840d7b91b245
+                    stepCounter: 22557de4-83c6-4b87-bfb2-4699126ae766
+                transform: ""
+          - columnReference:
+              columnCounter: c0b5b473-925c-47de-a1de-8cd22146b129
+              stepCounter: 7ee9f5ea-bd9b-4b66-9fd3-0564745c54b0
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: aa83cb39-88e3-4c99-8439-1c019bfdb9bf
+                    stepCounter: 22557de4-83c6-4b87-bfb2-4699126ae766
+                transform: ""
+          - columnReference:
+              columnCounter: caecc9e3-f93b-4778-b37a-e7796dd8dd4b
+              stepCounter: 7ee9f5ea-bd9b-4b66-9fd3-0564745c54b0
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7834bde4-9b24-4d6e-a3e0-8b3d0a0b3783
+                    stepCounter: 22557de4-83c6-4b87-bfb2-4699126ae766
+                transform: ""
+          - columnReference:
+              columnCounter: fec722e1-2c9d-425f-a28a-857cd03edaf8
+              stepCounter: 7ee9f5ea-bd9b-4b66-9fd3-0564745c54b0
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4d86b9af-aa92-4004-8374-8e0233c37ae8
+                    stepCounter: 22557de4-83c6-4b87-bfb2-4699126ae766
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_DEPARTMENT
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_DEPARTMENT') }} "DVSTG_AW_DEPARTMENT"
+            name: SATV0_AW_DEPARTMENT
+            noLinkRefs: []
+      name: SATV0_AW_DEPARTMENT
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: 7ee9f5ea-bd9b-4b66-9fd3-0564745c54b0

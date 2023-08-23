@@ -1,0 +1,167 @@
+steps:
+  DVSTG_SCS_BE_DETAILED_TESTS-090a1cab-ef1b-4ad6-b780-dc14a688a33d:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: Day-to-day time series on tests performed
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 39a818ff-1194-43b6-a6ab-e3eb23d9e250
+              stepCounter: 090a1cab-ef1b-4ad6-b780-dc14a688a33d
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 905f5bba-145f-4dfb-9b5b-b5ee17f33c1b
+                stepCounter: 090a1cab-ef1b-4ad6-b780-dc14a688a33d
+            name: HK_SCS_BE_DETAILED_TESTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 880527b7-07c6-4d39-a242-6889e0479401
+              stepCounter: 090a1cab-ef1b-4ad6-b780-dc14a688a33d
+            dataType: DATE
+            description: Date of data point
+            name: DATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0a5b1ced-ea2a-4a76-ad88-025eb64e1587
+                    stepCounter: d0958ba9-4a70-48a4-8029-6e6fc7b4882e
+                transform: ""
+          - columnReference:
+              columnCounter: 905f5bba-145f-4dfb-9b5b-b5ee17f33c1b
+              stepCounter: 090a1cab-ef1b-4ad6-b780-dc14a688a33d
+            dataType: NUMBER(38,0)
+            description: Number of tests performed on the date of record
+            name: TESTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d1f15e4a-a2c0-401c-aa27-8bfdf2fc2ca6
+                    stepCounter: d0958ba9-4a70-48a4-8029-6e6fc7b4882e
+                transform: ""
+          - columnReference:
+              columnCounter: 5f84b076-ffde-4b2d-9d1d-4668d13dc7aa
+              stepCounter: 090a1cab-ef1b-4ad6-b780-dc14a688a33d
+            dataType: TIMESTAMP_NTZ(9)
+            description: Timestamp of last update
+            name: LAST_UPDATED_DATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9420a2e1-b24f-45a0-8896-7045f217e6f9
+                    stepCounter: d0958ba9-4a70-48a4-8029-6e6fc7b4882e
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9a730065-7df0-4501-96c3-d1413a3b3dc5
+              stepCounter: 090a1cab-ef1b-4ad6-b780-dc14a688a33d
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: dc6e596d-d081-4cc4-969f-9d58a4b69334
+              stepCounter: 090a1cab-ef1b-4ad6-b780-dc14a688a33d
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 669bf375-be6f-4b50-8970-15bb4603ce9d
+              stepCounter: 090a1cab-ef1b-4ad6-b780-dc14a688a33d
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 880527b7-07c6-4d39-a242-6889e0479401
+                stepCounter: 090a1cab-ef1b-4ad6-b780-dc14a688a33d
+              - columnCounter: 5f84b076-ffde-4b2d-9d1d-4668d13dc7aa
+                stepCounter: 090a1cab-ef1b-4ad6-b780-dc14a688a33d
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e7504aa9-6f27-457b-a51e-6e66108dbce4
+              stepCounter: 090a1cab-ef1b-4ad6-b780-dc14a688a33d
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 905f5bba-145f-4dfb-9b5b-b5ee17f33c1b
+                stepCounter: 090a1cab-ef1b-4ad6-b780-dc14a688a33d
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: COVID19
+                nodeName: SCS_BE_DETAILED_TESTS
+            join:
+              joinCondition: FROM {{ ref('COVID19', 'SCS_BE_DETAILED_TESTS') }} "SCS_BE_DETAILED_TESTS"
+            name: DVSTG_SCS_BE_DETAILED_TESTS
+            noLinkRefs: []
+      name: DVSTG_SCS_BE_DETAILED_TESTS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: 090a1cab-ef1b-4ad6-b780-dc14a688a33d

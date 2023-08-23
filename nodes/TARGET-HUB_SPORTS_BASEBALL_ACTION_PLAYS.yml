@@ -1,0 +1,119 @@
+steps:
+  HUB_SPORTS_BASEBALL_ACTION_PLAYS-dec578cc-25c2-411d-950c-b9e4bcec0ef8:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: c86ebb0f-8452-48b5-a6e5-c3ab90419bef
+              stepCounter: dec578cc-25c2-411d-950c-b9e4bcec0ef8
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_ACTION_PLAYS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f57a3df5-1e5d-4e28-a2da-41d7f8820a2c
+                    stepCounter: 6c260734-ca3c-4ff5-8c71-6ff6990fbbdd
+                transform: ""
+          - columnReference:
+              columnCounter: e1d8cf00-b784-44fc-b429-e24e542e8bd5
+              stepCounter: dec578cc-25c2-411d-950c-b9e4bcec0ef8
+            dataType: VARCHAR(32)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cf069311-c628-47ab-b591-12e65f9dfffa
+                    stepCounter: 6c260734-ca3c-4ff5-8c71-6ff6990fbbdd
+                transform: ""
+          - columnReference:
+              columnCounter: 8e4ab9ae-72ed-400f-a14c-e5bfaa69d0bd
+              stepCounter: dec578cc-25c2-411d-950c-b9e4bcec0ef8
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: BASEBALL_EVENT_STATE_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b0425b45-9feb-47f8-a07b-aac4981389d6
+                    stepCounter: 6c260734-ca3c-4ff5-8c71-6ff6990fbbdd
+                transform: ""
+          - columnReference:
+              columnCounter: 665c5817-3574-430b-b48d-ae5e8445b861
+              stepCounter: dec578cc-25c2-411d-950c-b9e4bcec0ef8
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: BASEBALL_DEFENSIVE_GROUP_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1895358a-707a-4438-a6ec-f18a52531fc0
+                    stepCounter: 6c260734-ca3c-4ff5-8c71-6ff6990fbbdd
+                transform: ""
+          - columnReference:
+              columnCounter: add68d9b-9c59-4ac7-b3fa-7db9a2e8e01c
+              stepCounter: dec578cc-25c2-411d-950c-b9e4bcec0ef8
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b6cf6842-35eb-4e95-b20f-c6f9445e205a
+                    stepCounter: 6c260734-ca3c-4ff5-8c71-6ff6990fbbdd
+                transform: ""
+          - columnReference:
+              columnCounter: d60cccec-e456-44bf-9bfc-3e0dbe40839c
+              stepCounter: dec578cc-25c2-411d-950c-b9e4bcec0ef8
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cc826ab6-7bca-42ef-917f-1e82d6ffa6c4
+                    stepCounter: 6c260734-ca3c-4ff5-8c71-6ff6990fbbdd
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SPORTS_BASEBALL_ACTION_PLAYS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SPORTS_BASEBALL_ACTION_PLAYS') }} "DVSTG_SPORTS_BASEBALL_ACTION_PLAYS"
+            name: HUB_SPORTS_BASEBALL_ACTION_PLAYS
+            noLinkRefs: []
+      name: HUB_SPORTS_BASEBALL_ACTION_PLAYS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: dec578cc-25c2-411d-950c-b9e4bcec0ef8

@@ -1,0 +1,199 @@
+steps:
+  WWI_LOAD_PURCHASEORDERLINES-7bca5da4-eb85-4995-9f89-f0f7c5893a1c:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: WIDEWORLIMPORTES_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8b5702af-3a9e-420a-b59a-a16a71d00342
+              stepCounter: 7bca5da4-eb85-4995-9f89-f0f7c5893a1c
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Numeric ID used for reference to a line on a purchase order within the database
+            name: PURCHASEORDERLINEID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7aa9b3d3-0552-42be-be63-67713ec0c641
+              stepCounter: 7bca5da4-eb85-4995-9f89-f0f7c5893a1c
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Purchase order that this line is associated with
+            name: PURCHASEORDERID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 51831de5-74eb-455d-85f2-c51379fb11de
+              stepCounter: 7bca5da4-eb85-4995-9f89-f0f7c5893a1c
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Stock item for this purchase order line
+            name: STOCKITEMID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 446b9bb5-c0b3-4334-a660-762efd9c0c69
+              stepCounter: 7bca5da4-eb85-4995-9f89-f0f7c5893a1c
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Quantity of the stock item that is ordered
+            name: ORDEREDOUTERS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b39c12df-8fa0-4bac-adff-c47c7f4fbe74
+              stepCounter: 7bca5da4-eb85-4995-9f89-f0f7c5893a1c
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: Description of the item to be supplied (Often the stock item name but could be supplier description)
+            name: DESCRIPTION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: cf2c8096-9f16-45df-90e0-89293d51ab8a
+              stepCounter: 7bca5da4-eb85-4995-9f89-f0f7c5893a1c
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Total quantity of the stock item that has been received so far
+            name: RECEIVEDOUTERS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 520346c1-928b-46aa-b5b7-fb87b37f0762
+              stepCounter: 7bca5da4-eb85-4995-9f89-f0f7c5893a1c
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Type of package received
+            name: PACKAGETYPEID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 602a59e5-3bb3-46c9-babb-b5e54f2e1700
+              stepCounter: 7bca5da4-eb85-4995-9f89-f0f7c5893a1c
+            config: {}
+            dataType: NUMBER(18,2)
+            defaultValue: ""
+            description: The unit price that we expect to be charged
+            name: EXPECTEDUNITPRICEPEROUTER
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1dcbb33c-40a7-472e-8e3b-459049b53d4d
+              stepCounter: 7bca5da4-eb85-4995-9f89-f0f7c5893a1c
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: The last date on which this stock item was received for this purchase order
+            name: LASTRECEIPTDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d703e524-ba88-4559-b17e-d555368620e7
+              stepCounter: 7bca5da4-eb85-4995-9f89-f0f7c5893a1c
+            config: {}
+            dataType: VARCHAR(20)
+            defaultValue: ""
+            description: Is this purchase order line now considered finalized? (Receipted quantities and weights are often not precise)
+            name: ISORDERLINEFINALIZED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 703357b6-3e4b-4889-a97b-e933ac70290c
+              stepCounter: 7bca5da4-eb85-4995-9f89-f0f7c5893a1c
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: LASTEDITEDBY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e1a1b1b6-f596-419a-a6de-a31c4b29814a
+              stepCounter: 7bca5da4-eb85-4995-9f89-f0f7c5893a1c
+            config: {}
+            dataType: DATE
+            defaultValue: ""
+            description: ""
+            name: LASTEDITEDWHEN
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('WIDEWORLIMPORTES_SRC', 'WWI_LOAD_PURCHASEORDERLINES') }}
+      name: WWI_LOAD_PURCHASEORDERLINES
+      schema: ""
+      sqlType: Source
+      table: WWI_LOAD_PURCHASEORDERLINES
+      type: sourceInput
+    stepCounter: 7bca5da4-eb85-4995-9f89-f0f7c5893a1c

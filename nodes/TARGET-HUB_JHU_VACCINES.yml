@@ -1,0 +1,91 @@
+steps:
+  HUB_JHU_VACCINES-b7a86d87-18c0-4c97-a55b-d55322d9e65a:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 56c95ac8-7aac-4fa8-851a-8f3111bc69c3
+              stepCounter: b7a86d87-18c0-4c97-a55b-d55322d9e65a
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_JHU_VACCINES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0f369a2b-315b-4ad3-901b-aeea78399c62
+                    stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+                transform: ""
+          - columnReference:
+              columnCounter: d099e38e-ebfa-496a-ad33-81951fccce1f
+              stepCounter: b7a86d87-18c0-4c97-a55b-d55322d9e65a
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PROVINCE_STATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 23db0ab7-d0b3-4228-9b20-2700bcbb08d3
+                    stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+                transform: ""
+          - columnReference:
+              columnCounter: 468c75e5-dbc2-4b10-99af-882b07197197
+              stepCounter: b7a86d87-18c0-4c97-a55b-d55322d9e65a
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c051be22-1276-402e-936d-aff5957504b9
+                    stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+                transform: ""
+          - columnReference:
+              columnCounter: 9f5bd3f4-5883-4f8a-addf-51b4dde0cd20
+              stepCounter: b7a86d87-18c0-4c97-a55b-d55322d9e65a
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9859a3cc-c5a7-49f5-a73f-2f80d62ffcb1
+                    stepCounter: 36176697-87fd-43f5-be9a-9e5f82c6245f
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_JHU_VACCINES
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_JHU_VACCINES') }} "DVSTG_JHU_VACCINES"
+            name: HUB_JHU_VACCINES
+            noLinkRefs: []
+      name: HUB_JHU_VACCINES
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: b7a86d87-18c0-4c97-a55b-d55322d9e65a

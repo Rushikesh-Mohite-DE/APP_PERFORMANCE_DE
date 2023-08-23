@@ -1,0 +1,119 @@
+steps:
+  HUB_AW_BUSINESSENTITYCONTACT-4cc8fbc1-f076-4d79-bb4b-f77b70853767:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 50d91d8f-7cf4-411a-9cd9-df6ec4112e04
+              stepCounter: 4cc8fbc1-f076-4d79-bb4b-f77b70853767
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_BUSINESSENTITYCONTACT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d96556d2-a935-4685-9075-d6e05956d414
+                    stepCounter: 2de9d446-2fe4-409b-9955-1a4e4fe28e24
+                transform: ""
+          - columnReference:
+              columnCounter: 3d978a94-3442-46e5-85c6-98e23dbcc490
+              stepCounter: 4cc8fbc1-f076-4d79-bb4b-f77b70853767
+            dataType: NUMBER(38,0)
+            description: Primary key. Foreign key to BusinessEntity.BusinessEntityID.
+            hashColumns: []
+            hashDetails: null
+            name: BUSINESSENTITYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c87adb49-4a47-4afd-82c5-97d436fa5b7e
+                    stepCounter: 2de9d446-2fe4-409b-9955-1a4e4fe28e24
+                transform: ""
+          - columnReference:
+              columnCounter: bd228e7b-2bc0-4e86-b3c7-fdb383fff2b6
+              stepCounter: 4cc8fbc1-f076-4d79-bb4b-f77b70853767
+            dataType: NUMBER(38,0)
+            description: Primary key. Foreign key to Person.BusinessEntityID.
+            hashColumns: []
+            hashDetails: null
+            name: PERSONID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e7648b87-41c9-4338-9ac2-a6762b309e1f
+                    stepCounter: 2de9d446-2fe4-409b-9955-1a4e4fe28e24
+                transform: ""
+          - columnReference:
+              columnCounter: 390d1685-7195-43c0-8592-0e78e1bf5419
+              stepCounter: 4cc8fbc1-f076-4d79-bb4b-f77b70853767
+            dataType: NUMBER(38,0)
+            description: Primary key.  Foreign key to ContactType.ContactTypeID.
+            hashColumns: []
+            hashDetails: null
+            name: CONTACTTYPEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d44b10ac-7b4c-45f1-9b72-6df70582d8cc
+                    stepCounter: 2de9d446-2fe4-409b-9955-1a4e4fe28e24
+                transform: ""
+          - columnReference:
+              columnCounter: 403bf2e3-1fd9-4b7e-b459-b448c140b272
+              stepCounter: 4cc8fbc1-f076-4d79-bb4b-f77b70853767
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9e0a852b-f34d-46cb-8c98-cd2d52d6789e
+                    stepCounter: 2de9d446-2fe4-409b-9955-1a4e4fe28e24
+                transform: ""
+          - columnReference:
+              columnCounter: 1fbb32d7-27ab-4100-8c18-9779db784a9c
+              stepCounter: 4cc8fbc1-f076-4d79-bb4b-f77b70853767
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 781fc837-251e-4636-b10a-420e50535e29
+                    stepCounter: 2de9d446-2fe4-409b-9955-1a4e4fe28e24
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_BUSINESSENTITYCONTACT
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_BUSINESSENTITYCONTACT') }} "DVSTG_AW_BUSINESSENTITYCONTACT"
+            name: HUB_AW_BUSINESSENTITYCONTACT
+            noLinkRefs: []
+      name: HUB_AW_BUSINESSENTITYCONTACT
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 4cc8fbc1-f076-4d79-bb4b-f77b70853767

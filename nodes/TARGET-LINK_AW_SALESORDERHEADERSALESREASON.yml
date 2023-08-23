@@ -1,0 +1,147 @@
+steps:
+  LINK_AW_SALESORDERHEADERSALESREASON-dfed1d02-bf55-4414-a9c5-12704a29de06:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 4e742b71-a616-48b1-8926-6e0e0d7294f4
+              stepCounter: dfed1d02-bf55-4414-a9c5-12704a29de06
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_SALESORDERHEADERSALESREASON
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2ca0ffc9-5f5e-4923-b2d2-ca1f6ee14d91
+                    stepCounter: 0218bcfe-5f2b-4985-b7d3-53142048541a
+                transform: ""
+          - columnReference:
+              columnCounter: 7e45f795-c8f3-4ec5-a792-cd1a1e756216
+              stepCounter: dfed1d02-bf55-4414-a9c5-12704a29de06
+            dataType: NUMBER(38,0)
+            description: Primary key. Foreign key to SalesOrderHeader.SalesOrderID.
+            hashColumns: []
+            hashDetails: null
+            name: SALESORDERID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bfa7e24e-9362-46aa-95ba-7436579558e5
+                    stepCounter: 0218bcfe-5f2b-4985-b7d3-53142048541a
+                transform: ""
+          - columnReference:
+              columnCounter: 8f51dcc9-517f-499b-8f6e-81a93e63ea1e
+              stepCounter: dfed1d02-bf55-4414-a9c5-12704a29de06
+            dataType: NUMBER(38,0)
+            description: Primary key. Foreign key to SalesReason.SalesReasonID.
+            hashColumns: []
+            hashDetails: null
+            name: SALESREASONID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fbc9d2a6-4a7a-4236-a2aa-fa3a292db3ce
+                    stepCounter: 0218bcfe-5f2b-4985-b7d3-53142048541a
+                transform: ""
+          - columnReference:
+              columnCounter: d5140701-d30f-4974-a3e1-6ff822ece535
+              stepCounter: dfed1d02-bf55-4414-a9c5-12704a29de06
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            hashColumns: []
+            hashDetails: null
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: dbad7e53-1da0-4fb8-a81e-928378e020f2
+                    stepCounter: 0218bcfe-5f2b-4985-b7d3-53142048541a
+                transform: ""
+          - columnReference:
+              columnCounter: fc62ffe6-2df2-4def-abbb-3cd29cb787c6
+              stepCounter: dfed1d02-bf55-4414-a9c5-12704a29de06
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 66c4c8c5-807c-474b-87ac-4d04cbe340b0
+                    stepCounter: 0218bcfe-5f2b-4985-b7d3-53142048541a
+                transform: ""
+          - columnReference:
+              columnCounter: c9db73da-714c-4b7e-a5cd-f8b7f195fe9e
+              stepCounter: dfed1d02-bf55-4414-a9c5-12704a29de06
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 19ff68e5-7fa0-4f89-bd8e-683b4e076ce0
+                    stepCounter: 0218bcfe-5f2b-4985-b7d3-53142048541a
+                transform: ""
+          - columnReference:
+              columnCounter: a511e9b3-5cb6-4d4f-90bc-6cc3a2358abe
+              stepCounter: dfed1d02-bf55-4414-a9c5-12704a29de06
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 388e58df-9a75-402d-a7b8-87ac8003b73d
+                    stepCounter: 0218bcfe-5f2b-4985-b7d3-53142048541a
+                transform: ""
+          - columnReference:
+              columnCounter: 8f5935c8-3f7d-425f-9c0c-713a79385a30
+              stepCounter: dfed1d02-bf55-4414-a9c5-12704a29de06
+            config:
+              is_Link_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LNK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4292d25b-097b-4c23-8bfb-384d6fb1f8c6
+                    stepCounter: 0218bcfe-5f2b-4985-b7d3-53142048541a
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_SALESORDERHEADERSALESREASON
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_SALESORDERHEADERSALESREASON') }} "DVSTG_AW_SALESORDERHEADERSALESREASON"
+            name: LINK_AW_SALESORDERHEADERSALESREASON
+            noLinkRefs: []
+      name: LINK_AW_SALESORDERHEADERSALESREASON
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::7
+      type: sql
+    stepCounter: dfed1d02-bf55-4414-a9c5-12704a29de06

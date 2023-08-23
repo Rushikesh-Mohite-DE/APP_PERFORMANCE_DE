@@ -1,0 +1,161 @@
+steps:
+  HUB_WWI_SPECIALDEALS-4df278c8-5eca-45a4-a40b-e7ba33b0b2ca:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 3bf8238d-af28-4403-9bde-afc287d8d5ba
+              stepCounter: 4df278c8-5eca-45a4-a40b-e7ba33b0b2ca
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_SPECIALDEALS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12168cbb-b19a-4216-9433-d06b68ae6baa
+                    stepCounter: e1b0d532-b0cb-4daa-9c16-3ef76e3ebb37
+                transform: ""
+          - columnReference:
+              columnCounter: d12fdc90-022f-413c-89c6-223c37951404
+              stepCounter: 4df278c8-5eca-45a4-a40b-e7ba33b0b2ca
+            dataType: NUMBER(38,0)
+            description: ID (sequence based) for a special deal
+            hashColumns: []
+            hashDetails: null
+            name: SPECIALDEALID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4d8c384f-e046-479c-b84f-9dc1b5d6376b
+                    stepCounter: e1b0d532-b0cb-4daa-9c16-3ef76e3ebb37
+                transform: ""
+          - columnReference:
+              columnCounter: bef4062f-7bb4-45e9-8c28-4fec9159b44b
+              stepCounter: 4df278c8-5eca-45a4-a40b-e7ba33b0b2ca
+            dataType: VARCHAR(16777216)
+            description: Stock item that the deal applies to (if NULL, then only discounts are permitted not unit prices)
+            hashColumns: []
+            hashDetails: null
+            name: STOCKITEMID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a9c82400-e45c-4cfd-9d4d-424f2e4de913
+                    stepCounter: e1b0d532-b0cb-4daa-9c16-3ef76e3ebb37
+                transform: ""
+          - columnReference:
+              columnCounter: 42893040-e878-4c9b-9b77-9a29f9f7f670
+              stepCounter: 4df278c8-5eca-45a4-a40b-e7ba33b0b2ca
+            dataType: VARCHAR(16777216)
+            description: ID of the customer that the special pricing applies to (if NULL then all customers)
+            hashColumns: []
+            hashDetails: null
+            name: CUSTOMERID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c345c672-beb5-40ee-822a-515025c0f606
+                    stepCounter: e1b0d532-b0cb-4daa-9c16-3ef76e3ebb37
+                transform: ""
+          - columnReference:
+              columnCounter: 8a9b79fd-ef1a-4e87-b361-73275c54d49b
+              stepCounter: 4df278c8-5eca-45a4-a40b-e7ba33b0b2ca
+            dataType: NUMBER(38,0)
+            description: ID of the buying group that the special pricing applies to (optional)
+            hashColumns: []
+            hashDetails: null
+            name: BUYINGGROUPID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 66c486a5-81a9-49c8-a76b-100d389b1697
+                    stepCounter: e1b0d532-b0cb-4daa-9c16-3ef76e3ebb37
+                transform: ""
+          - columnReference:
+              columnCounter: 660f163f-d7f7-4418-9b9d-b10c8edad66c
+              stepCounter: 4df278c8-5eca-45a4-a40b-e7ba33b0b2ca
+            dataType: VARCHAR(16777216)
+            description: ID of the customer category that the special pricing applies to (optional)
+            hashColumns: []
+            hashDetails: null
+            name: CUSTOMERCATEGORYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 579ee9a4-5f3d-4d61-8a3d-080352a542bb
+                    stepCounter: e1b0d532-b0cb-4daa-9c16-3ef76e3ebb37
+                transform: ""
+          - columnReference:
+              columnCounter: 1d13cd56-f0f3-4625-9c0c-c88ef97ae729
+              stepCounter: 4df278c8-5eca-45a4-a40b-e7ba33b0b2ca
+            dataType: NUMBER(38,0)
+            description: ID of the stock group that the special pricing applies to (optional)
+            hashColumns: []
+            hashDetails: null
+            name: STOCKGROUPID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 74d29112-e818-45ff-b79f-0a1083b91e5f
+                    stepCounter: e1b0d532-b0cb-4daa-9c16-3ef76e3ebb37
+                transform: ""
+          - columnReference:
+              columnCounter: 0268996e-116a-4ea9-a3f6-194572c5a0be
+              stepCounter: 4df278c8-5eca-45a4-a40b-e7ba33b0b2ca
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2b938c32-1347-46b3-b480-7e7a0443e82e
+                    stepCounter: e1b0d532-b0cb-4daa-9c16-3ef76e3ebb37
+                transform: ""
+          - columnReference:
+              columnCounter: f9b4ffc3-3a6c-4d17-a15d-d3371830c513
+              stepCounter: 4df278c8-5eca-45a4-a40b-e7ba33b0b2ca
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b37989be-74e6-4814-95f2-9eb7b0664134
+                    stepCounter: e1b0d532-b0cb-4daa-9c16-3ef76e3ebb37
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_WWI_SPECIALDEALS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_WWI_SPECIALDEALS') }} "DVSTG_WWI_SPECIALDEALS"
+            name: HUB_WWI_SPECIALDEALS
+            noLinkRefs: []
+      name: HUB_WWI_SPECIALDEALS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 4df278c8-5eca-45a4-a40b-e7ba33b0b2ca

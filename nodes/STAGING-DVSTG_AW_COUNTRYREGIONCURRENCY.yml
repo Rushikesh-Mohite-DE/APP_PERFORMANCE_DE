@@ -1,0 +1,167 @@
+steps:
+  DVSTG_AW_COUNTRYREGIONCURRENCY-3215ee1c-9601-4213-88b3-85994ccc49fa:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 15f218ac-52d8-4011-a470-c69d8664c99b
+              stepCounter: 3215ee1c-9601-4213-88b3-85994ccc49fa
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 6701dfef-8186-4800-aec1-1bcbf1f2de11
+                stepCounter: 3215ee1c-9601-4213-88b3-85994ccc49fa
+              - columnCounter: e5304421-e4fb-41d5-98bc-409820dffc84
+                stepCounter: 3215ee1c-9601-4213-88b3-85994ccc49fa
+            name: HK_COUNTRYREGIONCURRENCY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 6701dfef-8186-4800-aec1-1bcbf1f2de11
+              stepCounter: 3215ee1c-9601-4213-88b3-85994ccc49fa
+            dataType: VARCHAR(3)
+            description: ISO code for countries and regions. Foreign key to CountryRegion.CountryRegionCode.
+            name: COUNTRYREGIONCODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1ab6e30f-f373-45c5-864e-e4d440776fe9
+                    stepCounter: 806b1dec-e262-4707-bf1d-77793bc7423a
+                transform: ""
+          - columnReference:
+              columnCounter: e5304421-e4fb-41d5-98bc-409820dffc84
+              stepCounter: 3215ee1c-9601-4213-88b3-85994ccc49fa
+            dataType: VARCHAR(3)
+            description: ISO standard currency code. Foreign key to Currency.CurrencyCode.
+            name: CURRENCYCODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1e06298a-e0ca-4fc6-b46a-168a238f2021
+                    stepCounter: 806b1dec-e262-4707-bf1d-77793bc7423a
+                transform: ""
+          - columnReference:
+              columnCounter: 230062ff-4537-4577-80b2-8d1cb529c8db
+              stepCounter: 3215ee1c-9601-4213-88b3-85994ccc49fa
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e7aa2dde-a5bb-4191-8ddc-1141305471d6
+                    stepCounter: 806b1dec-e262-4707-bf1d-77793bc7423a
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 24e093f4-d465-4939-9c43-ece94cb6e93a
+              stepCounter: 3215ee1c-9601-4213-88b3-85994ccc49fa
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7cfbe548-2de8-4e75-95d9-7559f9b70707
+              stepCounter: 3215ee1c-9601-4213-88b3-85994ccc49fa
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 279e294c-65c1-4fcd-8fe6-7387307542df
+              stepCounter: 3215ee1c-9601-4213-88b3-85994ccc49fa
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 230062ff-4537-4577-80b2-8d1cb529c8db
+                stepCounter: 3215ee1c-9601-4213-88b3-85994ccc49fa
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 12898996-19eb-4dcd-8e97-cf3fdabaaeb2
+              stepCounter: 3215ee1c-9601-4213-88b3-85994ccc49fa
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: e5304421-e4fb-41d5-98bc-409820dffc84
+                stepCounter: 3215ee1c-9601-4213-88b3-85994ccc49fa
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: ADV_WRKS_SRC
+                nodeName: AW_LOAD_COUNTRYREGIONCURRENCY
+            join:
+              joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_COUNTRYREGIONCURRENCY') }} "AW_LOAD_COUNTRYREGIONCURRENCY"
+            name: DVSTG_AW_COUNTRYREGIONCURRENCY
+            noLinkRefs: []
+      name: DVSTG_AW_COUNTRYREGIONCURRENCY
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: 3215ee1c-9601-4213-88b3-85994ccc49fa

@@ -1,0 +1,64 @@
+steps:
+  SPORTS_LOAD_PUBLISHERS-a9cdc8a7-bd51-4960-8d9f-3606c4e03219:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SPORTS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 72c777ea-29b3-466a-b521-decd9bfb79e7
+              stepCounter: a9cdc8a7-bd51-4960-8d9f-3606c4e03219
+            config: {}
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            name: ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2dd9b184-ee31-420d-a0a4-023b63ba97bf
+              stepCounter: a9cdc8a7-bd51-4960-8d9f-3606c4e03219
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: PUBLISHER_KEY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 29bff5ea-646f-45bd-9730-d88ee5271f94
+              stepCounter: a9cdc8a7-bd51-4960-8d9f-3606c4e03219
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: PUBLISHER_NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SPORTS_SRC', 'SPORTS_LOAD_PUBLISHERS') }}
+      name: SPORTS_LOAD_PUBLISHERS
+      schema: ""
+      sqlType: Source
+      table: SPORTS_LOAD_PUBLISHERS
+      type: sourceInput
+    stepCounter: a9cdc8a7-bd51-4960-8d9f-3606c4e03219

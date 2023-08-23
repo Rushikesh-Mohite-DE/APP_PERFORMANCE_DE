@@ -1,0 +1,94 @@
+steps:
+  PERBANK_LOAD_LOOKUPTYPES-12cc02fa-d179-4bbd-84b6-031b3218d3e0:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: PERBANK_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8c01273a-25fa-4ea9-b722-4763514ca8dd
+              stepCounter: 12cc02fa-d179-4bbd-84b6-031b3218d3e0
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 241a48ce-4362-455a-9ddb-5925e5e18061
+              stepCounter: 12cc02fa-d179-4bbd-84b6-031b3218d3e0
+            config: {}
+            dataType: VARCHAR(30)
+            defaultValue: ""
+            description: ""
+            name: NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 42ae100e-bd6e-4a6c-9ca9-1af38fc84ea9
+              stepCounter: 12cc02fa-d179-4bbd-84b6-031b3218d3e0
+            config: {}
+            dataType: VARCHAR(20)
+            defaultValue: ""
+            description: ""
+            name: ISACTIVE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f76bb25a-d3fe-4a08-b26d-3f1b641e7475
+              stepCounter: 12cc02fa-d179-4bbd-84b6-031b3218d3e0
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: CREATED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 21e5e279-df9f-4c60-8c15-3a1386d8632a
+              stepCounter: 12cc02fa-d179-4bbd-84b6-031b3218d3e0
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: MODIFIED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('PERBANK_SRC', 'PERBANK_LOAD_LOOKUPTYPES') }}
+      name: PERBANK_LOAD_LOOKUPTYPES
+      schema: ""
+      sqlType: Source
+      table: PERBANK_LOAD_LOOKUPTYPES
+      type: sourceInput
+    stepCounter: 12cc02fa-d179-4bbd-84b6-031b3218d3e0

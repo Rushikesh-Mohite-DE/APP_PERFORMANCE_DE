@@ -1,0 +1,154 @@
+steps:
+  AW_LOAD_SALESPERSON-f839ec19-0806-49e9-a6f8-7d05ef886083:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: ADV_WRKS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a7043041-66b8-4c6a-b7e7-d58931a4df23
+              stepCounter: f839ec19-0806-49e9-a6f8-7d05ef886083
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Primary key for SalesPerson records. Foreign key to Employee.BusinessEntityID
+            name: BUSINESSENTITYID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 49357890-7466-40a9-ab68-dce5cb0a5ef9
+              stepCounter: f839ec19-0806-49e9-a6f8-7d05ef886083
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: Territory currently assigned to. Foreign key to SalesTerritory.SalesTerritoryID.
+            name: TERRITORYID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5c1b6b4f-c36a-4ddf-85d1-f83c31fc347d
+              stepCounter: f839ec19-0806-49e9-a6f8-7d05ef886083
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: Projected yearly sales.
+            name: SALESQUOTA
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7fe9c349-63df-4697-924b-543a1679d87f
+              stepCounter: f839ec19-0806-49e9-a6f8-7d05ef886083
+            config: {}
+            dataType: NUMBER(19,4)
+            defaultValue: ""
+            description: Bonus due if quota is met.
+            name: BONUS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d2a98a75-c647-4c13-ac6b-4eb9e2d27a59
+              stepCounter: f839ec19-0806-49e9-a6f8-7d05ef886083
+            config: {}
+            dataType: NUMBER(10,4)
+            defaultValue: ""
+            description: Commision percent received per sale.
+            name: COMMISSIONPCT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: eaa8a9b1-b05e-461d-a46e-6ab3d8b63606
+              stepCounter: f839ec19-0806-49e9-a6f8-7d05ef886083
+            config: {}
+            dataType: NUMBER(19,4)
+            defaultValue: ""
+            description: Sales total year to date.
+            name: SALESYTD
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4801286b-7a5c-4362-9b9e-f05f4ddd25ca
+              stepCounter: f839ec19-0806-49e9-a6f8-7d05ef886083
+            config: {}
+            dataType: NUMBER(19,4)
+            defaultValue: ""
+            description: Sales total of previous year.
+            name: SALESLASTYEAR
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9fc2e331-a093-41ed-9715-9cfc627514c7
+              stepCounter: f839ec19-0806-49e9-a6f8-7d05ef886083
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            name: ROWGUID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a160ac40-b4c3-4713-96ce-ac9476ec3a22
+              stepCounter: f839ec19-0806-49e9-a6f8-7d05ef886083
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_SALESPERSON') }}
+      name: AW_LOAD_SALESPERSON
+      schema: ""
+      sqlType: Source
+      table: AW_LOAD_SALESPERSON
+      type: sourceInput
+    stepCounter: f839ec19-0806-49e9-a6f8-7d05ef886083

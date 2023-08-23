@@ -1,0 +1,121 @@
+steps:
+  SATV0_AW_ILLUSTRATION-81d06cdb-7581-4370-86c9-223b3861c65e:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 4438e965-2b20-475a-809f-76c27d14fe84
+              stepCounter: 81d06cdb-7581-4370-86c9-223b3861c65e
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_ILLUSTRATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 79ffe398-aee4-4511-a4e7-29b8aa676397
+                    stepCounter: 3f39385d-f60e-4027-ba7e-cc8e46194e00
+                transform: ""
+          - columnReference:
+              columnCounter: cb2266cd-1ea6-4979-992f-98a700ca9775
+              stepCounter: 81d06cdb-7581-4370-86c9-223b3861c65e
+            dataType: VARCHAR(16777216)
+            description: Illustrations used in manufacturing instructions. Stored as XML.
+            hashColumns: []
+            hashDetails: null
+            name: DIAGRAM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: efac20a4-a960-4b5f-a78f-cf31d8d06e55
+                    stepCounter: 3f39385d-f60e-4027-ba7e-cc8e46194e00
+                transform: ""
+          - columnReference:
+              columnCounter: defad8a9-82d9-44f6-bd3a-6323c9c9605b
+              stepCounter: 81d06cdb-7581-4370-86c9-223b3861c65e
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            hashColumns: []
+            hashDetails: null
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2efb04a6-c36a-419b-85f9-2e92b3c49d48
+                    stepCounter: 3f39385d-f60e-4027-ba7e-cc8e46194e00
+                transform: ""
+          - columnReference:
+              columnCounter: 44d30c03-2d45-4d81-8a86-d34114ff5c23
+              stepCounter: 81d06cdb-7581-4370-86c9-223b3861c65e
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 34d11982-9ec6-4f1d-8ded-10071a14df6c
+                    stepCounter: 3f39385d-f60e-4027-ba7e-cc8e46194e00
+                transform: ""
+          - columnReference:
+              columnCounter: fc5d063e-f243-4bf6-bce0-ae160c36b001
+              stepCounter: 81d06cdb-7581-4370-86c9-223b3861c65e
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 25737a6a-e3ff-4aad-93d2-74d950fc0c03
+                    stepCounter: 3f39385d-f60e-4027-ba7e-cc8e46194e00
+                transform: ""
+          - columnReference:
+              columnCounter: 5cf47e00-e6a8-47c3-a3ac-e6584df98866
+              stepCounter: 81d06cdb-7581-4370-86c9-223b3861c65e
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: afe7e05d-47bb-46ad-ab07-e9b92dc862a8
+                    stepCounter: 3f39385d-f60e-4027-ba7e-cc8e46194e00
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_ILLUSTRATION
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_ILLUSTRATION') }} "DVSTG_AW_ILLUSTRATION"
+            name: SATV0_AW_ILLUSTRATION
+            noLinkRefs: []
+      name: SATV0_AW_ILLUSTRATION
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: 81d06cdb-7581-4370-86c9-223b3861c65e

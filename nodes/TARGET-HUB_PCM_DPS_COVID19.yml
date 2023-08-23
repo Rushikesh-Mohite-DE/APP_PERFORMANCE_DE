@@ -1,0 +1,105 @@
+steps:
+  HUB_PCM_DPS_COVID19-3cbdd297-af6e-4eeb-b1f6-3b8394445f40:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: Italy case statistics, summary
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: a8937836-0b02-4ecc-94d0-fbe69aa802da
+              stepCounter: 3cbdd297-af6e-4eeb-b1f6-3b8394445f40
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_PCM_DPS_COVID19
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 993a35b0-aac5-476d-a264-92c70a8650aa
+                    stepCounter: f0f430a2-1e4b-401d-8051-5aced0203d88
+                transform: ""
+          - columnReference:
+              columnCounter: 7954fef9-3515-46b7-a6df-a1fdedc08f6e
+              stepCounter: 3cbdd297-af6e-4eeb-b1f6-3b8394445f40
+            dataType: VARCHAR(16777216)
+            description: ISO-3166-1 entity name
+            hashColumns: []
+            hashDetails: null
+            name: COUNTRY_REGION
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8697508c-0a2d-4e4d-8347-b9da30ee11ee
+                    stepCounter: f0f430a2-1e4b-401d-8051-5aced0203d88
+                transform: ""
+          - columnReference:
+              columnCounter: bd95f9b5-d4d7-42f5-afe9-6340136a4f18
+              stepCounter: 3cbdd297-af6e-4eeb-b1f6-3b8394445f40
+            dataType: VARCHAR(16777216)
+            description: ISO-3166-2 entity name
+            hashColumns: []
+            hashDetails: null
+            name: PROVINCE_STATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fe889ff6-98a3-487a-b47e-5c8e61dd0863
+                    stepCounter: f0f430a2-1e4b-401d-8051-5aced0203d88
+                transform: ""
+          - columnReference:
+              columnCounter: 4824e53c-7675-4f11-bdd0-b589bd6b22da
+              stepCounter: 3cbdd297-af6e-4eeb-b1f6-3b8394445f40
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1cd72847-05c6-4d22-9cda-d0d623159fed
+                    stepCounter: f0f430a2-1e4b-401d-8051-5aced0203d88
+                transform: ""
+          - columnReference:
+              columnCounter: 01594a29-2b84-4600-90fb-d501253323ac
+              stepCounter: 3cbdd297-af6e-4eeb-b1f6-3b8394445f40
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: df18da80-84f1-438f-9b36-67648a6415a1
+                    stepCounter: f0f430a2-1e4b-401d-8051-5aced0203d88
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_PCM_DPS_COVID19
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_PCM_DPS_COVID19') }} "DVSTG_PCM_DPS_COVID19"
+            name: HUB_PCM_DPS_COVID19
+            noLinkRefs: []
+      name: HUB_PCM_DPS_COVID19
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 3cbdd297-af6e-4eeb-b1f6-3b8394445f40

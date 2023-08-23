@@ -1,0 +1,147 @@
+steps:
+  LINK_AW_BUSINESSENTITY-08f2d934-ecd5-4b3d-a2ba-d0204b4fe7e3:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 2ffe47df-7dd9-4831-ae2b-4d8466cdbaaa
+              stepCounter: 08f2d934-ecd5-4b3d-a2ba-d0204b4fe7e3
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_BUSINESSENTITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 25386f41-439d-43af-88d7-3bbd6b647684
+                    stepCounter: f2b7a9b4-f7c2-4a55-bd27-fd17de9223c9
+                transform: ""
+          - columnReference:
+              columnCounter: e793a4ca-6e69-4857-a195-357dd6cecf3e
+              stepCounter: 08f2d934-ecd5-4b3d-a2ba-d0204b4fe7e3
+            dataType: NUMBER(38,0)
+            description: Primary key for all customers, vendors, and employees.
+            hashColumns: []
+            hashDetails: null
+            name: BUSINESSENTITYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4876c71b-f6d4-48ac-9747-447053b105f7
+                    stepCounter: f2b7a9b4-f7c2-4a55-bd27-fd17de9223c9
+                transform: ""
+          - columnReference:
+              columnCounter: 4513f26f-44f0-45db-867c-9b30e8e20795
+              stepCounter: 08f2d934-ecd5-4b3d-a2ba-d0204b4fe7e3
+            dataType: VARCHAR(16777216)
+            description: ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            hashColumns: []
+            hashDetails: null
+            name: ROWGUID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 64d59801-2c00-4bb1-81b5-6464c55b4549
+                    stepCounter: f2b7a9b4-f7c2-4a55-bd27-fd17de9223c9
+                transform: ""
+          - columnReference:
+              columnCounter: bb4f41e6-26ac-4083-93b9-71dd014e1136
+              stepCounter: 08f2d934-ecd5-4b3d-a2ba-d0204b4fe7e3
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            hashColumns: []
+            hashDetails: null
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0619b7ed-59ae-4a0a-9a9f-91ab5a8559b7
+                    stepCounter: f2b7a9b4-f7c2-4a55-bd27-fd17de9223c9
+                transform: ""
+          - columnReference:
+              columnCounter: ddf71cd4-d8ea-4998-be09-e4d522554743
+              stepCounter: 08f2d934-ecd5-4b3d-a2ba-d0204b4fe7e3
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: add5fbc9-edcd-4a0e-bd0c-a1d3516773c5
+                    stepCounter: f2b7a9b4-f7c2-4a55-bd27-fd17de9223c9
+                transform: ""
+          - columnReference:
+              columnCounter: 1df17a0c-8abd-4087-8d62-cbf79317c01e
+              stepCounter: 08f2d934-ecd5-4b3d-a2ba-d0204b4fe7e3
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8ae198c9-4c8b-43c1-a10a-77d29571b57a
+                    stepCounter: f2b7a9b4-f7c2-4a55-bd27-fd17de9223c9
+                transform: ""
+          - columnReference:
+              columnCounter: 0c3ff8cb-e57c-418d-beb5-c7a560052109
+              stepCounter: 08f2d934-ecd5-4b3d-a2ba-d0204b4fe7e3
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d94723a8-5442-4c40-9753-f6a4d6a99e38
+                    stepCounter: f2b7a9b4-f7c2-4a55-bd27-fd17de9223c9
+                transform: ""
+          - columnReference:
+              columnCounter: 75757649-6ec2-4a55-9280-c493b406c688
+              stepCounter: 08f2d934-ecd5-4b3d-a2ba-d0204b4fe7e3
+            config:
+              is_Link_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LNK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0c4c2c66-f70b-493a-ae81-f122b57d366a
+                    stepCounter: f2b7a9b4-f7c2-4a55-bd27-fd17de9223c9
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_BUSINESSENTITY
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_BUSINESSENTITY') }} "DVSTG_AW_BUSINESSENTITY"
+            name: LINK_AW_BUSINESSENTITY
+            noLinkRefs: []
+      name: LINK_AW_BUSINESSENTITY
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::7
+      type: sql
+    stepCounter: 08f2d934-ecd5-4b3d-a2ba-d0204b4fe7e3

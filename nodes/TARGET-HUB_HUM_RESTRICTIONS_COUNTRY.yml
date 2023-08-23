@@ -1,0 +1,105 @@
+steps:
+  HUB_HUM_RESTRICTIONS_COUNTRY-d632dcf8-8617-48b8-8a1a-49aa7cc6d9bb:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: COVID-19 travel restrictions by country
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: b2f761ae-9e34-4000-8032-caba92accbc5
+              stepCounter: d632dcf8-8617-48b8-8a1a-49aa7cc6d9bb
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_HUM_RESTRICTIONS_COUNTRY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 70078b48-6222-4dfd-adbc-c31c96a8c97f
+                    stepCounter: 61c4e4c8-6456-48cd-a954-5c4b4050eeae
+                transform: ""
+          - columnReference:
+              columnCounter: e460f28b-6da5-4969-9112-c1aa8e6890ef
+              stepCounter: d632dcf8-8617-48b8-8a1a-49aa7cc6d9bb
+            dataType: VARCHAR(16777216)
+            description: ISO-3166-1 entity name
+            hashColumns: []
+            hashDetails: null
+            name: COUNTRY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e43b3254-d501-4d69-8966-629e12bd8a3f
+                    stepCounter: 61c4e4c8-6456-48cd-a954-5c4b4050eeae
+                transform: ""
+          - columnReference:
+              columnCounter: 8d7e59fa-f883-4eb4-b312-b5589406b034
+              stepCounter: d632dcf8-8617-48b8-8a1a-49aa7cc6d9bb
+            dataType: VARCHAR(16777216)
+            description: ISO-3166-1 code for geography of record
+            hashColumns: []
+            hashDetails: null
+            name: ISO3166_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9adbc488-eec7-443f-946f-c59ac1c22a26
+                    stepCounter: 61c4e4c8-6456-48cd-a954-5c4b4050eeae
+                transform: ""
+          - columnReference:
+              columnCounter: 965b39ed-e87e-4ecf-b4bc-a11c4427d1ea
+              stepCounter: d632dcf8-8617-48b8-8a1a-49aa7cc6d9bb
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5d278137-9741-426b-9543-ad2ecd59e77c
+                    stepCounter: 61c4e4c8-6456-48cd-a954-5c4b4050eeae
+                transform: ""
+          - columnReference:
+              columnCounter: ad1ab8f9-c7d6-4c6a-a543-439cac9a5b73
+              stepCounter: d632dcf8-8617-48b8-8a1a-49aa7cc6d9bb
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: df698f5a-8763-4b31-9154-a58c88748bbd
+                    stepCounter: 61c4e4c8-6456-48cd-a954-5c4b4050eeae
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_HUM_RESTRICTIONS_COUNTRY
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_HUM_RESTRICTIONS_COUNTRY') }} "DVSTG_HUM_RESTRICTIONS_COUNTRY"
+            name: HUB_HUM_RESTRICTIONS_COUNTRY
+            noLinkRefs: []
+      name: HUB_HUM_RESTRICTIONS_COUNTRY
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: d632dcf8-8617-48b8-8a1a-49aa7cc6d9bb

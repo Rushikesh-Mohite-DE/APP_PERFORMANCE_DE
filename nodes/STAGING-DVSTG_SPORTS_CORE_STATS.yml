@@ -1,0 +1,223 @@
+steps:
+  DVSTG_SPORTS_CORE_STATS-e106f954-12ae-45bf-8aa6-e1ceaa6b3394:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ba47c35b-62c7-4233-940a-6ea2d8cb7144
+              stepCounter: e106f954-12ae-45bf-8aa6-e1ceaa6b3394
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 8fd0580a-8d1e-45e9-a64a-c851b3d7b321
+                stepCounter: e106f954-12ae-45bf-8aa6-e1ceaa6b3394
+            name: HK_CORE_STATS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 8fd0580a-8d1e-45e9-a64a-c851b3d7b321
+              stepCounter: e106f954-12ae-45bf-8aa6-e1ceaa6b3394
+            dataType: VARCHAR(32)
+            description: ""
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8f8ce118-9c10-4595-af97-d74c063a8109
+                    stepCounter: a0b8dab1-2345-4e4f-9186-841eb8951e70
+                transform: ""
+          - columnReference:
+              columnCounter: ef8f2b23-29e5-43d9-beae-d8f2277ae52b
+              stepCounter: e106f954-12ae-45bf-8aa6-e1ceaa6b3394
+            dataType: VARCHAR(100)
+            description: ""
+            name: SCORE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b9cd3de6-1e30-4129-b771-1d477d1a623e
+                    stepCounter: a0b8dab1-2345-4e4f-9186-841eb8951e70
+                transform: ""
+          - columnReference:
+              columnCounter: c0c61402-cd50-4589-8e8b-201c55fd1104
+              stepCounter: e106f954-12ae-45bf-8aa6-e1ceaa6b3394
+            dataType: VARCHAR(100)
+            description: ""
+            name: SCORE_OPPOSING
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 45d89ea1-13ad-407e-95c5-82dcf30da1a8
+                    stepCounter: a0b8dab1-2345-4e4f-9186-841eb8951e70
+                transform: ""
+          - columnReference:
+              columnCounter: 7f837014-0a42-443c-bfd5-23cbff5fe5eb
+              stepCounter: e106f954-12ae-45bf-8aa6-e1ceaa6b3394
+            dataType: VARCHAR(100)
+            description: ""
+            name: SCORE_ATTEMPTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6e304837-e414-4682-a4da-89da5a46b436
+                    stepCounter: a0b8dab1-2345-4e4f-9186-841eb8951e70
+                transform: ""
+          - columnReference:
+              columnCounter: c232b5d5-0439-42e1-aa04-2db4ea9ccac0
+              stepCounter: e106f954-12ae-45bf-8aa6-e1ceaa6b3394
+            dataType: VARCHAR(100)
+            description: ""
+            name: SCORE_ATTEMPTS_OPPOSING
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c42626b1-2d91-434f-b40f-17b358d0729b
+                    stepCounter: a0b8dab1-2345-4e4f-9186-841eb8951e70
+                transform: ""
+          - columnReference:
+              columnCounter: 55d45030-9905-40e4-87ee-d1526d917cb6
+              stepCounter: e106f954-12ae-45bf-8aa6-e1ceaa6b3394
+            dataType: VARCHAR(100)
+            description: ""
+            name: SCORE_PERCENTAGE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 34bae35f-114f-447c-b391-588280311b66
+                    stepCounter: a0b8dab1-2345-4e4f-9186-841eb8951e70
+                transform: ""
+          - columnReference:
+              columnCounter: 438db997-cf88-46e3-918b-9317f5865c11
+              stepCounter: e106f954-12ae-45bf-8aa6-e1ceaa6b3394
+            dataType: VARCHAR(100)
+            description: ""
+            name: SCORE_PERCENTAGE_OPPOSING
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b6ffaa33-071a-42c4-9291-4784c9d1f4f9
+                    stepCounter: a0b8dab1-2345-4e4f-9186-841eb8951e70
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4f250c82-69ac-4d19-b538-13c36b70897d
+              stepCounter: e106f954-12ae-45bf-8aa6-e1ceaa6b3394
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9cea32ef-a8dc-4b1a-bcdc-3d59c7a35a6d
+              stepCounter: e106f954-12ae-45bf-8aa6-e1ceaa6b3394
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5c6b336a-919c-401a-8851-c14b35247a55
+              stepCounter: e106f954-12ae-45bf-8aa6-e1ceaa6b3394
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: ef8f2b23-29e5-43d9-beae-d8f2277ae52b
+                stepCounter: e106f954-12ae-45bf-8aa6-e1ceaa6b3394
+              - columnCounter: c0c61402-cd50-4589-8e8b-201c55fd1104
+                stepCounter: e106f954-12ae-45bf-8aa6-e1ceaa6b3394
+              - columnCounter: 7f837014-0a42-443c-bfd5-23cbff5fe5eb
+                stepCounter: e106f954-12ae-45bf-8aa6-e1ceaa6b3394
+              - columnCounter: c232b5d5-0439-42e1-aa04-2db4ea9ccac0
+                stepCounter: e106f954-12ae-45bf-8aa6-e1ceaa6b3394
+              - columnCounter: 55d45030-9905-40e4-87ee-d1526d917cb6
+                stepCounter: e106f954-12ae-45bf-8aa6-e1ceaa6b3394
+              - columnCounter: 438db997-cf88-46e3-918b-9317f5865c11
+                stepCounter: e106f954-12ae-45bf-8aa6-e1ceaa6b3394
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 41c310c8-f249-46c9-94e4-9261306322f0
+              stepCounter: e106f954-12ae-45bf-8aa6-e1ceaa6b3394
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: c0c61402-cd50-4589-8e8b-201c55fd1104
+                stepCounter: e106f954-12ae-45bf-8aa6-e1ceaa6b3394
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SPORTS_SRC
+                nodeName: SPORTS_LOAD_CORE_STATS
+            join:
+              joinCondition: FROM {{ ref('SPORTS_SRC', 'SPORTS_LOAD_CORE_STATS') }} "SPORTS_LOAD_CORE_STATS"
+            name: DVSTG_SPORTS_CORE_STATS
+            noLinkRefs: []
+      name: DVSTG_SPORTS_CORE_STATS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: e106f954-12ae-45bf-8aa6-e1ceaa6b3394

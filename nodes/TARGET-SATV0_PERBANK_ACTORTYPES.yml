@@ -1,0 +1,149 @@
+steps:
+  SATV0_PERBANK_ACTORTYPES-c8683cf8-e6b9-4226-bd13-bf302496bfe5:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 488f5427-dc72-432e-a2ba-e2831da96b91
+              stepCounter: c8683cf8-e6b9-4226-bd13-bf302496bfe5
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_PERBANK_ACTORTYPES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0413e38b-03e5-44dd-97fe-a5ae29e71edd
+                    stepCounter: f5e2c941-5aef-4a4e-8a79-dc53e57aebe1
+                transform: ""
+          - columnReference:
+              columnCounter: d9da7476-a966-48ee-bde5-3c7682f786e8
+              stepCounter: c8683cf8-e6b9-4226-bd13-bf302496bfe5
+            dataType: VARCHAR(20)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 016bf75c-bc57-4019-b3db-f65eb935854f
+                    stepCounter: f5e2c941-5aef-4a4e-8a79-dc53e57aebe1
+                transform: ""
+          - columnReference:
+              columnCounter: d0f8e564-39c0-4107-bfa1-3121dd2c7bee
+              stepCounter: c8683cf8-e6b9-4226-bd13-bf302496bfe5
+            dataType: VARCHAR(20)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ISACTIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0a623c44-c0a6-4bdc-a9d5-c51db4c68f7b
+                    stepCounter: f5e2c941-5aef-4a4e-8a79-dc53e57aebe1
+                transform: ""
+          - columnReference:
+              columnCounter: d9e61691-2c6a-4ccf-8eb5-3d056c90304d
+              stepCounter: c8683cf8-e6b9-4226-bd13-bf302496bfe5
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CREATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a4509db2-b374-4ac4-85bb-0758572ac525
+                    stepCounter: f5e2c941-5aef-4a4e-8a79-dc53e57aebe1
+                transform: ""
+          - columnReference:
+              columnCounter: 9ca238e8-e984-459b-bf39-e653e051b0b6
+              stepCounter: c8683cf8-e6b9-4226-bd13-bf302496bfe5
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: MODIFIED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2791fa5c-7b90-431e-bb7d-d6e36d2dd644
+                    stepCounter: f5e2c941-5aef-4a4e-8a79-dc53e57aebe1
+                transform: ""
+          - columnReference:
+              columnCounter: f2dc26ea-3527-44b2-9a68-4ca0f3a8f088
+              stepCounter: c8683cf8-e6b9-4226-bd13-bf302496bfe5
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9736c594-dbf5-4d43-9ae6-32623cd69b96
+                    stepCounter: f5e2c941-5aef-4a4e-8a79-dc53e57aebe1
+                transform: ""
+          - columnReference:
+              columnCounter: 8996dfd2-de22-462b-a628-c825a72133ae
+              stepCounter: c8683cf8-e6b9-4226-bd13-bf302496bfe5
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a1f7d855-2fdc-435a-adf5-94d288c3dd46
+                    stepCounter: f5e2c941-5aef-4a4e-8a79-dc53e57aebe1
+                transform: ""
+          - columnReference:
+              columnCounter: 5b47e947-f81b-4c8f-ad23-d68f73eb7dd4
+              stepCounter: c8683cf8-e6b9-4226-bd13-bf302496bfe5
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1c35006e-a393-4fcd-8277-9e6f301c22be
+                    stepCounter: f5e2c941-5aef-4a4e-8a79-dc53e57aebe1
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_PERBANK_ACTORTYPES
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_PERBANK_ACTORTYPES') }} "DVSTG_PERBANK_ACTORTYPES"
+            name: SATV0_PERBANK_ACTORTYPES
+            noLinkRefs: []
+      name: SATV0_PERBANK_ACTORTYPES
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: c8683cf8-e6b9-4226-bd13-bf302496bfe5

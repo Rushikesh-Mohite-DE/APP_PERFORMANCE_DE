@@ -1,0 +1,163 @@
+steps:
+  SATV0_AW_PRODUCTINVENTORY-eddbd535-ef9b-483f-a410-63efdfe27489:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: fef39460-790a-4d26-9f39-ea497cea24b9
+              stepCounter: eddbd535-ef9b-483f-a410-63efdfe27489
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_PRODUCTINVENTORY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a3adc1fa-c653-4fca-a48b-8c9bc7a2c35f
+                    stepCounter: 10d3878b-be72-4090-ae6c-7f353758de04
+                transform: ""
+          - columnReference:
+              columnCounter: e6b59524-b8c7-4ef8-ac96-488bd56037e7
+              stepCounter: eddbd535-ef9b-483f-a410-63efdfe27489
+            dataType: VARCHAR(10)
+            description: Storage compartment within an inventory location.
+            hashColumns: []
+            hashDetails: null
+            name: SHELF
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f5162511-2ba4-4890-9553-9a309b3308aa
+                    stepCounter: 10d3878b-be72-4090-ae6c-7f353758de04
+                transform: ""
+          - columnReference:
+              columnCounter: 928f0798-dcb4-4550-8a6f-2ef6921eb9aa
+              stepCounter: eddbd535-ef9b-483f-a410-63efdfe27489
+            dataType: NUMBER(38,0)
+            description: Storage container on a shelf in an inventory location.
+            hashColumns: []
+            hashDetails: null
+            name: BIN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: db97a4b4-fc87-4b33-9669-f44103b4fa46
+                    stepCounter: 10d3878b-be72-4090-ae6c-7f353758de04
+                transform: ""
+          - columnReference:
+              columnCounter: 0ca9d437-1fe0-4a46-b823-71f5844aef2b
+              stepCounter: eddbd535-ef9b-483f-a410-63efdfe27489
+            dataType: NUMBER(38,0)
+            description: Quantity of products in the inventory location.
+            hashColumns: []
+            hashDetails: null
+            name: QUANTITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 22b7d3f7-407c-4e0f-8102-1692031b21f7
+                    stepCounter: 10d3878b-be72-4090-ae6c-7f353758de04
+                transform: ""
+          - columnReference:
+              columnCounter: 57d6a9e6-0413-4d15-8828-53eb00220735
+              stepCounter: eddbd535-ef9b-483f-a410-63efdfe27489
+            dataType: VARCHAR(16777216)
+            description: ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            hashColumns: []
+            hashDetails: null
+            name: ROWGUID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a8b76cfa-899e-4531-8a33-0c488fe691b4
+                    stepCounter: 10d3878b-be72-4090-ae6c-7f353758de04
+                transform: ""
+          - columnReference:
+              columnCounter: 253bb960-2f90-405d-b6ff-83fac82f5e29
+              stepCounter: eddbd535-ef9b-483f-a410-63efdfe27489
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            hashColumns: []
+            hashDetails: null
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 734f451b-00e5-4af8-8803-088cf28d2b64
+                    stepCounter: 10d3878b-be72-4090-ae6c-7f353758de04
+                transform: ""
+          - columnReference:
+              columnCounter: 293f010d-58de-4eb9-b706-a294fe1b03cd
+              stepCounter: eddbd535-ef9b-483f-a410-63efdfe27489
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 57a71ced-5dd6-418e-8b3a-0679c493b123
+                    stepCounter: 10d3878b-be72-4090-ae6c-7f353758de04
+                transform: ""
+          - columnReference:
+              columnCounter: 3ef842f5-0395-422d-888f-3b587a2beeed
+              stepCounter: eddbd535-ef9b-483f-a410-63efdfe27489
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 109288ac-1e20-4a3d-b9e3-f5c0ea6a4fce
+                    stepCounter: 10d3878b-be72-4090-ae6c-7f353758de04
+                transform: ""
+          - columnReference:
+              columnCounter: 049cf551-7bbd-4ac4-bd2f-5bd2b2b6857d
+              stepCounter: eddbd535-ef9b-483f-a410-63efdfe27489
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0e389b79-ce48-449f-be0f-5cdabfaee589
+                    stepCounter: 10d3878b-be72-4090-ae6c-7f353758de04
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_PRODUCTINVENTORY
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_PRODUCTINVENTORY') }} "DVSTG_AW_PRODUCTINVENTORY"
+            name: SATV0_AW_PRODUCTINVENTORY
+            noLinkRefs: []
+      name: SATV0_AW_PRODUCTINVENTORY
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: eddbd535-ef9b-483f-a410-63efdfe27489

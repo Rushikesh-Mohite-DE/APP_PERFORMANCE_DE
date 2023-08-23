@@ -1,0 +1,221 @@
+steps:
+  DVSTG_AW_CURRENCYRATE-f630f3e0-9df6-4f6b-8740-7fe4f4f23cd2:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b68cf212-5589-4af5-a852-2f42cdc4f059
+              stepCounter: f630f3e0-9df6-4f6b-8740-7fe4f4f23cd2
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 2db114a9-a079-4a18-8b73-9a0d18e70cb8
+                stepCounter: f630f3e0-9df6-4f6b-8740-7fe4f4f23cd2
+            name: HK_CURRENCYRATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 2db114a9-a079-4a18-8b73-9a0d18e70cb8
+              stepCounter: f630f3e0-9df6-4f6b-8740-7fe4f4f23cd2
+            dataType: NUMBER(38,0)
+            description: Primary key for CurrencyRate records.
+            name: CURRENCYRATEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 77854d3a-9358-44b8-8aa4-b8fad5259cfd
+                    stepCounter: d9ee64a6-c76f-422f-a23e-50d8273c625b
+                transform: ""
+          - columnReference:
+              columnCounter: 903576be-7bd9-43ba-a6e2-bdf4055f60ea
+              stepCounter: f630f3e0-9df6-4f6b-8740-7fe4f4f23cd2
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the exchange rate was obtained.
+            name: CURRENCYRATEDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d6467a8f-23eb-42f9-b867-6615d69048f6
+                    stepCounter: d9ee64a6-c76f-422f-a23e-50d8273c625b
+                transform: ""
+          - columnReference:
+              columnCounter: 766dfae0-b8f8-40dd-9132-352b11e7a329
+              stepCounter: f630f3e0-9df6-4f6b-8740-7fe4f4f23cd2
+            dataType: VARCHAR(3)
+            description: Exchange rate was converted from this currency code.
+            name: FROMCURRENCYCODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 60e977da-2fbf-4dd5-abc9-656f33ed6228
+                    stepCounter: d9ee64a6-c76f-422f-a23e-50d8273c625b
+                transform: ""
+          - columnReference:
+              columnCounter: 100c601a-b007-4efe-a3bd-b2eabf1290a1
+              stepCounter: f630f3e0-9df6-4f6b-8740-7fe4f4f23cd2
+            dataType: VARCHAR(3)
+            description: Exchange rate was converted to this currency code.
+            name: TOCURRENCYCODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5ca13061-43ee-49f1-80ef-7325656fd719
+                    stepCounter: d9ee64a6-c76f-422f-a23e-50d8273c625b
+                transform: ""
+          - columnReference:
+              columnCounter: a0ef875a-4074-4452-9a0d-1329eac98d85
+              stepCounter: f630f3e0-9df6-4f6b-8740-7fe4f4f23cd2
+            dataType: NUMBER(19,4)
+            description: Average exchange rate for the day.
+            name: AVERAGERATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 87266c4e-50b8-4225-b9b6-36bd5c33a08c
+                    stepCounter: d9ee64a6-c76f-422f-a23e-50d8273c625b
+                transform: ""
+          - columnReference:
+              columnCounter: 61957466-37c9-40b3-8c7a-3c19c0d42b35
+              stepCounter: f630f3e0-9df6-4f6b-8740-7fe4f4f23cd2
+            dataType: NUMBER(19,4)
+            description: Final exchange rate for the day.
+            name: ENDOFDAYRATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 23c0ba17-1492-45d3-83a1-32284b821205
+                    stepCounter: d9ee64a6-c76f-422f-a23e-50d8273c625b
+                transform: ""
+          - columnReference:
+              columnCounter: d9ae1ca0-dcd0-4e1e-909f-b1bbd8e496b8
+              stepCounter: f630f3e0-9df6-4f6b-8740-7fe4f4f23cd2
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ed74061e-dfd6-4e06-96df-a76162d6c78a
+                    stepCounter: d9ee64a6-c76f-422f-a23e-50d8273c625b
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d4b1476d-947a-4230-926c-b368a3467f90
+              stepCounter: f630f3e0-9df6-4f6b-8740-7fe4f4f23cd2
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e1116064-5453-4f0b-b3ca-d913c26bd886
+              stepCounter: f630f3e0-9df6-4f6b-8740-7fe4f4f23cd2
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 98bba39d-046a-4d7d-95b9-e45a9261a4fc
+              stepCounter: f630f3e0-9df6-4f6b-8740-7fe4f4f23cd2
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 903576be-7bd9-43ba-a6e2-bdf4055f60ea
+                stepCounter: f630f3e0-9df6-4f6b-8740-7fe4f4f23cd2
+              - columnCounter: 766dfae0-b8f8-40dd-9132-352b11e7a329
+                stepCounter: f630f3e0-9df6-4f6b-8740-7fe4f4f23cd2
+              - columnCounter: 100c601a-b007-4efe-a3bd-b2eabf1290a1
+                stepCounter: f630f3e0-9df6-4f6b-8740-7fe4f4f23cd2
+              - columnCounter: a0ef875a-4074-4452-9a0d-1329eac98d85
+                stepCounter: f630f3e0-9df6-4f6b-8740-7fe4f4f23cd2
+              - columnCounter: 61957466-37c9-40b3-8c7a-3c19c0d42b35
+                stepCounter: f630f3e0-9df6-4f6b-8740-7fe4f4f23cd2
+              - columnCounter: d9ae1ca0-dcd0-4e1e-909f-b1bbd8e496b8
+                stepCounter: f630f3e0-9df6-4f6b-8740-7fe4f4f23cd2
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences: []
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 51bbb9a6-f297-4c6a-972c-d14439131d14
+              stepCounter: f630f3e0-9df6-4f6b-8740-7fe4f4f23cd2
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 100c601a-b007-4efe-a3bd-b2eabf1290a1
+                stepCounter: f630f3e0-9df6-4f6b-8740-7fe4f4f23cd2
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: ADV_WRKS_SRC
+                nodeName: AW_LOAD_CURRENCYRATE
+            join:
+              joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_CURRENCYRATE') }} "AW_LOAD_CURRENCYRATE"
+            name: DVSTG_AW_CURRENCYRATE
+            noLinkRefs: []
+      name: DVSTG_AW_CURRENCYRATE
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: f630f3e0-9df6-4f6b-8740-7fe4f4f23cd2

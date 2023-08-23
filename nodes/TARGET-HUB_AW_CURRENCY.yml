@@ -1,0 +1,91 @@
+steps:
+  HUB_AW_CURRENCY-b95df056-b73b-4934-aeaa-969a760aa07f:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 1470b228-bb1e-45b5-b7f8-31adbf8bd26a
+              stepCounter: b95df056-b73b-4934-aeaa-969a760aa07f
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_CURRENCY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f934f272-b237-4df5-affe-4b28afab94ea
+                    stepCounter: abcadb59-777b-43d0-acac-015dff35cb69
+                transform: ""
+          - columnReference:
+              columnCounter: 3ae47c27-5333-4368-9067-58cdb790d703
+              stepCounter: b95df056-b73b-4934-aeaa-969a760aa07f
+            dataType: VARCHAR(3)
+            description: The ISO code for the Currency.
+            hashColumns: []
+            hashDetails: null
+            name: CURRENCYCODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ac3acd90-e64b-443d-8c4b-31f967f4b948
+                    stepCounter: abcadb59-777b-43d0-acac-015dff35cb69
+                transform: ""
+          - columnReference:
+              columnCounter: 991f0e79-6aac-47fa-9bbb-215f818a177b
+              stepCounter: b95df056-b73b-4934-aeaa-969a760aa07f
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 173bf27e-ffb7-45a7-babf-bc36ad2d3de9
+                    stepCounter: abcadb59-777b-43d0-acac-015dff35cb69
+                transform: ""
+          - columnReference:
+              columnCounter: 60b98705-b819-4fee-ad85-f7953b60c3ac
+              stepCounter: b95df056-b73b-4934-aeaa-969a760aa07f
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8d8986a8-aede-4b54-9c94-89a4e1064a71
+                    stepCounter: abcadb59-777b-43d0-acac-015dff35cb69
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_CURRENCY
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_CURRENCY') }} "DVSTG_AW_CURRENCY"
+            name: HUB_AW_CURRENCY
+            noLinkRefs: []
+      name: HUB_AW_CURRENCY
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: b95df056-b73b-4934-aeaa-969a760aa07f

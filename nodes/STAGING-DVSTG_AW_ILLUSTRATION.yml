@@ -1,0 +1,167 @@
+steps:
+  DVSTG_AW_ILLUSTRATION-3f39385d-f60e-4027-ba7e-cc8e46194e00:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 79ffe398-aee4-4511-a4e7-29b8aa676397
+              stepCounter: 3f39385d-f60e-4027-ba7e-cc8e46194e00
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 6df84394-6cd4-4561-ae54-6caec0e8261b
+                stepCounter: 3f39385d-f60e-4027-ba7e-cc8e46194e00
+            name: HK_ILLUSTRATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 6df84394-6cd4-4561-ae54-6caec0e8261b
+              stepCounter: 3f39385d-f60e-4027-ba7e-cc8e46194e00
+            dataType: NUMBER(38,0)
+            description: Primary key for Illustration records.
+            name: ILLUSTRATIONID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 816d97d0-6769-4df8-8150-5958b94dc660
+                    stepCounter: ddf3b6b1-76d8-4a8d-9d2e-741c494c4cef
+                transform: ""
+          - columnReference:
+              columnCounter: efac20a4-a960-4b5f-a78f-cf31d8d06e55
+              stepCounter: 3f39385d-f60e-4027-ba7e-cc8e46194e00
+            dataType: VARCHAR(16777216)
+            description: Illustrations used in manufacturing instructions. Stored as XML.
+            name: DIAGRAM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8f52b1d2-640f-4eb2-a4a1-87177fd8b2f6
+                    stepCounter: ddf3b6b1-76d8-4a8d-9d2e-741c494c4cef
+                transform: ""
+          - columnReference:
+              columnCounter: 2efb04a6-c36a-419b-85f9-2e92b3c49d48
+              stepCounter: 3f39385d-f60e-4027-ba7e-cc8e46194e00
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6fe4bf7c-7637-4343-82f3-88db2ad4b070
+                    stepCounter: ddf3b6b1-76d8-4a8d-9d2e-741c494c4cef
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 34d11982-9ec6-4f1d-8ded-10071a14df6c
+              stepCounter: 3f39385d-f60e-4027-ba7e-cc8e46194e00
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 25737a6a-e3ff-4aad-93d2-74d950fc0c03
+              stepCounter: 3f39385d-f60e-4027-ba7e-cc8e46194e00
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: afe7e05d-47bb-46ad-ab07-e9b92dc862a8
+              stepCounter: 3f39385d-f60e-4027-ba7e-cc8e46194e00
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: efac20a4-a960-4b5f-a78f-cf31d8d06e55
+                stepCounter: 3f39385d-f60e-4027-ba7e-cc8e46194e00
+              - columnCounter: 2efb04a6-c36a-419b-85f9-2e92b3c49d48
+                stepCounter: 3f39385d-f60e-4027-ba7e-cc8e46194e00
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d233861c-48c6-4305-8477-8a1740380d99
+              stepCounter: 3f39385d-f60e-4027-ba7e-cc8e46194e00
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: efac20a4-a960-4b5f-a78f-cf31d8d06e55
+                stepCounter: 3f39385d-f60e-4027-ba7e-cc8e46194e00
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: ADV_WRKS_SRC
+                nodeName: AW_LOAD_ILLUSTRATION
+            join:
+              joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_ILLUSTRATION') }} "AW_LOAD_ILLUSTRATION"
+            name: DVSTG_AW_ILLUSTRATION
+            noLinkRefs: []
+      name: DVSTG_AW_ILLUSTRATION
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: 3f39385d-f60e-4027-ba7e-cc8e46194e00

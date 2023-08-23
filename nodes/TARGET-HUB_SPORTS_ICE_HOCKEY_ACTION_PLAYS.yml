@@ -1,0 +1,105 @@
+steps:
+  HUB_SPORTS_ICE_HOCKEY_ACTION_PLAYS-bd51f210-ebd8-48f7-afb5-05fc7603976c:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: ab963567-c738-4dee-bb4a-e68d6e2991b6
+              stepCounter: bd51f210-ebd8-48f7-afb5-05fc7603976c
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_ACTION_PLAYS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 724675cb-8192-4f2e-9f74-11ec0e7c531e
+                    stepCounter: 3ae8707b-f72c-4ac0-82ce-e6e6ee1de4a5
+                transform: ""
+          - columnReference:
+              columnCounter: 07120863-5d4f-4e03-9071-b9fcb3c4792c
+              stepCounter: bd51f210-ebd8-48f7-afb5-05fc7603976c
+            dataType: VARCHAR(32)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 736f3514-a8a8-4338-99d8-e5ef6f114b9b
+                    stepCounter: 3ae8707b-f72c-4ac0-82ce-e6e6ee1de4a5
+                transform: ""
+          - columnReference:
+              columnCounter: 125cd211-8fa8-46ab-a32b-d894ee923c0d
+              stepCounter: bd51f210-ebd8-48f7-afb5-05fc7603976c
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ICE_HOCKEY_EVENT_STATE_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e48d8f02-c8ed-4b6b-bed3-c286004187b9
+                    stepCounter: 3ae8707b-f72c-4ac0-82ce-e6e6ee1de4a5
+                transform: ""
+          - columnReference:
+              columnCounter: f032ce34-69d9-48ef-afac-0e597b1af506
+              stepCounter: bd51f210-ebd8-48f7-afb5-05fc7603976c
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8ff40302-a027-4c2d-a038-bd3e69a19002
+                    stepCounter: 3ae8707b-f72c-4ac0-82ce-e6e6ee1de4a5
+                transform: ""
+          - columnReference:
+              columnCounter: d7072d89-5ec3-45f3-b014-251af6ce5e1b
+              stepCounter: bd51f210-ebd8-48f7-afb5-05fc7603976c
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ac57d4e7-682c-438c-92c1-99654cf8243d
+                    stepCounter: 3ae8707b-f72c-4ac0-82ce-e6e6ee1de4a5
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SPORTS_ICE_HOCKEY_ACTION_PLAYS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SPORTS_ICE_HOCKEY_ACTION_PLAYS') }} "DVSTG_SPORTS_ICE_HOCKEY_ACTION_PLAYS"
+            name: HUB_SPORTS_ICE_HOCKEY_ACTION_PLAYS
+            noLinkRefs: []
+      name: HUB_SPORTS_ICE_HOCKEY_ACTION_PLAYS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: bd51f210-ebd8-48f7-afb5-05fc7603976c

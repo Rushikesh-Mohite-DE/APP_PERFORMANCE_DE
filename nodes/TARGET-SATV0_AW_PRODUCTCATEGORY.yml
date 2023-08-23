@@ -1,0 +1,135 @@
+steps:
+  SATV0_AW_PRODUCTCATEGORY-a117b142-a93c-4a62-9735-5fafb26d12ab:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 3a01e690-6e91-4bf1-bef5-50ba1b586014
+              stepCounter: a117b142-a93c-4a62-9735-5fafb26d12ab
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_PRODUCTCATEGORY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 41a0b464-67e6-42f4-b5b3-fe37cf66a362
+                    stepCounter: ce3aaa27-e765-4dba-a239-138b4e204dcc
+                transform: ""
+          - columnReference:
+              columnCounter: 8018bf69-df59-4fdf-a550-8adb76de1094
+              stepCounter: a117b142-a93c-4a62-9735-5fafb26d12ab
+            dataType: VARCHAR(16777216)
+            description: Category description.
+            hashColumns: []
+            hashDetails: null
+            name: NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f887eef6-465c-45b4-83e8-bec7cd00796f
+                    stepCounter: ce3aaa27-e765-4dba-a239-138b4e204dcc
+                transform: ""
+          - columnReference:
+              columnCounter: e303f4b3-3e13-4584-85fb-1d338714228a
+              stepCounter: a117b142-a93c-4a62-9735-5fafb26d12ab
+            dataType: VARCHAR(16777216)
+            description: ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            hashColumns: []
+            hashDetails: null
+            name: ROWGUID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 204e0af7-3354-439b-9896-251b51ae8158
+                    stepCounter: ce3aaa27-e765-4dba-a239-138b4e204dcc
+                transform: ""
+          - columnReference:
+              columnCounter: 620ce241-3725-4b4c-9e85-ee18e0455b33
+              stepCounter: a117b142-a93c-4a62-9735-5fafb26d12ab
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            hashColumns: []
+            hashDetails: null
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 83225bf8-77dd-47bc-bd68-719d2561a5a4
+                    stepCounter: ce3aaa27-e765-4dba-a239-138b4e204dcc
+                transform: ""
+          - columnReference:
+              columnCounter: c233e667-ec97-4502-b552-230943671048
+              stepCounter: a117b142-a93c-4a62-9735-5fafb26d12ab
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a5ddc54b-7c12-4090-b715-901f1c28cfa3
+                    stepCounter: ce3aaa27-e765-4dba-a239-138b4e204dcc
+                transform: ""
+          - columnReference:
+              columnCounter: e742a495-8a8a-4fb1-bbff-945f998ddcac
+              stepCounter: a117b142-a93c-4a62-9735-5fafb26d12ab
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 744ee4f3-8807-40bd-9087-bb537684a06e
+                    stepCounter: ce3aaa27-e765-4dba-a239-138b4e204dcc
+                transform: ""
+          - columnReference:
+              columnCounter: ae721dc8-63f0-428d-8c35-fc3b0200f327
+              stepCounter: a117b142-a93c-4a62-9735-5fafb26d12ab
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e040f8a0-f2ea-4d63-8d0c-a2844e3ab6bd
+                    stepCounter: ce3aaa27-e765-4dba-a239-138b4e204dcc
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_PRODUCTCATEGORY
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_PRODUCTCATEGORY') }} "DVSTG_AW_PRODUCTCATEGORY"
+            name: SATV0_AW_PRODUCTCATEGORY
+            noLinkRefs: []
+      name: SATV0_AW_PRODUCTCATEGORY
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: a117b142-a93c-4a62-9735-5fafb26d12ab

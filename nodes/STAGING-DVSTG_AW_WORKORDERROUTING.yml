@@ -1,0 +1,293 @@
+steps:
+  DVSTG_AW_WORKORDERROUTING-099a2033-f391-41f9-817f-5cc9236aac85:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4f14bf7d-71c8-4825-8194-364b3d065467
+              stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: aa18c2d0-bb33-4366-85f0-60293beb80f4
+                stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+              - columnCounter: 9e64f108-39ad-4f76-89a7-df5d9ecf1e66
+                stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+              - columnCounter: c37abc10-ccf2-4ce1-87eb-aa8d521b3d4c
+                stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+            name: HK_WORKORDERROUTING
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: aa18c2d0-bb33-4366-85f0-60293beb80f4
+              stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+            dataType: NUMBER(38,0)
+            description: Primary key. Foreign key to WorkOrder.WorkOrderID.
+            name: WORKORDERID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d6169840-1044-4641-9e04-e53c69d91ed6
+                    stepCounter: 9b993024-0410-444b-8d06-cf50b0c9fa7d
+                transform: ""
+          - columnReference:
+              columnCounter: 9e64f108-39ad-4f76-89a7-df5d9ecf1e66
+              stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+            dataType: NUMBER(38,0)
+            description: Primary key. Foreign key to Product.ProductID.
+            name: PRODUCTID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cc06d781-e357-4094-8fe0-e666bef1986c
+                    stepCounter: 9b993024-0410-444b-8d06-cf50b0c9fa7d
+                transform: ""
+          - columnReference:
+              columnCounter: 81d181b1-8128-4093-aa1b-2f9b6bffb3a3
+              stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+            dataType: NUMBER(38,0)
+            description: Primary key. Indicates the manufacturing process sequence.
+            name: OPERATIONSEQUENCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 684588bb-5f36-418f-b252-21523196ceec
+                    stepCounter: 9b993024-0410-444b-8d06-cf50b0c9fa7d
+                transform: ""
+          - columnReference:
+              columnCounter: c37abc10-ccf2-4ce1-87eb-aa8d521b3d4c
+              stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+            dataType: NUMBER(38,0)
+            description: Manufacturing location where the part is processed. Foreign key to Location.LocationID.
+            name: LOCATIONID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: df606443-24ee-416f-99a8-c18bdd33a2ec
+                    stepCounter: 9b993024-0410-444b-8d06-cf50b0c9fa7d
+                transform: ""
+          - columnReference:
+              columnCounter: ae5b4a95-a644-4dc2-8f68-3c1807f257ac
+              stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+            dataType: TIMESTAMP_NTZ(9)
+            description: Planned manufacturing start date.
+            name: SCHEDULEDSTARTDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8859ef6e-fc04-4dcf-8dad-33cce443203a
+                    stepCounter: 9b993024-0410-444b-8d06-cf50b0c9fa7d
+                transform: ""
+          - columnReference:
+              columnCounter: 67d64e23-8844-4afb-9aad-fb23708e5044
+              stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+            dataType: TIMESTAMP_NTZ(9)
+            description: Planned manufacturing end date.
+            name: SCHEDULEDENDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a18e6629-3f1b-4d93-8099-b2aff310c437
+                    stepCounter: 9b993024-0410-444b-8d06-cf50b0c9fa7d
+                transform: ""
+          - columnReference:
+              columnCounter: a73ceabb-8d34-4598-be83-a4f12ef8a3e5
+              stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+            dataType: TIMESTAMP_NTZ(9)
+            description: Actual start date.
+            name: ACTUALSTARTDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fd6f4a11-a215-4f09-aa74-67cf05207747
+                    stepCounter: 9b993024-0410-444b-8d06-cf50b0c9fa7d
+                transform: ""
+          - columnReference:
+              columnCounter: ffd86c32-e507-4a89-a326-b4f9357a66f7
+              stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+            dataType: TIMESTAMP_NTZ(9)
+            description: Actual end date.
+            name: ACTUALENDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3b891924-bea3-4892-91f6-7cb7e5c02e3f
+                    stepCounter: 9b993024-0410-444b-8d06-cf50b0c9fa7d
+                transform: ""
+          - columnReference:
+              columnCounter: a5bb5e9a-ad0e-418d-a21e-6187501eefcf
+              stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+            dataType: NUMBER(9,4)
+            description: Number of manufacturing hours used.
+            name: ACTUALRESOURCEHRS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ba25c98f-fd0a-4424-b4c7-d208170dc348
+                    stepCounter: 9b993024-0410-444b-8d06-cf50b0c9fa7d
+                transform: ""
+          - columnReference:
+              columnCounter: ca977fb1-0cd6-4289-8616-c7ba9a5c1efc
+              stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+            dataType: NUMBER(19,4)
+            description: Estimated manufacturing cost.
+            name: PLANNEDCOST
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7c577198-0e2b-40e3-bb67-8e0ea93cbf66
+                    stepCounter: 9b993024-0410-444b-8d06-cf50b0c9fa7d
+                transform: ""
+          - columnReference:
+              columnCounter: 64109720-ab91-491e-8d33-ae2440c114a4
+              stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+            dataType: NUMBER(19,4)
+            description: Actual manufacturing cost.
+            name: ACTUALCOST
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 64468417-152d-4a9b-a0d3-edfb675f7acc
+                    stepCounter: 9b993024-0410-444b-8d06-cf50b0c9fa7d
+                transform: ""
+          - columnReference:
+              columnCounter: fae22fd1-7251-47b4-b276-18d3ae119e29
+              stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 97aaf3b4-ba35-4343-b5fe-de9638f43c21
+                    stepCounter: 9b993024-0410-444b-8d06-cf50b0c9fa7d
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 48ea3eeb-4638-4be0-8571-41dcdd7f4662
+              stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: dc1afe64-22f7-4e00-a04a-81d62ee710f7
+              stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 910a3d84-e461-45af-9606-7ec63bb49076
+              stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 81d181b1-8128-4093-aa1b-2f9b6bffb3a3
+                stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+              - columnCounter: ae5b4a95-a644-4dc2-8f68-3c1807f257ac
+                stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+              - columnCounter: 67d64e23-8844-4afb-9aad-fb23708e5044
+                stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+              - columnCounter: a73ceabb-8d34-4598-be83-a4f12ef8a3e5
+                stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+              - columnCounter: ffd86c32-e507-4a89-a326-b4f9357a66f7
+                stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+              - columnCounter: a5bb5e9a-ad0e-418d-a21e-6187501eefcf
+                stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+              - columnCounter: ca977fb1-0cd6-4289-8616-c7ba9a5c1efc
+                stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+              - columnCounter: 64109720-ab91-491e-8d33-ae2440c114a4
+                stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+              - columnCounter: fae22fd1-7251-47b4-b276-18d3ae119e29
+                stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5a4de645-40a9-46f3-9c3d-0dada28f6fa3
+              stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 9e64f108-39ad-4f76-89a7-df5d9ecf1e66
+                stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: ADV_WRKS_SRC
+                nodeName: AW_LOAD_WORKORDERROUTING
+            join:
+              joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_WORKORDERROUTING') }} "AW_LOAD_WORKORDERROUTING"
+            name: DVSTG_AW_WORKORDERROUTING
+            noLinkRefs: []
+      name: DVSTG_AW_WORKORDERROUTING
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85

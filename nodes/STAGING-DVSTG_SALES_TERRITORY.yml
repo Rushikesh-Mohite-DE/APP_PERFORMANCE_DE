@@ -1,0 +1,223 @@
+steps:
+  DVSTG_SALES_TERRITORY-76b18c54-9db8-4498-9747-dc4eefea86da:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 08525f53-e808-4975-a1ff-c9b37c0d457b
+              stepCounter: 76b18c54-9db8-4498-9747-dc4eefea86da
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: c464440b-ef8f-41c0-b5ad-1432eb4edc17
+                stepCounter: 76b18c54-9db8-4498-9747-dc4eefea86da
+              - columnCounter: 556c4cc2-6f07-49cb-9505-0de6a963cea6
+                stepCounter: 76b18c54-9db8-4498-9747-dc4eefea86da
+              - columnCounter: 1d263ef6-e7fb-4ad2-915a-097b1e43e3c1
+                stepCounter: 76b18c54-9db8-4498-9747-dc4eefea86da
+            name: HK_SALES_TERRITORY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: c464440b-ef8f-41c0-b5ad-1432eb4edc17
+              stepCounter: 76b18c54-9db8-4498-9747-dc4eefea86da
+            dataType: NUMBER(38,0)
+            description: ""
+            name: TERRITORY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 318f37ad-3d56-4062-9b16-9907dd497498
+                    stepCounter: 21839574-c7a9-492e-8714-b13d4812041c
+                transform: ""
+          - columnReference:
+              columnCounter: 79a0da49-ccc6-4ccc-b579-5bb18516f87a
+              stepCounter: 76b18c54-9db8-4498-9747-dc4eefea86da
+            dataType: VARCHAR(50)
+            description: ""
+            name: TERRITORY_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: eab4b593-1358-44fe-afd5-6bd175efa2f8
+                    stepCounter: 21839574-c7a9-492e-8714-b13d4812041c
+                transform: ""
+          - columnReference:
+              columnCounter: 9ee51915-02d1-4e0a-af1c-7243e165f420
+              stepCounter: 76b18c54-9db8-4498-9747-dc4eefea86da
+            dataType: VARCHAR(4000)
+            description: ""
+            name: TERRITORY_DESCRIPTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 81ad2a51-ff5b-44f0-9665-39b46fd26d8d
+                    stepCounter: 21839574-c7a9-492e-8714-b13d4812041c
+                transform: ""
+          - columnReference:
+              columnCounter: 556c4cc2-6f07-49cb-9505-0de6a963cea6
+              stepCounter: 76b18c54-9db8-4498-9747-dc4eefea86da
+            dataType: NUMBER(38,0)
+            description: ""
+            name: CREATING_EMPLOYEE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e81578c5-3b5f-400c-9079-cf286548b072
+                    stepCounter: 21839574-c7a9-492e-8714-b13d4812041c
+                transform: ""
+          - columnReference:
+              columnCounter: 92cdfcc2-667e-4e92-af14-b838f9bb9e8e
+              stepCounter: 76b18c54-9db8-4498-9747-dc4eefea86da
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            name: CREATED_DATETIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3b32f919-8139-4276-803e-a6ec64a9c3f1
+                    stepCounter: 21839574-c7a9-492e-8714-b13d4812041c
+                transform: ""
+          - columnReference:
+              columnCounter: 1d263ef6-e7fb-4ad2-915a-097b1e43e3c1
+              stepCounter: 76b18c54-9db8-4498-9747-dc4eefea86da
+            dataType: NUMBER(38,0)
+            description: ""
+            name: LAST_CHANGE_EMPLOYEE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7b1306db-9ba4-4656-bba3-c7876404e2b8
+                    stepCounter: 21839574-c7a9-492e-8714-b13d4812041c
+                transform: ""
+          - columnReference:
+              columnCounter: 57110a3c-c0e2-4ec3-9f5d-3b3390074755
+              stepCounter: 76b18c54-9db8-4498-9747-dc4eefea86da
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            name: LAST_CHANGE_DATETIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e159782a-3fe5-4b1a-acdc-93f0142c09ec
+                    stepCounter: 21839574-c7a9-492e-8714-b13d4812041c
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2fa337b1-b90f-4ee8-b026-82957df63464
+              stepCounter: 76b18c54-9db8-4498-9747-dc4eefea86da
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0d038444-5fc0-4d63-8036-5681ea39b476
+              stepCounter: 76b18c54-9db8-4498-9747-dc4eefea86da
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 202fd28c-62bf-4cc8-a682-42cefcb29b9a
+              stepCounter: 76b18c54-9db8-4498-9747-dc4eefea86da
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 79a0da49-ccc6-4ccc-b579-5bb18516f87a
+                stepCounter: 76b18c54-9db8-4498-9747-dc4eefea86da
+              - columnCounter: 9ee51915-02d1-4e0a-af1c-7243e165f420
+                stepCounter: 76b18c54-9db8-4498-9747-dc4eefea86da
+              - columnCounter: 92cdfcc2-667e-4e92-af14-b838f9bb9e8e
+                stepCounter: 76b18c54-9db8-4498-9747-dc4eefea86da
+              - columnCounter: 57110a3c-c0e2-4ec3-9f5d-3b3390074755
+                stepCounter: 76b18c54-9db8-4498-9747-dc4eefea86da
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: deca1470-278c-4581-aebb-02af9c0069ca
+              stepCounter: 76b18c54-9db8-4498-9747-dc4eefea86da
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 1d263ef6-e7fb-4ad2-915a-097b1e43e3c1
+                stepCounter: 76b18c54-9db8-4498-9747-dc4eefea86da
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SALES_SRC
+                nodeName: SALES_LOAD_TERRITORY
+            join:
+              joinCondition: FROM {{ ref('SALES_SRC', 'SALES_LOAD_TERRITORY') }} "SALES_LOAD_TERRITORY"
+            name: DVSTG_SALES_TERRITORY
+            noLinkRefs: []
+      name: DVSTG_SALES_TERRITORY
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: 76b18c54-9db8-4498-9747-dc4eefea86da

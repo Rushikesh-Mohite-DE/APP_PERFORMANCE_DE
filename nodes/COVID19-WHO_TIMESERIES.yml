@@ -1,0 +1,169 @@
+steps:
+  WHO_TIMESERIES-df7d3781-0680-422b-b535-d58c4529dc3f:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: COVID19
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 15b1df95-3d67-41c7-a8d0-becba47f0c60
+              stepCounter: df7d3781-0680-422b-b535-d58c4529dc3f
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: COUNTRY_REGION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3226ac38-4187-49c0-a08a-3fcee68f692b
+              stepCounter: df7d3781-0680-422b-b535-d58c4529dc3f
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: CASES_TOTAL
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3df89b40-a375-487f-b70a-1054eec3c398
+              stepCounter: df7d3781-0680-422b-b535-d58c4529dc3f
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: CASES_TOTAL_PER_100000
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0734c6b2-0e90-4fc7-9ff6-d2558716fda6
+              stepCounter: df7d3781-0680-422b-b535-d58c4529dc3f
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: CASES
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7c45c4d0-3551-4325-a6a8-f40de7accf77
+              stepCounter: df7d3781-0680-422b-b535-d58c4529dc3f
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: DEATHS_TOTAL
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 013fc3fe-b69e-40ed-9905-579c76dd1d97
+              stepCounter: df7d3781-0680-422b-b535-d58c4529dc3f
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: DEATHS_TOTAL_PER_100000
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9b6b81c1-8833-4f2c-96ae-b79182af836d
+              stepCounter: df7d3781-0680-422b-b535-d58c4529dc3f
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: DEATHS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0d293421-608a-4ef4-bcbf-039045105973
+              stepCounter: df7d3781-0680-422b-b535-d58c4529dc3f
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: TRANSMISSION_CLASSIFICATION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5bd6abbe-ed91-4b86-8ab6-f3c3095c7a73
+              stepCounter: df7d3781-0680-422b-b535-d58c4529dc3f
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: DATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6b893b8d-5a51-4f80-a8da-bf2363516197
+              stepCounter: df7d3781-0680-422b-b535-d58c4529dc3f
+            config: {}
+            dataType: VARCHAR(2)
+            defaultValue: ""
+            description: ""
+            name: ISO3166_1
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('COVID19', 'WHO_TIMESERIES') }}
+      name: WHO_TIMESERIES
+      schema: ""
+      sqlType: Source
+      table: WHO_TIMESERIES
+      type: sourceInput
+    stepCounter: df7d3781-0680-422b-b535-d58c4529dc3f

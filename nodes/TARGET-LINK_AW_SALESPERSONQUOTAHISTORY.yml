@@ -1,0 +1,175 @@
+steps:
+  LINK_AW_SALESPERSONQUOTAHISTORY-c850306c-a016-42ec-8ab0-26481334e3fe:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 4d9a1fa5-0941-4572-90f0-202447294c8c
+              stepCounter: c850306c-a016-42ec-8ab0-26481334e3fe
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_SALESPERSONQUOTAHISTORY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11a124ac-a2e9-4e3b-9731-74117a089bdc
+                    stepCounter: 3cabfd0a-fa56-4f0c-8e03-4adeedafe927
+                transform: ""
+          - columnReference:
+              columnCounter: d34d3184-c1fd-4544-9728-6c1be4d3d62f
+              stepCounter: c850306c-a016-42ec-8ab0-26481334e3fe
+            dataType: NUMBER(38,0)
+            description: Sales person identification number. Foreign key to SalesPerson.BusinessEntityID.
+            hashColumns: []
+            hashDetails: null
+            name: BUSINESSENTITYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ded39f65-a357-4323-b173-fa79e0a8ca30
+                    stepCounter: 3cabfd0a-fa56-4f0c-8e03-4adeedafe927
+                transform: ""
+          - columnReference:
+              columnCounter: b757cc1f-5078-4c12-8860-bec886bf1b4d
+              stepCounter: c850306c-a016-42ec-8ab0-26481334e3fe
+            dataType: TIMESTAMP_NTZ(9)
+            description: Sales quota date.
+            hashColumns: []
+            hashDetails: null
+            name: QUOTADATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ca5a5897-b027-41f6-ab0d-0fd58dda2e6f
+                    stepCounter: 3cabfd0a-fa56-4f0c-8e03-4adeedafe927
+                transform: ""
+          - columnReference:
+              columnCounter: ae40ca90-1f8c-4824-997e-737e29a0a81c
+              stepCounter: c850306c-a016-42ec-8ab0-26481334e3fe
+            dataType: NUMBER(19,4)
+            description: Sales quota amount.
+            hashColumns: []
+            hashDetails: null
+            name: SALESQUOTA
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b9b206c3-f13e-4702-8a78-bab6fc437b01
+                    stepCounter: 3cabfd0a-fa56-4f0c-8e03-4adeedafe927
+                transform: ""
+          - columnReference:
+              columnCounter: aeaa7886-6852-48d9-94dc-4e845228350f
+              stepCounter: c850306c-a016-42ec-8ab0-26481334e3fe
+            dataType: VARCHAR(16777216)
+            description: ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            hashColumns: []
+            hashDetails: null
+            name: ROWGUID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e8970b3c-035e-4151-b3ca-c5408cf53856
+                    stepCounter: 3cabfd0a-fa56-4f0c-8e03-4adeedafe927
+                transform: ""
+          - columnReference:
+              columnCounter: 33d32063-e364-412c-88fc-fa2f0a1305cd
+              stepCounter: c850306c-a016-42ec-8ab0-26481334e3fe
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            hashColumns: []
+            hashDetails: null
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9769c127-1e84-466f-90ec-ddf6e38fb1b2
+                    stepCounter: 3cabfd0a-fa56-4f0c-8e03-4adeedafe927
+                transform: ""
+          - columnReference:
+              columnCounter: 1a287c20-85e7-4f8f-9654-f5296efbac1a
+              stepCounter: c850306c-a016-42ec-8ab0-26481334e3fe
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5e6459fd-1958-4228-82dd-bda1735d262a
+                    stepCounter: 3cabfd0a-fa56-4f0c-8e03-4adeedafe927
+                transform: ""
+          - columnReference:
+              columnCounter: caed7e91-33fc-4f9f-804f-318522da82f6
+              stepCounter: c850306c-a016-42ec-8ab0-26481334e3fe
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f9f0ead1-06a1-47a8-85b3-be908e83240a
+                    stepCounter: 3cabfd0a-fa56-4f0c-8e03-4adeedafe927
+                transform: ""
+          - columnReference:
+              columnCounter: e118dd68-510e-42ba-889c-820b73a044dc
+              stepCounter: c850306c-a016-42ec-8ab0-26481334e3fe
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d34441d3-05e9-4811-bb43-2752c41a5a36
+                    stepCounter: 3cabfd0a-fa56-4f0c-8e03-4adeedafe927
+                transform: ""
+          - columnReference:
+              columnCounter: f16ff8bc-1d81-45c2-8497-17c9b2fc95f7
+              stepCounter: c850306c-a016-42ec-8ab0-26481334e3fe
+            config:
+              is_Link_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LNK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0069b0a7-add7-48ef-bdc1-5e0c3a02afa2
+                    stepCounter: 3cabfd0a-fa56-4f0c-8e03-4adeedafe927
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_SALESPERSONQUOTAHISTORY
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_SALESPERSONQUOTAHISTORY') }} "DVSTG_AW_SALESPERSONQUOTAHISTORY"
+            name: LINK_AW_SALESPERSONQUOTAHISTORY
+            noLinkRefs: []
+      name: LINK_AW_SALESPERSONQUOTAHISTORY
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::7
+      type: sql
+    stepCounter: c850306c-a016-42ec-8ab0-26481334e3fe

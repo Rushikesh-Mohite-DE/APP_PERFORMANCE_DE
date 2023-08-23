@@ -1,0 +1,193 @@
+steps:
+  DVSTG_AW_LOCATION-95ebf7d8-30d5-4c65-bd20-060d9144be16:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5e93fa90-a21d-4b78-9b22-072fcbeb3984
+              stepCounter: 95ebf7d8-30d5-4c65-bd20-060d9144be16
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 1e14b56b-170d-4878-9a1b-8e9fdd91ebf4
+                stepCounter: 95ebf7d8-30d5-4c65-bd20-060d9144be16
+            name: HK_LOCATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 1e14b56b-170d-4878-9a1b-8e9fdd91ebf4
+              stepCounter: 95ebf7d8-30d5-4c65-bd20-060d9144be16
+            dataType: NUMBER(38,0)
+            description: Primary key for Location records.
+            name: LOCATIONID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 22deb296-da43-44d5-8e6d-5f96d86ca9c9
+                    stepCounter: b7118a43-5cd9-4dd3-9dbc-dd4752af1c17
+                transform: ""
+          - columnReference:
+              columnCounter: 9e26437e-055c-4b9f-906c-3ea7d70dfd12
+              stepCounter: 95ebf7d8-30d5-4c65-bd20-060d9144be16
+            dataType: VARCHAR(16777216)
+            description: Location description.
+            name: NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6c7b4cce-5434-4222-9953-07592442bd86
+                    stepCounter: b7118a43-5cd9-4dd3-9dbc-dd4752af1c17
+                transform: ""
+          - columnReference:
+              columnCounter: 294b5cff-05c1-493d-9332-bd8ea0ae925a
+              stepCounter: 95ebf7d8-30d5-4c65-bd20-060d9144be16
+            dataType: NUMBER(10,4)
+            description: Standard hourly cost of the manufacturing location.
+            name: COSTRATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6ce23aee-0da7-4dad-a775-55499926d380
+                    stepCounter: b7118a43-5cd9-4dd3-9dbc-dd4752af1c17
+                transform: ""
+          - columnReference:
+              columnCounter: 584377b5-5e95-4ec7-8bbd-a7a97a12be10
+              stepCounter: 95ebf7d8-30d5-4c65-bd20-060d9144be16
+            dataType: NUMBER(8,2)
+            description: Work capacity (in hours) of the manufacturing location.
+            name: AVAILABILITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 628c00b2-1c6c-4b9d-9629-caa2083f1412
+                    stepCounter: b7118a43-5cd9-4dd3-9dbc-dd4752af1c17
+                transform: ""
+          - columnReference:
+              columnCounter: 55fcf157-a157-4d03-9724-ec1f040b3a68
+              stepCounter: 95ebf7d8-30d5-4c65-bd20-060d9144be16
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4e630021-d525-4917-a831-ce8f470c7356
+                    stepCounter: b7118a43-5cd9-4dd3-9dbc-dd4752af1c17
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 50bbdaab-59c8-4b38-8854-4b9ceb1464bc
+              stepCounter: 95ebf7d8-30d5-4c65-bd20-060d9144be16
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 57b76341-8514-40e5-8fc4-c2dd873f4dc3
+              stepCounter: 95ebf7d8-30d5-4c65-bd20-060d9144be16
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8f70af8b-b93f-482f-828a-7b135466e546
+              stepCounter: 95ebf7d8-30d5-4c65-bd20-060d9144be16
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 9e26437e-055c-4b9f-906c-3ea7d70dfd12
+                stepCounter: 95ebf7d8-30d5-4c65-bd20-060d9144be16
+              - columnCounter: 294b5cff-05c1-493d-9332-bd8ea0ae925a
+                stepCounter: 95ebf7d8-30d5-4c65-bd20-060d9144be16
+              - columnCounter: 584377b5-5e95-4ec7-8bbd-a7a97a12be10
+                stepCounter: 95ebf7d8-30d5-4c65-bd20-060d9144be16
+              - columnCounter: 55fcf157-a157-4d03-9724-ec1f040b3a68
+                stepCounter: 95ebf7d8-30d5-4c65-bd20-060d9144be16
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences: []
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e0aff8b8-6ad8-4704-913b-bb7eba2fa4f2
+              stepCounter: 95ebf7d8-30d5-4c65-bd20-060d9144be16
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 584377b5-5e95-4ec7-8bbd-a7a97a12be10
+                stepCounter: 95ebf7d8-30d5-4c65-bd20-060d9144be16
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: ADV_WRKS_SRC
+                nodeName: AW_LOAD_LOCATION
+            join:
+              joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_LOCATION') }} "AW_LOAD_LOCATION"
+            name: DVSTG_AW_LOCATION
+            noLinkRefs: []
+      name: DVSTG_AW_LOCATION
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: 95ebf7d8-30d5-4c65-bd20-060d9144be16

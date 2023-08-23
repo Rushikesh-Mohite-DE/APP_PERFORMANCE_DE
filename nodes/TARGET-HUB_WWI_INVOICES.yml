@@ -1,0 +1,203 @@
+steps:
+  HUB_WWI_INVOICES-23c881f9-a4a6-48c2-9c22-f67c691a81ba:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 4dd0b693-ea7a-40d7-b72c-536282c112b7
+              stepCounter: 23c881f9-a4a6-48c2-9c22-f67c691a81ba
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_INVOICES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 786be4aa-ccfc-4682-b753-82c82d2ca640
+                    stepCounter: ff900fa2-7117-4d8b-85fe-15408117c767
+                transform: ""
+          - columnReference:
+              columnCounter: aa59f1bc-f8de-42f4-b1f0-a235155484db
+              stepCounter: 23c881f9-a4a6-48c2-9c22-f67c691a81ba
+            dataType: NUMBER(38,0)
+            description: Numeric ID used for reference to an invoice within the database
+            hashColumns: []
+            hashDetails: null
+            name: INVOICEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 32cf3eb5-4ab9-47ab-929c-067201361e6f
+                    stepCounter: ff900fa2-7117-4d8b-85fe-15408117c767
+                transform: ""
+          - columnReference:
+              columnCounter: f93192bf-911b-42a5-8887-50b318f55818
+              stepCounter: 23c881f9-a4a6-48c2-9c22-f67c691a81ba
+            dataType: NUMBER(38,0)
+            description: Customer for this invoice
+            hashColumns: []
+            hashDetails: null
+            name: CUSTOMERID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a7b0208a-9c60-474d-8aa1-ea4bea8184d4
+                    stepCounter: ff900fa2-7117-4d8b-85fe-15408117c767
+                transform: ""
+          - columnReference:
+              columnCounter: 63305a4c-0fdf-4fe9-b11e-849f7320f3aa
+              stepCounter: 23c881f9-a4a6-48c2-9c22-f67c691a81ba
+            dataType: NUMBER(38,0)
+            description: Bill to customer for this invoice (invoices might be billed to a head office)
+            hashColumns: []
+            hashDetails: null
+            name: BILLTOCUSTOMERID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ccfebb06-80c1-48ce-ba2c-353f109f13fd
+                    stepCounter: ff900fa2-7117-4d8b-85fe-15408117c767
+                transform: ""
+          - columnReference:
+              columnCounter: 2499f617-e452-458b-8064-b94afe908b54
+              stepCounter: 23c881f9-a4a6-48c2-9c22-f67c691a81ba
+            dataType: NUMBER(38,0)
+            description: Sales order (if any) for this invoice
+            hashColumns: []
+            hashDetails: null
+            name: ORDERID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7d56767e-cb21-48d1-b950-7aa8f7f129c3
+                    stepCounter: ff900fa2-7117-4d8b-85fe-15408117c767
+                transform: ""
+          - columnReference:
+              columnCounter: bc512e49-e39b-44bf-be02-78975234c334
+              stepCounter: 23c881f9-a4a6-48c2-9c22-f67c691a81ba
+            dataType: NUMBER(38,0)
+            description: How these stock items are beign delivered
+            hashColumns: []
+            hashDetails: null
+            name: DELIVERYMETHODID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 43a8abdf-5dad-4db5-9ed9-95f99bd2529b
+                    stepCounter: ff900fa2-7117-4d8b-85fe-15408117c767
+                transform: ""
+          - columnReference:
+              columnCounter: 3631d5c7-9c5e-426e-bd5f-aa90a81f79e2
+              stepCounter: 23c881f9-a4a6-48c2-9c22-f67c691a81ba
+            dataType: NUMBER(38,0)
+            description: Customer contact for this invoice
+            hashColumns: []
+            hashDetails: null
+            name: CONTACTPERSONID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 593e8c2c-649b-4ef3-ac11-8c5fd5ded3b3
+                    stepCounter: ff900fa2-7117-4d8b-85fe-15408117c767
+                transform: ""
+          - columnReference:
+              columnCounter: 583a305a-d71e-48fd-9576-e4c522882efd
+              stepCounter: 23c881f9-a4a6-48c2-9c22-f67c691a81ba
+            dataType: NUMBER(38,0)
+            description: Customer accounts contact for this invoice
+            hashColumns: []
+            hashDetails: null
+            name: ACCOUNTSPERSONID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d69b87f8-4730-4081-ade1-1cfd4a7a84e1
+                    stepCounter: ff900fa2-7117-4d8b-85fe-15408117c767
+                transform: ""
+          - columnReference:
+              columnCounter: 59c0d89f-fb68-493f-9fd3-4895a3619df5
+              stepCounter: 23c881f9-a4a6-48c2-9c22-f67c691a81ba
+            dataType: NUMBER(38,0)
+            description: Salesperson for this invoice
+            hashColumns: []
+            hashDetails: null
+            name: SALESPERSONPERSONID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c132aa3e-442d-4c3b-9d0f-595996c13fae
+                    stepCounter: ff900fa2-7117-4d8b-85fe-15408117c767
+                transform: ""
+          - columnReference:
+              columnCounter: 9349bd48-fa33-4ee4-85ce-e3a1ac754ecd
+              stepCounter: 23c881f9-a4a6-48c2-9c22-f67c691a81ba
+            dataType: NUMBER(38,0)
+            description: Person who packed this shipment (or checked the packing)
+            hashColumns: []
+            hashDetails: null
+            name: PACKEDBYPERSONID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bc311a25-967e-476f-90c0-868d8fdb0060
+                    stepCounter: ff900fa2-7117-4d8b-85fe-15408117c767
+                transform: ""
+          - columnReference:
+              columnCounter: 6d2b5fee-ee3f-42f7-a1b0-870a210285a3
+              stepCounter: 23c881f9-a4a6-48c2-9c22-f67c691a81ba
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2c40189f-afcd-478d-8ce6-3bff285ccb45
+                    stepCounter: ff900fa2-7117-4d8b-85fe-15408117c767
+                transform: ""
+          - columnReference:
+              columnCounter: 68413c71-ce2e-44e3-a1d7-29ff1cf1017e
+              stepCounter: 23c881f9-a4a6-48c2-9c22-f67c691a81ba
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: daf5f143-9b8e-4069-a467-6b33b92c0330
+                    stepCounter: ff900fa2-7117-4d8b-85fe-15408117c767
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_WWI_INVOICES
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_WWI_INVOICES') }} "DVSTG_WWI_INVOICES"
+            name: HUB_WWI_INVOICES
+            noLinkRefs: []
+      name: HUB_WWI_INVOICES
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 23c881f9-a4a6-48c2-9c22-f67c691a81ba

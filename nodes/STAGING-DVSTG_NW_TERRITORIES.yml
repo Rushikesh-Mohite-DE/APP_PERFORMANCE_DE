@@ -1,0 +1,167 @@
+steps:
+  DVSTG_NW_TERRITORIES-ecedd8a8-de99-4578-b6ca-9bf10a8fa407:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8769132b-2c5c-4fca-9dec-debdd6249ca5
+              stepCounter: ecedd8a8-de99-4578-b6ca-9bf10a8fa407
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: c4f69e17-e97a-4f6a-999f-d27ea1ddfd51
+                stepCounter: ecedd8a8-de99-4578-b6ca-9bf10a8fa407
+              - columnCounter: cada11c0-2968-4893-bafb-b7aa6b415c6c
+                stepCounter: ecedd8a8-de99-4578-b6ca-9bf10a8fa407
+            name: HK_NW_TERRITORIES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: c4f69e17-e97a-4f6a-999f-d27ea1ddfd51
+              stepCounter: ecedd8a8-de99-4578-b6ca-9bf10a8fa407
+            dataType: VARCHAR(20)
+            description: ""
+            name: TERRITORYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 72d185cb-4d5f-4b8a-acaf-a9ee4d953771
+                    stepCounter: 74c8eb29-6597-424d-8294-b93f89e16f1b
+                transform: ""
+          - columnReference:
+              columnCounter: 229926f5-a0b0-47a8-a078-0b9dbf530636
+              stepCounter: ecedd8a8-de99-4578-b6ca-9bf10a8fa407
+            dataType: VARCHAR(50)
+            description: ""
+            name: TERRITORYDESCRIPTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 04a85a6e-c329-49ad-a8ae-70b2d54797f2
+                    stepCounter: 74c8eb29-6597-424d-8294-b93f89e16f1b
+                transform: ""
+          - columnReference:
+              columnCounter: cada11c0-2968-4893-bafb-b7aa6b415c6c
+              stepCounter: ecedd8a8-de99-4578-b6ca-9bf10a8fa407
+            dataType: NUMBER(38,0)
+            description: ""
+            name: REGIONID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: af511725-9a4d-4889-9df4-a031f54a79b4
+                    stepCounter: 74c8eb29-6597-424d-8294-b93f89e16f1b
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4c84c6ef-12a1-42d6-bd60-a7d0fda5d83d
+              stepCounter: ecedd8a8-de99-4578-b6ca-9bf10a8fa407
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9ea263d3-281f-4067-b84e-5161b1746830
+              stepCounter: ecedd8a8-de99-4578-b6ca-9bf10a8fa407
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 812eb59d-d8a9-4ad8-8834-ece4093476eb
+              stepCounter: ecedd8a8-de99-4578-b6ca-9bf10a8fa407
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 229926f5-a0b0-47a8-a078-0b9dbf530636
+                stepCounter: ecedd8a8-de99-4578-b6ca-9bf10a8fa407
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5483db7b-09ee-424f-baf1-ec305f3b145f
+              stepCounter: ecedd8a8-de99-4578-b6ca-9bf10a8fa407
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: cada11c0-2968-4893-bafb-b7aa6b415c6c
+                stepCounter: ecedd8a8-de99-4578-b6ca-9bf10a8fa407
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: NORTHWIND_SRC
+                nodeName: NW_LOAD_TERRITORIES
+            join:
+              joinCondition: FROM {{ ref('NORTHWIND_SRC', 'NW_LOAD_TERRITORIES') }} "NW_LOAD_TERRITORIES"
+            name: DVSTG_NW_TERRITORIES
+            noLinkRefs: []
+      name: DVSTG_NW_TERRITORIES
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: ecedd8a8-de99-4578-b6ca-9bf10a8fa407

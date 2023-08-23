@@ -1,0 +1,91 @@
+steps:
+  HUB_WWI_COLORS_ARCHIVE-e945f128-948e-4f56-99c0-d8c248bf262e:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 070564b3-2f84-4bd5-aae5-f0ba8bda9bfc
+              stepCounter: e945f128-948e-4f56-99c0-d8c248bf262e
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_COLORS_ARCHIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bdf68434-4263-47fc-912a-48e167e17be7
+                    stepCounter: 3e6252e2-2bfe-4612-8592-4d5a30b84986
+                transform: ""
+          - columnReference:
+              columnCounter: b2e09f78-88ba-4311-8e32-6a4d9efbd0cd
+              stepCounter: e945f128-948e-4f56-99c0-d8c248bf262e
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: COLORID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5aa2518e-3eec-4d21-8561-543169b8a92a
+                    stepCounter: 3e6252e2-2bfe-4612-8592-4d5a30b84986
+                transform: ""
+          - columnReference:
+              columnCounter: db201bf9-0aa2-448e-bdc3-7dc722b8b8bb
+              stepCounter: e945f128-948e-4f56-99c0-d8c248bf262e
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6df1e3c5-1d06-4713-910e-0d5634bba060
+                    stepCounter: 3e6252e2-2bfe-4612-8592-4d5a30b84986
+                transform: ""
+          - columnReference:
+              columnCounter: fa29f35d-9d23-471b-b3ef-3048dfed2e6e
+              stepCounter: e945f128-948e-4f56-99c0-d8c248bf262e
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8887f803-e79a-4858-a118-8153e21ad517
+                    stepCounter: 3e6252e2-2bfe-4612-8592-4d5a30b84986
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_WWI_COLORS_ARCHIVE
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_WWI_COLORS_ARCHIVE') }} "DVSTG_WWI_COLORS_ARCHIVE"
+            name: HUB_WWI_COLORS_ARCHIVE
+            noLinkRefs: []
+      name: HUB_WWI_COLORS_ARCHIVE
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: e945f128-948e-4f56-99c0-d8c248bf262e

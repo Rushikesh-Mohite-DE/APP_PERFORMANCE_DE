@@ -1,0 +1,195 @@
+steps:
+  DVSTG_AW_PRODUCTSUBCATEGORY-13004847-1fa7-4f11-9cfc-28fd8fafec11:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 59bd3b1d-cd05-43cc-839a-cc2a6560af49
+              stepCounter: 13004847-1fa7-4f11-9cfc-28fd8fafec11
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 1bf0dcfc-b9ad-4459-a520-1b1b75d589a0
+                stepCounter: 13004847-1fa7-4f11-9cfc-28fd8fafec11
+              - columnCounter: 5343c74e-b2ba-4a57-84ca-6aa9f06114b5
+                stepCounter: 13004847-1fa7-4f11-9cfc-28fd8fafec11
+            name: HK_PRODUCTSUBCATEGORY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 1bf0dcfc-b9ad-4459-a520-1b1b75d589a0
+              stepCounter: 13004847-1fa7-4f11-9cfc-28fd8fafec11
+            dataType: NUMBER(38,0)
+            description: Primary key for ProductSubcategory records.
+            name: PRODUCTSUBCATEGORYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5010e405-d0a2-4589-b07e-05f0ff5c5d30
+                    stepCounter: 876b0851-7ab1-4144-afc2-b820e5da1ba2
+                transform: ""
+          - columnReference:
+              columnCounter: 5343c74e-b2ba-4a57-84ca-6aa9f06114b5
+              stepCounter: 13004847-1fa7-4f11-9cfc-28fd8fafec11
+            dataType: NUMBER(38,0)
+            description: Product category identification number. Foreign key to ProductCategory.ProductCategoryID.
+            name: PRODUCTCATEGORYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ac1fd47c-b9b7-4fe1-9bd8-98f758e61d41
+                    stepCounter: 876b0851-7ab1-4144-afc2-b820e5da1ba2
+                transform: ""
+          - columnReference:
+              columnCounter: 9feb81ca-b9db-44ef-a8f1-426629fe5c25
+              stepCounter: 13004847-1fa7-4f11-9cfc-28fd8fafec11
+            dataType: VARCHAR(16777216)
+            description: Subcategory description.
+            name: NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 809b5072-ad6a-4b9d-a600-59ca142eb5a0
+                    stepCounter: 876b0851-7ab1-4144-afc2-b820e5da1ba2
+                transform: ""
+          - columnReference:
+              columnCounter: d2049798-303b-491e-b64b-6ffa0793968f
+              stepCounter: 13004847-1fa7-4f11-9cfc-28fd8fafec11
+            dataType: VARCHAR(16777216)
+            description: ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            name: ROWGUID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cf0c5757-73e9-4f67-bdb6-c45c6cf3c08d
+                    stepCounter: 876b0851-7ab1-4144-afc2-b820e5da1ba2
+                transform: ""
+          - columnReference:
+              columnCounter: ee4ea8f3-f5d5-4544-8d1f-02fe2e78abcc
+              stepCounter: 13004847-1fa7-4f11-9cfc-28fd8fafec11
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 56cc9f50-2f0b-4c02-a52f-f5c9d5c32608
+                    stepCounter: 876b0851-7ab1-4144-afc2-b820e5da1ba2
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e72a50b1-0f3c-4ea6-9849-8954123598a3
+              stepCounter: 13004847-1fa7-4f11-9cfc-28fd8fafec11
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 64b4181b-9855-4c87-808b-42912fe414bc
+              stepCounter: 13004847-1fa7-4f11-9cfc-28fd8fafec11
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e317aca1-0d4c-476e-b3d0-cb9c00e00ecb
+              stepCounter: 13004847-1fa7-4f11-9cfc-28fd8fafec11
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 9feb81ca-b9db-44ef-a8f1-426629fe5c25
+                stepCounter: 13004847-1fa7-4f11-9cfc-28fd8fafec11
+              - columnCounter: d2049798-303b-491e-b64b-6ffa0793968f
+                stepCounter: 13004847-1fa7-4f11-9cfc-28fd8fafec11
+              - columnCounter: ee4ea8f3-f5d5-4544-8d1f-02fe2e78abcc
+                stepCounter: 13004847-1fa7-4f11-9cfc-28fd8fafec11
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b208a50c-f930-4b93-aa74-f5a91670e7e1
+              stepCounter: 13004847-1fa7-4f11-9cfc-28fd8fafec11
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 5343c74e-b2ba-4a57-84ca-6aa9f06114b5
+                stepCounter: 13004847-1fa7-4f11-9cfc-28fd8fafec11
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: ADV_WRKS_SRC
+                nodeName: AW_LOAD_PRODUCTSUBCATEGORY
+            join:
+              joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_PRODUCTSUBCATEGORY') }} "AW_LOAD_PRODUCTSUBCATEGORY"
+            name: DVSTG_AW_PRODUCTSUBCATEGORY
+            noLinkRefs: []
+      name: DVSTG_AW_PRODUCTSUBCATEGORY
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: 13004847-1fa7-4f11-9cfc-28fd8fafec11

@@ -1,0 +1,124 @@
+steps:
+  SPORTS_LOAD_MEDIA_CAPTIONS-a800ea7f-034d-400a-8225-a5309e696f97:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SPORTS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 351f3b6c-c227-4bb4-b770-1fc4ec7e9e08
+              stepCounter: a800ea7f-034d-400a-8225-a5309e696f97
+            config: {}
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            name: ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d991374c-d600-4d1e-b84a-affeb9802a6d
+              stepCounter: a800ea7f-034d-400a-8225-a5309e696f97
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: MEDIA_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 189af5a2-7487-42a6-86b7-b37fa1d1105c
+              stepCounter: a800ea7f-034d-400a-8225-a5309e696f97
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: CAPTION_TYPE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d10db3db-ec42-46a1-9ea1-378952c90340
+              stepCounter: a800ea7f-034d-400a-8225-a5309e696f97
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: CAPTION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: bfb4e308-4f4a-41c2-bd68-22e8efb38973
+              stepCounter: a800ea7f-034d-400a-8225-a5309e696f97
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: CAPTION_AUTHOR_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3e6af07d-9e93-44e8-8408-42dca8d9fda2
+              stepCounter: a800ea7f-034d-400a-8225-a5309e696f97
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: language
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 360f91bd-0f32-44fc-b9d9-e3af34c33061
+              stepCounter: a800ea7f-034d-400a-8225-a5309e696f97
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: CAPTION_SIZE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SPORTS_SRC', 'SPORTS_LOAD_MEDIA_CAPTIONS') }}
+      name: SPORTS_LOAD_MEDIA_CAPTIONS
+      schema: ""
+      sqlType: Source
+      table: SPORTS_LOAD_MEDIA_CAPTIONS
+      type: sourceInput
+    stepCounter: a800ea7f-034d-400a-8225-a5309e696f97

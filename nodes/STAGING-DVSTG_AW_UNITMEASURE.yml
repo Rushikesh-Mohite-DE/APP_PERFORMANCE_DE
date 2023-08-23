@@ -1,0 +1,167 @@
+steps:
+  DVSTG_AW_UNITMEASURE-fd420096-64cc-4524-83c8-092b75bfe2d1:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 910759e8-6b29-435b-8f03-27ec7b893788
+              stepCounter: fd420096-64cc-4524-83c8-092b75bfe2d1
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: b9d08cca-8a56-4867-a53b-0ecd7d66f5f7
+                stepCounter: fd420096-64cc-4524-83c8-092b75bfe2d1
+            name: HK_UNITMEASURE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: b9d08cca-8a56-4867-a53b-0ecd7d66f5f7
+              stepCounter: fd420096-64cc-4524-83c8-092b75bfe2d1
+            dataType: VARCHAR(3)
+            description: Primary key.
+            name: UNITMEASURECODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a6f43e85-48f2-4922-a27a-f32eea7c8fd2
+                    stepCounter: 52454c81-9be3-41be-83c4-9fdf5d314c8e
+                transform: ""
+          - columnReference:
+              columnCounter: 8038f54c-975f-40ac-a63a-569cf3f21e24
+              stepCounter: fd420096-64cc-4524-83c8-092b75bfe2d1
+            dataType: VARCHAR(16777216)
+            description: Unit of measure description.
+            name: NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1c9ab5eb-8eb9-4e90-b69a-bf857dd19964
+                    stepCounter: 52454c81-9be3-41be-83c4-9fdf5d314c8e
+                transform: ""
+          - columnReference:
+              columnCounter: d522b435-2ea3-4e7b-94a5-3b7dfd12ce0b
+              stepCounter: fd420096-64cc-4524-83c8-092b75bfe2d1
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 17dee4f4-c9d1-45bd-bdba-a8cc3bb616ea
+                    stepCounter: 52454c81-9be3-41be-83c4-9fdf5d314c8e
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1abe1ea9-0c8a-4964-accb-853172e88f8d
+              stepCounter: fd420096-64cc-4524-83c8-092b75bfe2d1
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 06ef9bc7-145e-487b-bf46-82dae997a98f
+              stepCounter: fd420096-64cc-4524-83c8-092b75bfe2d1
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7074391d-ac21-4951-a0d1-9cbfd48aac9d
+              stepCounter: fd420096-64cc-4524-83c8-092b75bfe2d1
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 8038f54c-975f-40ac-a63a-569cf3f21e24
+                stepCounter: fd420096-64cc-4524-83c8-092b75bfe2d1
+              - columnCounter: d522b435-2ea3-4e7b-94a5-3b7dfd12ce0b
+                stepCounter: fd420096-64cc-4524-83c8-092b75bfe2d1
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 911bdacb-dc66-4b89-9ed2-052e5f736c70
+              stepCounter: fd420096-64cc-4524-83c8-092b75bfe2d1
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 8038f54c-975f-40ac-a63a-569cf3f21e24
+                stepCounter: fd420096-64cc-4524-83c8-092b75bfe2d1
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: ADV_WRKS_SRC
+                nodeName: AW_LOAD_UNITMEASURE
+            join:
+              joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_UNITMEASURE') }} "AW_LOAD_UNITMEASURE"
+            name: DVSTG_AW_UNITMEASURE
+            noLinkRefs: []
+      name: DVSTG_AW_UNITMEASURE
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: fd420096-64cc-4524-83c8-092b75bfe2d1

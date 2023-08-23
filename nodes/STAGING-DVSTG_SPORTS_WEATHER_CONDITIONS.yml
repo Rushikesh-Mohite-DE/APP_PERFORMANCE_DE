@@ -1,0 +1,251 @@
+steps:
+  DVSTG_SPORTS_WEATHER_CONDITIONS-aa95a7dd-8a2f-46cd-a5fa-8117aba8b621:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d3254aa3-1888-491d-a4c8-52eb7c840a73
+              stepCounter: aa95a7dd-8a2f-46cd-a5fa-8117aba8b621
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: b14bb04d-7fcb-4643-b0a5-4101936e1ca9
+                stepCounter: aa95a7dd-8a2f-46cd-a5fa-8117aba8b621
+              - columnCounter: 1f9207bc-5ec8-4078-8985-c52b65e7ae47
+                stepCounter: aa95a7dd-8a2f-46cd-a5fa-8117aba8b621
+            name: HK_CONDITIONS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: b14bb04d-7fcb-4643-b0a5-4101936e1ca9
+              stepCounter: aa95a7dd-8a2f-46cd-a5fa-8117aba8b621
+            dataType: VARCHAR(32)
+            description: ""
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e527a541-2d1d-49ea-930a-9a55b708abeb
+                    stepCounter: 58dec2ec-9348-4c32-9967-996efcb61658
+                transform: ""
+          - columnReference:
+              columnCounter: 1f9207bc-5ec8-4078-8985-c52b65e7ae47
+              stepCounter: aa95a7dd-8a2f-46cd-a5fa-8117aba8b621
+            dataType: NUMBER(38,0)
+            description: ""
+            name: EVENT_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7cfd52e0-285c-4ab6-883f-a29ccb6fd9e2
+                    stepCounter: 58dec2ec-9348-4c32-9967-996efcb61658
+                transform: ""
+          - columnReference:
+              columnCounter: e9f270d7-b89b-4b11-bbd2-64c14441ed32
+              stepCounter: aa95a7dd-8a2f-46cd-a5fa-8117aba8b621
+            dataType: VARCHAR(100)
+            description: ""
+            name: TEMPERATURE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 63f7e103-5141-4335-872b-d78548139adf
+                    stepCounter: 58dec2ec-9348-4c32-9967-996efcb61658
+                transform: ""
+          - columnReference:
+              columnCounter: dc1fd759-41ed-4c8f-9d6a-cd34c84ea36a
+              stepCounter: aa95a7dd-8a2f-46cd-a5fa-8117aba8b621
+            dataType: VARCHAR(40)
+            description: ""
+            name: TEMPERATURE_UNITS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 209e7301-f41a-45fa-98b5-aea4bd5664b5
+                    stepCounter: 58dec2ec-9348-4c32-9967-996efcb61658
+                transform: ""
+          - columnReference:
+              columnCounter: 7989c9a8-600b-485a-8dd5-9d363f257114
+              stepCounter: aa95a7dd-8a2f-46cd-a5fa-8117aba8b621
+            dataType: VARCHAR(100)
+            description: ""
+            name: HUMIDITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b97d93cc-3719-433a-9477-f90ed35848f9
+                    stepCounter: 58dec2ec-9348-4c32-9967-996efcb61658
+                transform: ""
+          - columnReference:
+              columnCounter: 948fc270-66e1-499e-9a4b-9bc45dc7f138
+              stepCounter: aa95a7dd-8a2f-46cd-a5fa-8117aba8b621
+            dataType: VARCHAR(100)
+            description: ""
+            name: CLOUDS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fa903e6e-3cd8-45e4-9d21-f30562b59378
+                    stepCounter: 58dec2ec-9348-4c32-9967-996efcb61658
+                transform: ""
+          - columnReference:
+              columnCounter: d315dc64-8ee7-4882-9100-0031ee3f88f0
+              stepCounter: aa95a7dd-8a2f-46cd-a5fa-8117aba8b621
+            dataType: VARCHAR(100)
+            description: ""
+            name: WIND_DIRECTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3132e579-134d-457b-ac15-a8dca4503a3a
+                    stepCounter: 58dec2ec-9348-4c32-9967-996efcb61658
+                transform: ""
+          - columnReference:
+              columnCounter: 70b7a3f3-b06b-4f08-9a2e-d5a5728055eb
+              stepCounter: aa95a7dd-8a2f-46cd-a5fa-8117aba8b621
+            dataType: VARCHAR(100)
+            description: ""
+            name: WIND_VELOCITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e9bee28a-67a8-414b-aa49-0b5ce178d33f
+                    stepCounter: 58dec2ec-9348-4c32-9967-996efcb61658
+                transform: ""
+          - columnReference:
+              columnCounter: dd23acf5-2aa3-4fd0-8abd-c0e08d56d764
+              stepCounter: aa95a7dd-8a2f-46cd-a5fa-8117aba8b621
+            dataType: VARCHAR(100)
+            description: ""
+            name: WEATHER_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9c220d79-369b-4999-8dc0-a542df3c9d6c
+                    stepCounter: 58dec2ec-9348-4c32-9967-996efcb61658
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 895d6f8e-df4b-44b6-b516-c9c34809b6a6
+              stepCounter: aa95a7dd-8a2f-46cd-a5fa-8117aba8b621
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 79c85233-bf4d-461c-8169-57714b80685a
+              stepCounter: aa95a7dd-8a2f-46cd-a5fa-8117aba8b621
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 197a215d-b8be-40ff-ae14-86f2dee96cd6
+              stepCounter: aa95a7dd-8a2f-46cd-a5fa-8117aba8b621
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: e9f270d7-b89b-4b11-bbd2-64c14441ed32
+                stepCounter: aa95a7dd-8a2f-46cd-a5fa-8117aba8b621
+              - columnCounter: dc1fd759-41ed-4c8f-9d6a-cd34c84ea36a
+                stepCounter: aa95a7dd-8a2f-46cd-a5fa-8117aba8b621
+              - columnCounter: 7989c9a8-600b-485a-8dd5-9d363f257114
+                stepCounter: aa95a7dd-8a2f-46cd-a5fa-8117aba8b621
+              - columnCounter: 948fc270-66e1-499e-9a4b-9bc45dc7f138
+                stepCounter: aa95a7dd-8a2f-46cd-a5fa-8117aba8b621
+              - columnCounter: d315dc64-8ee7-4882-9100-0031ee3f88f0
+                stepCounter: aa95a7dd-8a2f-46cd-a5fa-8117aba8b621
+              - columnCounter: 70b7a3f3-b06b-4f08-9a2e-d5a5728055eb
+                stepCounter: aa95a7dd-8a2f-46cd-a5fa-8117aba8b621
+              - columnCounter: dd23acf5-2aa3-4fd0-8abd-c0e08d56d764
+                stepCounter: aa95a7dd-8a2f-46cd-a5fa-8117aba8b621
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: af3c0ee2-b1fd-4989-a0ab-c17f92df3913
+              stepCounter: aa95a7dd-8a2f-46cd-a5fa-8117aba8b621
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 1f9207bc-5ec8-4078-8985-c52b65e7ae47
+                stepCounter: aa95a7dd-8a2f-46cd-a5fa-8117aba8b621
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SPORTS_SRC
+                nodeName: SPORTS_LOAD_WEATHER_CONDITIONS
+            join:
+              joinCondition: FROM {{ ref('SPORTS_SRC', 'SPORTS_LOAD_WEATHER_CONDITIONS') }} "SPORTS_LOAD_WEATHER_CONDITIONS"
+            name: DVSTG_SPORTS_WEATHER_CONDITIONS
+            noLinkRefs: []
+      name: DVSTG_SPORTS_WEATHER_CONDITIONS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: aa95a7dd-8a2f-46cd-a5fa-8117aba8b621

@@ -1,0 +1,175 @@
+steps:
+  HUB_WWI_STOCKITEMTRANSACTIONS-ace608c9-0126-429f-b68e-06d29b3b6347:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 3b365803-a446-4306-b7d3-818e32cda806
+              stepCounter: ace608c9-0126-429f-b68e-06d29b3b6347
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_STOCKITEMTRANSACTIONS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b147a7ad-e851-4cc6-b30d-c7cc0fcbfea3
+                    stepCounter: 33ddb5b4-8fb8-4732-9279-36a5f31ec518
+                transform: ""
+          - columnReference:
+              columnCounter: c83eed5a-b526-4e4b-93cc-f3e553104e53
+              stepCounter: ace608c9-0126-429f-b68e-06d29b3b6347
+            dataType: NUMBER(38,0)
+            description: Numeric ID used to refer to a stock item transaction within the database
+            hashColumns: []
+            hashDetails: null
+            name: STOCKITEMTRANSACTIONID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4a4858c2-7049-4837-9c6b-ad3fe689595a
+                    stepCounter: 33ddb5b4-8fb8-4732-9279-36a5f31ec518
+                transform: ""
+          - columnReference:
+              columnCounter: 13fdb5f1-5ffc-451c-bb62-ab669c5c05aa
+              stepCounter: ace608c9-0126-429f-b68e-06d29b3b6347
+            dataType: NUMBER(38,0)
+            description: StockItem for this transaction
+            hashColumns: []
+            hashDetails: null
+            name: STOCKITEMID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6671fd01-68b1-40f1-9eaa-664e83d986bc
+                    stepCounter: 33ddb5b4-8fb8-4732-9279-36a5f31ec518
+                transform: ""
+          - columnReference:
+              columnCounter: 2739d8e7-fd80-470e-b173-53f71de4fd02
+              stepCounter: ace608c9-0126-429f-b68e-06d29b3b6347
+            dataType: NUMBER(38,0)
+            description: Type of transaction
+            hashColumns: []
+            hashDetails: null
+            name: TRANSACTIONTYPEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e6c80dd4-534a-4f97-b577-65f622c27e3d
+                    stepCounter: 33ddb5b4-8fb8-4732-9279-36a5f31ec518
+                transform: ""
+          - columnReference:
+              columnCounter: fde46d03-2f86-497a-a1b6-113a2606856d
+              stepCounter: ace608c9-0126-429f-b68e-06d29b3b6347
+            dataType: VARCHAR(16777216)
+            description: Customer for this transaction (if applicable)
+            hashColumns: []
+            hashDetails: null
+            name: CUSTOMERID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b020aad9-241c-4b38-beb8-7fd7d10ad4df
+                    stepCounter: 33ddb5b4-8fb8-4732-9279-36a5f31ec518
+                transform: ""
+          - columnReference:
+              columnCounter: 8729e7f5-74cf-4cbd-801a-5d40f4ba1aad
+              stepCounter: ace608c9-0126-429f-b68e-06d29b3b6347
+            dataType: VARCHAR(16777216)
+            description: ID of an invoice (for transactions associated with an invoice)
+            hashColumns: []
+            hashDetails: null
+            name: INVOICEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3c6ffcdd-6622-4ff0-93c3-39ed29bb1a88
+                    stepCounter: 33ddb5b4-8fb8-4732-9279-36a5f31ec518
+                transform: ""
+          - columnReference:
+              columnCounter: b488a93e-9e38-4218-85dc-82c77dc5724f
+              stepCounter: ace608c9-0126-429f-b68e-06d29b3b6347
+            dataType: VARCHAR(16777216)
+            description: Supplier for this stock transaction (if applicable)
+            hashColumns: []
+            hashDetails: null
+            name: SUPPLIERID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 18433bf6-4f17-47c4-9197-3e47df54182c
+                    stepCounter: 33ddb5b4-8fb8-4732-9279-36a5f31ec518
+                transform: ""
+          - columnReference:
+              columnCounter: 13017eed-56b4-4a6c-a639-b03c12bb1708
+              stepCounter: ace608c9-0126-429f-b68e-06d29b3b6347
+            dataType: VARCHAR(16777216)
+            description: ID of an purchase order (for transactions associated with a purchase order)
+            hashColumns: []
+            hashDetails: null
+            name: PURCHASEORDERID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 403328c1-22a4-4e0d-b1f1-7fe543effc0b
+                    stepCounter: 33ddb5b4-8fb8-4732-9279-36a5f31ec518
+                transform: ""
+          - columnReference:
+              columnCounter: 5ea0f6f7-3fcb-48e3-bc22-1ac2011a3e1b
+              stepCounter: ace608c9-0126-429f-b68e-06d29b3b6347
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 70e4bef1-b94f-4f7e-a673-0ee307e5f273
+                    stepCounter: 33ddb5b4-8fb8-4732-9279-36a5f31ec518
+                transform: ""
+          - columnReference:
+              columnCounter: 66266d1d-dab2-4e92-87c6-1c464819db14
+              stepCounter: ace608c9-0126-429f-b68e-06d29b3b6347
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fc1e8e99-6171-495e-8595-def261d892f6
+                    stepCounter: 33ddb5b4-8fb8-4732-9279-36a5f31ec518
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_WWI_STOCKITEMTRANSACTIONS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_WWI_STOCKITEMTRANSACTIONS') }} "DVSTG_WWI_STOCKITEMTRANSACTIONS"
+            name: HUB_WWI_STOCKITEMTRANSACTIONS
+            noLinkRefs: []
+      name: HUB_WWI_STOCKITEMTRANSACTIONS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: ace608c9-0126-429f-b68e-06d29b3b6347

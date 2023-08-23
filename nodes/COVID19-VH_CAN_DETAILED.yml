@@ -1,0 +1,154 @@
+steps:
+  VH_CAN_DETAILED-75374493-6052-4c98-91b7-2a14c8700995:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: COVID-19 cases and deaths, Canada, province level
+      locationID: ""
+      locationName: COVID19
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2834b50b-6b1a-464a-a275-3688e9237e86
+              stepCounter: 75374493-6052-4c98-91b7-2a14c8700995
+            config: {}
+            dataType: DATE
+            defaultValue: ""
+            description: ""
+            name: DATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e8cb62c2-414d-4345-b6a3-9d34b21ec5ba
+              stepCounter: 75374493-6052-4c98-91b7-2a14c8700995
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: PROVINCE_STATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f4d1fee2-6ca4-4f8c-9eac-83dee7353ac5
+              stepCounter: 75374493-6052-4c98-91b7-2a14c8700995
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: HEALTHCARE_REGION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: eca90acc-fec7-48c8-a686-e219b99c7cf5
+              stepCounter: 75374493-6052-4c98-91b7-2a14c8700995
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: CASES
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4872c70f-538e-4f39-b668-b1f91038ba27
+              stepCounter: 75374493-6052-4c98-91b7-2a14c8700995
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: DEATHS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: da362365-36c3-4327-9e71-e4d027ae24d1
+              stepCounter: 75374493-6052-4c98-91b7-2a14c8700995
+            config: {}
+            dataType: VARCHAR(3)
+            defaultValue: ""
+            description: ""
+            name: ISO3166_1
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 79c6986c-b198-4d9d-aa68-9f25fc7ab321
+              stepCounter: 75374493-6052-4c98-91b7-2a14c8700995
+            config: {}
+            dataType: VARCHAR(3)
+            defaultValue: ""
+            description: ""
+            name: ISO3166_2
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3f6c31b2-93e1-46c8-9900-a935f85f7d71
+              stepCounter: 75374493-6052-4c98-91b7-2a14c8700995
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: LAST_UPDATED_DATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b33987a5-e331-4ad4-9343-685420fee574
+              stepCounter: 75374493-6052-4c98-91b7-2a14c8700995
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: LAST_REPORTED_FLAG
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('COVID19', 'VH_CAN_DETAILED') }}
+      name: VH_CAN_DETAILED
+      schema: ""
+      sqlType: Source
+      table: VH_CAN_DETAILED
+      type: sourceInput
+    stepCounter: 75374493-6052-4c98-91b7-2a14c8700995

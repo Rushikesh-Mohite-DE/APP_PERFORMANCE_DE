@@ -1,0 +1,237 @@
+steps:
+  DVSTG_AW_PRODUCTREVIEW-3dab7470-6c27-4f7a-a3b7-10ee618020a6:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 60c58bcb-bf20-4520-bbb3-bbf7b98694a9
+              stepCounter: 3dab7470-6c27-4f7a-a3b7-10ee618020a6
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: a50d5d28-32f4-4fbb-8d21-0dee71f89659
+                stepCounter: 3dab7470-6c27-4f7a-a3b7-10ee618020a6
+              - columnCounter: dc2a46ce-17ac-4cb3-af09-229141ec5a17
+                stepCounter: 3dab7470-6c27-4f7a-a3b7-10ee618020a6
+            name: HK_PRODUCTREVIEW
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: a50d5d28-32f4-4fbb-8d21-0dee71f89659
+              stepCounter: 3dab7470-6c27-4f7a-a3b7-10ee618020a6
+            dataType: NUMBER(38,0)
+            description: Primary key for ProductReview records.
+            name: PRODUCTREVIEWID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fa62dd4d-c905-4c1a-abc3-e5d78a5c1456
+                    stepCounter: 81150051-daaa-4cdf-bc68-fe66b3a0ab83
+                transform: ""
+          - columnReference:
+              columnCounter: dc2a46ce-17ac-4cb3-af09-229141ec5a17
+              stepCounter: 3dab7470-6c27-4f7a-a3b7-10ee618020a6
+            dataType: NUMBER(38,0)
+            description: Product identification number. Foreign key to Product.ProductID.
+            name: PRODUCTID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4c6e3df9-7c00-458c-ac15-a70978768777
+                    stepCounter: 81150051-daaa-4cdf-bc68-fe66b3a0ab83
+                transform: ""
+          - columnReference:
+              columnCounter: 7b442e49-28c1-4ad2-b2b4-83946f445392
+              stepCounter: 3dab7470-6c27-4f7a-a3b7-10ee618020a6
+            dataType: VARCHAR(16777216)
+            description: Name of the reviewer.
+            name: REVIEWERNAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 34c3ae7a-df7c-4459-bbab-93cd4c4ae7c8
+                    stepCounter: 81150051-daaa-4cdf-bc68-fe66b3a0ab83
+                transform: ""
+          - columnReference:
+              columnCounter: 403c78ba-4f06-4c8c-be57-eebc678b7333
+              stepCounter: 3dab7470-6c27-4f7a-a3b7-10ee618020a6
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date review was submitted.
+            name: REVIEWDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6482f229-1de9-4b8b-a8f9-6c72734b9d7a
+                    stepCounter: 81150051-daaa-4cdf-bc68-fe66b3a0ab83
+                transform: ""
+          - columnReference:
+              columnCounter: d7bbcf4b-dc03-46b2-8604-40179443d5ec
+              stepCounter: 3dab7470-6c27-4f7a-a3b7-10ee618020a6
+            dataType: VARCHAR(50)
+            description: Reviewers e-mail address.
+            name: EMAILADDRESS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b2b11fc8-c765-4eb3-bbc5-eb6c1a434908
+                    stepCounter: 81150051-daaa-4cdf-bc68-fe66b3a0ab83
+                transform: ""
+          - columnReference:
+              columnCounter: b8d450f6-749f-4762-98d2-95ba36da0d15
+              stepCounter: 3dab7470-6c27-4f7a-a3b7-10ee618020a6
+            dataType: NUMBER(38,0)
+            description: Product rating given by the reviewer. Scale is 1 to 5 with 5 as the highest rating.
+            name: RATING
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7627fd76-7f06-4c56-a5ce-2ccfed9efd65
+                    stepCounter: 81150051-daaa-4cdf-bc68-fe66b3a0ab83
+                transform: ""
+          - columnReference:
+              columnCounter: ca4d3623-2b90-4520-9f40-48e163991cf4
+              stepCounter: 3dab7470-6c27-4f7a-a3b7-10ee618020a6
+            dataType: VARCHAR(3850)
+            description: Reviewers comments
+            name: COMMENTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9027f5c1-541a-429f-b2d4-3166508157cc
+                    stepCounter: 81150051-daaa-4cdf-bc68-fe66b3a0ab83
+                transform: ""
+          - columnReference:
+              columnCounter: acf7c0fb-6a50-412e-b43b-ae97392a9f1e
+              stepCounter: 3dab7470-6c27-4f7a-a3b7-10ee618020a6
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d5064f77-0262-44d2-b851-193f6077144f
+                    stepCounter: 81150051-daaa-4cdf-bc68-fe66b3a0ab83
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: debdfb79-0a6e-464a-abf0-f1f47fef17b3
+              stepCounter: 3dab7470-6c27-4f7a-a3b7-10ee618020a6
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8896b47f-4281-4eb8-8443-f899ee0dcd5f
+              stepCounter: 3dab7470-6c27-4f7a-a3b7-10ee618020a6
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4cc07674-6f6d-4575-b44a-03d5b148d0dc
+              stepCounter: 3dab7470-6c27-4f7a-a3b7-10ee618020a6
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 7b442e49-28c1-4ad2-b2b4-83946f445392
+                stepCounter: 3dab7470-6c27-4f7a-a3b7-10ee618020a6
+              - columnCounter: 403c78ba-4f06-4c8c-be57-eebc678b7333
+                stepCounter: 3dab7470-6c27-4f7a-a3b7-10ee618020a6
+              - columnCounter: d7bbcf4b-dc03-46b2-8604-40179443d5ec
+                stepCounter: 3dab7470-6c27-4f7a-a3b7-10ee618020a6
+              - columnCounter: b8d450f6-749f-4762-98d2-95ba36da0d15
+                stepCounter: 3dab7470-6c27-4f7a-a3b7-10ee618020a6
+              - columnCounter: ca4d3623-2b90-4520-9f40-48e163991cf4
+                stepCounter: 3dab7470-6c27-4f7a-a3b7-10ee618020a6
+              - columnCounter: acf7c0fb-6a50-412e-b43b-ae97392a9f1e
+                stepCounter: 3dab7470-6c27-4f7a-a3b7-10ee618020a6
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1f785674-8627-4ced-8f2e-88e60e98f331
+              stepCounter: 3dab7470-6c27-4f7a-a3b7-10ee618020a6
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: d7bbcf4b-dc03-46b2-8604-40179443d5ec
+                stepCounter: 3dab7470-6c27-4f7a-a3b7-10ee618020a6
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: ADV_WRKS_SRC
+                nodeName: AW_LOAD_PRODUCTREVIEW
+            join:
+              joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_PRODUCTREVIEW') }} "AW_LOAD_PRODUCTREVIEW"
+            name: DVSTG_AW_PRODUCTREVIEW
+            noLinkRefs: []
+      name: DVSTG_AW_PRODUCTREVIEW
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: 3dab7470-6c27-4f7a-a3b7-10ee618020a6

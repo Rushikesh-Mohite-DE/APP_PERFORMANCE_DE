@@ -1,0 +1,124 @@
+steps:
+  AW_LOAD_CUSTOMER-0e25d7a3-6403-4327-b34f-94c7d9d7b59f:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: ADV_WRKS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: dae0ab3a-1577-445e-8f11-0a7e4b054e64
+              stepCounter: 0e25d7a3-6403-4327-b34f-94c7d9d7b59f
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Primary key.
+            name: CUSTOMERID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3269c0ac-e26f-4446-bf3d-36a0e5a3e119
+              stepCounter: 0e25d7a3-6403-4327-b34f-94c7d9d7b59f
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: Foreign key to Person.BusinessEntityID
+            name: PERSONID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7f89fa6f-30c7-484c-a776-de9751ae75f7
+              stepCounter: 0e25d7a3-6403-4327-b34f-94c7d9d7b59f
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: Foreign key to Store.BusinessEntityID
+            name: STOREID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 219fbe9b-f552-49d7-b286-69c45b486827
+              stepCounter: 0e25d7a3-6403-4327-b34f-94c7d9d7b59f
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ID of the territory in which the customer is located. Foreign key to SalesTerritory.SalesTerritoryID.
+            name: TERRITORYID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8686f839-926d-4e7d-9645-a058584f376d
+              stepCounter: 0e25d7a3-6403-4327-b34f-94c7d9d7b59f
+            config: {}
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: Unique number identifying the customer assigned by the accounting system.
+            name: ACCOUNTNUMBER
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0990f5e2-d6ca-4593-8ca6-71a4606fecbb
+              stepCounter: 0e25d7a3-6403-4327-b34f-94c7d9d7b59f
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            name: ROWGUID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 38917594-e8ac-4f27-8880-1ad2271d0c00
+              stepCounter: 0e25d7a3-6403-4327-b34f-94c7d9d7b59f
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_CUSTOMER') }}
+      name: AW_LOAD_CUSTOMER
+      schema: ""
+      sqlType: Source
+      table: AW_LOAD_CUSTOMER
+      type: sourceInput
+    stepCounter: 0e25d7a3-6403-4327-b34f-94c7d9d7b59f

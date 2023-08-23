@@ -1,0 +1,64 @@
+steps:
+  AW_LOAD_UNITMEASURE-52454c81-9be3-41be-83c4-9fdf5d314c8e:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: ADV_WRKS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a6f43e85-48f2-4922-a27a-f32eea7c8fd2
+              stepCounter: 52454c81-9be3-41be-83c4-9fdf5d314c8e
+            config: {}
+            dataType: VARCHAR(3)
+            defaultValue: ""
+            description: Primary key.
+            name: UNITMEASURECODE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1c9ab5eb-8eb9-4e90-b69a-bf857dd19964
+              stepCounter: 52454c81-9be3-41be-83c4-9fdf5d314c8e
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: Unit of measure description.
+            name: NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 17dee4f4-c9d1-45bd-bdba-a8cc3bb616ea
+              stepCounter: 52454c81-9be3-41be-83c4-9fdf5d314c8e
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_UNITMEASURE') }}
+      name: AW_LOAD_UNITMEASURE
+      schema: ""
+      sqlType: Source
+      table: AW_LOAD_UNITMEASURE
+      type: sourceInput
+    stepCounter: 52454c81-9be3-41be-83c4-9fdf5d314c8e

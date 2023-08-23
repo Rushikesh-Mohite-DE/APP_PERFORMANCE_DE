@@ -1,0 +1,94 @@
+steps:
+  AW_LOAD_PRODUCTLISTPRICEHISTORY-dc11a936-6e01-472c-bb90-fd3ed17e8807:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: ADV_WRKS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2a1272c1-d16f-4cc0-b54e-866d8193261f
+              stepCounter: dc11a936-6e01-472c-bb90-fd3ed17e8807
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Product identification number. Foreign key to Product.ProductID
+            name: PRODUCTID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2cc86a36-0d91-4fb0-93dc-c978e1f575d7
+              stepCounter: dc11a936-6e01-472c-bb90-fd3ed17e8807
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: List price start date.
+            name: STARTDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: af7b7076-1709-4848-8562-441aa2191d90
+              stepCounter: dc11a936-6e01-472c-bb90-fd3ed17e8807
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: List price end date
+            name: ENDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c1ec322c-b71a-4a3e-9c38-84a56ade11a9
+              stepCounter: dc11a936-6e01-472c-bb90-fd3ed17e8807
+            config: {}
+            dataType: NUMBER(19,4)
+            defaultValue: ""
+            description: Product list price.
+            name: LISTPRICE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: def4780e-9c82-4d52-91d7-5cb55b77a5d3
+              stepCounter: dc11a936-6e01-472c-bb90-fd3ed17e8807
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_PRODUCTLISTPRICEHISTORY') }}
+      name: AW_LOAD_PRODUCTLISTPRICEHISTORY
+      schema: ""
+      sqlType: Source
+      table: AW_LOAD_PRODUCTLISTPRICEHISTORY
+      type: sourceInput
+    stepCounter: dc11a936-6e01-472c-bb90-fd3ed17e8807

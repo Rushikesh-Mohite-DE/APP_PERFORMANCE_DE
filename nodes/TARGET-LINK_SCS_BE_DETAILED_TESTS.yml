@@ -1,0 +1,147 @@
+steps:
+  LINK_SCS_BE_DETAILED_TESTS-584f8677-8856-42b2-8edd-484247bc0758:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: Day-to-day time series on tests performed
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 433b2e4e-58c4-42fb-88ef-7e7cb94e6946
+              stepCounter: 584f8677-8856-42b2-8edd-484247bc0758
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_SCS_BE_DETAILED_TESTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 39a818ff-1194-43b6-a6ab-e3eb23d9e250
+                    stepCounter: 090a1cab-ef1b-4ad6-b780-dc14a688a33d
+                transform: ""
+          - columnReference:
+              columnCounter: 90feeb4b-f21f-43f5-96a6-869b1fc9bf39
+              stepCounter: 584f8677-8856-42b2-8edd-484247bc0758
+            dataType: DATE
+            description: Date of data point
+            hashColumns: []
+            hashDetails: null
+            name: DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 880527b7-07c6-4d39-a242-6889e0479401
+                    stepCounter: 090a1cab-ef1b-4ad6-b780-dc14a688a33d
+                transform: ""
+          - columnReference:
+              columnCounter: aef6a2cd-012b-477b-80c7-95921f148c92
+              stepCounter: 584f8677-8856-42b2-8edd-484247bc0758
+            dataType: NUMBER(38,0)
+            description: Number of tests performed on the date of record
+            hashColumns: []
+            hashDetails: null
+            name: TESTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 905f5bba-145f-4dfb-9b5b-b5ee17f33c1b
+                    stepCounter: 090a1cab-ef1b-4ad6-b780-dc14a688a33d
+                transform: ""
+          - columnReference:
+              columnCounter: 2dee2f77-b97c-4b84-96d5-ef074456b6cf
+              stepCounter: 584f8677-8856-42b2-8edd-484247bc0758
+            dataType: TIMESTAMP_NTZ(9)
+            description: Timestamp of last update
+            hashColumns: []
+            hashDetails: null
+            name: LAST_UPDATED_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5f84b076-ffde-4b2d-9d1d-4668d13dc7aa
+                    stepCounter: 090a1cab-ef1b-4ad6-b780-dc14a688a33d
+                transform: ""
+          - columnReference:
+              columnCounter: 638777fb-86c1-4e63-9dd5-b10ccd042930
+              stepCounter: 584f8677-8856-42b2-8edd-484247bc0758
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9a730065-7df0-4501-96c3-d1413a3b3dc5
+                    stepCounter: 090a1cab-ef1b-4ad6-b780-dc14a688a33d
+                transform: ""
+          - columnReference:
+              columnCounter: 855dcedb-e1bf-40d4-854a-1e80d69b3c6c
+              stepCounter: 584f8677-8856-42b2-8edd-484247bc0758
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: dc6e596d-d081-4cc4-969f-9d58a4b69334
+                    stepCounter: 090a1cab-ef1b-4ad6-b780-dc14a688a33d
+                transform: ""
+          - columnReference:
+              columnCounter: 19aaf7f7-e8e9-4bd4-bc77-75d17d0e9d88
+              stepCounter: 584f8677-8856-42b2-8edd-484247bc0758
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 669bf375-be6f-4b50-8970-15bb4603ce9d
+                    stepCounter: 090a1cab-ef1b-4ad6-b780-dc14a688a33d
+                transform: ""
+          - columnReference:
+              columnCounter: 9db7f0d5-dcd3-4e87-a17a-68cbb3ca52ba
+              stepCounter: 584f8677-8856-42b2-8edd-484247bc0758
+            config:
+              is_Link_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LNK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e7504aa9-6f27-457b-a51e-6e66108dbce4
+                    stepCounter: 090a1cab-ef1b-4ad6-b780-dc14a688a33d
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SCS_BE_DETAILED_TESTS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SCS_BE_DETAILED_TESTS') }} "DVSTG_SCS_BE_DETAILED_TESTS"
+            name: LINK_SCS_BE_DETAILED_TESTS
+            noLinkRefs: []
+      name: LINK_SCS_BE_DETAILED_TESTS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::7
+      type: sql
+    stepCounter: 584f8677-8856-42b2-8edd-484247bc0758

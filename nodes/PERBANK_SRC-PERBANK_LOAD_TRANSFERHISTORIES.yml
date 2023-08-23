@@ -1,0 +1,124 @@
+steps:
+  PERBANK_LOAD_TRANSFERHISTORIES-bd77a8bf-c414-44b6-be55-0c3fcf2b3b6b:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: PERBANK_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 35d1d394-f5e7-44d6-bb6b-7a14c00504a5
+              stepCounter: bd77a8bf-c414-44b6-be55-0c3fcf2b3b6b
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 59dabc55-c56b-4a01-846c-2946b5eae787
+              stepCounter: bd77a8bf-c414-44b6-be55-0c3fcf2b3b6b
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: FROMID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ffa8a099-abf2-4ba6-89b1-db02ed135f36
+              stepCounter: bd77a8bf-c414-44b6-be55-0c3fcf2b3b6b
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: TOID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4c0d7ebb-e3ce-48c9-a37a-79fb0a87e9cc
+              stepCounter: bd77a8bf-c414-44b6-be55-0c3fcf2b3b6b
+            config: {}
+            dataType: NUMBER(19,4)
+            defaultValue: ""
+            description: ""
+            name: AMOUNT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 940efade-cacf-4db9-b9c3-b5a7d072ac49
+              stepCounter: bd77a8bf-c414-44b6-be55-0c3fcf2b3b6b
+            config: {}
+            dataType: VARCHAR(20)
+            defaultValue: ""
+            description: ""
+            name: ISACTIVE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d902c81d-88da-41f7-814b-57c3e8bf189d
+              stepCounter: bd77a8bf-c414-44b6-be55-0c3fcf2b3b6b
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: CREATED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a87df911-809c-457b-bdbc-885cd809dec4
+              stepCounter: bd77a8bf-c414-44b6-be55-0c3fcf2b3b6b
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: MODIFIED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('PERBANK_SRC', 'PERBANK_LOAD_TRANSFERHISTORIES') }}
+      name: PERBANK_LOAD_TRANSFERHISTORIES
+      schema: ""
+      sqlType: Source
+      table: PERBANK_LOAD_TRANSFERHISTORIES
+      type: sourceInput
+    stepCounter: bd77a8bf-c414-44b6-be55-0c3fcf2b3b6b

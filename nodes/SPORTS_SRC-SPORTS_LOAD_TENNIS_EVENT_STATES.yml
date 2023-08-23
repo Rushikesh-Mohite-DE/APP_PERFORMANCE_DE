@@ -1,0 +1,199 @@
+steps:
+  SPORTS_LOAD_TENNIS_EVENT_STATES-67d004c8-c68d-421a-b767-d3527ae8973f:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SPORTS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: abb20ab2-13a1-4da4-99e0-55aec806c7eb
+              stepCounter: 67d004c8-c68d-421a-b767-d3527ae8973f
+            config: {}
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            name: ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e3b4235c-1112-4ff8-a5a4-f9b01274f3b3
+              stepCounter: 67d004c8-c68d-421a-b767-d3527ae8973f
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: EVENT_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 07e995c4-9e8a-4c14-8f46-df67ff4df743
+              stepCounter: 67d004c8-c68d-421a-b767-d3527ae8973f
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: CURRENT_STATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b2b5d5d5-25b8-47b0-b7ed-a9860d57018e
+              stepCounter: 67d004c8-c68d-421a-b767-d3527ae8973f
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: SEQUENCE_NUMBER
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ce5afb75-c8f1-4fec-bf97-e5b86b25429d
+              stepCounter: 67d004c8-c68d-421a-b767-d3527ae8973f
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: TENNIS_SET
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9172851e-3b13-4129-aefb-81dda5dfa8a0
+              stepCounter: 67d004c8-c68d-421a-b767-d3527ae8973f
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: GAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7bef88b6-62b5-4c18-a37d-c4d55d7486ac
+              stepCounter: 67d004c8-c68d-421a-b767-d3527ae8973f
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: SERVER_PERSON_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 20e27dbd-0277-4323-8b03-836786090b2f
+              stepCounter: 67d004c8-c68d-421a-b767-d3527ae8973f
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: SERVER_SCORE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: bf619cb6-34c8-4ea6-a80a-f17af2d7aa43
+              stepCounter: 67d004c8-c68d-421a-b767-d3527ae8973f
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: RECEIVER_PERSON_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7d93bd09-2d21-4d8a-8379-a8a30de32579
+              stepCounter: 67d004c8-c68d-421a-b767-d3527ae8973f
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: RECEIVER_SCORE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7924003e-4edc-436d-89ce-02a2cd5a2576
+              stepCounter: 67d004c8-c68d-421a-b767-d3527ae8973f
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: SERVICE_NUMBER
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c1b60afb-5f2c-4fc8-bd87-2889e376e13f
+              stepCounter: 67d004c8-c68d-421a-b767-d3527ae8973f
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: CONTEXT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SPORTS_SRC', 'SPORTS_LOAD_TENNIS_EVENT_STATES') }}
+      name: SPORTS_LOAD_TENNIS_EVENT_STATES
+      schema: ""
+      sqlType: Source
+      table: SPORTS_LOAD_TENNIS_EVENT_STATES
+      type: sourceInput
+    stepCounter: 67d004c8-c68d-421a-b767-d3527ae8973f

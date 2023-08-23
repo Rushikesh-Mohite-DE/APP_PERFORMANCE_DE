@@ -1,0 +1,179 @@
+steps:
+  DVSTG_SPORTS_BOOKMAKERS-ec369ac0-a9c5-4ff3-970c-8f3703d8c33e:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f6469566-65f0-4a8b-b237-5fb31073adbe
+              stepCounter: ec369ac0-a9c5-4ff3-970c-8f3703d8c33e
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: cae9775c-8f72-47db-bcea-4a1385830f34
+                stepCounter: ec369ac0-a9c5-4ff3-970c-8f3703d8c33e
+              - columnCounter: 2343deb7-319d-491a-8d26-b5a0e7e4b547
+                stepCounter: ec369ac0-a9c5-4ff3-970c-8f3703d8c33e
+            name: HK_BOOKMAKERS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 2343deb7-319d-491a-8d26-b5a0e7e4b547
+              stepCounter: ec369ac0-a9c5-4ff3-970c-8f3703d8c33e
+            dataType: VARCHAR(32)
+            description: ""
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 652f33af-dd52-4ebc-881a-6ca443d44581
+                    stepCounter: 197ddb66-3e1f-47a4-9d25-44c59e3164f7
+                transform: ""
+          - columnReference:
+              columnCounter: cae9775c-8f72-47db-bcea-4a1385830f34
+              stepCounter: ec369ac0-a9c5-4ff3-970c-8f3703d8c33e
+            dataType: VARCHAR(100)
+            description: ""
+            name: BOOKMAKER_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c9a0b25d-0f44-4376-8261-41a82921546f
+                    stepCounter: 197ddb66-3e1f-47a4-9d25-44c59e3164f7
+                transform: ""
+          - columnReference:
+              columnCounter: 79efd8e4-81fb-4f3e-b3b0-847d8ee31bcd
+              stepCounter: ec369ac0-a9c5-4ff3-970c-8f3703d8c33e
+            dataType: NUMBER(38,0)
+            description: ""
+            name: PUBLISHER_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a8b4d77b-e34d-43e0-bfa8-9ec1091761a6
+                    stepCounter: 197ddb66-3e1f-47a4-9d25-44c59e3164f7
+                transform: ""
+          - columnReference:
+              columnCounter: c1b2fd35-f5a3-4d5a-bc5a-c4b09111c605
+              stepCounter: ec369ac0-a9c5-4ff3-970c-8f3703d8c33e
+            dataType: NUMBER(38,0)
+            description: ""
+            name: LOCATION_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ee2294e3-62f4-4f64-9d42-5c94a5b5a125
+                    stepCounter: 197ddb66-3e1f-47a4-9d25-44c59e3164f7
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4fa2c3c7-0633-490e-9b9a-bb89f430d52d
+              stepCounter: ec369ac0-a9c5-4ff3-970c-8f3703d8c33e
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 78086a8b-d2ca-4a36-b181-e9ef064dd7cf
+              stepCounter: ec369ac0-a9c5-4ff3-970c-8f3703d8c33e
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6442dd84-6169-42ec-8fab-61303f176b09
+              stepCounter: ec369ac0-a9c5-4ff3-970c-8f3703d8c33e
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 79efd8e4-81fb-4f3e-b3b0-847d8ee31bcd
+                stepCounter: ec369ac0-a9c5-4ff3-970c-8f3703d8c33e
+              - columnCounter: c1b2fd35-f5a3-4d5a-bc5a-c4b09111c605
+                stepCounter: ec369ac0-a9c5-4ff3-970c-8f3703d8c33e
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences: []
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e8640402-ac61-44b4-80e7-869008a33b8d
+              stepCounter: ec369ac0-a9c5-4ff3-970c-8f3703d8c33e
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: c1b2fd35-f5a3-4d5a-bc5a-c4b09111c605
+                stepCounter: ec369ac0-a9c5-4ff3-970c-8f3703d8c33e
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SPORTS_SRC
+                nodeName: SPORTS_LOAD_BOOKMAKERS
+            join:
+              joinCondition: FROM {{ ref('SPORTS_SRC', 'SPORTS_LOAD_BOOKMAKERS') }} "SPORTS_LOAD_BOOKMAKERS"
+            name: DVSTG_SPORTS_BOOKMAKERS
+            noLinkRefs: []
+      name: DVSTG_SPORTS_BOOKMAKERS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: ec369ac0-a9c5-4ff3-970c-8f3703d8c33e

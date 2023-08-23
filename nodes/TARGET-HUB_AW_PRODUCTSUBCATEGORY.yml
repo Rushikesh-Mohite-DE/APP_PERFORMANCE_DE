@@ -1,0 +1,105 @@
+steps:
+  HUB_AW_PRODUCTSUBCATEGORY-801cb70f-a263-442c-b5d3-d71ffc24c7f6:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: e6d147bc-9caf-4796-8430-9ff238f97ebb
+              stepCounter: 801cb70f-a263-442c-b5d3-d71ffc24c7f6
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_PRODUCTSUBCATEGORY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 59bd3b1d-cd05-43cc-839a-cc2a6560af49
+                    stepCounter: 13004847-1fa7-4f11-9cfc-28fd8fafec11
+                transform: ""
+          - columnReference:
+              columnCounter: 0333b86b-92cd-4288-b36c-41f339740315
+              stepCounter: 801cb70f-a263-442c-b5d3-d71ffc24c7f6
+            dataType: NUMBER(38,0)
+            description: Primary key for ProductSubcategory records.
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCTSUBCATEGORYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1bf0dcfc-b9ad-4459-a520-1b1b75d589a0
+                    stepCounter: 13004847-1fa7-4f11-9cfc-28fd8fafec11
+                transform: ""
+          - columnReference:
+              columnCounter: 02f95c67-09c6-457e-95f4-c67feb317b11
+              stepCounter: 801cb70f-a263-442c-b5d3-d71ffc24c7f6
+            dataType: NUMBER(38,0)
+            description: Product category identification number. Foreign key to ProductCategory.ProductCategoryID.
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCTCATEGORYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5343c74e-b2ba-4a57-84ca-6aa9f06114b5
+                    stepCounter: 13004847-1fa7-4f11-9cfc-28fd8fafec11
+                transform: ""
+          - columnReference:
+              columnCounter: 36dffe23-b2c8-4df1-aacc-70f61c0e6fdc
+              stepCounter: 801cb70f-a263-442c-b5d3-d71ffc24c7f6
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e72a50b1-0f3c-4ea6-9849-8954123598a3
+                    stepCounter: 13004847-1fa7-4f11-9cfc-28fd8fafec11
+                transform: ""
+          - columnReference:
+              columnCounter: 8d9a0e53-1dd2-4278-ac2c-b17da0116399
+              stepCounter: 801cb70f-a263-442c-b5d3-d71ffc24c7f6
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 64b4181b-9855-4c87-808b-42912fe414bc
+                    stepCounter: 13004847-1fa7-4f11-9cfc-28fd8fafec11
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_PRODUCTSUBCATEGORY
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_PRODUCTSUBCATEGORY') }} "DVSTG_AW_PRODUCTSUBCATEGORY"
+            name: HUB_AW_PRODUCTSUBCATEGORY
+            noLinkRefs: []
+      name: HUB_AW_PRODUCTSUBCATEGORY
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 801cb70f-a263-442c-b5d3-d71ffc24c7f6

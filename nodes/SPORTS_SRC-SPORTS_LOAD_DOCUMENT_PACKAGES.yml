@@ -1,0 +1,79 @@
+steps:
+  SPORTS_LOAD_DOCUMENT_PACKAGES-de72ee73-fc7c-4b9b-ad84-3177f8920f76:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SPORTS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8fe18796-9360-4d83-909f-37dc85050238
+              stepCounter: de72ee73-fc7c-4b9b-ad84-3177f8920f76
+            config: {}
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            name: ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d167c5f9-563c-409f-a10c-ac0efdc4118c
+              stepCounter: de72ee73-fc7c-4b9b-ad84-3177f8920f76
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: PACKAGE_KEY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7e97bfb0-f8e1-4cce-b042-57a75f855593
+              stepCounter: de72ee73-fc7c-4b9b-ad84-3177f8920f76
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: PACKAGE_NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ab137990-b84d-49ea-bbeb-33a979d52e6f
+              stepCounter: de72ee73-fc7c-4b9b-ad84-3177f8920f76
+            config: {}
+            dataType: DATE
+            defaultValue: ""
+            description: ""
+            name: DATE_TIME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SPORTS_SRC', 'SPORTS_LOAD_DOCUMENT_PACKAGES') }}
+      name: SPORTS_LOAD_DOCUMENT_PACKAGES
+      schema: ""
+      sqlType: Source
+      table: SPORTS_LOAD_DOCUMENT_PACKAGES
+      type: sourceInput
+    stepCounter: de72ee73-fc7c-4b9b-ad84-3177f8920f76

@@ -1,0 +1,94 @@
+steps:
+  WWI_LOAD_CUSTOMERCATEGORIES-28fd0874-0edc-4b05-8246-102553ff4fd9:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: WIDEWORLIMPORTES_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9b20db6d-505f-41b6-af28-db45bf860a96
+              stepCounter: 28fd0874-0edc-4b05-8246-102553ff4fd9
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Numeric ID used for reference to a customer category within the database
+            name: CUSTOMERCATEGORYID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f66aeb7c-34f2-4445-94cc-4f4ea1c1420c
+              stepCounter: 28fd0874-0edc-4b05-8246-102553ff4fd9
+            config: {}
+            dataType: VARCHAR(50)
+            defaultValue: ""
+            description: Full name of the category that customers can be assigned to
+            name: CUSTOMERCATEGORYNAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 75b34eae-9505-466c-b07d-60ab70b89bc8
+              stepCounter: 28fd0874-0edc-4b05-8246-102553ff4fd9
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: LASTEDITEDBY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ee4c82a3-0334-4461-ad06-ad715d1bb9fd
+              stepCounter: 28fd0874-0edc-4b05-8246-102553ff4fd9
+            config: {}
+            dataType: DATE
+            defaultValue: ""
+            description: ""
+            name: VALIDFROM
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 57fa19ff-d0c8-4372-89da-eeec39e9b106
+              stepCounter: 28fd0874-0edc-4b05-8246-102553ff4fd9
+            config: {}
+            dataType: DATE
+            defaultValue: ""
+            description: ""
+            name: VALIDTO
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('WIDEWORLIMPORTES_SRC', 'WWI_LOAD_CUSTOMERCATEGORIES') }}
+      name: WWI_LOAD_CUSTOMERCATEGORIES
+      schema: ""
+      sqlType: Source
+      table: WWI_LOAD_CUSTOMERCATEGORIES
+      type: sourceInput
+    stepCounter: 28fd0874-0edc-4b05-8246-102553ff4fd9

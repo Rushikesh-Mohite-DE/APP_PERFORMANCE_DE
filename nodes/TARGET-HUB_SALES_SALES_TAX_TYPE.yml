@@ -1,0 +1,91 @@
+steps:
+  HUB_SALES_SALES_TAX_TYPE-801825d0-c589-4307-860d-be3e78ac3d40:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 460e89f8-3074-446c-aab1-e43d73932cfb
+              stepCounter: 801825d0-c589-4307-860d-be3e78ac3d40
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_SALES_SALES_TAX_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6acc9c7f-eff8-4871-bbfd-f399d0f629c9
+                    stepCounter: 2d4058bc-e6be-4247-8c31-afd6b1e2dc79
+                transform: ""
+          - columnReference:
+              columnCounter: e5aea656-faca-4176-b4ee-45c85606d9ca
+              stepCounter: 801825d0-c589-4307-860d-be3e78ac3d40
+            dataType: VARCHAR(10)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SALES_TAX_TYPE_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 50c8fe4c-65f1-487a-a38b-956e397b735a
+                    stepCounter: 2d4058bc-e6be-4247-8c31-afd6b1e2dc79
+                transform: ""
+          - columnReference:
+              columnCounter: 667c2373-c173-4e53-b3e5-49e2b0cbb6b6
+              stepCounter: 801825d0-c589-4307-860d-be3e78ac3d40
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ffca85e5-7f7f-4e93-9337-09b71146aee7
+                    stepCounter: 2d4058bc-e6be-4247-8c31-afd6b1e2dc79
+                transform: ""
+          - columnReference:
+              columnCounter: 1b1a9924-0a25-41e9-a208-e6d1fd6fa834
+              stepCounter: 801825d0-c589-4307-860d-be3e78ac3d40
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bdd0d7c5-9c07-4996-913d-669d905a819e
+                    stepCounter: 2d4058bc-e6be-4247-8c31-afd6b1e2dc79
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SALES_SALES_TAX_TYPE
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SALES_SALES_TAX_TYPE') }} "DVSTG_SALES_SALES_TAX_TYPE"
+            name: HUB_SALES_SALES_TAX_TYPE
+            noLinkRefs: []
+      name: HUB_SALES_SALES_TAX_TYPE
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 801825d0-c589-4307-860d-be3e78ac3d40

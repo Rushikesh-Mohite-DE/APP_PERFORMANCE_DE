@@ -1,0 +1,105 @@
+steps:
+  HUB_APPLE_MOBILITY-d1e4441c-841a-4051-8475-a61b08f20f69:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: bf87e7ba-60df-4033-8422-1319218ebbb0
+              stepCounter: d1e4441c-841a-4051-8475-a61b08f20f69
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_DVSTG_APPLE_MOBILITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ae90ac72-ef78-4ec7-8bd4-96a5ab5f0154
+                    stepCounter: 06db4494-e099-40bf-a307-5369ad032515
+                transform: ""
+          - columnReference:
+              columnCounter: cd1695cb-88e8-43b4-b299-b1e869f64cce
+              stepCounter: d1e4441c-841a-4051-8475-a61b08f20f69
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: COUNTRY_REGION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 17de18f8-fd4d-4ca5-8139-bcb0e5f0e681
+                    stepCounter: 06db4494-e099-40bf-a307-5369ad032515
+                transform: ""
+          - columnReference:
+              columnCounter: 1068dce5-f397-4948-845c-95b42bc08eb9
+              stepCounter: d1e4441c-841a-4051-8475-a61b08f20f69
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PROVINCE_STATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 41e09ba6-0043-4c01-be25-a05ce036e3c2
+                    stepCounter: 06db4494-e099-40bf-a307-5369ad032515
+                transform: ""
+          - columnReference:
+              columnCounter: b00bf080-c627-47e2-bf51-05758f9865c3
+              stepCounter: d1e4441c-841a-4051-8475-a61b08f20f69
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8d5caf97-448b-407d-88f0-eadf90c2c337
+                    stepCounter: 06db4494-e099-40bf-a307-5369ad032515
+                transform: ""
+          - columnReference:
+              columnCounter: 4f7584fe-0192-4095-8f09-6263ae43605b
+              stepCounter: d1e4441c-841a-4051-8475-a61b08f20f69
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12df94da-ebdb-4b48-a35a-eb129d3af302
+                    stepCounter: 06db4494-e099-40bf-a307-5369ad032515
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_APPLE_MOBILITY
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_APPLE_MOBILITY') }} "DVSTG_APPLE_MOBILITY"
+            name: HUB_APPLE_MOBILITY
+            noLinkRefs: []
+      name: HUB_APPLE_MOBILITY
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: d1e4441c-841a-4051-8475-a61b08f20f69

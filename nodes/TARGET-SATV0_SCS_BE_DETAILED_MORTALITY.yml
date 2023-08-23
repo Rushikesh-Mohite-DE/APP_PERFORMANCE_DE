@@ -1,0 +1,163 @@
+steps:
+  SATV0_SCS_BE_DETAILED_MORTALITY-b60e28a3-9c5d-4db5-ba9a-8f2494458793:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: Detailed data on mortality
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: f703ae06-24ad-49af-bd3c-d15ac7669ab0
+              stepCounter: b60e28a3-9c5d-4db5-ba9a-8f2494458793
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_SCS_BE_DETAILED_MORTALITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ccd3d455-7dc3-4545-928d-499ad89bdc5b
+                    stepCounter: 98b9e85b-6bda-4374-a0bb-a708d7cc23d7
+                transform: ""
+          - columnReference:
+              columnCounter: 315b87a1-f238-4ea7-9da4-994f389a80b3
+              stepCounter: b60e28a3-9c5d-4db5-ba9a-8f2494458793
+            dataType: VARCHAR(1)
+            description: Sex of cohort
+            hashColumns: []
+            hashDetails: null
+            name: SEX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 82c00680-5aaa-4df1-8c27-63404702f148
+                    stepCounter: 98b9e85b-6bda-4374-a0bb-a708d7cc23d7
+                transform: ""
+          - columnReference:
+              columnCounter: 3dba249e-a081-40de-bdab-13bd5698b937
+              stepCounter: b60e28a3-9c5d-4db5-ba9a-8f2494458793
+            dataType: VARCHAR(16)
+            description: Age group of cohort
+            hashColumns: []
+            hashDetails: null
+            name: AGEGROUP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 69737b04-cc1c-4ab4-861a-e9f27ee80be4
+                    stepCounter: 98b9e85b-6bda-4374-a0bb-a708d7cc23d7
+                transform: ""
+          - columnReference:
+              columnCounter: bbe7beee-6cac-4478-8c1e-148475d33748
+              stepCounter: b60e28a3-9c5d-4db5-ba9a-8f2494458793
+            dataType: DATE
+            description: Date of data point
+            hashColumns: []
+            hashDetails: null
+            name: DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ae15a4b0-ea01-4495-904a-9fb2b3e2ff49
+                    stepCounter: 98b9e85b-6bda-4374-a0bb-a708d7cc23d7
+                transform: ""
+          - columnReference:
+              columnCounter: 10c66e51-2b63-4874-b1de-896b7381d9c4
+              stepCounter: b60e28a3-9c5d-4db5-ba9a-8f2494458793
+            dataType: NUMBER(38,0)
+            description: Number of deaths
+            hashColumns: []
+            hashDetails: null
+            name: DEATHS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7f6f1ccb-d2e3-47a8-8b93-a8241c2b2044
+                    stepCounter: 98b9e85b-6bda-4374-a0bb-a708d7cc23d7
+                transform: ""
+          - columnReference:
+              columnCounter: 223c2c8b-b9be-47d7-9a3d-ac7e79b7ca73
+              stepCounter: b60e28a3-9c5d-4db5-ba9a-8f2494458793
+            dataType: TIMESTAMP_NTZ(9)
+            description: Timestamp of last update
+            hashColumns: []
+            hashDetails: null
+            name: LAST_UPDATED_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 10b9f49c-bdc2-4381-9366-12eec090d5db
+                    stepCounter: 98b9e85b-6bda-4374-a0bb-a708d7cc23d7
+                transform: ""
+          - columnReference:
+              columnCounter: 2cd47f39-4618-49c3-b8f4-41e95097031e
+              stepCounter: b60e28a3-9c5d-4db5-ba9a-8f2494458793
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5b08da77-953c-4bc1-9978-941a60e6dc94
+                    stepCounter: 98b9e85b-6bda-4374-a0bb-a708d7cc23d7
+                transform: ""
+          - columnReference:
+              columnCounter: d1dd4b86-1e26-429f-b5c6-6b5ca44bded4
+              stepCounter: b60e28a3-9c5d-4db5-ba9a-8f2494458793
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0acb519e-7d7a-4f56-9dad-347127bab170
+                    stepCounter: 98b9e85b-6bda-4374-a0bb-a708d7cc23d7
+                transform: ""
+          - columnReference:
+              columnCounter: 18d46818-3917-4eab-904d-57229c0c2e6c
+              stepCounter: b60e28a3-9c5d-4db5-ba9a-8f2494458793
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 02e96986-aa35-4a34-ac6f-cca2ef9a5324
+                    stepCounter: 98b9e85b-6bda-4374-a0bb-a708d7cc23d7
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SCS_BE_DETAILED_MORTALITY
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SCS_BE_DETAILED_MORTALITY') }} "DVSTG_SCS_BE_DETAILED_MORTALITY"
+            name: SATV0_SCS_BE_DETAILED_MORTALITY
+            noLinkRefs: []
+      name: SATV0_SCS_BE_DETAILED_MORTALITY
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: b60e28a3-9c5d-4db5-ba9a-8f2494458793

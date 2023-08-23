@@ -1,0 +1,303 @@
+steps:
+  SATV0_RKI_GER_COVID19_DASHBOARD-f27afb3c-a3a9-4c4c-b331-554596ef2856:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: Detailed district (Kreis) level data for Germany from the Robert Koch Institut
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: a157e13b-c19a-4803-b956-ceb4bebc0c9a
+              stepCounter: f27afb3c-a3a9-4c4c-b331-554596ef2856
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_GER_COVID19_DASHBOARD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 03d8adbc-3bd2-4da0-98fa-cf53d93b63c9
+                    stepCounter: 8aab7262-f455-4674-b104-24b174e43b48
+                transform: ""
+          - columnReference:
+              columnCounter: 62e5ba30-fc81-4ea9-b2ae-0ca69f1e6c88
+              stepCounter: f27afb3c-a3a9-4c4c-b331-554596ef2856
+            dataType: VARCHAR(128)
+            description: ISO-3166-3 entity name
+            hashColumns: []
+            hashDetails: null
+            name: COUNTY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9cdd9ce6-79b8-4b9c-a47a-8e704aaef59d
+                    stepCounter: 8aab7262-f455-4674-b104-24b174e43b48
+                transform: ""
+          - columnReference:
+              columnCounter: 27d3519f-ddfe-45f1-8589-971c6cf41de3
+              stepCounter: f27afb3c-a3a9-4c4c-b331-554596ef2856
+            dataType: VARCHAR(64)
+            description: ISO-3166-2 entity name
+            hashColumns: []
+            hashDetails: null
+            name: STATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3808b2f2-1ba0-4192-b607-4ee838cc1c28
+                    stepCounter: 8aab7262-f455-4674-b104-24b174e43b48
+                transform: ""
+          - columnReference:
+              columnCounter: 15636dc1-fbd5-4e6d-a80d-17b57b24242a
+              stepCounter: f27afb3c-a3a9-4c4c-b331-554596ef2856
+            dataType: VARCHAR(32)
+            description: ISO-3166-3 entity type
+            hashColumns: []
+            hashDetails: null
+            name: DISTRICT_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b31599ea-8485-4b3e-b88d-6e7ce4520eb0
+                    stepCounter: 8aab7262-f455-4674-b104-24b174e43b48
+                transform: ""
+          - columnReference:
+              columnCounter: 7bd08c5b-c076-4a89-9541-489006216ac8
+              stepCounter: f27afb3c-a3a9-4c4c-b331-554596ef2856
+            dataType: NUMBER(38,0)
+            description: Population of ISO-3166-3 geography of record
+            hashColumns: []
+            hashDetails: null
+            name: POPULATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6c4a4ec3-7fe9-4b8e-aa4a-d278704f827d
+                    stepCounter: 8aab7262-f455-4674-b104-24b174e43b48
+                transform: ""
+          - columnReference:
+              columnCounter: 0885a273-acd0-4bca-8435-afda29ebe6ef
+              stepCounter: f27afb3c-a3a9-4c4c-b331-554596ef2856
+            dataType: FLOAT
+            description: Case-fatality ratio within ISO-3166-3 geography of record attributable to COVID-19
+            hashColumns: []
+            hashDetails: null
+            name: DEATH_RATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 62787b9f-5601-47ef-9417-1acaa1eccf69
+                    stepCounter: 8aab7262-f455-4674-b104-24b174e43b48
+                transform: ""
+          - columnReference:
+              columnCounter: e5540454-ab96-4d11-ae88-b8db4227cf8a
+              stepCounter: f27afb3c-a3a9-4c4c-b331-554596ef2856
+            dataType: NUMBER(38,0)
+            description: Number of cases
+            hashColumns: []
+            hashDetails: null
+            name: CASES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ad11de3e-bc8a-4496-b029-c4cfb5dfdbee
+                    stepCounter: 8aab7262-f455-4674-b104-24b174e43b48
+                transform: ""
+          - columnReference:
+              columnCounter: d5abeac9-90be-44e4-9d26-3ad5ae729cc4
+              stepCounter: f27afb3c-a3a9-4c4c-b331-554596ef2856
+            dataType: NUMBER(38,0)
+            description: Number of deaths
+            hashColumns: []
+            hashDetails: null
+            name: DEATHS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 83dd9c66-1bb9-4592-a69c-535b254cdbe2
+                    stepCounter: 8aab7262-f455-4674-b104-24b174e43b48
+                transform: ""
+          - columnReference:
+              columnCounter: aad9002d-1f1f-4fa8-9fef-5c0692b4fcb8
+              stepCounter: f27afb3c-a3a9-4c4c-b331-554596ef2856
+            dataType: FLOAT
+            description: Cases per 100,000 population
+            hashColumns: []
+            hashDetails: null
+            name: CASES_PER_100K
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cd6c7d47-f691-4422-862a-0fa9165bd314
+                    stepCounter: 8aab7262-f455-4674-b104-24b174e43b48
+                transform: ""
+          - columnReference:
+              columnCounter: 884e9303-3e76-41ae-884d-c9b646c9af10
+              stepCounter: f27afb3c-a3a9-4c4c-b331-554596ef2856
+            dataType: FLOAT
+            description: Cases per population
+            hashColumns: []
+            hashDetails: null
+            name: CASES_PER_POPULATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c432d7de-0d61-416c-a0e0-9b6425131793
+                    stepCounter: 8aab7262-f455-4674-b104-24b174e43b48
+                transform: ""
+          - columnReference:
+              columnCounter: 8b228331-0a65-443b-8a87-b335c5bed078
+              stepCounter: f27afb3c-a3a9-4c4c-b331-554596ef2856
+            dataType: FLOAT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CASES7_PER_100K
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1572bf9a-39ca-4feb-9a19-6fb4e6dbb3ad
+                    stepCounter: 8aab7262-f455-4674-b104-24b174e43b48
+                transform: ""
+          - columnReference:
+              columnCounter: 4c2db5d9-bd82-4052-87ec-03ca5aa0f209
+              stepCounter: f27afb3c-a3a9-4c4c-b331-554596ef2856
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LAST_UPDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2f39b0c4-2210-4b01-a0bd-e4207ff82a10
+                    stepCounter: 8aab7262-f455-4674-b104-24b174e43b48
+                transform: ""
+          - columnReference:
+              columnCounter: 486f1131-66e3-4e6a-9b4a-b77beeec0785
+              stepCounter: f27afb3c-a3a9-4c4c-b331-554596ef2856
+            dataType: VARCHAR(2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ISO3166_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 96b41368-5629-443c-a064-6e988d63c4c0
+                    stepCounter: 8aab7262-f455-4674-b104-24b174e43b48
+                transform: ""
+          - columnReference:
+              columnCounter: 116b925c-27fb-4908-a252-0f7347c12121
+              stepCounter: f27afb3c-a3a9-4c4c-b331-554596ef2856
+            dataType: VARCHAR(2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ISO3166_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: befa3488-2efb-4d88-b120-32961a1b769e
+                    stepCounter: 8aab7262-f455-4674-b104-24b174e43b48
+                transform: ""
+          - columnReference:
+              columnCounter: 6d808662-ad66-44a7-b0a0-7d4899cc80b6
+              stepCounter: f27afb3c-a3a9-4c4c-b331-554596ef2856
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LAST_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c23020b1-6894-4b6b-adcb-bdbf45e5a0a8
+                    stepCounter: 8aab7262-f455-4674-b104-24b174e43b48
+                transform: ""
+          - columnReference:
+              columnCounter: 7cadcad5-0bcb-4e3f-93e6-fb2ec06ca2ff
+              stepCounter: f27afb3c-a3a9-4c4c-b331-554596ef2856
+            dataType: BOOLEAN
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LAST_REPORTED_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1eee67d5-ec81-4967-831e-87f62712ad73
+                    stepCounter: 8aab7262-f455-4674-b104-24b174e43b48
+                transform: ""
+          - columnReference:
+              columnCounter: f1d1bf6b-42d5-426d-b08a-f54c47933c04
+              stepCounter: f27afb3c-a3a9-4c4c-b331-554596ef2856
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7d260ff4-5b40-42a1-9716-6ed82f322453
+                    stepCounter: 8aab7262-f455-4674-b104-24b174e43b48
+                transform: ""
+          - columnReference:
+              columnCounter: 6e757a0c-933e-4f78-9f02-113386bf675f
+              stepCounter: f27afb3c-a3a9-4c4c-b331-554596ef2856
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 85e23b7d-fc56-4496-95d2-c7f787560750
+                    stepCounter: 8aab7262-f455-4674-b104-24b174e43b48
+                transform: ""
+          - columnReference:
+              columnCounter: 9c3996c7-c9fe-4a1a-960f-e47f0e99a603
+              stepCounter: f27afb3c-a3a9-4c4c-b331-554596ef2856
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8faaa1bb-b237-4b4d-8967-869157869937
+                    stepCounter: 8aab7262-f455-4674-b104-24b174e43b48
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_RKI_GER_COVID19_DASHBOARD
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_RKI_GER_COVID19_DASHBOARD') }} "DVSTG_RKI_GER_COVID19_DASHBOARD"
+            name: SATV0_RKI_GER_COVID19_DASHBOARD
+            noLinkRefs: []
+      name: SATV0_RKI_GER_COVID19_DASHBOARD
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: f27afb3c-a3a9-4c4c-b331-554596ef2856

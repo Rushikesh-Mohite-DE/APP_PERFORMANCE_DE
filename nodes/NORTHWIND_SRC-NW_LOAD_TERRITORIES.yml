@@ -1,0 +1,64 @@
+steps:
+  NW_LOAD_TERRITORIES-74c8eb29-6597-424d-8294-b93f89e16f1b:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: NORTHWIND_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 72d185cb-4d5f-4b8a-acaf-a9ee4d953771
+              stepCounter: 74c8eb29-6597-424d-8294-b93f89e16f1b
+            config: {}
+            dataType: VARCHAR(20)
+            defaultValue: ""
+            description: ""
+            name: TERRITORYID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 04a85a6e-c329-49ad-a8ae-70b2d54797f2
+              stepCounter: 74c8eb29-6597-424d-8294-b93f89e16f1b
+            config: {}
+            dataType: VARCHAR(50)
+            defaultValue: ""
+            description: ""
+            name: TERRITORYDESCRIPTION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: af511725-9a4d-4889-9df4-a031f54a79b4
+              stepCounter: 74c8eb29-6597-424d-8294-b93f89e16f1b
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: REGIONID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('NORTHWIND_SRC', 'NW_LOAD_TERRITORIES') }}
+      name: NW_LOAD_TERRITORIES
+      schema: ""
+      sqlType: Source
+      table: NW_LOAD_TERRITORIES
+      type: sourceInput
+    stepCounter: 74c8eb29-6597-424d-8294-b93f89e16f1b

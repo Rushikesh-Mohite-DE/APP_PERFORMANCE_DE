@@ -1,0 +1,105 @@
+steps:
+  HUB_AW_SALESPERSON-fb265c16-04f3-462e-907c-ee228a4aa70e:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: dab6dfc4-138d-408f-9c18-8c20f183e276
+              stepCounter: fb265c16-04f3-462e-907c-ee228a4aa70e
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_SALESPERSON
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5b4bbd87-305a-4392-b5a8-3dd475cac2e9
+                    stepCounter: 8a09aa10-c627-42e7-8740-bf39e846490e
+                transform: ""
+          - columnReference:
+              columnCounter: ff7be9c6-f9b0-4224-b3f2-91b3187b9366
+              stepCounter: fb265c16-04f3-462e-907c-ee228a4aa70e
+            dataType: NUMBER(38,0)
+            description: Primary key for SalesPerson records. Foreign key to Employee.BusinessEntityID
+            hashColumns: []
+            hashDetails: null
+            name: BUSINESSENTITYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cb71580a-a8d9-43fb-8e4d-41893cf1e2df
+                    stepCounter: 8a09aa10-c627-42e7-8740-bf39e846490e
+                transform: ""
+          - columnReference:
+              columnCounter: 24b49676-a9d8-4840-a26b-4f1868415f7f
+              stepCounter: fb265c16-04f3-462e-907c-ee228a4aa70e
+            dataType: VARCHAR(16777216)
+            description: Territory currently assigned to. Foreign key to SalesTerritory.SalesTerritoryID.
+            hashColumns: []
+            hashDetails: null
+            name: TERRITORYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0e903adb-19a9-4b1a-9d1c-5344ab045ec0
+                    stepCounter: 8a09aa10-c627-42e7-8740-bf39e846490e
+                transform: ""
+          - columnReference:
+              columnCounter: 751b5495-3443-4b66-b168-d6f5e2e10660
+              stepCounter: fb265c16-04f3-462e-907c-ee228a4aa70e
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6d15c624-78bb-43b5-9a39-146cd388dc8d
+                    stepCounter: 8a09aa10-c627-42e7-8740-bf39e846490e
+                transform: ""
+          - columnReference:
+              columnCounter: e06b3ca0-53f1-4ce5-aea4-b11add16fd50
+              stepCounter: fb265c16-04f3-462e-907c-ee228a4aa70e
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bedc8677-5f44-4e1e-af27-085f7271122e
+                    stepCounter: 8a09aa10-c627-42e7-8740-bf39e846490e
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_SALESPERSON
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_SALESPERSON') }} "DVSTG_AW_SALESPERSON"
+            name: HUB_AW_SALESPERSON
+            noLinkRefs: []
+      name: HUB_AW_SALESPERSON
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: fb265c16-04f3-462e-907c-ee228a4aa70e

@@ -1,0 +1,105 @@
+steps:
+  HUB_SPORTS_BASEBALL_DEFENSIVE_PLAYERS-0a933e82-27e2-49f0-8430-38367cb2a42c:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 358f213e-4dcd-4d0a-ac7d-9736b8119324
+              stepCounter: 0a933e82-27e2-49f0-8430-38367cb2a42c
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_DEFENSIVE_PLAYERS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f4d7b0bb-cd3f-4af2-866d-eb50ff4c5789
+                    stepCounter: e7fa9da2-8cdc-4fe0-9f3e-fa7a66a9a7b0
+                transform: ""
+          - columnReference:
+              columnCounter: 55cae9dc-0652-4d90-93eb-8c16bf58c5e6
+              stepCounter: 0a933e82-27e2-49f0-8430-38367cb2a42c
+            dataType: VARCHAR(32)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c8bc12af-a621-4231-9d8e-303a1ec9e0fb
+                    stepCounter: e7fa9da2-8cdc-4fe0-9f3e-fa7a66a9a7b0
+                transform: ""
+          - columnReference:
+              columnCounter: 734a5bc4-f8cc-4fa6-9c59-a43891d00706
+              stepCounter: 0a933e82-27e2-49f0-8430-38367cb2a42c
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PLAYER_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4e0cbec7-7fac-44dd-ab8d-1e0458b6eb2f
+                    stepCounter: e7fa9da2-8cdc-4fe0-9f3e-fa7a66a9a7b0
+                transform: ""
+          - columnReference:
+              columnCounter: b54183c2-2613-44b9-93dc-a5b2805f89e5
+              stepCounter: 0a933e82-27e2-49f0-8430-38367cb2a42c
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c1ee3d76-7724-443c-b367-0822c295719a
+                    stepCounter: e7fa9da2-8cdc-4fe0-9f3e-fa7a66a9a7b0
+                transform: ""
+          - columnReference:
+              columnCounter: fe090774-f1cc-498c-91cc-0c32d742ee6e
+              stepCounter: 0a933e82-27e2-49f0-8430-38367cb2a42c
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 373356d1-df6a-4ce7-bfef-ac201354a26b
+                    stepCounter: e7fa9da2-8cdc-4fe0-9f3e-fa7a66a9a7b0
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SPORTS_BASEBALL_DEFENSIVE_PLAYERS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SPORTS_BASEBALL_DEFENSIVE_PLAYERS') }} "DVSTG_SPORTS_BASEBALL_DEFENSIVE_PLAYERS"
+            name: HUB_SPORTS_BASEBALL_DEFENSIVE_PLAYERS
+            noLinkRefs: []
+      name: HUB_SPORTS_BASEBALL_DEFENSIVE_PLAYERS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 0a933e82-27e2-49f0-8430-38367cb2a42c

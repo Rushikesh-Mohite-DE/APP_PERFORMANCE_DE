@@ -1,0 +1,139 @@
+steps:
+  PERBANK_LOAD_HISTORIES-b43224ae-12fc-49ec-af60-f1406abd36ef:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: PERBANK_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e860c32e-df0a-4404-ba28-bf7b0791d63d
+              stepCounter: b43224ae-12fc-49ec-af60-f1406abd36ef
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 929a0646-6eec-4490-a6a2-d686105ab609
+              stepCounter: b43224ae-12fc-49ec-af60-f1406abd36ef
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: ACCOUNTID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 77c5f9e3-19e9-46f9-8eca-35cfe30ff6c0
+              stepCounter: b43224ae-12fc-49ec-af60-f1406abd36ef
+            config: {}
+            dataType: NUMBER(19,4)
+            defaultValue: ""
+            description: ""
+            name: AMOUNT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e291c618-bce9-4071-8fb3-76ceea445c82
+              stepCounter: b43224ae-12fc-49ec-af60-f1406abd36ef
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: TYPEID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e02f4bcc-d1a6-4485-bca9-d490863e9432
+              stepCounter: b43224ae-12fc-49ec-af60-f1406abd36ef
+            config: {}
+            dataType: VARCHAR(50)
+            defaultValue: ""
+            description: ""
+            name: DESCRIPTION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d458e7ff-da56-4664-ad4a-e4a2e836b3e2
+              stepCounter: b43224ae-12fc-49ec-af60-f1406abd36ef
+            config: {}
+            dataType: VARCHAR(20)
+            defaultValue: ""
+            description: ""
+            name: ISACTIVE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0d17c480-7921-4511-88b3-edfd0c8910b8
+              stepCounter: b43224ae-12fc-49ec-af60-f1406abd36ef
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: CREATED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 691d4373-7f1f-4d7b-9b8a-a079457c3a3b
+              stepCounter: b43224ae-12fc-49ec-af60-f1406abd36ef
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: MODIFIED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('PERBANK_SRC', 'PERBANK_LOAD_HISTORIES') }}
+      name: PERBANK_LOAD_HISTORIES
+      schema: ""
+      sqlType: Source
+      table: PERBANK_LOAD_HISTORIES
+      type: sourceInput
+    stepCounter: b43224ae-12fc-49ec-af60-f1406abd36ef

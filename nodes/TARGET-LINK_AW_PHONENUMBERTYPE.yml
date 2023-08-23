@@ -1,0 +1,147 @@
+steps:
+  LINK_AW_PHONENUMBERTYPE-1e96424e-f26d-44e5-b4d3-9c6fc41cd3b8:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: fdad6dc8-8c32-4ebc-96ad-eec21f62a531
+              stepCounter: 1e96424e-f26d-44e5-b4d3-9c6fc41cd3b8
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_PHONENUMBERTYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4ed285f2-610e-4780-b001-f6b203c53c33
+                    stepCounter: d19e6a06-8738-4bab-83f0-32e546f0b016
+                transform: ""
+          - columnReference:
+              columnCounter: 92d89b3d-99b6-4df1-967d-9bc4c067f727
+              stepCounter: 1e96424e-f26d-44e5-b4d3-9c6fc41cd3b8
+            dataType: NUMBER(38,0)
+            description: Primary key for telephone number type records.
+            hashColumns: []
+            hashDetails: null
+            name: PHONENUMBERTYPEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 78b2781e-e2a5-4080-8645-2727756ec447
+                    stepCounter: d19e6a06-8738-4bab-83f0-32e546f0b016
+                transform: ""
+          - columnReference:
+              columnCounter: db2688c3-4895-4532-9e24-3bfd2c8269af
+              stepCounter: 1e96424e-f26d-44e5-b4d3-9c6fc41cd3b8
+            dataType: VARCHAR(16777216)
+            description: Name of the telephone number type
+            hashColumns: []
+            hashDetails: null
+            name: NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bbcb90ec-3426-48d5-a9df-5e86d79f25fe
+                    stepCounter: d19e6a06-8738-4bab-83f0-32e546f0b016
+                transform: ""
+          - columnReference:
+              columnCounter: 2558e827-a9a3-4b37-86cd-a2bd6554d503
+              stepCounter: 1e96424e-f26d-44e5-b4d3-9c6fc41cd3b8
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            hashColumns: []
+            hashDetails: null
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0a5b1797-87f7-4d43-941a-d1862d8bb52b
+                    stepCounter: d19e6a06-8738-4bab-83f0-32e546f0b016
+                transform: ""
+          - columnReference:
+              columnCounter: 156d7ce6-5a99-412c-a8cf-7fcb6241ee37
+              stepCounter: 1e96424e-f26d-44e5-b4d3-9c6fc41cd3b8
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: eba029b5-228d-4556-942e-3b7d286ea8ed
+                    stepCounter: d19e6a06-8738-4bab-83f0-32e546f0b016
+                transform: ""
+          - columnReference:
+              columnCounter: b770754b-5440-48cf-8e0a-35c20a3b30a0
+              stepCounter: 1e96424e-f26d-44e5-b4d3-9c6fc41cd3b8
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 49bf22a1-e7a2-4221-b369-9c332424eab9
+                    stepCounter: d19e6a06-8738-4bab-83f0-32e546f0b016
+                transform: ""
+          - columnReference:
+              columnCounter: e9eabc13-e23c-4182-9ea4-c2be4d9cbb21
+              stepCounter: 1e96424e-f26d-44e5-b4d3-9c6fc41cd3b8
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c5f8cd00-cddc-43dc-8151-dbc45b0a3929
+                    stepCounter: d19e6a06-8738-4bab-83f0-32e546f0b016
+                transform: ""
+          - columnReference:
+              columnCounter: c4a64df9-374e-4f85-85f6-6099ae522aca
+              stepCounter: 1e96424e-f26d-44e5-b4d3-9c6fc41cd3b8
+            config:
+              is_Link_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LNK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 519c022a-8ee3-46c7-b2ac-24715082f703
+                    stepCounter: d19e6a06-8738-4bab-83f0-32e546f0b016
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_PHONENUMBERTYPE
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_PHONENUMBERTYPE') }} "DVSTG_AW_PHONENUMBERTYPE"
+            name: LINK_AW_PHONENUMBERTYPE
+            noLinkRefs: []
+      name: LINK_AW_PHONENUMBERTYPE
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::7
+      type: sql
+    stepCounter: 1e96424e-f26d-44e5-b4d3-9c6fc41cd3b8

@@ -1,0 +1,133 @@
+steps:
+  HUB_AW_SALESORDERDETAIL-97a2905e-06c9-487b-9b1b-c91e153bf421:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 2acd0ea3-d22a-4c7a-bdc3-d4314402d854
+              stepCounter: 97a2905e-06c9-487b-9b1b-c91e153bf421
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_SALESORDERDETAIL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2c3b0bd5-0070-4a6b-ad4c-dbc50e3123a3
+                    stepCounter: 84f654d3-3a53-42f6-a720-42ebd92c0714
+                transform: ""
+          - columnReference:
+              columnCounter: 9f377c6f-b544-4d56-8afc-01f91ad6aeee
+              stepCounter: 97a2905e-06c9-487b-9b1b-c91e153bf421
+            dataType: NUMBER(38,0)
+            description: Primary key. Foreign key to SalesOrderHeader.SalesOrderID.
+            hashColumns: []
+            hashDetails: null
+            name: SALESORDERID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ce137549-b46f-41ec-a76a-58e8f11aa0ab
+                    stepCounter: 84f654d3-3a53-42f6-a720-42ebd92c0714
+                transform: ""
+          - columnReference:
+              columnCounter: 1b44168f-6701-4e33-8ea5-288e2fb9c180
+              stepCounter: 97a2905e-06c9-487b-9b1b-c91e153bf421
+            dataType: NUMBER(38,0)
+            description: Primary key. One incremental unique number per product sold.
+            hashColumns: []
+            hashDetails: null
+            name: SALESORDERDETAILID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a100ccad-8462-4ad7-a6db-699fa10174db
+                    stepCounter: 84f654d3-3a53-42f6-a720-42ebd92c0714
+                transform: ""
+          - columnReference:
+              columnCounter: 2b25effb-dbdb-4fbc-b88a-5c83753dfdc4
+              stepCounter: 97a2905e-06c9-487b-9b1b-c91e153bf421
+            dataType: NUMBER(38,0)
+            description: Product sold to customer. Foreign key to Product.ProductID.
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCTID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e6c65243-69f6-4ea3-8cb8-c745481d8177
+                    stepCounter: 84f654d3-3a53-42f6-a720-42ebd92c0714
+                transform: ""
+          - columnReference:
+              columnCounter: 935d886a-5788-4b1e-9ce3-5b034d536813
+              stepCounter: 97a2905e-06c9-487b-9b1b-c91e153bf421
+            dataType: NUMBER(38,0)
+            description: Promotional code. Foreign key to SpecialOffer.SpecialOfferID.
+            hashColumns: []
+            hashDetails: null
+            name: SPECIALOFFERID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: baa22904-041c-4e32-a556-eebfa1c411f0
+                    stepCounter: 84f654d3-3a53-42f6-a720-42ebd92c0714
+                transform: ""
+          - columnReference:
+              columnCounter: 68fef5e1-582e-4dd7-b46a-71409cd93d4b
+              stepCounter: 97a2905e-06c9-487b-9b1b-c91e153bf421
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 610b95a0-1251-4c9b-9fe1-86bd3355303c
+                    stepCounter: 84f654d3-3a53-42f6-a720-42ebd92c0714
+                transform: ""
+          - columnReference:
+              columnCounter: a3b06883-7f8e-425c-a3bd-332368d03ddf
+              stepCounter: 97a2905e-06c9-487b-9b1b-c91e153bf421
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b46b52b2-fe4e-4402-9d5a-f86730f5c97f
+                    stepCounter: 84f654d3-3a53-42f6-a720-42ebd92c0714
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_SALESORDERDETAIL
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_SALESORDERDETAIL') }} "DVSTG_AW_SALESORDERDETAIL"
+            name: HUB_AW_SALESORDERDETAIL
+            noLinkRefs: []
+      name: HUB_AW_SALESORDERDETAIL
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 97a2905e-06c9-487b-9b1b-c91e153bf421

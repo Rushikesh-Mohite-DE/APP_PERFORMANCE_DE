@@ -1,0 +1,166 @@
+steps:
+  DVSTG_AW_PRODUCTMODELILLUSTRATION-590289c1-95cd-4f62-a1e8-e06659ab98bc:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 13b0bf3c-67f5-4ea3-91aa-abd4965b35a0
+              stepCounter: 590289c1-95cd-4f62-a1e8-e06659ab98bc
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 873f25df-299d-4602-9cc2-296ee6f03477
+                stepCounter: 590289c1-95cd-4f62-a1e8-e06659ab98bc
+              - columnCounter: 722fde74-b1ed-4215-b87f-ce18946bb82e
+                stepCounter: 590289c1-95cd-4f62-a1e8-e06659ab98bc
+            name: HK_PRODUCTMODELILLUSTRATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 873f25df-299d-4602-9cc2-296ee6f03477
+              stepCounter: 590289c1-95cd-4f62-a1e8-e06659ab98bc
+            dataType: NUMBER(38,0)
+            description: Primary key. Foreign key to ProductModel.ProductModelID.
+            name: PRODUCTMODELID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4b438a34-2858-4bc8-8528-eb400c147287
+                    stepCounter: 5c3183c0-729d-427c-a926-ff5b48092919
+                transform: ""
+          - columnReference:
+              columnCounter: 722fde74-b1ed-4215-b87f-ce18946bb82e
+              stepCounter: 590289c1-95cd-4f62-a1e8-e06659ab98bc
+            dataType: NUMBER(38,0)
+            description: Primary key. Foreign key to Illustration.IllustrationID.
+            name: ILLUSTRATIONID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 00e8e098-d6ad-47a8-8420-8f1796406f4f
+                    stepCounter: 5c3183c0-729d-427c-a926-ff5b48092919
+                transform: ""
+          - columnReference:
+              columnCounter: e4fbb67a-da7b-4c0f-8f96-374495f2fc75
+              stepCounter: 590289c1-95cd-4f62-a1e8-e06659ab98bc
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 901fa425-c2bc-4579-9a26-90217e8fb18a
+                    stepCounter: 5c3183c0-729d-427c-a926-ff5b48092919
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: edfa06cf-c55d-4c8b-8f2a-84b9d4004b78
+              stepCounter: 590289c1-95cd-4f62-a1e8-e06659ab98bc
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 17cb8018-4aad-49ad-89c4-77dd2a629f0d
+              stepCounter: 590289c1-95cd-4f62-a1e8-e06659ab98bc
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ab5c9a8a-7db3-423c-be14-a7151574db68
+              stepCounter: 590289c1-95cd-4f62-a1e8-e06659ab98bc
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: e4fbb67a-da7b-4c0f-8f96-374495f2fc75
+                stepCounter: 590289c1-95cd-4f62-a1e8-e06659ab98bc
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7c7841d2-1e3a-42de-a8b7-6fb3d49c54e4
+              stepCounter: 590289c1-95cd-4f62-a1e8-e06659ab98bc
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 722fde74-b1ed-4215-b87f-ce18946bb82e
+                stepCounter: 590289c1-95cd-4f62-a1e8-e06659ab98bc
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: ADV_WRKS_SRC
+                nodeName: AW_LOAD_PRODUCTMODELILLUSTRATION
+            join:
+              joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_PRODUCTMODELILLUSTRATION') }} "AW_LOAD_PRODUCTMODELILLUSTRATION"
+            name: DVSTG_AW_PRODUCTMODELILLUSTRATION
+            noLinkRefs: []
+      name: DVSTG_AW_PRODUCTMODELILLUSTRATION
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: 590289c1-95cd-4f62-a1e8-e06659ab98bc

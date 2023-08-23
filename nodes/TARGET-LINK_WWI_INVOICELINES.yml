@@ -1,0 +1,287 @@
+steps:
+  LINK_WWI_INVOICELINES-dd4e0dd0-1ad0-447e-9252-6b3f8ad4ae1d:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 80fffed1-19b5-4ff4-875c-8851382df8f9
+              stepCounter: dd4e0dd0-1ad0-447e-9252-6b3f8ad4ae1d
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_INVOICELINES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5b376cd4-b1b2-4f0c-94d4-199ec619bb33
+                    stepCounter: 1b4141b7-ebd0-4bfc-9ac1-d1a0c1d8c1b7
+                transform: ""
+          - columnReference:
+              columnCounter: db34bf25-9a15-4588-bc3e-12bc05c6c98b
+              stepCounter: dd4e0dd0-1ad0-447e-9252-6b3f8ad4ae1d
+            dataType: NUMBER(38,0)
+            description: Numeric ID used for reference to a line on an invoice within the database
+            hashColumns: []
+            hashDetails: null
+            name: INVOICELINEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 040c3ea8-7ab6-4906-bf21-e1d7f1a63f9c
+                    stepCounter: 1b4141b7-ebd0-4bfc-9ac1-d1a0c1d8c1b7
+                transform: ""
+          - columnReference:
+              columnCounter: e9d00f21-a347-4642-923e-0410e6a3ebaf
+              stepCounter: dd4e0dd0-1ad0-447e-9252-6b3f8ad4ae1d
+            dataType: NUMBER(38,0)
+            description: Invoice that this line is associated with
+            hashColumns: []
+            hashDetails: null
+            name: INVOICEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0485b59e-c2fe-46cc-9a9a-79d70efdd750
+                    stepCounter: 1b4141b7-ebd0-4bfc-9ac1-d1a0c1d8c1b7
+                transform: ""
+          - columnReference:
+              columnCounter: 36939607-dcd1-4e22-96ee-ff1a2fe4c1bf
+              stepCounter: dd4e0dd0-1ad0-447e-9252-6b3f8ad4ae1d
+            dataType: NUMBER(38,0)
+            description: Stock item for this invoice line
+            hashColumns: []
+            hashDetails: null
+            name: STOCKITEMID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 70e55730-f2cc-49bb-ad4f-51c8aa82ffd9
+                    stepCounter: 1b4141b7-ebd0-4bfc-9ac1-d1a0c1d8c1b7
+                transform: ""
+          - columnReference:
+              columnCounter: ce19a24d-5d3b-41ef-9d3e-1f315cbce259
+              stepCounter: dd4e0dd0-1ad0-447e-9252-6b3f8ad4ae1d
+            dataType: VARCHAR(100)
+            description: Description of the item supplied (Usually the stock item name but can be overridden)
+            hashColumns: []
+            hashDetails: null
+            name: DESCRIPTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 311bea7c-86d4-49bd-97b7-098695d9ca39
+                    stepCounter: 1b4141b7-ebd0-4bfc-9ac1-d1a0c1d8c1b7
+                transform: ""
+          - columnReference:
+              columnCounter: 54074825-c62e-45a9-a552-3c6bc13ed013
+              stepCounter: dd4e0dd0-1ad0-447e-9252-6b3f8ad4ae1d
+            dataType: NUMBER(38,0)
+            description: Type of package supplied
+            hashColumns: []
+            hashDetails: null
+            name: PACKAGETYPEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a7eba32e-9ab3-4c12-92b3-7f473bf5ef55
+                    stepCounter: 1b4141b7-ebd0-4bfc-9ac1-d1a0c1d8c1b7
+                transform: ""
+          - columnReference:
+              columnCounter: d9992943-2576-4c8a-aec7-007533c7012d
+              stepCounter: dd4e0dd0-1ad0-447e-9252-6b3f8ad4ae1d
+            dataType: NUMBER(38,0)
+            description: Quantity supplied
+            hashColumns: []
+            hashDetails: null
+            name: QUANTITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9d94b6bd-9203-4de3-9fb8-a3ac42d28b60
+                    stepCounter: 1b4141b7-ebd0-4bfc-9ac1-d1a0c1d8c1b7
+                transform: ""
+          - columnReference:
+              columnCounter: 2b6cf74f-bc06-40e3-92c3-e08cf7c36af5
+              stepCounter: dd4e0dd0-1ad0-447e-9252-6b3f8ad4ae1d
+            dataType: NUMBER(18,2)
+            description: Unit price charged
+            hashColumns: []
+            hashDetails: null
+            name: UNITPRICE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f31a844f-87e4-4e01-8980-2a5e1900109d
+                    stepCounter: 1b4141b7-ebd0-4bfc-9ac1-d1a0c1d8c1b7
+                transform: ""
+          - columnReference:
+              columnCounter: b8bdd41d-2f11-4454-b2a8-d3fde619d242
+              stepCounter: dd4e0dd0-1ad0-447e-9252-6b3f8ad4ae1d
+            dataType: NUMBER(18,3)
+            description: Tax rate to be applied
+            hashColumns: []
+            hashDetails: null
+            name: TAXRATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 252c589c-4972-4311-97a6-07b975554cae
+                    stepCounter: 1b4141b7-ebd0-4bfc-9ac1-d1a0c1d8c1b7
+                transform: ""
+          - columnReference:
+              columnCounter: 6c36ad1e-d7ae-476d-a1bb-69caa9e83dab
+              stepCounter: dd4e0dd0-1ad0-447e-9252-6b3f8ad4ae1d
+            dataType: NUMBER(18,2)
+            description: Tax amount calculated
+            hashColumns: []
+            hashDetails: null
+            name: TAXAMOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 89c564f2-90d9-4e21-af74-19f4fd1f0495
+                    stepCounter: 1b4141b7-ebd0-4bfc-9ac1-d1a0c1d8c1b7
+                transform: ""
+          - columnReference:
+              columnCounter: 04278a05-a6ca-4ddf-90f9-f84afe731c00
+              stepCounter: dd4e0dd0-1ad0-447e-9252-6b3f8ad4ae1d
+            dataType: NUMBER(18,2)
+            description: Profit made on this line item at current cost price
+            hashColumns: []
+            hashDetails: null
+            name: LINEPROFIT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 825ac889-e3f7-43d4-9494-1cec1f4fa607
+                    stepCounter: 1b4141b7-ebd0-4bfc-9ac1-d1a0c1d8c1b7
+                transform: ""
+          - columnReference:
+              columnCounter: c25a7029-7095-43f9-b6e4-23f70a81ed67
+              stepCounter: dd4e0dd0-1ad0-447e-9252-6b3f8ad4ae1d
+            dataType: NUMBER(18,2)
+            description: Extended line price charged
+            hashColumns: []
+            hashDetails: null
+            name: EXTENDEDPRICE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 17b3e11c-0112-4c27-9dd6-a4d9971f5d30
+                    stepCounter: 1b4141b7-ebd0-4bfc-9ac1-d1a0c1d8c1b7
+                transform: ""
+          - columnReference:
+              columnCounter: e7375a85-cea4-4da9-8e4d-bb06e1b38b22
+              stepCounter: dd4e0dd0-1ad0-447e-9252-6b3f8ad4ae1d
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LASTEDITEDBY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1efe681c-b2d2-4d18-835f-c3458077b9ee
+                    stepCounter: 1b4141b7-ebd0-4bfc-9ac1-d1a0c1d8c1b7
+                transform: ""
+          - columnReference:
+              columnCounter: 6da56e79-ee6f-4e5f-abcc-996fdefa770b
+              stepCounter: dd4e0dd0-1ad0-447e-9252-6b3f8ad4ae1d
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LASTEDITEDWHEN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2e6e6dba-1c60-4648-85bd-0d2feaffb52e
+                    stepCounter: 1b4141b7-ebd0-4bfc-9ac1-d1a0c1d8c1b7
+                transform: ""
+          - columnReference:
+              columnCounter: 0ca7e4ac-25e3-4907-a90f-a260a539d005
+              stepCounter: dd4e0dd0-1ad0-447e-9252-6b3f8ad4ae1d
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a3cfd6ff-8828-40e7-b792-fdae3cc4440a
+                    stepCounter: 1b4141b7-ebd0-4bfc-9ac1-d1a0c1d8c1b7
+                transform: ""
+          - columnReference:
+              columnCounter: b62fc1cc-1183-4f2a-ba5a-f665c48afe45
+              stepCounter: dd4e0dd0-1ad0-447e-9252-6b3f8ad4ae1d
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8d33df21-2850-426e-9cb5-bebcc9d40e95
+                    stepCounter: 1b4141b7-ebd0-4bfc-9ac1-d1a0c1d8c1b7
+                transform: ""
+          - columnReference:
+              columnCounter: 527ceab9-f0eb-4a08-99ac-299499458b13
+              stepCounter: dd4e0dd0-1ad0-447e-9252-6b3f8ad4ae1d
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 51b6f70c-2b6d-4f77-9bd8-7acceb66797a
+                    stepCounter: 1b4141b7-ebd0-4bfc-9ac1-d1a0c1d8c1b7
+                transform: ""
+          - columnReference:
+              columnCounter: 3f44b14c-f482-478c-866d-209fb98619e3
+              stepCounter: dd4e0dd0-1ad0-447e-9252-6b3f8ad4ae1d
+            config:
+              is_Link_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LNK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ef6c24c0-8ed7-4454-9cd0-ae9a4682fe11
+                    stepCounter: 1b4141b7-ebd0-4bfc-9ac1-d1a0c1d8c1b7
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_WWI_INVOICELINES
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_WWI_INVOICELINES') }} "DVSTG_WWI_INVOICELINES"
+            name: LINK_WWI_INVOICELINES
+            noLinkRefs: []
+      name: LINK_WWI_INVOICELINES
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::7
+      type: sql
+    stepCounter: dd4e0dd0-1ad0-447e-9252-6b3f8ad4ae1d

@@ -1,0 +1,79 @@
+steps:
+  AW_LOAD_PRODUCTCATEGORY-2cf2df9e-5945-49ca-85f4-646f6ddf2c08:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: ADV_WRKS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 43fd75e4-28c5-4704-a3b1-b88313062778
+              stepCounter: 2cf2df9e-5945-49ca-85f4-646f6ddf2c08
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Primary key for ProductCategory records.
+            name: PRODUCTCATEGORYID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: bafede4b-ed9a-4e23-b6d7-58c6c4698633
+              stepCounter: 2cf2df9e-5945-49ca-85f4-646f6ddf2c08
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: Category description.
+            name: NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: bacda562-5c77-4449-99ff-c9d9b21e2c22
+              stepCounter: 2cf2df9e-5945-49ca-85f4-646f6ddf2c08
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            name: ROWGUID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4efeedcd-b88a-430e-8520-747d6ae30f85
+              stepCounter: 2cf2df9e-5945-49ca-85f4-646f6ddf2c08
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_PRODUCTCATEGORY') }}
+      name: AW_LOAD_PRODUCTCATEGORY
+      schema: ""
+      sqlType: Source
+      table: AW_LOAD_PRODUCTCATEGORY
+      type: sourceInput
+    stepCounter: 2cf2df9e-5945-49ca-85f4-646f6ddf2c08

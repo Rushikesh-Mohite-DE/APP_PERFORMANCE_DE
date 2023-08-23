@@ -1,0 +1,273 @@
+steps:
+  SATV0_GOOG_GLOBAL_MOBILITY_REPORT-ac4a92f6-a9c0-422d-9d55-b578aaaec8e3:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: Community Mobility Reports aim to provide insights into what has changed in response to policies aimed at combating COVID-19. The reports chart movement trends over time by geography, across different categories of places such as retail and recreation, groceries and pharmacies, parks, transit stations, workplaces, and residential
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 33bb8958-ca86-4ce4-b94e-7fa8554e41bf
+              stepCounter: ac4a92f6-a9c0-422d-9d55-b578aaaec8e3
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_GOOG_GLOBAL_MOBILITY_REPORT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ee429c07-d161-4ada-95c1-426f8fb3aa97
+                    stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+                transform: ""
+          - columnReference:
+              columnCounter: 7d25fab8-3b00-41c7-a1e6-08c09fee3113
+              stepCounter: ac4a92f6-a9c0-422d-9d55-b578aaaec8e3
+            dataType: VARCHAR(2)
+            description: 2 Letters Country code
+            hashColumns: []
+            hashDetails: null
+            name: ISO_3166_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 261c53ec-6ffa-49ed-b56a-31e0d2a516ed
+                    stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+                transform: ""
+          - columnReference:
+              columnCounter: bed231ee-957f-4a63-9b14-d4369bc913d0
+              stepCounter: ac4a92f6-a9c0-422d-9d55-b578aaaec8e3
+            dataType: VARCHAR(5)
+            description: 2 Letters State/Province code
+            hashColumns: []
+            hashDetails: null
+            name: ISO_3166_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d315b94e-4d12-490d-aa90-978bc805d2c5
+                    stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+                transform: ""
+          - columnReference:
+              columnCounter: cf2e1757-c494-402d-b43f-099fba8e771c
+              stepCounter: ac4a92f6-a9c0-422d-9d55-b578aaaec8e3
+            dataType: DATE
+            description: Date of report
+            hashColumns: []
+            hashDetails: null
+            name: DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 022e1f69-f2d7-4005-9277-b32d32632d23
+                    stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+                transform: ""
+          - columnReference:
+              columnCounter: 49759037-ca21-4c79-b7ce-a09c0771c3e7
+              stepCounter: ac4a92f6-a9c0-422d-9d55-b578aaaec8e3
+            dataType: FLOAT
+            description: |+
+              Mobility trends for places like grocery markets, food warehouses, farmers markets, specialty food shops, drug stores, and pharmacies.
+
+            hashColumns: []
+            hashDetails: null
+            name: GROCERY_AND_PHARMACY_CHANGE_PERC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4bab02f3-cd3e-47fb-a9e7-273cebd0eef2
+                    stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+                transform: ""
+          - columnReference:
+              columnCounter: ddc97e36-f4e3-4b7a-9754-7caae0d006f9
+              stepCounter: ac4a92f6-a9c0-422d-9d55-b578aaaec8e3
+            dataType: FLOAT
+            description: |+
+              Mobility trends for places like local parks, national parks, public beaches, marinas, dog parks, plazas, and public gardens.
+
+            hashColumns: []
+            hashDetails: null
+            name: PARKS_CHANGE_PERC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d03b6410-ed66-4551-b54a-ab5482bb5542
+                    stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+                transform: ""
+          - columnReference:
+              columnCounter: 7ecb3e88-7c18-4d5b-a8e0-877c0ce42a5a
+              stepCounter: ac4a92f6-a9c0-422d-9d55-b578aaaec8e3
+            dataType: FLOAT
+            description: |+
+              Mobility trends for places like restaurants, cafes, shopping centers, theme parks, museums, libraries, and movie theaters.
+
+            hashColumns: []
+            hashDetails: null
+            name: RESIDENTIAL_CHANGE_PERC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7f7cd516-3687-4287-8880-7b38aafd6ddd
+                    stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+                transform: ""
+          - columnReference:
+              columnCounter: e2152e80-2322-4c51-837b-b38a5c7ab63c
+              stepCounter: ac4a92f6-a9c0-422d-9d55-b578aaaec8e3
+            dataType: FLOAT
+            description: |+
+              Mobility trends for places of residence.
+
+            hashColumns: []
+            hashDetails: null
+            name: RETAIL_AND_RECREATION_CHANGE_PERC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: eb65b326-c7f8-426b-bf0d-3453f2774c06
+                    stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+                transform: ""
+          - columnReference:
+              columnCounter: ceb03884-bec7-4440-b10a-84ae610405b4
+              stepCounter: ac4a92f6-a9c0-422d-9d55-b578aaaec8e3
+            dataType: FLOAT
+            description: |+
+              Mobility trends for places like public transport hubs such as subway, bus, and train stations.
+
+            hashColumns: []
+            hashDetails: null
+            name: TRANSIT_STATIONS_CHANGE_PERC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 37565086-d494-4f27-b2c7-3822b6e0cadb
+                    stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+                transform: ""
+          - columnReference:
+              columnCounter: 24a72e84-8809-4325-bf61-84f01e861866
+              stepCounter: ac4a92f6-a9c0-422d-9d55-b578aaaec8e3
+            dataType: FLOAT
+            description: |+
+              Mobility trends for places of work.
+
+            hashColumns: []
+            hashDetails: null
+            name: WORKPLACES_CHANGE_PERC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7ff2353c-0041-4252-9457-3ede3b6f49e7
+                    stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+                transform: ""
+          - columnReference:
+              columnCounter: 2a214a0e-e25b-407d-ad20-ae27198de653
+              stepCounter: ac4a92f6-a9c0-422d-9d55-b578aaaec8e3
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date of last upload to the database
+            hashColumns: []
+            hashDetails: null
+            name: LAST_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bc3e0324-7d6d-471d-a8da-d62c880beec8
+                    stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+                transform: ""
+          - columnReference:
+              columnCounter: dd6682a0-4c7e-4dca-a667-6c59b5a05d45
+              stepCounter: ac4a92f6-a9c0-422d-9d55-b578aaaec8e3
+            dataType: BOOLEAN
+            description: Indicates data from last available reporting date
+            hashColumns: []
+            hashDetails: null
+            name: LAST_REPORTED_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2823e7c1-c1f3-488e-b4bb-c7a9370b7875
+                    stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+                transform: ""
+          - columnReference:
+              columnCounter: a9f03e5d-bace-406a-aac5-1be51feddd22
+              stepCounter: ac4a92f6-a9c0-422d-9d55-b578aaaec8e3
+            dataType: VARCHAR(256)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SUB_REGION_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a1f0ef92-762b-452c-b38f-9a26813c0315
+                    stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+                transform: ""
+          - columnReference:
+              columnCounter: 58cb49a1-150b-49e6-b6fc-170dc31e7a27
+              stepCounter: ac4a92f6-a9c0-422d-9d55-b578aaaec8e3
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 685adbb6-b151-4b57-bc57-175edea1d499
+                    stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+                transform: ""
+          - columnReference:
+              columnCounter: 1b1cef25-6d44-42ef-a099-3142c5a85720
+              stepCounter: ac4a92f6-a9c0-422d-9d55-b578aaaec8e3
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a79e4dc4-4b95-4110-ad08-e5c1fd1ea613
+                    stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+                transform: ""
+          - columnReference:
+              columnCounter: c329cc7f-58a2-477a-9594-2806f92369fe
+              stepCounter: ac4a92f6-a9c0-422d-9d55-b578aaaec8e3
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 76d5f3bc-075b-4d5e-b769-5379729a3a08
+                    stepCounter: 76fcdab5-63cb-499e-be4d-10690112130d
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_GOOG_GLOBAL_MOBILITY_REPORT
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_GOOG_GLOBAL_MOBILITY_REPORT') }} "DVSTG_GOOG_GLOBAL_MOBILITY_REPORT"
+            name: SATV0_GOOG_GLOBAL_MOBILITY_REPORT
+            noLinkRefs: []
+      name: SATV0_GOOG_GLOBAL_MOBILITY_REPORT
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: ac4a92f6-a9c0-422d-9d55-b578aaaec8e3

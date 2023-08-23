@@ -1,0 +1,64 @@
+steps:
+  AW_LOAD_COUNTRYREGIONCURRENCY-806b1dec-e262-4707-bf1d-77793bc7423a:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: ADV_WRKS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1ab6e30f-f373-45c5-864e-e4d440776fe9
+              stepCounter: 806b1dec-e262-4707-bf1d-77793bc7423a
+            config: {}
+            dataType: VARCHAR(3)
+            defaultValue: ""
+            description: ISO code for countries and regions. Foreign key to CountryRegion.CountryRegionCode.
+            name: COUNTRYREGIONCODE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1e06298a-e0ca-4fc6-b46a-168a238f2021
+              stepCounter: 806b1dec-e262-4707-bf1d-77793bc7423a
+            config: {}
+            dataType: VARCHAR(3)
+            defaultValue: ""
+            description: ISO standard currency code. Foreign key to Currency.CurrencyCode.
+            name: CURRENCYCODE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e7aa2dde-a5bb-4191-8ddc-1141305471d6
+              stepCounter: 806b1dec-e262-4707-bf1d-77793bc7423a
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_COUNTRYREGIONCURRENCY') }}
+      name: AW_LOAD_COUNTRYREGIONCURRENCY
+      schema: ""
+      sqlType: Source
+      table: AW_LOAD_COUNTRYREGIONCURRENCY
+      type: sourceInput
+    stepCounter: 806b1dec-e262-4707-bf1d-77793bc7423a

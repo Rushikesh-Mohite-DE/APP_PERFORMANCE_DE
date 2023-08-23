@@ -1,0 +1,167 @@
+steps:
+  DVSTG_AW_COUNTRYREGION-e459d49a-35a5-44ef-8a53-bc54fdd2c919:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 44cbc3df-d717-405a-bfb9-733df2f1b995
+              stepCounter: e459d49a-35a5-44ef-8a53-bc54fdd2c919
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 420937e9-8051-4d94-808f-f615a6b1bcad
+                stepCounter: e459d49a-35a5-44ef-8a53-bc54fdd2c919
+            name: HK_COUNTRYREGION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 420937e9-8051-4d94-808f-f615a6b1bcad
+              stepCounter: e459d49a-35a5-44ef-8a53-bc54fdd2c919
+            dataType: VARCHAR(3)
+            description: ISO standard code for countries and regions.
+            name: COUNTRYREGIONCODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 96558633-5e39-4389-aedb-289fb559175a
+                    stepCounter: f6359f3c-fa09-4cdc-ab32-d5f3d2440475
+                transform: ""
+          - columnReference:
+              columnCounter: e6f0089c-0648-4d40-84e1-15577a5711ab
+              stepCounter: e459d49a-35a5-44ef-8a53-bc54fdd2c919
+            dataType: VARCHAR(16777216)
+            description: Country or region name.
+            name: NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ef49cee4-039b-4fe2-a3c2-e2dbe39f9c81
+                    stepCounter: f6359f3c-fa09-4cdc-ab32-d5f3d2440475
+                transform: ""
+          - columnReference:
+              columnCounter: 5d45f8f2-a59d-41d4-9c51-a5db2c36de91
+              stepCounter: e459d49a-35a5-44ef-8a53-bc54fdd2c919
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8cfdcdd1-db39-4b3e-996b-8148df4be137
+                    stepCounter: f6359f3c-fa09-4cdc-ab32-d5f3d2440475
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a7200234-a395-4367-9b74-0d805ca7a846
+              stepCounter: e459d49a-35a5-44ef-8a53-bc54fdd2c919
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 39af4e2e-d462-4d8b-9542-e74c72c77ba8
+              stepCounter: e459d49a-35a5-44ef-8a53-bc54fdd2c919
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 942e1e91-6aeb-4e69-aa0f-eca6f742bb05
+              stepCounter: e459d49a-35a5-44ef-8a53-bc54fdd2c919
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: e6f0089c-0648-4d40-84e1-15577a5711ab
+                stepCounter: e459d49a-35a5-44ef-8a53-bc54fdd2c919
+              - columnCounter: 5d45f8f2-a59d-41d4-9c51-a5db2c36de91
+                stepCounter: e459d49a-35a5-44ef-8a53-bc54fdd2c919
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3adfbd88-4669-431d-a4ad-47280fa2217b
+              stepCounter: e459d49a-35a5-44ef-8a53-bc54fdd2c919
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 420937e9-8051-4d94-808f-f615a6b1bcad
+                stepCounter: e459d49a-35a5-44ef-8a53-bc54fdd2c919
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: ADV_WRKS_SRC
+                nodeName: AW_LOAD_COUNTRYREGION
+            join:
+              joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_COUNTRYREGION') }} "AW_LOAD_COUNTRYREGION"
+            name: DVSTG_AW_COUNTRYREGION
+            noLinkRefs: []
+      name: DVSTG_AW_COUNTRYREGION
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: e459d49a-35a5-44ef-8a53-bc54fdd2c919

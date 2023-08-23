@@ -1,0 +1,105 @@
+steps:
+  HUB_KFF_HCP_CAPACITY-aef06883-424d-407f-89e8-f6f477b6b75a:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: US healthcare capacity by state, 2018
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: a52b605e-f428-4263-9056-8c6674f3b21b
+              stepCounter: aef06883-424d-407f-89e8-f6f477b6b75a
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_KFF_HCP_CAPACITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b01c53d8-7da5-421c-82ef-8b7f50919f5d
+                    stepCounter: 24070edf-d770-407a-b682-ed924d1eef54
+                transform: ""
+          - columnReference:
+              columnCounter: 18631a17-15f6-405a-bde1-f281d76f5723
+              stepCounter: aef06883-424d-407f-89e8-f6f477b6b75a
+            dataType: VARCHAR(16777216)
+            description: ISO-3166-1 entity name
+            hashColumns: []
+            hashDetails: null
+            name: COUNTRY_REGION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1e1f9fef-3a29-4bd5-8b65-2b0d3914ddc2
+                    stepCounter: 24070edf-d770-407a-b682-ed924d1eef54
+                transform: ""
+          - columnReference:
+              columnCounter: 9d0b18c7-e8c6-4541-bdc4-e8ca602830e2
+              stepCounter: aef06883-424d-407f-89e8-f6f477b6b75a
+            dataType: VARCHAR(16777216)
+            description: ISO-3166-2 entity name
+            hashColumns: []
+            hashDetails: null
+            name: PROVINCE_STATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b7752381-60d3-4de3-a964-57285b85f406
+                    stepCounter: 24070edf-d770-407a-b682-ed924d1eef54
+                transform: ""
+          - columnReference:
+              columnCounter: 1f6f8da1-7cf3-4366-baaf-d17ac57dff8e
+              stepCounter: aef06883-424d-407f-89e8-f6f477b6b75a
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ebff62dc-c368-46ce-a83e-cb1d0a675de4
+                    stepCounter: 24070edf-d770-407a-b682-ed924d1eef54
+                transform: ""
+          - columnReference:
+              columnCounter: d8aa9d5e-a018-4bae-814e-295f35da35c4
+              stepCounter: aef06883-424d-407f-89e8-f6f477b6b75a
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 37145351-b40d-432e-9715-9de6c0271d74
+                    stepCounter: 24070edf-d770-407a-b682-ed924d1eef54
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_KFF_HCP_CAPACITY
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_KFF_HCP_CAPACITY') }} "DVSTG_KFF_HCP_CAPACITY"
+            name: HUB_KFF_HCP_CAPACITY
+            noLinkRefs: []
+      name: HUB_KFF_HCP_CAPACITY
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: aef06883-424d-407f-89e8-f6f477b6b75a

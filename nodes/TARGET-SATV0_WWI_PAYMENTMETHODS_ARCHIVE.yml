@@ -1,0 +1,149 @@
+steps:
+  SATV0_WWI_PAYMENTMETHODS_ARCHIVE-be6dd6d2-80e1-422a-b10d-bb35128d7d1b:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 0d498a00-1767-472b-a066-cbaae397266d
+              stepCounter: be6dd6d2-80e1-422a-b10d-bb35128d7d1b
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_PAYMENTMETHODS_ARCHIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2ce1f846-21e5-444e-9f61-b29df0710889
+                    stepCounter: 1af50b69-6c99-4ecd-a1ec-899b9a4b43f7
+                transform: ""
+          - columnReference:
+              columnCounter: a0c84df8-62b1-448e-901f-8eeb2570ce90
+              stepCounter: be6dd6d2-80e1-422a-b10d-bb35128d7d1b
+            dataType: VARCHAR(50)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PAYMENTMETHODNAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 32187a61-f04e-4d19-9b3d-ef88d35952ab
+                    stepCounter: 1af50b69-6c99-4ecd-a1ec-899b9a4b43f7
+                transform: ""
+          - columnReference:
+              columnCounter: 6d824241-7583-4e72-91a2-c8a58fc24d10
+              stepCounter: be6dd6d2-80e1-422a-b10d-bb35128d7d1b
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LASTEDITEDBY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8a74b384-3bec-408f-bcc0-f6628153cf58
+                    stepCounter: 1af50b69-6c99-4ecd-a1ec-899b9a4b43f7
+                transform: ""
+          - columnReference:
+              columnCounter: 936cac44-e58f-4e13-afcd-3678506eefaa
+              stepCounter: be6dd6d2-80e1-422a-b10d-bb35128d7d1b
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: VALIDFROM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 18652ac7-e9d8-45d7-a980-14db0c07668d
+                    stepCounter: 1af50b69-6c99-4ecd-a1ec-899b9a4b43f7
+                transform: ""
+          - columnReference:
+              columnCounter: 45ddc39d-d08f-4c74-bb31-ea2804ac50ee
+              stepCounter: be6dd6d2-80e1-422a-b10d-bb35128d7d1b
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: VALIDTO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a580ace1-4ff3-4208-9dde-bf3390856798
+                    stepCounter: 1af50b69-6c99-4ecd-a1ec-899b9a4b43f7
+                transform: ""
+          - columnReference:
+              columnCounter: 86f5b7dd-f7b7-4ee0-9a80-c30d8cbc32e8
+              stepCounter: be6dd6d2-80e1-422a-b10d-bb35128d7d1b
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3a5c5c05-556c-4f1b-aa70-e56034c40347
+                    stepCounter: 1af50b69-6c99-4ecd-a1ec-899b9a4b43f7
+                transform: ""
+          - columnReference:
+              columnCounter: b49a4436-941a-455b-a212-1af60f70f0e0
+              stepCounter: be6dd6d2-80e1-422a-b10d-bb35128d7d1b
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5505dabd-ad60-4f44-9b88-c0f70bb8b840
+                    stepCounter: 1af50b69-6c99-4ecd-a1ec-899b9a4b43f7
+                transform: ""
+          - columnReference:
+              columnCounter: 0ece22c3-aa10-49ea-8fee-f354251e02ee
+              stepCounter: be6dd6d2-80e1-422a-b10d-bb35128d7d1b
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c497e2ae-1a12-4dac-8ca2-f4c990b0f348
+                    stepCounter: 1af50b69-6c99-4ecd-a1ec-899b9a4b43f7
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_WWI_PAYMENTMETHODS_ARCHIVE
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_WWI_PAYMENTMETHODS_ARCHIVE') }} "DVSTG_WWI_PAYMENTMETHODS_ARCHIVE"
+            name: SATV0_WWI_PAYMENTMETHODS_ARCHIVE
+            noLinkRefs: []
+      name: SATV0_WWI_PAYMENTMETHODS_ARCHIVE
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: be6dd6d2-80e1-422a-b10d-bb35128d7d1b

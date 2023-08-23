@@ -1,0 +1,184 @@
+steps:
+  NYC_HEALTH_TESTS-4c8a6f07-8faa-47e7-89c7-b368b577c857:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: COVID19
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b8f8ea06-56c6-4a03-9819-7aeb68ca9121
+              stepCounter: 4c8a6f07-8faa-47e7-89c7-b368b577c857
+            config: {}
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            name: MODIFIED_ZCTA
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 286a80a5-00ad-43b5-9d2e-ee316164b034
+              stepCounter: 4c8a6f07-8faa-47e7-89c7-b368b577c857
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: COVID_CASE_COUNT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: bb3e1e94-98c3-496d-ac65-7967454630da
+              stepCounter: 4c8a6f07-8faa-47e7-89c7-b368b577c857
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: TOTAL_COVID_TESTS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7b54e19e-8f23-4350-9c75-2c932629093b
+              stepCounter: 4c8a6f07-8faa-47e7-89c7-b368b577c857
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: PERCENT_POSITIVE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8fd1324c-8939-4e62-8c9d-705f5578492e
+              stepCounter: 4c8a6f07-8faa-47e7-89c7-b368b577c857
+            config: {}
+            dataType: DATE
+            defaultValue: ""
+            description: ""
+            name: DATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0e4405a6-5c58-4402-a59e-4607f3441235
+              stepCounter: 4c8a6f07-8faa-47e7-89c7-b368b577c857
+            config: {}
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            name: FIPS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 97cb5b05-2f6d-4792-a4b4-74033cdf1218
+              stepCounter: 4c8a6f07-8faa-47e7-89c7-b368b577c857
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: COUNTRY_REGION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fa6ed87b-c253-4ae9-94c0-400f25cd1d57
+              stepCounter: 4c8a6f07-8faa-47e7-89c7-b368b577c857
+            config: {}
+            dataType: VARCHAR(3)
+            defaultValue: ""
+            description: ""
+            name: ISO3166_1
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ebb206c4-b528-4e95-ac58-a5d31dfbd4ae
+              stepCounter: 4c8a6f07-8faa-47e7-89c7-b368b577c857
+            config: {}
+            dataType: VARCHAR(3)
+            defaultValue: ""
+            description: ""
+            name: ISO3166_2
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0df67a81-4ca0-4ac1-b1b5-f90960b37cce
+              stepCounter: 4c8a6f07-8faa-47e7-89c7-b368b577c857
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: LAST_UPDATED_DATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ccb858f1-f5cd-4f3d-a242-d1bbdced9727
+              stepCounter: 4c8a6f07-8faa-47e7-89c7-b368b577c857
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: LAST_REPORTED_DATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('COVID19', 'NYC_HEALTH_TESTS') }}
+      name: NYC_HEALTH_TESTS
+      schema: ""
+      sqlType: Source
+      table: NYC_HEALTH_TESTS
+      type: sourceInput
+    stepCounter: 4c8a6f07-8faa-47e7-89c7-b368b577c857

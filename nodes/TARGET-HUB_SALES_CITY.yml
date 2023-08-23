@@ -1,0 +1,105 @@
+steps:
+  HUB_SALES_CITY-34b38174-c7fc-487b-822d-8f793eddd820:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: daf7ac61-6a59-4304-a66f-ca2638542df4
+              stepCounter: 34b38174-c7fc-487b-822d-8f793eddd820
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_SALES_CITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e72713f8-df1a-44c7-a743-e0f3001b02b5
+                    stepCounter: 7c19a0ca-d024-4918-83ee-8a4f069fb1bb
+                transform: ""
+          - columnReference:
+              columnCounter: 3ecc1b1b-ba16-467d-ba9a-e5067294bb08
+              stepCounter: 34b38174-c7fc-487b-822d-8f793eddd820
+            dataType: VARCHAR(3)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CITY_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7e6ff099-4880-4ee6-a93e-f42b63b023b5
+                    stepCounter: 7c19a0ca-d024-4918-83ee-8a4f069fb1bb
+                transform: ""
+          - columnReference:
+              columnCounter: 2cd0ad68-7824-485e-a404-d583dcf80031
+              stepCounter: 34b38174-c7fc-487b-822d-8f793eddd820
+            dataType: VARCHAR(5)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: STATE_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 78f44036-f387-4d1c-bded-b90eff21a714
+                    stepCounter: 7c19a0ca-d024-4918-83ee-8a4f069fb1bb
+                transform: ""
+          - columnReference:
+              columnCounter: a5a004c1-8be6-474f-aa6b-0939b537daa8
+              stepCounter: 34b38174-c7fc-487b-822d-8f793eddd820
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f9e8de9a-9032-4446-92ae-2da51e96606d
+                    stepCounter: 7c19a0ca-d024-4918-83ee-8a4f069fb1bb
+                transform: ""
+          - columnReference:
+              columnCounter: 7c509f78-a27e-4d2e-847c-7a5535f1c74e
+              stepCounter: 34b38174-c7fc-487b-822d-8f793eddd820
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a0be2a38-8b0d-4f81-95b3-51da4d38fb5a
+                    stepCounter: 7c19a0ca-d024-4918-83ee-8a4f069fb1bb
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SALES_CITY
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SALES_CITY') }} "DVSTG_SALES_CITY"
+            name: HUB_SALES_CITY
+            noLinkRefs: []
+      name: HUB_SALES_CITY
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 34b38174-c7fc-487b-822d-8f793eddd820

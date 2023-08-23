@@ -1,0 +1,105 @@
+steps:
+  HUB_CT_US_COVID_TESTS-421f9827-d1c1-4b34-a51b-9b6c14f46147:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: US COVID-19 testing and mortality
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: ba28d804-019e-4aa0-902c-2a78c5a2d22a
+              stepCounter: 421f9827-d1c1-4b34-a51b-9b6c14f46147
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_US_COVID_TESTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c4bcbb58-b7e5-4d83-a16e-e30282fe7735
+                    stepCounter: fbc3e633-a053-47c5-975b-1ddbaa52d8c4
+                transform: ""
+          - columnReference:
+              columnCounter: a071e810-82a0-41e8-bc14-9aadee873842
+              stepCounter: 421f9827-d1c1-4b34-a51b-9b6c14f46147
+            dataType: VARCHAR(16777216)
+            description: ISO-3166-1 entity name
+            hashColumns: []
+            hashDetails: null
+            name: COUNTRY_REGION
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e0171821-1aed-489b-9964-7f8a15fed6ae
+                    stepCounter: fbc3e633-a053-47c5-975b-1ddbaa52d8c4
+                transform: ""
+          - columnReference:
+              columnCounter: 565d6b85-35bb-4bf8-bb50-33afe21b5a09
+              stepCounter: 421f9827-d1c1-4b34-a51b-9b6c14f46147
+            dataType: VARCHAR(16777216)
+            description: ISO-3166-2 entity name (U.S. State)
+            hashColumns: []
+            hashDetails: null
+            name: PROVINCE_STATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7a0f4a28-0f35-4d44-aeda-e34b2509665d
+                    stepCounter: fbc3e633-a053-47c5-975b-1ddbaa52d8c4
+                transform: ""
+          - columnReference:
+              columnCounter: 84a0b7bf-899b-4b50-8959-2f9f751351c6
+              stepCounter: 421f9827-d1c1-4b34-a51b-9b6c14f46147
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 01925c9d-80c2-4fd1-8f8d-03fe2bb61638
+                    stepCounter: fbc3e633-a053-47c5-975b-1ddbaa52d8c4
+                transform: ""
+          - columnReference:
+              columnCounter: b4a7a99a-81f3-4307-aa65-b31d10eef5c3
+              stepCounter: 421f9827-d1c1-4b34-a51b-9b6c14f46147
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 97b8b2ed-647c-4018-88c1-c3e8c93f190e
+                    stepCounter: fbc3e633-a053-47c5-975b-1ddbaa52d8c4
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_CT_US_COVID_TESTS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_CT_US_COVID_TESTS') }} "DVSTG_CT_US_COVID_TESTS"
+            name: HUB_CT_US_COVID_TESTS
+            noLinkRefs: []
+      name: HUB_CT_US_COVID_TESTS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 421f9827-d1c1-4b34-a51b-9b6c14f46147

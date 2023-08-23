@@ -1,0 +1,94 @@
+steps:
+  WWI_LOAD_STOCKITEMSTOCKGROUPS-c387973f-de54-4d16-bb22-c54b244ce81d:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: WIDEWORLIMPORTES_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e7d6b217-a67c-4894-826e-d3d8828656e1
+              stepCounter: c387973f-de54-4d16-bb22-c54b244ce81d
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Internal reference for this linking row
+            name: STOCKITEMSTOCKGROUPID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0089ab6d-2064-4663-bdb1-a88aea37330a
+              stepCounter: c387973f-de54-4d16-bb22-c54b244ce81d
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Stock item assigned to this stock group (FK indexed via unique constraint)
+            name: STOCKITEMID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c86ded95-60a4-4729-ac9c-d52a27efd0c8
+              stepCounter: c387973f-de54-4d16-bb22-c54b244ce81d
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: StockGroup assigned to this stock item (FK indexed via unique constraint)
+            name: STOCKGROUPID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: cbd5f990-eda0-4acc-ba0d-8d3c4fdbe31c
+              stepCounter: c387973f-de54-4d16-bb22-c54b244ce81d
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: LASTEDITEDBY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 11847ecf-5940-4f3f-a766-d21d0da2d5c5
+              stepCounter: c387973f-de54-4d16-bb22-c54b244ce81d
+            config: {}
+            dataType: DATE
+            defaultValue: ""
+            description: ""
+            name: LASTEDITEDWHEN
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('WIDEWORLIMPORTES_SRC', 'WWI_LOAD_STOCKITEMSTOCKGROUPS') }}
+      name: WWI_LOAD_STOCKITEMSTOCKGROUPS
+      schema: ""
+      sqlType: Source
+      table: WWI_LOAD_STOCKITEMSTOCKGROUPS
+      type: sourceInput
+    stepCounter: c387973f-de54-4d16-bb22-c54b244ce81d

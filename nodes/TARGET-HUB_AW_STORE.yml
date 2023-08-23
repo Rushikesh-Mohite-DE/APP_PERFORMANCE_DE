@@ -1,0 +1,105 @@
+steps:
+  HUB_AW_STORE-efe71a37-3559-4067-812b-147179bf635b:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: daa35808-f3a6-412c-a099-c44e0b2b4e90
+              stepCounter: efe71a37-3559-4067-812b-147179bf635b
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_STORE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 43b646a3-8edc-438c-9d0d-47031396f6d5
+                    stepCounter: 7f4df18c-b787-4819-97e8-681f64a57028
+                transform: ""
+          - columnReference:
+              columnCounter: efdb141a-bbd1-484b-8c39-b797798bc762
+              stepCounter: efe71a37-3559-4067-812b-147179bf635b
+            dataType: NUMBER(38,0)
+            description: Primary key. Foreign key to Customer.BusinessEntityID.
+            hashColumns: []
+            hashDetails: null
+            name: BUSINESSENTITYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c921b5ed-e282-42d3-a22a-9d3ac59009dd
+                    stepCounter: 7f4df18c-b787-4819-97e8-681f64a57028
+                transform: ""
+          - columnReference:
+              columnCounter: 1802d40f-aaad-41a0-a3a2-eaf6d64aa67b
+              stepCounter: efe71a37-3559-4067-812b-147179bf635b
+            dataType: NUMBER(38,0)
+            description: ID of the sales person assigned to the customer. Foreign key to SalesPerson.BusinessEntityID.
+            hashColumns: []
+            hashDetails: null
+            name: SALESPERSONID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 503bf752-2e84-4219-b921-924508dad97c
+                    stepCounter: 7f4df18c-b787-4819-97e8-681f64a57028
+                transform: ""
+          - columnReference:
+              columnCounter: 80d061b9-517a-4781-a42a-495e37f37927
+              stepCounter: efe71a37-3559-4067-812b-147179bf635b
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: db3375e1-032c-4da2-90f1-7597416aa40a
+                    stepCounter: 7f4df18c-b787-4819-97e8-681f64a57028
+                transform: ""
+          - columnReference:
+              columnCounter: c1c24ed1-b37b-4f13-99dc-33e8c115f404
+              stepCounter: efe71a37-3559-4067-812b-147179bf635b
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3ba4e39d-5f21-4b03-aa58-c2ecde86fcac
+                    stepCounter: 7f4df18c-b787-4819-97e8-681f64a57028
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_STORE
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_STORE') }} "DVSTG_AW_STORE"
+            name: HUB_AW_STORE
+            noLinkRefs: []
+      name: HUB_AW_STORE
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: efe71a37-3559-4067-812b-147179bf635b

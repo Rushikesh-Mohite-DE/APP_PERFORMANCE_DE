@@ -1,0 +1,195 @@
+steps:
+  DVSTG_WWI_TRANSACTIONTYPES_ARCHIVE-71764306-a68d-482c-b689-03b6ae83292d:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7c145912-afa7-4e97-bf5a-347d3e7d00d6
+              stepCounter: 71764306-a68d-482c-b689-03b6ae83292d
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 52c1bf7a-1347-4b4c-9db4-1176a62374cb
+                stepCounter: 71764306-a68d-482c-b689-03b6ae83292d
+            name: HK_TRANSACTIONTYPES_ARCHIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 52c1bf7a-1347-4b4c-9db4-1176a62374cb
+              stepCounter: 71764306-a68d-482c-b689-03b6ae83292d
+            dataType: NUMBER(38,0)
+            description: ""
+            name: TRANSACTIONTYPEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c869dd26-e220-46c0-bb9a-ef700cfa3615
+                    stepCounter: 31170955-0987-4e8b-a87e-b91c3dfaec26
+                transform: ""
+          - columnReference:
+              columnCounter: f52f9e9e-943d-43e5-92a5-081f3f3f2354
+              stepCounter: 71764306-a68d-482c-b689-03b6ae83292d
+            dataType: VARCHAR(50)
+            description: ""
+            name: TRANSACTIONTYPENAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7036ac8b-c1f3-4caa-abca-4093c25439b1
+                    stepCounter: 31170955-0987-4e8b-a87e-b91c3dfaec26
+                transform: ""
+          - columnReference:
+              columnCounter: f0146530-fa6d-4b94-b58d-c91aeabb14e2
+              stepCounter: 71764306-a68d-482c-b689-03b6ae83292d
+            dataType: NUMBER(38,0)
+            description: ""
+            name: LASTEDITEDBY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b803baa1-9685-49aa-a2e7-8dc3b96cd02b
+                    stepCounter: 31170955-0987-4e8b-a87e-b91c3dfaec26
+                transform: ""
+          - columnReference:
+              columnCounter: 2fed35b2-9f2d-4ce2-9238-3c4da09a2fef
+              stepCounter: 71764306-a68d-482c-b689-03b6ae83292d
+            dataType: DATE
+            description: ""
+            name: VALIDFROM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8f9fc08d-1a4e-4a42-adc7-cfe1151e3c6c
+                    stepCounter: 31170955-0987-4e8b-a87e-b91c3dfaec26
+                transform: ""
+          - columnReference:
+              columnCounter: 0f09cb58-55dd-4b4a-a1ec-a063328cbac7
+              stepCounter: 71764306-a68d-482c-b689-03b6ae83292d
+            dataType: DATE
+            description: ""
+            name: VALIDTO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0db77aac-d179-4ec3-ab61-a7573a32d5ea
+                    stepCounter: 31170955-0987-4e8b-a87e-b91c3dfaec26
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d52b11d9-36ae-4489-a21b-1d4c6fe7a37d
+              stepCounter: 71764306-a68d-482c-b689-03b6ae83292d
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e2a964c8-f694-4731-a796-9df70cf2bcb7
+              stepCounter: 71764306-a68d-482c-b689-03b6ae83292d
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f841a869-1b5c-49fa-af4f-02b3793c1792
+              stepCounter: 71764306-a68d-482c-b689-03b6ae83292d
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: f52f9e9e-943d-43e5-92a5-081f3f3f2354
+                stepCounter: 71764306-a68d-482c-b689-03b6ae83292d
+              - columnCounter: f0146530-fa6d-4b94-b58d-c91aeabb14e2
+                stepCounter: 71764306-a68d-482c-b689-03b6ae83292d
+              - columnCounter: 2fed35b2-9f2d-4ce2-9238-3c4da09a2fef
+                stepCounter: 71764306-a68d-482c-b689-03b6ae83292d
+              - columnCounter: 0f09cb58-55dd-4b4a-a1ec-a063328cbac7
+                stepCounter: 71764306-a68d-482c-b689-03b6ae83292d
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 627d0412-b07e-4f27-8d75-23113e41a6c0
+              stepCounter: 71764306-a68d-482c-b689-03b6ae83292d
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 52c1bf7a-1347-4b4c-9db4-1176a62374cb
+                stepCounter: 71764306-a68d-482c-b689-03b6ae83292d
+            name: GH
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: WIDEWORLIMPORTES_SRC
+                nodeName: WWI_LOAD_TRANSACTIONTYPES_ARCHIVE
+            join:
+              joinCondition: FROM {{ ref('WIDEWORLIMPORTES_SRC', 'WWI_LOAD_TRANSACTIONTYPES_ARCHIVE') }} "WWI_LOAD_TRANSACTIONTYPES_ARCHIVE"
+            name: DVSTG_WWI_TRANSACTIONTYPES_ARCHIVE
+            noLinkRefs: []
+      name: DVSTG_WWI_TRANSACTIONTYPES_ARCHIVE
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: 71764306-a68d-482c-b689-03b6ae83292d

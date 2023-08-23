@@ -1,0 +1,105 @@
+steps:
+  HUB_AW_SPECIALOFFERPRODUCT-25cd4ebc-32f0-48bf-820a-c8fb4ac09971:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 9b99a126-e283-46a0-a09a-d716fc30439c
+              stepCounter: 25cd4ebc-32f0-48bf-820a-c8fb4ac09971
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_SPECIALOFFERPRODUCT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 866941d9-15fb-4ddd-8804-c33425c77220
+                    stepCounter: 34976aa1-44ea-4543-bad6-fcb688c5b4a2
+                transform: ""
+          - columnReference:
+              columnCounter: 3ba93c9c-e59a-4577-96ed-bec04def4f8c
+              stepCounter: 25cd4ebc-32f0-48bf-820a-c8fb4ac09971
+            dataType: NUMBER(38,0)
+            description: Primary key for SpecialOfferProduct records.
+            hashColumns: []
+            hashDetails: null
+            name: SPECIALOFFERID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 26c41544-69ad-4dec-88dd-97092f24bce2
+                    stepCounter: 34976aa1-44ea-4543-bad6-fcb688c5b4a2
+                transform: ""
+          - columnReference:
+              columnCounter: 79bf5ad1-af9b-4f1f-ae23-b9a4a95b8d0f
+              stepCounter: 25cd4ebc-32f0-48bf-820a-c8fb4ac09971
+            dataType: NUMBER(38,0)
+            description: Product identification number. Foreign key to Product.ProductID.
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCTID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a2c6f55c-66d6-4828-9bbc-fd5567a33764
+                    stepCounter: 34976aa1-44ea-4543-bad6-fcb688c5b4a2
+                transform: ""
+          - columnReference:
+              columnCounter: e3e061f5-b329-472a-97f0-758403d33e4d
+              stepCounter: 25cd4ebc-32f0-48bf-820a-c8fb4ac09971
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a7957066-708c-46d7-b8e6-6f86c0a77784
+                    stepCounter: 34976aa1-44ea-4543-bad6-fcb688c5b4a2
+                transform: ""
+          - columnReference:
+              columnCounter: f08832d3-3c08-4790-a36a-000bab73da6c
+              stepCounter: 25cd4ebc-32f0-48bf-820a-c8fb4ac09971
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6a7e1721-0f89-4d6e-9844-857be4f892dc
+                    stepCounter: 34976aa1-44ea-4543-bad6-fcb688c5b4a2
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_SPECIALOFFERPRODUCT
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_SPECIALOFFERPRODUCT') }} "DVSTG_AW_SPECIALOFFERPRODUCT"
+            name: HUB_AW_SPECIALOFFERPRODUCT
+            noLinkRefs: []
+      name: HUB_AW_SPECIALOFFERPRODUCT
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 25cd4ebc-32f0-48bf-820a-c8fb4ac09971

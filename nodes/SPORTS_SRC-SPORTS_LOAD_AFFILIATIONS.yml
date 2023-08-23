@@ -1,0 +1,79 @@
+steps:
+  SPORTS_LOAD_AFFILIATIONS-a0747308-bc86-4197-b1c6-09beb2f98c94:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SPORTS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0f2488d0-6d4b-4c8d-bc6d-5c6fb4e37d0a
+              stepCounter: a0747308-bc86-4197-b1c6-09beb2f98c94
+            config: {}
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            name: ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0ccd8ede-27f8-4348-8bf2-fba7fbfef44d
+              stepCounter: a0747308-bc86-4197-b1c6-09beb2f98c94
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: AFFILIATION_KEY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0bc35f68-df38-427c-b7bd-0e3db66bd040
+              stepCounter: a0747308-bc86-4197-b1c6-09beb2f98c94
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: AFFILIATION_TYPE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: dd764b06-e213-41f6-b04b-d8e553e4a6dd
+              stepCounter: a0747308-bc86-4197-b1c6-09beb2f98c94
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: PUBLISHER_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SPORTS_SRC', 'SPORTS_LOAD_AFFILIATIONS') }}
+      name: SPORTS_LOAD_AFFILIATIONS
+      schema: ""
+      sqlType: Source
+      table: SPORTS_LOAD_AFFILIATIONS
+      type: sourceInput
+    stepCounter: a0747308-bc86-4197-b1c6-09beb2f98c94

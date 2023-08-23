@@ -1,0 +1,189 @@
+steps:
+  LINK_KFF_HCP_CAPACITY-0ab0bdab-40b6-4e7d-b15d-fa340a6dee2c:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: US healthcare capacity by state, 2018
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: eb88c20c-dc0d-449e-9dcb-d277d8ff406e
+              stepCounter: 0ab0bdab-40b6-4e7d-b15d-fa340a6dee2c
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_KFF_HCP_CAPACITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b01c53d8-7da5-421c-82ef-8b7f50919f5d
+                    stepCounter: 24070edf-d770-407a-b682-ed924d1eef54
+                transform: ""
+          - columnReference:
+              columnCounter: d111ae90-a38d-4876-bf6e-716dec06dd2e
+              stepCounter: 0ab0bdab-40b6-4e7d-b15d-fa340a6dee2c
+            dataType: VARCHAR(16777216)
+            description: ISO-3166-1 entity name
+            hashColumns: []
+            hashDetails: null
+            name: COUNTRY_REGION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1e1f9fef-3a29-4bd5-8b65-2b0d3914ddc2
+                    stepCounter: 24070edf-d770-407a-b682-ed924d1eef54
+                transform: ""
+          - columnReference:
+              columnCounter: c2981fd1-df99-44bc-8c1b-3fa71762b035
+              stepCounter: 0ab0bdab-40b6-4e7d-b15d-fa340a6dee2c
+            dataType: VARCHAR(16777216)
+            description: ISO-3166-2 entity name
+            hashColumns: []
+            hashDetails: null
+            name: PROVINCE_STATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b7752381-60d3-4de3-a964-57285b85f406
+                    stepCounter: 24070edf-d770-407a-b682-ed924d1eef54
+                transform: ""
+          - columnReference:
+              columnCounter: 62f45d0f-4880-44da-ac9e-e65449b897dd
+              stepCounter: 0ab0bdab-40b6-4e7d-b15d-fa340a6dee2c
+            dataType: NUMBER(38,0)
+            description: Total hospital beds, 2018
+            hashColumns: []
+            hashDetails: null
+            name: TOTAL_HOSPITAL_BEDS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d6e17e9b-14be-4db5-9c3d-e475a6c1c597
+                    stepCounter: 24070edf-d770-407a-b682-ed924d1eef54
+                transform: ""
+          - columnReference:
+              columnCounter: 2dbec84a-559a-44a1-93e3-e34641e24768
+              stepCounter: 0ab0bdab-40b6-4e7d-b15d-fa340a6dee2c
+            dataType: NUMBER(8,3)
+            description: Hospital beds per 1,000 population, 2018
+            hashColumns: []
+            hashDetails: null
+            name: HOSPITAL_BEDS_PER_1000_POPULATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 295790c0-a958-44a1-a281-597c1604728c
+                    stepCounter: 24070edf-d770-407a-b682-ed924d1eef54
+                transform: ""
+          - columnReference:
+              columnCounter: 6e9eb72b-4460-46c3-baef-ae571a394857
+              stepCounter: 0ab0bdab-40b6-4e7d-b15d-fa340a6dee2c
+            dataType: NUMBER(38,0)
+            description: Number of community health centers
+            hashColumns: []
+            hashDetails: null
+            name: TOTAL_CHCS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5db55829-85ae-4483-86e9-43397895a9d4
+                    stepCounter: 24070edf-d770-407a-b682-ed924d1eef54
+                transform: ""
+          - columnReference:
+              columnCounter: bc96a735-5e33-4fc3-8c53-3e951fcf117a
+              stepCounter: 0ab0bdab-40b6-4e7d-b15d-fa340a6dee2c
+            dataType: NUMBER(38,0)
+            description: Number of community health center delivery sites
+            hashColumns: []
+            hashDetails: null
+            name: CHC_SERVICE_DELIVERY_SITES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4765e850-a2a7-4b65-bb72-8fdf5eb892e2
+                    stepCounter: 24070edf-d770-407a-b682-ed924d1eef54
+                transform: ""
+          - columnReference:
+              columnCounter: e7f38393-ff10-491c-afd9-e7606ec0eef3
+              stepCounter: 0ab0bdab-40b6-4e7d-b15d-fa340a6dee2c
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ebff62dc-c368-46ce-a83e-cb1d0a675de4
+                    stepCounter: 24070edf-d770-407a-b682-ed924d1eef54
+                transform: ""
+          - columnReference:
+              columnCounter: fdd47f8b-bf2b-4a96-b955-0b9d804d94b6
+              stepCounter: 0ab0bdab-40b6-4e7d-b15d-fa340a6dee2c
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 37145351-b40d-432e-9715-9de6c0271d74
+                    stepCounter: 24070edf-d770-407a-b682-ed924d1eef54
+                transform: ""
+          - columnReference:
+              columnCounter: 5caf706e-374f-4027-8796-2f9f6a60d1cf
+              stepCounter: 0ab0bdab-40b6-4e7d-b15d-fa340a6dee2c
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7fa8ba42-a08f-4cfd-ba14-79adb294d66a
+                    stepCounter: 24070edf-d770-407a-b682-ed924d1eef54
+                transform: ""
+          - columnReference:
+              columnCounter: aaa64db5-2514-45fe-b654-80d37a154486
+              stepCounter: 0ab0bdab-40b6-4e7d-b15d-fa340a6dee2c
+            config:
+              is_Link_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LNK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 04af48cb-65a1-41db-b663-7e87802c26b6
+                    stepCounter: 24070edf-d770-407a-b682-ed924d1eef54
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_KFF_HCP_CAPACITY
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_KFF_HCP_CAPACITY') }} "DVSTG_KFF_HCP_CAPACITY"
+            name: LINK_KFF_HCP_CAPACITY
+            noLinkRefs: []
+      name: LINK_KFF_HCP_CAPACITY
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::7
+      type: sql
+    stepCounter: 0ab0bdab-40b6-4e7d-b15d-fa340a6dee2c

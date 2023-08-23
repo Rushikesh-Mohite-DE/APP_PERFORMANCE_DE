@@ -1,0 +1,119 @@
+steps:
+  HUB_AW_BILLOFMATERIALS-66ac8fc8-6fd5-481d-b321-89e3d1db9731:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 759e0acd-15a2-40a2-959c-27614c6d6314
+              stepCounter: 66ac8fc8-6fd5-481d-b321-89e3d1db9731
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_BILLOFMATERIALS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 38960c03-6586-4fed-98e7-0705e7a406a6
+                    stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
+                transform: ""
+          - columnReference:
+              columnCounter: a0f21030-924d-4e4a-abcd-88676c01e7f8
+              stepCounter: 66ac8fc8-6fd5-481d-b321-89e3d1db9731
+            dataType: NUMBER(38,0)
+            description: Primary key for BillOfMaterials records.
+            hashColumns: []
+            hashDetails: null
+            name: BILLOFMATERIALSID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a77f738a-1f20-466f-92e8-597bb912fa15
+                    stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
+                transform: ""
+          - columnReference:
+              columnCounter: f4cc1408-6f24-4b7a-a899-f57dd0586574
+              stepCounter: 66ac8fc8-6fd5-481d-b321-89e3d1db9731
+            dataType: VARCHAR(16777216)
+            description: Parent product identification number. Foreign key to Product.ProductID.
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCTASSEMBLYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fef785b6-5ba3-4efc-9ef1-b201fdf6c47f
+                    stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
+                transform: ""
+          - columnReference:
+              columnCounter: 95a610a1-def0-4810-9e46-99a120d8bb10
+              stepCounter: 66ac8fc8-6fd5-481d-b321-89e3d1db9731
+            dataType: NUMBER(38,0)
+            description: Component identification number. Foreign key to Product.ProductID.
+            hashColumns: []
+            hashDetails: null
+            name: COMPONENTID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 991d17f7-766b-431d-af1b-5537c30b6347
+                    stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
+                transform: ""
+          - columnReference:
+              columnCounter: 6bed5dfc-5fc1-4317-b9e7-48feeb6776bc
+              stepCounter: 66ac8fc8-6fd5-481d-b321-89e3d1db9731
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 15f64856-dec4-4c52-a6b8-f3c290a7ea45
+                    stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
+                transform: ""
+          - columnReference:
+              columnCounter: 58c0d7f1-ca0b-4a89-be75-cf81c55ae70e
+              stepCounter: 66ac8fc8-6fd5-481d-b321-89e3d1db9731
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1deefa52-5b15-4d48-bb85-812788ee2f4d
+                    stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_BILLOFMATERIALS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_BILLOFMATERIALS') }} "DVSTG_AW_BILLOFMATERIALS"
+            name: HUB_AW_BILLOFMATERIALS
+            noLinkRefs: []
+      name: HUB_AW_BILLOFMATERIALS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 66ac8fc8-6fd5-481d-b321-89e3d1db9731

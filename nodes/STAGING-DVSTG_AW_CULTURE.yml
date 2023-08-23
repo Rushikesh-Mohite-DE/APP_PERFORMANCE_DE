@@ -1,0 +1,167 @@
+steps:
+  DVSTG_AW_CULTURE-4596a119-4351-4db1-83b8-eebd2d2508e4:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b6262e3f-4436-49d3-bd39-d0418c3fd968
+              stepCounter: 4596a119-4351-4db1-83b8-eebd2d2508e4
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 4344d4ce-5063-42ad-b381-711c013f90c7
+                stepCounter: 4596a119-4351-4db1-83b8-eebd2d2508e4
+            name: HK_CULTURE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 4344d4ce-5063-42ad-b381-711c013f90c7
+              stepCounter: 4596a119-4351-4db1-83b8-eebd2d2508e4
+            dataType: VARCHAR(6)
+            description: Primary key for Culture records.
+            name: CULTUREID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 83848860-e91e-4ccd-8e25-d47532156d22
+                    stepCounter: c7ba6bae-67eb-4bc8-838c-deced28068c3
+                transform: ""
+          - columnReference:
+              columnCounter: 23242da7-9b37-43c6-aaa1-9ee0befe3cfe
+              stepCounter: 4596a119-4351-4db1-83b8-eebd2d2508e4
+            dataType: VARCHAR(16777216)
+            description: Culture description.
+            name: NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8735c3ba-a554-446b-a8f3-150b629d76ab
+                    stepCounter: c7ba6bae-67eb-4bc8-838c-deced28068c3
+                transform: ""
+          - columnReference:
+              columnCounter: dc52829d-8294-470f-a82e-befddfa7fe9a
+              stepCounter: 4596a119-4351-4db1-83b8-eebd2d2508e4
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 73b15bbe-5371-4829-aaa1-e1ae910a0ee7
+                    stepCounter: c7ba6bae-67eb-4bc8-838c-deced28068c3
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 187297c1-d025-4fbe-8187-8afa03149822
+              stepCounter: 4596a119-4351-4db1-83b8-eebd2d2508e4
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8f4d9745-0402-49a5-a07f-b3b3689ff0e7
+              stepCounter: 4596a119-4351-4db1-83b8-eebd2d2508e4
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 474086bc-a0b7-4d09-8a5f-851a74d29af8
+              stepCounter: 4596a119-4351-4db1-83b8-eebd2d2508e4
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 23242da7-9b37-43c6-aaa1-9ee0befe3cfe
+                stepCounter: 4596a119-4351-4db1-83b8-eebd2d2508e4
+              - columnCounter: dc52829d-8294-470f-a82e-befddfa7fe9a
+                stepCounter: 4596a119-4351-4db1-83b8-eebd2d2508e4
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8874af03-6409-4ed7-9bec-a99591e5d8ff
+              stepCounter: 4596a119-4351-4db1-83b8-eebd2d2508e4
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 23242da7-9b37-43c6-aaa1-9ee0befe3cfe
+                stepCounter: 4596a119-4351-4db1-83b8-eebd2d2508e4
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: ADV_WRKS_SRC
+                nodeName: AW_LOAD_CULTURE
+            join:
+              joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_CULTURE') }} "AW_LOAD_CULTURE"
+            name: DVSTG_AW_CULTURE
+            noLinkRefs: []
+      name: DVSTG_AW_CULTURE
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: 4596a119-4351-4db1-83b8-eebd2d2508e4

@@ -1,0 +1,49 @@
+steps:
+  NW_LOAD_EMPLOYEETERRITORIES-35060809-0fdd-4b5a-ad2e-817bf4b37754:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: NORTHWIND_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8617b1bc-fe5b-4255-bdc9-7c4375e20856
+              stepCounter: 35060809-0fdd-4b5a-ad2e-817bf4b37754
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: EMPLOYEEID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9ef59e87-432b-436e-ba6e-2395b2042f43
+              stepCounter: 35060809-0fdd-4b5a-ad2e-817bf4b37754
+            config: {}
+            dataType: VARCHAR(20)
+            defaultValue: ""
+            description: ""
+            name: TERRITORYID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('NORTHWIND_SRC', 'NW_LOAD_EMPLOYEETERRITORIES') }}
+      name: NW_LOAD_EMPLOYEETERRITORIES
+      schema: ""
+      sqlType: Source
+      table: NW_LOAD_EMPLOYEETERRITORIES
+      type: sourceInput
+    stepCounter: 35060809-0fdd-4b5a-ad2e-817bf4b37754

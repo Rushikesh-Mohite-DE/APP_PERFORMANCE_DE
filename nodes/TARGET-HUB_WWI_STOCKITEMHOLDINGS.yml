@@ -1,0 +1,91 @@
+steps:
+  HUB_WWI_STOCKITEMHOLDINGS-8f1fa9a0-8550-4e1d-bd6a-00a8736a67fb:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 52adebf0-744f-4aa6-805a-45bb89d1d887
+              stepCounter: 8f1fa9a0-8550-4e1d-bd6a-00a8736a67fb
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_STOCKITEMHOLDINGS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d006aa88-5fb3-4cbd-91a6-33ea6d5a87e5
+                    stepCounter: 42a12c5c-fd61-4a58-bb39-8df029179287
+                transform: ""
+          - columnReference:
+              columnCounter: ba762d95-dd96-4311-97b8-39a8909b2c36
+              stepCounter: 8f1fa9a0-8550-4e1d-bd6a-00a8736a67fb
+            dataType: NUMBER(38,0)
+            description: ID of the stock item that this holding relates to (this table holds non-temporal columns for stock)
+            hashColumns: []
+            hashDetails: null
+            name: STOCKITEMID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 501ab682-0255-4910-864b-4a17a40b0ab1
+                    stepCounter: 42a12c5c-fd61-4a58-bb39-8df029179287
+                transform: ""
+          - columnReference:
+              columnCounter: 8ca5ca41-7e5d-4f0a-b636-b51bc63f364f
+              stepCounter: 8f1fa9a0-8550-4e1d-bd6a-00a8736a67fb
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d12526ea-9c08-44fe-8890-d8b2ff017d35
+                    stepCounter: 42a12c5c-fd61-4a58-bb39-8df029179287
+                transform: ""
+          - columnReference:
+              columnCounter: 1632c265-91aa-4362-9e85-4c2721ddd963
+              stepCounter: 8f1fa9a0-8550-4e1d-bd6a-00a8736a67fb
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0ef5c9ec-6c60-48f5-b500-ba7e73398f39
+                    stepCounter: 42a12c5c-fd61-4a58-bb39-8df029179287
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_WWI_STOCKITEMHOLDINGS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_WWI_STOCKITEMHOLDINGS') }} "DVSTG_WWI_STOCKITEMHOLDINGS"
+            name: HUB_WWI_STOCKITEMHOLDINGS
+            noLinkRefs: []
+      name: HUB_WWI_STOCKITEMHOLDINGS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 8f1fa9a0-8550-4e1d-bd6a-00a8736a67fb

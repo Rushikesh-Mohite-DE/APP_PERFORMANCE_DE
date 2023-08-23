@@ -1,0 +1,149 @@
+steps:
+  SATV0_WWI_CUSTOMERCATEGORIES-f2733798-7cd1-4a4d-b2ff-1a282f00e1cb:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 2b8d3806-866d-4107-8445-a66d1724a29e
+              stepCounter: f2733798-7cd1-4a4d-b2ff-1a282f00e1cb
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_CUSTOMERCATEGORIES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e8d6b96f-b20c-4dec-8290-3bc16e8e7862
+                    stepCounter: b7c0aace-f1fd-4226-bb1d-16c086cc848b
+                transform: ""
+          - columnReference:
+              columnCounter: 05074aa7-f233-49bf-8109-4b55344e68d8
+              stepCounter: f2733798-7cd1-4a4d-b2ff-1a282f00e1cb
+            dataType: VARCHAR(50)
+            description: Full name of the category that customers can be assigned to
+            hashColumns: []
+            hashDetails: null
+            name: CUSTOMERCATEGORYNAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cb9fdd01-4405-48ea-981b-cccadc461315
+                    stepCounter: b7c0aace-f1fd-4226-bb1d-16c086cc848b
+                transform: ""
+          - columnReference:
+              columnCounter: 62139e69-adbf-45c0-9bd3-196054292d98
+              stepCounter: f2733798-7cd1-4a4d-b2ff-1a282f00e1cb
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LASTEDITEDBY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0eafd93d-5295-4252-8cc7-1ea1c8645c1b
+                    stepCounter: b7c0aace-f1fd-4226-bb1d-16c086cc848b
+                transform: ""
+          - columnReference:
+              columnCounter: 0f21b4bb-b7b2-4353-909b-6e258c1bf912
+              stepCounter: f2733798-7cd1-4a4d-b2ff-1a282f00e1cb
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: VALIDFROM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ced536a9-6f32-4147-96d5-4a6a21106db6
+                    stepCounter: b7c0aace-f1fd-4226-bb1d-16c086cc848b
+                transform: ""
+          - columnReference:
+              columnCounter: ed37d121-b4a4-4d28-b9e2-d064552317d5
+              stepCounter: f2733798-7cd1-4a4d-b2ff-1a282f00e1cb
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: VALIDTO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 383ccc72-3a28-4c24-8733-f5e65fa00e4e
+                    stepCounter: b7c0aace-f1fd-4226-bb1d-16c086cc848b
+                transform: ""
+          - columnReference:
+              columnCounter: b368bfa6-3012-4e0e-82ff-f7a759e69df9
+              stepCounter: f2733798-7cd1-4a4d-b2ff-1a282f00e1cb
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 96aa25ab-87b7-4acd-b282-a79c432e6f99
+                    stepCounter: b7c0aace-f1fd-4226-bb1d-16c086cc848b
+                transform: ""
+          - columnReference:
+              columnCounter: d67898f3-d603-4bea-acb0-61b71df740cb
+              stepCounter: f2733798-7cd1-4a4d-b2ff-1a282f00e1cb
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 38bb7c26-c9bd-4345-80de-90d43af51582
+                    stepCounter: b7c0aace-f1fd-4226-bb1d-16c086cc848b
+                transform: ""
+          - columnReference:
+              columnCounter: a72362f7-1829-4c83-ad42-abd5e1d3bb81
+              stepCounter: f2733798-7cd1-4a4d-b2ff-1a282f00e1cb
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e45870da-d3cf-4786-a2b8-0cd1b4b3d0a6
+                    stepCounter: b7c0aace-f1fd-4226-bb1d-16c086cc848b
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_WWI_CUSTOMERCATEGORIES
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_WWI_CUSTOMERCATEGORIES') }} "DVSTG_WWI_CUSTOMERCATEGORIES"
+            name: SATV0_WWI_CUSTOMERCATEGORIES
+            noLinkRefs: []
+      name: SATV0_WWI_CUSTOMERCATEGORIES
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: f2733798-7cd1-4a4d-b2ff-1a282f00e1cb

@@ -1,0 +1,107 @@
+steps:
+  SATV0_NW_REGION-fb3efbb2-7b59-478c-9dcb-3fe4f9503299:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 8fd25272-7638-4fda-bb4a-e7d8b4564197
+              stepCounter: fb3efbb2-7b59-478c-9dcb-3fe4f9503299
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_NW_REGION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a54c208e-553b-4f72-b537-138fce0506d3
+                    stepCounter: 84cf4b68-3c60-4590-8aa2-846848cb2a70
+                transform: ""
+          - columnReference:
+              columnCounter: ead4190a-65e2-4c02-a75d-fba04643bf9d
+              stepCounter: fb3efbb2-7b59-478c-9dcb-3fe4f9503299
+            dataType: VARCHAR(50)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: REGIONDESCRIPTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a88ada12-6406-4893-9ffc-0e29f89a362e
+                    stepCounter: 84cf4b68-3c60-4590-8aa2-846848cb2a70
+                transform: ""
+          - columnReference:
+              columnCounter: 1fb77473-d251-450d-ab13-ee7eceff8ee8
+              stepCounter: fb3efbb2-7b59-478c-9dcb-3fe4f9503299
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b268c4c7-76d5-43b5-8fb6-347586de5328
+                    stepCounter: 84cf4b68-3c60-4590-8aa2-846848cb2a70
+                transform: ""
+          - columnReference:
+              columnCounter: b9c5a7ae-b95e-4404-a828-7e011f24c868
+              stepCounter: fb3efbb2-7b59-478c-9dcb-3fe4f9503299
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3e862bb5-078a-46c4-aa5c-24ce5f955e46
+                    stepCounter: 84cf4b68-3c60-4590-8aa2-846848cb2a70
+                transform: ""
+          - columnReference:
+              columnCounter: 7ee2d8ad-a523-45cf-869e-aa9bdfd65cee
+              stepCounter: fb3efbb2-7b59-478c-9dcb-3fe4f9503299
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ba892381-7237-4e27-acf3-082028a80937
+                    stepCounter: 84cf4b68-3c60-4590-8aa2-846848cb2a70
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_NW_REGION
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_NW_REGION') }} "DVSTG_NW_REGION"
+            name: SATV0_NW_REGION
+            noLinkRefs: []
+      name: SATV0_NW_REGION
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: fb3efbb2-7b59-478c-9dcb-3fe4f9503299

@@ -1,0 +1,151 @@
+steps:
+  DVSTG_NW_EMPLOYEETERRITORIES-086b83fe-93c6-443c-b4ed-37c4c6d657b4:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 49c17515-8b14-46ca-aa24-d67b005d1144
+              stepCounter: 086b83fe-93c6-443c-b4ed-37c4c6d657b4
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: c8e74ee2-187d-4d2d-9d84-964d55a76a35
+                stepCounter: 086b83fe-93c6-443c-b4ed-37c4c6d657b4
+            name: HK_NW_EMPLOYEETERRITORIES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: c8e74ee2-187d-4d2d-9d84-964d55a76a35
+              stepCounter: 086b83fe-93c6-443c-b4ed-37c4c6d657b4
+            dataType: NUMBER(38,0)
+            description: ""
+            name: EMPLOYEEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8617b1bc-fe5b-4255-bdc9-7c4375e20856
+                    stepCounter: 35060809-0fdd-4b5a-ad2e-817bf4b37754
+                transform: ""
+          - columnReference:
+              columnCounter: 75049287-53ca-495d-9cf9-40ffebf332b1
+              stepCounter: 086b83fe-93c6-443c-b4ed-37c4c6d657b4
+            dataType: VARCHAR(20)
+            description: ""
+            name: TERRITORYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9ef59e87-432b-436e-ba6e-2395b2042f43
+                    stepCounter: 35060809-0fdd-4b5a-ad2e-817bf4b37754
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2fcbb21f-5e5e-4de2-b1c9-962a8e7e8b23
+              stepCounter: 086b83fe-93c6-443c-b4ed-37c4c6d657b4
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 807ee549-0f29-4777-b64a-2fe1d9bf21fe
+              stepCounter: 086b83fe-93c6-443c-b4ed-37c4c6d657b4
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 75826621-122e-45a2-8835-d35a1762b8ed
+              stepCounter: 086b83fe-93c6-443c-b4ed-37c4c6d657b4
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 75049287-53ca-495d-9cf9-40ffebf332b1
+                stepCounter: 086b83fe-93c6-443c-b4ed-37c4c6d657b4
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences: []
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b8c96d3d-b608-4637-aef6-01ab519de9dd
+              stepCounter: 086b83fe-93c6-443c-b4ed-37c4c6d657b4
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 75049287-53ca-495d-9cf9-40ffebf332b1
+                stepCounter: 086b83fe-93c6-443c-b4ed-37c4c6d657b4
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: NORTHWIND_SRC
+                nodeName: NW_LOAD_EMPLOYEETERRITORIES
+            join:
+              joinCondition: FROM {{ ref('NORTHWIND_SRC', 'NW_LOAD_EMPLOYEETERRITORIES') }} "NW_LOAD_EMPLOYEETERRITORIES"
+            name: DVSTG_NW_EMPLOYEETERRITORIES
+            noLinkRefs: []
+      name: DVSTG_NW_EMPLOYEETERRITORIES
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: 086b83fe-93c6-443c-b4ed-37c4c6d657b4

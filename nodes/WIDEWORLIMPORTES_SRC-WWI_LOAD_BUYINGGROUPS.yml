@@ -1,0 +1,94 @@
+steps:
+  WWI_LOAD_BUYINGGROUPS-5b6bebb2-3ca8-4bf9-b41a-dbff8cc7e9f5:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: WIDEWORLIMPORTES_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6fd01c75-f506-4e74-828d-9ca025c0c23d
+              stepCounter: 5b6bebb2-3ca8-4bf9-b41a-dbff8cc7e9f5
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Numeric ID used for reference to a buying group within the database
+            name: BUYINGGROUPID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6cba9b3e-9072-46d3-a5fe-36871103ea79
+              stepCounter: 5b6bebb2-3ca8-4bf9-b41a-dbff8cc7e9f5
+            config: {}
+            dataType: VARCHAR(50)
+            defaultValue: ""
+            description: Full name of a buying group that customers can be members of
+            name: BUYINGGROUPNAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4e7fb592-efc1-4bc4-abf8-3070f23f714e
+              stepCounter: 5b6bebb2-3ca8-4bf9-b41a-dbff8cc7e9f5
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: LASTEDITEDBY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e94224a4-6fac-4201-ae7c-f0bef6d90d5a
+              stepCounter: 5b6bebb2-3ca8-4bf9-b41a-dbff8cc7e9f5
+            config: {}
+            dataType: DATE
+            defaultValue: ""
+            description: ""
+            name: VALIDFROM
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 751e71fa-d865-44f5-8a3c-6964f2883a7e
+              stepCounter: 5b6bebb2-3ca8-4bf9-b41a-dbff8cc7e9f5
+            config: {}
+            dataType: DATE
+            defaultValue: ""
+            description: ""
+            name: VALIDTO
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('WIDEWORLIMPORTES_SRC', 'WWI_LOAD_BUYINGGROUPS') }}
+      name: WWI_LOAD_BUYINGGROUPS
+      schema: ""
+      sqlType: Source
+      table: WWI_LOAD_BUYINGGROUPS
+      type: sourceInput
+    stepCounter: 5b6bebb2-3ca8-4bf9-b41a-dbff8cc7e9f5

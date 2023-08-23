@@ -1,0 +1,94 @@
+steps:
+  AW_LOAD_PRODUCTSUBCATEGORY-876b0851-7ab1-4144-afc2-b820e5da1ba2:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: ADV_WRKS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5010e405-d0a2-4589-b07e-05f0ff5c5d30
+              stepCounter: 876b0851-7ab1-4144-afc2-b820e5da1ba2
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Primary key for ProductSubcategory records.
+            name: PRODUCTSUBCATEGORYID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ac1fd47c-b9b7-4fe1-9bd8-98f758e61d41
+              stepCounter: 876b0851-7ab1-4144-afc2-b820e5da1ba2
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Product category identification number. Foreign key to ProductCategory.ProductCategoryID.
+            name: PRODUCTCATEGORYID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 809b5072-ad6a-4b9d-a600-59ca142eb5a0
+              stepCounter: 876b0851-7ab1-4144-afc2-b820e5da1ba2
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: Subcategory description.
+            name: NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: cf0c5757-73e9-4f67-bdb6-c45c6cf3c08d
+              stepCounter: 876b0851-7ab1-4144-afc2-b820e5da1ba2
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            name: ROWGUID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 56cc9f50-2f0b-4c02-a52f-f5c9d5c32608
+              stepCounter: 876b0851-7ab1-4144-afc2-b820e5da1ba2
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_PRODUCTSUBCATEGORY') }}
+      name: AW_LOAD_PRODUCTSUBCATEGORY
+      schema: ""
+      sqlType: Source
+      table: AW_LOAD_PRODUCTSUBCATEGORY
+      type: sourceInput
+    stepCounter: 876b0851-7ab1-4144-afc2-b820e5da1ba2

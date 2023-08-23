@@ -1,0 +1,105 @@
+steps:
+  HUB_HUM_RESTRICTIONS_AIRLINE-e30f45e2-2f80-4f0e-89e3-f66d6b61fc6a:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: COVID-19 travel restrictions by airline
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: a4ded12f-1290-4a60-aca8-db9290036d68
+              stepCounter: e30f45e2-2f80-4f0e-89e3-f66d6b61fc6a
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_HUM_RESTRICTIONS_AIRLINE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1a8ced4b-5537-43e4-89ef-59fe0915d16c
+                    stepCounter: 4e2edd8d-d65e-4603-9f2c-85284a57000a
+                transform: ""
+          - columnReference:
+              columnCounter: 69057246-abce-49c6-b35f-77734fdc2dfd
+              stepCounter: e30f45e2-2f80-4f0e-89e3-f66d6b61fc6a
+            dataType: VARCHAR(16777216)
+            description: ISO-3166-1 entity name
+            hashColumns: []
+            hashDetails: null
+            name: COUNTRY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7edad70f-36d5-4b12-8e55-f88d320e697d
+                    stepCounter: 4e2edd8d-d65e-4603-9f2c-85284a57000a
+                transform: ""
+          - columnReference:
+              columnCounter: b1090563-05f4-40ab-8000-68220020d820
+              stepCounter: e30f45e2-2f80-4f0e-89e3-f66d6b61fc6a
+            dataType: VARCHAR(16777216)
+            description: ISO-3166-1 code for geography of record
+            hashColumns: []
+            hashDetails: null
+            name: ISO3166_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f9729258-58d9-45c1-b7c6-f6f230aa789a
+                    stepCounter: 4e2edd8d-d65e-4603-9f2c-85284a57000a
+                transform: ""
+          - columnReference:
+              columnCounter: f53b044b-37e0-4c6c-b65c-6eb09929e1cc
+              stepCounter: e30f45e2-2f80-4f0e-89e3-f66d6b61fc6a
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b1c50ac6-1b8b-4d43-9e6e-c3319f098db1
+                    stepCounter: 4e2edd8d-d65e-4603-9f2c-85284a57000a
+                transform: ""
+          - columnReference:
+              columnCounter: c30a064c-3e42-4645-96c7-28ae87003b07
+              stepCounter: e30f45e2-2f80-4f0e-89e3-f66d6b61fc6a
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ea869b8f-a2c7-494c-bb31-a1fd2a9e82cd
+                    stepCounter: 4e2edd8d-d65e-4603-9f2c-85284a57000a
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_HUM_RESTRICTIONS_AIRLINE
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_HUM_RESTRICTIONS_AIRLINE') }} "DVSTG_HUM_RESTRICTIONS_AIRLINE"
+            name: HUB_HUM_RESTRICTIONS_AIRLINE
+            noLinkRefs: []
+      name: HUB_HUM_RESTRICTIONS_AIRLINE
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: e30f45e2-2f80-4f0e-89e3-f66d6b61fc6a

@@ -1,0 +1,105 @@
+steps:
+  HUB_NW_TERRITORIES-037c345d-9cf6-4cf1-aaf4-41e181fd1748:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 3e43fa00-5cf4-4696-8cab-17fcb4e3ea13
+              stepCounter: 037c345d-9cf6-4cf1-aaf4-41e181fd1748
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_NW_TERRITORIES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8769132b-2c5c-4fca-9dec-debdd6249ca5
+                    stepCounter: ecedd8a8-de99-4578-b6ca-9bf10a8fa407
+                transform: ""
+          - columnReference:
+              columnCounter: 0d19d809-aa09-4454-8016-c641d72debe5
+              stepCounter: 037c345d-9cf6-4cf1-aaf4-41e181fd1748
+            dataType: VARCHAR(20)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: TERRITORYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c4f69e17-e97a-4f6a-999f-d27ea1ddfd51
+                    stepCounter: ecedd8a8-de99-4578-b6ca-9bf10a8fa407
+                transform: ""
+          - columnReference:
+              columnCounter: 4269b300-88ff-4e9c-bcc3-7f3b2a1250a3
+              stepCounter: 037c345d-9cf6-4cf1-aaf4-41e181fd1748
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: REGIONID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cada11c0-2968-4893-bafb-b7aa6b415c6c
+                    stepCounter: ecedd8a8-de99-4578-b6ca-9bf10a8fa407
+                transform: ""
+          - columnReference:
+              columnCounter: ff2c3235-5742-491d-8391-fe6bc954449a
+              stepCounter: 037c345d-9cf6-4cf1-aaf4-41e181fd1748
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4c84c6ef-12a1-42d6-bd60-a7d0fda5d83d
+                    stepCounter: ecedd8a8-de99-4578-b6ca-9bf10a8fa407
+                transform: ""
+          - columnReference:
+              columnCounter: 48135367-01dd-4eed-ba35-c585c40c5f7b
+              stepCounter: 037c345d-9cf6-4cf1-aaf4-41e181fd1748
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9ea263d3-281f-4067-b84e-5161b1746830
+                    stepCounter: ecedd8a8-de99-4578-b6ca-9bf10a8fa407
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_NW_TERRITORIES
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_NW_TERRITORIES') }} "DVSTG_NW_TERRITORIES"
+            name: HUB_NW_TERRITORIES
+            noLinkRefs: []
+      name: HUB_NW_TERRITORIES
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 037c345d-9cf6-4cf1-aaf4-41e181fd1748

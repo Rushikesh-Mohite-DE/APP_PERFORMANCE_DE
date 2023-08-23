@@ -1,0 +1,245 @@
+steps:
+  LINK_AW_SALESTERRITORY-e2c3c1f3-3dff-43fb-8fca-4884d2919a4e:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: b997f880-a68f-4cfd-9dc7-33169ae4f297
+              stepCounter: e2c3c1f3-3dff-43fb-8fca-4884d2919a4e
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_SALESTERRITORY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 99eda253-4e9e-442d-a862-2be1deb297ef
+                    stepCounter: cc7d4ccd-1d58-45c5-9b57-cd35925295ee
+                transform: ""
+          - columnReference:
+              columnCounter: 1e3dc427-ee19-451b-9ef5-9511112af520
+              stepCounter: e2c3c1f3-3dff-43fb-8fca-4884d2919a4e
+            dataType: NUMBER(38,0)
+            description: Primary key for SalesTerritory records.
+            hashColumns: []
+            hashDetails: null
+            name: TERRITORYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3d49889d-1e89-471e-978c-bb223455b7b8
+                    stepCounter: cc7d4ccd-1d58-45c5-9b57-cd35925295ee
+                transform: ""
+          - columnReference:
+              columnCounter: 99e76a08-131a-4e5f-a6a9-9da27acc7157
+              stepCounter: e2c3c1f3-3dff-43fb-8fca-4884d2919a4e
+            dataType: VARCHAR(16777216)
+            description: Sales territory description
+            hashColumns: []
+            hashDetails: null
+            name: NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: acb72337-601a-4ea1-94b3-721ee1fb00cb
+                    stepCounter: cc7d4ccd-1d58-45c5-9b57-cd35925295ee
+                transform: ""
+          - columnReference:
+              columnCounter: 928a61a6-39c1-402c-ab1e-0b201070996a
+              stepCounter: e2c3c1f3-3dff-43fb-8fca-4884d2919a4e
+            dataType: VARCHAR(3)
+            description: ISO standard country or region code. Foreign key to CountryRegion.CountryRegionCode.
+            hashColumns: []
+            hashDetails: null
+            name: COUNTRYREGIONCODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0b687460-9a2c-4cb6-bf0f-75cccce038fb
+                    stepCounter: cc7d4ccd-1d58-45c5-9b57-cd35925295ee
+                transform: ""
+          - columnReference:
+              columnCounter: f0f0e4b3-0ab4-443a-bc01-b5384baf298e
+              stepCounter: e2c3c1f3-3dff-43fb-8fca-4884d2919a4e
+            dataType: VARCHAR(50)
+            description: Geographic area to which the sales territory belong.
+            hashColumns: []
+            hashDetails: null
+            name: SF_GROUP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 329d39ab-676f-4332-bd11-7e9cd05125ba
+                    stepCounter: cc7d4ccd-1d58-45c5-9b57-cd35925295ee
+                transform: ""
+          - columnReference:
+              columnCounter: 737b8d36-753b-4f29-8026-894d1f396dd3
+              stepCounter: e2c3c1f3-3dff-43fb-8fca-4884d2919a4e
+            dataType: NUMBER(19,4)
+            description: Sales in the territory year to date.
+            hashColumns: []
+            hashDetails: null
+            name: SALESYTD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 03b852dd-f308-4e2a-9d36-e3b1fc4edb7b
+                    stepCounter: cc7d4ccd-1d58-45c5-9b57-cd35925295ee
+                transform: ""
+          - columnReference:
+              columnCounter: 6969b244-5049-49c2-a31a-4e6b1cac4dff
+              stepCounter: e2c3c1f3-3dff-43fb-8fca-4884d2919a4e
+            dataType: NUMBER(19,4)
+            description: Sales in the territory the previous year.
+            hashColumns: []
+            hashDetails: null
+            name: SALESLASTYEAR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4f419336-c54e-478f-b5e9-b07e7fef40fd
+                    stepCounter: cc7d4ccd-1d58-45c5-9b57-cd35925295ee
+                transform: ""
+          - columnReference:
+              columnCounter: f4691150-6f75-43b8-bb40-0684ac59fe64
+              stepCounter: e2c3c1f3-3dff-43fb-8fca-4884d2919a4e
+            dataType: NUMBER(19,4)
+            description: Business costs in the territory year to date.
+            hashColumns: []
+            hashDetails: null
+            name: COSTYTD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 10cc60df-dfa0-4cbb-b052-6e3d4b97f07c
+                    stepCounter: cc7d4ccd-1d58-45c5-9b57-cd35925295ee
+                transform: ""
+          - columnReference:
+              columnCounter: 8bb6d0de-1aa0-472b-9ca4-85edcfec5c07
+              stepCounter: e2c3c1f3-3dff-43fb-8fca-4884d2919a4e
+            dataType: NUMBER(19,4)
+            description: Business costs in the territory the previous year.
+            hashColumns: []
+            hashDetails: null
+            name: COSTLASTYEAR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8d4aadc1-4c19-47e0-98ef-64d71043deb7
+                    stepCounter: cc7d4ccd-1d58-45c5-9b57-cd35925295ee
+                transform: ""
+          - columnReference:
+              columnCounter: e072d03a-f96b-4536-83ae-02e494b7302e
+              stepCounter: e2c3c1f3-3dff-43fb-8fca-4884d2919a4e
+            dataType: VARCHAR(16777216)
+            description: ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            hashColumns: []
+            hashDetails: null
+            name: ROWGUID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 38d1ab7e-5ad6-4e98-8f7a-62e9913fcdad
+                    stepCounter: cc7d4ccd-1d58-45c5-9b57-cd35925295ee
+                transform: ""
+          - columnReference:
+              columnCounter: 9dd46399-d350-4cc2-b2d7-4c213feb5c4a
+              stepCounter: e2c3c1f3-3dff-43fb-8fca-4884d2919a4e
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            hashColumns: []
+            hashDetails: null
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 03976c94-bd5c-41ca-80c8-fcbfafbba2f6
+                    stepCounter: cc7d4ccd-1d58-45c5-9b57-cd35925295ee
+                transform: ""
+          - columnReference:
+              columnCounter: a1bbf049-aa1b-42f2-a650-ea246f8cf74d
+              stepCounter: e2c3c1f3-3dff-43fb-8fca-4884d2919a4e
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 97d40a6a-4c62-412f-894c-0e484e04294a
+                    stepCounter: cc7d4ccd-1d58-45c5-9b57-cd35925295ee
+                transform: ""
+          - columnReference:
+              columnCounter: 0cd40bc4-9b23-4073-a056-d359bafe7573
+              stepCounter: e2c3c1f3-3dff-43fb-8fca-4884d2919a4e
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5736a5c4-849a-4a04-a874-5086a563f8b8
+                    stepCounter: cc7d4ccd-1d58-45c5-9b57-cd35925295ee
+                transform: ""
+          - columnReference:
+              columnCounter: 11adf399-9778-4e0c-8cee-b242d871dea6
+              stepCounter: e2c3c1f3-3dff-43fb-8fca-4884d2919a4e
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f2df6b52-d645-4cbe-8190-84c1324663a0
+                    stepCounter: cc7d4ccd-1d58-45c5-9b57-cd35925295ee
+                transform: ""
+          - columnReference:
+              columnCounter: 53005456-0d51-454c-b71d-13e08ce5a6bf
+              stepCounter: e2c3c1f3-3dff-43fb-8fca-4884d2919a4e
+            config:
+              is_Link_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LNK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 862ea77a-66bc-4133-9538-d0811b44f74b
+                    stepCounter: cc7d4ccd-1d58-45c5-9b57-cd35925295ee
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_SALESTERRITORY
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_SALESTERRITORY') }} "DVSTG_AW_SALESTERRITORY"
+            name: LINK_AW_SALESTERRITORY
+            noLinkRefs: []
+      name: LINK_AW_SALESTERRITORY
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::7
+      type: sql
+    stepCounter: e2c3c1f3-3dff-43fb-8fca-4884d2919a4e

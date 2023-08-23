@@ -1,0 +1,91 @@
+steps:
+  HUB_WWI_VEHICLETEMPERATURES-703c28a5-4c13-4374-8a45-23e2c07463f7:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 728d3dbc-20b6-4bd4-8368-56b7c90be93b
+              stepCounter: 703c28a5-4c13-4374-8a45-23e2c07463f7
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_VEHICLETEMPERATURES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 531e9eca-bad1-4c09-b469-2118768e98b8
+                    stepCounter: 1a7e95d4-3c8e-4d58-8124-05fb4ab178ab
+                transform: ""
+          - columnReference:
+              columnCounter: fd06992d-d873-45c3-ba6c-df15dcd29f6b
+              stepCounter: 703c28a5-4c13-4374-8a45-23e2c07463f7
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: VEHICLETEMPERATUREID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1b5c6c53-5dba-4e70-be1f-2fbfa59397e0
+                    stepCounter: 1a7e95d4-3c8e-4d58-8124-05fb4ab178ab
+                transform: ""
+          - columnReference:
+              columnCounter: 351d4f91-c741-49d6-b754-44f4e9f4a4b6
+              stepCounter: 703c28a5-4c13-4374-8a45-23e2c07463f7
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 22772c80-c81b-4656-85d7-372e4ccdad88
+                    stepCounter: 1a7e95d4-3c8e-4d58-8124-05fb4ab178ab
+                transform: ""
+          - columnReference:
+              columnCounter: 3b19609e-d2e6-4212-bf5a-054e15f19ab6
+              stepCounter: 703c28a5-4c13-4374-8a45-23e2c07463f7
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1f2414c8-5f8e-45a0-a3f3-6dd76f0be819
+                    stepCounter: 1a7e95d4-3c8e-4d58-8124-05fb4ab178ab
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_WWI_VEHICLETEMPERATURES
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_WWI_VEHICLETEMPERATURES') }} "DVSTG_WWI_VEHICLETEMPERATURES"
+            name: HUB_WWI_VEHICLETEMPERATURES
+            noLinkRefs: []
+      name: HUB_WWI_VEHICLETEMPERATURES
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 703c28a5-4c13-4374-8a45-23e2c07463f7

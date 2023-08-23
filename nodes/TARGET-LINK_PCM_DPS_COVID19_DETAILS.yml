@@ -1,0 +1,497 @@
+steps:
+  LINK_PCM_DPS_COVID19_DETAILS-4682c078-e647-4d45-942b-2548037f9ede:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: Italy case statistics, detailed
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: b8f53fad-7ab0-482c-afd0-5b8c3a64b314
+              stepCounter: 4682c078-e647-4d45-942b-2548037f9ede
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_PCM_DPS_COVID19_DETAILS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ce20d8cd-c6e3-4225-adc2-69cdddb98189
+                    stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
+                transform: ""
+          - columnReference:
+              columnCounter: 51e0bb0e-c93e-4454-a3af-6e4fb4d34a24
+              stepCounter: 4682c078-e647-4d45-942b-2548037f9ede
+            dataType: VARCHAR(16777216)
+            description: ISO-3166-1 entity name
+            hashColumns: []
+            hashDetails: null
+            name: COUNTRY_REGION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6a21ae3b-2034-43f9-a671-c15ac46441f6
+                    stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
+                transform: ""
+          - columnReference:
+              columnCounter: a15b9aaf-5544-4a11-9f36-b2344f9b4a20
+              stepCounter: 4682c078-e647-4d45-942b-2548037f9ede
+            dataType: VARCHAR(16777216)
+            description: ISO-3166-2 entity name
+            hashColumns: []
+            hashDetails: null
+            name: PROVINCE_STATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2b565408-a9be-4e6a-a65e-eceb2905a10a
+                    stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
+                transform: ""
+          - columnReference:
+              columnCounter: b97bbe6f-365e-4697-82ac-ed8b0f900156
+              stepCounter: 4682c078-e647-4d45-942b-2548037f9ede
+            dataType: DATE
+            description: Date of data point
+            hashColumns: []
+            hashDetails: null
+            name: DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 26ef694d-3613-43a5-9a2e-54415b9baa58
+                    stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
+                transform: ""
+          - columnReference:
+              columnCounter: 37540e53-eeab-42a6-be14-e700667ef613
+              stepCounter: 4682c078-e647-4d45-942b-2548037f9ede
+            dataType: NUMBER(38,0)
+            description: Number of patients hospitalized (excl. patients in intensive care)
+            hashColumns: []
+            hashDetails: null
+            name: HOSPITALIZED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ef03abf2-440b-43d9-a3f7-a0f227f21b85
+                    stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
+                transform: ""
+          - columnReference:
+              columnCounter: 37a1902f-f81a-40b1-9976-6112a7703424
+              stepCounter: 4682c078-e647-4d45-942b-2548037f9ede
+            dataType: NUMBER(38,0)
+            description: Number of patients in intensive care
+            hashColumns: []
+            hashDetails: null
+            name: INTENSIVE_CARE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8d076ef5-74dd-4f03-9176-a6158c690e99
+                    stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
+                transform: ""
+          - columnReference:
+              columnCounter: 918b9ded-e8e6-4b11-ab44-94fc3e36edaa
+              stepCounter: 4682c078-e647-4d45-942b-2548037f9ede
+            dataType: NUMBER(38,0)
+            description: Total number of hospitalized patients
+            hashColumns: []
+            hashDetails: null
+            name: TOTAL_HOSPITALIZED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4c941c1f-833a-4b93-b74f-58f2f5b54108
+                    stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
+                transform: ""
+          - columnReference:
+              columnCounter: 1a589415-6ae3-4ff6-8f84-a35c95ac32b6
+              stepCounter: 4682c078-e647-4d45-942b-2548037f9ede
+            dataType: NUMBER(38,0)
+            description: Number of patients in home isolation
+            hashColumns: []
+            hashDetails: null
+            name: HOME_ISOLATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ffb3fa20-5565-4f8d-8794-06d23768bcaf
+                    stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
+                transform: ""
+          - columnReference:
+              columnCounter: 51685d53-e288-44a2-a4d9-aaa8a47d6d47
+              stepCounter: 4682c078-e647-4d45-942b-2548037f9ede
+            dataType: NUMBER(38,0)
+            description: Total number of positive diagnoses
+            hashColumns: []
+            hashDetails: null
+            name: TOTAL_POSITIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 50b2f900-5b78-476f-a535-18307a8d0a82
+                    stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
+                transform: ""
+          - columnReference:
+              columnCounter: ca772b66-c96e-475d-a0b0-315dfb627101
+              stepCounter: 4682c078-e647-4d45-942b-2548037f9ede
+            dataType: NUMBER(38,0)
+            description: Positive diagnoses since last date of record
+            hashColumns: []
+            hashDetails: null
+            name: NEW_POSITIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e8161e73-797a-4588-8ca5-31b78659ca26
+                    stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
+                transform: ""
+          - columnReference:
+              columnCounter: 9a6c6882-c67d-4c3d-90c9-9d3513c82c49
+              stepCounter: 4682c078-e647-4d45-942b-2548037f9ede
+            dataType: NUMBER(38,0)
+            description: Patients discharges as cured
+            hashColumns: []
+            hashDetails: null
+            name: DISCHARGED_HEALED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d4d246dd-a07f-4159-9467-81098ca40e7d
+                    stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
+                transform: ""
+          - columnReference:
+              columnCounter: ba0d9f42-528b-4a82-83fd-532c0988b7ec
+              stepCounter: 4682c078-e647-4d45-942b-2548037f9ede
+            dataType: NUMBER(38,0)
+            description: Deceased patients
+            hashColumns: []
+            hashDetails: null
+            name: DECEASED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8b3b456e-d742-4bf2-b67e-3f9ce7dd6b28
+                    stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
+                transform: ""
+          - columnReference:
+              columnCounter: a317531e-43cc-4eb3-a56c-0e5bd7b50d43
+              stepCounter: 4682c078-e647-4d45-942b-2548037f9ede
+            dataType: NUMBER(38,0)
+            description: Total diagnoses
+            hashColumns: []
+            hashDetails: null
+            name: TOTAL_CASES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3f5742f0-84f7-4e90-9082-d1eeb55e08f9
+                    stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
+                transform: ""
+          - columnReference:
+              columnCounter: 1c50e06e-326a-4821-bfa1-10dd3cfe4b61
+              stepCounter: 4682c078-e647-4d45-942b-2548037f9ede
+            dataType: NUMBER(38,0)
+            description: Number of patients tested
+            hashColumns: []
+            hashDetails: null
+            name: TESTED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 045edad3-6742-49a0-91c0-cfd9d4e1edce
+                    stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
+                transform: ""
+          - columnReference:
+              columnCounter: 15ec0990-ac78-4421-928e-1e0be3853c85
+              stepCounter: 4682c078-e647-4d45-942b-2548037f9ede
+            dataType: NUMBER(38,0)
+            description: Patients hospitalized (excl. intensive care) since last date of record
+            hashColumns: []
+            hashDetails: null
+            name: HOSPITALIZED_SINCE_PREV_DAY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: aa377bf6-7836-49e7-b20f-5cb7b8316891
+                    stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
+                transform: ""
+          - columnReference:
+              columnCounter: 6b1cebe6-44e0-4730-a212-381c2f1eb7ea
+              stepCounter: 4682c078-e647-4d45-942b-2548037f9ede
+            dataType: NUMBER(38,0)
+            description: Patients in intensive care since last date of record
+            hashColumns: []
+            hashDetails: null
+            name: INTENSIVE_CARE_SINCE_PREV_DAY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0900d75e-2b37-4308-8eea-67a698013ce1
+                    stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
+                transform: ""
+          - columnReference:
+              columnCounter: 483adb62-bdd2-4fe6-9ee2-3f54a00619e6
+              stepCounter: 4682c078-e647-4d45-942b-2548037f9ede
+            dataType: NUMBER(38,0)
+            description: Total new patients hospitalized since last date of record
+            hashColumns: []
+            hashDetails: null
+            name: TOTAL_HOSPITALIZED_SINCE_PREV_DAY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 809ed3fb-b03f-4923-a8e7-09ffd9c16f43
+                    stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
+                transform: ""
+          - columnReference:
+              columnCounter: 17aa309d-d71e-4f3b-ab1f-e7d8d79bfa0c
+              stepCounter: 4682c078-e647-4d45-942b-2548037f9ede
+            dataType: NUMBER(38,0)
+            description: Patients in home isolation since last date of record
+            hashColumns: []
+            hashDetails: null
+            name: HOME_ISOLATION_SINCE_PREV_DAY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 19ebcb0e-a2c9-40d4-ab01-41b4248eadab
+                    stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
+                transform: ""
+          - columnReference:
+              columnCounter: 08f79a0d-0279-4fd3-9c6d-0f6689a91f27
+              stepCounter: 4682c078-e647-4d45-942b-2548037f9ede
+            dataType: NUMBER(38,0)
+            description: Patients with a positive diagnosis since last date of record
+            hashColumns: []
+            hashDetails: null
+            name: TOTAL_POSITIVE_SINCE_PREV_DAY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8012beb0-1a35-42c4-8597-5d9e230cd069
+                    stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
+                transform: ""
+          - columnReference:
+              columnCounter: 38869e7a-f159-4b67-b8a9-6845d1f539a2
+              stepCounter: 4682c078-e647-4d45-942b-2548037f9ede
+            dataType: NUMBER(38,0)
+            description: Patients discharged healed since last date of record
+            hashColumns: []
+            hashDetails: null
+            name: DISCHARGED_HEALED_SINCE_PREV_DAY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f87e096d-5ae6-4bd1-8e61-b64d2edccf32
+                    stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
+                transform: ""
+          - columnReference:
+              columnCounter: 986241d7-8001-4a4f-85b1-b547917a49b7
+              stepCounter: 4682c078-e647-4d45-942b-2548037f9ede
+            dataType: NUMBER(38,0)
+            description: Patients deceased since last date of record
+            hashColumns: []
+            hashDetails: null
+            name: DECEASED_SINCE_PREV_DAY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 97508e53-ec2b-4e23-9a12-2d9656a37aa7
+                    stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
+                transform: ""
+          - columnReference:
+              columnCounter: 3134a012-5efd-48d6-b397-770157d419e2
+              stepCounter: 4682c078-e647-4d45-942b-2548037f9ede
+            dataType: NUMBER(38,0)
+            description: Total cases since last date of record
+            hashColumns: []
+            hashDetails: null
+            name: TOTAL_CASES_SINCE_PREV_DAY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1ee9787e-1d19-44cb-ad50-e2259d4cb1dd
+                    stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
+                transform: ""
+          - columnReference:
+              columnCounter: 6da2dd0c-3eed-4994-89a5-9a9f3e9bd882
+              stepCounter: 4682c078-e647-4d45-942b-2548037f9ede
+            dataType: NUMBER(38,0)
+            description: Patients tested since last date of record
+            hashColumns: []
+            hashDetails: null
+            name: TESTED_SINCE_PREV_DAY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fb3a4b5e-f67b-494e-b202-85e9a2973c02
+                    stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
+                transform: ""
+          - columnReference:
+              columnCounter: c09eb8e9-fbcc-49c0-a71d-5dfbb0988440
+              stepCounter: 4682c078-e647-4d45-942b-2548037f9ede
+            dataType: VARCHAR(16777216)
+            description: ISO-3166-1 code for geography of record
+            hashColumns: []
+            hashDetails: null
+            name: ISO3166_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 95c513bf-a9f4-4f8a-a9cb-e2f3b4d9f55a
+                    stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
+                transform: ""
+          - columnReference:
+              columnCounter: 63346d71-6e11-43c0-a8d2-aa363164974d
+              stepCounter: 4682c078-e647-4d45-942b-2548037f9ede
+            dataType: VARCHAR(16777216)
+            description: ISO-3166-2 code for geography of record
+            hashColumns: []
+            hashDetails: null
+            name: ISO3166_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fb2fcd8d-6fde-4476-bc67-c7b7b5963ffd
+                    stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
+                transform: ""
+          - columnReference:
+              columnCounter: 2738a966-740b-4072-8eea-e159c2ca2cb7
+              stepCounter: 4682c078-e647-4d45-942b-2548037f9ede
+            dataType: VARCHAR(16777216)
+            description: Data originators notes (Italian)
+            hashColumns: []
+            hashDetails: null
+            name: NOTE_IT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ededc298-42d5-408b-9618-7a8fd854969a
+                    stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
+                transform: ""
+          - columnReference:
+              columnCounter: 141c7df6-56f0-48f3-b0f1-5743e5bade69
+              stepCounter: 4682c078-e647-4d45-942b-2548037f9ede
+            dataType: VARCHAR(16777216)
+            description: Data originators notes (English)
+            hashColumns: []
+            hashDetails: null
+            name: NOTE_EN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fb72c1fa-5a8f-4614-bd99-f65d7cc3a369
+                    stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
+                transform: ""
+          - columnReference:
+              columnCounter: 18d64465-4ff6-47a6-a765-3d9c484e9479
+              stepCounter: 4682c078-e647-4d45-942b-2548037f9ede
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LAST_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 45fa26cc-7e79-4053-bf54-fa1967a2dd61
+                    stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
+                transform: ""
+          - columnReference:
+              columnCounter: 32b81f8d-63f0-4f6d-b779-88b115f04b1e
+              stepCounter: 4682c078-e647-4d45-942b-2548037f9ede
+            dataType: BOOLEAN
+            description: New data in last import
+            hashColumns: []
+            hashDetails: null
+            name: LAST_REPORTED_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7aed6b5c-429f-475c-a278-a76d9284653c
+                    stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
+                transform: ""
+          - columnReference:
+              columnCounter: d263506f-467f-4f0d-a374-a87b484741c9
+              stepCounter: 4682c078-e647-4d45-942b-2548037f9ede
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6258927f-d3ab-45eb-b630-8b32296b6335
+                    stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
+                transform: ""
+          - columnReference:
+              columnCounter: e671a7b2-5e9b-4745-abb3-376123252cfe
+              stepCounter: 4682c078-e647-4d45-942b-2548037f9ede
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 645b0394-478b-4a60-b6a4-885deddf8fb3
+                    stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
+                transform: ""
+          - columnReference:
+              columnCounter: 399ba108-24a3-4202-840d-e1613109a1eb
+              stepCounter: 4682c078-e647-4d45-942b-2548037f9ede
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 36e7720b-2d5b-43b2-838a-0d9fca79ad07
+                    stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
+                transform: ""
+          - columnReference:
+              columnCounter: 43cd814b-2d19-48ad-93c2-2121d1c3b6c8
+              stepCounter: 4682c078-e647-4d45-942b-2548037f9ede
+            config:
+              is_Link_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LNK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d06582f0-f5d0-45ae-bbbc-7404d6b99961
+                    stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_PCM_DPS_COVID19_DETAILS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_PCM_DPS_COVID19_DETAILS') }} "DVSTG_PCM_DPS_COVID19_DETAILS"
+            name: LINK_PCM_DPS_COVID19_DETAILS
+            noLinkRefs: []
+      name: LINK_PCM_DPS_COVID19_DETAILS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::7
+      type: sql
+    stepCounter: 4682c078-e647-4d45-942b-2548037f9ede

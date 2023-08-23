@@ -1,0 +1,175 @@
+steps:
+  LINK_AW_PRODUCTLISTPRICEHISTORY-9a6fde87-0297-403e-aa93-375d2b4c97d0:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: d6848950-990a-45d0-ac9f-c071b7ae2f48
+              stepCounter: 9a6fde87-0297-403e-aa93-375d2b4c97d0
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_PRODUCTLISTPRICEHISTORY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0638b576-8b58-4443-8846-9b32e214963b
+                    stepCounter: cee3d2ac-6ac9-4b22-9327-6a4012001e38
+                transform: ""
+          - columnReference:
+              columnCounter: 60ee5ed9-3dd8-4eb8-be68-a9b13a571117
+              stepCounter: 9a6fde87-0297-403e-aa93-375d2b4c97d0
+            dataType: NUMBER(38,0)
+            description: Product identification number. Foreign key to Product.ProductID
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCTID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 72c29f44-8d59-43c4-af74-ad6265cacb37
+                    stepCounter: cee3d2ac-6ac9-4b22-9327-6a4012001e38
+                transform: ""
+          - columnReference:
+              columnCounter: 58bef4a8-35b4-49a0-9f72-19ed5a9f0472
+              stepCounter: 9a6fde87-0297-403e-aa93-375d2b4c97d0
+            dataType: TIMESTAMP_NTZ(9)
+            description: List price start date.
+            hashColumns: []
+            hashDetails: null
+            name: STARTDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6d671bd0-6dee-4cd6-a79a-364b9075f488
+                    stepCounter: cee3d2ac-6ac9-4b22-9327-6a4012001e38
+                transform: ""
+          - columnReference:
+              columnCounter: 043decc5-3d94-4ddd-9daa-17abb00501e6
+              stepCounter: 9a6fde87-0297-403e-aa93-375d2b4c97d0
+            dataType: VARCHAR(16777216)
+            description: List price end date
+            hashColumns: []
+            hashDetails: null
+            name: ENDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5de688c5-19ca-4e22-9f73-031b32d55853
+                    stepCounter: cee3d2ac-6ac9-4b22-9327-6a4012001e38
+                transform: ""
+          - columnReference:
+              columnCounter: bda7d8d6-7d0f-4b87-a7f3-9ac04658a15f
+              stepCounter: 9a6fde87-0297-403e-aa93-375d2b4c97d0
+            dataType: NUMBER(19,4)
+            description: Product list price.
+            hashColumns: []
+            hashDetails: null
+            name: LISTPRICE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ff933777-cc88-41ff-be7d-b83e24d201f5
+                    stepCounter: cee3d2ac-6ac9-4b22-9327-6a4012001e38
+                transform: ""
+          - columnReference:
+              columnCounter: dad4a8ba-583d-4084-9374-359cd2ba9598
+              stepCounter: 9a6fde87-0297-403e-aa93-375d2b4c97d0
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            hashColumns: []
+            hashDetails: null
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: dd897a8b-6b51-4df6-be69-47f402d510e7
+                    stepCounter: cee3d2ac-6ac9-4b22-9327-6a4012001e38
+                transform: ""
+          - columnReference:
+              columnCounter: 4cda6972-f91d-45bb-8ca0-a07ed7385dc3
+              stepCounter: 9a6fde87-0297-403e-aa93-375d2b4c97d0
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1846bbb4-ffd4-4b9e-8f4d-cd69b944ff18
+                    stepCounter: cee3d2ac-6ac9-4b22-9327-6a4012001e38
+                transform: ""
+          - columnReference:
+              columnCounter: 9c57613b-f82c-4f4d-bc00-e5db4afbfbfc
+              stepCounter: 9a6fde87-0297-403e-aa93-375d2b4c97d0
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 460ef0e7-e6db-478f-91b6-a5ad9280dcbc
+                    stepCounter: cee3d2ac-6ac9-4b22-9327-6a4012001e38
+                transform: ""
+          - columnReference:
+              columnCounter: 69d139e2-11c6-45aa-9ce6-27386e68d25a
+              stepCounter: 9a6fde87-0297-403e-aa93-375d2b4c97d0
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 51870e3a-0071-4a17-ab3a-9fadc08a7a54
+                    stepCounter: cee3d2ac-6ac9-4b22-9327-6a4012001e38
+                transform: ""
+          - columnReference:
+              columnCounter: fe21ff67-e23e-4386-8dd8-a338bb4ce415
+              stepCounter: 9a6fde87-0297-403e-aa93-375d2b4c97d0
+            config:
+              is_Link_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LNK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e1ada453-fb4a-40ed-87ed-648a51c9a975
+                    stepCounter: cee3d2ac-6ac9-4b22-9327-6a4012001e38
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_PRODUCTLISTPRICEHISTORY
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_PRODUCTLISTPRICEHISTORY') }} "DVSTG_AW_PRODUCTLISTPRICEHISTORY"
+            name: LINK_AW_PRODUCTLISTPRICEHISTORY
+            noLinkRefs: []
+      name: LINK_AW_PRODUCTLISTPRICEHISTORY
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::7
+      type: sql
+    stepCounter: 9a6fde87-0297-403e-aa93-375d2b4c97d0

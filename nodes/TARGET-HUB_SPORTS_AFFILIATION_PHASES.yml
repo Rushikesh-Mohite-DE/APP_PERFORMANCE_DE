@@ -1,0 +1,147 @@
+steps:
+  HUB_SPORTS_AFFILIATION_PHASES-cc233973-2230-46de-af93-3e5fa743b904:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: e264b482-575d-49f0-bd9e-d5632f489a15
+              stepCounter: cc233973-2230-46de-af93-3e5fa743b904
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_AFFILIATION_PHASES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 35b602e7-c1d1-49d5-9bee-37b2573d7b41
+                    stepCounter: 68045a37-c5f2-49ce-b8fe-f993527aaff7
+                transform: ""
+          - columnReference:
+              columnCounter: ac5300c2-1c40-4edb-a559-3468aeece0d7
+              stepCounter: cc233973-2230-46de-af93-3e5fa743b904
+            dataType: VARCHAR(32)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: aaccd78a-5739-4d8b-9ece-33a767a4c2ca
+                    stepCounter: 68045a37-c5f2-49ce-b8fe-f993527aaff7
+                transform: ""
+          - columnReference:
+              columnCounter: 06c4eba2-e551-4dfd-a164-b004345565e1
+              stepCounter: cc233973-2230-46de-af93-3e5fa743b904
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: AFFILIATION_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6114a7fa-7b2b-4ca1-9d54-082405955af4
+                    stepCounter: 68045a37-c5f2-49ce-b8fe-f993527aaff7
+                transform: ""
+          - columnReference:
+              columnCounter: c82a9d61-03e0-423d-b60f-c4c7bc021bd2
+              stepCounter: cc233973-2230-46de-af93-3e5fa743b904
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ANCESTOR_AFFILIATION_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 839a0122-37a5-4142-a3b7-c493ccc45c62
+                    stepCounter: 68045a37-c5f2-49ce-b8fe-f993527aaff7
+                transform: ""
+          - columnReference:
+              columnCounter: fa5f8413-b11e-437f-9765-f390bffda98c
+              stepCounter: cc233973-2230-46de-af93-3e5fa743b904
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: START_SEASON_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7705fe55-5922-4e5f-bec8-01f62d6bb6eb
+                    stepCounter: 68045a37-c5f2-49ce-b8fe-f993527aaff7
+                transform: ""
+          - columnReference:
+              columnCounter: 2255d852-bc1a-4d6d-8912-def9f825f417
+              stepCounter: cc233973-2230-46de-af93-3e5fa743b904
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: END_SEASON_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 91bd2390-946c-4cea-9939-74aa526f8670
+                    stepCounter: 68045a37-c5f2-49ce-b8fe-f993527aaff7
+                transform: ""
+          - columnReference:
+              columnCounter: 90091f88-a53a-42cf-9b15-aa84a7bd0e9d
+              stepCounter: cc233973-2230-46de-af93-3e5fa743b904
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e51e0713-5d08-4026-8206-69f253fc6703
+                    stepCounter: 68045a37-c5f2-49ce-b8fe-f993527aaff7
+                transform: ""
+          - columnReference:
+              columnCounter: 226c7628-9bed-462d-a14f-0c61cc1058e2
+              stepCounter: cc233973-2230-46de-af93-3e5fa743b904
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 32a8883a-0b37-4bc5-b3ad-b7492f669a90
+                    stepCounter: 68045a37-c5f2-49ce-b8fe-f993527aaff7
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SPORTS_AFFILIATION_PHASES
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SPORTS_AFFILIATION_PHASES') }} "DVSTG_SPORTS_AFFILIATION_PHASES"
+            name: HUB_SPORTS_AFFILIATION_PHASES
+            noLinkRefs: []
+      name: HUB_SPORTS_AFFILIATION_PHASES
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: cc233973-2230-46de-af93-3e5fa743b904

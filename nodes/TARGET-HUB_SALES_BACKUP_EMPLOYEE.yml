@@ -1,0 +1,105 @@
+steps:
+  HUB_SALES_BACKUP_EMPLOYEE-e06cb400-c629-4afa-b23e-e88653996de3:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 96662d8c-6b51-4ce2-a22e-d81fb9626d63
+              stepCounter: e06cb400-c629-4afa-b23e-e88653996de3
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_SALES_BACKUP_EMPLOYEE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5822cbfd-0944-43be-a35c-6c4a5d46acf6
+                    stepCounter: 570f220c-e87e-4779-9c58-ec0dfeb59645
+                transform: ""
+          - columnReference:
+              columnCounter: 216a8b10-72c8-4689-955c-a3339193e35f
+              stepCounter: e06cb400-c629-4afa-b23e-e88653996de3
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: EMPLOYEE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a9fcfd2c-6f71-4a7c-86e5-0b46abee0127
+                    stepCounter: 570f220c-e87e-4779-9c58-ec0dfeb59645
+                transform: ""
+          - columnReference:
+              columnCounter: 9c4aca50-d5f8-421a-a827-ba0c42bbc079
+              stepCounter: e06cb400-c629-4afa-b23e-e88653996de3
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b3ff0435-0dae-4f80-995e-74123476d1de
+                    stepCounter: 570f220c-e87e-4779-9c58-ec0dfeb59645
+                transform: ""
+          - columnReference:
+              columnCounter: 66b60850-0afc-46c5-ad84-88a8737e08af
+              stepCounter: e06cb400-c629-4afa-b23e-e88653996de3
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 666bab9c-6738-4d7c-a310-b4d4adb1e0fb
+                    stepCounter: 570f220c-e87e-4779-9c58-ec0dfeb59645
+                transform: ""
+          - columnReference:
+              columnCounter: e2c00d54-03d6-4291-9487-c9dca391f355
+              stepCounter: e06cb400-c629-4afa-b23e-e88653996de3
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 073a5db0-6c71-40f8-95d0-2144b5c15b1c
+                    stepCounter: 570f220c-e87e-4779-9c58-ec0dfeb59645
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SALES_BACKUP_EMPLOYEE
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SALES_BACKUP_EMPLOYEE') }} "DVSTG_SALES_BACKUP_EMPLOYEE"
+            name: HUB_SALES_BACKUP_EMPLOYEE
+            noLinkRefs: []
+      name: HUB_SALES_BACKUP_EMPLOYEE
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: e06cb400-c629-4afa-b23e-e88653996de3

@@ -1,0 +1,191 @@
+steps:
+  SATV0_AW_SALESPERSON-5cd40e21-d94c-4cbe-8406-62a9cf01e51e:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 2005536e-db54-49c8-ae86-a4951e9c5734
+              stepCounter: 5cd40e21-d94c-4cbe-8406-62a9cf01e51e
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_SALESPERSON
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5b4bbd87-305a-4392-b5a8-3dd475cac2e9
+                    stepCounter: 8a09aa10-c627-42e7-8740-bf39e846490e
+                transform: ""
+          - columnReference:
+              columnCounter: 2e5175e1-2f0a-49c9-a34c-f47c129f0a58
+              stepCounter: 5cd40e21-d94c-4cbe-8406-62a9cf01e51e
+            dataType: VARCHAR(16777216)
+            description: Projected yearly sales.
+            hashColumns: []
+            hashDetails: null
+            name: SALESQUOTA
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9be694cf-883f-4c66-bbad-6eb59ba6d044
+                    stepCounter: 8a09aa10-c627-42e7-8740-bf39e846490e
+                transform: ""
+          - columnReference:
+              columnCounter: 6bca92ac-3d81-492b-a460-502b6162f24a
+              stepCounter: 5cd40e21-d94c-4cbe-8406-62a9cf01e51e
+            dataType: NUMBER(19,4)
+            description: Bonus due if quota is met.
+            hashColumns: []
+            hashDetails: null
+            name: BONUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e056f534-3bed-48a9-a092-b7bb32e63996
+                    stepCounter: 8a09aa10-c627-42e7-8740-bf39e846490e
+                transform: ""
+          - columnReference:
+              columnCounter: dfa940db-82e7-4e5f-bbef-054055cd8f16
+              stepCounter: 5cd40e21-d94c-4cbe-8406-62a9cf01e51e
+            dataType: NUMBER(10,4)
+            description: Commision percent received per sale.
+            hashColumns: []
+            hashDetails: null
+            name: COMMISSIONPCT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4d3d4dbd-4021-4cfe-b482-ef70688df220
+                    stepCounter: 8a09aa10-c627-42e7-8740-bf39e846490e
+                transform: ""
+          - columnReference:
+              columnCounter: e667a1ff-f9be-4d0a-a56d-2f7fef22536a
+              stepCounter: 5cd40e21-d94c-4cbe-8406-62a9cf01e51e
+            dataType: NUMBER(19,4)
+            description: Sales total year to date.
+            hashColumns: []
+            hashDetails: null
+            name: SALESYTD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 333e712e-e26c-46a9-9e91-322f8bf3904e
+                    stepCounter: 8a09aa10-c627-42e7-8740-bf39e846490e
+                transform: ""
+          - columnReference:
+              columnCounter: 5baba9a4-13b1-4731-a3f1-28f010c59671
+              stepCounter: 5cd40e21-d94c-4cbe-8406-62a9cf01e51e
+            dataType: NUMBER(19,4)
+            description: Sales total of previous year.
+            hashColumns: []
+            hashDetails: null
+            name: SALESLASTYEAR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1cf241c6-5cb3-4ecf-a5c7-aef17e6af8d3
+                    stepCounter: 8a09aa10-c627-42e7-8740-bf39e846490e
+                transform: ""
+          - columnReference:
+              columnCounter: 7fe39be3-58ba-45d2-81bb-4e54bb51108f
+              stepCounter: 5cd40e21-d94c-4cbe-8406-62a9cf01e51e
+            dataType: VARCHAR(16777216)
+            description: ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            hashColumns: []
+            hashDetails: null
+            name: ROWGUID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 49b3e3e4-e935-43e5-a75d-6227c29c865f
+                    stepCounter: 8a09aa10-c627-42e7-8740-bf39e846490e
+                transform: ""
+          - columnReference:
+              columnCounter: 11af1dca-edd9-4f37-936f-147fce37a6c8
+              stepCounter: 5cd40e21-d94c-4cbe-8406-62a9cf01e51e
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            hashColumns: []
+            hashDetails: null
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 40dc003c-a1bd-4f6e-bcae-2c67c5287a2e
+                    stepCounter: 8a09aa10-c627-42e7-8740-bf39e846490e
+                transform: ""
+          - columnReference:
+              columnCounter: ba62edac-5bdc-4d3f-ba0e-29e4424adcc6
+              stepCounter: 5cd40e21-d94c-4cbe-8406-62a9cf01e51e
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6d15c624-78bb-43b5-9a39-146cd388dc8d
+                    stepCounter: 8a09aa10-c627-42e7-8740-bf39e846490e
+                transform: ""
+          - columnReference:
+              columnCounter: 15a84ca4-4f8c-4efe-a90b-4ed2158f313c
+              stepCounter: 5cd40e21-d94c-4cbe-8406-62a9cf01e51e
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bedc8677-5f44-4e1e-af27-085f7271122e
+                    stepCounter: 8a09aa10-c627-42e7-8740-bf39e846490e
+                transform: ""
+          - columnReference:
+              columnCounter: 7a44bb00-e640-46d2-98af-6bdc0bf3d0b2
+              stepCounter: 5cd40e21-d94c-4cbe-8406-62a9cf01e51e
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 27bf1da5-b5c5-4c1e-b25b-8b8debaf3e15
+                    stepCounter: 8a09aa10-c627-42e7-8740-bf39e846490e
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_SALESPERSON
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_SALESPERSON') }} "DVSTG_AW_SALESPERSON"
+            name: SATV0_AW_SALESPERSON
+            noLinkRefs: []
+      name: SATV0_AW_SALESPERSON
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: 5cd40e21-d94c-4cbe-8406-62a9cf01e51e

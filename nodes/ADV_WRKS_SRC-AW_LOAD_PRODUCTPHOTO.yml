@@ -1,0 +1,109 @@
+steps:
+  AW_LOAD_PRODUCTPHOTO-3e3489dd-899a-42d6-8e86-b9968f4c4cd5:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: ADV_WRKS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 789b8416-d7a0-4987-8914-5fec7082050d
+              stepCounter: 3e3489dd-899a-42d6-8e86-b9968f4c4cd5
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Primary key for ProductPhoto records.
+            name: PRODUCTPHOTOID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 75583b9f-35c5-49fc-ade7-74e7006331ba
+              stepCounter: 3e3489dd-899a-42d6-8e86-b9968f4c4cd5
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: Small image of the product.
+            name: THUMBNAILPHOTO
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2a5054a6-63f6-456f-a877-fac5c3e9212a
+              stepCounter: 3e3489dd-899a-42d6-8e86-b9968f4c4cd5
+            config: {}
+            dataType: VARCHAR(50)
+            defaultValue: ""
+            description: Small image file name.
+            name: THUMBNAILPHOTOFILENAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e320f0f0-f76f-4786-81e2-92ab2e7f83e8
+              stepCounter: 3e3489dd-899a-42d6-8e86-b9968f4c4cd5
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: Large image of the product.
+            name: LARGEPHOTO
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5211ee6a-c36d-4be7-9042-b16bd5113c2f
+              stepCounter: 3e3489dd-899a-42d6-8e86-b9968f4c4cd5
+            config: {}
+            dataType: VARCHAR(50)
+            defaultValue: ""
+            description: Large image file name.
+            name: LARGEPHOTOFILENAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7b6ff659-0f6b-4889-9dd2-13e1ab1aeebf
+              stepCounter: 3e3489dd-899a-42d6-8e86-b9968f4c4cd5
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_PRODUCTPHOTO') }}
+      name: AW_LOAD_PRODUCTPHOTO
+      schema: ""
+      sqlType: Source
+      table: AW_LOAD_PRODUCTPHOTO
+      type: sourceInput
+    stepCounter: 3e3489dd-899a-42d6-8e86-b9968f4c4cd5

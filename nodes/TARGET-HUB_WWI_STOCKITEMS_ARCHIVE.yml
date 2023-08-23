@@ -1,0 +1,147 @@
+steps:
+  HUB_WWI_STOCKITEMS_ARCHIVE-fab5bd9e-fc40-432d-8219-1da22c070f93:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 0d42df58-af25-467f-8f91-3971a3e982f4
+              stepCounter: fab5bd9e-fc40-432d-8219-1da22c070f93
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_STOCKITEMS_ARCHIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f00b0586-4972-4ed2-ad49-e1572047be30
+                    stepCounter: 4c7d0ff4-3928-4368-8ef2-70a2c40dd7ad
+                transform: ""
+          - columnReference:
+              columnCounter: 2f333a5d-5c57-4dd7-be33-0453a121b6bb
+              stepCounter: fab5bd9e-fc40-432d-8219-1da22c070f93
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: STOCKITEMID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f5d44738-b577-4747-9849-4a018e04a03f
+                    stepCounter: 4c7d0ff4-3928-4368-8ef2-70a2c40dd7ad
+                transform: ""
+          - columnReference:
+              columnCounter: 78fb39d0-d659-43db-b967-a99cf3e388a5
+              stepCounter: fab5bd9e-fc40-432d-8219-1da22c070f93
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SUPPLIERID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f1c5060b-9f07-460e-9b01-c9af9d18a9e7
+                    stepCounter: 4c7d0ff4-3928-4368-8ef2-70a2c40dd7ad
+                transform: ""
+          - columnReference:
+              columnCounter: d3a7c746-9395-4333-b356-1501897a23c6
+              stepCounter: fab5bd9e-fc40-432d-8219-1da22c070f93
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: COLORID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e2ff6244-432b-40d6-b4fd-c5f4100672cb
+                    stepCounter: 4c7d0ff4-3928-4368-8ef2-70a2c40dd7ad
+                transform: ""
+          - columnReference:
+              columnCounter: 2ef0ce37-b942-4fa5-8a20-aa5e538bc1ae
+              stepCounter: fab5bd9e-fc40-432d-8219-1da22c070f93
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: UNITPACKAGEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e88fbe4b-4b03-4060-bab5-6bb7c722aee4
+                    stepCounter: 4c7d0ff4-3928-4368-8ef2-70a2c40dd7ad
+                transform: ""
+          - columnReference:
+              columnCounter: 59dcd70b-42fc-4372-be0f-a4b0f8af12af
+              stepCounter: fab5bd9e-fc40-432d-8219-1da22c070f93
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: OUTERPACKAGEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2ef929c0-2596-4582-8c8a-d3d514fbd303
+                    stepCounter: 4c7d0ff4-3928-4368-8ef2-70a2c40dd7ad
+                transform: ""
+          - columnReference:
+              columnCounter: 1ab22ed0-0fcd-4558-ab4c-48f861175fb0
+              stepCounter: fab5bd9e-fc40-432d-8219-1da22c070f93
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 60b1543e-82ea-4bfa-9d6d-d56fad8dd65d
+                    stepCounter: 4c7d0ff4-3928-4368-8ef2-70a2c40dd7ad
+                transform: ""
+          - columnReference:
+              columnCounter: b5d2df94-0d30-4031-92eb-ab4be9ad3ef8
+              stepCounter: fab5bd9e-fc40-432d-8219-1da22c070f93
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 67e416ef-04a6-4f23-b8a5-20ee95763126
+                    stepCounter: 4c7d0ff4-3928-4368-8ef2-70a2c40dd7ad
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_WWI_STOCKITEMS_ARCHIVE
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_WWI_STOCKITEMS_ARCHIVE') }} "DVSTG_WWI_STOCKITEMS_ARCHIVE"
+            name: HUB_WWI_STOCKITEMS_ARCHIVE
+            noLinkRefs: []
+      name: HUB_WWI_STOCKITEMS_ARCHIVE
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: fab5bd9e-fc40-432d-8219-1da22c070f93

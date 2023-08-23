@@ -1,0 +1,119 @@
+steps:
+  HUB_WWI_SYSTEMPARAMETERS-ce084b6d-c14f-4da2-ac6e-8f8084f2db9e:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: f7caf175-a351-44d1-b1cb-c2c679db01e7
+              stepCounter: ce084b6d-c14f-4da2-ac6e-8f8084f2db9e
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_SYSTEMPARAMETERS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c6ce6dba-c763-46fd-a9d9-d0bf266f78d5
+                    stepCounter: eba4cd77-ebde-4d6e-8413-3561b02810a8
+                transform: ""
+          - columnReference:
+              columnCounter: 0f26bd79-b97b-4a80-afbe-6814f11381af
+              stepCounter: ce084b6d-c14f-4da2-ac6e-8f8084f2db9e
+            dataType: NUMBER(38,0)
+            description: Numeric ID used for row holding system parameters
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEMPARAMETERID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a85e61df-5d8e-402e-beae-b4d3b19346fc
+                    stepCounter: eba4cd77-ebde-4d6e-8413-3561b02810a8
+                transform: ""
+          - columnReference:
+              columnCounter: e40492b0-70c9-4e33-9f31-4927160e2fe3
+              stepCounter: ce084b6d-c14f-4da2-ac6e-8f8084f2db9e
+            dataType: NUMBER(38,0)
+            description: ID of the city for this address
+            hashColumns: []
+            hashDetails: null
+            name: DELIVERYCITYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 166cbd38-820a-49b4-bcc4-3d28fbe4a29e
+                    stepCounter: eba4cd77-ebde-4d6e-8413-3561b02810a8
+                transform: ""
+          - columnReference:
+              columnCounter: 775f3fc6-17e9-42a9-a026-8b5bf49828ef
+              stepCounter: ce084b6d-c14f-4da2-ac6e-8f8084f2db9e
+            dataType: NUMBER(38,0)
+            description: ID of the city for this postaladdress
+            hashColumns: []
+            hashDetails: null
+            name: POSTALCITYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ae446ae8-4fb7-427e-92af-9448a0dd8d7a
+                    stepCounter: eba4cd77-ebde-4d6e-8413-3561b02810a8
+                transform: ""
+          - columnReference:
+              columnCounter: fab42c52-7575-4f45-b445-400e529682f8
+              stepCounter: ce084b6d-c14f-4da2-ac6e-8f8084f2db9e
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ac6a9f83-588b-45b7-ade1-128c905dd161
+                    stepCounter: eba4cd77-ebde-4d6e-8413-3561b02810a8
+                transform: ""
+          - columnReference:
+              columnCounter: a1ef2a97-0f75-4418-bdba-b648ab51ab08
+              stepCounter: ce084b6d-c14f-4da2-ac6e-8f8084f2db9e
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1cfadb0c-217f-461b-bdec-8ea0ffd05c5a
+                    stepCounter: eba4cd77-ebde-4d6e-8413-3561b02810a8
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_WWI_SYSTEMPARAMETERS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_WWI_SYSTEMPARAMETERS') }} "DVSTG_WWI_SYSTEMPARAMETERS"
+            name: HUB_WWI_SYSTEMPARAMETERS
+            noLinkRefs: []
+      name: HUB_WWI_SYSTEMPARAMETERS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: ce084b6d-c14f-4da2-ac6e-8f8084f2db9e

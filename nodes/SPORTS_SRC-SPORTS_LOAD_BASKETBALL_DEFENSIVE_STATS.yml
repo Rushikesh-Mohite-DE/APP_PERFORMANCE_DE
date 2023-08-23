@@ -1,0 +1,94 @@
+steps:
+  SPORTS_LOAD_BASKETBALL_DEFENSIVE_STATS-d23c971d-74a6-4c47-8701-8325b3de51ca:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SPORTS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 31c0852c-c2f2-4fb7-9603-9835ad3bacaf
+              stepCounter: d23c971d-74a6-4c47-8701-8325b3de51ca
+            config: {}
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            name: ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 80e37ec0-e386-41e9-8dee-bf96bf1c5c0e
+              stepCounter: d23c971d-74a6-4c47-8701-8325b3de51ca
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: STEALS_TOTAL
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 16e90219-3457-4577-9bfe-5cb9dd980979
+              stepCounter: d23c971d-74a6-4c47-8701-8325b3de51ca
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: STEALS_PER_GAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 858d0bac-95bd-4d47-ad09-3bc90c175b83
+              stepCounter: d23c971d-74a6-4c47-8701-8325b3de51ca
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: BLOCKS_TOTAL
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 84c11071-6804-465d-8840-ed2ddc41eb57
+              stepCounter: d23c971d-74a6-4c47-8701-8325b3de51ca
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: BLOCKS_PER_GAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SPORTS_SRC', 'SPORTS_LOAD_BASKETBALL_DEFENSIVE_STATS') }}
+      name: SPORTS_LOAD_BASKETBALL_DEFENSIVE_STATS
+      schema: ""
+      sqlType: Source
+      table: SPORTS_LOAD_BASKETBALL_DEFENSIVE_STATS
+      type: sourceInput
+    stepCounter: d23c971d-74a6-4c47-8701-8325b3de51ca

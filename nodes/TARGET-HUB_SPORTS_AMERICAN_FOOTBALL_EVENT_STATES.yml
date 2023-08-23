@@ -1,0 +1,119 @@
+steps:
+  HUB_SPORTS_AMERICAN_FOOTBALL_EVENT_STATES-58c6c89e-5b01-4d9c-829b-af53cd47f84e:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 64237814-0506-4c4c-bba9-0220d948760d
+              stepCounter: 58c6c89e-5b01-4d9c-829b-af53cd47f84e
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_EVENT_STATES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 449e31af-9047-4969-a6a0-3215622e9634
+                    stepCounter: 642c4ecb-cff4-474d-a026-c10db3d181ea
+                transform: ""
+          - columnReference:
+              columnCounter: b4f8db46-400e-4692-9360-111853c45a41
+              stepCounter: 58c6c89e-5b01-4d9c-829b-af53cd47f84e
+            dataType: VARCHAR(32)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a82248cf-2b20-48e1-8fd7-71d542471ad9
+                    stepCounter: 642c4ecb-cff4-474d-a026-c10db3d181ea
+                transform: ""
+          - columnReference:
+              columnCounter: d2e29b52-f607-4702-8bba-d62239d5c578
+              stepCounter: 58c6c89e-5b01-4d9c-829b-af53cd47f84e
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: EVENT_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 880819c3-3634-41bc-9768-46fc9798d4ac
+                    stepCounter: 642c4ecb-cff4-474d-a026-c10db3d181ea
+                transform: ""
+          - columnReference:
+              columnCounter: f91e788e-0ddd-4c5b-8a94-ec9d27dafbdc
+              stepCounter: 58c6c89e-5b01-4d9c-829b-af53cd47f84e
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: TEAM_IN_POSSESSION_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3f70c17c-d121-4fcd-8388-b073ce5a7ab7
+                    stepCounter: 642c4ecb-cff4-474d-a026-c10db3d181ea
+                transform: ""
+          - columnReference:
+              columnCounter: 564a699a-edee-4bd9-811e-c3827057e1e2
+              stepCounter: 58c6c89e-5b01-4d9c-829b-af53cd47f84e
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f50ea58c-5da1-4b3c-b152-477231c10e86
+                    stepCounter: 642c4ecb-cff4-474d-a026-c10db3d181ea
+                transform: ""
+          - columnReference:
+              columnCounter: 064b55c5-dc57-4c36-8e35-63ade8bf971f
+              stepCounter: 58c6c89e-5b01-4d9c-829b-af53cd47f84e
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bbeaa312-7c59-47fc-892a-403fc8e3d4c8
+                    stepCounter: 642c4ecb-cff4-474d-a026-c10db3d181ea
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SPORTS_AMERICAN_FOOTBALL_EVENT_STATES
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SPORTS_AMERICAN_FOOTBALL_EVENT_STATES') }} "DVSTG_SPORTS_AMERICAN_FOOTBALL_EVENT_STATES"
+            name: HUB_SPORTS_AMERICAN_FOOTBALL_EVENT_STATES
+            noLinkRefs: []
+      name: HUB_SPORTS_AMERICAN_FOOTBALL_EVENT_STATES
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 58c6c89e-5b01-4d9c-829b-af53cd47f84e

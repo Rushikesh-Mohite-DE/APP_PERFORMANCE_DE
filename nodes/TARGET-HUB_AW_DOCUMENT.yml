@@ -1,0 +1,91 @@
+steps:
+  HUB_AW_DOCUMENT-43938d89-580c-45e6-a954-127e17521c56:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 0f497c28-425e-418b-a1ba-9608f17d5b46
+              stepCounter: 43938d89-580c-45e6-a954-127e17521c56
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_DOCUMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 18939d68-273d-4219-8158-3894e6d70bc6
+                    stepCounter: 66af7187-ab44-4dc8-861d-337afc030f1e
+                transform: ""
+          - columnReference:
+              columnCounter: 49a1136e-c503-451c-b196-285ae36cb508
+              stepCounter: 43938d89-580c-45e6-a954-127e17521c56
+            dataType: VARCHAR(16777216)
+            description: Primary key for Document records.
+            hashColumns: []
+            hashDetails: null
+            name: DOCUMENTNODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0fce4a00-e7a0-4cd2-89ad-87af5f36637a
+                    stepCounter: 66af7187-ab44-4dc8-861d-337afc030f1e
+                transform: ""
+          - columnReference:
+              columnCounter: 57b3656b-754d-47ac-a4cc-fc242edbd07b
+              stepCounter: 43938d89-580c-45e6-a954-127e17521c56
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 56a85a09-1b88-43e2-a687-20d2ac034db9
+                    stepCounter: 66af7187-ab44-4dc8-861d-337afc030f1e
+                transform: ""
+          - columnReference:
+              columnCounter: 1c256263-27cd-4581-ba3a-d7858d5c954c
+              stepCounter: 43938d89-580c-45e6-a954-127e17521c56
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2bae1224-ee2f-43d6-b2b7-03bb65c66470
+                    stepCounter: 66af7187-ab44-4dc8-861d-337afc030f1e
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_DOCUMENT
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_DOCUMENT') }} "DVSTG_AW_DOCUMENT"
+            name: HUB_AW_DOCUMENT
+            noLinkRefs: []
+      name: HUB_AW_DOCUMENT
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 43938d89-580c-45e6-a954-127e17521c56

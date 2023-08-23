@@ -1,0 +1,94 @@
+steps:
+  NW_LOAD_ORDER_DETAILS-bd78bfd7-ead0-4379-937c-c0a22f019c34:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: NORTHWIND_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a3d45a6d-a066-441f-9bf8-dd042920c162
+              stepCounter: bd78bfd7-ead0-4379-937c-c0a22f019c34
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: ORDERID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 616e0d43-fdab-4e83-a75a-6cb6d925f7e9
+              stepCounter: bd78bfd7-ead0-4379-937c-c0a22f019c34
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: PRODUCTID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2ced0921-fb68-431b-bcc3-9f269d367154
+              stepCounter: bd78bfd7-ead0-4379-937c-c0a22f019c34
+            config: {}
+            dataType: NUMBER(19,4)
+            defaultValue: ""
+            description: ""
+            name: UNITPRICE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5dd1947b-389a-4619-bbfc-2fb9505e899e
+              stepCounter: bd78bfd7-ead0-4379-937c-c0a22f019c34
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: QUANTITY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 23d76069-7024-4eb1-9a92-50fd1ccb10e7
+              stepCounter: bd78bfd7-ead0-4379-937c-c0a22f019c34
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: DISCOUNT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('NORTHWIND_SRC', 'NW_LOAD_ORDER_DETAILS') }}
+      name: NW_LOAD_ORDER_DETAILS
+      schema: ""
+      sqlType: Source
+      table: NW_LOAD_ORDER_DETAILS
+      type: sourceInput
+    stepCounter: bd78bfd7-ead0-4379-937c-c0a22f019c34

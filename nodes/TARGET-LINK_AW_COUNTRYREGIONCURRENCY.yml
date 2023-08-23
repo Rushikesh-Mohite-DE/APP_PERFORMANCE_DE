@@ -1,0 +1,147 @@
+steps:
+  LINK_AW_COUNTRYREGIONCURRENCY-86f78f44-91de-4265-9624-b63d98012806:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 149644c8-f9d7-4777-b06d-573725479434
+              stepCounter: 86f78f44-91de-4265-9624-b63d98012806
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_COUNTRYREGIONCURRENCY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 15f218ac-52d8-4011-a470-c69d8664c99b
+                    stepCounter: 3215ee1c-9601-4213-88b3-85994ccc49fa
+                transform: ""
+          - columnReference:
+              columnCounter: 6489ccf5-97fd-4e5e-abc2-09273571e465
+              stepCounter: 86f78f44-91de-4265-9624-b63d98012806
+            dataType: VARCHAR(3)
+            description: ISO code for countries and regions. Foreign key to CountryRegion.CountryRegionCode.
+            hashColumns: []
+            hashDetails: null
+            name: COUNTRYREGIONCODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6701dfef-8186-4800-aec1-1bcbf1f2de11
+                    stepCounter: 3215ee1c-9601-4213-88b3-85994ccc49fa
+                transform: ""
+          - columnReference:
+              columnCounter: d8447efa-0223-4b1d-9a40-cd313de3d328
+              stepCounter: 86f78f44-91de-4265-9624-b63d98012806
+            dataType: VARCHAR(3)
+            description: ISO standard currency code. Foreign key to Currency.CurrencyCode.
+            hashColumns: []
+            hashDetails: null
+            name: CURRENCYCODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e5304421-e4fb-41d5-98bc-409820dffc84
+                    stepCounter: 3215ee1c-9601-4213-88b3-85994ccc49fa
+                transform: ""
+          - columnReference:
+              columnCounter: 72ebad29-47cd-4bf2-a2e0-bedd4925f3f9
+              stepCounter: 86f78f44-91de-4265-9624-b63d98012806
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            hashColumns: []
+            hashDetails: null
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 230062ff-4537-4577-80b2-8d1cb529c8db
+                    stepCounter: 3215ee1c-9601-4213-88b3-85994ccc49fa
+                transform: ""
+          - columnReference:
+              columnCounter: d86764de-ba49-4999-a687-910743afcf71
+              stepCounter: 86f78f44-91de-4265-9624-b63d98012806
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 24e093f4-d465-4939-9c43-ece94cb6e93a
+                    stepCounter: 3215ee1c-9601-4213-88b3-85994ccc49fa
+                transform: ""
+          - columnReference:
+              columnCounter: 5c650cf8-5bc0-4765-b4ce-b994c5f4bb13
+              stepCounter: 86f78f44-91de-4265-9624-b63d98012806
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7cfbe548-2de8-4e75-95d9-7559f9b70707
+                    stepCounter: 3215ee1c-9601-4213-88b3-85994ccc49fa
+                transform: ""
+          - columnReference:
+              columnCounter: 0426a549-5a53-449d-9fc8-5ccc30632b85
+              stepCounter: 86f78f44-91de-4265-9624-b63d98012806
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 279e294c-65c1-4fcd-8fe6-7387307542df
+                    stepCounter: 3215ee1c-9601-4213-88b3-85994ccc49fa
+                transform: ""
+          - columnReference:
+              columnCounter: 7c3f9810-4feb-4ef4-9c33-476ab196e81f
+              stepCounter: 86f78f44-91de-4265-9624-b63d98012806
+            config:
+              is_Link_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LNK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12898996-19eb-4dcd-8e97-cf3fdabaaeb2
+                    stepCounter: 3215ee1c-9601-4213-88b3-85994ccc49fa
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_COUNTRYREGIONCURRENCY
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_COUNTRYREGIONCURRENCY') }} "DVSTG_AW_COUNTRYREGIONCURRENCY"
+            name: LINK_AW_COUNTRYREGIONCURRENCY
+            noLinkRefs: []
+      name: LINK_AW_COUNTRYREGIONCURRENCY
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::7
+      type: sql
+    stepCounter: 86f78f44-91de-4265-9624-b63d98012806

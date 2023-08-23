@@ -1,0 +1,147 @@
+steps:
+  HUB_SPORTS_BASEBALL_ACTION_SUBSTITUTIONS-052290c1-3ef5-4dbc-9f64-2edfd3dec03e:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 14d39f17-68be-472c-9394-5fcde5bc30e3
+              stepCounter: 052290c1-3ef5-4dbc-9f64-2edfd3dec03e
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_ACTION_SUBSTITUTIONS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 84a09fa9-1b61-4b41-aae1-f795e928254f
+                    stepCounter: 15cd8b2e-1a21-4733-a260-e80e6fe6798f
+                transform: ""
+          - columnReference:
+              columnCounter: b861d132-9203-4281-b958-df065042b859
+              stepCounter: 052290c1-3ef5-4dbc-9f64-2edfd3dec03e
+            dataType: VARCHAR(32)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b6eb20fc-42d8-4768-9a17-42d29103c5f6
+                    stepCounter: 15cd8b2e-1a21-4733-a260-e80e6fe6798f
+                transform: ""
+          - columnReference:
+              columnCounter: 6b724277-a6e0-432e-ab0a-f8dfbeab4211
+              stepCounter: 052290c1-3ef5-4dbc-9f64-2edfd3dec03e
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: BASEBALL_EVENT_STATE_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: afe6efea-a6ca-4772-82a5-b764dda07a4f
+                    stepCounter: 15cd8b2e-1a21-4733-a260-e80e6fe6798f
+                transform: ""
+          - columnReference:
+              columnCounter: 6983dd85-1e43-48a3-ba7c-21788b45c05d
+              stepCounter: 052290c1-3ef5-4dbc-9f64-2edfd3dec03e
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PERSON_ORIGINAL_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8d572273-7717-434c-936d-016031c4cb65
+                    stepCounter: 15cd8b2e-1a21-4733-a260-e80e6fe6798f
+                transform: ""
+          - columnReference:
+              columnCounter: cbbbdd8c-f7be-4e02-8535-074599e611cc
+              stepCounter: 052290c1-3ef5-4dbc-9f64-2edfd3dec03e
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PERSON_ORIGINAL_POSITION_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 15a96da1-f485-47f1-a3f6-5d541e5cd9f6
+                    stepCounter: 15cd8b2e-1a21-4733-a260-e80e6fe6798f
+                transform: ""
+          - columnReference:
+              columnCounter: fd90b3ff-da10-4cf7-9980-c431ef39edf1
+              stepCounter: 052290c1-3ef5-4dbc-9f64-2edfd3dec03e
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PERSON_REPLACING_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: eb900b2f-1232-414a-a47c-012f570c3e1a
+                    stepCounter: 15cd8b2e-1a21-4733-a260-e80e6fe6798f
+                transform: ""
+          - columnReference:
+              columnCounter: 7aaab9a4-f3b2-4ca5-97b7-33649b9790be
+              stepCounter: 052290c1-3ef5-4dbc-9f64-2edfd3dec03e
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 320f042b-d26d-4821-bcd7-a4160182fcaf
+                    stepCounter: 15cd8b2e-1a21-4733-a260-e80e6fe6798f
+                transform: ""
+          - columnReference:
+              columnCounter: a5ba8270-fd90-4a9b-b3cc-3fba5466d915
+              stepCounter: 052290c1-3ef5-4dbc-9f64-2edfd3dec03e
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 74198009-e0a0-448f-bc05-a22a9aef966c
+                    stepCounter: 15cd8b2e-1a21-4733-a260-e80e6fe6798f
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SPORTS_BASEBALL_ACTION_SUBSTITUTIONS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SPORTS_BASEBALL_ACTION_SUBSTITUTIONS') }} "DVSTG_SPORTS_BASEBALL_ACTION_SUBSTITUTIONS"
+            name: HUB_SPORTS_BASEBALL_ACTION_SUBSTITUTIONS
+            noLinkRefs: []
+      name: HUB_SPORTS_BASEBALL_ACTION_SUBSTITUTIONS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 052290c1-3ef5-4dbc-9f64-2edfd3dec03e

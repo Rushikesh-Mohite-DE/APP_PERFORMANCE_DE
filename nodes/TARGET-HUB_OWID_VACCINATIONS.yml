@@ -1,0 +1,105 @@
+steps:
+  HUB_OWID_VACCINATIONS-ba4dc13c-86cc-4d88-88c8-4a21e8ffbf70:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 6af24af7-4c17-4c23-9a4a-16636cf50a67
+              stepCounter: ba4dc13c-86cc-4d88-88c8-4a21e8ffbf70
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_OWID_VACCINATIONS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 48dbe092-6beb-421d-8605-963e8a8d5c4a
+                    stepCounter: 6dbdfc8e-ca6d-4cd0-b99b-7db1c4b5bc29
+                transform: ""
+          - columnReference:
+              columnCounter: c2ff51b9-7600-4f9d-8bfd-b0dd33560859
+              stepCounter: ba4dc13c-86cc-4d88-88c8-4a21e8ffbf70
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: COUNTRY_REGION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6feec30e-bc67-41f5-b6d2-c9d93ddd4508
+                    stepCounter: 6dbdfc8e-ca6d-4cd0-b99b-7db1c4b5bc29
+                transform: ""
+          - columnReference:
+              columnCounter: f01c196e-4741-4c46-9b56-1d0b0ad63e90
+              stepCounter: ba4dc13c-86cc-4d88-88c8-4a21e8ffbf70
+            dataType: VARCHAR(2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ISO3166_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1435d401-98d4-401f-a04b-efed57b7d86a
+                    stepCounter: 6dbdfc8e-ca6d-4cd0-b99b-7db1c4b5bc29
+                transform: ""
+          - columnReference:
+              columnCounter: 16a8762d-6693-41e8-b87b-993fc379fde2
+              stepCounter: ba4dc13c-86cc-4d88-88c8-4a21e8ffbf70
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 596a702b-f2b3-4242-ba5a-89f25a80aa79
+                    stepCounter: 6dbdfc8e-ca6d-4cd0-b99b-7db1c4b5bc29
+                transform: ""
+          - columnReference:
+              columnCounter: d42ea047-1c55-46d1-b795-7c440124578c
+              stepCounter: ba4dc13c-86cc-4d88-88c8-4a21e8ffbf70
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 606ef3a5-64dc-40f0-870d-42139957a5a8
+                    stepCounter: 6dbdfc8e-ca6d-4cd0-b99b-7db1c4b5bc29
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_OWID_VACCINATIONS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_OWID_VACCINATIONS') }} "DVSTG_OWID_VACCINATIONS"
+            name: HUB_OWID_VACCINATIONS
+            noLinkRefs: []
+      name: HUB_OWID_VACCINATIONS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: ba4dc13c-86cc-4d88-88c8-4a21e8ffbf70

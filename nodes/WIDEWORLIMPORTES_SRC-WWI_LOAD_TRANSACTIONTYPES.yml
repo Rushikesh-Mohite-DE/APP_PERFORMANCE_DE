@@ -1,0 +1,94 @@
+steps:
+  WWI_LOAD_TRANSACTIONTYPES-d7fa3816-f47d-4a13-bd4a-4c684de13180:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: WIDEWORLIMPORTES_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 203b88fa-8f48-4daa-b5d8-feef96a7dd35
+              stepCounter: d7fa3816-f47d-4a13-bd4a-4c684de13180
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Numeric ID used for reference to a transaction type within the database
+            name: TRANSACTIONTYPEID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 318a489e-f8d7-4fd9-b4b4-9a81a0c510cb
+              stepCounter: d7fa3816-f47d-4a13-bd4a-4c684de13180
+            config: {}
+            dataType: VARCHAR(50)
+            defaultValue: ""
+            description: Full name of the transaction type
+            name: TRANSACTIONTYPENAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b9059907-875d-40c8-9399-12d6320bbdd0
+              stepCounter: d7fa3816-f47d-4a13-bd4a-4c684de13180
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: LASTEDITEDBY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0eb4fd54-c723-41b6-9dbf-5a85ec286275
+              stepCounter: d7fa3816-f47d-4a13-bd4a-4c684de13180
+            config: {}
+            dataType: DATE
+            defaultValue: ""
+            description: ""
+            name: VALIDFROM
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 818ba9e0-3d46-43e0-af36-df8e839e8c0a
+              stepCounter: d7fa3816-f47d-4a13-bd4a-4c684de13180
+            config: {}
+            dataType: DATE
+            defaultValue: ""
+            description: ""
+            name: VALIDTO
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('WIDEWORLIMPORTES_SRC', 'WWI_LOAD_TRANSACTIONTYPES') }}
+      name: WWI_LOAD_TRANSACTIONTYPES
+      schema: ""
+      sqlType: Source
+      table: WWI_LOAD_TRANSACTIONTYPES
+      type: sourceInput
+    stepCounter: d7fa3816-f47d-4a13-bd4a-4c684de13180

@@ -1,0 +1,181 @@
+steps:
+  DVSTG_AW_DEPARTMENT-22557de4-83c6-4b87-bfb2-4699126ae766:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fa0eefdc-85ed-406d-9407-b8447e5f6198
+              stepCounter: 22557de4-83c6-4b87-bfb2-4699126ae766
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 49cb3502-6c1b-4169-96d6-8ae6ed9a50ba
+                stepCounter: 22557de4-83c6-4b87-bfb2-4699126ae766
+            name: HK_DEPARTMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 49cb3502-6c1b-4169-96d6-8ae6ed9a50ba
+              stepCounter: 22557de4-83c6-4b87-bfb2-4699126ae766
+            dataType: NUMBER(38,0)
+            description: Primary key for Department records.
+            name: DEPARTMENTID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6dac3021-5bff-4b61-8aca-bbcb514e783d
+                    stepCounter: 135d1291-c02a-4963-8e5d-077800d7edfe
+                transform: ""
+          - columnReference:
+              columnCounter: 196a05d4-372a-46c8-a205-26ccc596bb4e
+              stepCounter: 22557de4-83c6-4b87-bfb2-4699126ae766
+            dataType: VARCHAR(50)
+            description: Name of the department.
+            name: NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0cbb4075-fc8d-4262-ad85-258196a3aff5
+                    stepCounter: 135d1291-c02a-4963-8e5d-077800d7edfe
+                transform: ""
+          - columnReference:
+              columnCounter: 09160c87-dd76-425a-83e9-62a4aa9f5317
+              stepCounter: 22557de4-83c6-4b87-bfb2-4699126ae766
+            dataType: VARCHAR(50)
+            description: Name of the group to which the department belongs.
+            name: GROUPNAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 179c5e3e-d8eb-4110-bb40-85972772f242
+                    stepCounter: 135d1291-c02a-4963-8e5d-077800d7edfe
+                transform: ""
+          - columnReference:
+              columnCounter: f002a164-7526-43b5-850b-840d7b91b245
+              stepCounter: 22557de4-83c6-4b87-bfb2-4699126ae766
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d653e408-af14-40dd-82d3-0481801ac423
+                    stepCounter: 135d1291-c02a-4963-8e5d-077800d7edfe
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: aa83cb39-88e3-4c99-8439-1c019bfdb9bf
+              stepCounter: 22557de4-83c6-4b87-bfb2-4699126ae766
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7834bde4-9b24-4d6e-a3e0-8b3d0a0b3783
+              stepCounter: 22557de4-83c6-4b87-bfb2-4699126ae766
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4d86b9af-aa92-4004-8374-8e0233c37ae8
+              stepCounter: 22557de4-83c6-4b87-bfb2-4699126ae766
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 196a05d4-372a-46c8-a205-26ccc596bb4e
+                stepCounter: 22557de4-83c6-4b87-bfb2-4699126ae766
+              - columnCounter: 09160c87-dd76-425a-83e9-62a4aa9f5317
+                stepCounter: 22557de4-83c6-4b87-bfb2-4699126ae766
+              - columnCounter: f002a164-7526-43b5-850b-840d7b91b245
+                stepCounter: 22557de4-83c6-4b87-bfb2-4699126ae766
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fa227f96-b671-4a85-8d03-49a4d0160eea
+              stepCounter: 22557de4-83c6-4b87-bfb2-4699126ae766
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 09160c87-dd76-425a-83e9-62a4aa9f5317
+                stepCounter: 22557de4-83c6-4b87-bfb2-4699126ae766
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: ADV_WRKS_SRC
+                nodeName: AW_LOAD_DEPARTMENT
+            join:
+              joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_DEPARTMENT') }} "AW_LOAD_DEPARTMENT"
+            name: DVSTG_AW_DEPARTMENT
+            noLinkRefs: []
+      name: DVSTG_AW_DEPARTMENT
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: 22557de4-83c6-4b87-bfb2-4699126ae766

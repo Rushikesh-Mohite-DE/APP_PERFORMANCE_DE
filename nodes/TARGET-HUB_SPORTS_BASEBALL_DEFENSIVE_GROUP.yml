@@ -1,0 +1,91 @@
+steps:
+  HUB_SPORTS_BASEBALL_DEFENSIVE_GROUP-fdc216c3-69f3-4d4d-b615-f36087852734:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 04aa7b92-02a8-4022-9273-58ee1f8575e1
+              stepCounter: fdc216c3-69f3-4d4d-b615-f36087852734
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_DEFENSIVE_GROUP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0843a219-12cc-4c2b-b785-3f003c45feaf
+                    stepCounter: 37897788-63b7-42d7-b828-3f20047b7a01
+                transform: ""
+          - columnReference:
+              columnCounter: 08cf28b7-f35a-4f53-8614-f10f7fdf229e
+              stepCounter: fdc216c3-69f3-4d4d-b615-f36087852734
+            dataType: VARCHAR(32)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4f53c412-b138-4530-b508-c8a4e1859131
+                    stepCounter: 37897788-63b7-42d7-b828-3f20047b7a01
+                transform: ""
+          - columnReference:
+              columnCounter: 283b91e1-44da-4d45-80fd-971457e4e3a3
+              stepCounter: fdc216c3-69f3-4d4d-b615-f36087852734
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8020d9c5-45a2-4c28-aaf1-659a2b31a41d
+                    stepCounter: 37897788-63b7-42d7-b828-3f20047b7a01
+                transform: ""
+          - columnReference:
+              columnCounter: 580f2201-59b8-4e63-a8e5-27ad61d38743
+              stepCounter: fdc216c3-69f3-4d4d-b615-f36087852734
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6e96024d-a118-49d0-9305-220294f88b2f
+                    stepCounter: 37897788-63b7-42d7-b828-3f20047b7a01
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SPORTS_BASEBALL_DEFENSIVE_GROUP
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SPORTS_BASEBALL_DEFENSIVE_GROUP') }} "DVSTG_SPORTS_BASEBALL_DEFENSIVE_GROUP"
+            name: HUB_SPORTS_BASEBALL_DEFENSIVE_GROUP
+            noLinkRefs: []
+      name: HUB_SPORTS_BASEBALL_DEFENSIVE_GROUP
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: fdc216c3-69f3-4d4d-b615-f36087852734

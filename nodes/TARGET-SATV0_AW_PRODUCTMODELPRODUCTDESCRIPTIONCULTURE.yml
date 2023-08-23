@@ -1,0 +1,107 @@
+steps:
+  SATV0_AW_PRODUCTMODELPRODUCTDESCRIPTIONCULTURE-e4d65afd-e528-488f-852b-3acb49c31d41:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: a23c67a2-86aa-4014-b9c2-89d5522c6066
+              stepCounter: e4d65afd-e528-488f-852b-3acb49c31d41
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_PRODUCTMODELPRODUCTDESCRIPTIONCULTURE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f0f4ae2e-9f7d-48fe-bb24-c1b1789d7fb1
+                    stepCounter: f78b9b04-6ed6-47cb-a646-3d71c3e10035
+                transform: ""
+          - columnReference:
+              columnCounter: f6cf5d3b-6ea6-4978-86fb-5f18543eeea5
+              stepCounter: e4d65afd-e528-488f-852b-3acb49c31d41
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            hashColumns: []
+            hashDetails: null
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9e378533-cb1d-40da-b6ad-db36a0cb8b70
+                    stepCounter: f78b9b04-6ed6-47cb-a646-3d71c3e10035
+                transform: ""
+          - columnReference:
+              columnCounter: f2510afd-f5b5-4384-9efa-a675ac69316d
+              stepCounter: e4d65afd-e528-488f-852b-3acb49c31d41
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 45f8a89e-849d-4d6f-ab2d-2ef9ccb6624c
+                    stepCounter: f78b9b04-6ed6-47cb-a646-3d71c3e10035
+                transform: ""
+          - columnReference:
+              columnCounter: d547c067-3dc5-4e24-b729-8fc9469c80b6
+              stepCounter: e4d65afd-e528-488f-852b-3acb49c31d41
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c927165b-89a6-45ad-8e59-d481a62ec4fe
+                    stepCounter: f78b9b04-6ed6-47cb-a646-3d71c3e10035
+                transform: ""
+          - columnReference:
+              columnCounter: 2f55ddf2-8b32-40df-b773-02d74ec6f992
+              stepCounter: e4d65afd-e528-488f-852b-3acb49c31d41
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HASH_RECORD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 78f50595-a3b2-4edb-85d3-86fcc551c0d8
+                    stepCounter: f78b9b04-6ed6-47cb-a646-3d71c3e10035
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_PRODUCTMODELPRODUCTDESCRIPTIONCULTURE
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_PRODUCTMODELPRODUCTDESCRIPTIONCULTURE') }} "DVSTG_AW_PRODUCTMODELPRODUCTDESCRIPTIONCULTURE"
+            name: SATV0_AW_PRODUCTMODELPRODUCTDESCRIPTIONCULTURE
+            noLinkRefs: []
+      name: SATV0_AW_PRODUCTMODELPRODUCTDESCRIPTIONCULTURE
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: e4d65afd-e528-488f-852b-3acb49c31d41

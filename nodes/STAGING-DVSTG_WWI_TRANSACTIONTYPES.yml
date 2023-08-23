@@ -1,0 +1,195 @@
+steps:
+  DVSTG_WWI_TRANSACTIONTYPES-8b641a51-9df1-4154-a9bd-e3f78c99af66:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4dd44d44-b376-4ca1-8212-18dedc1e6345
+              stepCounter: 8b641a51-9df1-4154-a9bd-e3f78c99af66
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: f22c675f-4d5d-4738-80e5-57579b5f50d4
+                stepCounter: 8b641a51-9df1-4154-a9bd-e3f78c99af66
+            name: HK_TRANSACTIONTYPES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: f22c675f-4d5d-4738-80e5-57579b5f50d4
+              stepCounter: 8b641a51-9df1-4154-a9bd-e3f78c99af66
+            dataType: NUMBER(38,0)
+            description: Numeric ID used for reference to a transaction type within the database
+            name: TRANSACTIONTYPEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 203b88fa-8f48-4daa-b5d8-feef96a7dd35
+                    stepCounter: d7fa3816-f47d-4a13-bd4a-4c684de13180
+                transform: ""
+          - columnReference:
+              columnCounter: b2859569-285a-41ab-8616-b31f9c6f040d
+              stepCounter: 8b641a51-9df1-4154-a9bd-e3f78c99af66
+            dataType: VARCHAR(50)
+            description: Full name of the transaction type
+            name: TRANSACTIONTYPENAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 318a489e-f8d7-4fd9-b4b4-9a81a0c510cb
+                    stepCounter: d7fa3816-f47d-4a13-bd4a-4c684de13180
+                transform: ""
+          - columnReference:
+              columnCounter: 2c7839ae-dcef-4b78-8af9-d4e7706c221c
+              stepCounter: 8b641a51-9df1-4154-a9bd-e3f78c99af66
+            dataType: NUMBER(38,0)
+            description: ""
+            name: LASTEDITEDBY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b9059907-875d-40c8-9399-12d6320bbdd0
+                    stepCounter: d7fa3816-f47d-4a13-bd4a-4c684de13180
+                transform: ""
+          - columnReference:
+              columnCounter: b73c7129-8b61-4478-a118-35d3a22ad884
+              stepCounter: 8b641a51-9df1-4154-a9bd-e3f78c99af66
+            dataType: DATE
+            description: ""
+            name: VALIDFROM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0eb4fd54-c723-41b6-9dbf-5a85ec286275
+                    stepCounter: d7fa3816-f47d-4a13-bd4a-4c684de13180
+                transform: ""
+          - columnReference:
+              columnCounter: b1132009-0c11-4373-93ac-3fea14744ab0
+              stepCounter: 8b641a51-9df1-4154-a9bd-e3f78c99af66
+            dataType: DATE
+            description: ""
+            name: VALIDTO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 818ba9e0-3d46-43e0-af36-df8e839e8c0a
+                    stepCounter: d7fa3816-f47d-4a13-bd4a-4c684de13180
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 329ad921-ed32-421d-82bc-7e008442a6ca
+              stepCounter: 8b641a51-9df1-4154-a9bd-e3f78c99af66
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 80e0a870-1c1d-4111-b133-bbfdb410b98d
+              stepCounter: 8b641a51-9df1-4154-a9bd-e3f78c99af66
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3f28b709-7e28-4c65-ab5e-b222fb2f3383
+              stepCounter: 8b641a51-9df1-4154-a9bd-e3f78c99af66
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: b2859569-285a-41ab-8616-b31f9c6f040d
+                stepCounter: 8b641a51-9df1-4154-a9bd-e3f78c99af66
+              - columnCounter: 2c7839ae-dcef-4b78-8af9-d4e7706c221c
+                stepCounter: 8b641a51-9df1-4154-a9bd-e3f78c99af66
+              - columnCounter: b73c7129-8b61-4478-a118-35d3a22ad884
+                stepCounter: 8b641a51-9df1-4154-a9bd-e3f78c99af66
+              - columnCounter: b1132009-0c11-4373-93ac-3fea14744ab0
+                stepCounter: 8b641a51-9df1-4154-a9bd-e3f78c99af66
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: aa65f4c4-2c0c-401b-9d0a-0af63ba6c613
+              stepCounter: 8b641a51-9df1-4154-a9bd-e3f78c99af66
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: f22c675f-4d5d-4738-80e5-57579b5f50d4
+                stepCounter: 8b641a51-9df1-4154-a9bd-e3f78c99af66
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: WIDEWORLIMPORTES_SRC
+                nodeName: WWI_LOAD_TRANSACTIONTYPES
+            join:
+              joinCondition: FROM {{ ref('WIDEWORLIMPORTES_SRC', 'WWI_LOAD_TRANSACTIONTYPES') }} "WWI_LOAD_TRANSACTIONTYPES"
+            name: DVSTG_WWI_TRANSACTIONTYPES
+            noLinkRefs: []
+      name: DVSTG_WWI_TRANSACTIONTYPES
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: 8b641a51-9df1-4154-a9bd-e3f78c99af66

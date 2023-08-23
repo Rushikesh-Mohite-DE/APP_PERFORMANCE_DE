@@ -1,0 +1,121 @@
+steps:
+  SATV0_WWI_STOCKITEMSTOCKGROUPS-e1ace6be-2d4f-415e-b959-f4de4492b7ba:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 4b1d8517-ce25-4150-8bef-ed94fcfb99e6
+              stepCounter: e1ace6be-2d4f-415e-b959-f4de4492b7ba
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_STOCKITEMSTOCKGROUPS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9b07908a-a921-4c62-82dc-9d4e0834ff62
+                    stepCounter: 949d6202-e44b-47cc-9897-465c73eee3a0
+                transform: ""
+          - columnReference:
+              columnCounter: 1eb02670-f02d-4699-93fd-ef739891b1f6
+              stepCounter: e1ace6be-2d4f-415e-b959-f4de4492b7ba
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LASTEDITEDBY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ff5a7a6f-8e79-4009-a279-93e3c166f2e3
+                    stepCounter: 949d6202-e44b-47cc-9897-465c73eee3a0
+                transform: ""
+          - columnReference:
+              columnCounter: 52b6231b-9c0e-47d7-9068-34537362b8bd
+              stepCounter: e1ace6be-2d4f-415e-b959-f4de4492b7ba
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LASTEDITEDWHEN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ea0ce421-96c5-4875-8457-4830c3c43414
+                    stepCounter: 949d6202-e44b-47cc-9897-465c73eee3a0
+                transform: ""
+          - columnReference:
+              columnCounter: 59065a3a-2009-4eb1-b795-e5be8ef88b12
+              stepCounter: e1ace6be-2d4f-415e-b959-f4de4492b7ba
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 92e9023f-885f-4784-993a-13b5dbdd6491
+                    stepCounter: 949d6202-e44b-47cc-9897-465c73eee3a0
+                transform: ""
+          - columnReference:
+              columnCounter: 8a5796d4-fc48-47b1-862f-321d0e8e9db2
+              stepCounter: e1ace6be-2d4f-415e-b959-f4de4492b7ba
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3c699d23-e043-47bd-9703-f4b3e49d13df
+                    stepCounter: 949d6202-e44b-47cc-9897-465c73eee3a0
+                transform: ""
+          - columnReference:
+              columnCounter: 4bee922a-c778-42e4-98c6-bb289544e8e4
+              stepCounter: e1ace6be-2d4f-415e-b959-f4de4492b7ba
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ddc7c105-4e9a-4ed1-ad36-c20f16e7e6a2
+                    stepCounter: 949d6202-e44b-47cc-9897-465c73eee3a0
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_WWI_STOCKITEMSTOCKGROUPS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_WWI_STOCKITEMSTOCKGROUPS') }} "DVSTG_WWI_STOCKITEMSTOCKGROUPS"
+            name: SATV0_WWI_STOCKITEMSTOCKGROUPS
+            noLinkRefs: []
+      name: SATV0_WWI_STOCKITEMSTOCKGROUPS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: e1ace6be-2d4f-415e-b959-f4de4492b7ba

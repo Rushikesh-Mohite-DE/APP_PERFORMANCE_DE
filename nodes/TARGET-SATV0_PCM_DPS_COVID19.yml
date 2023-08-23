@@ -1,0 +1,233 @@
+steps:
+  SATV0_PCM_DPS_COVID19-17c4a927-d86b-4ca8-ad0d-148b0e6ff125:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: Italy case statistics, summary
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 6213ae34-a898-49be-bd37-c0c52c16bc9f
+              stepCounter: 17c4a927-d86b-4ca8-ad0d-148b0e6ff125
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_PCM_DPS_COVID19
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 993a35b0-aac5-476d-a264-92c70a8650aa
+                    stepCounter: f0f430a2-1e4b-401d-8051-5aced0203d88
+                transform: ""
+          - columnReference:
+              columnCounter: 4b9d46de-048f-4a8a-91e1-8ff6fc0b062a
+              stepCounter: 17c4a927-d86b-4ca8-ad0d-148b0e6ff125
+            dataType: DATE
+            description: Date of data point
+            hashColumns: []
+            hashDetails: null
+            name: DATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: eb62285f-36bb-4125-b421-2f477411cb74
+                    stepCounter: f0f430a2-1e4b-401d-8051-5aced0203d88
+                transform: ""
+          - columnReference:
+              columnCounter: bab06f36-95e2-4b71-8bdd-0b0563ccf695
+              stepCounter: 17c4a927-d86b-4ca8-ad0d-148b0e6ff125
+            dataType: VARCHAR(16777216)
+            description: Case type
+            hashColumns: []
+            hashDetails: null
+            name: CASE_TYPE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d91623a0-f962-4ad8-94d4-1159360f147b
+                    stepCounter: f0f430a2-1e4b-401d-8051-5aced0203d88
+                transform: ""
+          - columnReference:
+              columnCounter: 3230d8e4-4653-496a-92f0-f4f98be6e4d8
+              stepCounter: 17c4a927-d86b-4ca8-ad0d-148b0e6ff125
+            dataType: NUMBER(38,0)
+            description: Case count in geography and case type
+            hashColumns: []
+            hashDetails: null
+            name: CASES
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fcb8b1fc-251a-41ed-9d46-4bda572bc92e
+                    stepCounter: f0f430a2-1e4b-401d-8051-5aced0203d88
+                transform: ""
+          - columnReference:
+              columnCounter: 2435ea0c-cd54-4a60-aff7-0fd74278640d
+              stepCounter: 17c4a927-d86b-4ca8-ad0d-148b0e6ff125
+            dataType: FLOAT
+            description: Indicative longitude of geography (centroid)
+            hashColumns: []
+            hashDetails: null
+            name: LONG
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 96735f53-f221-4d48-8293-300b7223da69
+                    stepCounter: f0f430a2-1e4b-401d-8051-5aced0203d88
+                transform: ""
+          - columnReference:
+              columnCounter: 965e41e7-1f59-4cf1-b1d5-1fe840b22ab4
+              stepCounter: 17c4a927-d86b-4ca8-ad0d-148b0e6ff125
+            dataType: FLOAT
+            description: Indicative latitude of geography (centroid)
+            hashColumns: []
+            hashDetails: null
+            name: LAT
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1e5a1d70-74dc-4d3b-a87d-8d3067006818
+                    stepCounter: f0f430a2-1e4b-401d-8051-5aced0203d88
+                transform: ""
+          - columnReference:
+              columnCounter: 7f21dfac-1a63-4e40-8534-dbfeb0ef4e50
+              stepCounter: 17c4a927-d86b-4ca8-ad0d-148b0e6ff125
+            dataType: NUMBER(38,0)
+            description: Change in case count in same geography and case type since previous date of report
+            hashColumns: []
+            hashDetails: null
+            name: DIFFERENCE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 97884864-c0e0-4c72-ac28-071c1c4549b6
+                    stepCounter: f0f430a2-1e4b-401d-8051-5aced0203d88
+                transform: ""
+          - columnReference:
+              columnCounter: 11bfddbb-f7a8-46da-804e-faee475d7d61
+              stepCounter: 17c4a927-d86b-4ca8-ad0d-148b0e6ff125
+            dataType: VARCHAR(16777216)
+            description: ISO-3166-1 code for geography of report
+            hashColumns: []
+            hashDetails: null
+            name: ISO3166_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f702ba85-a48f-4073-a596-3bc3eb958b09
+                    stepCounter: f0f430a2-1e4b-401d-8051-5aced0203d88
+                transform: ""
+          - columnReference:
+              columnCounter: 33c9927e-f74f-4e97-b13e-f31a8199468f
+              stepCounter: 17c4a927-d86b-4ca8-ad0d-148b0e6ff125
+            dataType: VARCHAR(16777216)
+            description: ISO-3166-2 code for geography of report
+            hashColumns: []
+            hashDetails: null
+            name: ISO3166_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1dc6df14-ab7a-44be-bed5-b6febe7e94df
+                    stepCounter: f0f430a2-1e4b-401d-8051-5aced0203d88
+                transform: ""
+          - columnReference:
+              columnCounter: 220a1655-fd40-4933-a074-422ba0a56b10
+              stepCounter: 17c4a927-d86b-4ca8-ad0d-148b0e6ff125
+            dataType: TIMESTAMP_NTZ(9)
+            description: Timestamp of last update (UTC)
+            hashColumns: []
+            hashDetails: null
+            name: LAST_UPDATED_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 579cfd47-4f51-4b1e-9c2b-6cbb573af6a5
+                    stepCounter: f0f430a2-1e4b-401d-8051-5aced0203d88
+                transform: ""
+          - columnReference:
+              columnCounter: 3b801d39-8322-41d6-8730-3edc0e27e391
+              stepCounter: 17c4a927-d86b-4ca8-ad0d-148b0e6ff125
+            dataType: BOOLEAN
+            description: New data in last import
+            hashColumns: []
+            hashDetails: null
+            name: LAST_REPORTED_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 26a53a2f-865c-40de-887b-069872095a04
+                    stepCounter: f0f430a2-1e4b-401d-8051-5aced0203d88
+                transform: ""
+          - columnReference:
+              columnCounter: f52f34eb-2e99-4bbc-be99-5bbfe5c95d8f
+              stepCounter: 17c4a927-d86b-4ca8-ad0d-148b0e6ff125
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1cd72847-05c6-4d22-9cda-d0d623159fed
+                    stepCounter: f0f430a2-1e4b-401d-8051-5aced0203d88
+                transform: ""
+          - columnReference:
+              columnCounter: 8d416ec8-c092-4a31-a73d-490c56c91ef3
+              stepCounter: 17c4a927-d86b-4ca8-ad0d-148b0e6ff125
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: df18da80-84f1-438f-9b36-67648a6415a1
+                    stepCounter: f0f430a2-1e4b-401d-8051-5aced0203d88
+                transform: ""
+          - columnReference:
+              columnCounter: c62ef70e-1109-45a4-96a8-a889fc6185cb
+              stepCounter: 17c4a927-d86b-4ca8-ad0d-148b0e6ff125
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2a1da488-4793-4eaa-8349-a26372cf4dfd
+                    stepCounter: f0f430a2-1e4b-401d-8051-5aced0203d88
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_PCM_DPS_COVID19
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_PCM_DPS_COVID19') }} "DVSTG_PCM_DPS_COVID19"
+            name: SATV0_PCM_DPS_COVID19
+            noLinkRefs: []
+      name: SATV0_PCM_DPS_COVID19
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: 17c4a927-d86b-4ca8-ad0d-148b0e6ff125

@@ -1,0 +1,94 @@
+steps:
+  AW_LOAD_EMPLOYEEPAYHISTORY-79802b98-d66e-472d-9c6b-66b2a337980b:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: ADV_WRKS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 80e0139d-682a-4aa5-bd04-04d20108b2c3
+              stepCounter: 79802b98-d66e-472d-9c6b-66b2a337980b
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Employee identification number. Foreign key to Employee.BusinessEntityID.
+            name: BUSINESSENTITYID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0fa60539-47a1-49d5-9e77-00c7c4ea5d73
+              stepCounter: 79802b98-d66e-472d-9c6b-66b2a337980b
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date the change in pay is effective
+            name: RATECHANGEDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 46bdaf1c-4333-495a-ac45-b6a661f011db
+              stepCounter: 79802b98-d66e-472d-9c6b-66b2a337980b
+            config: {}
+            dataType: NUMBER(19,4)
+            defaultValue: ""
+            description: Salary hourly rate.
+            name: RATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 802f00ee-eb27-4c10-8695-b4837be16b34
+              stepCounter: 79802b98-d66e-472d-9c6b-66b2a337980b
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: 1 = Salary received monthly, 2 = Salary received biweekly
+            name: PAYFREQUENCY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 730bcafe-9843-4d5e-9871-7c11aee33941
+              stepCounter: 79802b98-d66e-472d-9c6b-66b2a337980b
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_EMPLOYEEPAYHISTORY') }}
+      name: AW_LOAD_EMPLOYEEPAYHISTORY
+      schema: ""
+      sqlType: Source
+      table: AW_LOAD_EMPLOYEEPAYHISTORY
+      type: sourceInput
+    stepCounter: 79802b98-d66e-472d-9c6b-66b2a337980b

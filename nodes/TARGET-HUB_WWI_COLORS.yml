@@ -1,0 +1,91 @@
+steps:
+  HUB_WWI_COLORS-213013f7-23ae-4718-af28-b9b5ae5e8a17:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 8b5ab30c-9ac2-467c-bd71-589caa4a3c16
+              stepCounter: 213013f7-23ae-4718-af28-b9b5ae5e8a17
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_COLORS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fded8348-d197-4c11-a923-4c3ae9932cab
+                    stepCounter: 7b5729f5-024b-488d-b1ea-7e12a1cc3d94
+                transform: ""
+          - columnReference:
+              columnCounter: 03856193-52e5-450e-9525-32f17333eaa1
+              stepCounter: 213013f7-23ae-4718-af28-b9b5ae5e8a17
+            dataType: NUMBER(38,0)
+            description: Numeric ID used for reference to a color within the database
+            hashColumns: []
+            hashDetails: null
+            name: COLORID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e6f0b2b2-aba7-48e8-a155-415bd2a5677e
+                    stepCounter: 7b5729f5-024b-488d-b1ea-7e12a1cc3d94
+                transform: ""
+          - columnReference:
+              columnCounter: 8692ecb9-081f-4f75-b598-6c8be5f74f95
+              stepCounter: 213013f7-23ae-4718-af28-b9b5ae5e8a17
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 38570267-876a-44be-be0d-cc24cf02d217
+                    stepCounter: 7b5729f5-024b-488d-b1ea-7e12a1cc3d94
+                transform: ""
+          - columnReference:
+              columnCounter: 2c970f3e-ed19-4a01-bbf7-eb3c821c4007
+              stepCounter: 213013f7-23ae-4718-af28-b9b5ae5e8a17
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a9182119-33d8-48f6-9aaa-3c64204562ae
+                    stepCounter: 7b5729f5-024b-488d-b1ea-7e12a1cc3d94
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_WWI_COLORS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_WWI_COLORS') }} "DVSTG_WWI_COLORS"
+            name: HUB_WWI_COLORS
+            noLinkRefs: []
+      name: HUB_WWI_COLORS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 213013f7-23ae-4718-af28-b9b5ae5e8a17

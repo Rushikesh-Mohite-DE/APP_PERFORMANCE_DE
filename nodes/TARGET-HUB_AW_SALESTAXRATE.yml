@@ -1,0 +1,105 @@
+steps:
+  HUB_AW_SALESTAXRATE-8bf9c953-7925-4505-b790-f11e933704f7:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 534b2b11-f3d4-4264-abc3-3c02b78ea26f
+              stepCounter: 8bf9c953-7925-4505-b790-f11e933704f7
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_SALESTAXRATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 95a55293-2329-42fd-a3bc-428faf38b23c
+                    stepCounter: 144db9f0-2fba-415b-86ab-377e839d8993
+                transform: ""
+          - columnReference:
+              columnCounter: e6ff40a8-9ccb-41d7-8d59-8b29cc0b0e6c
+              stepCounter: 8bf9c953-7925-4505-b790-f11e933704f7
+            dataType: NUMBER(38,0)
+            description: Primary key for SalesTaxRate records.
+            hashColumns: []
+            hashDetails: null
+            name: SALESTAXRATEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 764ff3f8-2153-4e45-8248-27eb44407f1b
+                    stepCounter: 144db9f0-2fba-415b-86ab-377e839d8993
+                transform: ""
+          - columnReference:
+              columnCounter: 9df92539-88ee-4cb8-a0c2-ee19ce1e0a5a
+              stepCounter: 8bf9c953-7925-4505-b790-f11e933704f7
+            dataType: NUMBER(38,0)
+            description: State, province, or country/region the sales tax applies to.
+            hashColumns: []
+            hashDetails: null
+            name: STATEPROVINCEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: afdfea7c-cd73-4f18-81ed-e6e5aef253c3
+                    stepCounter: 144db9f0-2fba-415b-86ab-377e839d8993
+                transform: ""
+          - columnReference:
+              columnCounter: 7ac9d47c-84c5-45b8-93d3-ab8e3cbaa86c
+              stepCounter: 8bf9c953-7925-4505-b790-f11e933704f7
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e35e8497-671a-48fb-99f6-d8e484908061
+                    stepCounter: 144db9f0-2fba-415b-86ab-377e839d8993
+                transform: ""
+          - columnReference:
+              columnCounter: faffc5a3-0325-429d-8b9f-9a0a5da30455
+              stepCounter: 8bf9c953-7925-4505-b790-f11e933704f7
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a5a1e70f-12e8-4dd3-99e3-1bff83730fa2
+                    stepCounter: 144db9f0-2fba-415b-86ab-377e839d8993
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_SALESTAXRATE
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_SALESTAXRATE') }} "DVSTG_AW_SALESTAXRATE"
+            name: HUB_AW_SALESTAXRATE
+            noLinkRefs: []
+      name: HUB_AW_SALESTAXRATE
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 8bf9c953-7925-4505-b790-f11e933704f7

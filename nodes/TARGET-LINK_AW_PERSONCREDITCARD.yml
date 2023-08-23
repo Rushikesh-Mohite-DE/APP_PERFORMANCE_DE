@@ -1,0 +1,147 @@
+steps:
+  LINK_AW_PERSONCREDITCARD-7567ad76-4f5b-4c21-b163-cff98e9436f3:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: f9d1f87d-d62d-4c5e-a61f-d65e2c51af8e
+              stepCounter: 7567ad76-4f5b-4c21-b163-cff98e9436f3
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_PERSONCREDITCARD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e562795f-b572-4647-b422-61fa08ad3ffc
+                    stepCounter: c0c442c9-466b-495b-ad95-f9b9e3f08367
+                transform: ""
+          - columnReference:
+              columnCounter: f3c0fc7e-dc2b-40b5-b5fe-3e669d63ad8f
+              stepCounter: 7567ad76-4f5b-4c21-b163-cff98e9436f3
+            dataType: NUMBER(38,0)
+            description: Business entity identification number. Foreign key to Person.BusinessEntityID.
+            hashColumns: []
+            hashDetails: null
+            name: BUSINESSENTITYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bfe0bf5f-1802-4a28-8f50-6c51c4e464f3
+                    stepCounter: c0c442c9-466b-495b-ad95-f9b9e3f08367
+                transform: ""
+          - columnReference:
+              columnCounter: 0c1064b8-d73b-4ec6-8a1a-4617a602bc1a
+              stepCounter: 7567ad76-4f5b-4c21-b163-cff98e9436f3
+            dataType: NUMBER(38,0)
+            description: Credit card identification number. Foreign key to CreditCard.CreditCardID.
+            hashColumns: []
+            hashDetails: null
+            name: CREDITCARDID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f78dc87d-4805-46d3-b4e3-7fab6396a755
+                    stepCounter: c0c442c9-466b-495b-ad95-f9b9e3f08367
+                transform: ""
+          - columnReference:
+              columnCounter: 9ac48750-5004-4f8c-afb6-0210bca089b4
+              stepCounter: 7567ad76-4f5b-4c21-b163-cff98e9436f3
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            hashColumns: []
+            hashDetails: null
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1eaf40fb-eead-42e1-804b-d2bf90db6459
+                    stepCounter: c0c442c9-466b-495b-ad95-f9b9e3f08367
+                transform: ""
+          - columnReference:
+              columnCounter: 8471f4ac-1d03-417b-88c2-8a6dda580d04
+              stepCounter: 7567ad76-4f5b-4c21-b163-cff98e9436f3
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 988b339e-73b8-4d3c-a227-7d1e051438c3
+                    stepCounter: c0c442c9-466b-495b-ad95-f9b9e3f08367
+                transform: ""
+          - columnReference:
+              columnCounter: 5e41c0c1-5a61-403f-a735-67ee5f8918f9
+              stepCounter: 7567ad76-4f5b-4c21-b163-cff98e9436f3
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 39471504-681a-48ac-a585-7eb963d632b9
+                    stepCounter: c0c442c9-466b-495b-ad95-f9b9e3f08367
+                transform: ""
+          - columnReference:
+              columnCounter: 49594818-2a91-49a2-9de7-d9d6e8895efb
+              stepCounter: 7567ad76-4f5b-4c21-b163-cff98e9436f3
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ff5305a3-3238-4c9a-a427-cf1344a9d6d9
+                    stepCounter: c0c442c9-466b-495b-ad95-f9b9e3f08367
+                transform: ""
+          - columnReference:
+              columnCounter: bf0a79dc-1987-4a5d-8397-b7a193cee755
+              stepCounter: 7567ad76-4f5b-4c21-b163-cff98e9436f3
+            config:
+              is_Link_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LNK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 23a5a91e-45be-4913-96a1-1102cde32976
+                    stepCounter: c0c442c9-466b-495b-ad95-f9b9e3f08367
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_PERSONCREDITCARD
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_PERSONCREDITCARD') }} "DVSTG_AW_PERSONCREDITCARD"
+            name: LINK_AW_PERSONCREDITCARD
+            noLinkRefs: []
+      name: LINK_AW_PERSONCREDITCARD
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::7
+      type: sql
+    stepCounter: 7567ad76-4f5b-4c21-b163-cff98e9436f3

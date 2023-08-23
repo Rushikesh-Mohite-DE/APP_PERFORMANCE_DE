@@ -1,0 +1,169 @@
+steps:
+  HUM_RESTRICTIONS_COUNTRY-1df1320f-2bc0-4e49-aada-7d1cdc2a921c:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: COVID-19 travel restrictions by country
+      locationID: ""
+      locationName: COVID19
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: cd4ef864-4424-48d7-bf29-598683ac6a95
+              stepCounter: 1df1320f-2bc0-4e49-aada-7d1cdc2a921c
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ISO-3166-1 entity name
+            name: COUNTRY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2f7bfcfd-db3e-4384-a648-def5a0814f91
+              stepCounter: 1df1320f-2bc0-4e49-aada-7d1cdc2a921c
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ISO-3166-1 code for geography of record
+            name: ISO3166_1
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8d6b64cb-8b33-44a0-add1-c5cdeb1e4215
+              stepCounter: 1df1320f-2bc0-4e49-aada-7d1cdc2a921c
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: Indicative longitude of geography (centroid)
+            name: LONG
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 12c9daf0-41a2-4803-8fe7-b3777cd21194
+              stepCounter: 1df1320f-2bc0-4e49-aada-7d1cdc2a921c
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: Indicative latitude of geography (centroid)
+            name: LAT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0dc13480-a1b8-48ef-946f-6894910fcb35
+              stepCounter: 1df1320f-2bc0-4e49-aada-7d1cdc2a921c
+            config: {}
+            dataType: DATE
+            defaultValue: ""
+            description: Date restrictions were published
+            name: PUBLISHED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 795aba8d-a608-4c04-92a7-645a86a75525
+              stepCounter: 1df1320f-2bc0-4e49-aada-7d1cdc2a921c
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: Sources of restrictions (URL)
+            name: SOURCES
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ca8563f9-290d-4293-9cd8-5a558eed2db1
+              stepCounter: 1df1320f-2bc0-4e49-aada-7d1cdc2a921c
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: Detailed text of restrictions
+            name: RESTRICTION_TEXT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f7694cf8-4191-451d-a129-8dda8bfcd711
+              stepCounter: 1df1320f-2bc0-4e49-aada-7d1cdc2a921c
+            config: {}
+            dataType: DATE
+            defaultValue: ""
+            description: Date of information
+            name: INFO_DATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3b6106e2-738a-4cfb-9941-3d5b77a0df23
+              stepCounter: 1df1320f-2bc0-4e49-aada-7d1cdc2a921c
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: Quarantine ordinances
+            name: QUARANTINE_TEXT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 060d6a5c-7586-4836-8fbe-84d5234fc03d
+              stepCounter: 1df1320f-2bc0-4e49-aada-7d1cdc2a921c
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Timestamp of last update (UTC)
+            name: LAST_UPDATE_DATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('COVID19', 'HUM_RESTRICTIONS_COUNTRY') }}
+      name: HUM_RESTRICTIONS_COUNTRY
+      schema: ""
+      sqlType: Source
+      table: HUM_RESTRICTIONS_COUNTRY
+      type: sourceInput
+    stepCounter: 1df1320f-2bc0-4e49-aada-7d1cdc2a921c

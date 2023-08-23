@@ -1,0 +1,105 @@
+steps:
+  HUB_SPORTS_DOCUMENT_PACKAGES-4190d309-f8a3-4633-951c-22f0039c27fa:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 45f37447-ea73-4217-9fa9-d311cf8c7af5
+              stepCounter: 4190d309-f8a3-4633-951c-22f0039c27fa
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_DOCUMENT_PACKAGES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7d938fe9-fea3-43ff-ba17-ff6e8fb4262d
+                    stepCounter: 23e57d17-dd2d-4dd3-adb1-4213723c7658
+                transform: ""
+          - columnReference:
+              columnCounter: 94a3dd9a-b333-4241-9d56-6f1da996fbae
+              stepCounter: 4190d309-f8a3-4633-951c-22f0039c27fa
+            dataType: VARCHAR(32)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1edd201b-53c8-47de-9da4-0bf515e3d7bb
+                    stepCounter: 23e57d17-dd2d-4dd3-adb1-4213723c7658
+                transform: ""
+          - columnReference:
+              columnCounter: c8df6ec1-0075-416f-841a-0d9b59c9f3a8
+              stepCounter: 4190d309-f8a3-4633-951c-22f0039c27fa
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PACKAGE_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 59eebf5b-53f8-4a0e-845a-c6f0fb48cbcb
+                    stepCounter: 23e57d17-dd2d-4dd3-adb1-4213723c7658
+                transform: ""
+          - columnReference:
+              columnCounter: 82a5b0e9-ffd6-4802-b5ce-c455b2730c9b
+              stepCounter: 4190d309-f8a3-4633-951c-22f0039c27fa
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 31bb2302-e06b-480b-834c-28a8b495d157
+                    stepCounter: 23e57d17-dd2d-4dd3-adb1-4213723c7658
+                transform: ""
+          - columnReference:
+              columnCounter: 957112d0-f379-439b-b71e-c3e168b49df4
+              stepCounter: 4190d309-f8a3-4633-951c-22f0039c27fa
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e94e3c06-d91e-48f2-b3cd-1d57c8ea4b4f
+                    stepCounter: 23e57d17-dd2d-4dd3-adb1-4213723c7658
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SPORTS_DOCUMENT_PACKAGES
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SPORTS_DOCUMENT_PACKAGES') }} "DVSTG_SPORTS_DOCUMENT_PACKAGES"
+            name: HUB_SPORTS_DOCUMENT_PACKAGES
+            noLinkRefs: []
+      name: HUB_SPORTS_DOCUMENT_PACKAGES
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 4190d309-f8a3-4633-951c-22f0039c27fa

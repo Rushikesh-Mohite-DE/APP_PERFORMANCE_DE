@@ -1,0 +1,64 @@
+steps:
+  AW_LOAD_PHONENUMBERTYPE-fd1c55f4-52a6-40d7-b439-f09e9007fc38:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: ADV_WRKS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ab834ef4-fa53-4259-9fa0-a47eeed5c52b
+              stepCounter: fd1c55f4-52a6-40d7-b439-f09e9007fc38
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Primary key for telephone number type records.
+            name: PHONENUMBERTYPEID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f9f52fb8-e367-480c-8efe-2325ca1c6a02
+              stepCounter: fd1c55f4-52a6-40d7-b439-f09e9007fc38
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: Name of the telephone number type
+            name: NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 530790eb-3180-4d7d-96e6-36244c692c62
+              stepCounter: fd1c55f4-52a6-40d7-b439-f09e9007fc38
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_PHONENUMBERTYPE') }}
+      name: AW_LOAD_PHONENUMBERTYPE
+      schema: ""
+      sqlType: Source
+      table: AW_LOAD_PHONENUMBERTYPE
+      type: sourceInput
+    stepCounter: fd1c55f4-52a6-40d7-b439-f09e9007fc38

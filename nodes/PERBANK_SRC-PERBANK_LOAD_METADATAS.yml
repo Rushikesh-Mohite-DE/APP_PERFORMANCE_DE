@@ -1,0 +1,124 @@
+steps:
+  PERBANK_LOAD_METADATAS-b618a304-e620-402c-8923-b50226604188:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: PERBANK_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4f582563-1f5c-4934-b12d-8a508f51bbae
+              stepCounter: b618a304-e620-402c-8923-b50226604188
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d5bf76f7-d923-4bc8-97d1-a0dc5eb82c49
+              stepCounter: b618a304-e620-402c-8923-b50226604188
+            config: {}
+            dataType: VARCHAR(30)
+            defaultValue: ""
+            description: ""
+            name: NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d2229da9-2628-4e12-8fe1-2f93c75186ce
+              stepCounter: b618a304-e620-402c-8923-b50226604188
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: DATATYPE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 828e93e2-fcb2-4788-b2b5-995d48128062
+              stepCounter: b618a304-e620-402c-8923-b50226604188
+            config: {}
+            dataType: VARCHAR(30)
+            defaultValue: ""
+            description: ""
+            name: DATATYPENAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c02de82b-2c2b-4f77-8c59-caa9a4db970a
+              stepCounter: b618a304-e620-402c-8923-b50226604188
+            config: {}
+            dataType: VARCHAR(20)
+            defaultValue: ""
+            description: ""
+            name: ISACTIVE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1dc645b2-9d87-47f8-a59c-2365f6611ccf
+              stepCounter: b618a304-e620-402c-8923-b50226604188
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: CREATED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 229da196-4e95-4596-aa35-a06a99e5b1b5
+              stepCounter: b618a304-e620-402c-8923-b50226604188
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: MODIFIED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('PERBANK_SRC', 'PERBANK_LOAD_METADATAS') }}
+      name: PERBANK_LOAD_METADATAS
+      schema: ""
+      sqlType: Source
+      table: PERBANK_LOAD_METADATAS
+      type: sourceInput
+    stepCounter: b618a304-e620-402c-8923-b50226604188

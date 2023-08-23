@@ -1,0 +1,164 @@
+steps:
+  SATV0_AW_TRANSACTIONHISTORYARCHIVE-d1b6e9f2-0407-4234-9f5b-57125f71a8f3:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: ebbffcb4-81d5-471d-ad3f-f40c4803d679
+              stepCounter: d1b6e9f2-0407-4234-9f5b-57125f71a8f3
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_TRANSACTIONHISTORYARCHIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bd6a5d43-3bc9-43bd-a342-64f9e3ef9611
+                    stepCounter: eb7ccf0d-836f-48d7-aa89-245ba0d52413
+                transform: ""
+          - columnReference:
+              columnCounter: fb99d7c9-e8d0-4d32-b9a7-8b7955c89030
+              stepCounter: d1b6e9f2-0407-4234-9f5b-57125f71a8f3
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time of the transaction.
+            hashColumns: []
+            hashDetails: null
+            name: TRANSACTIONDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c0e1acee-c93e-402c-bf13-9fbe99f221d9
+                    stepCounter: eb7ccf0d-836f-48d7-aa89-245ba0d52413
+                transform: ""
+          - columnReference:
+              columnCounter: 95d79abe-8c8f-4a2c-b2d8-817d815aa33c
+              stepCounter: d1b6e9f2-0407-4234-9f5b-57125f71a8f3
+            config: {}
+            dataType: VARCHAR(1)
+            description: W = Work Order, S = Sales Order, P = Purchase Order
+            hashColumns: []
+            hashDetails: null
+            name: TRANSACTIONTYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6eacef29-36e0-4f2f-ace5-14e6a4d3435b
+                    stepCounter: eb7ccf0d-836f-48d7-aa89-245ba0d52413
+                transform: ""
+          - columnReference:
+              columnCounter: 3806fedf-4c77-4218-9d23-0c5898896354
+              stepCounter: d1b6e9f2-0407-4234-9f5b-57125f71a8f3
+            dataType: NUMBER(38,0)
+            description: Product quantity.
+            hashColumns: []
+            hashDetails: null
+            name: QUANTITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d37a9e4c-a5f9-4dc4-8a10-30fc83e5cc94
+                    stepCounter: eb7ccf0d-836f-48d7-aa89-245ba0d52413
+                transform: ""
+          - columnReference:
+              columnCounter: 2f89778d-b36a-42e2-aefc-d9908d09513c
+              stepCounter: d1b6e9f2-0407-4234-9f5b-57125f71a8f3
+            dataType: NUMBER(19,4)
+            description: Product cost.
+            hashColumns: []
+            hashDetails: null
+            name: ACTUALCOST
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2a37798e-33bb-4f9c-97f4-2ae41faf9768
+                    stepCounter: eb7ccf0d-836f-48d7-aa89-245ba0d52413
+                transform: ""
+          - columnReference:
+              columnCounter: 1d528c19-db50-4e01-9f8b-662ac44b9801
+              stepCounter: d1b6e9f2-0407-4234-9f5b-57125f71a8f3
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            hashColumns: []
+            hashDetails: null
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5ad0d2fc-e1ed-4986-9f45-64b1e16e050d
+                    stepCounter: eb7ccf0d-836f-48d7-aa89-245ba0d52413
+                transform: ""
+          - columnReference:
+              columnCounter: b40dc61e-d023-4212-8c42-445e2a35caaf
+              stepCounter: d1b6e9f2-0407-4234-9f5b-57125f71a8f3
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 429f1346-0233-4051-ad64-775c17eb494e
+                    stepCounter: eb7ccf0d-836f-48d7-aa89-245ba0d52413
+                transform: ""
+          - columnReference:
+              columnCounter: 7986382d-d4f4-4c2f-91ad-779a9098d146
+              stepCounter: d1b6e9f2-0407-4234-9f5b-57125f71a8f3
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b5199d60-50a5-49d0-bba9-2bd317edc408
+                    stepCounter: eb7ccf0d-836f-48d7-aa89-245ba0d52413
+                transform: ""
+          - columnReference:
+              columnCounter: bd6f969a-ebde-48a4-82fc-5ce0fb7b8b48
+              stepCounter: d1b6e9f2-0407-4234-9f5b-57125f71a8f3
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 58f3a226-e4a5-4e21-8ac4-bd56bb1160b3
+                    stepCounter: eb7ccf0d-836f-48d7-aa89-245ba0d52413
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_TRANSACTIONHISTORYARCHIVE
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_TRANSACTIONHISTORYARCHIVE') }} "DVSTG_AW_TRANSACTIONHISTORYARCHIVE"
+            name: SATV0_AW_TRANSACTIONHISTORYARCHIVE
+            noLinkRefs: []
+      name: SATV0_AW_TRANSACTIONHISTORYARCHIVE
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: d1b6e9f2-0407-4234-9f5b-57125f71a8f3

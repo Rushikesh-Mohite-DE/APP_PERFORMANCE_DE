@@ -1,0 +1,93 @@
+steps:
+  SATV0_SPORTS_EVENTS_SUB_SEASONS-153a8fbb-9728-4adc-b1f6-4dfda358c1d4:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 925217aa-5944-48da-838f-f2dec1b208d8
+              stepCounter: 153a8fbb-9728-4adc-b1f6-4dfda358c1d4
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_SUB_SEASONS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1a2c7bf6-f7a9-4b31-9aa3-fa1fe85eac63
+                    stepCounter: 19c3b010-8634-439c-9169-c0384aeaddca
+                transform: ""
+          - columnReference:
+              columnCounter: 1431395d-c8b9-4f50-8ec6-a3d974787771
+              stepCounter: 153a8fbb-9728-4adc-b1f6-4dfda358c1d4
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 87e3260a-98b7-4f53-ab84-ba909bd26129
+                    stepCounter: 19c3b010-8634-439c-9169-c0384aeaddca
+                transform: ""
+          - columnReference:
+              columnCounter: d2333057-8405-4df6-8712-50ce60a44bf3
+              stepCounter: 153a8fbb-9728-4adc-b1f6-4dfda358c1d4
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1d58dba3-ee85-4e71-9df7-9cd38e30727c
+                    stepCounter: 19c3b010-8634-439c-9169-c0384aeaddca
+                transform: ""
+          - columnReference:
+              columnCounter: 1ed82430-60f3-425a-a00a-d089b6224e52
+              stepCounter: 153a8fbb-9728-4adc-b1f6-4dfda358c1d4
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: aaeb0b50-9360-4366-b065-872fa08ce418
+                    stepCounter: 19c3b010-8634-439c-9169-c0384aeaddca
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SPORTS_EVENTS_SUB_SEASONS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SPORTS_EVENTS_SUB_SEASONS') }} "DVSTG_SPORTS_EVENTS_SUB_SEASONS"
+            name: SATV0_SPORTS_EVENTS_SUB_SEASONS
+            noLinkRefs: []
+      name: SATV0_SPORTS_EVENTS_SUB_SEASONS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: 153a8fbb-9728-4adc-b1f6-4dfda358c1d4

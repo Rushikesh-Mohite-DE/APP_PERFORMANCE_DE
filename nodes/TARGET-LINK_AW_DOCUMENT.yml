@@ -1,0 +1,301 @@
+steps:
+  LINK_AW_DOCUMENT-e4516a95-fbc2-4882-960a-cfa9b24920ed:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 8e2c2713-5671-40e7-a3b2-27a53c7cbf4c
+              stepCounter: e4516a95-fbc2-4882-960a-cfa9b24920ed
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_DOCUMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 18939d68-273d-4219-8158-3894e6d70bc6
+                    stepCounter: 66af7187-ab44-4dc8-861d-337afc030f1e
+                transform: ""
+          - columnReference:
+              columnCounter: 52281043-df27-4942-917e-5ae3b65e683f
+              stepCounter: e4516a95-fbc2-4882-960a-cfa9b24920ed
+            dataType: VARCHAR(16777216)
+            description: Primary key for Document records.
+            hashColumns: []
+            hashDetails: null
+            name: DOCUMENTNODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0fce4a00-e7a0-4cd2-89ad-87af5f36637a
+                    stepCounter: 66af7187-ab44-4dc8-861d-337afc030f1e
+                transform: ""
+          - columnReference:
+              columnCounter: 22d64035-8868-4322-9a1e-7ba812872d58
+              stepCounter: e4516a95-fbc2-4882-960a-cfa9b24920ed
+            dataType: VARCHAR(16777216)
+            description: Depth in the document hierarchy.
+            hashColumns: []
+            hashDetails: null
+            name: DOCUMENTLEVEL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1d51233f-5cd1-4818-9379-577d7aa11326
+                    stepCounter: 66af7187-ab44-4dc8-861d-337afc030f1e
+                transform: ""
+          - columnReference:
+              columnCounter: c3374bac-aba6-4176-9811-32ab7f767093
+              stepCounter: e4516a95-fbc2-4882-960a-cfa9b24920ed
+            dataType: VARCHAR(50)
+            description: Title of the document.
+            hashColumns: []
+            hashDetails: null
+            name: TITLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3589a5c2-5559-44a3-b765-2491dd521bd2
+                    stepCounter: 66af7187-ab44-4dc8-861d-337afc030f1e
+                transform: ""
+          - columnReference:
+              columnCounter: 79e0093b-9618-407d-80d5-9fe8dedbc6c5
+              stepCounter: e4516a95-fbc2-4882-960a-cfa9b24920ed
+            dataType: VARCHAR(16777216)
+            description: Employee who controls the document.  Foreign key to Employee.BusinessEntityID
+            hashColumns: []
+            hashDetails: null
+            name: OWNER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e68c1335-9867-4422-af7d-f9790975a5d5
+                    stepCounter: 66af7187-ab44-4dc8-861d-337afc030f1e
+                transform: ""
+          - columnReference:
+              columnCounter: 8de5ea08-53d0-45d2-80ff-5851699bea07
+              stepCounter: e4516a95-fbc2-4882-960a-cfa9b24920ed
+            dataType: VARCHAR(20)
+            description: 0 = This is a folder, 1 = This is a document.
+            hashColumns: []
+            hashDetails: null
+            name: FOLDERFLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8cb76e6d-5a88-44bb-81cb-3dbcc131830d
+                    stepCounter: 66af7187-ab44-4dc8-861d-337afc030f1e
+                transform: ""
+          - columnReference:
+              columnCounter: 5afefde8-b57b-41b5-8132-1a3e06432e3c
+              stepCounter: e4516a95-fbc2-4882-960a-cfa9b24920ed
+            dataType: VARCHAR(400)
+            description: File name of the document
+            hashColumns: []
+            hashDetails: null
+            name: FILENAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 59579bf0-80ba-40da-92e0-27461953088b
+                    stepCounter: 66af7187-ab44-4dc8-861d-337afc030f1e
+                transform: ""
+          - columnReference:
+              columnCounter: b61fb6a5-70ac-4196-afd2-7d732612f09b
+              stepCounter: e4516a95-fbc2-4882-960a-cfa9b24920ed
+            dataType: VARCHAR(8)
+            description: File extension indicating the document type. For example, .doc or .txt.
+            hashColumns: []
+            hashDetails: null
+            name: FILEEXTENSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: be292040-e978-41e2-bbb4-906945f4deeb
+                    stepCounter: 66af7187-ab44-4dc8-861d-337afc030f1e
+                transform: ""
+          - columnReference:
+              columnCounter: 6524f8a2-a2ab-4b4b-b963-5bf22cc99ab0
+              stepCounter: e4516a95-fbc2-4882-960a-cfa9b24920ed
+            dataType: VARCHAR(5)
+            description: Revision number of the document.
+            hashColumns: []
+            hashDetails: null
+            name: REVISION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2089b190-b1f8-4c9f-81e6-28d863c3c80d
+                    stepCounter: 66af7187-ab44-4dc8-861d-337afc030f1e
+                transform: ""
+          - columnReference:
+              columnCounter: 84a95792-4afb-496f-8bd0-bbe30da2f35c
+              stepCounter: e4516a95-fbc2-4882-960a-cfa9b24920ed
+            dataType: VARCHAR(16777216)
+            description: Engineering change approval number.
+            hashColumns: []
+            hashDetails: null
+            name: CHANGENUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d817b39b-bdca-403f-b755-48a4c24f3e76
+                    stepCounter: 66af7187-ab44-4dc8-861d-337afc030f1e
+                transform: ""
+          - columnReference:
+              columnCounter: caff4395-4ce5-41d1-9be9-4048c7f86210
+              stepCounter: e4516a95-fbc2-4882-960a-cfa9b24920ed
+            dataType: VARCHAR(16777216)
+            description: 1 = Pending approval, 2 = Approved, 3 = Obsolete
+            hashColumns: []
+            hashDetails: null
+            name: STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c5ff1431-d72d-4933-9b42-179b02fb7c5e
+                    stepCounter: 66af7187-ab44-4dc8-861d-337afc030f1e
+                transform: ""
+          - columnReference:
+              columnCounter: 1dd917cb-fec3-4b8c-92fe-baad1195e048
+              stepCounter: e4516a95-fbc2-4882-960a-cfa9b24920ed
+            dataType: VARCHAR(4000)
+            description: Document abstract.
+            hashColumns: []
+            hashDetails: null
+            name: DOCUMENTSUMMARY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4b92bbc6-fed5-49d8-89c4-36287715566a
+                    stepCounter: 66af7187-ab44-4dc8-861d-337afc030f1e
+                transform: ""
+          - columnReference:
+              columnCounter: f5cdd687-cb05-4d39-9c67-d98b87194647
+              stepCounter: e4516a95-fbc2-4882-960a-cfa9b24920ed
+            dataType: VARCHAR(16777216)
+            description: Complete document.
+            hashColumns: []
+            hashDetails: null
+            name: DOCUMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5164427c-b1d5-4be2-83c5-8d1543731b14
+                    stepCounter: 66af7187-ab44-4dc8-861d-337afc030f1e
+                transform: ""
+          - columnReference:
+              columnCounter: 26561a49-fa48-4233-b717-6d78b0afba84
+              stepCounter: e4516a95-fbc2-4882-960a-cfa9b24920ed
+            dataType: VARCHAR(16777216)
+            description: ROWGUIDCOL number uniquely identifying the record. Required for FileStream.
+            hashColumns: []
+            hashDetails: null
+            name: ROWGUID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 465c0428-69cc-42e9-950b-f501ba22d23b
+                    stepCounter: 66af7187-ab44-4dc8-861d-337afc030f1e
+                transform: ""
+          - columnReference:
+              columnCounter: e6acf9ee-2bc2-4858-8019-04de86724fe3
+              stepCounter: e4516a95-fbc2-4882-960a-cfa9b24920ed
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            hashColumns: []
+            hashDetails: null
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 638142d0-88d0-412d-9c2e-7df5c8b0927e
+                    stepCounter: 66af7187-ab44-4dc8-861d-337afc030f1e
+                transform: ""
+          - columnReference:
+              columnCounter: cb01e81d-a384-4fa4-9ea1-9fbd2e251b6d
+              stepCounter: e4516a95-fbc2-4882-960a-cfa9b24920ed
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 56a85a09-1b88-43e2-a687-20d2ac034db9
+                    stepCounter: 66af7187-ab44-4dc8-861d-337afc030f1e
+                transform: ""
+          - columnReference:
+              columnCounter: 5b9f3740-f938-414c-acd5-a63832ca74b3
+              stepCounter: e4516a95-fbc2-4882-960a-cfa9b24920ed
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2bae1224-ee2f-43d6-b2b7-03bb65c66470
+                    stepCounter: 66af7187-ab44-4dc8-861d-337afc030f1e
+                transform: ""
+          - columnReference:
+              columnCounter: 272da6f4-2c4a-46a4-88cd-40a979b121af
+              stepCounter: e4516a95-fbc2-4882-960a-cfa9b24920ed
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a69a0221-09e7-4547-b786-ff1d5b8e359b
+                    stepCounter: 66af7187-ab44-4dc8-861d-337afc030f1e
+                transform: ""
+          - columnReference:
+              columnCounter: 80b01131-05ef-4e09-ba18-e90c07a25267
+              stepCounter: e4516a95-fbc2-4882-960a-cfa9b24920ed
+            config:
+              is_Link_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LNK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 88d373ae-07d3-4403-922b-49b8b7f91d0c
+                    stepCounter: 66af7187-ab44-4dc8-861d-337afc030f1e
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_DOCUMENT
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_DOCUMENT') }} "DVSTG_AW_DOCUMENT"
+            name: LINK_AW_DOCUMENT
+            noLinkRefs: []
+      name: LINK_AW_DOCUMENT
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::7
+      type: sql
+    stepCounter: e4516a95-fbc2-4882-960a-cfa9b24920ed

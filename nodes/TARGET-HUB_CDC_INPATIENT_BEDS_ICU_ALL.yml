@@ -1,0 +1,119 @@
+steps:
+  HUB_CDC_INPATIENT_BEDS_ICU_ALL-e1386328-29f9-43cf-9bbd-98cbaf8bc987:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: ecd94ac3-ac4e-447e-997b-5c7f38b0b721
+              stepCounter: e1386328-29f9-43cf-9bbd-98cbaf8bc987
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_CDC_INPATIENT_BEDS_ICU_ALL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b575d184-e773-4400-a2ff-564dd68e66b1
+                    stepCounter: 2b9ea545-bc08-4512-886e-d8b9e25c09f2
+                transform: ""
+          - columnReference:
+              columnCounter: 0cfd5137-009b-446e-89d1-e2cead6364ee
+              stepCounter: e1386328-29f9-43cf-9bbd-98cbaf8bc987
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: STATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e3edf5a6-bfb7-4d59-8a4a-b4e28e3d9b1d
+                    stepCounter: 2b9ea545-bc08-4512-886e-d8b9e25c09f2
+                transform: ""
+          - columnReference:
+              columnCounter: e2b8add3-0124-4321-8aef-fb9a31592d1a
+              stepCounter: e1386328-29f9-43cf-9bbd-98cbaf8bc987
+            dataType: VARCHAR(2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ISO3166_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 174b400d-248e-410e-8589-476e1a7a464a
+                    stepCounter: 2b9ea545-bc08-4512-886e-d8b9e25c09f2
+                transform: ""
+          - columnReference:
+              columnCounter: 3f54993f-9e8c-4122-9954-b5a94c53038c
+              stepCounter: e1386328-29f9-43cf-9bbd-98cbaf8bc987
+            dataType: VARCHAR(2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ISO3166_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ae1a3d09-7dbd-4255-90a2-8a766ace120f
+                    stepCounter: 2b9ea545-bc08-4512-886e-d8b9e25c09f2
+                transform: ""
+          - columnReference:
+              columnCounter: 89c1a416-58f0-489a-86a1-c16cfc70ed2d
+              stepCounter: e1386328-29f9-43cf-9bbd-98cbaf8bc987
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 16471ff2-c422-45c9-bfa9-a03588da5689
+                    stepCounter: 2b9ea545-bc08-4512-886e-d8b9e25c09f2
+                transform: ""
+          - columnReference:
+              columnCounter: cccd20f0-d2de-431c-9063-fdd10c94218c
+              stepCounter: e1386328-29f9-43cf-9bbd-98cbaf8bc987
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f919e9f9-558c-43a9-ba23-c8d1a842ad79
+                    stepCounter: 2b9ea545-bc08-4512-886e-d8b9e25c09f2
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_CDC_INPATIENT_BEDS_ICU_ALL
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_CDC_INPATIENT_BEDS_ICU_ALL') }} "DVSTG_CDC_INPATIENT_BEDS_ICU_ALL"
+            name: HUB_CDC_INPATIENT_BEDS_ICU_ALL
+            noLinkRefs: []
+      name: HUB_CDC_INPATIENT_BEDS_ICU_ALL
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: e1386328-29f9-43cf-9bbd-98cbaf8bc987

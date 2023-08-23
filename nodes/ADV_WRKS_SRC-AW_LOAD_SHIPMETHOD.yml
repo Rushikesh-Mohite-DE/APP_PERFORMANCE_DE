@@ -1,0 +1,109 @@
+steps:
+  AW_LOAD_SHIPMETHOD-4ecb5ff9-d48e-4e30-a40e-ce1a691c3fde:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: ADV_WRKS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 86bef072-d504-4bba-901a-75aaa3442bd1
+              stepCounter: 4ecb5ff9-d48e-4e30-a40e-ce1a691c3fde
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Primary key for ShipMethod records.
+            name: SHIPMETHODID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2c6f8b6a-4140-4efd-9f3f-4187398da24d
+              stepCounter: 4ecb5ff9-d48e-4e30-a40e-ce1a691c3fde
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: Shipping company name.
+            name: NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a6fdb38d-30f5-436a-a489-682c8f13b800
+              stepCounter: 4ecb5ff9-d48e-4e30-a40e-ce1a691c3fde
+            config: {}
+            dataType: NUMBER(19,4)
+            defaultValue: ""
+            description: Minimum shipping charge.
+            name: SHIPBASE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d3a0b469-be4e-4697-a2d1-7c20846eaa57
+              stepCounter: 4ecb5ff9-d48e-4e30-a40e-ce1a691c3fde
+            config: {}
+            dataType: NUMBER(19,4)
+            defaultValue: ""
+            description: Shipping charge per pound.
+            name: SHIPRATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d28ca250-e7ec-46ab-8565-1b3d1a6a3ca3
+              stepCounter: 4ecb5ff9-d48e-4e30-a40e-ce1a691c3fde
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            name: ROWGUID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fcd4ee2e-eb9e-4eeb-b509-00ab95479139
+              stepCounter: 4ecb5ff9-d48e-4e30-a40e-ce1a691c3fde
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_SHIPMETHOD') }}
+      name: AW_LOAD_SHIPMETHOD
+      schema: ""
+      sqlType: Source
+      table: AW_LOAD_SHIPMETHOD
+      type: sourceInput
+    stepCounter: 4ecb5ff9-d48e-4e30-a40e-ce1a691c3fde

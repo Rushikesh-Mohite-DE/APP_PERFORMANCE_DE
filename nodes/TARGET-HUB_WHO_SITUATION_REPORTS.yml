@@ -1,0 +1,105 @@
+steps:
+  HUB_WHO_SITUATION_REPORTS-e50195bb-fdb3-4fab-80bc-be2985886333:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: WHO situation reports
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: b63a7f0d-61c2-484c-8878-759f5a58ca54
+              stepCounter: e50195bb-fdb3-4fab-80bc-be2985886333
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_WHO_SITUATION_REPORTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3ba75f18-e012-4883-9309-c81e0587f0f6
+                    stepCounter: 6b5e998b-445e-4b64-b1f0-619f8e574a29
+                transform: ""
+          - columnReference:
+              columnCounter: eabd5ad9-8303-49d3-90be-5da727cdb820
+              stepCounter: e50195bb-fdb3-4fab-80bc-be2985886333
+            dataType: VARCHAR(16777216)
+            description: Country name
+            hashColumns: []
+            hashDetails: null
+            name: COUNTRY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 76ffe2ad-67d0-411b-b16f-91f19f18ff65
+                    stepCounter: 6b5e998b-445e-4b64-b1f0-619f8e574a29
+                transform: ""
+          - columnReference:
+              columnCounter: d26c3bf6-1f88-4efc-9510-96e5a8daa091
+              stepCounter: e50195bb-fdb3-4fab-80bc-be2985886333
+            dataType: VARCHAR(16777216)
+            description: ISO 3166-1 code for geography of record
+            hashColumns: []
+            hashDetails: null
+            name: ISO3166_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 62ba9e12-e43a-428b-b58f-ddd2fb3b2840
+                    stepCounter: 6b5e998b-445e-4b64-b1f0-619f8e574a29
+                transform: ""
+          - columnReference:
+              columnCounter: 56281e10-deb3-4862-9549-9038e0a58114
+              stepCounter: e50195bb-fdb3-4fab-80bc-be2985886333
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a0d63a62-89d2-4f74-80fd-887431e07843
+                    stepCounter: 6b5e998b-445e-4b64-b1f0-619f8e574a29
+                transform: ""
+          - columnReference:
+              columnCounter: b54633ab-f626-4d7c-9c43-3dc572c79b58
+              stepCounter: e50195bb-fdb3-4fab-80bc-be2985886333
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 929adadf-19c8-419f-83f0-f466dd113836
+                    stepCounter: 6b5e998b-445e-4b64-b1f0-619f8e574a29
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_WHO_SITUATION_REPORTS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_WHO_SITUATION_REPORTS') }} "DVSTG_WHO_SITUATION_REPORTS"
+            name: HUB_WHO_SITUATION_REPORTS
+            noLinkRefs: []
+      name: HUB_WHO_SITUATION_REPORTS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: e50195bb-fdb3-4fab-80bc-be2985886333

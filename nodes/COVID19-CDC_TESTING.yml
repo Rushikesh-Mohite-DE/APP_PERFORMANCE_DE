@@ -1,0 +1,109 @@
+steps:
+  CDC_TESTING-eb21b089-af8e-41ad-8d6c-8ffc82fd3670:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: COVID19
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3d50c71e-fddc-4b57-b207-d184111a1c9e
+              stepCounter: eb21b089-af8e-41ad-8d6c-8ffc82fd3670
+            config: {}
+            dataType: VARCHAR(2)
+            defaultValue: ""
+            description: ""
+            name: ISO3166_1
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fe56dcd5-9382-49fb-9c37-fdad1ecab39b
+              stepCounter: eb21b089-af8e-41ad-8d6c-8ffc82fd3670
+            config: {}
+            dataType: VARCHAR(2)
+            defaultValue: ""
+            description: ""
+            name: ISO3166_2
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 65c03c73-54c3-4494-bf18-87d569b8ac08
+              stepCounter: eb21b089-af8e-41ad-8d6c-8ffc82fd3670
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: DATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 64613780-8ad3-4d7b-ab72-c792df64d810
+              stepCounter: eb21b089-af8e-41ad-8d6c-8ffc82fd3670
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: POSITIVE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 56946256-d096-4593-8b3b-49e1ec3814d1
+              stepCounter: eb21b089-af8e-41ad-8d6c-8ffc82fd3670
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: NEGATIVE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c836be65-836f-41ec-9cc9-dce628bb3a16
+              stepCounter: eb21b089-af8e-41ad-8d6c-8ffc82fd3670
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: INCONCLUSIVE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('COVID19', 'CDC_TESTING') }}
+      name: CDC_TESTING
+      schema: ""
+      sqlType: Source
+      table: CDC_TESTING
+      type: sourceInput
+    stepCounter: eb21b089-af8e-41ad-8d6c-8ffc82fd3670

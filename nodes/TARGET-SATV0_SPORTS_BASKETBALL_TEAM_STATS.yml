@@ -1,0 +1,149 @@
+steps:
+  SATV0_SPORTS_BASKETBALL_TEAM_STATS-9252fab1-8800-4dd8-a9a5-16dc3f5a148a:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: f0888491-447b-4198-bff2-8ab16acede99
+              stepCounter: 9252fab1-8800-4dd8-a9a5-16dc3f5a148a
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_TEAM_STATS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4f7826ac-2fca-40b7-8e67-c9afa66ee004
+                    stepCounter: d87445b2-4284-4b02-a379-8e5e4878c6f0
+                transform: ""
+          - columnReference:
+              columnCounter: 43897b6e-ec62-4fda-98e6-aceafbf63350
+              stepCounter: 9252fab1-8800-4dd8-a9a5-16dc3f5a148a
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: TIMEOUTS_LEFT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1a3d320a-be33-482f-b0fc-07691c678548
+                    stepCounter: d87445b2-4284-4b02-a379-8e5e4878c6f0
+                transform: ""
+          - columnReference:
+              columnCounter: 2218ba74-5ea9-4a40-8c1c-de31b7c3d64e
+              stepCounter: 9252fab1-8800-4dd8-a9a5-16dc3f5a148a
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LARGEST_LEAD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 04048622-cc70-4bc6-81ab-1173cfc317e1
+                    stepCounter: d87445b2-4284-4b02-a379-8e5e4878c6f0
+                transform: ""
+          - columnReference:
+              columnCounter: 177837d2-4f7e-4e30-b172-61064b40ccfa
+              stepCounter: 9252fab1-8800-4dd8-a9a5-16dc3f5a148a
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: FOULS_TOTAL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8a4b6cf1-083f-4b93-8fd2-219270334000
+                    stepCounter: d87445b2-4284-4b02-a379-8e5e4878c6f0
+                transform: ""
+          - columnReference:
+              columnCounter: fbc17282-1d6f-4346-a59d-a2818fa3d0cf
+              stepCounter: 9252fab1-8800-4dd8-a9a5-16dc3f5a148a
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: TURNOVER_MARGIN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bf7e21f2-31ce-465b-93a8-e3e3f324a2e8
+                    stepCounter: d87445b2-4284-4b02-a379-8e5e4878c6f0
+                transform: ""
+          - columnReference:
+              columnCounter: fd4238c2-dbc7-428b-9fb9-5e232695ea93
+              stepCounter: 9252fab1-8800-4dd8-a9a5-16dc3f5a148a
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a49bf7bd-1e6f-4c94-b7e4-bb907e3d43dc
+                    stepCounter: d87445b2-4284-4b02-a379-8e5e4878c6f0
+                transform: ""
+          - columnReference:
+              columnCounter: d3977e81-439b-477a-92f4-9b5a7a117ac1
+              stepCounter: 9252fab1-8800-4dd8-a9a5-16dc3f5a148a
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 186d8c7c-c2da-46a9-95af-362d2df8dee1
+                    stepCounter: d87445b2-4284-4b02-a379-8e5e4878c6f0
+                transform: ""
+          - columnReference:
+              columnCounter: 5ee23c76-0ca8-4c3d-912e-f43ee733a251
+              stepCounter: 9252fab1-8800-4dd8-a9a5-16dc3f5a148a
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ca458adc-5606-4d02-bb50-63ce32735617
+                    stepCounter: d87445b2-4284-4b02-a379-8e5e4878c6f0
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SPORTS_BASKETBALL_TEAM_STATS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SPORTS_BASKETBALL_TEAM_STATS') }} "DVSTG_SPORTS_BASKETBALL_TEAM_STATS"
+            name: SATV0_SPORTS_BASKETBALL_TEAM_STATS
+            noLinkRefs: []
+      name: SATV0_SPORTS_BASKETBALL_TEAM_STATS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: 9252fab1-8800-4dd8-a9a5-16dc3f5a148a

@@ -1,0 +1,105 @@
+steps:
+  HUB_AW_STATEPROVINCE-3123b88f-8144-4150-a610-b1508c3a9cb5:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: d7651e99-7c11-4b26-bfdb-4fd2960188da
+              stepCounter: 3123b88f-8144-4150-a610-b1508c3a9cb5
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_STATEPROVINCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c5687af0-f4fe-4eb6-9227-a920cc4ec613
+                    stepCounter: 15dcfaff-b654-47e6-a547-550033ca53ed
+                transform: ""
+          - columnReference:
+              columnCounter: c17078db-6a3a-4c20-b0b7-c84498b770d0
+              stepCounter: 3123b88f-8144-4150-a610-b1508c3a9cb5
+            dataType: NUMBER(38,0)
+            description: Primary key for StateProvince records.
+            hashColumns: []
+            hashDetails: null
+            name: STATEPROVINCEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3b9a8457-8ff5-4f27-b010-111419422c35
+                    stepCounter: 15dcfaff-b654-47e6-a547-550033ca53ed
+                transform: ""
+          - columnReference:
+              columnCounter: bac3ebb7-adef-4a1e-80e7-826d24d58de0
+              stepCounter: 3123b88f-8144-4150-a610-b1508c3a9cb5
+            dataType: NUMBER(38,0)
+            description: ID of the territory in which the state or province is located. Foreign key to SalesTerritory.SalesTerritoryID.
+            hashColumns: []
+            hashDetails: null
+            name: TERRITORYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 994c26f3-53b4-459e-9dc1-df9854625fc5
+                    stepCounter: 15dcfaff-b654-47e6-a547-550033ca53ed
+                transform: ""
+          - columnReference:
+              columnCounter: 96a054b3-f010-447f-87dd-5dd6b43a343c
+              stepCounter: 3123b88f-8144-4150-a610-b1508c3a9cb5
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e6ccefbf-9edb-4e6d-9e6d-fbd51ac17be3
+                    stepCounter: 15dcfaff-b654-47e6-a547-550033ca53ed
+                transform: ""
+          - columnReference:
+              columnCounter: b84a164b-d866-4252-aec1-9eb0d69de7cd
+              stepCounter: 3123b88f-8144-4150-a610-b1508c3a9cb5
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5af8372a-66cd-4f12-a881-a468ac3f4b5a
+                    stepCounter: 15dcfaff-b654-47e6-a547-550033ca53ed
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_STATEPROVINCE
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_STATEPROVINCE') }} "DVSTG_AW_STATEPROVINCE"
+            name: HUB_AW_STATEPROVINCE
+            noLinkRefs: []
+      name: HUB_AW_STATEPROVINCE
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 3123b88f-8144-4150-a610-b1508c3a9cb5

@@ -1,0 +1,289 @@
+steps:
+  SATV0_HDX_ACAPS-829b19e7-b679-432b-94ab-91ff2511bb0a:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ACAPS data on international public health measures
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 682e91df-6dd7-4c38-aadf-8a0052ef01a1
+              stepCounter: 829b19e7-b679-432b-94ab-91ff2511bb0a
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_HDX_ACAPS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b2698241-b871-4b13-8c1b-1d43fa39db68
+                    stepCounter: 87a1a526-4b16-4765-9621-0cd83aafeba0
+                transform: ""
+          - columnReference:
+              columnCounter: c5f9fe9f-d131-4fba-a79f-397f415ba46a
+              stepCounter: 829b19e7-b679-432b-94ab-91ff2511bb0a
+            dataType: VARCHAR(1024)
+            description: ISO3316-2 entity name where available
+            hashColumns: []
+            hashDetails: null
+            name: ADMIN_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f3586afc-f3a6-4b50-ad13-ebd2462b50e7
+                    stepCounter: 87a1a526-4b16-4765-9621-0cd83aafeba0
+                transform: ""
+          - columnReference:
+              columnCounter: ff912db6-f71b-43b1-9393-2aa546add4b4
+              stepCounter: 829b19e7-b679-432b-94ab-91ff2511bb0a
+            dataType: VARCHAR(128)
+            description: Category of public health measure
+            hashColumns: []
+            hashDetails: null
+            name: CATEGORY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4a5bdfd1-01ec-41a9-a122-2bd3664d90c0
+                    stepCounter: 87a1a526-4b16-4765-9621-0cd83aafeba0
+                transform: ""
+          - columnReference:
+              columnCounter: c43a23c0-9ab8-40c2-a0c2-f1ed4cdd661e
+              stepCounter: 829b19e7-b679-432b-94ab-91ff2511bb0a
+            dataType: VARCHAR(128)
+            description: Description of public health measure
+            hashColumns: []
+            hashDetails: null
+            name: MEASURE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: eb601513-8637-4352-b5c4-133310646393
+                    stepCounter: 87a1a526-4b16-4765-9621-0cd83aafeba0
+                transform: ""
+          - columnReference:
+              columnCounter: e2ce6dd0-a893-4d87-a5a0-2042c1fbe512
+              stepCounter: 829b19e7-b679-432b-94ab-91ff2511bb0a
+            dataType: VARCHAR(128)
+            description: Yes if measure is targeted at a group of the population
+            hashColumns: []
+            hashDetails: null
+            name: TARGETED_POP_GROUP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7e300972-ca68-4063-99bb-262fec20daba
+                    stepCounter: 87a1a526-4b16-4765-9621-0cd83aafeba0
+                transform: ""
+          - columnReference:
+              columnCounter: af8250e6-9cfe-4525-b8aa-de9350ef315a
+              stepCounter: 829b19e7-b679-432b-94ab-91ff2511bb0a
+            dataType: VARCHAR(10000)
+            description: Comments
+            hashColumns: []
+            hashDetails: null
+            name: COMMENTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: aadbbf01-d1d6-46fb-a469-e31b0af024b9
+                    stepCounter: 87a1a526-4b16-4765-9621-0cd83aafeba0
+                transform: ""
+          - columnReference:
+              columnCounter: 083100ac-9db8-4915-8990-4cb325e9bdf9
+              stepCounter: 829b19e7-b679-432b-94ab-91ff2511bb0a
+            dataType: VARCHAR(128)
+            description: Consequences of non-compliance
+            hashColumns: []
+            hashDetails: null
+            name: NON_COMPLIANCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2197fa0c-b828-4972-b664-00978900646a
+                    stepCounter: 87a1a526-4b16-4765-9621-0cd83aafeba0
+                transform: ""
+          - columnReference:
+              columnCounter: 04b8833d-ce87-4067-9ae1-1efd79d17136
+              stepCounter: 829b19e7-b679-432b-94ab-91ff2511bb0a
+            dataType: DATE
+            description: Date of implementation
+            hashColumns: []
+            hashDetails: null
+            name: DATE_IMPLEMENTED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 73b9ede3-bfb6-48a8-b824-5ad44cee4da7
+                    stepCounter: 87a1a526-4b16-4765-9621-0cd83aafeba0
+                transform: ""
+          - columnReference:
+              columnCounter: b4261d98-2734-453e-b4fc-ab9f04430074
+              stepCounter: 829b19e7-b679-432b-94ab-91ff2511bb0a
+            dataType: VARCHAR(1024)
+            description: Source of information on the public health measure
+            hashColumns: []
+            hashDetails: null
+            name: SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c6f7a688-026f-46ba-b8c5-26a37a89e690
+                    stepCounter: 87a1a526-4b16-4765-9621-0cd83aafeba0
+                transform: ""
+          - columnReference:
+              columnCounter: fd613949-b9f9-411b-9171-801f7e786ff8
+              stepCounter: 829b19e7-b679-432b-94ab-91ff2511bb0a
+            dataType: VARCHAR(128)
+            description: Type of the source of information on the public health measure
+            hashColumns: []
+            hashDetails: null
+            name: SOURCE_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3afa7536-9263-4823-aa69-3b93d3febf91
+                    stepCounter: 87a1a526-4b16-4765-9621-0cd83aafeba0
+                transform: ""
+          - columnReference:
+              columnCounter: 7742fc94-cb8d-430f-8dd7-c854c259110c
+              stepCounter: 829b19e7-b679-432b-94ab-91ff2511bb0a
+            dataType: VARCHAR(4096)
+            description: Link to original source of information on the public health measure
+            hashColumns: []
+            hashDetails: null
+            name: LINK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 623bb5a0-36b3-4076-9612-d509e1e8904c
+                    stepCounter: 87a1a526-4b16-4765-9621-0cd83aafeba0
+                transform: ""
+          - columnReference:
+              columnCounter: e607078f-c3a8-42c0-8f53-706283e98800
+              stepCounter: 829b19e7-b679-432b-94ab-91ff2511bb0a
+            dataType: DATE
+            description: Date of entry into effect of the public health measure
+            hashColumns: []
+            hashDetails: null
+            name: ENTRY_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d27d3b47-e79d-4776-b918-50d0a304de2d
+                    stepCounter: 87a1a526-4b16-4765-9621-0cd83aafeba0
+                transform: ""
+          - columnReference:
+              columnCounter: 31079125-1af2-4cc1-a1f5-6763cc8c94d6
+              stepCounter: 829b19e7-b679-432b-94ab-91ff2511bb0a
+            dataType: VARCHAR(2)
+            description: ISO-3166-1 code for geography of record
+            hashColumns: []
+            hashDetails: null
+            name: ISO3166_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1dfb30ce-acdf-4878-bb11-366cde5ede53
+                    stepCounter: 87a1a526-4b16-4765-9621-0cd83aafeba0
+                transform: ""
+          - columnReference:
+              columnCounter: 3dfb938c-41c7-48bc-960d-0f76f074574b
+              stepCounter: 829b19e7-b679-432b-94ab-91ff2511bb0a
+            dataType: TIMESTAMP_NTZ(9)
+            description: Timestamp of last update (UTC)
+            hashColumns: []
+            hashDetails: null
+            name: LAST_UPDATED_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e10358b6-2894-44c8-8d5d-51e70b7eada8
+                    stepCounter: 87a1a526-4b16-4765-9621-0cd83aafeba0
+                transform: ""
+          - columnReference:
+              columnCounter: f29fd51d-472f-4c41-b640-5fea704dae91
+              stepCounter: 829b19e7-b679-432b-94ab-91ff2511bb0a
+            dataType: VARCHAR(16777216)
+            description: Type of entry (introduction, phase out, etc)
+            hashColumns: []
+            hashDetails: null
+            name: LOG_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b2c3ec45-7fb0-4dd2-aa94-5c61d3bd8efb
+                    stepCounter: 87a1a526-4b16-4765-9621-0cd83aafeba0
+                transform: ""
+          - columnReference:
+              columnCounter: 82d77e27-e756-440e-ad9a-0c539ca4c683
+              stepCounter: 829b19e7-b679-432b-94ab-91ff2511bb0a
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 194b5356-e68d-4b92-8876-906d958e07b3
+                    stepCounter: 87a1a526-4b16-4765-9621-0cd83aafeba0
+                transform: ""
+          - columnReference:
+              columnCounter: 1f2363e3-7926-4730-81bf-0840ebb7fb8f
+              stepCounter: 829b19e7-b679-432b-94ab-91ff2511bb0a
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d6d5b896-9add-41f3-968b-5641d8b6b3ac
+                    stepCounter: 87a1a526-4b16-4765-9621-0cd83aafeba0
+                transform: ""
+          - columnReference:
+              columnCounter: 2168de06-8e27-44c4-a1a7-1c5f4c4b467d
+              stepCounter: 829b19e7-b679-432b-94ab-91ff2511bb0a
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0721b708-9804-42b4-b47b-a2f1184b867d
+                    stepCounter: 87a1a526-4b16-4765-9621-0cd83aafeba0
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_HDX_ACAPS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_HDX_ACAPS') }} "DVSTG_HDX_ACAPS"
+            name: SATV0_HDX_ACAPS
+            noLinkRefs: []
+      name: SATV0_HDX_ACAPS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: 829b19e7-b679-432b-94ab-91ff2511bb0a

@@ -1,0 +1,231 @@
+steps:
+  LINK_AW_BILLOFMATERIALS-2eafcbae-6ba5-46e0-a97b-5e38d2363215:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: ed9eecbb-f4f6-4235-a037-ba9fb2087c45
+              stepCounter: 2eafcbae-6ba5-46e0-a97b-5e38d2363215
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_BILLOFMATERIALS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 38960c03-6586-4fed-98e7-0705e7a406a6
+                    stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
+                transform: ""
+          - columnReference:
+              columnCounter: 0061d543-0ef8-4f09-a3cc-a5ab172cb6b6
+              stepCounter: 2eafcbae-6ba5-46e0-a97b-5e38d2363215
+            dataType: NUMBER(38,0)
+            description: Primary key for BillOfMaterials records.
+            hashColumns: []
+            hashDetails: null
+            name: BILLOFMATERIALSID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a77f738a-1f20-466f-92e8-597bb912fa15
+                    stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
+                transform: ""
+          - columnReference:
+              columnCounter: e1c7bf8d-0f3f-4745-a4d7-1e8414f68471
+              stepCounter: 2eafcbae-6ba5-46e0-a97b-5e38d2363215
+            dataType: VARCHAR(16777216)
+            description: Parent product identification number. Foreign key to Product.ProductID.
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCTASSEMBLYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fef785b6-5ba3-4efc-9ef1-b201fdf6c47f
+                    stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
+                transform: ""
+          - columnReference:
+              columnCounter: 3c7da378-5329-4c70-a334-8b29cb00fdbf
+              stepCounter: 2eafcbae-6ba5-46e0-a97b-5e38d2363215
+            dataType: NUMBER(38,0)
+            description: Component identification number. Foreign key to Product.ProductID.
+            hashColumns: []
+            hashDetails: null
+            name: COMPONENTID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 991d17f7-766b-431d-af1b-5537c30b6347
+                    stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
+                transform: ""
+          - columnReference:
+              columnCounter: 32cafd6c-f6cb-43b6-926d-e612a0106e21
+              stepCounter: 2eafcbae-6ba5-46e0-a97b-5e38d2363215
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date the component started being used in the assembly item.
+            hashColumns: []
+            hashDetails: null
+            name: STARTDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: be398c37-76ed-4414-b983-f16738f9abfc
+                    stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
+                transform: ""
+          - columnReference:
+              columnCounter: c7879e9c-c5c9-470a-ab5a-26cd93ed0100
+              stepCounter: 2eafcbae-6ba5-46e0-a97b-5e38d2363215
+            dataType: VARCHAR(16777216)
+            description: Date the component stopped being used in the assembly item.
+            hashColumns: []
+            hashDetails: null
+            name: ENDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 523afda7-aa57-4ab6-9e29-525a1982d155
+                    stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
+                transform: ""
+          - columnReference:
+              columnCounter: a619699f-e895-46f0-a72d-0cf1764e87a3
+              stepCounter: 2eafcbae-6ba5-46e0-a97b-5e38d2363215
+            dataType: VARCHAR(3)
+            description: Standard code identifying the unit of measure for the quantity.
+            hashColumns: []
+            hashDetails: null
+            name: UNITMEASURECODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b94e9d95-3e2c-432e-9373-881cddbe4c4e
+                    stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
+                transform: ""
+          - columnReference:
+              columnCounter: ec7623e0-b71c-49a0-960f-a2c6d2d5db01
+              stepCounter: 2eafcbae-6ba5-46e0-a97b-5e38d2363215
+            dataType: NUMBER(38,0)
+            description: Indicates the depth the component is from its parent (AssemblyID).
+            hashColumns: []
+            hashDetails: null
+            name: BOMLEVEL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ad673452-2fee-4b68-91ec-0ac9bb0e2931
+                    stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
+                transform: ""
+          - columnReference:
+              columnCounter: 24ef17ad-8fda-4ac3-ae79-35ca009e10cf
+              stepCounter: 2eafcbae-6ba5-46e0-a97b-5e38d2363215
+            dataType: NUMBER(8,2)
+            description: Quantity of the component needed to create the assembly.
+            hashColumns: []
+            hashDetails: null
+            name: PERASSEMBLYQTY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5317b1c9-5d8d-4104-8454-b677cc759fc6
+                    stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
+                transform: ""
+          - columnReference:
+              columnCounter: d0ea4507-74e3-4814-a49c-222a7eea24fe
+              stepCounter: 2eafcbae-6ba5-46e0-a97b-5e38d2363215
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            hashColumns: []
+            hashDetails: null
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5d0ab978-07c7-4439-8d19-56eb465a3729
+                    stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
+                transform: ""
+          - columnReference:
+              columnCounter: 5e0c1bbf-cab1-4ad3-b50f-f2c7f57f08e2
+              stepCounter: 2eafcbae-6ba5-46e0-a97b-5e38d2363215
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 15f64856-dec4-4c52-a6b8-f3c290a7ea45
+                    stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
+                transform: ""
+          - columnReference:
+              columnCounter: c240e25b-3166-4b07-998c-58115f979cbe
+              stepCounter: 2eafcbae-6ba5-46e0-a97b-5e38d2363215
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1deefa52-5b15-4d48-bb85-812788ee2f4d
+                    stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
+                transform: ""
+          - columnReference:
+              columnCounter: aca0d17e-192c-4edf-9027-a8a600e5cd72
+              stepCounter: 2eafcbae-6ba5-46e0-a97b-5e38d2363215
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HASH_ROW
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d17be4ea-a0a8-470c-b566-72e94ba0ec6d
+                    stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
+                transform: ""
+          - columnReference:
+              columnCounter: 7524041e-4ae2-4e0e-9864-bf7353d1c626
+              stepCounter: 2eafcbae-6ba5-46e0-a97b-5e38d2363215
+            config:
+              is_Link_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LNK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a41e355e-ab2a-49ef-8f2f-00d38891997a
+                    stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_BILLOFMATERIALS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_BILLOFMATERIALS') }} "DVSTG_AW_BILLOFMATERIALS"
+            name: LINK_AW_BILLOFMATERIALS
+            noLinkRefs: []
+      name: LINK_AW_BILLOFMATERIALS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::7
+      type: sql
+    stepCounter: 2eafcbae-6ba5-46e0-a97b-5e38d2363215

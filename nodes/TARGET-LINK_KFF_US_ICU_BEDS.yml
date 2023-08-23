@@ -1,0 +1,231 @@
+steps:
+  LINK_KFF_US_ICU_BEDS-b8327d32-5b36-4e0d-ad0a-f9c891a88848:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ICU beds, US
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 5d2e44db-e552-4783-9e9c-af0c55ef532e
+              stepCounter: b8327d32-5b36-4e0d-ad0a-f9c891a88848
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_KFF_US_ICU_BEDS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 793cf6ce-25a4-4989-91a6-932fdc50fd21
+                    stepCounter: 13d388a6-e7a1-487f-be1d-47fe4003dcde
+                transform: ""
+          - columnReference:
+              columnCounter: dbac4a56-a950-4760-9c22-c2b44018c90c
+              stepCounter: b8327d32-5b36-4e0d-ad0a-f9c891a88848
+            dataType: VARCHAR(8192)
+            description: ISO-3166-1 entity name
+            hashColumns: []
+            hashDetails: null
+            name: COUNTRY_REGION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1861e6e6-10e2-4460-b2eb-4fa004b20ee5
+                    stepCounter: 13d388a6-e7a1-487f-be1d-47fe4003dcde
+                transform: ""
+          - columnReference:
+              columnCounter: 5fe69eed-05f1-4882-b81a-0d354d684891
+              stepCounter: b8327d32-5b36-4e0d-ad0a-f9c891a88848
+            dataType: VARCHAR(8192)
+            description: ISO-3166-1 code for geography of record
+            hashColumns: []
+            hashDetails: null
+            name: ISO3166_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 76e26d07-92f7-47f0-9bf6-05580e0f4985
+                    stepCounter: 13d388a6-e7a1-487f-be1d-47fe4003dcde
+                transform: ""
+          - columnReference:
+              columnCounter: 815b9411-cda3-4ade-9e0b-4ff7b0d1af88
+              stepCounter: b8327d32-5b36-4e0d-ad0a-f9c891a88848
+            dataType: VARCHAR(8192)
+            description: ISO-3166-2 code for geography of record
+            hashColumns: []
+            hashDetails: null
+            name: ISO3166_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c05252e7-2d31-4ef9-b715-32dc1d0ebd24
+                    stepCounter: 13d388a6-e7a1-487f-be1d-47fe4003dcde
+                transform: ""
+          - columnReference:
+              columnCounter: 591b014e-5edc-4f9c-a11a-5708421213f7
+              stepCounter: b8327d32-5b36-4e0d-ad0a-f9c891a88848
+            dataType: VARCHAR(8192)
+            description: Note/comment
+            hashColumns: []
+            hashDetails: null
+            name: NOTE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f3510d92-93f3-437c-8b08-70393e58a1fd
+                    stepCounter: 13d388a6-e7a1-487f-be1d-47fe4003dcde
+                transform: ""
+          - columnReference:
+              columnCounter: 53f5f52c-ad07-4fdc-add5-ee560992a39a
+              stepCounter: b8327d32-5b36-4e0d-ad0a-f9c891a88848
+            dataType: VARCHAR(8192)
+            description: State
+            hashColumns: []
+            hashDetails: null
+            name: STATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1717cb2f-5d8e-460a-bdac-c5b4254e4cea
+                    stepCounter: 13d388a6-e7a1-487f-be1d-47fe4003dcde
+                transform: ""
+          - columnReference:
+              columnCounter: 6dab89c9-5db6-4c39-89b6-a5218903f65e
+              stepCounter: b8327d32-5b36-4e0d-ad0a-f9c891a88848
+            dataType: NUMBER(38,0)
+            description: Number of hospitals in geography of record
+            hashColumns: []
+            hashDetails: null
+            name: HOSPITALS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 603ce1ca-8278-4758-9a11-4b5b610ee97a
+                    stepCounter: 13d388a6-e7a1-487f-be1d-47fe4003dcde
+                transform: ""
+          - columnReference:
+              columnCounter: dc2a97dc-99b1-4073-a3f3-a4f835b38610
+              stepCounter: b8327d32-5b36-4e0d-ad0a-f9c891a88848
+            dataType: NUMBER(38,0)
+            description: Number of ICU beds in geography of record
+            hashColumns: []
+            hashDetails: null
+            name: ICU_BEDS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1d920a98-0394-421c-b506-fb83e014f187
+                    stepCounter: 13d388a6-e7a1-487f-be1d-47fe4003dcde
+                transform: ""
+          - columnReference:
+              columnCounter: d02c34b4-1e9e-40c4-90a7-8422e0aea155
+              stepCounter: b8327d32-5b36-4e0d-ad0a-f9c891a88848
+            dataType: VARCHAR(8192)
+            description: County
+            hashColumns: []
+            hashDetails: null
+            name: COUNTY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 925d4f96-8a28-4bd3-ab41-39fbfc3e4092
+                    stepCounter: 13d388a6-e7a1-487f-be1d-47fe4003dcde
+                transform: ""
+          - columnReference:
+              columnCounter: 5150b147-5e1a-47d3-adc4-eff7f0f7b8fd
+              stepCounter: b8327d32-5b36-4e0d-ad0a-f9c891a88848
+            dataType: VARCHAR(5)
+            description: FIPS code for geography of record
+            hashColumns: []
+            hashDetails: null
+            name: FIPS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f648419c-12de-4ef4-9836-ac8aa3e44c81
+                    stepCounter: 13d388a6-e7a1-487f-be1d-47fe4003dcde
+                transform: ""
+          - columnReference:
+              columnCounter: af2195e2-7426-46f3-9e96-1b1dba406ec9
+              stepCounter: b8327d32-5b36-4e0d-ad0a-f9c891a88848
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 47b6d468-2f1c-46b7-b2e4-595be67d42cb
+                    stepCounter: 13d388a6-e7a1-487f-be1d-47fe4003dcde
+                transform: ""
+          - columnReference:
+              columnCounter: 420390c6-d624-4859-bc91-996a3dbf27d2
+              stepCounter: b8327d32-5b36-4e0d-ad0a-f9c891a88848
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d463b061-156e-4222-ac5e-f8b36407ece5
+                    stepCounter: 13d388a6-e7a1-487f-be1d-47fe4003dcde
+                transform: ""
+          - columnReference:
+              columnCounter: 858d9ae7-0bcc-4549-a2fa-261e61506c57
+              stepCounter: b8327d32-5b36-4e0d-ad0a-f9c891a88848
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ae000b7f-17b5-47bc-a565-1c438a0620cb
+                    stepCounter: 13d388a6-e7a1-487f-be1d-47fe4003dcde
+                transform: ""
+          - columnReference:
+              columnCounter: a36b71c0-795c-4b01-a476-825735cfb07d
+              stepCounter: b8327d32-5b36-4e0d-ad0a-f9c891a88848
+            config:
+              is_Link_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LNK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f218e929-2952-4284-8a2b-15cc01b08c79
+                    stepCounter: 13d388a6-e7a1-487f-be1d-47fe4003dcde
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_KFF_US_ICU_BEDS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_KFF_US_ICU_BEDS') }} "DVSTG_KFF_US_ICU_BEDS"
+            name: LINK_KFF_US_ICU_BEDS
+            noLinkRefs: []
+      name: LINK_KFF_US_ICU_BEDS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::7
+      type: sql
+    stepCounter: b8327d32-5b36-4e0d-ad0a-f9c891a88848

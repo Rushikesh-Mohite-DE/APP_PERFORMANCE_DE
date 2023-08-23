@@ -1,0 +1,231 @@
+steps:
+  LINK_HUM_RESTRICTIONS_AIRLINE-21ee13a5-8921-4264-a9de-b3b4453084b1:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: COVID-19 travel restrictions by airline
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: adcb9735-3bd4-450a-96ce-8ee88e183996
+              stepCounter: 21ee13a5-8921-4264-a9de-b3b4453084b1
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_HUM_RESTRICTIONS_AIRLINE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1a8ced4b-5537-43e4-89ef-59fe0915d16c
+                    stepCounter: 4e2edd8d-d65e-4603-9f2c-85284a57000a
+                transform: ""
+          - columnReference:
+              columnCounter: 626bf211-25e1-466f-b4fe-61a9140605cc
+              stepCounter: 21ee13a5-8921-4264-a9de-b3b4453084b1
+            dataType: VARCHAR(16777216)
+            description: ISO-3166-1 entity name
+            hashColumns: []
+            hashDetails: null
+            name: COUNTRY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7edad70f-36d5-4b12-8e55-f88d320e697d
+                    stepCounter: 4e2edd8d-d65e-4603-9f2c-85284a57000a
+                transform: ""
+          - columnReference:
+              columnCounter: 9a23b4e0-a3e6-47c8-a31f-66624b0436cf
+              stepCounter: 21ee13a5-8921-4264-a9de-b3b4453084b1
+            dataType: VARCHAR(16777216)
+            description: ISO-3166-1 code for geography of record
+            hashColumns: []
+            hashDetails: null
+            name: ISO3166_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f9729258-58d9-45c1-b7c6-f6f230aa789a
+                    stepCounter: 4e2edd8d-d65e-4603-9f2c-85284a57000a
+                transform: ""
+          - columnReference:
+              columnCounter: 0f3c61e1-4645-44ea-b0d3-6ffd7fede83f
+              stepCounter: 21ee13a5-8921-4264-a9de-b3b4453084b1
+            dataType: FLOAT
+            description: Indicative longitude of geography (centroid)
+            hashColumns: []
+            hashDetails: null
+            name: LONG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7cda716c-be87-43de-a107-bbbd1bbfcb19
+                    stepCounter: 4e2edd8d-d65e-4603-9f2c-85284a57000a
+                transform: ""
+          - columnReference:
+              columnCounter: 29a9be0e-9b4b-46e4-9216-25cb876e0e0c
+              stepCounter: 21ee13a5-8921-4264-a9de-b3b4453084b1
+            dataType: FLOAT
+            description: Indicative latitude of geography (centroid)
+            hashColumns: []
+            hashDetails: null
+            name: LAT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 21eef6b0-ada9-4cc6-a44b-7775b71f728e
+                    stepCounter: 4e2edd8d-d65e-4603-9f2c-85284a57000a
+                transform: ""
+          - columnReference:
+              columnCounter: 696f84ef-fed2-42f9-b5f0-2c8c6cc21fab
+              stepCounter: 21ee13a5-8921-4264-a9de-b3b4453084b1
+            dataType: DATE
+            description: Date restrictions were published
+            hashColumns: []
+            hashDetails: null
+            name: PUBLISHED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e727a3a4-7ca5-4169-a424-e911a3bca26d
+                    stepCounter: 4e2edd8d-d65e-4603-9f2c-85284a57000a
+                transform: ""
+          - columnReference:
+              columnCounter: fbc70242-3c3b-4520-a073-1de2ec1665ee
+              stepCounter: 21ee13a5-8921-4264-a9de-b3b4453084b1
+            dataType: VARCHAR(16777216)
+            description: Source of restrictions (URL)
+            hashColumns: []
+            hashDetails: null
+            name: SOURCES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6c42fa8e-7fef-4e9b-aedc-8b18233f79ab
+                    stepCounter: 4e2edd8d-d65e-4603-9f2c-85284a57000a
+                transform: ""
+          - columnReference:
+              columnCounter: 9b4a9eaf-6f35-4b2c-9e91-48b51d3888de
+              stepCounter: 21ee13a5-8921-4264-a9de-b3b4453084b1
+            dataType: VARCHAR(16777216)
+            description: Airline(s)
+            hashColumns: []
+            hashDetails: null
+            name: AIRLINE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8a7324a6-7495-432f-bf1a-328802592474
+                    stepCounter: 4e2edd8d-d65e-4603-9f2c-85284a57000a
+                transform: ""
+          - columnReference:
+              columnCounter: a972c8a9-69a8-453f-89c7-876143cd0f0e
+              stepCounter: 21ee13a5-8921-4264-a9de-b3b4453084b1
+            dataType: VARCHAR(16777216)
+            description: Detailed text of restrictions
+            hashColumns: []
+            hashDetails: null
+            name: RESTRICTION_TEXT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a144c8d0-5d91-4e6c-8ce1-fd0095e12edb
+                    stepCounter: 4e2edd8d-d65e-4603-9f2c-85284a57000a
+                transform: ""
+          - columnReference:
+              columnCounter: b26f3e43-88ea-4ae4-946c-faa99bc60179
+              stepCounter: 21ee13a5-8921-4264-a9de-b3b4453084b1
+            dataType: TIMESTAMP_NTZ(9)
+            description: Timestamp of last update (UTC)
+            hashColumns: []
+            hashDetails: null
+            name: LAST_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 755cc4ac-0c24-4d84-a280-6470d4185d46
+                    stepCounter: 4e2edd8d-d65e-4603-9f2c-85284a57000a
+                transform: ""
+          - columnReference:
+              columnCounter: b9b90ac9-c54d-406e-8fc9-1adb9517c9f2
+              stepCounter: 21ee13a5-8921-4264-a9de-b3b4453084b1
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b1c50ac6-1b8b-4d43-9e6e-c3319f098db1
+                    stepCounter: 4e2edd8d-d65e-4603-9f2c-85284a57000a
+                transform: ""
+          - columnReference:
+              columnCounter: 254999fd-3a7e-452b-bc98-53c3f74ee92a
+              stepCounter: 21ee13a5-8921-4264-a9de-b3b4453084b1
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ea869b8f-a2c7-494c-bb31-a1fd2a9e82cd
+                    stepCounter: 4e2edd8d-d65e-4603-9f2c-85284a57000a
+                transform: ""
+          - columnReference:
+              columnCounter: 4f66f917-ac59-4a92-82ce-d477ac0e0ecb
+              stepCounter: 21ee13a5-8921-4264-a9de-b3b4453084b1
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c6c2a283-2251-4770-a6b3-fce9d2429d9d
+                    stepCounter: 4e2edd8d-d65e-4603-9f2c-85284a57000a
+                transform: ""
+          - columnReference:
+              columnCounter: ac816489-d511-4ab7-9442-01d3a4b60f31
+              stepCounter: 21ee13a5-8921-4264-a9de-b3b4453084b1
+            config:
+              is_Link_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LNK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 560b4469-11c8-4716-acd0-1d2b7b1232f8
+                    stepCounter: 4e2edd8d-d65e-4603-9f2c-85284a57000a
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_HUM_RESTRICTIONS_AIRLINE
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_HUM_RESTRICTIONS_AIRLINE') }} "DVSTG_HUM_RESTRICTIONS_AIRLINE"
+            name: LINK_HUM_RESTRICTIONS_AIRLINE
+            noLinkRefs: []
+      name: LINK_HUM_RESTRICTIONS_AIRLINE
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::7
+      type: sql
+    stepCounter: 21ee13a5-8921-4264-a9de-b3b4453084b1

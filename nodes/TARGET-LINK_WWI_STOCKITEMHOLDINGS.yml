@@ -1,0 +1,231 @@
+steps:
+  LINK_WWI_STOCKITEMHOLDINGS-d9a779df-de31-48b0-a016-2654b5d240bf:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 3d035d5f-d23b-4cfa-ba4c-b7c71a8cde1c
+              stepCounter: d9a779df-de31-48b0-a016-2654b5d240bf
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_STOCKITEMHOLDINGS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d006aa88-5fb3-4cbd-91a6-33ea6d5a87e5
+                    stepCounter: 42a12c5c-fd61-4a58-bb39-8df029179287
+                transform: ""
+          - columnReference:
+              columnCounter: fafcb894-2cf4-46b9-98e9-d7c11c1713b6
+              stepCounter: d9a779df-de31-48b0-a016-2654b5d240bf
+            dataType: NUMBER(38,0)
+            description: ID of the stock item that this holding relates to (this table holds non-temporal columns for stock)
+            hashColumns: []
+            hashDetails: null
+            name: STOCKITEMID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 501ab682-0255-4910-864b-4a17a40b0ab1
+                    stepCounter: 42a12c5c-fd61-4a58-bb39-8df029179287
+                transform: ""
+          - columnReference:
+              columnCounter: 43f8909d-88f1-4794-a99d-190902781dcf
+              stepCounter: d9a779df-de31-48b0-a016-2654b5d240bf
+            dataType: NUMBER(38,0)
+            description: Quantity currently on hand (if tracked)
+            hashColumns: []
+            hashDetails: null
+            name: QUANTITYONHAND
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5816d63a-1f7d-4d56-b4d8-5aa0e1ccd8b9
+                    stepCounter: 42a12c5c-fd61-4a58-bb39-8df029179287
+                transform: ""
+          - columnReference:
+              columnCounter: d7b0dee1-b734-4d2f-9d22-576ad6f26f01
+              stepCounter: d9a779df-de31-48b0-a016-2654b5d240bf
+            dataType: VARCHAR(20)
+            description: Bin location (ie location of this stock item within the depot)
+            hashColumns: []
+            hashDetails: null
+            name: BINLOCATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bce0969a-0b02-48c5-b77e-91791990c073
+                    stepCounter: 42a12c5c-fd61-4a58-bb39-8df029179287
+                transform: ""
+          - columnReference:
+              columnCounter: 50b3841e-7c8b-45dc-be6c-6a474951bb8e
+              stepCounter: d9a779df-de31-48b0-a016-2654b5d240bf
+            dataType: NUMBER(38,0)
+            description: Quantity at last stocktake (if tracked)
+            hashColumns: []
+            hashDetails: null
+            name: LASTSTOCKTAKEQUANTITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0b94a7cb-4c4a-4663-bf3a-ae8ab49ca3ac
+                    stepCounter: 42a12c5c-fd61-4a58-bb39-8df029179287
+                transform: ""
+          - columnReference:
+              columnCounter: d56618b0-d7cc-4626-a716-88c80f3a7ccb
+              stepCounter: d9a779df-de31-48b0-a016-2654b5d240bf
+            dataType: NUMBER(18,2)
+            description: Unit cost price the last time this stock item was purchased
+            hashColumns: []
+            hashDetails: null
+            name: LASTCOSTPRICE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d676c937-d1b3-42ad-af4c-3b939f43df29
+                    stepCounter: 42a12c5c-fd61-4a58-bb39-8df029179287
+                transform: ""
+          - columnReference:
+              columnCounter: c3811139-4894-4525-9533-b2c80c6a7b84
+              stepCounter: d9a779df-de31-48b0-a016-2654b5d240bf
+            dataType: NUMBER(38,0)
+            description: Quantity below which reordering should take place
+            hashColumns: []
+            hashDetails: null
+            name: REORDERLEVEL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3a93e104-ecd3-4689-9a70-a0c362ac6463
+                    stepCounter: 42a12c5c-fd61-4a58-bb39-8df029179287
+                transform: ""
+          - columnReference:
+              columnCounter: d2050339-c526-4a83-90ca-aff6aa59d779
+              stepCounter: d9a779df-de31-48b0-a016-2654b5d240bf
+            dataType: NUMBER(38,0)
+            description: Typical quantity ordered
+            hashColumns: []
+            hashDetails: null
+            name: TARGETSTOCKLEVEL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4504cf02-7aa0-4702-8899-06e3de1f4d94
+                    stepCounter: 42a12c5c-fd61-4a58-bb39-8df029179287
+                transform: ""
+          - columnReference:
+              columnCounter: 798f7215-871b-49fa-bb07-87b4ce2377a7
+              stepCounter: d9a779df-de31-48b0-a016-2654b5d240bf
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LASTEDITEDBY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 943e567e-3e63-4efd-ab55-307c2b36aded
+                    stepCounter: 42a12c5c-fd61-4a58-bb39-8df029179287
+                transform: ""
+          - columnReference:
+              columnCounter: fbd95a75-a6c0-44b3-836f-cdb76ff44604
+              stepCounter: d9a779df-de31-48b0-a016-2654b5d240bf
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LASTEDITEDWHEN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3509d438-4a05-4572-b927-b5fbe81915e0
+                    stepCounter: 42a12c5c-fd61-4a58-bb39-8df029179287
+                transform: ""
+          - columnReference:
+              columnCounter: 2fb07bcf-cb90-4aad-81fa-3a9603cf33b3
+              stepCounter: d9a779df-de31-48b0-a016-2654b5d240bf
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d12526ea-9c08-44fe-8890-d8b2ff017d35
+                    stepCounter: 42a12c5c-fd61-4a58-bb39-8df029179287
+                transform: ""
+          - columnReference:
+              columnCounter: dfdf9fd0-6449-4627-aa6d-3f88cdfb32c6
+              stepCounter: d9a779df-de31-48b0-a016-2654b5d240bf
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0ef5c9ec-6c60-48f5-b500-ba7e73398f39
+                    stepCounter: 42a12c5c-fd61-4a58-bb39-8df029179287
+                transform: ""
+          - columnReference:
+              columnCounter: 062c1ccd-7820-449f-9f2a-d2ddb2b5c58e
+              stepCounter: d9a779df-de31-48b0-a016-2654b5d240bf
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 054f93c9-0f3f-49f3-b558-41905b664f59
+                    stepCounter: 42a12c5c-fd61-4a58-bb39-8df029179287
+                transform: ""
+          - columnReference:
+              columnCounter: 8722fa88-1658-4d00-9471-ce75a79b211b
+              stepCounter: d9a779df-de31-48b0-a016-2654b5d240bf
+            config:
+              is_Link_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LNK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 13523a9a-4b28-4641-be1d-d9397f1db351
+                    stepCounter: 42a12c5c-fd61-4a58-bb39-8df029179287
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_WWI_STOCKITEMHOLDINGS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_WWI_STOCKITEMHOLDINGS') }} "DVSTG_WWI_STOCKITEMHOLDINGS"
+            name: LINK_WWI_STOCKITEMHOLDINGS
+            noLinkRefs: []
+      name: LINK_WWI_STOCKITEMHOLDINGS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::7
+      type: sql
+    stepCounter: d9a779df-de31-48b0-a016-2654b5d240bf

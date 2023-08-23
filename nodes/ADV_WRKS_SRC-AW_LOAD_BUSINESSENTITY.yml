@@ -1,0 +1,64 @@
+steps:
+  AW_LOAD_BUSINESSENTITY-92ba28c8-3dad-44aa-9810-13936cebdd12:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: ADV_WRKS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b61a66bb-40c7-4e4f-8e4b-a8fd7924d694
+              stepCounter: 92ba28c8-3dad-44aa-9810-13936cebdd12
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Primary key for all customers, vendors, and employees.
+            name: BUSINESSENTITYID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4c666621-cbb2-4a21-87e3-0890063305d4
+              stepCounter: 92ba28c8-3dad-44aa-9810-13936cebdd12
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            name: ROWGUID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 302eab7c-138e-422c-9392-b91ed20cdfef
+              stepCounter: 92ba28c8-3dad-44aa-9810-13936cebdd12
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_BUSINESSENTITY') }}
+      name: AW_LOAD_BUSINESSENTITY
+      schema: ""
+      sqlType: Source
+      table: AW_LOAD_BUSINESSENTITY
+      type: sourceInput
+    stepCounter: 92ba28c8-3dad-44aa-9810-13936cebdd12

@@ -1,0 +1,91 @@
+steps:
+  HUB_SPORTS_AFFILIATIONS_EVENTS-eb2c912c-fd6b-4eb0-a411-edc4d1993657:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: a9118847-2780-4468-9065-41dc5bd0c198
+              stepCounter: eb2c912c-fd6b-4eb0-a411-edc4d1993657
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_EVENTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 514256a3-67fe-46e4-982f-332a8fcf1914
+                    stepCounter: bed68b7a-5370-4239-bcbb-0e8f6c03979d
+                transform: ""
+          - columnReference:
+              columnCounter: 441a3f04-b400-446e-a07e-d6df6d9af2b6
+              stepCounter: eb2c912c-fd6b-4eb0-a411-edc4d1993657
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: AFFILIATION_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c2a8466c-c80b-4e1a-ab68-00b257b25388
+                    stepCounter: bed68b7a-5370-4239-bcbb-0e8f6c03979d
+                transform: ""
+          - columnReference:
+              columnCounter: 361a4b53-e7de-49e6-88a4-13f856cc73a7
+              stepCounter: eb2c912c-fd6b-4eb0-a411-edc4d1993657
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0513c348-7a0f-404f-8c57-7510b5d74af4
+                    stepCounter: bed68b7a-5370-4239-bcbb-0e8f6c03979d
+                transform: ""
+          - columnReference:
+              columnCounter: 0afc97ac-99f5-4f3a-a6a1-871754783cc7
+              stepCounter: eb2c912c-fd6b-4eb0-a411-edc4d1993657
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e3504104-f8e9-4aba-b24c-9a249fb221ae
+                    stepCounter: bed68b7a-5370-4239-bcbb-0e8f6c03979d
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SPORTS_AFFILIATIONS_EVENTS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SPORTS_AFFILIATIONS_EVENTS') }} "DVSTG_SPORTS_AFFILIATIONS_EVENTS"
+            name: HUB_SPORTS_AFFILIATIONS_EVENTS
+            noLinkRefs: []
+      name: HUB_SPORTS_AFFILIATIONS_EVENTS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: eb2c912c-fd6b-4eb0-a411-edc4d1993657

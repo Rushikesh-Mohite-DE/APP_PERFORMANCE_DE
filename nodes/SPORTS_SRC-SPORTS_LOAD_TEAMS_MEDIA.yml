@@ -1,0 +1,49 @@
+steps:
+  SPORTS_LOAD_TEAMS_MEDIA-fd82437e-fccb-4019-bdb4-02cca0a58ffb:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SPORTS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 01433e34-ef06-4591-82e0-f707d5fa406b
+              stepCounter: fd82437e-fccb-4019-bdb4-02cca0a58ffb
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: TEAM_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a1335e28-27aa-4b0c-b6fd-ec70b5c0daa5
+              stepCounter: fd82437e-fccb-4019-bdb4-02cca0a58ffb
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: MEDIA_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SPORTS_SRC', 'SPORTS_LOAD_TEAMS_MEDIA') }}
+      name: SPORTS_LOAD_TEAMS_MEDIA
+      schema: ""
+      sqlType: Source
+      table: SPORTS_LOAD_TEAMS_MEDIA
+      type: sourceInput
+    stepCounter: fd82437e-fccb-4019-bdb4-02cca0a58ffb

@@ -1,0 +1,287 @@
+steps:
+  LINK_AW_PERSON-28eedada-fb25-4b24-b30f-46ce5df43f6c:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 069c1751-9774-488d-a8d7-93ee1894d27f
+              stepCounter: 28eedada-fb25-4b24-b30f-46ce5df43f6c
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_PERSON
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cdd6d04c-ba57-4982-ba6c-990b9c0bc9ac
+                    stepCounter: 4d696f37-1be5-4446-9717-18e7c877839c
+                transform: ""
+          - columnReference:
+              columnCounter: c139cccf-345e-4989-b44c-bdc3711ea636
+              stepCounter: 28eedada-fb25-4b24-b30f-46ce5df43f6c
+            dataType: NUMBER(38,0)
+            description: Primary key for Person records.
+            hashColumns: []
+            hashDetails: null
+            name: BUSINESSENTITYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c26fb7bc-b15f-4287-b116-e57750466409
+                    stepCounter: 4d696f37-1be5-4446-9717-18e7c877839c
+                transform: ""
+          - columnReference:
+              columnCounter: a22495d8-b156-41e3-acd0-e94c563120a3
+              stepCounter: 28eedada-fb25-4b24-b30f-46ce5df43f6c
+            dataType: VARCHAR(2)
+            description: "Primary type of person: SC = Store Contact, IN = Individual (retail) customer, SP = Sales person, EM = Employee (non-sales), VC = Vendor contact, GC = General contact"
+            hashColumns: []
+            hashDetails: null
+            name: PERSONTYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: baf5c9d7-efe8-4b30-a32a-0a1edfd89fde
+                    stepCounter: 4d696f37-1be5-4446-9717-18e7c877839c
+                transform: ""
+          - columnReference:
+              columnCounter: 6a159b9a-88dd-4c66-9446-f86945732343
+              stepCounter: 28eedada-fb25-4b24-b30f-46ce5df43f6c
+            dataType: BOOLEAN
+            description: 0 = The data in FirstName and LastName are stored in western style (first name, last name) order.  1 = Eastern style (last name, first name) order.
+            hashColumns: []
+            hashDetails: null
+            name: NAMESTYLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 64041c77-da2b-4539-9a3e-e999271ab4ed
+                    stepCounter: 4d696f37-1be5-4446-9717-18e7c877839c
+                transform: ""
+          - columnReference:
+              columnCounter: 52d5f7ea-743e-4d89-b81a-b67a28e01192
+              stepCounter: 28eedada-fb25-4b24-b30f-46ce5df43f6c
+            dataType: VARCHAR(8)
+            description: A courtesy title. For example, Mr. or Ms.
+            hashColumns: []
+            hashDetails: null
+            name: TITLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e3acb6a0-2d67-4445-847a-dfeefa0eaa76
+                    stepCounter: 4d696f37-1be5-4446-9717-18e7c877839c
+                transform: ""
+          - columnReference:
+              columnCounter: c39088e1-6002-421f-8df5-f4f599c66b28
+              stepCounter: 28eedada-fb25-4b24-b30f-46ce5df43f6c
+            dataType: VARCHAR(16777216)
+            description: First name of the person.
+            hashColumns: []
+            hashDetails: null
+            name: FIRSTNAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5a8971fb-014a-4820-b18e-2e7a47e576ee
+                    stepCounter: 4d696f37-1be5-4446-9717-18e7c877839c
+                transform: ""
+          - columnReference:
+              columnCounter: 27144f39-94f5-456c-9e2e-22c8d8aed7d6
+              stepCounter: 28eedada-fb25-4b24-b30f-46ce5df43f6c
+            dataType: VARCHAR(16777216)
+            description: Middle name or middle initial of the person.
+            hashColumns: []
+            hashDetails: null
+            name: MIDDLENAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9bc0cdcd-5024-4538-9a10-b4a1469b4470
+                    stepCounter: 4d696f37-1be5-4446-9717-18e7c877839c
+                transform: ""
+          - columnReference:
+              columnCounter: e340cdb4-d2d9-479f-8524-b871e8688971
+              stepCounter: 28eedada-fb25-4b24-b30f-46ce5df43f6c
+            dataType: VARCHAR(16777216)
+            description: Last name of the person.
+            hashColumns: []
+            hashDetails: null
+            name: LASTNAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b4aa47f4-2ca1-4a75-a869-b907b15b41b8
+                    stepCounter: 4d696f37-1be5-4446-9717-18e7c877839c
+                transform: ""
+          - columnReference:
+              columnCounter: c823c512-eff0-466f-b72b-4d452bc73801
+              stepCounter: 28eedada-fb25-4b24-b30f-46ce5df43f6c
+            dataType: VARCHAR(10)
+            description: Surname suffix. For example, Sr. or Jr.
+            hashColumns: []
+            hashDetails: null
+            name: SUFFIX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b9a83c16-fdc7-4d20-b3ca-a0189af826e9
+                    stepCounter: 4d696f37-1be5-4446-9717-18e7c877839c
+                transform: ""
+          - columnReference:
+              columnCounter: 5acb0971-445a-4725-8cd8-f5b1f32e565b
+              stepCounter: 28eedada-fb25-4b24-b30f-46ce5df43f6c
+            dataType: NUMBER(38,0)
+            description: 0 = Contact does not wish to receive e-mail promotions, 1 = Contact does wish to receive e-mail promotions from AdventureWorks, 2 = Contact does wish to receive e-mail promotions from AdventureWorks and selected partners.
+            hashColumns: []
+            hashDetails: null
+            name: EMAILPROMOTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 88a744c6-87f6-4f50-82e4-2f71ef0708cd
+                    stepCounter: 4d696f37-1be5-4446-9717-18e7c877839c
+                transform: ""
+          - columnReference:
+              columnCounter: 46c0764c-e302-4c89-a779-e7b6d8046064
+              stepCounter: 28eedada-fb25-4b24-b30f-46ce5df43f6c
+            dataType: VARCHAR(16777216)
+            description: Additional contact information about the person stored in xml format.
+            hashColumns: []
+            hashDetails: null
+            name: ADDITIONALCONTACTINFO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d3373663-050a-4ff3-afe7-c4b29eddf9e5
+                    stepCounter: 4d696f37-1be5-4446-9717-18e7c877839c
+                transform: ""
+          - columnReference:
+              columnCounter: 3ce7f8c9-b2d4-40de-962b-a47da4e47b4b
+              stepCounter: 28eedada-fb25-4b24-b30f-46ce5df43f6c
+            dataType: VARCHAR(16777216)
+            description: Personal information such as hobbies, and income collected from online shoppers. Used for sales analysis.
+            hashColumns: []
+            hashDetails: null
+            name: DEMOGRAPHICS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7fd7f215-39b4-49fa-9dce-ff5c17fc9f0c
+                    stepCounter: 4d696f37-1be5-4446-9717-18e7c877839c
+                transform: ""
+          - columnReference:
+              columnCounter: 2d607a21-7a48-42e8-917a-c6585ba37ef6
+              stepCounter: 28eedada-fb25-4b24-b30f-46ce5df43f6c
+            dataType: VARCHAR(16777216)
+            description: ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            hashColumns: []
+            hashDetails: null
+            name: ROWGUID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ff0b0800-c146-4ee1-82dc-0f912f358c33
+                    stepCounter: 4d696f37-1be5-4446-9717-18e7c877839c
+                transform: ""
+          - columnReference:
+              columnCounter: 456e1355-776c-4287-b993-2c0462242305
+              stepCounter: 28eedada-fb25-4b24-b30f-46ce5df43f6c
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            hashColumns: []
+            hashDetails: null
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 869f3b44-24bd-427d-943d-c79e13dc4a6a
+                    stepCounter: 4d696f37-1be5-4446-9717-18e7c877839c
+                transform: ""
+          - columnReference:
+              columnCounter: d8da31a0-2b3d-4857-9519-827504c2ad3d
+              stepCounter: 28eedada-fb25-4b24-b30f-46ce5df43f6c
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1c5ead89-d26e-423e-9feb-754b69eec215
+                    stepCounter: 4d696f37-1be5-4446-9717-18e7c877839c
+                transform: ""
+          - columnReference:
+              columnCounter: 0779390c-c4a8-49ac-bef5-89d3383fc8d4
+              stepCounter: 28eedada-fb25-4b24-b30f-46ce5df43f6c
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b0a7c7a3-f0a0-4639-a657-0ceeaf713eb1
+                    stepCounter: 4d696f37-1be5-4446-9717-18e7c877839c
+                transform: ""
+          - columnReference:
+              columnCounter: f9474cc9-26d6-4b85-944e-1607b3667455
+              stepCounter: 28eedada-fb25-4b24-b30f-46ce5df43f6c
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 887e6e91-4ebd-4c51-8900-73680f7f26ce
+                    stepCounter: 4d696f37-1be5-4446-9717-18e7c877839c
+                transform: ""
+          - columnReference:
+              columnCounter: bc46c38e-cadc-4ba1-a8b7-380318abe9e7
+              stepCounter: 28eedada-fb25-4b24-b30f-46ce5df43f6c
+            config:
+              is_Link_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LNK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7042055a-95e4-4f1c-9ded-d94f34048224
+                    stepCounter: 4d696f37-1be5-4446-9717-18e7c877839c
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_PERSON
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_PERSON') }} "DVSTG_AW_PERSON"
+            name: LINK_AW_PERSON
+            noLinkRefs: []
+      name: LINK_AW_PERSON
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::7
+      type: sql
+    stepCounter: 28eedada-fb25-4b24-b30f-46ce5df43f6c

@@ -1,0 +1,209 @@
+steps:
+  DVSTG_AW_EMPLOYEEDEPARTMENTHISTORY-229fe3a6-5c42-4ab6-a1de-1ca9a6c0241a:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a023e9c6-b26c-41ea-9ba8-2a68346c7f32
+              stepCounter: 229fe3a6-5c42-4ab6-a1de-1ca9a6c0241a
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: afa21337-d500-422a-b119-588d48caebf7
+                stepCounter: 229fe3a6-5c42-4ab6-a1de-1ca9a6c0241a
+              - columnCounter: c68b07de-7fa6-44f3-8557-a611a3a8fb32
+                stepCounter: 229fe3a6-5c42-4ab6-a1de-1ca9a6c0241a
+              - columnCounter: 3ec371a8-b66c-4b5a-9343-985c99b86573
+                stepCounter: 229fe3a6-5c42-4ab6-a1de-1ca9a6c0241a
+            name: HK_EMPLOYEEDEPARTMENTHISTORY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: afa21337-d500-422a-b119-588d48caebf7
+              stepCounter: 229fe3a6-5c42-4ab6-a1de-1ca9a6c0241a
+            dataType: NUMBER(38,0)
+            description: Employee identification number. Foreign key to Employee.BusinessEntityID.
+            name: BUSINESSENTITYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6f22c423-28dd-43ee-b185-b572759d2766
+                    stepCounter: e7cc2779-5703-4224-9b55-e4b46eb5f47e
+                transform: ""
+          - columnReference:
+              columnCounter: c68b07de-7fa6-44f3-8557-a611a3a8fb32
+              stepCounter: 229fe3a6-5c42-4ab6-a1de-1ca9a6c0241a
+            dataType: NUMBER(38,0)
+            description: Department in which the employee worked including currently. Foreign key to Department.DepartmentID.
+            name: DEPARTMENTID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 94bc5101-83c0-4582-b75e-5c9e001d766d
+                    stepCounter: e7cc2779-5703-4224-9b55-e4b46eb5f47e
+                transform: ""
+          - columnReference:
+              columnCounter: 3ec371a8-b66c-4b5a-9343-985c99b86573
+              stepCounter: 229fe3a6-5c42-4ab6-a1de-1ca9a6c0241a
+            dataType: NUMBER(38,0)
+            description: Identifies which 8-hour shift the employee works. Foreign key to Shift.Shift.ID.
+            name: SHIFTID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7c41ecd1-380d-45e4-899b-964be755bcf7
+                    stepCounter: e7cc2779-5703-4224-9b55-e4b46eb5f47e
+                transform: ""
+          - columnReference:
+              columnCounter: f4eae3fc-1efe-4fc6-8abb-0cce804acc0d
+              stepCounter: 229fe3a6-5c42-4ab6-a1de-1ca9a6c0241a
+            dataType: VARCHAR(50)
+            description: Date the employee started work in the department.
+            name: STARTDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b6a21dfd-20f1-4407-9dc3-cd3ac5874303
+                    stepCounter: e7cc2779-5703-4224-9b55-e4b46eb5f47e
+                transform: ""
+          - columnReference:
+              columnCounter: 0c24e348-a9a9-4622-b003-ef242155a02a
+              stepCounter: 229fe3a6-5c42-4ab6-a1de-1ca9a6c0241a
+            dataType: VARCHAR(50)
+            description: Date the employee left the department. NULL = Current department.
+            name: ENDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 62d17bbb-af7f-4b98-8f69-518f77078936
+                    stepCounter: e7cc2779-5703-4224-9b55-e4b46eb5f47e
+                transform: ""
+          - columnReference:
+              columnCounter: 70e26f39-56fe-47cb-b2d9-4c0ff2643c00
+              stepCounter: 229fe3a6-5c42-4ab6-a1de-1ca9a6c0241a
+            dataType: VARCHAR(50)
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0c355e79-81f7-4ce1-91c3-f91a58962237
+                    stepCounter: e7cc2779-5703-4224-9b55-e4b46eb5f47e
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 214b747a-1eec-4983-93ae-138c9e44ac4d
+              stepCounter: 229fe3a6-5c42-4ab6-a1de-1ca9a6c0241a
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 60113a05-c410-4eb6-8f73-d686e00fc0df
+              stepCounter: 229fe3a6-5c42-4ab6-a1de-1ca9a6c0241a
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0746da87-ada2-47ff-a52c-33298c55104d
+              stepCounter: 229fe3a6-5c42-4ab6-a1de-1ca9a6c0241a
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: f4eae3fc-1efe-4fc6-8abb-0cce804acc0d
+                stepCounter: 229fe3a6-5c42-4ab6-a1de-1ca9a6c0241a
+              - columnCounter: 0c24e348-a9a9-4622-b003-ef242155a02a
+                stepCounter: 229fe3a6-5c42-4ab6-a1de-1ca9a6c0241a
+              - columnCounter: 70e26f39-56fe-47cb-b2d9-4c0ff2643c00
+                stepCounter: 229fe3a6-5c42-4ab6-a1de-1ca9a6c0241a
+            name: ROW_HOUSE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ff9479ca-34a1-4535-bdef-a45adaa7a077
+              stepCounter: 229fe3a6-5c42-4ab6-a1de-1ca9a6c0241a
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: c68b07de-7fa6-44f3-8557-a611a3a8fb32
+                stepCounter: 229fe3a6-5c42-4ab6-a1de-1ca9a6c0241a
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: ADV_WRKS_SRC
+                nodeName: AW_LOAD_EMPLOYEEDEPARTMENTHISTORY
+            join:
+              joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_EMPLOYEEDEPARTMENTHISTORY') }} "AW_LOAD_EMPLOYEEDEPARTMENTHISTORY"
+            name: DVSTG_AW_EMPLOYEEDEPARTMENTHISTORY
+            noLinkRefs: []
+      name: DVSTG_AW_EMPLOYEEDEPARTMENTHISTORY
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: 229fe3a6-5c42-4ab6-a1de-1ca9a6c0241a

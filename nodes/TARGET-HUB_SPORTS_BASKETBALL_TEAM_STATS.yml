@@ -1,0 +1,91 @@
+steps:
+  HUB_SPORTS_BASKETBALL_TEAM_STATS-87527101-685e-4ee5-a691-c09c0117f366:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 82832c37-70de-423e-8367-5c6c168606ec
+              stepCounter: 87527101-685e-4ee5-a691-c09c0117f366
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_TEAM_STATS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4f7826ac-2fca-40b7-8e67-c9afa66ee004
+                    stepCounter: d87445b2-4284-4b02-a379-8e5e4878c6f0
+                transform: ""
+          - columnReference:
+              columnCounter: 74a3aaf7-332a-44a6-b9db-384f89581aca
+              stepCounter: 87527101-685e-4ee5-a691-c09c0117f366
+            dataType: VARCHAR(32)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2e72e261-2397-4e97-a6ff-4b83f12f26c3
+                    stepCounter: d87445b2-4284-4b02-a379-8e5e4878c6f0
+                transform: ""
+          - columnReference:
+              columnCounter: 642b5ec2-7f5d-49a1-a999-3a0c7e74d6cc
+              stepCounter: 87527101-685e-4ee5-a691-c09c0117f366
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a49bf7bd-1e6f-4c94-b7e4-bb907e3d43dc
+                    stepCounter: d87445b2-4284-4b02-a379-8e5e4878c6f0
+                transform: ""
+          - columnReference:
+              columnCounter: 02755fe6-e77e-4932-b518-6bb27e767ac5
+              stepCounter: 87527101-685e-4ee5-a691-c09c0117f366
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 186d8c7c-c2da-46a9-95af-362d2df8dee1
+                    stepCounter: d87445b2-4284-4b02-a379-8e5e4878c6f0
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SPORTS_BASKETBALL_TEAM_STATS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SPORTS_BASKETBALL_TEAM_STATS') }} "DVSTG_SPORTS_BASKETBALL_TEAM_STATS"
+            name: HUB_SPORTS_BASKETBALL_TEAM_STATS
+            noLinkRefs: []
+      name: HUB_SPORTS_BASKETBALL_TEAM_STATS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 87527101-685e-4ee5-a691-c09c0117f366

@@ -1,0 +1,49 @@
+steps:
+  SPORTS_LOAD_DOCUMENT_CLASSES-697935ec-b432-4c87-9b34-b2bf0561157e:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SPORTS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: da24aaa8-1e4f-46f6-ac04-4022397e2c43
+              stepCounter: 697935ec-b432-4c87-9b34-b2bf0561157e
+            config: {}
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            name: ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 025e5b61-726d-4e6f-b242-d905edd68817
+              stepCounter: 697935ec-b432-4c87-9b34-b2bf0561157e
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SPORTS_SRC', 'SPORTS_LOAD_DOCUMENT_CLASSES') }}
+      name: SPORTS_LOAD_DOCUMENT_CLASSES
+      schema: ""
+      sqlType: Source
+      table: SPORTS_LOAD_DOCUMENT_CLASSES
+      type: sourceInput
+    stepCounter: 697935ec-b432-4c87-9b34-b2bf0561157e

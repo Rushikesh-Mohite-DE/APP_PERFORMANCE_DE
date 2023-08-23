@@ -1,0 +1,94 @@
+steps:
+  SPORTS_LOAD_DOCUMENT_FIXTURES_EVENTS-c20d5648-3ef2-4a40-aa7f-c1e7f09c9311:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SPORTS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fd559e49-fa5e-4a29-b011-95cb36194214
+              stepCounter: c20d5648-3ef2-4a40-aa7f-c1e7f09c9311
+            config: {}
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            name: ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d8502b6a-e938-4516-b396-90f440c12dba
+              stepCounter: c20d5648-3ef2-4a40-aa7f-c1e7f09c9311
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: DOCUMENT_FIXTURE_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b2a96c94-84b1-401e-b6a3-40821616c8e3
+              stepCounter: c20d5648-3ef2-4a40-aa7f-c1e7f09c9311
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: EVENT_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9e000929-52b0-4888-bf9c-5eab7ef58563
+              stepCounter: c20d5648-3ef2-4a40-aa7f-c1e7f09c9311
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: LATEST_DOCUMENT_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8a3be7c6-1144-46ff-9f5b-8a845038d298
+              stepCounter: c20d5648-3ef2-4a40-aa7f-c1e7f09c9311
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: LAST_UPDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SPORTS_SRC', 'SPORTS_LOAD_DOCUMENT_FIXTURES_EVENTS') }}
+      name: SPORTS_LOAD_DOCUMENT_FIXTURES_EVENTS
+      schema: ""
+      sqlType: Source
+      table: SPORTS_LOAD_DOCUMENT_FIXTURES_EVENTS
+      type: sourceInput
+    stepCounter: c20d5648-3ef2-4a40-aa7f-c1e7f09c9311

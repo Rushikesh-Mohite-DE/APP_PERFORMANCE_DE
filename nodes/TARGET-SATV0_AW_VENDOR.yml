@@ -1,0 +1,191 @@
+steps:
+  SATV0_AW_VENDOR-73238455-e65b-4fc7-b4b7-c166c15296e2:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 57dca0fc-489f-430f-82a0-851f4a1ee92a
+              stepCounter: 73238455-e65b-4fc7-b4b7-c166c15296e2
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_VENDOR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 211405d3-8fc0-43cc-b1b3-c7b25ec8ccec
+                    stepCounter: 55d3d486-e965-4817-9d81-c722965419a5
+                transform: ""
+          - columnReference:
+              columnCounter: bf694dff-5c82-40df-84e2-06232245b5d9
+              stepCounter: 73238455-e65b-4fc7-b4b7-c166c15296e2
+            dataType: VARCHAR(16777216)
+            description: Vendor account (identification) number.
+            hashColumns: []
+            hashDetails: null
+            name: ACCOUNTNUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d262fb47-09e5-4c03-a7e9-c82d1ea79539
+                    stepCounter: 55d3d486-e965-4817-9d81-c722965419a5
+                transform: ""
+          - columnReference:
+              columnCounter: 9a31e09c-d619-43aa-915e-a3bbfb30fcde
+              stepCounter: 73238455-e65b-4fc7-b4b7-c166c15296e2
+            dataType: VARCHAR(16777216)
+            description: Company name.
+            hashColumns: []
+            hashDetails: null
+            name: NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 247b7810-b221-4d2d-89f1-13d58924b115
+                    stepCounter: 55d3d486-e965-4817-9d81-c722965419a5
+                transform: ""
+          - columnReference:
+              columnCounter: 56cd25f1-b169-4c7a-99e2-0014a1628af8
+              stepCounter: 73238455-e65b-4fc7-b4b7-c166c15296e2
+            dataType: NUMBER(38,0)
+            description: 1 = Superior, 2 = Excellent, 3 = Above average, 4 = Average, 5 = Below average
+            hashColumns: []
+            hashDetails: null
+            name: CREDITRATING
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fd1f3e64-dc16-42be-8363-058ba237385a
+                    stepCounter: 55d3d486-e965-4817-9d81-c722965419a5
+                transform: ""
+          - columnReference:
+              columnCounter: 3dfdc8a2-0916-4168-b8c4-b045c5efbb63
+              stepCounter: 73238455-e65b-4fc7-b4b7-c166c15296e2
+            dataType: VARCHAR(16777216)
+            description: 0 = Do not use if another vendor is available. 1 = Preferred over other vendors supplying the same product.
+            hashColumns: []
+            hashDetails: null
+            name: PREFERREDVENDORSTATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8614c2ae-06ce-43b1-86c6-07e754536f9b
+                    stepCounter: 55d3d486-e965-4817-9d81-c722965419a5
+                transform: ""
+          - columnReference:
+              columnCounter: 32debee9-1b8e-448e-bc32-af74a874ede3
+              stepCounter: 73238455-e65b-4fc7-b4b7-c166c15296e2
+            dataType: VARCHAR(16777216)
+            description: 0 = Vendor no longer used. 1 = Vendor is actively used.
+            hashColumns: []
+            hashDetails: null
+            name: ACTIVEFLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9c5fff35-e1f0-4bb0-a06d-4bf546334415
+                    stepCounter: 55d3d486-e965-4817-9d81-c722965419a5
+                transform: ""
+          - columnReference:
+              columnCounter: 8dffde3f-91cf-4202-8043-268c111ff765
+              stepCounter: 73238455-e65b-4fc7-b4b7-c166c15296e2
+            dataType: VARCHAR(1024)
+            description: Vendor URL.
+            hashColumns: []
+            hashDetails: null
+            name: PURCHASINGWEBSERVICEURL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1c783ed6-cc0c-4f03-8434-862f35e910d6
+                    stepCounter: 55d3d486-e965-4817-9d81-c722965419a5
+                transform: ""
+          - columnReference:
+              columnCounter: dac74d4f-7fc7-4b5c-bc04-f0b00c9d0e98
+              stepCounter: 73238455-e65b-4fc7-b4b7-c166c15296e2
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            hashColumns: []
+            hashDetails: null
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 290ea039-2a62-461f-973b-983484b5fe54
+                    stepCounter: 55d3d486-e965-4817-9d81-c722965419a5
+                transform: ""
+          - columnReference:
+              columnCounter: 6acb7d86-e721-4a7e-8703-6d072228abcf
+              stepCounter: 73238455-e65b-4fc7-b4b7-c166c15296e2
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0bbf6b28-5af5-4be8-8b0c-c16f0769c7ae
+                    stepCounter: 55d3d486-e965-4817-9d81-c722965419a5
+                transform: ""
+          - columnReference:
+              columnCounter: 3493d8db-95c8-4c39-9e32-d098d635751a
+              stepCounter: 73238455-e65b-4fc7-b4b7-c166c15296e2
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cda8b9f4-27f0-4c87-85a7-28ad54042720
+                    stepCounter: 55d3d486-e965-4817-9d81-c722965419a5
+                transform: ""
+          - columnReference:
+              columnCounter: 9e8267a4-0d20-426b-8865-db3eb5fceef7
+              stepCounter: 73238455-e65b-4fc7-b4b7-c166c15296e2
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 93eec0e4-d69e-4335-9b66-efa6e6bafd00
+                    stepCounter: 55d3d486-e965-4817-9d81-c722965419a5
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_VENDOR
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_VENDOR') }} "DVSTG_AW_VENDOR"
+            name: SATV0_AW_VENDOR
+            noLinkRefs: []
+      name: SATV0_AW_VENDOR
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: 73238455-e65b-4fc7-b4b7-c166c15296e2

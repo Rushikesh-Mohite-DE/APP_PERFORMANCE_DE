@@ -1,0 +1,119 @@
+steps:
+  HUB_AW_SHOPPINGCARTITEM-a5eec4e3-e2e0-4510-8509-496fe88eaa2b:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: aaef8520-6512-4460-a67c-6347ebfa510a
+              stepCounter: a5eec4e3-e2e0-4510-8509-496fe88eaa2b
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_SHOPPINGCARTITEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2b4e3a58-30ab-4c24-b82e-9df0879f0d88
+                    stepCounter: adfbf459-5cf6-42b0-9c41-28f011b6d1a3
+                transform: ""
+          - columnReference:
+              columnCounter: 43c61ca5-8ffd-4ba8-ab6a-39580ca60853
+              stepCounter: a5eec4e3-e2e0-4510-8509-496fe88eaa2b
+            dataType: NUMBER(38,0)
+            description: Primary key for ShoppingCartItem records.
+            hashColumns: []
+            hashDetails: null
+            name: SHOPPINGCARTITEMID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ff58ff8f-546d-4917-965d-a2e75e3b7835
+                    stepCounter: adfbf459-5cf6-42b0-9c41-28f011b6d1a3
+                transform: ""
+          - columnReference:
+              columnCounter: 51c295e9-c9be-42c1-a265-fcb3207ccc2b
+              stepCounter: a5eec4e3-e2e0-4510-8509-496fe88eaa2b
+            dataType: VARCHAR(50)
+            description: Shopping cart identification number.
+            hashColumns: []
+            hashDetails: null
+            name: SHOPPINGCARTID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 000f69ed-10ce-4d04-92f0-74288e4deddd
+                    stepCounter: adfbf459-5cf6-42b0-9c41-28f011b6d1a3
+                transform: ""
+          - columnReference:
+              columnCounter: d9313269-85f4-4213-8d15-5f16fc006a10
+              stepCounter: a5eec4e3-e2e0-4510-8509-496fe88eaa2b
+            dataType: NUMBER(38,0)
+            description: Product ordered. Foreign key to Product.ProductID.
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCTID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 60f39031-b49e-4570-821e-647e4536b284
+                    stepCounter: adfbf459-5cf6-42b0-9c41-28f011b6d1a3
+                transform: ""
+          - columnReference:
+              columnCounter: fecd9c63-f9a7-4a60-8b68-83eb5c7943f5
+              stepCounter: a5eec4e3-e2e0-4510-8509-496fe88eaa2b
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a4a2a655-0888-4e75-9d80-6212dd92fa15
+                    stepCounter: adfbf459-5cf6-42b0-9c41-28f011b6d1a3
+                transform: ""
+          - columnReference:
+              columnCounter: bcab2fa0-5034-41b2-89d7-fb9dacd134ee
+              stepCounter: a5eec4e3-e2e0-4510-8509-496fe88eaa2b
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ebdf598f-b102-48c7-9e19-5d1a60071ed4
+                    stepCounter: adfbf459-5cf6-42b0-9c41-28f011b6d1a3
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_SHOPPINGCARTITEM
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_SHOPPINGCARTITEM') }} "DVSTG_AW_SHOPPINGCARTITEM"
+            name: HUB_AW_SHOPPINGCARTITEM
+            noLinkRefs: []
+      name: HUB_AW_SHOPPINGCARTITEM
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: a5eec4e3-e2e0-4510-8509-496fe88eaa2b

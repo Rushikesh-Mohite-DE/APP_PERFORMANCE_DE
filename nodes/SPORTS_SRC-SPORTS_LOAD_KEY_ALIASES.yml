@@ -1,0 +1,64 @@
+steps:
+  SPORTS_LOAD_KEY_ALIASES-d0378076-28c6-4191-95e0-41bde62625fd:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SPORTS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ecb8761b-3b5a-4e62-bea1-22f9884768ba
+              stepCounter: d0378076-28c6-4191-95e0-41bde62625fd
+            config: {}
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            name: ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 21d4c834-d2c7-42d4-8619-4d82d0d34ab3
+              stepCounter: d0378076-28c6-4191-95e0-41bde62625fd
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: KEY_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e086414a-6611-4abc-892d-0403d193d769
+              stepCounter: d0378076-28c6-4191-95e0-41bde62625fd
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: KEY_ROOT_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SPORTS_SRC', 'SPORTS_LOAD_KEY_ALIASES') }}
+      name: SPORTS_LOAD_KEY_ALIASES
+      schema: ""
+      sqlType: Source
+      table: SPORTS_LOAD_KEY_ALIASES
+      type: sourceInput
+    stepCounter: d0378076-28c6-4191-95e0-41bde62625fd

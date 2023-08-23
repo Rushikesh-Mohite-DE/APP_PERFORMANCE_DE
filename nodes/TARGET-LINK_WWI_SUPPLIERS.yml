@@ -1,0 +1,511 @@
+steps:
+  LINK_WWI_SUPPLIERS-33c85b96-1d2c-4fb1-9690-a4644eb4ea29:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 13f80a81-ae12-4a61-a815-f55da9b94773
+              stepCounter: 33c85b96-1d2c-4fb1-9690-a4644eb4ea29
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_SUPPLIERS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fa8ffc7c-b6c2-4652-a483-4690bc3ef3f9
+                    stepCounter: 8680f5e3-9428-439b-81f9-25ca62a5401d
+                transform: ""
+          - columnReference:
+              columnCounter: 06332492-0e1c-4e6f-84f4-7abcc4a99144
+              stepCounter: 33c85b96-1d2c-4fb1-9690-a4644eb4ea29
+            dataType: NUMBER(38,0)
+            description: Numeric ID used for reference to a supplier within the database
+            hashColumns: []
+            hashDetails: null
+            name: SUPPLIERID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 334d7766-c787-43a8-9a50-dfe854de3cdf
+                    stepCounter: 8680f5e3-9428-439b-81f9-25ca62a5401d
+                transform: ""
+          - columnReference:
+              columnCounter: 82fbeb9c-19c1-4785-bbe7-e571917a4309
+              stepCounter: 33c85b96-1d2c-4fb1-9690-a4644eb4ea29
+            dataType: VARCHAR(100)
+            description: Suppliers full name (usually a trading name)
+            hashColumns: []
+            hashDetails: null
+            name: SUPPLIERNAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 69ec87c6-a16d-40ff-972d-032b64bcfde7
+                    stepCounter: 8680f5e3-9428-439b-81f9-25ca62a5401d
+                transform: ""
+          - columnReference:
+              columnCounter: f53c64e0-82fa-42b8-870e-063a649f04ca
+              stepCounter: 33c85b96-1d2c-4fb1-9690-a4644eb4ea29
+            dataType: NUMBER(38,0)
+            description: Suppliers category
+            hashColumns: []
+            hashDetails: null
+            name: SUPPLIERCATEGORYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ed9e3d46-a4ab-4925-8f7a-b7dac43c465b
+                    stepCounter: 8680f5e3-9428-439b-81f9-25ca62a5401d
+                transform: ""
+          - columnReference:
+              columnCounter: 969477f0-2044-499a-8255-d8377f8433cf
+              stepCounter: 33c85b96-1d2c-4fb1-9690-a4644eb4ea29
+            dataType: NUMBER(38,0)
+            description: Primary contact
+            hashColumns: []
+            hashDetails: null
+            name: PRIMARYCONTACTPERSONID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f8235808-47f0-47cb-8ab3-91a5a72acce3
+                    stepCounter: 8680f5e3-9428-439b-81f9-25ca62a5401d
+                transform: ""
+          - columnReference:
+              columnCounter: 4271eb80-4ad7-42e4-a006-900b76f855fc
+              stepCounter: 33c85b96-1d2c-4fb1-9690-a4644eb4ea29
+            dataType: NUMBER(38,0)
+            description: Alternate contact
+            hashColumns: []
+            hashDetails: null
+            name: ALTERNATECONTACTPERSONID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 71523b8b-668b-4235-99de-cedfbc81fd56
+                    stepCounter: 8680f5e3-9428-439b-81f9-25ca62a5401d
+                transform: ""
+          - columnReference:
+              columnCounter: 931410e3-d4af-4656-8568-e624298a483e
+              stepCounter: 33c85b96-1d2c-4fb1-9690-a4644eb4ea29
+            dataType: VARCHAR(16777216)
+            description: Standard delivery method for stock items received from this supplier
+            hashColumns: []
+            hashDetails: null
+            name: DELIVERYMETHODID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ccf41981-828d-4b1b-8786-a9df84584c5f
+                    stepCounter: 8680f5e3-9428-439b-81f9-25ca62a5401d
+                transform: ""
+          - columnReference:
+              columnCounter: a753e753-47bc-44fb-867a-261c427288f2
+              stepCounter: 33c85b96-1d2c-4fb1-9690-a4644eb4ea29
+            dataType: NUMBER(38,0)
+            description: ID of the delivery city for this address
+            hashColumns: []
+            hashDetails: null
+            name: DELIVERYCITYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5eedec2c-c197-4d13-9e68-e3ea81fdc83f
+                    stepCounter: 8680f5e3-9428-439b-81f9-25ca62a5401d
+                transform: ""
+          - columnReference:
+              columnCounter: 426c57f5-9608-45dd-834f-4282e60013f6
+              stepCounter: 33c85b96-1d2c-4fb1-9690-a4644eb4ea29
+            dataType: NUMBER(38,0)
+            description: ID of the mailing city for this address
+            hashColumns: []
+            hashDetails: null
+            name: POSTALCITYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ba844395-1cd1-4c45-a357-7531d2b440dc
+                    stepCounter: 8680f5e3-9428-439b-81f9-25ca62a5401d
+                transform: ""
+          - columnReference:
+              columnCounter: c9a0c096-671c-4929-90de-c176d5b14a1a
+              stepCounter: 33c85b96-1d2c-4fb1-9690-a4644eb4ea29
+            dataType: VARCHAR(20)
+            description: Supplier reference for our organization (might be our account number at the supplier)
+            hashColumns: []
+            hashDetails: null
+            name: SUPPLIERREFERENCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 86d92c66-5145-4296-b467-db2adc835945
+                    stepCounter: 8680f5e3-9428-439b-81f9-25ca62a5401d
+                transform: ""
+          - columnReference:
+              columnCounter: 29560ff4-9b4b-4dcc-b6b1-dd00c8c4ae25
+              stepCounter: 33c85b96-1d2c-4fb1-9690-a4644eb4ea29
+            dataType: VARCHAR(50)
+            description: Suppliers bank account name (ie name on the account)
+            hashColumns: []
+            hashDetails: null
+            name: BANKACCOUNTNAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a1e450a0-fee7-46d8-8990-cbdf35a3177e
+                    stepCounter: 8680f5e3-9428-439b-81f9-25ca62a5401d
+                transform: ""
+          - columnReference:
+              columnCounter: 63525765-d7de-4d25-b5cf-c0b58daaef75
+              stepCounter: 33c85b96-1d2c-4fb1-9690-a4644eb4ea29
+            dataType: VARCHAR(50)
+            description: Suppliers bank branch
+            hashColumns: []
+            hashDetails: null
+            name: BANKACCOUNTBRANCH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7d4fe9d8-1c99-4af2-86c6-934492dc827d
+                    stepCounter: 8680f5e3-9428-439b-81f9-25ca62a5401d
+                transform: ""
+          - columnReference:
+              columnCounter: aa7faadd-7619-4b7a-aa73-5f13c8cc7e6f
+              stepCounter: 33c85b96-1d2c-4fb1-9690-a4644eb4ea29
+            dataType: VARCHAR(20)
+            description: Suppliers bank account code (usually a numeric reference for the bank branch)
+            hashColumns: []
+            hashDetails: null
+            name: BANKACCOUNTCODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 84f87d02-95ef-47d6-a10e-de3b27335de3
+                    stepCounter: 8680f5e3-9428-439b-81f9-25ca62a5401d
+                transform: ""
+          - columnReference:
+              columnCounter: edc67a4c-812e-473a-a0fe-f020e18cc829
+              stepCounter: 33c85b96-1d2c-4fb1-9690-a4644eb4ea29
+            dataType: VARCHAR(20)
+            description: Suppliers bank account number
+            hashColumns: []
+            hashDetails: null
+            name: BANKACCOUNTNUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a698cde2-4b67-4f7f-8823-ea819919585c
+                    stepCounter: 8680f5e3-9428-439b-81f9-25ca62a5401d
+                transform: ""
+          - columnReference:
+              columnCounter: c14b0c04-4513-4159-acaf-1276dc54f208
+              stepCounter: 33c85b96-1d2c-4fb1-9690-a4644eb4ea29
+            dataType: VARCHAR(20)
+            description: Suppliers banks international code (such as a SWIFT code)
+            hashColumns: []
+            hashDetails: null
+            name: BANKINTERNATIONALCODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cb1ff04d-dfb1-4211-ac1a-b5bfe38a662e
+                    stepCounter: 8680f5e3-9428-439b-81f9-25ca62a5401d
+                transform: ""
+          - columnReference:
+              columnCounter: bdb22c7e-fa85-4931-ba75-7b2c050ebf54
+              stepCounter: 33c85b96-1d2c-4fb1-9690-a4644eb4ea29
+            dataType: NUMBER(38,0)
+            description: Number of days for payment of an invoice (ie payment terms)
+            hashColumns: []
+            hashDetails: null
+            name: PAYMENTDAYS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5c51b590-c65b-4725-aaf7-8479d40a6f54
+                    stepCounter: 8680f5e3-9428-439b-81f9-25ca62a5401d
+                transform: ""
+          - columnReference:
+              columnCounter: 98b05706-96b5-4cb8-af50-4879277eeedd
+              stepCounter: 33c85b96-1d2c-4fb1-9690-a4644eb4ea29
+            dataType: VARCHAR(4000)
+            description: Internal comments (not exposed outside organization)
+            hashColumns: []
+            hashDetails: null
+            name: INTERNALCOMMENTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 990a584d-d6d3-4316-b06a-96e065045054
+                    stepCounter: 8680f5e3-9428-439b-81f9-25ca62a5401d
+                transform: ""
+          - columnReference:
+              columnCounter: 79ac37ad-0d3b-40a4-b772-0ede1a4986f0
+              stepCounter: 33c85b96-1d2c-4fb1-9690-a4644eb4ea29
+            dataType: VARCHAR(20)
+            description: Phone number
+            hashColumns: []
+            hashDetails: null
+            name: PHONENUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b7a2af26-e50e-41c5-bcbd-fc7640563dc0
+                    stepCounter: 8680f5e3-9428-439b-81f9-25ca62a5401d
+                transform: ""
+          - columnReference:
+              columnCounter: 3a729229-cd5b-449d-ba1e-4dc85edc006d
+              stepCounter: 33c85b96-1d2c-4fb1-9690-a4644eb4ea29
+            dataType: VARCHAR(20)
+            description: Fax number
+            hashColumns: []
+            hashDetails: null
+            name: FAXNUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 061a0003-5b40-4b7d-baec-ebbacc1e4788
+                    stepCounter: 8680f5e3-9428-439b-81f9-25ca62a5401d
+                transform: ""
+          - columnReference:
+              columnCounter: ee93a4c7-f670-4769-b19e-fd78af145429
+              stepCounter: 33c85b96-1d2c-4fb1-9690-a4644eb4ea29
+            dataType: VARCHAR(256)
+            description: URL for the website for this supplier
+            hashColumns: []
+            hashDetails: null
+            name: WEBSITEURL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1a892caa-a7ac-4c86-b5ea-1a6073d1eca1
+                    stepCounter: 8680f5e3-9428-439b-81f9-25ca62a5401d
+                transform: ""
+          - columnReference:
+              columnCounter: 0d366b8e-349d-4350-899a-27f76bd8e0a1
+              stepCounter: 33c85b96-1d2c-4fb1-9690-a4644eb4ea29
+            dataType: VARCHAR(60)
+            description: First delivery address line for the supplier
+            hashColumns: []
+            hashDetails: null
+            name: DELIVERYADDRESSLINE1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3c49bcd0-e845-4385-917d-b6f33c25b053
+                    stepCounter: 8680f5e3-9428-439b-81f9-25ca62a5401d
+                transform: ""
+          - columnReference:
+              columnCounter: b8a353c5-edd9-463c-a45b-e4b5d949195d
+              stepCounter: 33c85b96-1d2c-4fb1-9690-a4644eb4ea29
+            dataType: VARCHAR(60)
+            description: Second delivery address line for the supplier
+            hashColumns: []
+            hashDetails: null
+            name: DELIVERYADDRESSLINE2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 32b2a744-f86b-4334-8847-0aa56342421b
+                    stepCounter: 8680f5e3-9428-439b-81f9-25ca62a5401d
+                transform: ""
+          - columnReference:
+              columnCounter: 2f3a527e-830a-4767-9187-863cbd0c93dd
+              stepCounter: 33c85b96-1d2c-4fb1-9690-a4644eb4ea29
+            dataType: VARCHAR(10)
+            description: Delivery postal code for the supplier
+            hashColumns: []
+            hashDetails: null
+            name: DELIVERYPOSTALCODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 823816c3-b001-4df6-b7df-4e2a5bc625b5
+                    stepCounter: 8680f5e3-9428-439b-81f9-25ca62a5401d
+                transform: ""
+          - columnReference:
+              columnCounter: 9c4261e7-d805-4efc-aab4-525803eaebbb
+              stepCounter: 33c85b96-1d2c-4fb1-9690-a4644eb4ea29
+            dataType: VARCHAR(16777216)
+            description: Geographic location for the suppliers office/warehouse
+            hashColumns: []
+            hashDetails: null
+            name: DELIVERYLOCATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ba87ec37-9783-4c93-9262-9737f8f04030
+                    stepCounter: 8680f5e3-9428-439b-81f9-25ca62a5401d
+                transform: ""
+          - columnReference:
+              columnCounter: dda0d5b4-e845-48ab-8574-6eeb6ce2105d
+              stepCounter: 33c85b96-1d2c-4fb1-9690-a4644eb4ea29
+            dataType: VARCHAR(60)
+            description: First postal address line for the supplier
+            hashColumns: []
+            hashDetails: null
+            name: POSTALADDRESSLINE1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0f4d6c11-9081-4c93-a318-ac14349b2a2c
+                    stepCounter: 8680f5e3-9428-439b-81f9-25ca62a5401d
+                transform: ""
+          - columnReference:
+              columnCounter: 7b8bfe6e-f240-4e2b-b738-3567b05d172e
+              stepCounter: 33c85b96-1d2c-4fb1-9690-a4644eb4ea29
+            dataType: VARCHAR(60)
+            description: Second postal address line for the supplier
+            hashColumns: []
+            hashDetails: null
+            name: POSTALADDRESSLINE2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 31efb0f1-3b25-45cc-8165-d702046fac48
+                    stepCounter: 8680f5e3-9428-439b-81f9-25ca62a5401d
+                transform: ""
+          - columnReference:
+              columnCounter: f1536386-50fd-46c5-bc17-ec6a265f73d8
+              stepCounter: 33c85b96-1d2c-4fb1-9690-a4644eb4ea29
+            dataType: VARCHAR(10)
+            description: Postal code for the supplier when sending by mail
+            hashColumns: []
+            hashDetails: null
+            name: POSTALPOSTALCODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bc65de1f-5230-4c57-9c93-3f6849f7cff5
+                    stepCounter: 8680f5e3-9428-439b-81f9-25ca62a5401d
+                transform: ""
+          - columnReference:
+              columnCounter: ea2626c3-57c8-48fa-80da-65189f2f9b70
+              stepCounter: 33c85b96-1d2c-4fb1-9690-a4644eb4ea29
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LASTEDITEDBY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 70613f2a-aeb5-4974-ab1a-0ec91dcd09c9
+                    stepCounter: 8680f5e3-9428-439b-81f9-25ca62a5401d
+                transform: ""
+          - columnReference:
+              columnCounter: b1fecde8-09eb-4afd-94d1-02201f6d8ebb
+              stepCounter: 33c85b96-1d2c-4fb1-9690-a4644eb4ea29
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: VALIDFROM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5c8bf914-7979-4b3f-aa7e-49bb1774895c
+                    stepCounter: 8680f5e3-9428-439b-81f9-25ca62a5401d
+                transform: ""
+          - columnReference:
+              columnCounter: 2b23b9bc-7300-43cd-90ab-a4009427b449
+              stepCounter: 33c85b96-1d2c-4fb1-9690-a4644eb4ea29
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: VALIDTO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 56210a6e-67d3-40a1-89fc-f46b5b3de162
+                    stepCounter: 8680f5e3-9428-439b-81f9-25ca62a5401d
+                transform: ""
+          - columnReference:
+              columnCounter: 1c96022b-682c-44fb-b4da-1d679d9e5624
+              stepCounter: 33c85b96-1d2c-4fb1-9690-a4644eb4ea29
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6d0e623b-1bee-4f71-8112-91d98930745f
+                    stepCounter: 8680f5e3-9428-439b-81f9-25ca62a5401d
+                transform: ""
+          - columnReference:
+              columnCounter: da48034b-01eb-406e-8a88-0609ad7b3a48
+              stepCounter: 33c85b96-1d2c-4fb1-9690-a4644eb4ea29
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ea2b3f05-ca34-4bbc-a32c-fe76dc4d040b
+                    stepCounter: 8680f5e3-9428-439b-81f9-25ca62a5401d
+                transform: ""
+          - columnReference:
+              columnCounter: e9d0886d-a4d6-4ec1-848c-ffa4f4c5d28f
+              stepCounter: 33c85b96-1d2c-4fb1-9690-a4644eb4ea29
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c5babdac-c084-46be-855c-40ccc5369d06
+                    stepCounter: 8680f5e3-9428-439b-81f9-25ca62a5401d
+                transform: ""
+          - columnReference:
+              columnCounter: f5de3b8a-001d-478a-af76-a095c297abcf
+              stepCounter: 33c85b96-1d2c-4fb1-9690-a4644eb4ea29
+            config:
+              is_Link_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LNK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e81e87a3-710b-412f-a6bb-4b685e7ad1ad
+                    stepCounter: 8680f5e3-9428-439b-81f9-25ca62a5401d
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_WWI_SUPPLIERS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_WWI_SUPPLIERS') }} "DVSTG_WWI_SUPPLIERS"
+            name: LINK_WWI_SUPPLIERS
+            noLinkRefs: []
+      name: LINK_WWI_SUPPLIERS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::7
+      type: sql
+    stepCounter: 33c85b96-1d2c-4fb1-9690-a4644eb4ea29

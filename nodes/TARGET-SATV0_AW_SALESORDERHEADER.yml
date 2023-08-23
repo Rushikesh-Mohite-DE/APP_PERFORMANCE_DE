@@ -1,0 +1,373 @@
+steps:
+  SATV0_AW_SALESORDERHEADER-95e15a3a-22e4-44a2-b32a-9df568b65e03:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 434ae465-f63d-424e-9d9c-cce43d0d8d30
+              stepCounter: 95e15a3a-22e4-44a2-b32a-9df568b65e03
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_SALESORDERHEADER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c99b63fa-213e-4796-973d-17b95eb10770
+                    stepCounter: 39888188-26c9-4816-a22c-b34c32741bd5
+                transform: ""
+          - columnReference:
+              columnCounter: 5c2cbfdc-fd32-433a-8f3b-bf8a67e35e4b
+              stepCounter: 95e15a3a-22e4-44a2-b32a-9df568b65e03
+            dataType: NUMBER(38,0)
+            description: Incremental number to track changes to the sales order over time.
+            hashColumns: []
+            hashDetails: null
+            name: REVISIONNUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11e33b60-d20d-4a05-aa41-c554571551af
+                    stepCounter: 39888188-26c9-4816-a22c-b34c32741bd5
+                transform: ""
+          - columnReference:
+              columnCounter: b937391e-0483-4a3d-98e1-3726d712d4fc
+              stepCounter: 95e15a3a-22e4-44a2-b32a-9df568b65e03
+            dataType: TIMESTAMP_NTZ(9)
+            description: Dates the sales order was created.
+            hashColumns: []
+            hashDetails: null
+            name: ORDERDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 22ec4161-c66e-479e-8d0f-833eff1edd12
+                    stepCounter: 39888188-26c9-4816-a22c-b34c32741bd5
+                transform: ""
+          - columnReference:
+              columnCounter: 6dc84df5-3709-48e8-9a3f-1321fe95be12
+              stepCounter: 95e15a3a-22e4-44a2-b32a-9df568b65e03
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date the order is due to the customer.
+            hashColumns: []
+            hashDetails: null
+            name: DUEDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d6bf9465-5fa8-47b7-b22d-714770eaf36f
+                    stepCounter: 39888188-26c9-4816-a22c-b34c32741bd5
+                transform: ""
+          - columnReference:
+              columnCounter: ad269809-866e-4c5b-b3c2-12a0d086b2de
+              stepCounter: 95e15a3a-22e4-44a2-b32a-9df568b65e03
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date the order was shipped to the customer.
+            hashColumns: []
+            hashDetails: null
+            name: SHIPDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5a5cd8fc-b4aa-49e0-a0c4-15ce6706428a
+                    stepCounter: 39888188-26c9-4816-a22c-b34c32741bd5
+                transform: ""
+          - columnReference:
+              columnCounter: 19b1c508-a8a9-4da9-a2c3-2fd2fa37b028
+              stepCounter: 95e15a3a-22e4-44a2-b32a-9df568b65e03
+            dataType: NUMBER(38,0)
+            description: Order current status. 1 = In process; 2 = Approved; 3 = Backordered; 4 = Rejected; 5 = Shipped; 6 = Cancelled
+            hashColumns: []
+            hashDetails: null
+            name: STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2f755297-3c77-4758-aa14-cb9f3efad39a
+                    stepCounter: 39888188-26c9-4816-a22c-b34c32741bd5
+                transform: ""
+          - columnReference:
+              columnCounter: 2f07dd4e-9550-44fe-a703-70251808d988
+              stepCounter: 95e15a3a-22e4-44a2-b32a-9df568b65e03
+            dataType: VARCHAR(16777216)
+            description: 0 = Order placed by sales person. 1 = Order placed online by customer.
+            hashColumns: []
+            hashDetails: null
+            name: ONLINEORDERFLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: aea0ee6f-b592-406c-bcc8-3cb6e942616c
+                    stepCounter: 39888188-26c9-4816-a22c-b34c32741bd5
+                transform: ""
+          - columnReference:
+              columnCounter: 0f6613e4-200a-4357-84cc-2e56d6b70120
+              stepCounter: 95e15a3a-22e4-44a2-b32a-9df568b65e03
+            dataType: VARCHAR(25)
+            description: Unique sales order identification number.
+            hashColumns: []
+            hashDetails: null
+            name: SALESORDERNUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 79377c0e-b580-4682-adc8-fdcf71b2a81a
+                    stepCounter: 39888188-26c9-4816-a22c-b34c32741bd5
+                transform: ""
+          - columnReference:
+              columnCounter: 391e1eab-c7ff-4f3d-83b0-2d000535d87c
+              stepCounter: 95e15a3a-22e4-44a2-b32a-9df568b65e03
+            dataType: VARCHAR(16777216)
+            description: Customer purchase order number reference.
+            hashColumns: []
+            hashDetails: null
+            name: PURCHASEORDERNUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 008055ad-8fde-4690-9803-8964f905dd20
+                    stepCounter: 39888188-26c9-4816-a22c-b34c32741bd5
+                transform: ""
+          - columnReference:
+              columnCounter: 23449933-420b-4897-bf5b-c620a78becd0
+              stepCounter: 95e15a3a-22e4-44a2-b32a-9df568b65e03
+            dataType: VARCHAR(16777216)
+            description: Financial accounting number reference.
+            hashColumns: []
+            hashDetails: null
+            name: ACCOUNTNUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 35502cb3-327c-465a-8a52-873cd84b03d1
+                    stepCounter: 39888188-26c9-4816-a22c-b34c32741bd5
+                transform: ""
+          - columnReference:
+              columnCounter: 541c624f-db61-4152-851c-c5f0132c60e6
+              stepCounter: 95e15a3a-22e4-44a2-b32a-9df568b65e03
+            dataType: NUMBER(38,0)
+            description: Customer identification number. Foreign key to Customer.BusinessEntityID.
+            hashColumns: []
+            hashDetails: null
+            name: CUSTOMERID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 26675af6-d0e1-465c-a76d-c5e77cb9e24f
+                    stepCounter: 39888188-26c9-4816-a22c-b34c32741bd5
+                transform: ""
+          - columnReference:
+              columnCounter: fb060742-60db-488c-8128-f9e851bec119
+              stepCounter: 95e15a3a-22e4-44a2-b32a-9df568b65e03
+            dataType: VARCHAR(16777216)
+            description: Sales person who created the sales order. Foreign key to SalesPerson.BusinessEntityID.
+            hashColumns: []
+            hashDetails: null
+            name: SALESPERSONID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7022c6fd-9ee7-49c9-b2f9-7f798e1a3218
+                    stepCounter: 39888188-26c9-4816-a22c-b34c32741bd5
+                transform: ""
+          - columnReference:
+              columnCounter: 0a3bb239-6a5d-4c49-bfde-d5693c3be09e
+              stepCounter: 95e15a3a-22e4-44a2-b32a-9df568b65e03
+            dataType: VARCHAR(15)
+            description: Approval code provided by the credit card company.
+            hashColumns: []
+            hashDetails: null
+            name: CREDITCARDAPPROVALCODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 78b014f0-be6c-46b7-bb04-9299d6ce63ab
+                    stepCounter: 39888188-26c9-4816-a22c-b34c32741bd5
+                transform: ""
+          - columnReference:
+              columnCounter: 0cf247df-97ac-478a-b938-26ca52d5e1fc
+              stepCounter: 95e15a3a-22e4-44a2-b32a-9df568b65e03
+            dataType: VARCHAR(16777216)
+            description: Currency exchange rate used. Foreign key to CurrencyRate.CurrencyRateID.
+            hashColumns: []
+            hashDetails: null
+            name: CURRENCYRATEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7a5b00d1-70c0-4f9c-a6e7-10e7a0709ace
+                    stepCounter: 39888188-26c9-4816-a22c-b34c32741bd5
+                transform: ""
+          - columnReference:
+              columnCounter: 3ed711e9-624f-4e7d-9e45-6ecc13d4e18f
+              stepCounter: 95e15a3a-22e4-44a2-b32a-9df568b65e03
+            dataType: NUMBER(19,4)
+            description: Sales subtotal. Computed as SUM(SalesOrderDetail.LineTotal)for the appropriate SalesOrderID.
+            hashColumns: []
+            hashDetails: null
+            name: SUBTOTAL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 979837a1-2a90-483d-b7bc-ffc04b403b09
+                    stepCounter: 39888188-26c9-4816-a22c-b34c32741bd5
+                transform: ""
+          - columnReference:
+              columnCounter: 63b76fcf-e6ce-4a79-aef3-c99a49a8590a
+              stepCounter: 95e15a3a-22e4-44a2-b32a-9df568b65e03
+            dataType: NUMBER(19,4)
+            description: Tax amount.
+            hashColumns: []
+            hashDetails: null
+            name: TAXAMT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f9b6b5f3-ff70-4c9e-b78c-1c2617979f56
+                    stepCounter: 39888188-26c9-4816-a22c-b34c32741bd5
+                transform: ""
+          - columnReference:
+              columnCounter: 273a51ff-6b9b-46aa-ba85-7258a15bc4fc
+              stepCounter: 95e15a3a-22e4-44a2-b32a-9df568b65e03
+            dataType: NUMBER(19,4)
+            description: Shipping cost.
+            hashColumns: []
+            hashDetails: null
+            name: FREIGHT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5c0f1abc-05d3-45c0-bba1-191f672ef79d
+                    stepCounter: 39888188-26c9-4816-a22c-b34c32741bd5
+                transform: ""
+          - columnReference:
+              columnCounter: d697e919-f618-4b51-a89c-461c3e789a6b
+              stepCounter: 95e15a3a-22e4-44a2-b32a-9df568b65e03
+            dataType: NUMBER(19,4)
+            description: Total due from customer. Computed as Subtotal + TaxAmt + Freight.
+            hashColumns: []
+            hashDetails: null
+            name: TOTALDUE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d6010245-c84a-4a7c-9c61-b4873d9149db
+                    stepCounter: 39888188-26c9-4816-a22c-b34c32741bd5
+                transform: ""
+          - columnReference:
+              columnCounter: ea75e8b3-076a-41e1-9dd5-290e2a461859
+              stepCounter: 95e15a3a-22e4-44a2-b32a-9df568b65e03
+            dataType: VARCHAR(128)
+            description: Sales representative comments.
+            hashColumns: []
+            hashDetails: null
+            name: COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8001831b-870f-4580-a9ba-a01415c27d34
+                    stepCounter: 39888188-26c9-4816-a22c-b34c32741bd5
+                transform: ""
+          - columnReference:
+              columnCounter: 7981c75f-ca30-4109-a6a9-bd21d28fc1e6
+              stepCounter: 95e15a3a-22e4-44a2-b32a-9df568b65e03
+            dataType: VARCHAR(16777216)
+            description: ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            hashColumns: []
+            hashDetails: null
+            name: ROWGUID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bc8b522d-799b-47ef-8011-0d4348a3517f
+                    stepCounter: 39888188-26c9-4816-a22c-b34c32741bd5
+                transform: ""
+          - columnReference:
+              columnCounter: 618ca0b2-823d-49e9-baf6-f36999d36fa3
+              stepCounter: 95e15a3a-22e4-44a2-b32a-9df568b65e03
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            hashColumns: []
+            hashDetails: null
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ea6751a6-4a53-4461-a026-3d8ec13eafbc
+                    stepCounter: 39888188-26c9-4816-a22c-b34c32741bd5
+                transform: ""
+          - columnReference:
+              columnCounter: aff026e0-eb2b-4fe7-a0ba-3829085afa85
+              stepCounter: 95e15a3a-22e4-44a2-b32a-9df568b65e03
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 730ce9c9-a13e-4e2e-9cb1-ea07f7353353
+                    stepCounter: 39888188-26c9-4816-a22c-b34c32741bd5
+                transform: ""
+          - columnReference:
+              columnCounter: 6eff405c-313e-4bfe-99b9-d5dee33c98ba
+              stepCounter: 95e15a3a-22e4-44a2-b32a-9df568b65e03
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 52ee730a-443e-456f-bd2a-fe3f55760506
+                    stepCounter: 39888188-26c9-4816-a22c-b34c32741bd5
+                transform: ""
+          - columnReference:
+              columnCounter: 28b4c5a7-fae6-4374-888e-f73f4dd5e18a
+              stepCounter: 95e15a3a-22e4-44a2-b32a-9df568b65e03
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b0242114-1a8d-4434-863b-1c1eb371504f
+                    stepCounter: 39888188-26c9-4816-a22c-b34c32741bd5
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_SALESORDERHEADER
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_SALESORDERHEADER') }} "DVSTG_AW_SALESORDERHEADER"
+            name: SATV0_AW_SALESORDERHEADER
+            noLinkRefs: []
+      name: SATV0_AW_SALESORDERHEADER
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: 95e15a3a-22e4-44a2-b32a-9df568b65e03

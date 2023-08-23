@@ -1,0 +1,105 @@
+steps:
+  HUB_SPORTS_TENNIS_ACTION_POINTS-f1fecc25-249c-4cb0-b58f-695dfd0a8335:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: be76a021-c427-4805-8271-2d6048bb78ef
+              stepCounter: f1fecc25-249c-4cb0-b58f-695dfd0a8335
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_ACTION_POINTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e9897646-0831-4184-95af-efc05b835425
+                    stepCounter: 527a9f8b-d4d8-4e02-bce5-94105d9931c4
+                transform: ""
+          - columnReference:
+              columnCounter: 1cc2619d-ff8c-4fee-afae-a933836e3e5f
+              stepCounter: f1fecc25-249c-4cb0-b58f-695dfd0a8335
+            dataType: VARCHAR(32)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 09572b18-ee1e-4dca-a8fc-b9083959b86a
+                    stepCounter: 527a9f8b-d4d8-4e02-bce5-94105d9931c4
+                transform: ""
+          - columnReference:
+              columnCounter: 813a28aa-d7c9-4f22-903b-a361f91945c0
+              stepCounter: f1fecc25-249c-4cb0-b58f-695dfd0a8335
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SUB_PERIOD_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 83d413f0-6116-4559-a672-6e82bd931e5b
+                    stepCounter: 527a9f8b-d4d8-4e02-bce5-94105d9931c4
+                transform: ""
+          - columnReference:
+              columnCounter: 87918d4c-eb28-413b-b07e-d86c7de6a106
+              stepCounter: f1fecc25-249c-4cb0-b58f-695dfd0a8335
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cb3b3842-41a3-443d-85e0-19206e3eae88
+                    stepCounter: 527a9f8b-d4d8-4e02-bce5-94105d9931c4
+                transform: ""
+          - columnReference:
+              columnCounter: 6e15eeda-c65d-4270-99af-89ceff60760f
+              stepCounter: f1fecc25-249c-4cb0-b58f-695dfd0a8335
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8dcf7348-7a5d-4b5a-a2d8-ac9b6d33c807
+                    stepCounter: 527a9f8b-d4d8-4e02-bce5-94105d9931c4
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_SPORTS_TENNIS_ACTION_POINTS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_SPORTS_TENNIS_ACTION_POINTS') }} "DVSTG_SPORTS_TENNIS_ACTION_POINTS"
+            name: HUB_SPORTS_TENNIS_ACTION_POINTS
+            noLinkRefs: []
+      name: HUB_SPORTS_TENNIS_ACTION_POINTS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: f1fecc25-249c-4cb0-b58f-695dfd0a8335

@@ -1,0 +1,105 @@
+steps:
+  HUB_AW_PRODUCTPRODUCTPHOTO-0be9546b-5621-40c5-9c7a-cfcea0113efb:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: dbf878a9-ed01-4889-8eb3-cd8cce8f54f7
+              stepCounter: 0be9546b-5621-40c5-9c7a-cfcea0113efb
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_PRODUCTPRODUCTPHOTO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: da994194-20c9-4cba-b6cf-78af8048aafd
+                    stepCounter: 8ca7acf7-be84-4e6c-a1e3-841eaed4d00c
+                transform: ""
+          - columnReference:
+              columnCounter: 6eae3812-7379-42c7-8866-6bc0e62be0f7
+              stepCounter: 0be9546b-5621-40c5-9c7a-cfcea0113efb
+            dataType: NUMBER(38,0)
+            description: Product identification number. Foreign key to Product.ProductID.
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCTID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 357ffc05-f737-4cab-89a8-7f165546097e
+                    stepCounter: 8ca7acf7-be84-4e6c-a1e3-841eaed4d00c
+                transform: ""
+          - columnReference:
+              columnCounter: b0a0c1ca-5dbb-4bd4-9172-3fcc301cfe6f
+              stepCounter: 0be9546b-5621-40c5-9c7a-cfcea0113efb
+            dataType: NUMBER(38,0)
+            description: Product photo identification number. Foreign key to ProductPhoto.ProductPhotoID.
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCTPHOTOID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bfef8b9b-695f-4496-8d62-0b0e7169ed64
+                    stepCounter: 8ca7acf7-be84-4e6c-a1e3-841eaed4d00c
+                transform: ""
+          - columnReference:
+              columnCounter: 29a18e32-3078-41a9-b32d-9874ed1662e1
+              stepCounter: 0be9546b-5621-40c5-9c7a-cfcea0113efb
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c2a2e902-6bba-4a82-9cd9-ef86ea9cee15
+                    stepCounter: 8ca7acf7-be84-4e6c-a1e3-841eaed4d00c
+                transform: ""
+          - columnReference:
+              columnCounter: 75d4c6a0-8ed9-45b9-9a69-caf3841dd392
+              stepCounter: 0be9546b-5621-40c5-9c7a-cfcea0113efb
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ffc7ff72-2229-4ff3-9f44-a52371bf0bd6
+                    stepCounter: 8ca7acf7-be84-4e6c-a1e3-841eaed4d00c
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_PRODUCTPRODUCTPHOTO
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_PRODUCTPRODUCTPHOTO') }} "DVSTG_AW_PRODUCTPRODUCTPHOTO"
+            name: HUB_AW_PRODUCTPRODUCTPHOTO
+            noLinkRefs: []
+      name: HUB_AW_PRODUCTPRODUCTPHOTO
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 0be9546b-5621-40c5-9c7a-cfcea0113efb

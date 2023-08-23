@@ -1,0 +1,49 @@
+steps:
+  SPORTS_LOAD_TEAMS_DOCUMENTS-b77d9d54-73ce-43f6-b14e-3f7da48b908c:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SPORTS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a6522b2a-0500-445c-8c7a-16af59634ea7
+              stepCounter: b77d9d54-73ce-43f6-b14e-3f7da48b908c
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: TEAM_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 12f55552-b2e4-4fe1-bfe5-a1aad83ee866
+              stepCounter: b77d9d54-73ce-43f6-b14e-3f7da48b908c
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: DOCUMENT_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SPORTS_SRC', 'SPORTS_LOAD_TEAMS_DOCUMENTS') }}
+      name: SPORTS_LOAD_TEAMS_DOCUMENTS
+      schema: ""
+      sqlType: Source
+      table: SPORTS_LOAD_TEAMS_DOCUMENTS
+      type: sourceInput
+    stepCounter: b77d9d54-73ce-43f6-b14e-3f7da48b908c

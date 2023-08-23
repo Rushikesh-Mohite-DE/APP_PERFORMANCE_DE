@@ -1,0 +1,91 @@
+steps:
+  HUB_PERBANK_ACTORTYPES-17dd0a47-746f-4360-b1ef-233efb5841e0:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 5a39e103-ccd6-415e-86fc-5b554624e759
+              stepCounter: 17dd0a47-746f-4360-b1ef-233efb5841e0
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_PERBANK_ACTORTYPES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0413e38b-03e5-44dd-97fe-a5ae29e71edd
+                    stepCounter: f5e2c941-5aef-4a4e-8a79-dc53e57aebe1
+                transform: ""
+          - columnReference:
+              columnCounter: 4f23619d-3e24-4da4-8f1f-1d8a7185b7b7
+              stepCounter: 17dd0a47-746f-4360-b1ef-233efb5841e0
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6bfbe2df-17be-467c-9ab4-4dd2e76b7ef0
+                    stepCounter: f5e2c941-5aef-4a4e-8a79-dc53e57aebe1
+                transform: ""
+          - columnReference:
+              columnCounter: 606d8996-7683-429d-adf4-6c353696c96d
+              stepCounter: 17dd0a47-746f-4360-b1ef-233efb5841e0
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9736c594-dbf5-4d43-9ae6-32623cd69b96
+                    stepCounter: f5e2c941-5aef-4a4e-8a79-dc53e57aebe1
+                transform: ""
+          - columnReference:
+              columnCounter: 4ab2aa6e-990a-4c7d-a34a-a0878e004116
+              stepCounter: 17dd0a47-746f-4360-b1ef-233efb5841e0
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a1f7d855-2fdc-435a-adf5-94d288c3dd46
+                    stepCounter: f5e2c941-5aef-4a4e-8a79-dc53e57aebe1
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_PERBANK_ACTORTYPES
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_PERBANK_ACTORTYPES') }} "DVSTG_PERBANK_ACTORTYPES"
+            name: HUB_PERBANK_ACTORTYPES
+            noLinkRefs: []
+      name: HUB_PERBANK_ACTORTYPES
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: 17dd0a47-746f-4360-b1ef-233efb5841e0

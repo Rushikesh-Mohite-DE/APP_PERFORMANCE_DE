@@ -1,0 +1,91 @@
+steps:
+  HUB_AW_EMPLOYEEPAYHISTORY-dc5323ce-ebf2-48ee-8bba-1e0b3e46ac64:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 0ecb9006-a62b-4c2b-a59c-ed23b137fa33
+              stepCounter: dc5323ce-ebf2-48ee-8bba-1e0b3e46ac64
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_EMPLOYEEPAYHISTORY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 63bf1a49-ed31-49c5-b8b1-0181782b573a
+                    stepCounter: ea440c7a-0d29-444e-9793-f2b2f7ed5c7b
+                transform: ""
+          - columnReference:
+              columnCounter: f82580fe-d413-4606-a9f6-60acbeb80f3f
+              stepCounter: dc5323ce-ebf2-48ee-8bba-1e0b3e46ac64
+            dataType: NUMBER(38,0)
+            description: Employee identification number. Foreign key to Employee.BusinessEntityID.
+            hashColumns: []
+            hashDetails: null
+            name: BUSINESSENTITYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4f504768-5626-44df-9735-cb24b232f45e
+                    stepCounter: ea440c7a-0d29-444e-9793-f2b2f7ed5c7b
+                transform: ""
+          - columnReference:
+              columnCounter: e496fc70-55cc-4905-ac27-ffc8a27ba123
+              stepCounter: dc5323ce-ebf2-48ee-8bba-1e0b3e46ac64
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f0ff4af7-810b-40c7-b058-c88c5d62e7ab
+                    stepCounter: ea440c7a-0d29-444e-9793-f2b2f7ed5c7b
+                transform: ""
+          - columnReference:
+              columnCounter: 7f91b5f3-c94c-46d0-8fe7-f4fb258976ff
+              stepCounter: dc5323ce-ebf2-48ee-8bba-1e0b3e46ac64
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 23ea62af-8fc9-4714-a7bd-09a80c192118
+                    stepCounter: ea440c7a-0d29-444e-9793-f2b2f7ed5c7b
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_EMPLOYEEPAYHISTORY
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_EMPLOYEEPAYHISTORY') }} "DVSTG_AW_EMPLOYEEPAYHISTORY"
+            name: HUB_AW_EMPLOYEEPAYHISTORY
+            noLinkRefs: []
+      name: HUB_AW_EMPLOYEEPAYHISTORY
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::6
+      type: sql
+    stepCounter: dc5323ce-ebf2-48ee-8bba-1e0b3e46ac64

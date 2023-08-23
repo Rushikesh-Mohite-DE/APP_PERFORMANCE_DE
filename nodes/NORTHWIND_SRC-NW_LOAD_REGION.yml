@@ -1,0 +1,49 @@
+steps:
+  NW_LOAD_REGION-8257b9e1-bbc6-453e-8514-b64e99e9b062:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: NORTHWIND_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: dc0ed3b2-ce90-480b-ba58-bc099438fcce
+              stepCounter: 8257b9e1-bbc6-453e-8514-b64e99e9b062
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: REGIONID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0c0085e2-2545-4d82-89ea-721f3a8a3925
+              stepCounter: 8257b9e1-bbc6-453e-8514-b64e99e9b062
+            config: {}
+            dataType: VARCHAR(50)
+            defaultValue: ""
+            description: ""
+            name: REGIONDESCRIPTION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('NORTHWIND_SRC', 'NW_LOAD_REGION') }}
+      name: NW_LOAD_REGION
+      schema: ""
+      sqlType: Source
+      table: NW_LOAD_REGION
+      type: sourceInput
+    stepCounter: 8257b9e1-bbc6-453e-8514-b64e99e9b062

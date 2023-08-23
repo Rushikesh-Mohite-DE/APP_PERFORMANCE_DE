@@ -1,0 +1,799 @@
+steps:
+  AW_LOAD_DIM_DATE_SF-ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: This is the dim table dim_date.
+      locationID: ""
+      locationName: ADV_WRKS_SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5bc807ab-dce1-4fd7-8ed2-02c21c75937b
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Generated key for the date dimension. Nominal format is YYYYMMDD, but DD equal to 0 and greater than 31 permited for special date handling.
+            name: DIM_DATE_KEY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 93520992-f140-40cf-8153-abf1631ea688
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: The calendar date for this row.
+            name: CALENDAR_DATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8ff9bf4a-d40a-437f-b110-7f71ee347c60
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: VARCHAR(3)
+            defaultValue: ""
+            description: "The day in the week. Format DDD. Example: mon, tue, wed."
+            name: CAL_DAY_IN_WEEK
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9f69f6e6-7ea0-445d-91c8-9b99b3e0b04d
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: The day number in the week. 1-7 where Sunday is day 1.
+            name: CAL_DAY_IN_WEEK_NO
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: cf37b87e-97b0-4534-a1ad-1b442c08465c
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: The day in the month 1-31.
+            name: CAL_DAY_IN_MONTH
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e832c791-cdbe-414b-8ac5-18123063a5df
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: The day in the year 1-366.
+            name: CAL_DAY_IN_YEAR
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 70395572-e7b2-4625-8447-49bd77a04377
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: The week in the year 0-53.
+            name: CAL_WEEK_IN_YEAR
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4a89cc60-8814-4e66-8e9e-2e9c6180aa43
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: The calendar month number 1-12.
+            name: CAL_MONTH_NO
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 11781f73-33e8-478a-8b53-7214fa83fe60
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: "The calendar month representation. Format YYYYMM. Example: 200206."
+            name: CAL_MONTH
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 80ed8039-6104-436e-9ac6-e649dd628783
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: VARCHAR(7)
+            defaultValue: ""
+            description: "The calendar month name. Format MON. Examples: jan, feb, mar."
+            name: CAL_MONTH_NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6a35e0d1-0c77-433b-9e0e-9f318ddcee19
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: The calendar quarter number 1-4.
+            name: CAL_QUARTER_NO
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b613fcdc-80f9-4595-b7be-faacf914870e
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: The calendar quarter representation. Format YYYYQQ. Example 200204.
+            name: CAL_QUARTER
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e5847f69-57ab-41b5-a055-b862a41a905a
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: The calendar year. Format YYYY
+            name: CAL_YEAR
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3c085fa6-62d5-42a0-aec2-0fe092a748f0
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: The financial date. Same as calendar date.
+            name: FINANCIAL_DATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 24948307-77af-4164-b580-a31f06679555
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: VARCHAR(3)
+            defaultValue: ""
+            description: "The financial day in the week. Format DDD. Example: mon,tue,wed."
+            name: FIN_DAY_IN_WEEK
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5f31a897-0f2c-42cc-b914-2512ad97167d
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Day number in the current financial week.
+            name: FIN_DAY_IN_WEEK_NO
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c3112b99-8a70-41b8-a09a-ad82bf0d9b81
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Financial day in the month. Normally the same as calendar day in the month, unless the financial period starts mid calendar month.
+            name: FIN_DAY_IN_MONTH
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 66ecfd70-7e07-447a-a4ca-9378c55ea1bc
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Financial day in the year. Number of days since the start of the financial year.
+            name: FIN_DAY_IN_YEAR
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 482beaab-e70a-4962-90cb-bbea502c007c
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Financial week in the financial month.
+            name: FIN_WEEK_IN_MONTH
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c3ea84a8-1f46-4fb7-917c-dfd7dfa3cd4a
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Financial week in the financial year. Number of weeks since the start of the financial year
+            name: FIN_WEEK_IN_YEAR
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0c67c3ac-34f6-4a2c-8cb0-d64ff064d05c
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: "Financial month number. Format MM. Examples: 1,2,3."
+            name: FIN_MONTH_NO
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c4a0b50f-a006-48c9-aa77-7dff6cbcb65f
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: "Financial month representation. Fromat YYYYMM. Examples: 200101, 200102."
+            name: FIN_MONTH
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 338b76da-6714-4f2c-858c-8ba04291a954
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: VARCHAR(7)
+            defaultValue: ""
+            description: "Financial month. Format MON. Examples: jan, feb, mar."
+            name: FIN_MONTH_NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: dac0dfff-a71b-4090-a3a4-b78ff5a48d41
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: VARCHAR(20)
+            defaultValue: ""
+            description: "Financial period. Format (YYYY-MM) MON-YYYY. Example: (2001-02) Feb-2002."
+            name: FIN_PERIOD
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2c4a43d4-9440-4d20-b970-002a97285997
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Financial quarter number (1-4).
+            name: FIN_QUARTER_NO
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6d6c4307-a203-4283-b149-4722718981d5
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: "Financial quarter representation. Format YYYYQQ. Example: 198901."
+            name: FIN_QUARTER
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 41555374-6107-4058-b66a-76fb1665668c
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Financial year. Format YYYY.
+            name: FIN_YEAR
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 867c48aa-b31f-4cc6-8b9f-29764cf4d7e8
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: VARCHAR(8)
+            defaultValue: ""
+            description: Flag to indicate the current day. Normally set to the last day information was updated in the data warehouse.
+            name: CURRENT_CAL_DAY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 60207a39-a567-4a45-b100-8260b9ae3dcb
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: VARCHAR(8)
+            defaultValue: ""
+            description: Flag to indicate the current week. Set as per current_cal_day.
+            name: CURRENT_CAL_WEEK
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a7ae068d-7ad3-4196-994a-d3b972f1e323
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: VARCHAR(8)
+            defaultValue: ""
+            description: Flag to indicate the current month. Set as per current_cal_day.
+            name: CURRENT_CAL_MONTH
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 702eb166-02ea-494c-a8d2-76ea95c8bb81
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: VARCHAR(8)
+            defaultValue: ""
+            description: Flag to indicate the current year. Set as per current_cal_day.
+            name: CURRENT_CAL_YEAR
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 71214829-82c3-41a5-8ab2-26d9c57ac8e8
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: VARCHAR(8)
+            defaultValue: ""
+            description: Flag to indicate days in the current month to date. Set as per current_cal_day.
+            name: CURRENT_CAL_MTD
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4f209539-b7dd-4da9-8e94-454b0553c590
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: VARCHAR(8)
+            defaultValue: ""
+            description: Flag to indicate days in the current year to date. Set as per current_cal_day.
+            name: CURRENT_CAL_YTD
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9171601d-9013-45cd-9c01-553eaec35c49
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: VARCHAR(8)
+            defaultValue: ""
+            description: Flag to indicate days that constitute a full year counting back from the current day. Set as per current_cal_day.
+            name: MOVING_CAL_YEAR
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f513871d-521e-49d8-a269-8552a644b8b5
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: VARCHAR(8)
+            defaultValue: ""
+            description: Flag to indicate the current financial day. Normally set to the last financial day information was updated in the data warehouse.
+            name: CURRENT_FIN_DAY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5f20562a-b1fd-4a0b-a8aa-dd988c78de95
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: VARCHAR(8)
+            defaultValue: ""
+            description: Flag to indicate the current financial week. Set as per current_fin_day.
+            name: CURRENT_FIN_WEEK
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f0101f3c-efcc-419a-8bd5-7d6a283c46aa
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: VARCHAR(8)
+            defaultValue: ""
+            description: Flag to indicate the current financial month. Set as per current_fin_day.
+            name: CURRENT_FIN_MONTH
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: eaa53435-9910-4cef-951b-11da89686cd5
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: VARCHAR(8)
+            defaultValue: ""
+            description: Flag to indicate the current financial quarter. Set as per current_fin_day.
+            name: CURRENT_FIN_QUARTER
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fb0ebab3-f92e-4b2e-912e-a32d00cdb3be
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: VARCHAR(8)
+            defaultValue: ""
+            description: Flag to indicate the current financial year. Set as per current_fin_day.
+            name: CURRENT_FIN_YEAR
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: bcac01a6-164c-4c5c-a862-a8325bb1ad05
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: VARCHAR(8)
+            defaultValue: ""
+            description: Flag to indicate days in the current financial month to date. Set as per current_fin_day.
+            name: CURRENT_FIN_MTD
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 26d6f8e2-b91c-4c07-917b-531806a7361d
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: VARCHAR(8)
+            defaultValue: ""
+            description: Flag to indicate days in the current financial year to date. Set as per current_fin_day.
+            name: CURRENT_FIN_YTD
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 66475236-9797-47ab-a9d2-4a7f8764e0c7
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: VARCHAR(8)
+            defaultValue: ""
+            description: Flag to indicate days that constitute a quarter counting back from the current financial day. Set as per current_fin_day.
+            name: MOVING_FIN_QUARTER
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 70f4967a-e1d6-4389-9e03-f31c6810e529
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: VARCHAR(8)
+            defaultValue: ""
+            description: Flag to indicate days that constitute a financial year counting back from the current financial day. Set as per current_fin_day.
+            name: MOVING_FIN_YEAR
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 396a95dd-115a-4783-8203-a6d373faf679
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: VARCHAR(1)
+            defaultValue: ""
+            description: Flag to indicate if a week day Y=week day N=week end.
+            name: WEEK_DAY_FLAG
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: bb1c620e-14cf-4a1f-9250-eb72493adbdd
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: VARCHAR(1)
+            defaultValue: ""
+            description: Flag to indicate a week end day. Y=week end, N=week day.
+            name: WEEK_END_FLAG
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 793fea56-38a8-4a5d-9fcc-b6e72d0ac43e
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: VARCHAR(1)
+            defaultValue: ""
+            description: Flag to indicate that the day in question is a holiday. Y=holiday, N=normal.
+            name: HOLIDAY_FLAG
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: dc797a74-8cf6-42b6-bfaf-8112f655f59b
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: VARCHAR(64)
+            defaultValue: ""
+            description: Description of the holiday when a holiday.
+            name: HOLIDAY_DESC
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3ad48a35-312e-412c-9ad2-5c21c1f6777c
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: VARCHAR(1)
+            defaultValue: ""
+            description: Flag to indicate a trading day. Y=trading, N=non trading.
+            name: TRADING_DAY_FLAG
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a587030a-7394-46b9-aaf4-cfab184d2522
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Number of trading days in this calendar month.
+            name: TRADING_DAYS_IN_MTH
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: cbbbc034-37e2-4da3-827e-c1add1c0074a
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Number of trading days in the month so far.
+            name: TRADING_DAYS_SO_FAR
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 791820f9-a832-473c-affc-da797a719e7d
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date/time that this record was inserted in the data warehouse
+            name: DSS_CREATE_TIME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d5da38bb-8b72-458a-a687-78ea5877f020
+              stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date/time that this record was updated in the data warehouse
+            name: DSS_UPDATE_TIME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_DIM_DATE_SF') }}
+      name: AW_LOAD_DIM_DATE_SF
+      schema: ""
+      sqlType: Source
+      table: AW_LOAD_DIM_DATE_SF
+      type: sourceInput
+    stepCounter: ce7b8ce3-34d4-4378-9db3-6d36cbcebfa4

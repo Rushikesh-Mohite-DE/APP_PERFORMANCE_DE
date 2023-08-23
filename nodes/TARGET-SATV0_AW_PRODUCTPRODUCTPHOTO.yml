@@ -1,0 +1,121 @@
+steps:
+  SATV0_AW_PRODUCTPRODUCTPHOTO-11ca5972-1d9f-4186-8e8a-cdd22a75105e:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: d53cbe35-8384-45ac-b25c-609f3b410af9
+              stepCounter: 11ca5972-1d9f-4186-8e8a-cdd22a75105e
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_PRODUCTPRODUCTPHOTO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: da994194-20c9-4cba-b6cf-78af8048aafd
+                    stepCounter: 8ca7acf7-be84-4e6c-a1e3-841eaed4d00c
+                transform: ""
+          - columnReference:
+              columnCounter: 626e633c-aa53-4579-ad52-632710902a70
+              stepCounter: 11ca5972-1d9f-4186-8e8a-cdd22a75105e
+            dataType: VARCHAR(16777216)
+            description: 0 = Photo is not the principal image. 1 = Photo is the principal image.
+            hashColumns: []
+            hashDetails: null
+            name: PRIMARY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9f8340a9-f5cc-49a9-b53c-0ce1e534edb0
+                    stepCounter: 8ca7acf7-be84-4e6c-a1e3-841eaed4d00c
+                transform: ""
+          - columnReference:
+              columnCounter: 96abd024-037e-4386-aa27-919bd8fc1b07
+              stepCounter: 11ca5972-1d9f-4186-8e8a-cdd22a75105e
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            hashColumns: []
+            hashDetails: null
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 323e926a-a601-4bcb-a1fa-461968ccad04
+                    stepCounter: 8ca7acf7-be84-4e6c-a1e3-841eaed4d00c
+                transform: ""
+          - columnReference:
+              columnCounter: 15cf7c2d-61eb-4f91-a26b-67443d195d64
+              stepCounter: 11ca5972-1d9f-4186-8e8a-cdd22a75105e
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c2a2e902-6bba-4a82-9cd9-ef86ea9cee15
+                    stepCounter: 8ca7acf7-be84-4e6c-a1e3-841eaed4d00c
+                transform: ""
+          - columnReference:
+              columnCounter: 5715d55b-f16a-4020-a51c-22c70c40b63b
+              stepCounter: 11ca5972-1d9f-4186-8e8a-cdd22a75105e
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ffc7ff72-2229-4ff3-9f44-a52371bf0bd6
+                    stepCounter: 8ca7acf7-be84-4e6c-a1e3-841eaed4d00c
+                transform: ""
+          - columnReference:
+              columnCounter: 0ccb7999-5a5c-4759-a569-705a751d1df0
+              stepCounter: 11ca5972-1d9f-4186-8e8a-cdd22a75105e
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 47da4b48-ab92-4057-8525-86b83796b421
+                    stepCounter: 8ca7acf7-be84-4e6c-a1e3-841eaed4d00c
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_AW_PRODUCTPRODUCTPHOTO
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_AW_PRODUCTPRODUCTPHOTO') }} "DVSTG_AW_PRODUCTPRODUCTPHOTO"
+            name: SATV0_AW_PRODUCTPRODUCTPHOTO
+            noLinkRefs: []
+      name: SATV0_AW_PRODUCTPRODUCTPHOTO
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: 11ca5972-1d9f-4186-8e8a-cdd22a75105e

@@ -1,0 +1,149 @@
+steps:
+  SATV0_WWI_BUYINGGROUPS-27bc4962-d4ee-4a38-a9e4-0ab9bb952e0d:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 853e2374-e490-45dc-b3ff-1725e27129b7
+              stepCounter: 27bc4962-d4ee-4a38-a9e4-0ab9bb952e0d
+            config:
+              is_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HK_BUYINGGROUPS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7f896dd6-7880-4f4f-b385-4578139dd21d
+                    stepCounter: 0c839bec-38d9-4546-86d3-237916dcc23f
+                transform: ""
+          - columnReference:
+              columnCounter: 332ebc91-84de-4f05-a4eb-2ad9b31de3cf
+              stepCounter: 27bc4962-d4ee-4a38-a9e4-0ab9bb952e0d
+            dataType: VARCHAR(50)
+            description: Full name of a buying group that customers can be members of
+            hashColumns: []
+            hashDetails: null
+            name: BUYINGGROUPNAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 42b3f654-9d40-47ab-aa6b-b3affab1c09a
+                    stepCounter: 0c839bec-38d9-4546-86d3-237916dcc23f
+                transform: ""
+          - columnReference:
+              columnCounter: a18a1905-8862-4d92-805b-0dd0ac59205f
+              stepCounter: 27bc4962-d4ee-4a38-a9e4-0ab9bb952e0d
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LASTEDITEDBY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5cba94b8-66e3-4fa5-a1db-390bf4dd07f0
+                    stepCounter: 0c839bec-38d9-4546-86d3-237916dcc23f
+                transform: ""
+          - columnReference:
+              columnCounter: c1be586a-b9c2-4734-b2db-779b72571646
+              stepCounter: 27bc4962-d4ee-4a38-a9e4-0ab9bb952e0d
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: VALIDFROM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3621638f-d63b-4c62-80a3-1ebde320d18c
+                    stepCounter: 0c839bec-38d9-4546-86d3-237916dcc23f
+                transform: ""
+          - columnReference:
+              columnCounter: d2941cdf-82cd-403a-815f-d05ed6558807
+              stepCounter: 27bc4962-d4ee-4a38-a9e4-0ab9bb952e0d
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: VALIDTO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 74efb5c3-4865-42c7-829a-81e7f555b6a8
+                    stepCounter: 0c839bec-38d9-4546-86d3-237916dcc23f
+                transform: ""
+          - columnReference:
+              columnCounter: 19b02b01-5e8a-4445-94ef-bfaf1536d071
+              stepCounter: 27bc4962-d4ee-4a38-a9e4-0ab9bb952e0d
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ea01cbe3-7cdd-408a-a179-943676d64d9e
+                    stepCounter: 0c839bec-38d9-4546-86d3-237916dcc23f
+                transform: ""
+          - columnReference:
+              columnCounter: 708fd52c-6404-48d4-9a03-4dd76fbf3f04
+              stepCounter: 27bc4962-d4ee-4a38-a9e4-0ab9bb952e0d
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bf3d40d3-2fe6-44f4-9650-03915302591c
+                    stepCounter: 0c839bec-38d9-4546-86d3-237916dcc23f
+                transform: ""
+          - columnReference:
+              columnCounter: fb1c2655-ae5a-4bc4-aeff-20757e2612f0
+              stepCounter: 27bc4962-d4ee-4a38-a9e4-0ab9bb952e0d
+            config:
+              is_hd: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9b67dc25-f621-4323-8123-2480e1a01e06
+                    stepCounter: 0c839bec-38d9-4546-86d3-237916dcc23f
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: DVSTG_WWI_BUYINGGROUPS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'DVSTG_WWI_BUYINGGROUPS') }} "DVSTG_WWI_BUYINGGROUPS"
+            name: SATV0_WWI_BUYINGGROUPS
+            noLinkRefs: []
+      name: SATV0_WWI_BUYINGGROUPS
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::8
+      type: sql
+    stepCounter: 27bc4962-d4ee-4a38-a9e4-0ab9bb952e0d

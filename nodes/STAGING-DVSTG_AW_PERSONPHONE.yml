@@ -1,0 +1,181 @@
+steps:
+  DVSTG_AW_PERSONPHONE-c6338d9b-7be2-4e21-9783-c0f673ce4826:
+    operation:
+      config:
+        generate_ghost_records: true
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 68f5856a-b016-406a-bf2c-e46f4bb9b630
+              stepCounter: c6338d9b-7be2-4e21-9783-c0f673ce4826
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 17eda040-708a-476d-b068-5d8ab7c0aed5
+                stepCounter: c6338d9b-7be2-4e21-9783-c0f673ce4826
+              - columnCounter: 9917e424-e8bd-45d1-ac8d-8fe4e43fa83f
+                stepCounter: c6338d9b-7be2-4e21-9783-c0f673ce4826
+            name: HK_PERSONPHONE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 17eda040-708a-476d-b068-5d8ab7c0aed5
+              stepCounter: c6338d9b-7be2-4e21-9783-c0f673ce4826
+            dataType: NUMBER(38,0)
+            description: Business entity identification number. Foreign key to Person.BusinessEntityID.
+            name: BUSINESSENTITYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3e7ab923-60a7-496f-a551-8d307efee6de
+                    stepCounter: 583a8527-dab9-467d-825b-594c5041d58b
+                transform: ""
+          - columnReference:
+              columnCounter: 54530656-14a7-447a-a661-2ff60b19f6f9
+              stepCounter: c6338d9b-7be2-4e21-9783-c0f673ce4826
+            dataType: VARCHAR(16777216)
+            description: Telephone number identification number.
+            name: PHONENUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 30b6cbbb-9475-4f92-a3e1-8aa694db16fe
+                    stepCounter: 583a8527-dab9-467d-825b-594c5041d58b
+                transform: ""
+          - columnReference:
+              columnCounter: 9917e424-e8bd-45d1-ac8d-8fe4e43fa83f
+              stepCounter: c6338d9b-7be2-4e21-9783-c0f673ce4826
+            dataType: NUMBER(38,0)
+            description: Kind of phone number. Foreign key to PhoneNumberType.PhoneNumberTypeID.
+            name: PHONENUMBERTYPEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d70495ae-801a-4239-a60d-b4590b34f833
+                    stepCounter: 583a8527-dab9-467d-825b-594c5041d58b
+                transform: ""
+          - columnReference:
+              columnCounter: 2c535daf-b8ca-477c-b97e-b597f9bc9789
+              stepCounter: c6338d9b-7be2-4e21-9783-c0f673ce4826
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the record was last updated.
+            name: MODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f2e458df-69c7-44e1-adee-fbafbd0a2a3a
+                    stepCounter: 583a8527-dab9-467d-825b-594c5041d58b
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 704f0cfc-598e-4fb2-b643-38c6f30483db
+              stepCounter: c6338d9b-7be2-4e21-9783-c0f673ce4826
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            is_system_ldts: true
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SYSDATE()
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 25799b12-bcbc-4f62-b795-d524ba007776
+              stepCounter: c6338d9b-7be2-4e21-9783-c0f673ce4826
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: The Record Source (RSRC) describes the source of this data.
+            is_system_rsrc: true
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "{{record_source()}}"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4b0b3ab5-cd5b-4a59-ab8d-f632f630c58a
+              stepCounter: c6338d9b-7be2-4e21-9783-c0f673ce4826
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 54530656-14a7-447a-a661-2ff60b19f6f9
+                stepCounter: c6338d9b-7be2-4e21-9783-c0f673ce4826
+              - columnCounter: 2c535daf-b8ca-477c-b97e-b597f9bc9789
+                stepCounter: c6338d9b-7be2-4e21-9783-c0f673ce4826
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9a109952-d495-47d8-8a17-1fef74cae6db
+              stepCounter: c6338d9b-7be2-4e21-9783-c0f673ce4826
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 54530656-14a7-447a-a661-2ff60b19f6f9
+                stepCounter: c6338d9b-7be2-4e21-9783-c0f673ce4826
+            name: LNK
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: ADV_WRKS_SRC
+                nodeName: AW_LOAD_PERSONPHONE
+            join:
+              joinCondition: FROM {{ ref('ADV_WRKS_SRC', 'AW_LOAD_PERSONPHONE') }} "AW_LOAD_PERSONPHONE"
+            name: DVSTG_AW_PERSONPHONE
+            noLinkRefs: []
+      name: DVSTG_AW_PERSONPHONE
+      overrideSQL: false
+      schema: ""
+      sqlType: SCALEFREE-DATAVAULT4COALESCE::4
+      type: sql
+    stepCounter: c6338d9b-7be2-4e21-9783-c0f673ce4826
