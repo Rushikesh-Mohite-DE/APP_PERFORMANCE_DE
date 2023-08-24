@@ -1,0 +1,142 @@
+steps:
+  STG_PERBANK_USERS_PERBANK_USERS-02766fa7-a143-4e3b-8a62-3c5da875b03b:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 0f53913a-740a-4b24-97a1-67d865966818
+              stepCounter: 02766fa7-a143-4e3b-8a62-3c5da875b03b
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 13092d97-9468-412d-9f44-0229fa5cd865
+                    stepCounter: c96798bd-4f51-438a-b731-7ae27296a85c
+                transform: ""
+          - columnReference:
+              columnCounter: 972c0d2c-118e-4cef-9562-298787ee131b
+              stepCounter: 02766fa7-a143-4e3b-8a62-3c5da875b03b
+            dataType: VARCHAR(20)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: USERNAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 21d819b2-c92f-4982-a91c-d0f4a4244118
+                    stepCounter: 8fd8ba7c-b0b0-4972-b4d0-0e1d9e15bbc1
+                transform: ""
+          - columnReference:
+              columnCounter: f6b13795-9368-473f-9493-7d0da0229153
+              stepCounter: 02766fa7-a143-4e3b-8a62-3c5da875b03b
+            dataType: VARCHAR(64)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PASSWORD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cadb72db-c8cd-430b-b0e9-59b7cd21e8ff
+                    stepCounter: 8fd8ba7c-b0b0-4972-b4d0-0e1d9e15bbc1
+                transform: ""
+          - columnReference:
+              columnCounter: a6a83f2e-3687-4e57-9499-95d4ee29299b
+              stepCounter: 02766fa7-a143-4e3b-8a62-3c5da875b03b
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LASTLOGINDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 862bad3d-e230-43d8-949c-05559f6cdd72
+                    stepCounter: 8fd8ba7c-b0b0-4972-b4d0-0e1d9e15bbc1
+                transform: ""
+          - columnReference:
+              columnCounter: a4af0ffc-ba81-4176-b64f-e3d120d73961
+              stepCounter: 02766fa7-a143-4e3b-8a62-3c5da875b03b
+            dataType: VARCHAR(20)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ISACTIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 67e19dd9-c4f6-4e4b-b63d-783e82abf3a1
+                    stepCounter: 8fd8ba7c-b0b0-4972-b4d0-0e1d9e15bbc1
+                transform: ""
+          - columnReference:
+              columnCounter: 854ca137-9701-4a39-a0de-25f8019ec5ac
+              stepCounter: 02766fa7-a143-4e3b-8a62-3c5da875b03b
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CREATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b4940cc8-301f-4ea0-8bd2-87220d3d5806
+                    stepCounter: 8fd8ba7c-b0b0-4972-b4d0-0e1d9e15bbc1
+                transform: ""
+          - columnReference:
+              columnCounter: cdf8d937-3760-41c0-8bd0-6c7af52e856c
+              stepCounter: 02766fa7-a143-4e3b-8a62-3c5da875b03b
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: MODIFIED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d7320ccf-1649-4bfd-8379-4ff931c00e61
+                    stepCounter: 8fd8ba7c-b0b0-4972-b4d0-0e1d9e15bbc1
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              HUB_PERBANK_USERS: c96798bd-4f51-438a-b731-7ae27296a85c
+              SATV0_PERBANK_USERS: 8fd8ba7c-b0b0-4972-b4d0-0e1d9e15bbc1
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TARGET
+                nodeName: HUB_PERBANK_USERS
+              - locationName: TARGET
+                nodeName: SATV0_PERBANK_USERS
+            join:
+              joinCondition: |-
+                FROM {{ ref('TARGET', 'HUB_PERBANK_USERS') }} "HUB_PERBANK_USERS"
+                INNER JOIN {{ ref('TARGET', 'SATV0_PERBANK_USERS') }} "SATV0_PERBANK_USERS"
+                ON "HUB_PERBANK_USERS".HK_PERBANK_USERS = "SATV0_PERBANK_USERS".HK_PERBANK_USERS
+            name: STG_PERBANK_USERS_PERBANK_USERS
+            noLinkRefs: []
+      name: STG_PERBANK_USERS_PERBANK_USERS
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 02766fa7-a143-4e3b-8a62-3c5da875b03b

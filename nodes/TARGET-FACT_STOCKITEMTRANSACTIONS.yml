@@ -1,0 +1,267 @@
+steps:
+  FACT_STOCKITEMTRANSACTIONS-6dd17ed0-0c88-419e-b915-16b077af39b5:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: da91ed2e-532c-44a3-ad6b-12d2d43a7aa4
+              stepCounter: 6dd17ed0-0c88-419e-b915-16b077af39b5
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DIM_IMPORTERS_PRODUCT_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f45c4b09-a2b7-4e6e-af1f-2bfb7b80297b
+                    stepCounter: 8590eaad-1b98-41be-accb-97a8c4c4dab7
+                transform: ""
+          - columnReference:
+              columnCounter: 57911f2f-4412-42b7-bd29-8b2798ec34a7
+              stepCounter: 6dd17ed0-0c88-419e-b915-16b077af39b5
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DIM_WWI_CUSTOMERS_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 699cc286-5edc-48d8-bf2b-4561c3632ab9
+                    stepCounter: 8590eaad-1b98-41be-accb-97a8c4c4dab7
+                transform: ""
+          - columnReference:
+              columnCounter: a3419434-f9e3-4864-bd02-0cfde6ed56e9
+              stepCounter: 6dd17ed0-0c88-419e-b915-16b077af39b5
+            dataType: NUMBER(38,0)
+            description: Numeric ID used to refer to a stock item transaction within the database
+            hashColumns: []
+            hashDetails: null
+            isBusinessKey: true
+            name: STOCKITEMTRANSACTIONID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f03c35e7-49c5-468c-aff2-6629c8f6b2c0
+                    stepCounter: 8590eaad-1b98-41be-accb-97a8c4c4dab7
+                transform: ""
+          - columnReference:
+              columnCounter: 13f1bc56-abc8-4162-8f29-9610ca1333df
+              stepCounter: 6dd17ed0-0c88-419e-b915-16b077af39b5
+            dataType: NUMBER(38,0)
+            description: StockItem for this transaction
+            hashColumns: []
+            hashDetails: null
+            name: STOCKITEMID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 98dd4e74-6d69-440f-a63d-6d9bc32cb3c8
+                    stepCounter: 8590eaad-1b98-41be-accb-97a8c4c4dab7
+                transform: ""
+          - columnReference:
+              columnCounter: 10c18a97-622a-41e3-ab52-52e82492f1cd
+              stepCounter: 6dd17ed0-0c88-419e-b915-16b077af39b5
+            dataType: NUMBER(38,0)
+            description: Type of transaction
+            hashColumns: []
+            hashDetails: null
+            name: TRANSACTIONTYPEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e00d0735-6ed8-4888-8757-1dc0881d9cfc
+                    stepCounter: 8590eaad-1b98-41be-accb-97a8c4c4dab7
+                transform: ""
+          - columnReference:
+              columnCounter: 18546a3f-4b7f-44f5-be29-9cb343e52ab9
+              stepCounter: 6dd17ed0-0c88-419e-b915-16b077af39b5
+            dataType: VARCHAR(16777216)
+            description: Customer for this transaction (if applicable)
+            hashColumns: []
+            hashDetails: null
+            name: CUSTOMERID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a9d8a857-d10b-4060-b4a6-945841b94ea6
+                    stepCounter: 8590eaad-1b98-41be-accb-97a8c4c4dab7
+                transform: ""
+          - columnReference:
+              columnCounter: 2005b472-5254-497d-b7f4-dc7e7f6de455
+              stepCounter: 6dd17ed0-0c88-419e-b915-16b077af39b5
+            dataType: VARCHAR(16777216)
+            description: ID of an invoice (for transactions associated with an invoice)
+            hashColumns: []
+            hashDetails: null
+            name: INVOICEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 393567dd-6be6-4dba-8b48-754187913eae
+                    stepCounter: 8590eaad-1b98-41be-accb-97a8c4c4dab7
+                transform: ""
+          - columnReference:
+              columnCounter: 9de86684-cf97-418d-82b4-94aa04918c89
+              stepCounter: 6dd17ed0-0c88-419e-b915-16b077af39b5
+            dataType: VARCHAR(16777216)
+            description: Supplier for this stock transaction (if applicable)
+            hashColumns: []
+            hashDetails: null
+            name: SUPPLIERID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f45df98a-689f-48e8-9cac-4db698e3ff04
+                    stepCounter: 8590eaad-1b98-41be-accb-97a8c4c4dab7
+                transform: ""
+          - columnReference:
+              columnCounter: 51249798-4028-472d-a18d-af3714b06aeb
+              stepCounter: 6dd17ed0-0c88-419e-b915-16b077af39b5
+            dataType: VARCHAR(16777216)
+            description: ID of an purchase order (for transactions associated with a purchase order)
+            hashColumns: []
+            hashDetails: null
+            name: PURCHASEORDERID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e3f08658-ed4f-412a-ad0a-10d074c39756
+                    stepCounter: 8590eaad-1b98-41be-accb-97a8c4c4dab7
+                transform: ""
+          - columnReference:
+              columnCounter: 55fe3b93-c6ac-4e01-9e32-6da4d8488e79
+              stepCounter: 6dd17ed0-0c88-419e-b915-16b077af39b5
+            dataType: DATE
+            description: Date and time when the transaction occurred
+            hashColumns: []
+            hashDetails: null
+            name: TRANSACTIONOCCURREDWHEN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d40c38e4-9b7a-49c9-929c-c8b09b4e8138
+                    stepCounter: 8590eaad-1b98-41be-accb-97a8c4c4dab7
+                transform: ""
+          - columnReference:
+              columnCounter: 70003697-58c3-402c-9d9e-0a7795fa1a81
+              stepCounter: 6dd17ed0-0c88-419e-b915-16b077af39b5
+            dataType: NUMBER(18,3)
+            description: Quantity of stock movement (positive is incoming stock, negative is outgoing)
+            hashColumns: []
+            hashDetails: null
+            name: QUANTITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 96444016-fef2-4035-8d33-93975958a30a
+                    stepCounter: 8590eaad-1b98-41be-accb-97a8c4c4dab7
+                transform: ""
+          - columnReference:
+              columnCounter: 4eceb1cb-b3f5-448f-a43c-941faf58296d
+              stepCounter: 6dd17ed0-0c88-419e-b915-16b077af39b5
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LASTEDITEDBY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ddab6460-38fd-48d1-a877-f03e28be88e4
+                    stepCounter: 8590eaad-1b98-41be-accb-97a8c4c4dab7
+                transform: ""
+          - columnReference:
+              columnCounter: 3eaf9487-942e-43ee-86b9-17261c6cc2fc
+              stepCounter: 6dd17ed0-0c88-419e-b915-16b077af39b5
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LASTEDITEDWHEN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9545e057-023f-45c4-adda-7cfa4e011a8a
+                    stepCounter: 8590eaad-1b98-41be-accb-97a8c4c4dab7
+                transform: ""
+          - columnReference:
+              columnCounter: b4583139-20ba-4162-b61f-4fa67f8f755b
+              stepCounter: 6dd17ed0-0c88-419e-b915-16b077af39b5
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: dc514d8e-15b1-4810-8321-9fa461e1eb5e
+                    stepCounter: 8590eaad-1b98-41be-accb-97a8c4c4dab7
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 04385cfe-71a3-4d9a-8928-17ed30f375d5
+              stepCounter: 6dd17ed0-0c88-419e-b915-16b077af39b5
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a69d6a1e-9ca7-4dd2-a234-6a2a98cb2b8a
+              stepCounter: 6dd17ed0-0c88-419e-b915-16b077af39b5
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: STG_STOCKITEMTRANSACTIONS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'STG_STOCKITEMTRANSACTIONS') }} "STG_STOCKITEMTRANSACTIONS"
+            name: FACT_STOCKITEMTRANSACTIONS
+            noLinkRefs: []
+      name: FACT_STOCKITEMTRANSACTIONS
+      overrideSQL: false
+      schema: ""
+      sqlType: Fact
+      type: sql
+    stepCounter: 6dd17ed0-0c88-419e-b915-16b077af39b5

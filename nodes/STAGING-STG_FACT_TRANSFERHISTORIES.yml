@@ -1,0 +1,214 @@
+steps:
+  STG_FACT_TRANSFERHISTORIES-eef66ee9-1f6a-4f90-b2b3-d60d9b7ec604:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 98e0603b-626f-42dc-8c99-b29a7a1ec896
+              stepCounter: eef66ee9-1f6a-4f90-b2b3-d60d9b7ec604
+            dataType: NUMBER
+            description: ""
+            name: DIM_PERBANK_ACCOUNTS_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7d8ccdd2-0784-4a1e-9537-139cec08fd53
+                    stepCounter: ee4853f1-5120-4ddd-8eb7-1cf917875d4b
+                transform: ""
+          - columnReference:
+              columnCounter: ba8e61ea-4027-4504-8a9f-1e9069ee4203
+              stepCounter: eef66ee9-1f6a-4f90-b2b3-d60d9b7ec604
+            dataType: NUMBER
+            description: ""
+            name: DIM_DIM_ACTORS_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c479f84f-f118-4dc5-963e-8b253fd18f3a
+                    stepCounter: da6db79e-4e74-4f3f-91ee-9943a3776abc
+                transform: ""
+          - columnReference:
+              columnCounter: 9059e6f2-9b6c-48eb-a55d-243686ad7b58
+              stepCounter: eef66ee9-1f6a-4f90-b2b3-d60d9b7ec604
+            dataType: NUMBER(38,0)
+            description: ""
+            name: ACTOR_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a785ab40-c517-4890-9c89-a1864fe964bd
+                    stepCounter: da6db79e-4e74-4f3f-91ee-9943a3776abc
+                transform: ""
+          - columnReference:
+              columnCounter: 92038b78-de3a-45d1-b3f6-33b3c4c58109
+              stepCounter: eef66ee9-1f6a-4f90-b2b3-d60d9b7ec604
+            dataType: NUMBER(38,0)
+            description: ""
+            name: ACCOUNTS_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 141f2f7b-cc4b-46bb-8442-18139102c062
+                    stepCounter: ee4853f1-5120-4ddd-8eb7-1cf917875d4b
+                transform: ""
+          - columnReference:
+              columnCounter: c6daf874-86c5-4497-8b86-5fd975caf602
+              stepCounter: eef66ee9-1f6a-4f90-b2b3-d60d9b7ec604
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HISTORY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7dcdf672-e892-4ce7-9f7e-aee227c61f8b
+                    stepCounter: 01473e81-3dc0-45cc-9603-020634e49b47
+                transform: ""
+          - columnReference:
+              columnCounter: e952e06b-c26e-4909-890e-96f187d21512
+              stepCounter: eef66ee9-1f6a-4f90-b2b3-d60d9b7ec604
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: FROMID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0acd5968-a6f7-4899-9dbd-1ce28c1673a1
+                    stepCounter: 01473e81-3dc0-45cc-9603-020634e49b47
+                transform: ""
+          - columnReference:
+              columnCounter: 949f4194-2f14-4dd4-a82d-301d9df175fd
+              stepCounter: eef66ee9-1f6a-4f90-b2b3-d60d9b7ec604
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: TOID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1e6d9b38-5e04-4fd5-b889-07c70516bac7
+                    stepCounter: 52bd40a2-2ed9-4e90-a601-8484737ccb08
+                transform: ""
+          - columnReference:
+              columnCounter: 072b99db-e4bd-4235-9769-410de56c2fb2
+              stepCounter: eef66ee9-1f6a-4f90-b2b3-d60d9b7ec604
+            dataType: NUMBER(19,4)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: AMOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 44cb5cc6-2da4-417c-8419-556d6b39ad4e
+                    stepCounter: 52bd40a2-2ed9-4e90-a601-8484737ccb08
+                transform: ""
+          - columnReference:
+              columnCounter: a380a3d4-6120-4973-b425-a2a2a5956764
+              stepCounter: eef66ee9-1f6a-4f90-b2b3-d60d9b7ec604
+            dataType: VARCHAR(20)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ISACTIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2327261d-0a09-4f29-832b-53839308a32c
+                    stepCounter: 52bd40a2-2ed9-4e90-a601-8484737ccb08
+                transform: ""
+          - columnReference:
+              columnCounter: 09f3bbb0-b1b4-4b91-94bc-3bf4502c4ee4
+              stepCounter: eef66ee9-1f6a-4f90-b2b3-d60d9b7ec604
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CREATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1b7384b2-6a5a-4c3c-bb2d-f093f1a3a752
+                    stepCounter: 52bd40a2-2ed9-4e90-a601-8484737ccb08
+                transform: ""
+          - columnReference:
+              columnCounter: b97b4a84-a54d-4f39-9fe5-27b4226dda60
+              stepCounter: eef66ee9-1f6a-4f90-b2b3-d60d9b7ec604
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: MODIFIED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fa7584b2-36cf-431a-be6a-073d8131f39d
+                    stepCounter: 52bd40a2-2ed9-4e90-a601-8484737ccb08
+                transform: ""
+          - columnReference:
+              columnCounter: ca8eb4c5-e7d9-410d-a3a6-5aa5ed723c31
+              stepCounter: eef66ee9-1f6a-4f90-b2b3-d60d9b7ec604
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f4d8fce0-3eab-49f8-b0a4-b347220a6ca8
+                    stepCounter: 52bd40a2-2ed9-4e90-a601-8484737ccb08
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              DIM_ACTORS: da6db79e-4e74-4f3f-91ee-9943a3776abc
+              DIM_PERBANK_ACCOUNTS: ee4853f1-5120-4ddd-8eb7-1cf917875d4b
+              HUB_PERBANK_TRANSFERHISTORIES: 01473e81-3dc0-45cc-9603-020634e49b47
+              SATV0_PERBANK_TRANSFERHISTORIES: 52bd40a2-2ed9-4e90-a601-8484737ccb08
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TARGET
+                nodeName: DIM_ACTORS
+              - locationName: TARGET
+                nodeName: DIM_PERBANK_ACCOUNTS
+              - locationName: TARGET
+                nodeName: HUB_PERBANK_TRANSFERHISTORIES
+              - locationName: TARGET
+                nodeName: SATV0_PERBANK_TRANSFERHISTORIES
+            join:
+              joinCondition: |-
+                FROM {{ ref('TARGET', 'HUB_PERBANK_TRANSFERHISTORIES') }} "HUB_PERBANK_TRANSFERHISTORIES"
+                INNER JOIN {{ ref('TARGET', 'SATV0_PERBANK_TRANSFERHISTORIES') }} "SATV0_PERBANK_TRANSFERHISTORIES"
+                ON "HUB_PERBANK_TRANSFERHISTORIES".HK_PERBANK_TRANSFERHISTORIES = "SATV0_PERBANK_TRANSFERHISTORIES".HK_PERBANK_TRANSFERHISTORIES
+                LEFT JOIN {{ ref('TARGET', 'DIM_ACTORS') }} "DIM_ACTORS"
+                ON DIM_ACTORS.ID = HUB_PERBANK_TRANSFERHISTORIES.ID
+                LEFT JOIN {{ ref('TARGET', 'DIM_PERBANK_ACCOUNTS') }} "DIM_PERBANK_ACCOUNTS"
+                ON "DIM_PERBANK_ACCOUNTS"."ID" = HUB_PERBANK_TRANSFERHISTORIES.ID
+            name: STG_FACT_TRANSFERHISTORIES
+            noLinkRefs: []
+      name: STG_FACT_TRANSFERHISTORIES
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: eef66ee9-1f6a-4f90-b2b3-d60d9b7ec604

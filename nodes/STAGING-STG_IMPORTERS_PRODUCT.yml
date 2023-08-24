@@ -1,0 +1,408 @@
+steps:
+  STG_IMPORTERS_PRODUCT-42593c6d-9985-4e78-9001-4a4de98ff4f6:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: cf54d607-5662-43f2-bd16-230742a4ca13
+              stepCounter: 42593c6d-9985-4e78-9001-4a4de98ff4f6
+            dataType: NUMBER(38,0)
+            description: Numeric ID used for reference to a stock item within the database
+            hashColumns: []
+            hashDetails: null
+            name: STOCKITEMID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 718e2cf1-4f09-4150-9fb1-250574fe5c2c
+                    stepCounter: 3ada616b-68c7-4dbd-a890-637c6f6327df
+                transform: ""
+          - columnReference:
+              columnCounter: c0896d4b-7acc-4192-a5db-93252c1330fc
+              stepCounter: 42593c6d-9985-4e78-9001-4a4de98ff4f6
+            dataType: NUMBER(38,0)
+            description: Usual supplier for this stock item
+            hashColumns: []
+            hashDetails: null
+            name: SUPPLIERID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bc355b4e-b459-4af4-aefb-afde4227af6e
+                    stepCounter: 3ada616b-68c7-4dbd-a890-637c6f6327df
+                transform: ""
+          - columnReference:
+              columnCounter: 86b854a3-d83a-4407-9b74-54d19bb7d175
+              stepCounter: 42593c6d-9985-4e78-9001-4a4de98ff4f6
+            dataType: VARCHAR(16777216)
+            description: Color (optional) for this stock item
+            hashColumns: []
+            hashDetails: null
+            name: COLORID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4289589a-f009-427b-85c1-d9f25f39c834
+                    stepCounter: 3ada616b-68c7-4dbd-a890-637c6f6327df
+                transform: ""
+          - columnReference:
+              columnCounter: cdbb2159-794c-4352-9865-27ccc92c7d55
+              stepCounter: 42593c6d-9985-4e78-9001-4a4de98ff4f6
+            dataType: NUMBER(38,0)
+            description: Usual package for selling units of this stock item
+            hashColumns: []
+            hashDetails: null
+            name: UNITPACKAGEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1c38fb30-7422-4bd9-a911-206e6afd22a6
+                    stepCounter: 3ada616b-68c7-4dbd-a890-637c6f6327df
+                transform: ""
+          - columnReference:
+              columnCounter: 3ffe7793-fcf5-49c5-b583-cb88fab2d383
+              stepCounter: 42593c6d-9985-4e78-9001-4a4de98ff4f6
+            dataType: NUMBER(38,0)
+            description: Usual package for selling outers of this stock item (ie cartons, boxes, etc.)
+            hashColumns: []
+            hashDetails: null
+            name: OUTERPACKAGEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b7fc9845-7f5e-4790-82f4-661edb08a8c1
+                    stepCounter: 3ada616b-68c7-4dbd-a890-637c6f6327df
+                transform: ""
+          - columnReference:
+              columnCounter: 77bd8981-4d6d-49ae-aab4-4f2569b859c3
+              stepCounter: 42593c6d-9985-4e78-9001-4a4de98ff4f6
+            dataType: VARCHAR(100)
+            description: Full name of a stock item (but not a full description)
+            hashColumns: []
+            hashDetails: null
+            name: STOCKITEMNAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0d0397d6-11d0-410f-b1da-d244dc7df435
+                    stepCounter: 5a04d8af-f84d-471f-9d1a-66edc2aee182
+                transform: ""
+          - columnReference:
+              columnCounter: fbb9b93e-7476-4429-8342-8a5ca2873e75
+              stepCounter: 42593c6d-9985-4e78-9001-4a4de98ff4f6
+            dataType: VARCHAR(50)
+            description: Brand for the stock item (if the item is branded)
+            hashColumns: []
+            hashDetails: null
+            name: BRAND
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 75d49c7b-f282-47da-92f8-44a9bafa8c04
+                    stepCounter: 5a04d8af-f84d-471f-9d1a-66edc2aee182
+                transform: ""
+          - columnReference:
+              columnCounter: df4b1e65-af79-40ed-ab9b-a1e14827dd57
+              stepCounter: 42593c6d-9985-4e78-9001-4a4de98ff4f6
+            dataType: VARCHAR(20)
+            description: "Size of this item (eg: 100mm)"
+            hashColumns: []
+            hashDetails: null
+            name: SIZE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 75467a90-9b82-429b-a0c4-96c7cac18d49
+                    stepCounter: 5a04d8af-f84d-471f-9d1a-66edc2aee182
+                transform: ""
+          - columnReference:
+              columnCounter: 42f17026-75db-4305-acca-43936cd5b736
+              stepCounter: 42593c6d-9985-4e78-9001-4a4de98ff4f6
+            dataType: NUMBER(38,0)
+            description: Number of days typically taken from order to receipt of this stock item
+            hashColumns: []
+            hashDetails: null
+            name: LEADTIMEDAYS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3042d0a3-a87a-4356-ba4b-fb500ba8214f
+                    stepCounter: 5a04d8af-f84d-471f-9d1a-66edc2aee182
+                transform: ""
+          - columnReference:
+              columnCounter: 4ee97087-aa3a-48b6-b8e0-054f8219537a
+              stepCounter: 42593c6d-9985-4e78-9001-4a4de98ff4f6
+            dataType: NUMBER(38,0)
+            description: Quantity of the stock item in an outer package
+            hashColumns: []
+            hashDetails: null
+            name: QUANTITYPEROUTER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e77b23f2-d8cb-4407-9982-eff7b9024eb6
+                    stepCounter: 5a04d8af-f84d-471f-9d1a-66edc2aee182
+                transform: ""
+          - columnReference:
+              columnCounter: d5797648-6272-4efe-9740-48e1cbd21211
+              stepCounter: 42593c6d-9985-4e78-9001-4a4de98ff4f6
+            dataType: VARCHAR(20)
+            description: Does this stock item need to be in a chiller?
+            hashColumns: []
+            hashDetails: null
+            name: ISCHILLERSTOCK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 57d7e475-aa7b-4c8c-b56e-9dd5bd1789ea
+                    stepCounter: 5a04d8af-f84d-471f-9d1a-66edc2aee182
+                transform: ""
+          - columnReference:
+              columnCounter: 4cd01df5-2eb8-40f0-a9f5-7b373e82c3b8
+              stepCounter: 42593c6d-9985-4e78-9001-4a4de98ff4f6
+            dataType: VARCHAR(50)
+            description: Barcode for this stock item
+            hashColumns: []
+            hashDetails: null
+            name: BARCODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fe95c6e3-883f-4bb8-82a6-680bf524825a
+                    stepCounter: 5a04d8af-f84d-471f-9d1a-66edc2aee182
+                transform: ""
+          - columnReference:
+              columnCounter: 9952cb2b-3a7b-4720-8434-a7a98fda8436
+              stepCounter: 42593c6d-9985-4e78-9001-4a4de98ff4f6
+            dataType: NUMBER(18,3)
+            description: Tax rate to be applied
+            hashColumns: []
+            hashDetails: null
+            name: TAXRATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 089d0d9d-4f72-4ad6-b9e2-7b914ea986a7
+                    stepCounter: 5a04d8af-f84d-471f-9d1a-66edc2aee182
+                transform: ""
+          - columnReference:
+              columnCounter: c85a3bc1-7f43-4041-bf6e-9f7b5e4642de
+              stepCounter: 42593c6d-9985-4e78-9001-4a4de98ff4f6
+            dataType: NUMBER(18,2)
+            description: Selling price (ex-tax) for one unit of this product
+            hashColumns: []
+            hashDetails: null
+            name: UNITPRICE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 16260b0b-54fb-425c-828d-4ade64538a14
+                    stepCounter: 5a04d8af-f84d-471f-9d1a-66edc2aee182
+                transform: ""
+          - columnReference:
+              columnCounter: 844625c3-d33d-4888-a173-31f66f2ae9de
+              stepCounter: 42593c6d-9985-4e78-9001-4a4de98ff4f6
+            dataType: NUMBER(18,2)
+            description: Recommended retail price for this stock item
+            hashColumns: []
+            hashDetails: null
+            name: RECOMMENDEDRETAILPRICE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8b58fff7-722b-4457-9620-113e935c19eb
+                    stepCounter: 5a04d8af-f84d-471f-9d1a-66edc2aee182
+                transform: ""
+          - columnReference:
+              columnCounter: ed2e64ce-05e6-4315-8508-a4afd5d294c2
+              stepCounter: 42593c6d-9985-4e78-9001-4a4de98ff4f6
+            dataType: NUMBER(18,3)
+            description: Typical weight for one unit of this product (packaged)
+            hashColumns: []
+            hashDetails: null
+            name: TYPICALWEIGHTPERUNIT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: dc4af9cd-e5c1-4cd4-82bd-854e7ba08a53
+                    stepCounter: 5a04d8af-f84d-471f-9d1a-66edc2aee182
+                transform: ""
+          - columnReference:
+              columnCounter: c9aeaec0-4ad1-4412-b5b9-e994aee0a1bd
+              stepCounter: 42593c6d-9985-4e78-9001-4a4de98ff4f6
+            dataType: VARCHAR(4000)
+            description: Marketing comments for this stock item (shared outside the organization)
+            hashColumns: []
+            hashDetails: null
+            name: MARKETINGCOMMENTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 72445170-4fee-4426-91e4-e688c118eb30
+                    stepCounter: 5a04d8af-f84d-471f-9d1a-66edc2aee182
+                transform: ""
+          - columnReference:
+              columnCounter: da8b74c2-74a2-4abc-aea9-03c0d40ac0ce
+              stepCounter: 42593c6d-9985-4e78-9001-4a4de98ff4f6
+            dataType: VARCHAR(4000)
+            description: Internal comments (not exposed outside organization)
+            hashColumns: []
+            hashDetails: null
+            name: INTERNALCOMMENTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1a5c20fe-c0a3-4b44-aef0-4135c8e1221d
+                    stepCounter: 5a04d8af-f84d-471f-9d1a-66edc2aee182
+                transform: ""
+          - columnReference:
+              columnCounter: 2176e7be-7d7e-4a58-adc9-99bf615d9fe7
+              stepCounter: 42593c6d-9985-4e78-9001-4a4de98ff4f6
+            dataType: VARCHAR(16777216)
+            description: Photo of the product
+            hashColumns: []
+            hashDetails: null
+            name: PHOTO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2b908954-2c2c-4782-ae33-99c85f251889
+                    stepCounter: 5a04d8af-f84d-471f-9d1a-66edc2aee182
+                transform: ""
+          - columnReference:
+              columnCounter: 8f0ef3a1-4f58-4ccf-a454-4211367cb356
+              stepCounter: 42593c6d-9985-4e78-9001-4a4de98ff4f6
+            dataType: VARCHAR(4000)
+            description: Custom fields added by system users
+            hashColumns: []
+            hashDetails: null
+            name: CUSTOMFIELDS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c517e62c-3954-4d7d-9fa7-6face0da9d21
+                    stepCounter: 5a04d8af-f84d-471f-9d1a-66edc2aee182
+                transform: ""
+          - columnReference:
+              columnCounter: 5cb411cf-9123-4059-9716-6effe5837b5c
+              stepCounter: 42593c6d-9985-4e78-9001-4a4de98ff4f6
+            dataType: VARCHAR(4000)
+            description: Advertising tags associated with this stock item (JSON array retrieved from CustomFields)
+            hashColumns: []
+            hashDetails: null
+            name: TAGS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 26322968-0594-4343-9c46-f52af5d453bb
+                    stepCounter: 5a04d8af-f84d-471f-9d1a-66edc2aee182
+                transform: ""
+          - columnReference:
+              columnCounter: c8546463-2e9e-42c8-874b-69d8f9af422d
+              stepCounter: 42593c6d-9985-4e78-9001-4a4de98ff4f6
+            dataType: VARCHAR(4000)
+            description: Combination of columns used by full text search
+            hashColumns: []
+            hashDetails: null
+            name: SEARCHDETAILS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5685a8ff-3462-4d22-836f-554f116993c9
+                    stepCounter: 5a04d8af-f84d-471f-9d1a-66edc2aee182
+                transform: ""
+          - columnReference:
+              columnCounter: f07669b4-602e-4e98-a227-1e23724c1d3f
+              stepCounter: 42593c6d-9985-4e78-9001-4a4de98ff4f6
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LASTEDITEDBY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4380e363-7662-4822-a14b-e191505df6e2
+                    stepCounter: 5a04d8af-f84d-471f-9d1a-66edc2aee182
+                transform: ""
+          - columnReference:
+              columnCounter: 04fd7281-e3d6-4ddc-aa44-732e5f3e5713
+              stepCounter: 42593c6d-9985-4e78-9001-4a4de98ff4f6
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: VALIDFROM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7d235f93-4182-4efc-9153-869748c74c29
+                    stepCounter: 5a04d8af-f84d-471f-9d1a-66edc2aee182
+                transform: ""
+          - columnReference:
+              columnCounter: c267fa22-07cd-4503-b9b0-b4c0c0ae11ab
+              stepCounter: 42593c6d-9985-4e78-9001-4a4de98ff4f6
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: VALIDTO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 89fa4fae-cfc3-45f5-9bc1-c8c2e79742df
+                    stepCounter: 5a04d8af-f84d-471f-9d1a-66edc2aee182
+                transform: ""
+          - columnReference:
+              columnCounter: 1421e993-b461-4d67-a991-565584f32535
+              stepCounter: 42593c6d-9985-4e78-9001-4a4de98ff4f6
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 714fcdb1-dc66-43a5-831d-93c72126cdf9
+                    stepCounter: 5a04d8af-f84d-471f-9d1a-66edc2aee182
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              HUB_WWI_STOCKITEMS: 3ada616b-68c7-4dbd-a890-637c6f6327df
+              SATV0_WWI_STOCKITEMS: 5a04d8af-f84d-471f-9d1a-66edc2aee182
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TARGET
+                nodeName: HUB_WWI_STOCKITEMS
+              - locationName: TARGET
+                nodeName: SATV0_WWI_STOCKITEMS
+            join:
+              joinCondition: |-
+                FROM {{ ref('TARGET', 'HUB_WWI_STOCKITEMS') }} "HUB_WWI_STOCKITEMS"
+                INNER JOIN {{ ref('TARGET', 'SATV0_WWI_STOCKITEMS') }} "SATV0_WWI_STOCKITEMS"
+                ON "HUB_WWI_STOCKITEMS".HK_STOCKITEMS = "SATV0_WWI_STOCKITEMS".HK_STOCKITEMS
+            name: STG_IMPORTERS_PRODUCT
+            noLinkRefs: []
+      name: STG_IMPORTERS_PRODUCT
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 42593c6d-9985-4e78-9001-4a4de98ff4f6

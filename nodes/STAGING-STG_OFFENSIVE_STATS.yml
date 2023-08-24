@@ -1,0 +1,455 @@
+steps:
+  STG_OFFENSIVE_STATS-1becf65e-2641-49bc-824f-714f8a556208:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: dc50ab1e-666d-46f4-97a8-605ef3b9be4a
+              stepCounter: 1becf65e-2641-49bc-824f-714f8a556208
+            dataType: NUMBER
+            description: ""
+            name: DIM_SPORTS_EVENTS_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 58ba679c-715c-4677-ae6d-e8c5132bca7f
+                    stepCounter: 0a046e71-977e-4179-af89-a8f7508148c8
+                transform: ""
+          - columnReference:
+              columnCounter: b0f25691-f85d-449e-9b57-f494040575c1
+              stepCounter: 1becf65e-2641-49bc-824f-714f8a556208
+            dataType: NUMBER
+            description: ""
+            name: DIM_SPORTS_PERSONS_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2eef664b-6d3f-4c1d-90e9-0d4d73be4b3b
+                    stepCounter: 3990814e-829c-4c85-8ca8-26eded862a4d
+                transform: ""
+          - columnReference:
+              columnCounter: 4d5f24e9-40ed-461d-aaea-1f583f1a9b69
+              stepCounter: 1becf65e-2641-49bc-824f-714f8a556208
+            dataType: NUMBER
+            description: ""
+            name: DIM_SPORTS_TEAMS_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5631249b-f21f-4de8-a758-c2870b6505de
+                    stepCounter: 25f35fe3-0b56-4c3f-a7ee-ad521dbfeb3b
+                transform: ""
+          - columnReference:
+              columnCounter: 5f62cb63-c6e6-46c3-a590-d7b2016ff8a6
+              stepCounter: 1becf65e-2641-49bc-824f-714f8a556208
+            dataType: VARCHAR(100)
+            description: ""
+            name: EVENT_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 07e13607-5293-478c-b2f9-9bf8ff85441d
+                    stepCounter: 0a046e71-977e-4179-af89-a8f7508148c8
+                transform: ""
+          - columnReference:
+              columnCounter: 525349f6-0322-448b-be26-3cc8b5f7604b
+              stepCounter: 1becf65e-2641-49bc-824f-714f8a556208
+            dataType: VARCHAR(32)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 283139dd-43cc-498b-ae53-196a0b7bde44
+                    stepCounter: 5bc04031-7363-4c2b-8c4d-d40216ec11f4
+                transform: ""
+          - columnReference:
+              columnCounter: e00934d6-6075-4580-942c-158ada9b3f9a
+              stepCounter: 1becf65e-2641-49bc-824f-714f8a556208
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: GOALS_GAME_WINNING
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b7f3c6ba-3337-4158-82ae-317a09e06e50
+                    stepCounter: 782f09c8-6429-47f9-be54-6e56c2d231fd
+                transform: ""
+          - columnReference:
+              columnCounter: 99082b6e-5a63-4148-be77-b8da399b200d
+              stepCounter: 1becf65e-2641-49bc-824f-714f8a556208
+            dataType: VARCHAR(100)
+            description: ""
+            name: DURATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2e6eea1e-cd8c-47db-864c-1e0f29b63fa6
+                    stepCounter: 0a046e71-977e-4179-af89-a8f7508148c8
+                transform: ""
+          - columnReference:
+              columnCounter: 7df3910e-cb00-4b4e-9bda-9f8f6f20b950
+              stepCounter: 1becf65e-2641-49bc-824f-714f8a556208
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: GOALS_GAME_TYING
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 60ea2eba-fa77-4885-b362-1f9128ce0ac8
+                    stepCounter: 782f09c8-6429-47f9-be54-6e56c2d231fd
+                transform: ""
+          - columnReference:
+              columnCounter: 223a24c8-a43c-4daa-ba03-655ed8931dd1
+              stepCounter: 1becf65e-2641-49bc-824f-714f8a556208
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: GOALS_POWER_PLAY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: de494904-95cb-4b3a-92c2-125550caa325
+                    stepCounter: 782f09c8-6429-47f9-be54-6e56c2d231fd
+                transform: ""
+          - columnReference:
+              columnCounter: ec29d52d-5a63-4f0a-898e-cfc9d90ef985
+              stepCounter: 1becf65e-2641-49bc-824f-714f8a556208
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: GOALS_SHORT_HANDED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0442ca89-66a6-402e-9684-be4c4d95f70a
+                    stepCounter: 782f09c8-6429-47f9-be54-6e56c2d231fd
+                transform: ""
+          - columnReference:
+              columnCounter: 230cca40-ae9f-4731-b814-f559ea5af082
+              stepCounter: 1becf65e-2641-49bc-824f-714f8a556208
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: GOALS_EVEN_STRENGTH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5f95fa01-8ce5-4904-ab9d-a4c6d4f8f6c5
+                    stepCounter: 782f09c8-6429-47f9-be54-6e56c2d231fd
+                transform: ""
+          - columnReference:
+              columnCounter: 4158e057-01ce-46d2-aea4-673f8d66e993
+              stepCounter: 1becf65e-2641-49bc-824f-714f8a556208
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: GOALS_EMPTY_NET
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6850da04-3d3f-4420-9ebc-ba886808443d
+                    stepCounter: 782f09c8-6429-47f9-be54-6e56c2d231fd
+                transform: ""
+          - columnReference:
+              columnCounter: 7f194d99-4f9c-4d97-9efd-7f139d16b13e
+              stepCounter: 1becf65e-2641-49bc-824f-714f8a556208
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: GOALS_OVERTIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0e88f558-13f0-42ff-9eb7-2fb63d35049e
+                    stepCounter: 782f09c8-6429-47f9-be54-6e56c2d231fd
+                transform: ""
+          - columnReference:
+              columnCounter: cff2aa43-376b-4515-97e9-3add38c7b5b7
+              stepCounter: 1becf65e-2641-49bc-824f-714f8a556208
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: GOALS_SHOOTOUT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c481163b-0d9d-4fdc-a328-cf2e3bf4a9b8
+                    stepCounter: 782f09c8-6429-47f9-be54-6e56c2d231fd
+                transform: ""
+          - columnReference:
+              columnCounter: fdaeaa90-9d02-49db-b209-b82b21f7146a
+              stepCounter: 1becf65e-2641-49bc-824f-714f8a556208
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: GOALS_PENALTY_SHOT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ca2c062a-9449-4631-b79e-c999f914d46f
+                    stepCounter: 782f09c8-6429-47f9-be54-6e56c2d231fd
+                transform: ""
+          - columnReference:
+              columnCounter: 0680ca23-73f7-418d-9583-a60dc5c18e8b
+              stepCounter: 1becf65e-2641-49bc-824f-714f8a556208
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ASSISTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c7430d4f-e779-4b21-9651-10f45ec7a2b9
+                    stepCounter: 782f09c8-6429-47f9-be54-6e56c2d231fd
+                transform: ""
+          - columnReference:
+              columnCounter: 68ff916e-46c6-494f-b36f-f56ce86db4d6
+              stepCounter: 1becf65e-2641-49bc-824f-714f8a556208
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: POINTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 651e92bf-dfcc-49fe-bd62-ab18f95ea04f
+                    stepCounter: 782f09c8-6429-47f9-be54-6e56c2d231fd
+                transform: ""
+          - columnReference:
+              columnCounter: b5f09ef7-3d01-46f1-86bf-c302657302cd
+              stepCounter: 1becf65e-2641-49bc-824f-714f8a556208
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: POWER_PLAY_AMOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8cc1a163-a620-4fe8-a0c6-324079ae2573
+                    stepCounter: 782f09c8-6429-47f9-be54-6e56c2d231fd
+                transform: ""
+          - columnReference:
+              columnCounter: 7562dbac-0209-4f00-a57a-ff1e7af13238
+              stepCounter: 1becf65e-2641-49bc-824f-714f8a556208
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: POWER_PLAY_PERCENTAGE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d86eb269-510d-453f-9614-110c92e8a985
+                    stepCounter: 782f09c8-6429-47f9-be54-6e56c2d231fd
+                transform: ""
+          - columnReference:
+              columnCounter: 1a7ac78f-6703-4e9f-ad00-e792839d5a7f
+              stepCounter: 1becf65e-2641-49bc-824f-714f8a556208
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SHOTS_PENALTY_SHOT_TAKEN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6713b6b0-3155-4f7d-a7c6-3c13f04d8745
+                    stepCounter: 782f09c8-6429-47f9-be54-6e56c2d231fd
+                transform: ""
+          - columnReference:
+              columnCounter: 1da73c19-22e9-4d20-97b9-95d06e390cad
+              stepCounter: 1becf65e-2641-49bc-824f-714f8a556208
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SHOTS_PENALTY_SHOT_MISSED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ce41aca4-0624-40c0-9396-f8593551db49
+                    stepCounter: 782f09c8-6429-47f9-be54-6e56c2d231fd
+                transform: ""
+          - columnReference:
+              columnCounter: 21629601-135e-4dcf-a57f-ffe52a1f62a4
+              stepCounter: 1becf65e-2641-49bc-824f-714f8a556208
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SHOTS_PENALTY_SHOT_PERCENTAGE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2122615a-f8ef-4c52-9a5b-7062e349daae
+                    stepCounter: 782f09c8-6429-47f9-be54-6e56c2d231fd
+                transform: ""
+          - columnReference:
+              columnCounter: 184209bc-3cd2-4dfd-9855-201bb30703ec
+              stepCounter: 1becf65e-2641-49bc-824f-714f8a556208
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: GIVEAWAYS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0593e226-4c1b-48cd-b024-a6b44e496eb7
+                    stepCounter: 782f09c8-6429-47f9-be54-6e56c2d231fd
+                transform: ""
+          - columnReference:
+              columnCounter: e105b6cd-0935-4a3e-8499-c901b227c37d
+              stepCounter: 1becf65e-2641-49bc-824f-714f8a556208
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: MINUTES_POWER_PLAY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6089bff3-2417-44ba-a7ef-02f7e0a12d0a
+                    stepCounter: 782f09c8-6429-47f9-be54-6e56c2d231fd
+                transform: ""
+          - columnReference:
+              columnCounter: c3021dd0-1214-45e1-bbe4-26b326048a03
+              stepCounter: 1becf65e-2641-49bc-824f-714f8a556208
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: FACEOFF_WINS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3aeeeec0-d8b4-4fd7-9efb-4020000ccbd6
+                    stepCounter: 782f09c8-6429-47f9-be54-6e56c2d231fd
+                transform: ""
+          - columnReference:
+              columnCounter: fb18c3e6-c68d-45d0-8a1c-e54cdaa24f89
+              stepCounter: 1becf65e-2641-49bc-824f-714f8a556208
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: FACEOFF_LOSSES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 89228631-661f-442e-a3b1-7e2ae87f0da5
+                    stepCounter: 782f09c8-6429-47f9-be54-6e56c2d231fd
+                transform: ""
+          - columnReference:
+              columnCounter: 1eea912c-dedc-478d-934f-7d534e06c7bb
+              stepCounter: 1becf65e-2641-49bc-824f-714f8a556208
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: FACEOFF_WIN_PERCENTAGE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d9150606-6801-4c61-9bf1-c85b214f9979
+                    stepCounter: 782f09c8-6429-47f9-be54-6e56c2d231fd
+                transform: ""
+          - columnReference:
+              columnCounter: ebb0de7f-624d-4701-a2d1-5cd43cadb7cf
+              stepCounter: 1becf65e-2641-49bc-824f-714f8a556208
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SCORING_CHANCES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4a9d8774-d2f2-466d-a9d3-c1b9a55c624e
+                    stepCounter: 782f09c8-6429-47f9-be54-6e56c2d231fd
+                transform: ""
+          - columnReference:
+              columnCounter: 1492a0ca-10c2-41c0-8ae9-8ab3adff5c82
+              stepCounter: 1becf65e-2641-49bc-824f-714f8a556208
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fef6b54e-c86a-4252-a830-dc9e53cafb80
+                    stepCounter: 782f09c8-6429-47f9-be54-6e56c2d231fd
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              DIM_SPORTS_EVENTS: 0a046e71-977e-4179-af89-a8f7508148c8
+              DIM_SPORTS_PERSONS: 3990814e-829c-4c85-8ca8-26eded862a4d
+              DIM_SPORTS_TEAMS: 25f35fe3-0b56-4c3f-a7ee-ad521dbfeb3b
+              HUB_SPORTS_ICE_HOCKEY_OFFENSIVE_STATS: 5bc04031-7363-4c2b-8c4d-d40216ec11f4
+              SATV0_SPORTS_ICE_HOCKEY_OFFENSIVE_STATS: 782f09c8-6429-47f9-be54-6e56c2d231fd
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TARGET
+                nodeName: DIM_SPORTS_EVENTS
+              - locationName: TARGET
+                nodeName: DIM_SPORTS_PERSONS
+              - locationName: TARGET
+                nodeName: DIM_SPORTS_TEAMS
+              - locationName: TARGET
+                nodeName: HUB_SPORTS_ICE_HOCKEY_OFFENSIVE_STATS
+              - locationName: TARGET
+                nodeName: SATV0_SPORTS_ICE_HOCKEY_OFFENSIVE_STATS
+            join:
+              joinCondition: |-
+                FROM {{ ref('TARGET', 'HUB_SPORTS_ICE_HOCKEY_OFFENSIVE_STATS') }} "HUB_SPORTS_ICE_HOCKEY_OFFENSIVE_STATS"
+                INNER JOIN {{ ref('TARGET', 'SATV0_SPORTS_ICE_HOCKEY_OFFENSIVE_STATS') }} "SATV0_SPORTS_ICE_HOCKEY_OFFENSIVE_STATS"
+                ON "HUB_SPORTS_ICE_HOCKEY_OFFENSIVE_STATS".HK_OFFENSIVE_STATS = "SATV0_SPORTS_ICE_HOCKEY_OFFENSIVE_STATS".HK_OFFENSIVE_STATS
+                LEFT JOIN {{ ref('TARGET', 'DIM_SPORTS_PERSONS') }} "DIM_SPORTS_PERSONS"
+                ON DIM_SPORTS_PERSONS.ID = HUB_SPORTS_ICE_HOCKEY_OFFENSIVE_STATS."ID"
+                LEFT JOIN {{ ref('TARGET', 'DIM_SPORTS_TEAMS') }} "DIM_SPORTS_TEAMS"
+                ON HUB_SPORTS_ICE_HOCKEY_OFFENSIVE_STATS.ID = "DIM_SPORTS_TEAMS"."ID"
+                LEFT JOIN {{ ref('TARGET', 'DIM_SPORTS_EVENTS') }} "DIM_SPORTS_EVENTS"
+                ON DIM_SPORTS_EVENTS.ID = HUB_SPORTS_ICE_HOCKEY_OFFENSIVE_STATS."ID"
+            name: STG_OFFENSIVE_STATS
+            noLinkRefs: []
+      name: STG_OFFENSIVE_STATS
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 1becf65e-2641-49bc-824f-714f8a556208

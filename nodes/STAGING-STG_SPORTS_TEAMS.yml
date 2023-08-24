@@ -1,0 +1,114 @@
+steps:
+  STG_SPORTS_TEAMS-1945fe2d-6259-4973-b904-1898f8d3e546:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: ee1f972a-314c-479d-968f-1dac82225d3b
+              stepCounter: 1945fe2d-6259-4973-b904-1898f8d3e546
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: TEAM_KEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 235bd7fc-06a3-460e-ac57-704e941e8dc7
+                    stepCounter: 18c83359-6115-450a-aeda-8b2acdc926e3
+                transform: ""
+          - columnReference:
+              columnCounter: 0cdcf16c-da2e-401d-abc2-545e912beb7d
+              stepCounter: 1945fe2d-6259-4973-b904-1898f8d3e546
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 40a2bfaf-42b2-4f52-acd4-84a972208855
+                    stepCounter: 18c83359-6115-450a-aeda-8b2acdc926e3
+                transform: ""
+          - columnReference:
+              columnCounter: 5958d1e7-0d96-4d59-9a9b-f38d529f4b28
+              stepCounter: 1945fe2d-6259-4973-b904-1898f8d3e546
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6a140bd1-a840-45aa-a3c5-c7312789fc23
+                    stepCounter: 18c83359-6115-450a-aeda-8b2acdc926e3
+                transform: ""
+          - columnReference:
+              columnCounter: d6e6ba26-7b09-4fc8-9a19-416a7cc8c7b0
+              stepCounter: 1945fe2d-6259-4973-b904-1898f8d3e546
+            dataType: VARCHAR(32)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1d0a4803-6b1c-4188-aef2-47328c7d653c
+                    stepCounter: aec3e545-1516-4c7a-8e0b-c6fc1f70af6f
+                transform: ""
+          - columnReference:
+              columnCounter: 76540f90-4124-4e81-88d2-5c32442fc275
+              stepCounter: 1945fe2d-6259-4973-b904-1898f8d3e546
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PUBLISHER_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4132386c-0ed9-4189-8c98-159ea70d3546
+                    stepCounter: aec3e545-1516-4c7a-8e0b-c6fc1f70af6f
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              HUB_SPORTS_TEAMS: aec3e545-1516-4c7a-8e0b-c6fc1f70af6f
+              SATV0_SPORTS_TEAMS: 18c83359-6115-450a-aeda-8b2acdc926e3
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TARGET
+                nodeName: HUB_SPORTS_TEAMS
+              - locationName: TARGET
+                nodeName: SATV0_SPORTS_TEAMS
+            join:
+              joinCondition: |-
+                FROM {{ ref('TARGET', 'SATV0_SPORTS_TEAMS') }} "SATV0_SPORTS_TEAMS"
+                INNER JOIN {{ ref('TARGET', 'HUB_SPORTS_TEAMS') }} "HUB_SPORTS_TEAMS"
+                ON "SATV0_SPORTS_TEAMS".HK_SPORTS_TEAMS = "HUB_SPORTS_TEAMS".HK_SPORTS_TEAMS
+            name: STG_SPORTS_TEAMS
+            noLinkRefs: []
+      name: STG_SPORTS_TEAMS
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 1945fe2d-6259-4973-b904-1898f8d3e546

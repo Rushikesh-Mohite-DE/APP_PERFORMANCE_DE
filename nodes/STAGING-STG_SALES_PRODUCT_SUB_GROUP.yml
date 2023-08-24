@@ -1,0 +1,142 @@
+steps:
+  STG_SALES_PRODUCT_SUB_GROUP-fcff4840-7fec-4f6f-a2f0-ccfa68902a2a:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 422aac41-c262-4378-b38a-41f61f3cac79
+              stepCounter: fcff4840-7fec-4f6f-a2f0-ccfa68902a2a
+            dataType: VARCHAR(20)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCT_GROUP_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 94b5483e-6a67-48ca-8201-1eb21887fc8e
+                    stepCounter: 87ed4285-938c-42a1-a013-9b9ddf80c373
+                transform: ""
+          - columnReference:
+              columnCounter: f1208365-f946-47f8-bbda-c63bcffad681
+              stepCounter: fcff4840-7fec-4f6f-a2f0-ccfa68902a2a
+            dataType: VARCHAR(20)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCT_SUB_GROUP_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fa0d7eca-ec12-4a04-9e96-a5aafa7a78a8
+                    stepCounter: 87ed4285-938c-42a1-a013-9b9ddf80c373
+                transform: ""
+          - columnReference:
+              columnCounter: 1cb5de47-1ae1-4e4a-bf3e-0df5a75d65ad
+              stepCounter: fcff4840-7fec-4f6f-a2f0-ccfa68902a2a
+            dataType: VARCHAR(255)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCT_SUB_GROUP_DESCRIPTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3c84faa4-b3bd-49da-be28-d9229a5ae49f
+                    stepCounter: 76aa735f-f182-4b51-8fd3-24cee43c2ab6
+                transform: ""
+          - columnReference:
+              columnCounter: 0b4b1a45-6ff7-47f6-867d-88e1be4dc42f
+              stepCounter: fcff4840-7fec-4f6f-a2f0-ccfa68902a2a
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CREATING_EMPLOYEE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bcdf109e-479e-4f3a-9de9-f60e85172393
+                    stepCounter: 76aa735f-f182-4b51-8fd3-24cee43c2ab6
+                transform: ""
+          - columnReference:
+              columnCounter: d178626b-f960-4ec8-9b69-866dd51ac498
+              stepCounter: fcff4840-7fec-4f6f-a2f0-ccfa68902a2a
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CREATED_DATETIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f373e795-7142-49fe-884b-46dfb7f5464e
+                    stepCounter: 76aa735f-f182-4b51-8fd3-24cee43c2ab6
+                transform: ""
+          - columnReference:
+              columnCounter: 30471375-7ad9-4eb6-a1c9-65d7b34a4929
+              stepCounter: fcff4840-7fec-4f6f-a2f0-ccfa68902a2a
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LAST_CHANGE_EMPLOYEE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a3c62711-93ac-4080-bfd0-86b39cc4691d
+                    stepCounter: 76aa735f-f182-4b51-8fd3-24cee43c2ab6
+                transform: ""
+          - columnReference:
+              columnCounter: a103afd1-233b-45b3-943b-0402ff67e659
+              stepCounter: fcff4840-7fec-4f6f-a2f0-ccfa68902a2a
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LAST_CHANGE_DATETIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1582f23e-7526-4d27-92f3-cc42c8810cbb
+                    stepCounter: 76aa735f-f182-4b51-8fd3-24cee43c2ab6
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              HUB_SALES_PRODUCT_SUB_GROUP: 87ed4285-938c-42a1-a013-9b9ddf80c373
+              SATV0_SALES_PRODUCT_SUB_GROUP: 76aa735f-f182-4b51-8fd3-24cee43c2ab6
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TARGET
+                nodeName: HUB_SALES_PRODUCT_SUB_GROUP
+              - locationName: TARGET
+                nodeName: SATV0_SALES_PRODUCT_SUB_GROUP
+            join:
+              joinCondition: |-
+                FROM {{ ref('TARGET', 'HUB_SALES_PRODUCT_SUB_GROUP') }} "HUB_SALES_PRODUCT_SUB_GROUP"
+                INNER JOIN {{ ref('TARGET', 'SATV0_SALES_PRODUCT_SUB_GROUP') }} "SATV0_SALES_PRODUCT_SUB_GROUP"
+                ON "HUB_SALES_PRODUCT_SUB_GROUP".HK_SALES_PRODUCT_SUB_GROUP= "SATV0_SALES_PRODUCT_SUB_GROUP".HK_SALES_PRODUCT_SUB_GROUP
+            name: STG_SALES_PRODUCT_SUB_GROUP
+            noLinkRefs: []
+      name: STG_SALES_PRODUCT_SUB_GROUP
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: fcff4840-7fec-4f6f-a2f0-ccfa68902a2a
