@@ -7,6 +7,48 @@ jobs:
     name: JOB_NORTHWIND
     steps: []
     subgraphs: []
+  Job-10:
+    excludeSelector: ""
+    id: 10
+    includeSelector: "+{ location: TARGET name: FACT_ADVENTURE_ORDER }"
+    name: " FACT_ADVENTURE_WORKS"
+    steps: []
+    subgraphs: []
+  Job-11:
+    excludeSelector: ""
+    id: 11
+    includeSelector: "+{ location: TARGET name: FACT_OFFENSIVE_STATS }"
+    name: FACT_SPORTS
+    steps: []
+    subgraphs: []
+  Job-13:
+    excludeSelector: ""
+    id: 13
+    includeSelector: ""
+    name: FACT_NORTHWIND
+    steps: []
+    subgraphs: []
+  Job-15:
+    excludeSelector: ""
+    id: 15
+    includeSelector: ""
+    name: FACT_PERBANK
+    steps: []
+    subgraphs: []
+  Job-16:
+    excludeSelector: ""
+    id: 16
+    includeSelector: "+{ location: TARGET name: FACT_ORDER_DETAILS }"
+    name: FACT_SALES
+    steps: []
+    subgraphs: []
+  Job-17:
+    excludeSelector: ""
+    id: 17
+    includeSelector: "+{ location: TARGET name: FACT_STOCKITEMTRANSACTIONS }"
+    name: FACT_WORLD_IMPORTERS
+    steps: []
+    subgraphs: []
   Job-3:
     excludeSelector: ""
     id: 3
@@ -63,7 +105,7 @@ locations:
   NORTHWIND_SRC:
     mappingDefinitions:
       "2":
-        database: NORTHWIND
+        database: NORTWHIND
         schema: SOURCE
   PERBANK_SRC:
     mappingDefinitions:
@@ -78,8 +120,8 @@ locations:
   SAMPLE:
     mappingDefinitions:
       "2":
-        database: SANDBOX
-        schema: TARGET
+        database: QA_WORK
+        schema: DEPLOY_TARGET
   SPORTS_SRC:
     mappingDefinitions:
       "2":
@@ -88,13 +130,13 @@ locations:
   STAGING:
     mappingDefinitions:
       "2":
-        database: SANDBOX
-        schema: TARGET
+        database: QA_WORK
+        schema: DEPLOY_STAGING
   TARGET:
     mappingDefinitions:
       "2":
-        database: SANDBOX
-        schema: TARGET
+        database: QA_WORK
+        schema: DEPLOY_TARGET
   WIDEWORLIMPORTES_SRC:
     mappingDefinitions:
       "2":
@@ -103,8 +145,8 @@ locations:
   WORK:
     mappingDefinitions:
       "2":
-        database: SANDBOX
-        schema: TARGET
+        database: QA_WORK
+        schema: DEPLOY_TARGET
 macros:
   Macro-SCALEFREE-DATAVAULT4COALESCE::1:
     id: SCALEFREE-DATAVAULT4COALESCE::1
@@ -4753,6 +4795,8 @@ subgraphs:
       - e5c69382-8235-4dad-89ea-f28b8c99a494
       - 7676ee28-4e5a-47aa-921c-17fb8bd47d4d
       - 05ff272a-09d9-4250-b8db-394f2568867c
+      - 06afe945-d899-4ea6-a869-c53ceca2c7b2
+      - 9769f68f-05d2-4bf5-8b27-42d098e6ba9f
   Subgraph-3:
     id: "3"
     name: SPORTS
