@@ -5,7 +5,7 @@ steps:
         generate_ghost_records: true
         testsEnabled: true
       database: ""
-      deployEnabled: false
+      deployEnabled: true
       description: Detailed district (Kreis) level data for Germany from the Robert Koch Institut
       isMultisource: false
       locationName: STAGING
@@ -47,7 +47,7 @@ steps:
               - columnReferences:
                   - columnCounter: dea205db-d772-485f-9dc9-a80048d7e8fc
                     stepCounter: 226721da-6c33-46f2-b05a-b83fe01a0ad7
-                transform: ""
+                transform: CONCAT("RKI_GER_COVID19_DASHBOARD"."DISTRICT_ID", '')
           - columnReference:
               columnCounter: 9cdd9ce6-79b8-4b9c-a47a-8e704aaef59d
               stepCounter: 8aab7262-f455-4674-b104-24b174e43b48
@@ -59,7 +59,7 @@ steps:
               - columnReferences:
                   - columnCounter: 7d33884e-0894-49ca-8f25-7f7250a42014
                     stepCounter: 226721da-6c33-46f2-b05a-b83fe01a0ad7
-                transform: ""
+                transform: CONCAT("RKI_GER_COVID19_DASHBOARD"."COUNTY", '')
           - columnReference:
               columnCounter: e443071e-afa9-434f-8c34-8bc2c0d085b8
               stepCounter: 8aab7262-f455-4674-b104-24b174e43b48
@@ -71,7 +71,7 @@ steps:
               - columnReferences:
                   - columnCounter: 653ac02f-95f9-413d-b4b8-7ce8cb09e2b8
                     stepCounter: 226721da-6c33-46f2-b05a-b83fe01a0ad7
-                transform: ""
+                transform: CONCAT("RKI_GER_COVID19_DASHBOARD"."STATE_ID", '')
           - columnReference:
               columnCounter: 3808b2f2-1ba0-4192-b607-4ee838cc1c28
               stepCounter: 8aab7262-f455-4674-b104-24b174e43b48
@@ -83,7 +83,7 @@ steps:
               - columnReferences:
                   - columnCounter: 46318694-cfee-4df4-b231-6687701e1333
                     stepCounter: 226721da-6c33-46f2-b05a-b83fe01a0ad7
-                transform: ""
+                transform: CONCAT("RKI_GER_COVID19_DASHBOARD"."STATE", '')
           - columnReference:
               columnCounter: b31599ea-8485-4b3e-b88d-6e7ce4520eb0
               stepCounter: 8aab7262-f455-4674-b104-24b174e43b48
@@ -95,7 +95,7 @@ steps:
               - columnReferences:
                   - columnCounter: ab1599e4-7bac-4fc6-8343-af554728b85c
                     stepCounter: 226721da-6c33-46f2-b05a-b83fe01a0ad7
-                transform: ""
+                transform: CONCAT("RKI_GER_COVID19_DASHBOARD"."DISTRICT_TYPE", '')
           - columnReference:
               columnCounter: 6c4a4ec3-7fe9-4b8e-aa4a-d278704f827d
               stepCounter: 8aab7262-f455-4674-b104-24b174e43b48
@@ -107,7 +107,7 @@ steps:
               - columnReferences:
                   - columnCounter: d84a633f-1ce6-454a-89cf-4342ec59499b
                     stepCounter: 226721da-6c33-46f2-b05a-b83fe01a0ad7
-                transform: ""
+                transform: CONCAT("RKI_GER_COVID19_DASHBOARD"."POPULATION", '')
           - columnReference:
               columnCounter: 62787b9f-5601-47ef-9417-1acaa1eccf69
               stepCounter: 8aab7262-f455-4674-b104-24b174e43b48
@@ -119,7 +119,7 @@ steps:
               - columnReferences:
                   - columnCounter: 253ef671-77b6-45a1-a9fd-2a08e011c55b
                     stepCounter: 226721da-6c33-46f2-b05a-b83fe01a0ad7
-                transform: ""
+                transform: CONCAT("RKI_GER_COVID19_DASHBOARD"."DEATH_RATE", '')
           - columnReference:
               columnCounter: ad11de3e-bc8a-4496-b029-c4cfb5dfdbee
               stepCounter: 8aab7262-f455-4674-b104-24b174e43b48
@@ -131,7 +131,7 @@ steps:
               - columnReferences:
                   - columnCounter: eaf40dae-a9f1-48a5-b17f-80fcc21b6f21
                     stepCounter: 226721da-6c33-46f2-b05a-b83fe01a0ad7
-                transform: ""
+                transform: CONCAT("RKI_GER_COVID19_DASHBOARD"."CASES", '')
           - columnReference:
               columnCounter: 83dd9c66-1bb9-4592-a69c-535b254cdbe2
               stepCounter: 8aab7262-f455-4674-b104-24b174e43b48
@@ -143,7 +143,7 @@ steps:
               - columnReferences:
                   - columnCounter: d2b287bf-e1ce-47e9-be6e-4712ab1be8c0
                     stepCounter: 226721da-6c33-46f2-b05a-b83fe01a0ad7
-                transform: ""
+                transform: CONCAT("RKI_GER_COVID19_DASHBOARD"."DEATHS", '')
           - columnReference:
               columnCounter: cd6c7d47-f691-4422-862a-0fa9165bd314
               stepCounter: 8aab7262-f455-4674-b104-24b174e43b48
@@ -155,7 +155,7 @@ steps:
               - columnReferences:
                   - columnCounter: 63b9ccc9-4a79-4836-97cd-16cd11027838
                     stepCounter: 226721da-6c33-46f2-b05a-b83fe01a0ad7
-                transform: ""
+                transform: CONCAT("RKI_GER_COVID19_DASHBOARD"."CASES_PER_100K", '')
           - columnReference:
               columnCounter: c432d7de-0d61-416c-a0e0-9b6425131793
               stepCounter: 8aab7262-f455-4674-b104-24b174e43b48
@@ -167,7 +167,7 @@ steps:
               - columnReferences:
                   - columnCounter: a5d957e7-f7a2-4f95-9494-ba25c033ede1
                     stepCounter: 226721da-6c33-46f2-b05a-b83fe01a0ad7
-                transform: ""
+                transform: CONCAT("RKI_GER_COVID19_DASHBOARD"."CASES_PER_POPULATION", '')
           - columnReference:
               columnCounter: 1572bf9a-39ca-4feb-9a19-6fb4e6dbb3ad
               stepCounter: 8aab7262-f455-4674-b104-24b174e43b48
@@ -179,7 +179,7 @@ steps:
               - columnReferences:
                   - columnCounter: fe9e7741-6a6a-49d2-bc43-76dc1f1e6ad0
                     stepCounter: 226721da-6c33-46f2-b05a-b83fe01a0ad7
-                transform: ""
+                transform: CONCAT("RKI_GER_COVID19_DASHBOARD"."CASES7_PER_100K", '')
           - columnReference:
               columnCounter: 2f39b0c4-2210-4b01-a0bd-e4207ff82a10
               stepCounter: 8aab7262-f455-4674-b104-24b174e43b48
@@ -191,7 +191,7 @@ steps:
               - columnReferences:
                   - columnCounter: 63918ebf-6697-47e3-89aa-1f9bc6f1c33e
                     stepCounter: 226721da-6c33-46f2-b05a-b83fe01a0ad7
-                transform: ""
+                transform: CONCAT("RKI_GER_COVID19_DASHBOARD"."LAST_UPDATE", '')
           - columnReference:
               columnCounter: 96b41368-5629-443c-a064-6e988d63c4c0
               stepCounter: 8aab7262-f455-4674-b104-24b174e43b48
@@ -203,7 +203,7 @@ steps:
               - columnReferences:
                   - columnCounter: 4de147b7-9b2b-470c-a166-552ac9d1a8d0
                     stepCounter: 226721da-6c33-46f2-b05a-b83fe01a0ad7
-                transform: ""
+                transform: CONCAT("RKI_GER_COVID19_DASHBOARD"."ISO3166_1", '')
           - columnReference:
               columnCounter: befa3488-2efb-4d88-b120-32961a1b769e
               stepCounter: 8aab7262-f455-4674-b104-24b174e43b48
@@ -215,7 +215,7 @@ steps:
               - columnReferences:
                   - columnCounter: 811cd326-fb15-4442-84f2-4d99acd37e71
                     stepCounter: 226721da-6c33-46f2-b05a-b83fe01a0ad7
-                transform: ""
+                transform: CONCAT("RKI_GER_COVID19_DASHBOARD"."ISO3166_2", '')
           - columnReference:
               columnCounter: c23020b1-6894-4b6b-adcb-bdbf45e5a0a8
               stepCounter: 8aab7262-f455-4674-b104-24b174e43b48
@@ -227,7 +227,7 @@ steps:
               - columnReferences:
                   - columnCounter: c54c874a-3d78-4033-8053-c49e6958e2bf
                     stepCounter: 226721da-6c33-46f2-b05a-b83fe01a0ad7
-                transform: ""
+                transform: CONCAT("RKI_GER_COVID19_DASHBOARD"."LAST_UPDATE_DATE", '')
           - columnReference:
               columnCounter: 1eee67d5-ec81-4967-831e-87f62712ad73
               stepCounter: 8aab7262-f455-4674-b104-24b174e43b48
@@ -239,7 +239,7 @@ steps:
               - columnReferences:
                   - columnCounter: 96013d13-1af6-4bfc-a880-501692e34b88
                     stepCounter: 226721da-6c33-46f2-b05a-b83fe01a0ad7
-                transform: ""
+                transform: CONCAT("RKI_GER_COVID19_DASHBOARD"."LAST_REPORTED_FLAG", '')
           - acceptedValues:
               strictMatch: true
               values: []

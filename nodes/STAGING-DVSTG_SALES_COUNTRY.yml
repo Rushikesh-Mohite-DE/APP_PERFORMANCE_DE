@@ -45,7 +45,12 @@ steps:
               - columnReferences:
                   - columnCounter: 9cfa76aa-5815-4034-9a74-5a8839f03215
                     stepCounter: 498056d9-fbde-4815-bb28-9ea24983b509
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_COUNTRY"."COUNTRY_CODE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_COUNTRY"."COUNTRY_CODE"
+                  END
           - columnReference:
               columnCounter: 443d2b8e-8642-4ec9-b9d1-e1f018466a19
               stepCounter: 54f826c5-d752-4ed9-8999-d165db066e29
@@ -57,7 +62,12 @@ steps:
               - columnReferences:
                   - columnCounter: bdb85844-dd19-4191-9875-9c9b5898a51f
                     stepCounter: 498056d9-fbde-4815-bb28-9ea24983b509
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_COUNTRY"."COUNTRY_NAME" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_COUNTRY"."COUNTRY_NAME"
+                  END
           - columnReference:
               columnCounter: e73ea69d-187d-4937-bfdd-c2ecdbf8859e
               stepCounter: 54f826c5-d752-4ed9-8999-d165db066e29
@@ -69,7 +79,12 @@ steps:
               - columnReferences:
                   - columnCounter: d38c456e-6b9a-4a9c-ae14-7a2652e9aec7
                     stepCounter: 498056d9-fbde-4815-bb28-9ea24983b509
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_COUNTRY"."CREATING_EMPLOYEE_ID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_COUNTRY"."CREATING_EMPLOYEE_ID"
+                  END
           - columnReference:
               columnCounter: bf13b33e-ec8b-43f6-b5c5-9261be0d275a
               stepCounter: 54f826c5-d752-4ed9-8999-d165db066e29
@@ -81,7 +96,12 @@ steps:
               - columnReferences:
                   - columnCounter: 8e98f084-65eb-4284-8b47-6f9fd0ff7413
                     stepCounter: 498056d9-fbde-4815-bb28-9ea24983b509
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_COUNTRY"."CREATED_DATETIME" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_COUNTRY"."CREATED_DATETIME"
+                  END
           - columnReference:
               columnCounter: 0401852d-f43c-457d-862b-b9ba2107d689
               stepCounter: 54f826c5-d752-4ed9-8999-d165db066e29
@@ -93,7 +113,12 @@ steps:
               - columnReferences:
                   - columnCounter: 00b7fc7b-1643-4d77-973e-45ce22b4324b
                     stepCounter: 498056d9-fbde-4815-bb28-9ea24983b509
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_COUNTRY"."LAST_CHANGE_EMPLOYEE_ID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_COUNTRY"."LAST_CHANGE_EMPLOYEE_ID"
+                  END
           - columnReference:
               columnCounter: cfc2c9c3-acec-4029-84d9-61bf3d44a092
               stepCounter: 54f826c5-d752-4ed9-8999-d165db066e29
@@ -105,7 +130,12 @@ steps:
               - columnReferences:
                   - columnCounter: 7a65ac96-e5af-4862-bb37-5f13e61bf8cc
                     stepCounter: 498056d9-fbde-4815-bb28-9ea24983b509
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_COUNTRY"."LAST_CHANGE_DATETIME" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_COUNTRY"."LAST_CHANGE_DATETIME"
+                  END
           - acceptedValues:
               strictMatch: true
               values: []

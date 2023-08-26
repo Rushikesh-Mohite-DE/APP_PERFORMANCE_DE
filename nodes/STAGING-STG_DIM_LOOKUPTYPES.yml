@@ -29,7 +29,17 @@ steps:
               - columnReferences:
                   - columnCounter: 0e8c505e-7045-4b19-b250-d150d4f2b337
                     stepCounter: 811f5af6-93d3-4831-9e78-df186879cacc
-                transform: ""
+                transform: |-
+                  CASE
+                          WHEN SATV0_PERBANK_LOOKUPTYPES.NAME LIKE '%Hesap Hareket%' THEN 'Account Transaction Type'
+                          WHEN SATV0_PERBANK_LOOKUPTYPES.NAME LIKE '%lke%' THEN 'Country'
+                          WHEN SATV0_PERBANK_LOOKUPTYPES.NAME LIKE '%Hesap%' THEN 'Account Type'
+                          WHEN SATV0_PERBANK_LOOKUPTYPES.NAME LIKE '%Alt Döviz%' THEN 'Base Currency'
+                          WHEN SATV0_PERBANK_LOOKUPTYPES.NAME LIKE '%ehi%' THEN 'City'
+                          WHEN SATV0_PERBANK_LOOKUPTYPES.NAME LIKE '%Il%' THEN 'District'
+                          WHEN SATV0_PERBANK_LOOKUPTYPES.NAME LIKE '%Birimi%' THEN 'Currency Unit'
+                          ELSE SATV0_PERBANK_LOOKUPTYPES.NAME
+                      END
           - columnReference:
               columnCounter: eb3941b5-4bbb-4ecc-a6bd-8fa12dfa8de4
               stepCounter: 4a0310fa-31ce-41b1-9437-dede7b21a9d1
@@ -43,7 +53,9 @@ steps:
               - columnReferences:
                   - columnCounter: f327fd09-3fd0-4643-879b-7f8480a2a972
                     stepCounter: 811f5af6-93d3-4831-9e78-df186879cacc
-                transform: ""
+                transform: |
+                  CASE WHEN SATV0_PERBANK_LOOKUPTYPES."ISACTIVE" = 'True' THEN 'Its Active' else SATV0_PERBANK_LOOKUPTYPES."ISACTIVE"
+                  end
           - columnReference:
               columnCounter: 8b687ed6-f28c-4700-8138-92e208f93d81
               stepCounter: 4a0310fa-31ce-41b1-9437-dede7b21a9d1

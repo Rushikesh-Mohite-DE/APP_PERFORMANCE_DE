@@ -74,7 +74,7 @@ steps:
           - columnReference:
               columnCounter: fde46d03-2f86-497a-a1b6-113a2606856d
               stepCounter: ace608c9-0126-429f-b68e-06d29b3b6347
-            dataType: VARCHAR(16777216)
+            dataType: INTEGER
             description: Customer for this transaction (if applicable)
             hashColumns: []
             hashDetails: null
@@ -84,7 +84,12 @@ steps:
               - columnReferences:
                   - columnCounter: b020aad9-241c-4b38-beb8-7fd7d10ad4df
                     stepCounter: 33ddb5b4-8fb8-4732-9279-36a5f31ec518
-                transform: ""
+                transform: |-
+                  CASE WHEN "DVSTG_WWI_STOCKITEMTRANSACTIONS"."CUSTOMERID" = '(unknown)' THEN NULL
+                   WHEN "DVSTG_WWI_STOCKITEMTRANSACTIONS"."CUSTOMERID" =''  THEN NULL
+                   WHEN "DVSTG_WWI_STOCKITEMTRANSACTIONS"."CUSTOMERID" ='(error)'  THEN NULL
+                  ELSE  "DVSTG_WWI_STOCKITEMTRANSACTIONS"."CUSTOMERID"
+                  END
           - columnReference:
               columnCounter: 8729e7f5-74cf-4cbd-801a-5d40f4ba1aad
               stepCounter: ace608c9-0126-429f-b68e-06d29b3b6347
@@ -102,7 +107,7 @@ steps:
           - columnReference:
               columnCounter: b488a93e-9e38-4218-85dc-82c77dc5724f
               stepCounter: ace608c9-0126-429f-b68e-06d29b3b6347
-            dataType: VARCHAR(16777216)
+            dataType: STRING
             description: Supplier for this stock transaction (if applicable)
             hashColumns: []
             hashDetails: null
@@ -112,7 +117,12 @@ steps:
               - columnReferences:
                   - columnCounter: 18433bf6-4f17-47c4-9197-3e47df54182c
                     stepCounter: 33ddb5b4-8fb8-4732-9279-36a5f31ec518
-                transform: ""
+                transform: |-
+                  CASE WHEN "DVSTG_WWI_STOCKITEMTRANSACTIONS"."SUPPLIERID" = '(unknown)' THEN NULL
+                   WHEN "DVSTG_WWI_STOCKITEMTRANSACTIONS"."SUPPLIERID" =''  THEN NULL
+                   WHEN "DVSTG_WWI_STOCKITEMTRANSACTIONS"."SUPPLIERID" ='(error)'  THEN NULL
+                  ELSE  "DVSTG_WWI_STOCKITEMTRANSACTIONS"."SUPPLIERID"
+                  END
           - columnReference:
               columnCounter: 13017eed-56b4-4a6c-a639-b03c12bb1708
               stepCounter: ace608c9-0126-429f-b68e-06d29b3b6347

@@ -47,7 +47,12 @@ steps:
               - columnReferences:
                   - columnCounter: a3d45a6d-a066-441f-9bf8-dd042920c162
                     stepCounter: bd78bfd7-ead0-4379-937c-c0a22f019c34
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_ORDER_DETAILS"."ORDERID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_ORDER_DETAILS"."ORDERID"
+                  END
           - columnReference:
               columnCounter: 4554ee08-2ca1-488c-a8e9-f7a7432da5bc
               stepCounter: b95832f8-314e-4081-8cb5-7e27fe398447
@@ -59,7 +64,12 @@ steps:
               - columnReferences:
                   - columnCounter: 616e0d43-fdab-4e83-a75a-6cb6d925f7e9
                     stepCounter: bd78bfd7-ead0-4379-937c-c0a22f019c34
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_ORDER_DETAILS"."PRODUCTID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_ORDER_DETAILS"."PRODUCTID"
+                  END
           - columnReference:
               columnCounter: 6d9765e4-b018-4cf0-95ce-67fa0aad41d7
               stepCounter: b95832f8-314e-4081-8cb5-7e27fe398447
@@ -71,7 +81,12 @@ steps:
               - columnReferences:
                   - columnCounter: 2ced0921-fb68-431b-bcc3-9f269d367154
                     stepCounter: bd78bfd7-ead0-4379-937c-c0a22f019c34
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_ORDER_DETAILS"."UNITPRICE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_ORDER_DETAILS"."UNITPRICE"
+                  END
           - columnReference:
               columnCounter: 6b8ed5d9-e82c-4330-9b2e-9505edadb9fa
               stepCounter: b95832f8-314e-4081-8cb5-7e27fe398447
@@ -83,7 +98,12 @@ steps:
               - columnReferences:
                   - columnCounter: 5dd1947b-389a-4619-bbfc-2fb9505e899e
                     stepCounter: bd78bfd7-ead0-4379-937c-c0a22f019c34
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_ORDER_DETAILS"."QUANTITY" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_ORDER_DETAILS"."QUANTITY"
+                  END
           - columnReference:
               columnCounter: 4b415d98-2be3-4b43-880c-71cfd55cb9a5
               stepCounter: b95832f8-314e-4081-8cb5-7e27fe398447
@@ -95,7 +115,12 @@ steps:
               - columnReferences:
                   - columnCounter: 23d76069-7024-4eb1-9a92-50fd1ccb10e7
                     stepCounter: bd78bfd7-ead0-4379-937c-c0a22f019c34
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_ORDER_DETAILS"."DISCOUNT" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_ORDER_DETAILS"."DISCOUNT"
+                  END
           - acceptedValues:
               strictMatch: true
               values: []

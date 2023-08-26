@@ -69,7 +69,12 @@ steps:
               - columnReferences:
                   - columnCounter: 42321138-d3af-49f7-bb19-42e7be4397bd
                     stepCounter: 741841d8-3af6-429d-951f-b68e1ff09cc8
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_SALESPERSONQUOTAHISTORY"."SALESQUOTA" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_SALESPERSONQUOTAHISTORY"."SALESQUOTA"
+                  END
           - columnReference:
               columnCounter: e8970b3c-035e-4151-b3ca-c5408cf53856
               stepCounter: 3cabfd0a-fa56-4f0c-8e03-4adeedafe927

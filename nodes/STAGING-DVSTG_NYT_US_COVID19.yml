@@ -5,7 +5,7 @@ steps:
         generate_ghost_records: true
         testsEnabled: true
       database: ""
-      deployEnabled: false
+      deployEnabled: true
       description: COVID-19 cases and deaths, US, county level
       isMultisource: false
       locationName: STAGING
@@ -49,7 +49,7 @@ steps:
               - columnReferences:
                   - columnCounter: 09ff3638-0605-4716-97c5-3fc22b2206e9
                     stepCounter: 85ce4834-e8f1-4e27-a22b-b778aac37aab
-                transform: ""
+                transform: CONCAT("NYT_US_COVID19"."DATE", '')
           - columnReference:
               columnCounter: 61f5aa0f-01f2-4ae7-b85f-8a7ace1bae0c
               stepCounter: 3e21c3f7-dd6e-4d21-ba1b-f9e9af9c043d
@@ -61,7 +61,7 @@ steps:
               - columnReferences:
                   - columnCounter: 11db5e01-c418-4c56-8ab5-cdc2cd2dd230
                     stepCounter: 85ce4834-e8f1-4e27-a22b-b778aac37aab
-                transform: ""
+                transform: CONCAT("NYT_US_COVID19"."COUNTY", '')
           - columnReference:
               columnCounter: cdbb6f56-70aa-44f6-8bf5-d90b90b46864
               stepCounter: 3e21c3f7-dd6e-4d21-ba1b-f9e9af9c043d
@@ -73,7 +73,7 @@ steps:
               - columnReferences:
                   - columnCounter: e0e4377e-f2e3-457f-9e98-7153f98f681b
                     stepCounter: 85ce4834-e8f1-4e27-a22b-b778aac37aab
-                transform: ""
+                transform: CONCAT("NYT_US_COVID19"."STATE", '')
           - columnReference:
               columnCounter: b8342964-e16c-4426-99b0-a41f84f74612
               stepCounter: 3e21c3f7-dd6e-4d21-ba1b-f9e9af9c043d
@@ -85,7 +85,7 @@ steps:
               - columnReferences:
                   - columnCounter: 2e3733ea-e1e2-4c8a-803c-a3e919ac7d2e
                     stepCounter: 85ce4834-e8f1-4e27-a22b-b778aac37aab
-                transform: ""
+                transform: CONCAT("NYT_US_COVID19"."FIPS", '')
           - columnReference:
               columnCounter: 4f3ccbe8-df9f-45c2-968c-f7e724378c57
               stepCounter: 3e21c3f7-dd6e-4d21-ba1b-f9e9af9c043d
@@ -97,7 +97,7 @@ steps:
               - columnReferences:
                   - columnCounter: f773b449-3278-4cc0-a877-d924ff7e1fd8
                     stepCounter: 85ce4834-e8f1-4e27-a22b-b778aac37aab
-                transform: ""
+                transform: CONCAT("NYT_US_COVID19"."CASES", '')
           - columnReference:
               columnCounter: f71020e1-f450-4433-b633-dc388d15cf62
               stepCounter: 3e21c3f7-dd6e-4d21-ba1b-f9e9af9c043d
@@ -109,7 +109,7 @@ steps:
               - columnReferences:
                   - columnCounter: 45c217db-0cbc-4d27-8974-d738068e19af
                     stepCounter: 85ce4834-e8f1-4e27-a22b-b778aac37aab
-                transform: ""
+                transform: CONCAT("NYT_US_COVID19"."DEATHS", '')
           - columnReference:
               columnCounter: 6dbf7737-9297-43ea-ba6d-9a37c030337d
               stepCounter: 3e21c3f7-dd6e-4d21-ba1b-f9e9af9c043d
@@ -121,7 +121,7 @@ steps:
               - columnReferences:
                   - columnCounter: 0bc7e7cb-71a8-4e14-9050-f4bcf931776e
                     stepCounter: 85ce4834-e8f1-4e27-a22b-b778aac37aab
-                transform: ""
+                transform: CONCAT("NYT_US_COVID19"."ISO3166_1", '')
           - columnReference:
               columnCounter: 9f38a148-f602-45de-b15e-c7f703ba8787
               stepCounter: 3e21c3f7-dd6e-4d21-ba1b-f9e9af9c043d
@@ -133,7 +133,7 @@ steps:
               - columnReferences:
                   - columnCounter: 6043dca0-e2ed-4531-9e4b-5afe22941823
                     stepCounter: 85ce4834-e8f1-4e27-a22b-b778aac37aab
-                transform: ""
+                transform: CONCAT("NYT_US_COVID19"."ISO3166_2", '')
           - columnReference:
               columnCounter: eb42f086-4761-40a0-a14a-c30fcd08cf3b
               stepCounter: 3e21c3f7-dd6e-4d21-ba1b-f9e9af9c043d
@@ -145,7 +145,7 @@ steps:
               - columnReferences:
                   - columnCounter: bcbbf76b-0c4b-4877-916b-ae8ae932aa6e
                     stepCounter: 85ce4834-e8f1-4e27-a22b-b778aac37aab
-                transform: ""
+                transform: CONCAT("NYT_US_COVID19"."CASES_SINCE_PREV_DAY", '')
           - columnReference:
               columnCounter: fbf96e4d-17da-451f-86ca-6a76eebb5044
               stepCounter: 3e21c3f7-dd6e-4d21-ba1b-f9e9af9c043d
@@ -157,7 +157,7 @@ steps:
               - columnReferences:
                   - columnCounter: 857efbe1-9603-4f64-91b9-827ef0b20e31
                     stepCounter: 85ce4834-e8f1-4e27-a22b-b778aac37aab
-                transform: ""
+                transform: CONCAT("NYT_US_COVID19"."DEATHS_SINCE_PREV_DAY", '')
           - columnReference:
               columnCounter: 5dcec9d9-17f3-42d7-a04f-85a538510113
               stepCounter: 3e21c3f7-dd6e-4d21-ba1b-f9e9af9c043d
@@ -169,7 +169,7 @@ steps:
               - columnReferences:
                   - columnCounter: e9e2a4a3-a10c-4305-ae90-5837c7686c3d
                     stepCounter: 85ce4834-e8f1-4e27-a22b-b778aac37aab
-                transform: ""
+                transform: CONCAT("NYT_US_COVID19"."LAST_UPDATE_DATE", '')
           - columnReference:
               columnCounter: 0772664d-2525-40dc-8dc1-5fe376b3b3ee
               stepCounter: 3e21c3f7-dd6e-4d21-ba1b-f9e9af9c043d
@@ -181,7 +181,7 @@ steps:
               - columnReferences:
                   - columnCounter: 5006844c-caeb-40ec-9692-ce69be40fe2b
                     stepCounter: 85ce4834-e8f1-4e27-a22b-b778aac37aab
-                transform: ""
+                transform: CONCAT("NYT_US_COVID19"."LAST_REPORTED_FLAG", '')
           - acceptedValues:
               strictMatch: true
               values: []

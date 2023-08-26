@@ -49,7 +49,12 @@ steps:
               - columnReferences:
                   - columnCounter: 5bd573fb-4129-47a6-a0b4-b6c16c3f5348
                     stepCounter: 055fff0b-f278-47b4-ad79-03fef1d5e8c5
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_CITY"."CITY_CODE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_CITY"."CITY_CODE"
+                  END
           - columnReference:
               columnCounter: 25c2a3a1-db50-4d33-bc92-e1d50e650e51
               stepCounter: 7c19a0ca-d024-4918-83ee-8a4f069fb1bb
@@ -61,7 +66,12 @@ steps:
               - columnReferences:
                   - columnCounter: 3f19d81f-e0be-4ab6-a681-ce789f3e2962
                     stepCounter: 055fff0b-f278-47b4-ad79-03fef1d5e8c5
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_CITY"."CITY_NAME" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_CITY"."CITY_NAME"
+                  END
           - columnReference:
               columnCounter: 78f44036-f387-4d1c-bded-b90eff21a714
               stepCounter: 7c19a0ca-d024-4918-83ee-8a4f069fb1bb
@@ -73,7 +83,12 @@ steps:
               - columnReferences:
                   - columnCounter: a2251e02-0c48-4d64-a44a-880ebf52ab02
                     stepCounter: 055fff0b-f278-47b4-ad79-03fef1d5e8c5
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_CITY"."STATE_CODE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_CITY"."STATE_CODE"
+                  END
           - columnReference:
               columnCounter: a2a05bb8-e783-4997-ba26-ba152801e412
               stepCounter: 7c19a0ca-d024-4918-83ee-8a4f069fb1bb
@@ -85,7 +100,12 @@ steps:
               - columnReferences:
                   - columnCounter: 5ac22e09-744f-42be-a61f-b0b5ed12f493
                     stepCounter: 055fff0b-f278-47b4-ad79-03fef1d5e8c5
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_CITY"."COUNTRY_CODE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_CITY"."COUNTRY_CODE"
+                  END
           - columnReference:
               columnCounter: 48d034eb-29e7-4be4-ba82-4393e8f72bf2
               stepCounter: 7c19a0ca-d024-4918-83ee-8a4f069fb1bb
@@ -97,7 +117,12 @@ steps:
               - columnReferences:
                   - columnCounter: 7f63ca9d-bb89-4c1e-9565-069525ef8652
                     stepCounter: 055fff0b-f278-47b4-ad79-03fef1d5e8c5
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_CITY"."CREATING_EMPLOYEE_ID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_CITY"."CREATING_EMPLOYEE_ID"
+                  END
           - columnReference:
               columnCounter: bae09f98-a4f4-402d-86d2-b6231fc2905e
               stepCounter: 7c19a0ca-d024-4918-83ee-8a4f069fb1bb
@@ -109,7 +134,12 @@ steps:
               - columnReferences:
                   - columnCounter: c9e56274-6354-4934-8cc7-f5e48f745c50
                     stepCounter: 055fff0b-f278-47b4-ad79-03fef1d5e8c5
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_CITY"."CREATED_DATETIME" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_CITY"."CREATED_DATETIME"
+                  END
           - columnReference:
               columnCounter: 23dd728d-d6f3-47ca-82d2-9d62196462b0
               stepCounter: 7c19a0ca-d024-4918-83ee-8a4f069fb1bb
@@ -121,7 +151,12 @@ steps:
               - columnReferences:
                   - columnCounter: 703fbcc5-a70b-43f3-a714-35b01e18cf4c
                     stepCounter: 055fff0b-f278-47b4-ad79-03fef1d5e8c5
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_CITY"."LAST_CHANGE_EMPLOYEE_ID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_CITY"."LAST_CHANGE_EMPLOYEE_ID"
+                  END
           - columnReference:
               columnCounter: 7e8d6a15-760d-4bd0-a19b-887d30c2d8bb
               stepCounter: 7c19a0ca-d024-4918-83ee-8a4f069fb1bb
@@ -133,7 +168,12 @@ steps:
               - columnReferences:
                   - columnCounter: 945f3090-ed7a-4fe3-8873-efa6caa84ade
                     stepCounter: 055fff0b-f278-47b4-ad79-03fef1d5e8c5
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_CITY"."LAST_CHANGE_DATETIME" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_CITY"."LAST_CHANGE_DATETIME"
+                  END
           - acceptedValues:
               strictMatch: true
               values: []

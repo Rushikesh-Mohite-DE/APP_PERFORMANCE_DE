@@ -45,7 +45,12 @@ steps:
               - columnReferences:
                   - columnCounter: a6f43e85-48f2-4922-a27a-f32eea7c8fd2
                     stepCounter: 52454c81-9be3-41be-83c4-9fdf5d314c8e
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_UNITMEASURE"."UNITMEASURECODE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_UNITMEASURE"."UNITMEASURECODE"
+                  END
           - columnReference:
               columnCounter: 8038f54c-975f-40ac-a63a-569cf3f21e24
               stepCounter: fd420096-64cc-4524-83c8-092b75bfe2d1
@@ -57,7 +62,12 @@ steps:
               - columnReferences:
                   - columnCounter: 1c9ab5eb-8eb9-4e90-b69a-bf857dd19964
                     stepCounter: 52454c81-9be3-41be-83c4-9fdf5d314c8e
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_UNITMEASURE"."NAME" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_UNITMEASURE"."NAME"
+                  END
           - columnReference:
               columnCounter: d522b435-2ea3-4e7b-94a5-3b7dfd12ce0b
               stepCounter: fd420096-64cc-4524-83c8-092b75bfe2d1
@@ -69,7 +79,12 @@ steps:
               - columnReferences:
                   - columnCounter: 17dee4f4-c9d1-45bd-bdba-a8cc3bb616ea
                     stepCounter: 52454c81-9be3-41be-83c4-9fdf5d314c8e
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_UNITMEASURE"."MODIFIEDDATE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_UNITMEASURE"."MODIFIEDDATE"
+                  END
           - acceptedValues:
               strictMatch: true
               values: []

@@ -143,7 +143,12 @@ steps:
               - columnReferences:
                   - columnCounter: 558bc50e-945a-451a-9251-4306df6c6db0
                     stepCounter: a12178f8-77f4-4bae-b4e4-14fa06246e83
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PRODUCT"."STANDARDCOST" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PRODUCT"."STANDARDCOST"
+                  END
           - columnReference:
               columnCounter: 6db22a29-5f57-4421-bbc4-59389279258a
               stepCounter: 270d0d8e-568d-4fd3-8018-521f63a900e1
@@ -155,7 +160,12 @@ steps:
               - columnReferences:
                   - columnCounter: 7d6d10c9-f348-4c2a-942d-19ee87cd1778
                     stepCounter: a12178f8-77f4-4bae-b4e4-14fa06246e83
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PRODUCT"."LISTPRICE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PRODUCT"."LISTPRICE"
+                  END
           - columnReference:
               columnCounter: e6004da8-2e48-4345-98a4-14fdb8e60f75
               stepCounter: 270d0d8e-568d-4fd3-8018-521f63a900e1

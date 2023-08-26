@@ -5,7 +5,7 @@ steps:
         generate_ghost_records: true
         testsEnabled: true
       database: ""
-      deployEnabled: false
+      deployEnabled: true
       description: Italy case statistics, detailed
       isMultisource: false
       locationName: STAGING
@@ -47,7 +47,7 @@ steps:
               - columnReferences:
                   - columnCounter: ea8da96c-90b7-4ea3-bb2d-7a8efbf5eab6
                     stepCounter: 81021abe-795c-4688-9eca-93eea6a4071d
-                transform: ""
+                transform: CONCAT("PCM_DPS_COVID19_DETAILS"."COUNTRY_REGION", '')
           - columnReference:
               columnCounter: 2b565408-a9be-4e6a-a65e-eceb2905a10a
               stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
@@ -59,7 +59,7 @@ steps:
               - columnReferences:
                   - columnCounter: c6f3a4ef-5cb3-4c77-9f7d-206246aca749
                     stepCounter: 81021abe-795c-4688-9eca-93eea6a4071d
-                transform: ""
+                transform: CONCAT("PCM_DPS_COVID19_DETAILS"."PROVINCE_STATE", '')
           - columnReference:
               columnCounter: 26ef694d-3613-43a5-9a2e-54415b9baa58
               stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
@@ -71,7 +71,7 @@ steps:
               - columnReferences:
                   - columnCounter: e7005e82-0d07-4e3c-9389-b18ecf7bc847
                     stepCounter: 81021abe-795c-4688-9eca-93eea6a4071d
-                transform: ""
+                transform: CONCAT("PCM_DPS_COVID19_DETAILS"."DATE", '')
           - columnReference:
               columnCounter: ef03abf2-440b-43d9-a3f7-a0f227f21b85
               stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
@@ -83,7 +83,7 @@ steps:
               - columnReferences:
                   - columnCounter: 29c4bacd-dc8d-4290-99c3-419897f89668
                     stepCounter: 81021abe-795c-4688-9eca-93eea6a4071d
-                transform: ""
+                transform: CONCAT("PCM_DPS_COVID19_DETAILS"."HOSPITALIZED", '')
           - columnReference:
               columnCounter: 8d076ef5-74dd-4f03-9176-a6158c690e99
               stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
@@ -95,7 +95,7 @@ steps:
               - columnReferences:
                   - columnCounter: c5cc2adf-f1f6-42b2-8796-38706fdbe4df
                     stepCounter: 81021abe-795c-4688-9eca-93eea6a4071d
-                transform: ""
+                transform: CONCAT("PCM_DPS_COVID19_DETAILS"."INTENSIVE_CARE", '')
           - columnReference:
               columnCounter: 4c941c1f-833a-4b93-b74f-58f2f5b54108
               stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
@@ -107,7 +107,7 @@ steps:
               - columnReferences:
                   - columnCounter: c2df39cc-a66e-4ec7-85f6-e92c81de481c
                     stepCounter: 81021abe-795c-4688-9eca-93eea6a4071d
-                transform: ""
+                transform: CONCAT("PCM_DPS_COVID19_DETAILS"."TOTAL_HOSPITALIZED", '')
           - columnReference:
               columnCounter: ffb3fa20-5565-4f8d-8794-06d23768bcaf
               stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
@@ -119,7 +119,7 @@ steps:
               - columnReferences:
                   - columnCounter: bc59d382-5f8e-4fe8-abcc-66daffea9b3e
                     stepCounter: 81021abe-795c-4688-9eca-93eea6a4071d
-                transform: ""
+                transform: CONCAT("PCM_DPS_COVID19_DETAILS"."HOME_ISOLATION", '')
           - columnReference:
               columnCounter: 50b2f900-5b78-476f-a535-18307a8d0a82
               stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
@@ -131,7 +131,7 @@ steps:
               - columnReferences:
                   - columnCounter: a0aab1b1-1a1b-4098-8886-ef0a2e75c860
                     stepCounter: 81021abe-795c-4688-9eca-93eea6a4071d
-                transform: ""
+                transform: CONCAT("PCM_DPS_COVID19_DETAILS"."TOTAL_POSITIVE", '')
           - columnReference:
               columnCounter: e8161e73-797a-4588-8ca5-31b78659ca26
               stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
@@ -143,7 +143,7 @@ steps:
               - columnReferences:
                   - columnCounter: f1c22333-18a2-45ca-8e7a-5d699b5ed71a
                     stepCounter: 81021abe-795c-4688-9eca-93eea6a4071d
-                transform: ""
+                transform: CONCAT("PCM_DPS_COVID19_DETAILS"."NEW_POSITIVE", '')
           - columnReference:
               columnCounter: d4d246dd-a07f-4159-9467-81098ca40e7d
               stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
@@ -155,7 +155,7 @@ steps:
               - columnReferences:
                   - columnCounter: 293fba68-f9ac-4da0-8c3a-2a0c7daa283e
                     stepCounter: 81021abe-795c-4688-9eca-93eea6a4071d
-                transform: ""
+                transform: CONCAT("PCM_DPS_COVID19_DETAILS"."DISCHARGED_HEALED", '')
           - columnReference:
               columnCounter: 8b3b456e-d742-4bf2-b67e-3f9ce7dd6b28
               stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
@@ -167,7 +167,7 @@ steps:
               - columnReferences:
                   - columnCounter: 90838d1f-d9fc-4a08-81f0-2fef7e54ecfe
                     stepCounter: 81021abe-795c-4688-9eca-93eea6a4071d
-                transform: ""
+                transform: CONCAT("PCM_DPS_COVID19_DETAILS"."DECEASED", '')
           - columnReference:
               columnCounter: 3f5742f0-84f7-4e90-9082-d1eeb55e08f9
               stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
@@ -179,7 +179,7 @@ steps:
               - columnReferences:
                   - columnCounter: 896423b1-06a7-4c4d-9ad4-9ebb562ee77a
                     stepCounter: 81021abe-795c-4688-9eca-93eea6a4071d
-                transform: ""
+                transform: CONCAT("PCM_DPS_COVID19_DETAILS"."TOTAL_CASES", '')
           - columnReference:
               columnCounter: 045edad3-6742-49a0-91c0-cfd9d4e1edce
               stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
@@ -191,7 +191,7 @@ steps:
               - columnReferences:
                   - columnCounter: 6e264357-a362-4073-9c8e-31d869b5f7e0
                     stepCounter: 81021abe-795c-4688-9eca-93eea6a4071d
-                transform: ""
+                transform: CONCAT("PCM_DPS_COVID19_DETAILS"."TESTED", '')
           - columnReference:
               columnCounter: aa377bf6-7836-49e7-b20f-5cb7b8316891
               stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
@@ -203,7 +203,7 @@ steps:
               - columnReferences:
                   - columnCounter: 899175be-030f-4f2b-a153-c4755b8c8059
                     stepCounter: 81021abe-795c-4688-9eca-93eea6a4071d
-                transform: ""
+                transform: CONCAT("PCM_DPS_COVID19_DETAILS"."HOSPITALIZED_SINCE_PREV_DAY", '')
           - columnReference:
               columnCounter: 0900d75e-2b37-4308-8eea-67a698013ce1
               stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
@@ -215,7 +215,7 @@ steps:
               - columnReferences:
                   - columnCounter: eca60e1a-7c14-482d-ac04-351f5255d4ce
                     stepCounter: 81021abe-795c-4688-9eca-93eea6a4071d
-                transform: ""
+                transform: CONCAT("PCM_DPS_COVID19_DETAILS"."INTENSIVE_CARE_SINCE_PREV_DAY", '')
           - columnReference:
               columnCounter: 809ed3fb-b03f-4923-a8e7-09ffd9c16f43
               stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
@@ -227,7 +227,7 @@ steps:
               - columnReferences:
                   - columnCounter: 76b42326-0795-4775-9e70-5162d90e0aa6
                     stepCounter: 81021abe-795c-4688-9eca-93eea6a4071d
-                transform: ""
+                transform: CONCAT("PCM_DPS_COVID19_DETAILS"."TOTAL_HOSPITALIZED_SINCE_PREV_DAY", '')
           - columnReference:
               columnCounter: 19ebcb0e-a2c9-40d4-ab01-41b4248eadab
               stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
@@ -239,7 +239,7 @@ steps:
               - columnReferences:
                   - columnCounter: b0f1d586-3690-4aab-b8d3-8825620dd129
                     stepCounter: 81021abe-795c-4688-9eca-93eea6a4071d
-                transform: ""
+                transform: CONCAT("PCM_DPS_COVID19_DETAILS"."HOME_ISOLATION_SINCE_PREV_DAY", '')
           - columnReference:
               columnCounter: 8012beb0-1a35-42c4-8597-5d9e230cd069
               stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
@@ -251,7 +251,7 @@ steps:
               - columnReferences:
                   - columnCounter: 15df84af-e666-45f1-b112-2ca60e18ea73
                     stepCounter: 81021abe-795c-4688-9eca-93eea6a4071d
-                transform: ""
+                transform: CONCAT("PCM_DPS_COVID19_DETAILS"."TOTAL_POSITIVE_SINCE_PREV_DAY", '')
           - columnReference:
               columnCounter: f87e096d-5ae6-4bd1-8e61-b64d2edccf32
               stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
@@ -263,7 +263,7 @@ steps:
               - columnReferences:
                   - columnCounter: 2ecd392d-bc3a-4595-9bbe-10e98ecfc02b
                     stepCounter: 81021abe-795c-4688-9eca-93eea6a4071d
-                transform: ""
+                transform: CONCAT("PCM_DPS_COVID19_DETAILS"."DISCHARGED_HEALED_SINCE_PREV_DAY", '')
           - columnReference:
               columnCounter: 97508e53-ec2b-4e23-9a12-2d9656a37aa7
               stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
@@ -275,7 +275,7 @@ steps:
               - columnReferences:
                   - columnCounter: 54bbe535-38e4-463c-bd9a-01dab5b58bb9
                     stepCounter: 81021abe-795c-4688-9eca-93eea6a4071d
-                transform: ""
+                transform: CONCAT("PCM_DPS_COVID19_DETAILS"."DECEASED_SINCE_PREV_DAY", '')
           - columnReference:
               columnCounter: 1ee9787e-1d19-44cb-ad50-e2259d4cb1dd
               stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
@@ -287,7 +287,7 @@ steps:
               - columnReferences:
                   - columnCounter: 5d03e306-0eb8-41d4-93f9-1764c82f9c48
                     stepCounter: 81021abe-795c-4688-9eca-93eea6a4071d
-                transform: ""
+                transform: CONCAT("PCM_DPS_COVID19_DETAILS"."TOTAL_CASES_SINCE_PREV_DAY", '')
           - columnReference:
               columnCounter: fb3a4b5e-f67b-494e-b202-85e9a2973c02
               stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
@@ -299,7 +299,7 @@ steps:
               - columnReferences:
                   - columnCounter: 39206caa-dd1f-4b13-9b8d-1a1357693102
                     stepCounter: 81021abe-795c-4688-9eca-93eea6a4071d
-                transform: ""
+                transform: CONCAT("PCM_DPS_COVID19_DETAILS"."TESTED_SINCE_PREV_DAY", '')
           - columnReference:
               columnCounter: 95c513bf-a9f4-4f8a-a9cb-e2f3b4d9f55a
               stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
@@ -311,7 +311,7 @@ steps:
               - columnReferences:
                   - columnCounter: 0722be37-1e75-4dc8-82c4-9c721a33a69e
                     stepCounter: 81021abe-795c-4688-9eca-93eea6a4071d
-                transform: ""
+                transform: CONCAT("PCM_DPS_COVID19_DETAILS"."ISO3166_1", '')
           - columnReference:
               columnCounter: fb2fcd8d-6fde-4476-bc67-c7b7b5963ffd
               stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
@@ -323,7 +323,7 @@ steps:
               - columnReferences:
                   - columnCounter: 7784a9de-7120-4e05-817c-316ec45c2760
                     stepCounter: 81021abe-795c-4688-9eca-93eea6a4071d
-                transform: ""
+                transform: CONCAT("PCM_DPS_COVID19_DETAILS"."ISO3166_2", '')
           - columnReference:
               columnCounter: ededc298-42d5-408b-9618-7a8fd854969a
               stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
@@ -335,7 +335,7 @@ steps:
               - columnReferences:
                   - columnCounter: 64459c11-7992-48be-a173-8f400be1ab1e
                     stepCounter: 81021abe-795c-4688-9eca-93eea6a4071d
-                transform: ""
+                transform: CONCAT("PCM_DPS_COVID19_DETAILS"."NOTE_IT", '')
           - columnReference:
               columnCounter: fb72c1fa-5a8f-4614-bd99-f65d7cc3a369
               stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
@@ -347,7 +347,7 @@ steps:
               - columnReferences:
                   - columnCounter: 0437a4fa-8007-4bea-ad0f-5dbe680645bc
                     stepCounter: 81021abe-795c-4688-9eca-93eea6a4071d
-                transform: ""
+                transform: CONCAT("PCM_DPS_COVID19_DETAILS"."NOTE_EN", '')
           - columnReference:
               columnCounter: 45fa26cc-7e79-4053-bf54-fa1967a2dd61
               stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
@@ -359,7 +359,7 @@ steps:
               - columnReferences:
                   - columnCounter: 0987f6f2-9ea0-4c21-9b46-621beb7523f8
                     stepCounter: 81021abe-795c-4688-9eca-93eea6a4071d
-                transform: ""
+                transform: CONCAT("PCM_DPS_COVID19_DETAILS"."LAST_UPDATE_DATE", '')
           - columnReference:
               columnCounter: 7aed6b5c-429f-475c-a278-a76d9284653c
               stepCounter: 4d30aed2-cdde-4218-b4c2-8281cad45a53
@@ -371,7 +371,7 @@ steps:
               - columnReferences:
                   - columnCounter: 2b31a364-e0d1-4c22-87e8-c14be72697f5
                     stepCounter: 81021abe-795c-4688-9eca-93eea6a4071d
-                transform: ""
+                transform: CONCAT("PCM_DPS_COVID19_DETAILS"."LAST_REPORTED_FLAG", '')
           - acceptedValues:
               strictMatch: true
               values: []

@@ -45,7 +45,12 @@ steps:
               - columnReferences:
                   - columnCounter: 96558633-5e39-4389-aedb-289fb559175a
                     stepCounter: f6359f3c-fa09-4cdc-ab32-d5f3d2440475
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_COUNTRYREGION"."COUNTRYREGIONCODE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_COUNTRYREGION"."COUNTRYREGIONCODE"
+                  END
           - columnReference:
               columnCounter: e6f0089c-0648-4d40-84e1-15577a5711ab
               stepCounter: e459d49a-35a5-44ef-8a53-bc54fdd2c919
@@ -57,7 +62,12 @@ steps:
               - columnReferences:
                   - columnCounter: ef49cee4-039b-4fe2-a3c2-e2dbe39f9c81
                     stepCounter: f6359f3c-fa09-4cdc-ab32-d5f3d2440475
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_COUNTRYREGION"."NAME" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_COUNTRYREGION"."NAME"
+                  END
           - columnReference:
               columnCounter: 5d45f8f2-a59d-41d4-9c51-a5db2c36de91
               stepCounter: e459d49a-35a5-44ef-8a53-bc54fdd2c919
@@ -69,7 +79,12 @@ steps:
               - columnReferences:
                   - columnCounter: 8cfdcdd1-db39-4b3e-996b-8148df4be137
                     stepCounter: f6359f3c-fa09-4cdc-ab32-d5f3d2440475
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_COUNTRYREGION"."MODIFIEDDATE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_COUNTRYREGION"."MODIFIEDDATE"
+                  END
           - acceptedValues:
               strictMatch: true
               values: []

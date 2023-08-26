@@ -147,7 +147,12 @@ steps:
               - columnReferences:
                   - columnCounter: 63b7e340-6af2-4324-bdd1-cf4b1c15bac9
                     stepCounter: 4bd37d48-ea93-4025-ad2d-af2e8d2f4bee
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PURCHASEORDERHEADER"."SUBTOTAL" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PURCHASEORDERHEADER"."SUBTOTAL"
+                  END
           - columnReference:
               columnCounter: b11ab269-aa16-4b24-9af0-015094985fb3
               stepCounter: 570eb8a3-c265-4a26-b39c-ea13cb17d887
@@ -159,7 +164,12 @@ steps:
               - columnReferences:
                   - columnCounter: c823cfb3-a3e7-45dd-84fe-69d2edb082e9
                     stepCounter: 4bd37d48-ea93-4025-ad2d-af2e8d2f4bee
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PURCHASEORDERHEADER"."TAXAMT" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PURCHASEORDERHEADER"."TAXAMT"
+                  END
           - columnReference:
               columnCounter: 66f47bb3-b246-4d5b-9907-74a590e6b1df
               stepCounter: 570eb8a3-c265-4a26-b39c-ea13cb17d887
@@ -171,7 +181,12 @@ steps:
               - columnReferences:
                   - columnCounter: f483fe07-4667-4165-935c-f96b7eb73a78
                     stepCounter: 4bd37d48-ea93-4025-ad2d-af2e8d2f4bee
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PURCHASEORDERHEADER"."FREIGHT" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PURCHASEORDERHEADER"."FREIGHT"
+                  END
           - columnReference:
               columnCounter: 42cd2a60-7a00-4e1a-8563-12fe4c61b29b
               stepCounter: 570eb8a3-c265-4a26-b39c-ea13cb17d887
@@ -183,7 +198,12 @@ steps:
               - columnReferences:
                   - columnCounter: 4f56d4b1-51f9-44a0-9f6a-bcbca81b53fe
                     stepCounter: 4bd37d48-ea93-4025-ad2d-af2e8d2f4bee
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PURCHASEORDERHEADER"."TOTALDUE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PURCHASEORDERHEADER"."TOTALDUE"
+                  END
           - columnReference:
               columnCounter: d71cc36b-0ca2-4c80-b2d0-16f4978f6874
               stepCounter: 570eb8a3-c265-4a26-b39c-ea13cb17d887

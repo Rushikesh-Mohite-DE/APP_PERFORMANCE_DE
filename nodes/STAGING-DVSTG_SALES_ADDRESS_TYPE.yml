@@ -49,7 +49,12 @@ steps:
               - columnReferences:
                   - columnCounter: 88efc190-747e-4cd3-b528-24440f1009d5
                     stepCounter: fbef17d2-8394-4fd7-9fc8-0ac0a8e926cf
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_ADDRESS_TYPE"."ADDRESS_TYPE_CODE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_ADDRESS_TYPE"."ADDRESS_TYPE_CODE"
+                  END
           - columnReference:
               columnCounter: e7388abf-9106-4ea7-bcc8-3e78751b1e4f
               stepCounter: e477333a-ae4a-4111-be12-0c283347c2ac
@@ -61,7 +66,12 @@ steps:
               - columnReferences:
                   - columnCounter: c104d3d9-83b1-43e1-a5d4-7e4b1df2d268
                     stepCounter: fbef17d2-8394-4fd7-9fc8-0ac0a8e926cf
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_ADDRESS_TYPE"."ADDRESS_TYPE_DESCRIPTION" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_ADDRESS_TYPE"."ADDRESS_TYPE_DESCRIPTION"
+                  END
           - columnReference:
               columnCounter: 9be5c428-685d-4b30-a8c9-c62977ecde29
               stepCounter: e477333a-ae4a-4111-be12-0c283347c2ac
@@ -73,7 +83,12 @@ steps:
               - columnReferences:
                   - columnCounter: ea964a33-9a17-4be4-8e2f-5f1cf30cdf9c
                     stepCounter: fbef17d2-8394-4fd7-9fc8-0ac0a8e926cf
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_ADDRESS_TYPE"."CREATING_EMPLOYEE_ID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_ADDRESS_TYPE"."CREATING_EMPLOYEE_ID"
+                  END
           - columnReference:
               columnCounter: d9640b40-291b-4f2b-93b8-8ceba251ea92
               stepCounter: e477333a-ae4a-4111-be12-0c283347c2ac
@@ -85,7 +100,12 @@ steps:
               - columnReferences:
                   - columnCounter: f2465aba-96a7-4f5c-86b3-dd714b6b554e
                     stepCounter: fbef17d2-8394-4fd7-9fc8-0ac0a8e926cf
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_ADDRESS_TYPE"."CREATED_DATETIME" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_ADDRESS_TYPE"."CREATED_DATETIME"
+                  END
           - columnReference:
               columnCounter: 66f9e8c8-2008-4b53-8024-5cc4a752a3bb
               stepCounter: e477333a-ae4a-4111-be12-0c283347c2ac
@@ -97,7 +117,12 @@ steps:
               - columnReferences:
                   - columnCounter: 985c1764-f867-436b-a37c-bf2dfb2972aa
                     stepCounter: fbef17d2-8394-4fd7-9fc8-0ac0a8e926cf
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_ADDRESS_TYPE"."LAST_CHANGE_EMPLOYEE_ID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_ADDRESS_TYPE"."LAST_CHANGE_EMPLOYEE_ID"
+                  END
           - columnReference:
               columnCounter: eea39eec-4101-4689-868c-5e8f1a541d16
               stepCounter: e477333a-ae4a-4111-be12-0c283347c2ac
@@ -109,7 +134,12 @@ steps:
               - columnReferences:
                   - columnCounter: f4d3ea74-06ad-474c-b83b-2fae1cad7726
                     stepCounter: fbef17d2-8394-4fd7-9fc8-0ac0a8e926cf
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_ADDRESS_TYPE"."LAST_CHANGE_DATETIME" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_ADDRESS_TYPE"."LAST_CHANGE_DATETIME"
+                  END
           - acceptedValues:
               strictMatch: true
               values: []

@@ -45,7 +45,12 @@ steps:
               - columnReferences:
                   - columnCounter: 43fd75e4-28c5-4704-a3b1-b88313062778
                     stepCounter: 2cf2df9e-5945-49ca-85f4-646f6ddf2c08
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PRODUCTCATEGORY"."PRODUCTCATEGORYID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PRODUCTCATEGORY"."PRODUCTCATEGORYID"
+                  END
           - columnReference:
               columnCounter: f887eef6-465c-45b4-83e8-bec7cd00796f
               stepCounter: ce3aaa27-e765-4dba-a239-138b4e204dcc
@@ -57,7 +62,12 @@ steps:
               - columnReferences:
                   - columnCounter: bafede4b-ed9a-4e23-b6d7-58c6c4698633
                     stepCounter: 2cf2df9e-5945-49ca-85f4-646f6ddf2c08
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PRODUCTCATEGORY"."NAME" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PRODUCTCATEGORY"."NAME"
+                  END
           - columnReference:
               columnCounter: 204e0af7-3354-439b-9896-251b51ae8158
               stepCounter: ce3aaa27-e765-4dba-a239-138b4e204dcc
@@ -69,7 +79,12 @@ steps:
               - columnReferences:
                   - columnCounter: bacda562-5c77-4449-99ff-c9d9b21e2c22
                     stepCounter: 2cf2df9e-5945-49ca-85f4-646f6ddf2c08
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PRODUCTCATEGORY"."ROWGUID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PRODUCTCATEGORY"."ROWGUID"
+                  END
           - columnReference:
               columnCounter: 83225bf8-77dd-47bc-bd68-719d2561a5a4
               stepCounter: ce3aaa27-e765-4dba-a239-138b4e204dcc
@@ -81,7 +96,12 @@ steps:
               - columnReferences:
                   - columnCounter: 4efeedcd-b88a-430e-8520-747d6ae30f85
                     stepCounter: 2cf2df9e-5945-49ca-85f4-646f6ddf2c08
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PRODUCTCATEGORY"."MODIFIEDDATE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PRODUCTCATEGORY"."MODIFIEDDATE"
+                  END
           - acceptedValues:
               strictMatch: true
               values: []

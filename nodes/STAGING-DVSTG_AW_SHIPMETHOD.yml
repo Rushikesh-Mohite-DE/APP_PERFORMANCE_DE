@@ -69,7 +69,12 @@ steps:
               - columnReferences:
                   - columnCounter: a6fdb38d-30f5-436a-a489-682c8f13b800
                     stepCounter: 4ecb5ff9-d48e-4e30-a40e-ce1a691c3fde
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_SHIPMETHOD"."SHIPBASE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_SHIPMETHOD"."SHIPBASE"
+                  END
           - columnReference:
               columnCounter: 93fb08d8-db55-4657-82b7-bd6e8c8d00e5
               stepCounter: 6b66270d-b59d-4aac-8c25-33cc33d921fc
@@ -81,7 +86,12 @@ steps:
               - columnReferences:
                   - columnCounter: d3a0b469-be4e-4697-a2d1-7c20846eaa57
                     stepCounter: 4ecb5ff9-d48e-4e30-a40e-ce1a691c3fde
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_SHIPMETHOD"."SHIPRATE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_SHIPMETHOD"."SHIPRATE"
+                  END
           - columnReference:
               columnCounter: 9838b30f-8c84-4295-b98d-dff01e2f53fe
               stepCounter: 6b66270d-b59d-4aac-8c25-33cc33d921fc

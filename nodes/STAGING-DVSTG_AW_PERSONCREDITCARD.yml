@@ -47,7 +47,12 @@ steps:
               - columnReferences:
                   - columnCounter: dc1a0aa2-c964-4f08-8e97-08d0d3a42db1
                     stepCounter: 2e707f63-eaba-4c9e-b0eb-93e8a9dcc1ad
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PERSONCREDITCARD"."BUSINESSENTITYID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PERSONCREDITCARD"."BUSINESSENTITYID"
+                  END
           - columnReference:
               columnCounter: f78dc87d-4805-46d3-b4e3-7fab6396a755
               stepCounter: c0c442c9-466b-495b-ad95-f9b9e3f08367
@@ -59,7 +64,12 @@ steps:
               - columnReferences:
                   - columnCounter: c2971839-d9c2-44a2-98f9-035b1b41f40d
                     stepCounter: 2e707f63-eaba-4c9e-b0eb-93e8a9dcc1ad
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PERSONCREDITCARD"."CREDITCARDID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PERSONCREDITCARD"."CREDITCARDID"
+                  END
           - columnReference:
               columnCounter: 1eaf40fb-eead-42e1-804b-d2bf90db6459
               stepCounter: c0c442c9-466b-495b-ad95-f9b9e3f08367
@@ -71,7 +81,12 @@ steps:
               - columnReferences:
                   - columnCounter: 88ee642f-939a-4c6c-979a-24bdd00b0ed3
                     stepCounter: 2e707f63-eaba-4c9e-b0eb-93e8a9dcc1ad
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PERSONCREDITCARD"."MODIFIEDDATE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PERSONCREDITCARD"."MODIFIEDDATE"
+                  END
           - acceptedValues:
               strictMatch: true
               values: []

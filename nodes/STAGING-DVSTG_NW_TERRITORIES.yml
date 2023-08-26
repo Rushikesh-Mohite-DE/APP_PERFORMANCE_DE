@@ -47,7 +47,12 @@ steps:
               - columnReferences:
                   - columnCounter: 72d185cb-4d5f-4b8a-acaf-a9ee4d953771
                     stepCounter: 74c8eb29-6597-424d-8294-b93f89e16f1b
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_TERRITORIES"."TERRITORYID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_TERRITORIES"."TERRITORYID"
+                  END
           - columnReference:
               columnCounter: 229926f5-a0b0-47a8-a078-0b9dbf530636
               stepCounter: ecedd8a8-de99-4578-b6ca-9bf10a8fa407
@@ -59,7 +64,12 @@ steps:
               - columnReferences:
                   - columnCounter: 04a85a6e-c329-49ad-a8ae-70b2d54797f2
                     stepCounter: 74c8eb29-6597-424d-8294-b93f89e16f1b
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_TERRITORIES"."TERRITORYDESCRIPTION" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_TERRITORIES"."TERRITORYDESCRIPTION"
+                  END
           - columnReference:
               columnCounter: cada11c0-2968-4893-bafb-b7aa6b415c6c
               stepCounter: ecedd8a8-de99-4578-b6ca-9bf10a8fa407
@@ -71,7 +81,12 @@ steps:
               - columnReferences:
                   - columnCounter: af511725-9a4d-4889-9df4-a031f54a79b4
                     stepCounter: 74c8eb29-6597-424d-8294-b93f89e16f1b
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_TERRITORIES"."REGIONID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_TERRITORIES"."REGIONID"
+                  END
           - acceptedValues:
               strictMatch: true
               values: []

@@ -51,7 +51,12 @@ steps:
               - columnReferences:
                   - columnCounter: c51781f2-fc55-4b26-975f-130dd3e41681
                     stepCounter: fbb0a6db-3840-40a4-abb1-58ae009c6899
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_ORDERS_HEADER_FULL"."ORDER_ID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_ORDERS_HEADER_FULL"."ORDER_ID"
+                  END
           - columnReference:
               columnCounter: 3385fd9c-7ff6-42cc-9cc5-5d0881de2207
               stepCounter: 37a09dc5-4f0d-402c-8bc7-f591117bb394
@@ -63,7 +68,12 @@ steps:
               - columnReferences:
                   - columnCounter: 3e48f186-6181-4fd6-893f-2f75831995bf
                     stepCounter: fbb0a6db-3840-40a4-abb1-58ae009c6899
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_ORDERS_HEADER_FULL"."ORDER_NUMBER" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_ORDERS_HEADER_FULL"."ORDER_NUMBER"
+                  END
           - columnReference:
               columnCounter: be7a5932-175d-4b73-be76-f93b92c5133e
               stepCounter: 37a09dc5-4f0d-402c-8bc7-f591117bb394
@@ -75,7 +85,12 @@ steps:
               - columnReferences:
                   - columnCounter: 755fdef6-b7f3-4a15-aca1-3642f814fdab
                     stepCounter: fbb0a6db-3840-40a4-abb1-58ae009c6899
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_ORDERS_HEADER_FULL"."ORDER_TYPE_CODE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_ORDERS_HEADER_FULL"."ORDER_TYPE_CODE"
+                  END
           - columnReference:
               columnCounter: cb2db58b-693e-4c5a-b399-e5f6c82f6179
               stepCounter: 37a09dc5-4f0d-402c-8bc7-f591117bb394
@@ -87,7 +102,12 @@ steps:
               - columnReferences:
                   - columnCounter: cdfd1407-5f7a-4d11-9ca3-132b811e93b6
                     stepCounter: fbb0a6db-3840-40a4-abb1-58ae009c6899
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_ORDERS_HEADER_FULL"."ORDER_STATUS_CODE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_ORDERS_HEADER_FULL"."ORDER_STATUS_CODE"
+                  END
           - columnReference:
               columnCounter: 5d63c471-259e-46c2-9f87-3f21395c5813
               stepCounter: 37a09dc5-4f0d-402c-8bc7-f591117bb394
@@ -99,7 +119,12 @@ steps:
               - columnReferences:
                   - columnCounter: dadadaef-f153-40e2-a903-644b28619c58
                     stepCounter: fbb0a6db-3840-40a4-abb1-58ae009c6899
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_ORDERS_HEADER_FULL"."TRANSACTION_CURRENCY_CODE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_ORDERS_HEADER_FULL"."TRANSACTION_CURRENCY_CODE"
+                  END
           - columnReference:
               columnCounter: def2fd33-867d-4701-9831-f70eeb3382ff
               stepCounter: 37a09dc5-4f0d-402c-8bc7-f591117bb394
@@ -111,7 +136,12 @@ steps:
               - columnReferences:
                   - columnCounter: ef3edcea-495f-4dfe-96d7-2b8ef7b30273
                     stepCounter: fbb0a6db-3840-40a4-abb1-58ae009c6899
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_ORDERS_HEADER_FULL"."BASE_CURRENCY_CODE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_ORDERS_HEADER_FULL"."BASE_CURRENCY_CODE"
+                  END
           - columnReference:
               columnCounter: 43f95169-1e68-4cb4-abe7-0279d46130d0
               stepCounter: 37a09dc5-4f0d-402c-8bc7-f591117bb394
@@ -123,7 +153,12 @@ steps:
               - columnReferences:
                   - columnCounter: bcd743cb-65ef-4e38-b13c-c0de9961596e
                     stepCounter: fbb0a6db-3840-40a4-abb1-58ae009c6899
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_ORDERS_HEADER_FULL"."SALES_REP_ID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_ORDERS_HEADER_FULL"."SALES_REP_ID"
+                  END
           - columnReference:
               columnCounter: 6835cf8a-5e51-43e4-99a8-46d43f9ff331
               stepCounter: 37a09dc5-4f0d-402c-8bc7-f591117bb394
@@ -135,7 +170,12 @@ steps:
               - columnReferences:
                   - columnCounter: 1176ca4d-9b31-40f1-a5d7-b693ee8a9776
                     stepCounter: fbb0a6db-3840-40a4-abb1-58ae009c6899
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_ORDERS_HEADER_FULL"."PAYMENT_METHOD_ID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_ORDERS_HEADER_FULL"."PAYMENT_METHOD_ID"
+                  END
           - columnReference:
               columnCounter: e49732c6-167c-4fa4-b302-b371df48c30b
               stepCounter: 37a09dc5-4f0d-402c-8bc7-f591117bb394
@@ -147,7 +187,12 @@ steps:
               - columnReferences:
                   - columnCounter: e9effbb7-0b15-4054-8ac8-069ef9a41044
                     stepCounter: fbb0a6db-3840-40a4-abb1-58ae009c6899
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_ORDERS_HEADER_FULL"."SALES_TAX_FLAG" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_ORDERS_HEADER_FULL"."SALES_TAX_FLAG"
+                  END
           - columnReference:
               columnCounter: f8b79d4a-86c0-49c5-b521-07e12a8fae04
               stepCounter: 37a09dc5-4f0d-402c-8bc7-f591117bb394
@@ -159,7 +204,12 @@ steps:
               - columnReferences:
                   - columnCounter: 9bff1caa-4a3e-4aaf-957f-8df6e2f9c0ac
                     stepCounter: fbb0a6db-3840-40a4-abb1-58ae009c6899
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_ORDERS_HEADER_FULL"."SHIP_TO_ADDRESS_ID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_ORDERS_HEADER_FULL"."SHIP_TO_ADDRESS_ID"
+                  END
           - columnReference:
               columnCounter: cbc767fe-a059-4819-9e19-835e6e0661e2
               stepCounter: 37a09dc5-4f0d-402c-8bc7-f591117bb394
@@ -171,7 +221,12 @@ steps:
               - columnReferences:
                   - columnCounter: 806cd707-a067-405b-84b5-dace687bb191
                     stepCounter: fbb0a6db-3840-40a4-abb1-58ae009c6899
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_ORDERS_HEADER_FULL"."BILL_TO_ADDRESS_ID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_ORDERS_HEADER_FULL"."BILL_TO_ADDRESS_ID"
+                  END
           - columnReference:
               columnCounter: 71b50f0c-d739-4b40-b720-a26e1509465c
               stepCounter: 37a09dc5-4f0d-402c-8bc7-f591117bb394
@@ -183,7 +238,12 @@ steps:
               - columnReferences:
                   - columnCounter: 6486e70d-8ada-4a94-923a-f4e255ac32a2
                     stepCounter: fbb0a6db-3840-40a4-abb1-58ae009c6899
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_ORDERS_HEADER_FULL"."SOLD_TO_ADDRESS_ID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_ORDERS_HEADER_FULL"."SOLD_TO_ADDRESS_ID"
+                  END
           - columnReference:
               columnCounter: 1ac8cbe2-73be-4f7b-818f-23259f20cab8
               stepCounter: 37a09dc5-4f0d-402c-8bc7-f591117bb394
@@ -195,7 +255,12 @@ steps:
               - columnReferences:
                   - columnCounter: ff134f34-c61b-485a-86a5-23018c6f731b
                     stepCounter: fbb0a6db-3840-40a4-abb1-58ae009c6899
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_ORDERS_HEADER_FULL"."ORDER_DATE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_ORDERS_HEADER_FULL"."ORDER_DATE"
+                  END
           - columnReference:
               columnCounter: 4ecdba1a-657d-4692-82ce-61bfadfbe69f
               stepCounter: 37a09dc5-4f0d-402c-8bc7-f591117bb394
@@ -207,7 +272,12 @@ steps:
               - columnReferences:
                   - columnCounter: 0a6697cc-1591-4522-8070-fe591c3ebf37
                     stepCounter: fbb0a6db-3840-40a4-abb1-58ae009c6899
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_ORDERS_HEADER_FULL"."INVOICE_DATE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_ORDERS_HEADER_FULL"."INVOICE_DATE"
+                  END
           - columnReference:
               columnCounter: 66eea1ed-0608-42a6-bed8-ed38d8af6492
               stepCounter: 37a09dc5-4f0d-402c-8bc7-f591117bb394
@@ -219,7 +289,12 @@ steps:
               - columnReferences:
                   - columnCounter: bdd8452a-f325-4cba-b229-c2a5c0176558
                     stepCounter: fbb0a6db-3840-40a4-abb1-58ae009c6899
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_ORDERS_HEADER_FULL"."POSTED_DATE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_ORDERS_HEADER_FULL"."POSTED_DATE"
+                  END
           - columnReference:
               columnCounter: 72637c6f-65dc-44be-a5c0-b1d7608732f2
               stepCounter: 37a09dc5-4f0d-402c-8bc7-f591117bb394
@@ -231,7 +306,12 @@ steps:
               - columnReferences:
                   - columnCounter: e4a80b81-5a24-4bca-a9ef-6fca80eafb24
                     stepCounter: fbb0a6db-3840-40a4-abb1-58ae009c6899
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_ORDERS_HEADER_FULL"."CREATING_EMPLOYEE_ID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_ORDERS_HEADER_FULL"."CREATING_EMPLOYEE_ID"
+                  END
           - columnReference:
               columnCounter: 9e5dc41d-341e-4571-ad73-c4ba920c90a2
               stepCounter: 37a09dc5-4f0d-402c-8bc7-f591117bb394
@@ -243,7 +323,12 @@ steps:
               - columnReferences:
                   - columnCounter: a30fb130-e237-487b-8946-aab2e1382d1b
                     stepCounter: fbb0a6db-3840-40a4-abb1-58ae009c6899
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_ORDERS_HEADER_FULL"."CREATED_DATETIME" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_ORDERS_HEADER_FULL"."CREATED_DATETIME"
+                  END
           - columnReference:
               columnCounter: 4bd9d450-393f-4e02-a21d-7c6d3e04d2e0
               stepCounter: 37a09dc5-4f0d-402c-8bc7-f591117bb394
@@ -255,7 +340,12 @@ steps:
               - columnReferences:
                   - columnCounter: 2e920178-bc7e-49c6-b5ad-9b92dd62e051
                     stepCounter: fbb0a6db-3840-40a4-abb1-58ae009c6899
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_ORDERS_HEADER_FULL"."LAST_CHANGE_EMPLOYEE_ID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_ORDERS_HEADER_FULL"."LAST_CHANGE_EMPLOYEE_ID"
+                  END
           - columnReference:
               columnCounter: fef2f86a-7dfd-49d9-8881-38ed9e6c0591
               stepCounter: 37a09dc5-4f0d-402c-8bc7-f591117bb394
@@ -267,7 +357,12 @@ steps:
               - columnReferences:
                   - columnCounter: 5b67a23e-7712-4f43-a692-b153e55b07e9
                     stepCounter: fbb0a6db-3840-40a4-abb1-58ae009c6899
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_ORDERS_HEADER_FULL"."LAST_CHANGE_DATETIME" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_ORDERS_HEADER_FULL"."LAST_CHANGE_DATETIME"
+                  END
           - acceptedValues:
               strictMatch: true
               values: []

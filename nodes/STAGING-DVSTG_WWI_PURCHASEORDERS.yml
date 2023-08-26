@@ -51,7 +51,7 @@ steps:
               - columnReferences:
                   - columnCounter: ad3a9d1b-0df0-425c-beba-82381ecbde40
                     stepCounter: fbaa1c29-4234-454c-8011-43764039a4f6
-                transform: ""
+                transform: COALESCE("WWI_LOAD_PURCHASEORDERS"."PURCHASEORDERID",0)
           - columnReference:
               columnCounter: b3f7c8aa-2963-4941-8627-0ab8987beb40
               stepCounter: 4fc9b44b-cf08-4177-9770-964ad0d4351b
@@ -63,7 +63,7 @@ steps:
               - columnReferences:
                   - columnCounter: c3f374e9-be6f-420d-b8b1-f5aa497bd7eb
                     stepCounter: fbaa1c29-4234-454c-8011-43764039a4f6
-                transform: ""
+                transform: COALESCE("WWI_LOAD_PURCHASEORDERS"."SUPPLIERID",0)
           - columnReference:
               columnCounter: 1ce86601-0281-4807-9323-0631d15554a7
               stepCounter: 4fc9b44b-cf08-4177-9770-964ad0d4351b
@@ -87,7 +87,7 @@ steps:
               - columnReferences:
                   - columnCounter: aca791e7-1bcd-484e-b6a6-3e305e424ad0
                     stepCounter: fbaa1c29-4234-454c-8011-43764039a4f6
-                transform: ""
+                transform: COALESCE("WWI_LOAD_PURCHASEORDERS"."DELIVERYMETHODID",0)
           - columnReference:
               columnCounter: 411106a7-5f3e-422d-a05e-afbb225034a3
               stepCounter: 4fc9b44b-cf08-4177-9770-964ad0d4351b
@@ -99,7 +99,7 @@ steps:
               - columnReferences:
                   - columnCounter: 0e5dbe8f-f6b9-4819-8bec-f82361f7f743
                     stepCounter: fbaa1c29-4234-454c-8011-43764039a4f6
-                transform: ""
+                transform: COALESCE("WWI_LOAD_PURCHASEORDERS"."CONTACTPERSONID",0)
           - columnReference:
               columnCounter: 03a3f60e-95a9-4b9f-a55f-2c9dfd35ae18
               stepCounter: 4fc9b44b-cf08-4177-9770-964ad0d4351b
@@ -111,7 +111,7 @@ steps:
               - columnReferences:
                   - columnCounter: 771dd576-5c99-42a8-9cc6-031c35963dde
                     stepCounter: fbaa1c29-4234-454c-8011-43764039a4f6
-                transform: ""
+                transform: CONCAT("WWI_LOAD_PURCHASEORDERS"."EXPECTEDDELIVERYDATE", '')
           - columnReference:
               columnCounter: eeb58080-17d2-4e5d-8ce5-8a4175e0b647
               stepCounter: 4fc9b44b-cf08-4177-9770-964ad0d4351b
@@ -123,7 +123,7 @@ steps:
               - columnReferences:
                   - columnCounter: 21dd161e-9d60-4aef-8cd0-a74fc8f95443
                     stepCounter: fbaa1c29-4234-454c-8011-43764039a4f6
-                transform: ""
+                transform: CONCAT("WWI_LOAD_PURCHASEORDERS"."SUPPLIERREFERENCE", '')
           - columnReference:
               columnCounter: fc40ee6a-2f3a-4342-9da3-4c89f7bee61c
               stepCounter: 4fc9b44b-cf08-4177-9770-964ad0d4351b
@@ -135,7 +135,7 @@ steps:
               - columnReferences:
                   - columnCounter: 7bdc4a71-3d80-4b42-8678-9ceef1a05ac9
                     stepCounter: fbaa1c29-4234-454c-8011-43764039a4f6
-                transform: ""
+                transform: CONCAT("WWI_LOAD_PURCHASEORDERS"."ISORDERFINALIZED", '')
           - columnReference:
               columnCounter: 1178d830-4e44-4cb9-99f9-243f990cc58d
               stepCounter: 4fc9b44b-cf08-4177-9770-964ad0d4351b
@@ -147,7 +147,7 @@ steps:
               - columnReferences:
                   - columnCounter: 5e75a9db-8fd0-469e-ac38-ec3c46b5d734
                     stepCounter: fbaa1c29-4234-454c-8011-43764039a4f6
-                transform: ""
+                transform: CONCAT("WWI_LOAD_PURCHASEORDERS"."COMMENTS", '')
           - columnReference:
               columnCounter: 44d6e4ff-abbc-4e94-b405-339a84c01290
               stepCounter: 4fc9b44b-cf08-4177-9770-964ad0d4351b
@@ -159,7 +159,7 @@ steps:
               - columnReferences:
                   - columnCounter: 9de85582-4b3f-4cac-8821-469f57ad14b8
                     stepCounter: fbaa1c29-4234-454c-8011-43764039a4f6
-                transform: ""
+                transform: CONCAT("WWI_LOAD_PURCHASEORDERS"."INTERNALCOMMENTS", '')
           - columnReference:
               columnCounter: eec86b33-cc22-4022-ac5c-ff764c2626dc
               stepCounter: 4fc9b44b-cf08-4177-9770-964ad0d4351b
@@ -171,7 +171,7 @@ steps:
               - columnReferences:
                   - columnCounter: 5b414608-f0b8-4f09-9c50-e95ab1ae3cba
                     stepCounter: fbaa1c29-4234-454c-8011-43764039a4f6
-                transform: ""
+                transform: CONCAT("WWI_LOAD_PURCHASEORDERS"."LASTEDITEDBY", '')
           - columnReference:
               columnCounter: 5b52dd8a-a5ec-4421-98a8-2d41a7aa9318
               stepCounter: 4fc9b44b-cf08-4177-9770-964ad0d4351b

@@ -45,7 +45,12 @@ steps:
               - columnReferences:
                   - columnCounter: f18fa198-7abf-486f-b8ea-f18d2e196856
                     stepCounter: 583e31e6-190d-4a1b-9eae-05de5cde7968
-                transform: ""
+                transform: |
+                  CASE 
+                  	WHEN "WWI_LOAD_PAYMENTMETHODS_ARCHIVE"."PAYMENTMETHODID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "WWI_LOAD_PAYMENTMETHODS_ARCHIVE"."PAYMENTMETHODID"
+                  END
           - columnReference:
               columnCounter: 32187a61-f04e-4d19-9b3d-ef88d35952ab
               stepCounter: 1af50b69-6c99-4ecd-a1ec-899b9a4b43f7
@@ -57,7 +62,12 @@ steps:
               - columnReferences:
                   - columnCounter: 47534cff-aa1f-48f3-a945-f6dfb3a25d30
                     stepCounter: 583e31e6-190d-4a1b-9eae-05de5cde7968
-                transform: ""
+                transform: |
+                  CASE 
+                  	WHEN "WWI_LOAD_PAYMENTMETHODS_ARCHIVE"."PAYMENTMETHODNAME" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "WWI_LOAD_PAYMENTMETHODS_ARCHIVE"."PAYMENTMETHODNAME"
+                  END
           - columnReference:
               columnCounter: 8a74b384-3bec-408f-bcc0-f6628153cf58
               stepCounter: 1af50b69-6c99-4ecd-a1ec-899b9a4b43f7
@@ -69,7 +79,12 @@ steps:
               - columnReferences:
                   - columnCounter: b63612d9-cffd-43df-8969-99a6e4a2ade2
                     stepCounter: 583e31e6-190d-4a1b-9eae-05de5cde7968
-                transform: ""
+                transform: |
+                  CASE 
+                  	WHEN "WWI_LOAD_PAYMENTMETHODS_ARCHIVE"."LASTEDITEDBY" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "WWI_LOAD_PAYMENTMETHODS_ARCHIVE"."LASTEDITEDBY"
+                  END
           - columnReference:
               columnCounter: 18652ac7-e9d8-45d7-a980-14db0c07668d
               stepCounter: 1af50b69-6c99-4ecd-a1ec-899b9a4b43f7
@@ -81,7 +96,12 @@ steps:
               - columnReferences:
                   - columnCounter: 4b7394da-bb7e-435e-b26e-1b6532e6f618
                     stepCounter: 583e31e6-190d-4a1b-9eae-05de5cde7968
-                transform: ""
+                transform: |
+                  CASE 
+                  	WHEN "WWI_LOAD_PAYMENTMETHODS_ARCHIVE"."VALIDFROM" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "WWI_LOAD_PAYMENTMETHODS_ARCHIVE"."VALIDFROM"
+                  END
           - columnReference:
               columnCounter: a580ace1-4ff3-4208-9dde-bf3390856798
               stepCounter: 1af50b69-6c99-4ecd-a1ec-899b9a4b43f7
@@ -93,7 +113,12 @@ steps:
               - columnReferences:
                   - columnCounter: 8442cc84-3bc8-4b47-baad-072e4f22f965
                     stepCounter: 583e31e6-190d-4a1b-9eae-05de5cde7968
-                transform: ""
+                transform: |
+                  CASE 
+                  	WHEN "WWI_LOAD_PAYMENTMETHODS_ARCHIVE"."VALIDTO" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "WWI_LOAD_PAYMENTMETHODS_ARCHIVE"."VALIDTO"
+                  END
           - acceptedValues:
               strictMatch: true
               values: []

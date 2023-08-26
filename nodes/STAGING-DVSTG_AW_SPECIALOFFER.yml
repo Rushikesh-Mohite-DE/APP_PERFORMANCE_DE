@@ -69,7 +69,12 @@ steps:
               - columnReferences:
                   - columnCounter: 1400fc6e-a6ee-4fb2-8669-5fe550fa1989
                     stepCounter: bea872f2-a36f-4f94-b2aa-3d8bab7b83e5
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_SPECIALOFFER"."DISCOUNTPCT" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_SPECIALOFFER"."DISCOUNTPCT"
+                  END
           - columnReference:
               columnCounter: cdd24cad-e229-4a05-9341-5c07e81e6ada
               stepCounter: 812d5c2d-10a4-459d-88d5-daf221d3d78c

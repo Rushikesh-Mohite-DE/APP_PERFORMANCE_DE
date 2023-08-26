@@ -49,7 +49,12 @@ steps:
               - columnReferences:
                   - columnCounter: d85efd17-f195-4ad4-80ba-cba0f16dc2af
                     stepCounter: 28ba5ede-fa6e-4d8d-aa71-88dd4f35c02c
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PURCHASEORDERDETAIL"."PURCHASEORDERID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PURCHASEORDERDETAIL"."PURCHASEORDERID"
+                  END
           - columnReference:
               columnCounter: 2c568a34-ce81-433e-aba0-9c56648bab91
               stepCounter: edfdcead-0b60-415a-ab0e-7ce01176a474
@@ -61,7 +66,12 @@ steps:
               - columnReferences:
                   - columnCounter: 257c750e-fe3a-487b-8140-c7157e46c964
                     stepCounter: 28ba5ede-fa6e-4d8d-aa71-88dd4f35c02c
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PURCHASEORDERDETAIL"."PURCHASEORDERDETAILID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PURCHASEORDERDETAIL"."PURCHASEORDERDETAILID"
+                  END
           - columnReference:
               columnCounter: 8f846d39-99b6-40ca-9487-983a52ff08f0
               stepCounter: edfdcead-0b60-415a-ab0e-7ce01176a474
@@ -73,7 +83,12 @@ steps:
               - columnReferences:
                   - columnCounter: 815ad9fb-ecc0-4762-9c3b-5f83bf303003
                     stepCounter: 28ba5ede-fa6e-4d8d-aa71-88dd4f35c02c
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PURCHASEORDERDETAIL"."DUEDATE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PURCHASEORDERDETAIL"."DUEDATE"
+                  END
           - columnReference:
               columnCounter: eabff0d8-92f0-4a30-a8f2-5578ed4a67fa
               stepCounter: edfdcead-0b60-415a-ab0e-7ce01176a474
@@ -85,7 +100,12 @@ steps:
               - columnReferences:
                   - columnCounter: 1229c3b0-94f9-406d-95f7-c627161ff3bb
                     stepCounter: 28ba5ede-fa6e-4d8d-aa71-88dd4f35c02c
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PURCHASEORDERDETAIL"."ORDERQTY" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PURCHASEORDERDETAIL"."ORDERQTY"
+                  END
           - columnReference:
               columnCounter: c018e86c-7fd2-4b9c-8fd9-f9dead7f09ae
               stepCounter: edfdcead-0b60-415a-ab0e-7ce01176a474
@@ -97,7 +117,12 @@ steps:
               - columnReferences:
                   - columnCounter: 73e21962-d5a3-489a-af02-321873ed8f6e
                     stepCounter: 28ba5ede-fa6e-4d8d-aa71-88dd4f35c02c
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PURCHASEORDERDETAIL"."PRODUCTID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PURCHASEORDERDETAIL"."PRODUCTID"
+                  END
           - columnReference:
               columnCounter: c4ea3085-64a2-4d22-b5a6-5592fc44fe5d
               stepCounter: edfdcead-0b60-415a-ab0e-7ce01176a474
@@ -109,7 +134,12 @@ steps:
               - columnReferences:
                   - columnCounter: 8b9e6fe1-b8bf-49c5-879f-248288da0e1e
                     stepCounter: 28ba5ede-fa6e-4d8d-aa71-88dd4f35c02c
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PURCHASEORDERDETAIL"."UNITPRICE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PURCHASEORDERDETAIL"."UNITPRICE"
+                  END
           - columnReference:
               columnCounter: 80b79ba3-5051-479b-8fe8-d00738cb24bf
               stepCounter: edfdcead-0b60-415a-ab0e-7ce01176a474
@@ -121,7 +151,12 @@ steps:
               - columnReferences:
                   - columnCounter: b0e5d390-adfe-47c9-b47d-bfc5aae9897c
                     stepCounter: 28ba5ede-fa6e-4d8d-aa71-88dd4f35c02c
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PURCHASEORDERDETAIL"."LINETOTAL" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PURCHASEORDERDETAIL"."LINETOTAL"
+                  END
           - columnReference:
               columnCounter: e3c87cb0-289c-4907-ab03-f112aa7fabaa
               stepCounter: edfdcead-0b60-415a-ab0e-7ce01176a474
@@ -133,7 +168,12 @@ steps:
               - columnReferences:
                   - columnCounter: b98977b2-e488-4730-8f85-0655f303c7b3
                     stepCounter: 28ba5ede-fa6e-4d8d-aa71-88dd4f35c02c
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PURCHASEORDERDETAIL"."RECEIVEDQTY" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PURCHASEORDERDETAIL"."RECEIVEDQTY"
+                  END
           - columnReference:
               columnCounter: fa262611-60c5-4565-8dd0-2d271759684b
               stepCounter: edfdcead-0b60-415a-ab0e-7ce01176a474
@@ -145,7 +185,12 @@ steps:
               - columnReferences:
                   - columnCounter: 3e289320-2722-49cd-8be1-3501b2a1c1d8
                     stepCounter: 28ba5ede-fa6e-4d8d-aa71-88dd4f35c02c
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PURCHASEORDERDETAIL"."REJECTEDQTY" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PURCHASEORDERDETAIL"."REJECTEDQTY"
+                  END
           - columnReference:
               columnCounter: 69a57946-818a-41e8-a3a4-4cb3264a2dd3
               stepCounter: edfdcead-0b60-415a-ab0e-7ce01176a474
@@ -157,7 +202,12 @@ steps:
               - columnReferences:
                   - columnCounter: 3e78a913-1892-446c-9ff4-0c70509b14f0
                     stepCounter: 28ba5ede-fa6e-4d8d-aa71-88dd4f35c02c
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PURCHASEORDERDETAIL"."STOCKEDQTY" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PURCHASEORDERDETAIL"."STOCKEDQTY"
+                  END
           - columnReference:
               columnCounter: 8934ebd8-c647-4be5-a74f-5e505c94d3a1
               stepCounter: edfdcead-0b60-415a-ab0e-7ce01176a474
@@ -169,7 +219,12 @@ steps:
               - columnReferences:
                   - columnCounter: 4bf3c62e-2b94-455b-a64a-49c2a41ba4ac
                     stepCounter: 28ba5ede-fa6e-4d8d-aa71-88dd4f35c02c
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PURCHASEORDERDETAIL"."MODIFIEDDATE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PURCHASEORDERDETAIL"."MODIFIEDDATE"
+                  END
           - acceptedValues:
               strictMatch: true
               values: []

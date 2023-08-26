@@ -45,7 +45,12 @@ steps:
               - columnReferences:
                   - columnCounter: 2a1272c1-d16f-4cc0-b54e-866d8193261f
                     stepCounter: dc11a936-6e01-472c-bb90-fd3ed17e8807
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PRODUCTLISTPRICEHISTORY"."PRODUCTID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PRODUCTLISTPRICEHISTORY"."PRODUCTID"
+                  END
           - columnReference:
               columnCounter: 6d671bd0-6dee-4cd6-a79a-364b9075f488
               stepCounter: cee3d2ac-6ac9-4b22-9327-6a4012001e38
@@ -57,7 +62,12 @@ steps:
               - columnReferences:
                   - columnCounter: 2cc86a36-0d91-4fb0-93dc-c978e1f575d7
                     stepCounter: dc11a936-6e01-472c-bb90-fd3ed17e8807
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PRODUCTLISTPRICEHISTORY"."STARTDATE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PRODUCTLISTPRICEHISTORY"."STARTDATE"
+                  END
           - columnReference:
               columnCounter: 5de688c5-19ca-4e22-9f73-031b32d55853
               stepCounter: cee3d2ac-6ac9-4b22-9327-6a4012001e38
@@ -69,7 +79,12 @@ steps:
               - columnReferences:
                   - columnCounter: af7b7076-1709-4848-8562-441aa2191d90
                     stepCounter: dc11a936-6e01-472c-bb90-fd3ed17e8807
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PRODUCTLISTPRICEHISTORY"."ENDDATE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PRODUCTLISTPRICEHISTORY"."ENDDATE"
+                  END
           - columnReference:
               columnCounter: ff933777-cc88-41ff-be7d-b83e24d201f5
               stepCounter: cee3d2ac-6ac9-4b22-9327-6a4012001e38
@@ -81,7 +96,12 @@ steps:
               - columnReferences:
                   - columnCounter: c1ec322c-b71a-4a3e-9c38-84a56ade11a9
                     stepCounter: dc11a936-6e01-472c-bb90-fd3ed17e8807
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PRODUCTLISTPRICEHISTORY"."LISTPRICE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PRODUCTLISTPRICEHISTORY"."LISTPRICE"
+                  END
           - columnReference:
               columnCounter: dd897a8b-6b51-4df6-be69-47f402d510e7
               stepCounter: cee3d2ac-6ac9-4b22-9327-6a4012001e38
@@ -93,7 +113,12 @@ steps:
               - columnReferences:
                   - columnCounter: def4780e-9c82-4d52-91d7-5cb55b77a5d3
                     stepCounter: dc11a936-6e01-472c-bb90-fd3ed17e8807
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PRODUCTLISTPRICEHISTORY"."MODIFIEDDATE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PRODUCTLISTPRICEHISTORY"."MODIFIEDDATE"
+                  END
           - acceptedValues:
               strictMatch: true
               values: []
@@ -174,7 +199,9 @@ steps:
                 stepCounter: cee3d2ac-6ac9-4b22-9327-6a4012001e38
             name: LNK
             nullable: true
-            sourceColumnReferences: []
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:

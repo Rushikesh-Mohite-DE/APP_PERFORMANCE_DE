@@ -83,7 +83,12 @@ steps:
               - columnReferences:
                   - columnCounter: 066cd8cc-f174-485c-afd4-8b61501bdbea
                     stepCounter: de530ecd-3824-4959-a2e0-75e7c6e554a6
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_SALESTAXRATE"."TAXRATE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_SALESTAXRATE"."TAXRATE"
+                  END
           - columnReference:
               columnCounter: 137418b3-1857-4b38-a3c4-97cdcab349a6
               stepCounter: 144db9f0-2fba-415b-86ab-377e839d8993

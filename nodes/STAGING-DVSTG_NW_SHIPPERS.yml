@@ -45,7 +45,12 @@ steps:
               - columnReferences:
                   - columnCounter: 4ac5d09f-3958-4444-9877-b2e9af23b2d5
                     stepCounter: f7bd8b91-95ca-47a4-b9a5-ebd33540471f
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_SHIPPERS"."SHIPPERID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_SHIPPERS"."SHIPPERID"
+                  END
           - columnReference:
               columnCounter: df6aa04a-4034-469c-a1ce-a6326fcf11ad
               stepCounter: 16b16e19-c8c1-4319-b112-72d793b8abc0
@@ -57,7 +62,12 @@ steps:
               - columnReferences:
                   - columnCounter: 52929800-4146-4319-82b4-05b17e6109c1
                     stepCounter: f7bd8b91-95ca-47a4-b9a5-ebd33540471f
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_SHIPPERS"."COMPANYNAME" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_SHIPPERS"."COMPANYNAME"
+                  END
           - columnReference:
               columnCounter: 601e77ba-d1ab-4dc0-848a-8e8afac3550d
               stepCounter: 16b16e19-c8c1-4319-b112-72d793b8abc0
@@ -69,7 +79,12 @@ steps:
               - columnReferences:
                   - columnCounter: 57bbf497-f2bc-4709-abee-eeca90066b3a
                     stepCounter: f7bd8b91-95ca-47a4-b9a5-ebd33540471f
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_SHIPPERS"."PHONE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_SHIPPERS"."PHONE"
+                  END
           - acceptedValues:
               strictMatch: true
               values: []

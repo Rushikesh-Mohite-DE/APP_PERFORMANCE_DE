@@ -45,7 +45,12 @@ steps:
               - columnReferences:
                   - columnCounter: 25925479-26e5-46ab-adbe-3bd53c725c3e
                     stepCounter: 4df6e312-e1b0-4f56-87fc-40f00563e4f9
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_CATEGORIES"."CATEGORYID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_CATEGORIES"."CATEGORYID"
+                  END
           - columnReference:
               columnCounter: 90ab8104-eb37-40cf-ac46-62240b02b5cd
               stepCounter: 4c360913-be4e-4687-b383-34d12f4faf7c
@@ -57,7 +62,12 @@ steps:
               - columnReferences:
                   - columnCounter: 420cd06c-f749-46f1-99eb-f127d5b36693
                     stepCounter: 4df6e312-e1b0-4f56-87fc-40f00563e4f9
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_CATEGORIES"."CATEGORYNAME" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_CATEGORIES"."CATEGORYNAME"
+                  END
           - columnReference:
               columnCounter: a1f39790-71da-4def-b794-5c133d3f7347
               stepCounter: 4c360913-be4e-4687-b383-34d12f4faf7c
@@ -69,7 +79,12 @@ steps:
               - columnReferences:
                   - columnCounter: ca6a8e11-c1d1-44f7-bacf-9c5fabf299c7
                     stepCounter: 4df6e312-e1b0-4f56-87fc-40f00563e4f9
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_CATEGORIES"."DESCRIPTION" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_CATEGORIES"."DESCRIPTION"
+                  END
           - columnReference:
               columnCounter: cf06d9e2-8dc2-4611-821c-b110513fb537
               stepCounter: 4c360913-be4e-4687-b383-34d12f4faf7c
@@ -81,7 +96,12 @@ steps:
               - columnReferences:
                   - columnCounter: fb68d790-d634-4c01-a7cb-d68140597d0b
                     stepCounter: 4df6e312-e1b0-4f56-87fc-40f00563e4f9
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_CATEGORIES"."PICTURE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_CATEGORIES"."PICTURE"
+                  END
           - acceptedValues:
               strictMatch: true
               values: []

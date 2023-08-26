@@ -45,7 +45,12 @@ steps:
               - columnReferences:
                   - columnCounter: d43dc3b7-b284-4fdc-ac62-214bf4c4bb2d
                     stepCounter: 45cf0047-cb99-4fe6-9aed-1f2b1f4ffdb2
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_CUSTOMERDEMOGRAPHICS"."CUSTOMERTYPEID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_CUSTOMERDEMOGRAPHICS"."CUSTOMERTYPEID"
+                  END
           - columnReference:
               columnCounter: 910b7e70-79e2-4868-baa9-f5c35906c8d7
               stepCounter: 0c16bdda-a417-4cca-bdc4-3f6643f95826
@@ -57,7 +62,12 @@ steps:
               - columnReferences:
                   - columnCounter: d0a61c89-0cc4-411b-9bd3-2ba277a7f3dd
                     stepCounter: 45cf0047-cb99-4fe6-9aed-1f2b1f4ffdb2
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_CUSTOMERDEMOGRAPHICS"."CUSTOMERDESC" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_CUSTOMERDEMOGRAPHICS"."CUSTOMERDESC"
+                  END
           - acceptedValues:
               strictMatch: true
               values: []

@@ -5,7 +5,7 @@ steps:
         generate_ghost_records: true
         testsEnabled: true
       database: ""
-      deployEnabled: false
+      deployEnabled: true
       description: ""
       isMultisource: false
       locationName: STAGING
@@ -49,7 +49,7 @@ steps:
               - columnReferences:
                   - columnCounter: b8f8ea06-56c6-4a03-9819-7aeb68ca9121
                     stepCounter: 4c8a6f07-8faa-47e7-89c7-b368b577c857
-                transform: ""
+                transform: CONCAT("NYC_HEALTH_TESTS"."MODIFIED_ZCTA", '')
           - columnReference:
               columnCounter: 89ffd389-d175-4b43-86aa-33bee5282f53
               stepCounter: b6da50b8-5b3a-4540-8d8c-3375efc5031b
@@ -61,7 +61,7 @@ steps:
               - columnReferences:
                   - columnCounter: 286a80a5-00ad-43b5-9d2e-ee316164b034
                     stepCounter: 4c8a6f07-8faa-47e7-89c7-b368b577c857
-                transform: ""
+                transform: CONCAT("NYC_HEALTH_TESTS"."COVID_CASE_COUNT", '')
           - columnReference:
               columnCounter: 2fc5027a-cd17-4653-ad12-b64ca8c6a975
               stepCounter: b6da50b8-5b3a-4540-8d8c-3375efc5031b
@@ -73,7 +73,7 @@ steps:
               - columnReferences:
                   - columnCounter: bb3e1e94-98c3-496d-ac65-7967454630da
                     stepCounter: 4c8a6f07-8faa-47e7-89c7-b368b577c857
-                transform: ""
+                transform: CONCAT("NYC_HEALTH_TESTS"."TOTAL_COVID_TESTS", '')
           - columnReference:
               columnCounter: 67bdc3fd-dd7a-425c-9088-bccd9b5772dc
               stepCounter: b6da50b8-5b3a-4540-8d8c-3375efc5031b
@@ -85,7 +85,7 @@ steps:
               - columnReferences:
                   - columnCounter: 7b54e19e-8f23-4350-9c75-2c932629093b
                     stepCounter: 4c8a6f07-8faa-47e7-89c7-b368b577c857
-                transform: ""
+                transform: CONCAT("NYC_HEALTH_TESTS"."PERCENT_POSITIVE", '')
           - columnReference:
               columnCounter: 24802d15-7611-45c9-a886-f15ef6734984
               stepCounter: b6da50b8-5b3a-4540-8d8c-3375efc5031b
@@ -97,7 +97,7 @@ steps:
               - columnReferences:
                   - columnCounter: 8fd1324c-8939-4e62-8c9d-705f5578492e
                     stepCounter: 4c8a6f07-8faa-47e7-89c7-b368b577c857
-                transform: ""
+                transform: CONCAT("NYC_HEALTH_TESTS"."DATE", '')
           - columnReference:
               columnCounter: 14a8b259-7583-47e2-8ed9-816814db2040
               stepCounter: b6da50b8-5b3a-4540-8d8c-3375efc5031b
@@ -109,7 +109,7 @@ steps:
               - columnReferences:
                   - columnCounter: 0e4405a6-5c58-4402-a59e-4607f3441235
                     stepCounter: 4c8a6f07-8faa-47e7-89c7-b368b577c857
-                transform: ""
+                transform: CONCAT("NYC_HEALTH_TESTS"."FIPS", '')
           - columnReference:
               columnCounter: 16f7e4c4-c07f-43b3-8e36-f51d92a23078
               stepCounter: b6da50b8-5b3a-4540-8d8c-3375efc5031b
@@ -121,7 +121,7 @@ steps:
               - columnReferences:
                   - columnCounter: 97cb5b05-2f6d-4792-a4b4-74033cdf1218
                     stepCounter: 4c8a6f07-8faa-47e7-89c7-b368b577c857
-                transform: ""
+                transform: CONCAT("NYC_HEALTH_TESTS"."COUNTRY_REGION", '')
           - columnReference:
               columnCounter: 2801688b-2fcc-424c-ba8d-4d99323cd2f2
               stepCounter: b6da50b8-5b3a-4540-8d8c-3375efc5031b
@@ -133,7 +133,7 @@ steps:
               - columnReferences:
                   - columnCounter: fa6ed87b-c253-4ae9-94c0-400f25cd1d57
                     stepCounter: 4c8a6f07-8faa-47e7-89c7-b368b577c857
-                transform: ""
+                transform: CONCAT("NYC_HEALTH_TESTS"."ISO3166_1", '')
           - columnReference:
               columnCounter: ee3fb4b8-706c-43a6-b809-eeea34ec108a
               stepCounter: b6da50b8-5b3a-4540-8d8c-3375efc5031b
@@ -145,7 +145,7 @@ steps:
               - columnReferences:
                   - columnCounter: ebb206c4-b528-4e95-ac58-a5d31dfbd4ae
                     stepCounter: 4c8a6f07-8faa-47e7-89c7-b368b577c857
-                transform: ""
+                transform: CONCAT("NYC_HEALTH_TESTS"."ISO3166_2", '')
           - columnReference:
               columnCounter: 2eafc25c-69d0-49b0-b8f4-5109d7779e48
               stepCounter: b6da50b8-5b3a-4540-8d8c-3375efc5031b
@@ -157,7 +157,7 @@ steps:
               - columnReferences:
                   - columnCounter: 0df67a81-4ca0-4ac1-b1b5-f90960b37cce
                     stepCounter: 4c8a6f07-8faa-47e7-89c7-b368b577c857
-                transform: ""
+                transform: CONCAT("NYC_HEALTH_TESTS"."LAST_UPDATED_DATE", '')
           - columnReference:
               columnCounter: e840e1c3-415a-41e6-bf6b-7718550e2ab6
               stepCounter: b6da50b8-5b3a-4540-8d8c-3375efc5031b
@@ -169,7 +169,7 @@ steps:
               - columnReferences:
                   - columnCounter: ccb858f1-f5cd-4f3d-a242-d1bbdced9727
                     stepCounter: 4c8a6f07-8faa-47e7-89c7-b368b577c857
-                transform: ""
+                transform: CONCAT("NYC_HEALTH_TESTS"."LAST_REPORTED_DATE", '')
           - acceptedValues:
               strictMatch: true
               values: []

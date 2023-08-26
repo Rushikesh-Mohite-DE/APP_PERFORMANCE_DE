@@ -1,0 +1,329 @@
+steps:
+  DIM_DEMOGRAPHICS-dd45f9b3-cd3d-4819-90a3-fcccb5a743c8:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6b372a63-3525-4ce9-a852-870bf8be4ce8
+              stepCounter: dd45f9b3-cd3d-4819-90a3-fcccb5a743c8
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSurrogateKey: true
+            name: DIM_DEMOGRAPHICS_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 2f74ad57-b089-4057-8690-dd2b84355e53
+              stepCounter: dd45f9b3-cd3d-4819-90a3-fcccb5a743c8
+            dataType: VARCHAR(16777216)
+            description: ISO-3166-1 code for geography of record
+            hashColumns: []
+            hashDetails: null
+            name: ISO3166_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 80ea5dde-eb99-4c0d-864c-c87fc0b8c865
+                    stepCounter: 988da99a-a3f1-4258-affa-218997856db5
+                transform: ""
+          - columnReference:
+              columnCounter: ce918714-e6ad-4c9e-90a1-0c05d76dfcc7
+              stepCounter: dd45f9b3-cd3d-4819-90a3-fcccb5a743c8
+            dataType: VARCHAR(16777216)
+            description: ISO-3166-2 code for geography of record
+            hashColumns: []
+            hashDetails: null
+            name: ISO3166_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 410649e5-b2d7-4467-ad42-485380dc936d
+                    stepCounter: 988da99a-a3f1-4258-affa-218997856db5
+                transform: ""
+          - columnReference:
+              columnCounter: b6c4b766-2d48-4e2c-a782-36431364ab78
+              stepCounter: dd45f9b3-cd3d-4819-90a3-fcccb5a743c8
+            dataType: VARCHAR(16777216)
+            description: County FIPS code
+            hashColumns: []
+            hashDetails: null
+            isBusinessKey: true
+            name: FIPS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b8bcee88-d473-45d6-bb7a-2316f9aed323
+                    stepCounter: 988da99a-a3f1-4258-affa-218997856db5
+                transform: ""
+          - columnReference:
+              columnCounter: 153e9743-78db-4392-bcaf-5dd590004d63
+              stepCounter: dd45f9b3-cd3d-4819-90a3-fcccb5a743c8
+            dataType: FLOAT
+            description: Latitude of the county
+            hashColumns: []
+            hashDetails: null
+            name: LATITUDE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 16fbb704-bc8b-43ff-b2ff-c4ca86ef544e
+                    stepCounter: 988da99a-a3f1-4258-affa-218997856db5
+                transform: ""
+          - columnReference:
+              columnCounter: e6df60d1-f5b0-43e5-ad76-d6b2cbfeee7a
+              stepCounter: dd45f9b3-cd3d-4819-90a3-fcccb5a743c8
+            dataType: FLOAT
+            description: Longitude of the county
+            hashColumns: []
+            hashDetails: null
+            name: LONGITUDE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 43f6e4c2-e02a-4138-8940-d82bf3a73340
+                    stepCounter: 988da99a-a3f1-4258-affa-218997856db5
+                transform: ""
+          - columnReference:
+              columnCounter: 8d747c66-57da-48b2-9d36-360c7adb38e1
+              stepCounter: dd45f9b3-cd3d-4819-90a3-fcccb5a743c8
+            dataType: VARCHAR(16777216)
+            description: US Census State Code
+            hashColumns: []
+            hashDetails: null
+            name: STATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a55e5dfb-1110-4614-b99d-309836c69e7c
+                    stepCounter: 988da99a-a3f1-4258-affa-218997856db5
+                transform: ""
+          - columnReference:
+              columnCounter: d7c9a483-a73c-4c7e-a362-9bd118341ed8
+              stepCounter: dd45f9b3-cd3d-4819-90a3-fcccb5a743c8
+            dataType: VARCHAR(16777216)
+            description: US Census County Name
+            hashColumns: []
+            hashDetails: null
+            name: COUNTY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8f29fcb1-57cd-40e9-b1b5-4295f58aa8f9
+                    stepCounter: 988da99a-a3f1-4258-affa-218997856db5
+                transform: ""
+          - columnReference:
+              columnCounter: 85629fa3-01ce-48e1-a82c-36a504033e3d
+              stepCounter: dd45f9b3-cd3d-4819-90a3-fcccb5a743c8
+            dataType: NUMBER(38,0)
+            description: Total population for the FIPS code
+            hashColumns: []
+            hashDetails: null
+            name: TOTAL_POPULATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: dbe0d397-4001-4bfc-a567-59d18ed526cf
+                    stepCounter: 988da99a-a3f1-4258-affa-218997856db5
+                transform: ""
+          - columnReference:
+              columnCounter: 4a2c5746-c684-4f40-ab29-ed0673859053
+              stepCounter: dd45f9b3-cd3d-4819-90a3-fcccb5a743c8
+            dataType: NUMBER(38,0)
+            description: Total male population for the FIPS code
+            hashColumns: []
+            hashDetails: null
+            name: TOTAL_MALE_POPULATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d17ca3ee-e418-448f-a378-f94b5af988a8
+                    stepCounter: 988da99a-a3f1-4258-affa-218997856db5
+                transform: ""
+          - columnReference:
+              columnCounter: 02f489f0-c9aa-4ad8-a883-626a7cf32651
+              stepCounter: dd45f9b3-cd3d-4819-90a3-fcccb5a743c8
+            dataType: NUMBER(38,0)
+            description: Total female population for the FIPS code
+            hashColumns: []
+            hashDetails: null
+            name: TOTAL_FEMALE_POPULATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 642aa3ae-60bf-4db5-90b8-e3889110ef2c
+                    stepCounter: 988da99a-a3f1-4258-affa-218997856db5
+                transform: ""
+          - columnReference:
+              columnCounter: 29040dc6-b807-4185-b02e-74d4be3e397d
+              stepCounter: dd45f9b3-cd3d-4819-90a3-fcccb5a743c8
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: GH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6191f132-8c6c-4351-b626-ec6fb109815e
+                    stepCounter: 988da99a-a3f1-4258-affa-218997856db5
+                transform: ""
+          - columnReference:
+              columnCounter: 59772339-a1fe-4dce-b511-95c1bb76aff2
+              stepCounter: dd45f9b3-cd3d-4819-90a3-fcccb5a743c8
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a27b5f2c-0f62-463e-a31d-bc7db0692ea3
+                    stepCounter: 988da99a-a3f1-4258-affa-218997856db5
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6bac5a39-c374-42eb-94ad-63c1d910716c
+              stepCounter: dd45f9b3-cd3d-4819-90a3-fcccb5a743c8
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 638fc4e4-5851-426a-9964-b454c00e6ad6
+              stepCounter: dd45f9b3-cd3d-4819-90a3-fcccb5a743c8
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ac985ad5-07a0-4303-b8a1-feec1329a567
+              stepCounter: dd45f9b3-cd3d-4819-90a3-fcccb5a743c8
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 357e21cc-744a-4ed6-af90-154ecd9c0ff4
+              stepCounter: dd45f9b3-cd3d-4819-90a3-fcccb5a743c8
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 66101bfb-f82a-49d1-9487-fd5ab234d80c
+              stepCounter: dd45f9b3-cd3d-4819-90a3-fcccb5a743c8
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 14ebebf6-f7d9-4f44-ab9e-c426dd9b081e
+              stepCounter: dd45f9b3-cd3d-4819-90a3-fcccb5a743c8
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: STG_DEMOGRAPHICS
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'STG_DEMOGRAPHICS') }} "STG_DEMOGRAPHICS"
+            name: DIM_DEMOGRAPHICS
+            noLinkRefs: []
+      name: DIM_DEMOGRAPHICS
+      overrideSQL: false
+      schema: ""
+      sqlType: Dimension
+      type: sql
+    stepCounter: dd45f9b3-cd3d-4819-90a3-fcccb5a743c8

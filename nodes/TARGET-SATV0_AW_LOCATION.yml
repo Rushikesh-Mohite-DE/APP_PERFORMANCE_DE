@@ -56,7 +56,12 @@ steps:
               - columnReferences:
                   - columnCounter: 294b5cff-05c1-493d-9332-bd8ea0ae925a
                     stepCounter: 95ebf7d8-30d5-4c65-bd20-060d9144be16
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "DVSTG_AW_LOCATION"."COSTRATE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "DVSTG_AW_LOCATION"."COSTRATE"
+                  END
           - columnReference:
               columnCounter: 17add10e-9f0f-44d4-a4bb-3557d2b98d60
               stepCounter: c8a10c5a-f37c-4cac-a74b-a4a99427acec

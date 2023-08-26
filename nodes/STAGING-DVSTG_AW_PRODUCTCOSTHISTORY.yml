@@ -81,7 +81,12 @@ steps:
               - columnReferences:
                   - columnCounter: 90def0fb-eccb-40ff-b18d-35fb6bab321c
                     stepCounter: 29a503f7-15c2-40fa-9590-acff4f48af22
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PRODUCTCOSTHISTORY"."STANDARDCOST" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PRODUCTCOSTHISTORY"."STANDARDCOST"
+                  END
           - columnReference:
               columnCounter: 4f7da675-da15-4fdc-947c-4d9590f96d95
               stepCounter: 139e4117-5177-4fa4-b2a0-079baa707469

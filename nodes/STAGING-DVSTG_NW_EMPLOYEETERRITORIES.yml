@@ -45,7 +45,12 @@ steps:
               - columnReferences:
                   - columnCounter: 8617b1bc-fe5b-4255-bdc9-7c4375e20856
                     stepCounter: 35060809-0fdd-4b5a-ad2e-817bf4b37754
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_EMPLOYEETERRITORIES"."EMPLOYEEID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_EMPLOYEETERRITORIES"."EMPLOYEEID"
+                  END
           - columnReference:
               columnCounter: 75049287-53ca-495d-9cf9-40ffebf332b1
               stepCounter: 086b83fe-93c6-443c-b4ed-37c4c6d657b4
@@ -57,7 +62,12 @@ steps:
               - columnReferences:
                   - columnCounter: 9ef59e87-432b-436e-ba6e-2395b2042f43
                     stepCounter: 35060809-0fdd-4b5a-ad2e-817bf4b37754
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_EMPLOYEETERRITORIES"."TERRITORYID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_EMPLOYEETERRITORIES"."TERRITORYID"
+                  END
           - acceptedValues:
               strictMatch: true
               values: []

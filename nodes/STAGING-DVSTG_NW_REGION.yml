@@ -45,7 +45,12 @@ steps:
               - columnReferences:
                   - columnCounter: dc0ed3b2-ce90-480b-ba58-bc099438fcce
                     stepCounter: 8257b9e1-bbc6-453e-8514-b64e99e9b062
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_REGION"."REGIONID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_REGION"."REGIONID"
+                  END
           - columnReference:
               columnCounter: a88ada12-6406-4893-9ffc-0e29f89a362e
               stepCounter: 84cf4b68-3c60-4590-8aa2-846848cb2a70
@@ -57,7 +62,12 @@ steps:
               - columnReferences:
                   - columnCounter: 0c0085e2-2545-4d82-89ea-721f3a8a3925
                     stepCounter: 8257b9e1-bbc6-453e-8514-b64e99e9b062
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_REGION"."REGIONDESCRIPTION" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_REGION"."REGIONDESCRIPTION"
+                  END
           - acceptedValues:
               strictMatch: true
               values: []

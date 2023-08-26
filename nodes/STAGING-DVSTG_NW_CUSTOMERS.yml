@@ -45,7 +45,12 @@ steps:
               - columnReferences:
                   - columnCounter: 2d4067a0-7b74-4bfe-b54e-f9a1a5b3e461
                     stepCounter: 2da915e7-170d-4935-9278-6a4ec5718651
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_CUSTOMERS"."CUSTOMERID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_CUSTOMERS"."CUSTOMERID"
+                  END
           - columnReference:
               columnCounter: 7ce7abd3-dbe3-467b-8743-cc1ce2524173
               stepCounter: 87052623-cdbd-437a-bade-d9e96e0feb4c
@@ -57,7 +62,12 @@ steps:
               - columnReferences:
                   - columnCounter: 70c61403-2cdf-4b20-8854-3601ba792958
                     stepCounter: 2da915e7-170d-4935-9278-6a4ec5718651
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_CUSTOMERS"."COMPANYNAME" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_CUSTOMERS"."COMPANYNAME"
+                  END
           - columnReference:
               columnCounter: 9e350a94-1cf7-4f5c-9afd-f7212a2d1e40
               stepCounter: 87052623-cdbd-437a-bade-d9e96e0feb4c
@@ -69,7 +79,12 @@ steps:
               - columnReferences:
                   - columnCounter: 58e0e62d-cef4-4efa-b82d-b411bb7d0c88
                     stepCounter: 2da915e7-170d-4935-9278-6a4ec5718651
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_CUSTOMERS"."CONTACTNAME" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_CUSTOMERS"."CONTACTNAME"
+                  END
           - columnReference:
               columnCounter: e5abefcd-77d8-4770-b4b5-24fdbb55e3f5
               stepCounter: 87052623-cdbd-437a-bade-d9e96e0feb4c
@@ -81,7 +96,12 @@ steps:
               - columnReferences:
                   - columnCounter: b12aa255-20a5-47e1-9f3b-cf04addc9924
                     stepCounter: 2da915e7-170d-4935-9278-6a4ec5718651
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_CUSTOMERS"."CONTACTTITLE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_CUSTOMERS"."CONTACTTITLE"
+                  END
           - columnReference:
               columnCounter: 9d7ea481-8025-45c0-b631-91526d5c3ac1
               stepCounter: 87052623-cdbd-437a-bade-d9e96e0feb4c
@@ -93,7 +113,12 @@ steps:
               - columnReferences:
                   - columnCounter: 7f5e948a-5887-4966-bbfb-98138c22c0aa
                     stepCounter: 2da915e7-170d-4935-9278-6a4ec5718651
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_CUSTOMERS"."ADDRESS" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_CUSTOMERS"."ADDRESS"
+                  END
           - columnReference:
               columnCounter: 180d8699-b36c-4e65-a3a1-98eb30e6b92b
               stepCounter: 87052623-cdbd-437a-bade-d9e96e0feb4c
@@ -105,7 +130,12 @@ steps:
               - columnReferences:
                   - columnCounter: c80862ac-237e-42ca-84bd-efd17955adb9
                     stepCounter: 2da915e7-170d-4935-9278-6a4ec5718651
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_CUSTOMERS"."CITY" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_CUSTOMERS"."CITY"
+                  END
           - columnReference:
               columnCounter: a483b91d-4e9a-47c2-b156-dfb3ef000302
               stepCounter: 87052623-cdbd-437a-bade-d9e96e0feb4c
@@ -117,7 +147,12 @@ steps:
               - columnReferences:
                   - columnCounter: e442b8d0-0b20-4bc7-a584-045774b1f059
                     stepCounter: 2da915e7-170d-4935-9278-6a4ec5718651
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_CUSTOMERS"."REGION" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_CUSTOMERS"."REGION"
+                  END
           - columnReference:
               columnCounter: e85e00c5-676f-42f1-8589-59cca1e35927
               stepCounter: 87052623-cdbd-437a-bade-d9e96e0feb4c
@@ -129,7 +164,12 @@ steps:
               - columnReferences:
                   - columnCounter: 9febe106-4313-4ecd-b3e1-7e8eef1f6fcc
                     stepCounter: 2da915e7-170d-4935-9278-6a4ec5718651
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_CUSTOMERS"."POSTALCODE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_CUSTOMERS"."POSTALCODE"
+                  END
           - columnReference:
               columnCounter: d755cda0-891c-4ac1-9e64-7b4864abca0e
               stepCounter: 87052623-cdbd-437a-bade-d9e96e0feb4c
@@ -141,7 +181,12 @@ steps:
               - columnReferences:
                   - columnCounter: fe74ce28-830e-4be0-9110-b5d7416b022d
                     stepCounter: 2da915e7-170d-4935-9278-6a4ec5718651
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_CUSTOMERS"."COUNTRY" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_CUSTOMERS"."COUNTRY"
+                  END
           - columnReference:
               columnCounter: 7f3cef8a-f413-4426-82e8-67f3b71da7a4
               stepCounter: 87052623-cdbd-437a-bade-d9e96e0feb4c
@@ -153,7 +198,12 @@ steps:
               - columnReferences:
                   - columnCounter: 7082a5df-c98c-4a48-b556-79ffb94798e8
                     stepCounter: 2da915e7-170d-4935-9278-6a4ec5718651
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_CUSTOMERS"."PHONE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_CUSTOMERS"."PHONE"
+                  END
           - columnReference:
               columnCounter: 48d5cf9d-b9f0-45fc-a9e2-27aca2682ed6
               stepCounter: 87052623-cdbd-437a-bade-d9e96e0feb4c
@@ -165,7 +215,12 @@ steps:
               - columnReferences:
                   - columnCounter: 5dfae807-612b-4fd5-be71-37ce288b7164
                     stepCounter: 2da915e7-170d-4935-9278-6a4ec5718651
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_CUSTOMERS"."FAX" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_CUSTOMERS"."FAX"
+                  END
           - acceptedValues:
               strictMatch: true
               values: []
@@ -250,7 +305,6 @@ steps:
             dataType: STRING
             defaultValue: ""
             description: ""
-            hashColumns: []
             hashDetails:
               hashAlgorithm: SHA1
             hashedColumns:

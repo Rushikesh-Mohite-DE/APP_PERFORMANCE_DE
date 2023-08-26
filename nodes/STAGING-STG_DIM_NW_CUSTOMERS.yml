@@ -27,7 +27,12 @@ steps:
               - columnReferences:
                   - columnCounter: be6297f2-94fa-4cdc-8aa6-73acb8e3dee4
                     stepCounter: 2c2056f5-5d9a-4eff-a8e1-a905648f4283
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "STG_NORTHWIND_ORDERS"."ORDERID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "STG_NORTHWIND_ORDERS"."ORDERID"
+                  END
           - columnReference:
               columnCounter: 5cf80a14-4b85-4be0-8769-848a4c07a340
               stepCounter: 7ce27c97-4e91-4d45-82d3-e923db410208
@@ -41,7 +46,12 @@ steps:
               - columnReferences:
                   - columnCounter: c8f9f637-0a6f-4ff2-a206-fbb95b18c046
                     stepCounter: f5b1ac00-449f-4a4d-8f4a-228d2fb17c74
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "HUB_NW_CUSTOMERS"."CUSTOMERID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "HUB_NW_CUSTOMERS"."CUSTOMERID"
+                  END
           - columnReference:
               columnCounter: 3d38915a-8365-45d1-aa29-cee8941cd291
               stepCounter: 7ce27c97-4e91-4d45-82d3-e923db410208
@@ -55,7 +65,12 @@ steps:
               - columnReferences:
                   - columnCounter: c04ea143-0800-4138-be80-20b83b7abf3f
                     stepCounter: 9c484e6d-65d9-44eb-a6f5-c5ded568379d
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_NW_CUSTOMERS"."COMPANYNAME" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_NW_CUSTOMERS"."COMPANYNAME"
+                  END
           - columnReference:
               columnCounter: a767ce5e-77b2-43df-b2b0-248270c7db2e
               stepCounter: 7ce27c97-4e91-4d45-82d3-e923db410208
@@ -69,7 +84,12 @@ steps:
               - columnReferences:
                   - columnCounter: 4027cf32-5ff2-4420-bb45-6e3e74166282
                     stepCounter: 9c484e6d-65d9-44eb-a6f5-c5ded568379d
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_NW_CUSTOMERS"."CONTACTNAME" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_NW_CUSTOMERS"."CONTACTNAME"
+                  END
           - columnReference:
               columnCounter: 168bbab6-a621-46a4-ac9e-a893536780fe
               stepCounter: 7ce27c97-4e91-4d45-82d3-e923db410208
@@ -83,7 +103,12 @@ steps:
               - columnReferences:
                   - columnCounter: 61a81257-bd93-4c11-91eb-ad2f51ff3017
                     stepCounter: 9c484e6d-65d9-44eb-a6f5-c5ded568379d
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_NW_CUSTOMERS"."CONTACTTITLE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_NW_CUSTOMERS"."CONTACTTITLE"
+                  END
           - columnReference:
               columnCounter: 1c4e9b43-d4f3-478e-9e9f-a9ac9697d120
               stepCounter: 7ce27c97-4e91-4d45-82d3-e923db410208
@@ -97,7 +122,12 @@ steps:
               - columnReferences:
                   - columnCounter: 3b2d3743-f71d-4385-84c1-36fb3a0967aa
                     stepCounter: 9c484e6d-65d9-44eb-a6f5-c5ded568379d
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_NW_CUSTOMERS"."ADDRESS" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_NW_CUSTOMERS"."ADDRESS"
+                  END
           - columnReference:
               columnCounter: c2518f03-7364-429e-9659-3b77006706a7
               stepCounter: 7ce27c97-4e91-4d45-82d3-e923db410208
@@ -111,7 +141,12 @@ steps:
               - columnReferences:
                   - columnCounter: 2fdf4eae-fd80-45f8-be0b-c8a3d388af67
                     stepCounter: 9c484e6d-65d9-44eb-a6f5-c5ded568379d
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_NW_CUSTOMERS"."CITY" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_NW_CUSTOMERS"."CITY"
+                  END
           - columnReference:
               columnCounter: 2a23346e-ceb2-4cbc-a4d1-209f4877127c
               stepCounter: 7ce27c97-4e91-4d45-82d3-e923db410208
@@ -125,7 +160,12 @@ steps:
               - columnReferences:
                   - columnCounter: 3720197a-9de8-4675-9c48-5f4a3bb993a8
                     stepCounter: 9c484e6d-65d9-44eb-a6f5-c5ded568379d
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_NW_CUSTOMERS"."REGION" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_NW_CUSTOMERS"."REGION"
+                  END
           - columnReference:
               columnCounter: 5a374d74-7f25-408b-8b85-6d7eafeaf857
               stepCounter: 7ce27c97-4e91-4d45-82d3-e923db410208
@@ -139,7 +179,12 @@ steps:
               - columnReferences:
                   - columnCounter: 356fa6de-aeee-4388-a865-01daa0f4cc91
                     stepCounter: 9c484e6d-65d9-44eb-a6f5-c5ded568379d
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_NW_CUSTOMERS"."POSTALCODE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_NW_CUSTOMERS"."POSTALCODE"
+                  END
           - columnReference:
               columnCounter: 3bb85e52-3ec5-46e2-86d6-7c56e4d67614
               stepCounter: 7ce27c97-4e91-4d45-82d3-e923db410208
@@ -153,7 +198,12 @@ steps:
               - columnReferences:
                   - columnCounter: 6eff84ce-da49-4c76-a507-da76842a6286
                     stepCounter: 9c484e6d-65d9-44eb-a6f5-c5ded568379d
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_NW_CUSTOMERS"."COUNTRY" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_NW_CUSTOMERS"."COUNTRY"
+                  END
           - columnReference:
               columnCounter: 875b9f12-0278-4075-a2fa-1470f9344a9d
               stepCounter: 7ce27c97-4e91-4d45-82d3-e923db410208
@@ -167,7 +217,12 @@ steps:
               - columnReferences:
                   - columnCounter: 17a40ce3-9c4a-454a-a300-3a21c44bec7e
                     stepCounter: 9c484e6d-65d9-44eb-a6f5-c5ded568379d
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_NW_CUSTOMERS"."PHONE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_NW_CUSTOMERS"."PHONE"
+                  END
           - columnReference:
               columnCounter: ceac797f-1240-45d2-99d3-0c8f62687b88
               stepCounter: 7ce27c97-4e91-4d45-82d3-e923db410208
@@ -181,7 +236,12 @@ steps:
               - columnReferences:
                   - columnCounter: 4ba6005e-104e-4d3a-92c9-fb3eb74c2851
                     stepCounter: 9c484e6d-65d9-44eb-a6f5-c5ded568379d
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_NW_CUSTOMERS"."FAX" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_NW_CUSTOMERS"."FAX"
+                  END
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:

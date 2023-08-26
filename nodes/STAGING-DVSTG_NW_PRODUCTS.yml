@@ -49,7 +49,12 @@ steps:
               - columnReferences:
                   - columnCounter: 28f4b08c-bed6-4fa1-8af1-bc9feb269c06
                     stepCounter: 71f29ed2-403b-41c7-b86a-30a6ae13403c
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_PRODUCTS"."PRODUCTID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_PRODUCTS"."PRODUCTID"
+                  END
           - columnReference:
               columnCounter: 6b706de4-6272-4d69-9bd3-5fbd747b810e
               stepCounter: 34a4807d-aaab-4e4b-9bd7-e86920283377
@@ -61,7 +66,12 @@ steps:
               - columnReferences:
                   - columnCounter: 789875c8-7828-4770-b796-3e471d01c075
                     stepCounter: 71f29ed2-403b-41c7-b86a-30a6ae13403c
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_PRODUCTS"."PRODUCTNAME" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_PRODUCTS"."PRODUCTNAME"
+                  END
           - columnReference:
               columnCounter: 8ac85d0d-1b04-4615-94fa-9d561513bdd3
               stepCounter: 34a4807d-aaab-4e4b-9bd7-e86920283377
@@ -73,7 +83,12 @@ steps:
               - columnReferences:
                   - columnCounter: 66a2acee-6161-42e3-b8bd-16042a9ef890
                     stepCounter: 71f29ed2-403b-41c7-b86a-30a6ae13403c
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_PRODUCTS"."SUPPLIERID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_PRODUCTS"."SUPPLIERID"
+                  END
           - columnReference:
               columnCounter: aa13026f-f811-44ca-a63f-8f2d5bd4cab4
               stepCounter: 34a4807d-aaab-4e4b-9bd7-e86920283377
@@ -85,7 +100,12 @@ steps:
               - columnReferences:
                   - columnCounter: 59168d4b-4ba7-42b9-bba4-239ca15b55bd
                     stepCounter: 71f29ed2-403b-41c7-b86a-30a6ae13403c
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_PRODUCTS"."CATEGORYID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_PRODUCTS"."CATEGORYID"
+                  END
           - columnReference:
               columnCounter: 971faea4-998f-4bd4-83d6-25aa51f196e1
               stepCounter: 34a4807d-aaab-4e4b-9bd7-e86920283377
@@ -97,7 +117,12 @@ steps:
               - columnReferences:
                   - columnCounter: f5fc91bb-95fb-4f16-8204-dbea430c2e1a
                     stepCounter: 71f29ed2-403b-41c7-b86a-30a6ae13403c
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_PRODUCTS"."QUANTITYPERUNIT" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_PRODUCTS"."QUANTITYPERUNIT"
+                  END
           - columnReference:
               columnCounter: 52b5b605-482b-4b73-a35a-6c9afff28287
               stepCounter: 34a4807d-aaab-4e4b-9bd7-e86920283377
@@ -109,7 +134,12 @@ steps:
               - columnReferences:
                   - columnCounter: a8740e16-7596-4693-897e-3650d8ed8461
                     stepCounter: 71f29ed2-403b-41c7-b86a-30a6ae13403c
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_PRODUCTS"."UNITPRICE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_PRODUCTS"."UNITPRICE"
+                  END
           - columnReference:
               columnCounter: 68ffa182-3ee9-4c06-8c80-f566ba81064f
               stepCounter: 34a4807d-aaab-4e4b-9bd7-e86920283377
@@ -121,7 +151,12 @@ steps:
               - columnReferences:
                   - columnCounter: 1b94eb37-a255-4e77-9600-592f607850bf
                     stepCounter: 71f29ed2-403b-41c7-b86a-30a6ae13403c
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_PRODUCTS"."UNITSINSTOCK" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_PRODUCTS"."UNITSINSTOCK"
+                  END
           - columnReference:
               columnCounter: e8481a7b-f31a-4604-8fae-5d91fc2459bf
               stepCounter: 34a4807d-aaab-4e4b-9bd7-e86920283377
@@ -133,7 +168,12 @@ steps:
               - columnReferences:
                   - columnCounter: 1186a89b-f4ff-4243-b790-09600dcde8eb
                     stepCounter: 71f29ed2-403b-41c7-b86a-30a6ae13403c
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_PRODUCTS"."UNITSONORDER" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_PRODUCTS"."UNITSONORDER"
+                  END
           - columnReference:
               columnCounter: 97e5937b-7fad-44ce-a7e2-86a5d10d689d
               stepCounter: 34a4807d-aaab-4e4b-9bd7-e86920283377
@@ -145,7 +185,12 @@ steps:
               - columnReferences:
                   - columnCounter: 594dd58a-c3ce-44b8-aa15-29a56e67a126
                     stepCounter: 71f29ed2-403b-41c7-b86a-30a6ae13403c
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_PRODUCTS"."REORDERLEVEL" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_PRODUCTS"."REORDERLEVEL"
+                  END
           - columnReference:
               columnCounter: cd7f28f9-181c-4083-b630-6c8f27ea51bc
               stepCounter: 34a4807d-aaab-4e4b-9bd7-e86920283377
@@ -157,7 +202,12 @@ steps:
               - columnReferences:
                   - columnCounter: da529b0b-1240-4d6e-bdff-537775ae11aa
                     stepCounter: 71f29ed2-403b-41c7-b86a-30a6ae13403c
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_PRODUCTS"."DISCONTINUED" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_PRODUCTS"."DISCONTINUED"
+                  END
           - acceptedValues:
               strictMatch: true
               values: []

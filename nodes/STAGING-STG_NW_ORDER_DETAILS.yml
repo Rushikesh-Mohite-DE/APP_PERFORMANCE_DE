@@ -27,7 +27,12 @@ steps:
               - columnReferences:
                   - columnCounter: 77110de5-2e4f-41cb-910b-ddcd289b8d87
                     stepCounter: ae89981e-2d0f-4fc3-89c1-3596f7f8f358
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "DIM_NORTHWIND_PRODUCTS"."DIM_DIM_NW_PRODUCTS_KEY" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "DIM_NORTHWIND_PRODUCTS"."DIM_DIM_NW_PRODUCTS_KEY"
+                  END
           - columnReference:
               columnCounter: ff839364-073c-44b3-91b0-aa6ee6f4bcc3
               stepCounter: 3d77bf78-1c04-4b0b-9567-7a0f17c17b26
@@ -39,7 +44,12 @@ steps:
               - columnReferences:
                   - columnCounter: 6c425484-da85-44fd-bc8a-0daf3881a4fa
                     stepCounter: 4e66362b-c6ca-4ab2-9d0a-518fb0fea7e4
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "DIM_NORTHWIND_CUSTOMERS"."DIM_DIM_NW_CUSTOMERS_KEY" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "DIM_NORTHWIND_CUSTOMERS"."DIM_DIM_NW_CUSTOMERS_KEY"
+                  END
           - columnReference:
               columnCounter: 228124ff-6400-41ad-897f-cc2efc3fef59
               stepCounter: 3d77bf78-1c04-4b0b-9567-7a0f17c17b26
@@ -53,7 +63,12 @@ steps:
               - columnReferences:
                   - columnCounter: 9dabb662-c288-460e-b75e-42760574da6c
                     stepCounter: 9f21b8f9-c57e-437e-ad58-b05845c4cdf4
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "HUB_NW_ORDER_DETAILS"."PRODUCTID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "HUB_NW_ORDER_DETAILS"."PRODUCTID"
+                  END
           - columnReference:
               columnCounter: 5c65fbe1-0c35-41e8-8502-db69b7d08e25
               stepCounter: 3d77bf78-1c04-4b0b-9567-7a0f17c17b26
@@ -65,7 +80,12 @@ steps:
               - columnReferences:
                   - columnCounter: dd70f582-e0bc-4f25-8eb9-7481f69a0acb
                     stepCounter: 4e66362b-c6ca-4ab2-9d0a-518fb0fea7e4
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "DIM_NORTHWIND_CUSTOMERS"."CUSTOMERID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "DIM_NORTHWIND_CUSTOMERS"."CUSTOMERID"
+                  END
           - columnReference:
               columnCounter: cce6ed85-fb5c-4bff-845e-9e29193b6fb3
               stepCounter: 3d77bf78-1c04-4b0b-9567-7a0f17c17b26
@@ -77,7 +97,12 @@ steps:
               - columnReferences:
                   - columnCounter: f3e563c5-5624-4b44-a305-838a4b24e6b5
                     stepCounter: ae89981e-2d0f-4fc3-89c1-3596f7f8f358
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "DIM_NORTHWIND_PRODUCTS"."PRODUCTNAME" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "DIM_NORTHWIND_PRODUCTS"."PRODUCTNAME"
+                  END
           - columnReference:
               columnCounter: 4c7d2dfc-32dd-4215-bc2f-b813663f09f7
               stepCounter: 3d77bf78-1c04-4b0b-9567-7a0f17c17b26
@@ -91,7 +116,12 @@ steps:
               - columnReferences:
                   - columnCounter: db01d75d-48aa-46fe-bd9b-8218429cb3f0
                     stepCounter: c43d4ef9-d396-46e6-b428-4ab8c3f7fb9e
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_NW_ORDER_DETAILS"."UNITPRICE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_NW_ORDER_DETAILS"."UNITPRICE"
+                  END
           - columnReference:
               columnCounter: a0c9a01c-9678-4623-bb96-b2bd7531f429
               stepCounter: 3d77bf78-1c04-4b0b-9567-7a0f17c17b26
@@ -105,7 +135,12 @@ steps:
               - columnReferences:
                   - columnCounter: 3798cddc-4c59-4a54-a3b2-cd58b9b7b9c5
                     stepCounter: c43d4ef9-d396-46e6-b428-4ab8c3f7fb9e
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_NW_ORDER_DETAILS"."QUANTITY" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_NW_ORDER_DETAILS"."QUANTITY"
+                  END
           - columnReference:
               columnCounter: 61991f4d-5ac9-4b6f-9adb-1ccb26ed03e9
               stepCounter: 3d77bf78-1c04-4b0b-9567-7a0f17c17b26
@@ -119,7 +154,12 @@ steps:
               - columnReferences:
                   - columnCounter: dfd524d4-34c0-427c-88dd-ac937288cbe4
                     stepCounter: c43d4ef9-d396-46e6-b428-4ab8c3f7fb9e
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_NW_ORDER_DETAILS"."DISCOUNT" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_NW_ORDER_DETAILS"."DISCOUNT"
+                  END
           - columnReference:
               columnCounter: cd5530d7-8264-41bf-b270-86227566e768
               stepCounter: 3d77bf78-1c04-4b0b-9567-7a0f17c17b26
@@ -133,7 +173,12 @@ steps:
               - columnReferences:
                   - columnCounter: 1a5295c0-e43f-4acf-bb61-6ab878ab6a07
                     stepCounter: 9f21b8f9-c57e-437e-ad58-b05845c4cdf4
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "HUB_NW_ORDER_DETAILS"."ORDERID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "HUB_NW_ORDER_DETAILS"."ORDERID"
+                  END
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:

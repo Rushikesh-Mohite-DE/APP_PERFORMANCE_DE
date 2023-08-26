@@ -135,7 +135,12 @@ steps:
               - columnReferences:
                   - columnCounter: a6756166-a598-4a8e-bcb8-83094795eaa2
                     stepCounter: e817ae95-b26f-476f-9890-ad323d31088e
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_TRANSACTIONHISTORYARCHIVE"."ACTUALCOST" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_TRANSACTIONHISTORYARCHIVE"."ACTUALCOST"
+                  END
           - columnReference:
               columnCounter: 5ad0d2fc-e1ed-4986-9f45-64b1e16e050d
               stepCounter: eb7ccf0d-836f-48d7-aa89-245ba0d52413

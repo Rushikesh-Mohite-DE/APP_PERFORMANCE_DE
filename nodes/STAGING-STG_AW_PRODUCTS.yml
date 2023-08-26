@@ -29,7 +29,12 @@ steps:
               - columnReferences:
                   - columnCounter: df5373b3-dd37-4bb9-ad1f-c8061d038239
                     stepCounter: c567e9ea-0e5a-4449-9f84-c55a4d7253de
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "HUB_AW_PRODUCT"."PRODUCTID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "HUB_AW_PRODUCT"."PRODUCTID"
+                  END
           - columnReference:
               columnCounter: 5bd55402-00e7-4c11-92b9-9d111db05eb5
               stepCounter: f5739b7a-89e1-43c3-ae3f-b1336a7242dc
@@ -43,7 +48,12 @@ steps:
               - columnReferences:
                   - columnCounter: 2d6d7d37-1548-4b28-ad47-3bf54a957da0
                     stepCounter: 9230c454-fd7b-44b0-8bf9-65ab14f4a85c
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_AW_PRODUCT"."NAME" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_AW_PRODUCT"."NAME"
+                  END
           - columnReference:
               columnCounter: 8655dfe6-5288-4d3f-a927-ec6ea6efb9b1
               stepCounter: f5739b7a-89e1-43c3-ae3f-b1336a7242dc
@@ -57,7 +67,12 @@ steps:
               - columnReferences:
                   - columnCounter: 8ce727f9-6b87-45ae-8b7c-3d2e370bb55c
                     stepCounter: 9230c454-fd7b-44b0-8bf9-65ab14f4a85c
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_AW_PRODUCT"."PRODUCTNUMBER" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_AW_PRODUCT"."PRODUCTNUMBER"
+                  END
           - columnReference:
               columnCounter: 45d016e7-eb5b-426a-aefb-0ea8f2e6f7ec
               stepCounter: f5739b7a-89e1-43c3-ae3f-b1336a7242dc
@@ -71,7 +86,12 @@ steps:
               - columnReferences:
                   - columnCounter: 4979a581-180d-4f49-80d5-421231dfaa12
                     stepCounter: 9230c454-fd7b-44b0-8bf9-65ab14f4a85c
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_AW_PRODUCT"."MAKEFLAG" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_AW_PRODUCT"."MAKEFLAG"
+                  END
           - columnReference:
               columnCounter: 9a8ed0a4-4995-4ea2-b7f8-8a32c0da84c9
               stepCounter: f5739b7a-89e1-43c3-ae3f-b1336a7242dc
@@ -85,7 +105,12 @@ steps:
               - columnReferences:
                   - columnCounter: b4672be6-027b-4fb3-a9f7-2b5a5698eb26
                     stepCounter: 9230c454-fd7b-44b0-8bf9-65ab14f4a85c
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_AW_PRODUCT"."FINISHEDGOODSFLAG" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_AW_PRODUCT"."FINISHEDGOODSFLAG"
+                  END
           - columnReference:
               columnCounter: b21a3468-3032-482e-9fc4-427a64929ad6
               stepCounter: f5739b7a-89e1-43c3-ae3f-b1336a7242dc
@@ -99,7 +124,12 @@ steps:
               - columnReferences:
                   - columnCounter: c146280c-b6d0-45a9-84f7-4cd44b2a32af
                     stepCounter: 9230c454-fd7b-44b0-8bf9-65ab14f4a85c
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_AW_PRODUCT"."COLOR" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_AW_PRODUCT"."COLOR"
+                  END
           - columnReference:
               columnCounter: 59577344-6690-4d2b-8e51-c4dc722ea409
               stepCounter: f5739b7a-89e1-43c3-ae3f-b1336a7242dc
@@ -113,7 +143,12 @@ steps:
               - columnReferences:
                   - columnCounter: 005b9e45-695a-4334-96ee-246f721629fe
                     stepCounter: 9230c454-fd7b-44b0-8bf9-65ab14f4a85c
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_AW_PRODUCT"."SAFETYSTOCKLEVEL" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_AW_PRODUCT"."SAFETYSTOCKLEVEL"
+                  END
           - columnReference:
               columnCounter: c4007863-86e3-44e7-9237-c535a0c54e43
               stepCounter: f5739b7a-89e1-43c3-ae3f-b1336a7242dc
@@ -127,7 +162,12 @@ steps:
               - columnReferences:
                   - columnCounter: 4fb0827e-6dc7-4690-b10a-54e31681606e
                     stepCounter: 9230c454-fd7b-44b0-8bf9-65ab14f4a85c
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_AW_PRODUCT"."REORDERPOINT" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_AW_PRODUCT"."REORDERPOINT"
+                  END
           - columnReference:
               columnCounter: 2f5ae0e6-d510-40ce-9b20-259490656e01
               stepCounter: f5739b7a-89e1-43c3-ae3f-b1336a7242dc
@@ -141,7 +181,12 @@ steps:
               - columnReferences:
                   - columnCounter: b2dc86c3-56dd-4559-82a8-a6435abdf19a
                     stepCounter: 9230c454-fd7b-44b0-8bf9-65ab14f4a85c
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_AW_PRODUCT"."STANDARDCOST" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_AW_PRODUCT"."STANDARDCOST"
+                  END
           - columnReference:
               columnCounter: ff0c2451-74e6-4062-a19e-b22feb80c180
               stepCounter: f5739b7a-89e1-43c3-ae3f-b1336a7242dc
@@ -155,7 +200,12 @@ steps:
               - columnReferences:
                   - columnCounter: aa856d12-2b8f-409d-a70b-e21384d8e07a
                     stepCounter: 9230c454-fd7b-44b0-8bf9-65ab14f4a85c
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_AW_PRODUCT"."LISTPRICE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_AW_PRODUCT"."LISTPRICE"
+                  END
           - columnReference:
               columnCounter: 5df4137b-850e-421e-976b-8e397988ead4
               stepCounter: f5739b7a-89e1-43c3-ae3f-b1336a7242dc
@@ -169,7 +219,12 @@ steps:
               - columnReferences:
                   - columnCounter: fe50eedd-a05e-4ac9-8b34-915c84a07a20
                     stepCounter: 9230c454-fd7b-44b0-8bf9-65ab14f4a85c
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_AW_PRODUCT"."SIZE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_AW_PRODUCT"."SIZE"
+                  END
           - columnReference:
               columnCounter: 032b96bb-d0e2-41ac-81cf-6810bedae951
               stepCounter: f5739b7a-89e1-43c3-ae3f-b1336a7242dc
@@ -183,7 +238,12 @@ steps:
               - columnReferences:
                   - columnCounter: dbe47777-ce2b-4f87-a1c6-ab8f621f9f94
                     stepCounter: 9230c454-fd7b-44b0-8bf9-65ab14f4a85c
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_AW_PRODUCT"."SIZEUNITMEASURECODE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_AW_PRODUCT"."SIZEUNITMEASURECODE"
+                  END
           - columnReference:
               columnCounter: b216c2ce-4c66-40b6-93a2-21b5a618d3ba
               stepCounter: f5739b7a-89e1-43c3-ae3f-b1336a7242dc
@@ -197,7 +257,12 @@ steps:
               - columnReferences:
                   - columnCounter: 9b0781e7-6537-4ed7-995d-27d2eab67c3f
                     stepCounter: 9230c454-fd7b-44b0-8bf9-65ab14f4a85c
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_AW_PRODUCT"."WEIGHTUNITMEASURECODE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_AW_PRODUCT"."WEIGHTUNITMEASURECODE"
+                  END
           - columnReference:
               columnCounter: f4240d5b-9b11-4f7c-af27-0a5913fb3953
               stepCounter: f5739b7a-89e1-43c3-ae3f-b1336a7242dc
@@ -211,7 +276,12 @@ steps:
               - columnReferences:
                   - columnCounter: d04da6cb-6d7c-4eba-91f1-cc40fd537341
                     stepCounter: 9230c454-fd7b-44b0-8bf9-65ab14f4a85c
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_AW_PRODUCT"."WEIGHT" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_AW_PRODUCT"."WEIGHT"
+                  END
           - columnReference:
               columnCounter: 07f1df73-b5c2-4bf8-b248-3af6d3f6cb5f
               stepCounter: f5739b7a-89e1-43c3-ae3f-b1336a7242dc
@@ -225,7 +295,12 @@ steps:
               - columnReferences:
                   - columnCounter: 6f903fa9-35ac-4a04-8ffc-dd1162b0070a
                     stepCounter: 9230c454-fd7b-44b0-8bf9-65ab14f4a85c
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_AW_PRODUCT"."DAYSTOMANUFACTURE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_AW_PRODUCT"."DAYSTOMANUFACTURE"
+                  END
           - columnReference:
               columnCounter: 9169e08c-a9b8-425c-876a-85ac4d8c90f9
               stepCounter: f5739b7a-89e1-43c3-ae3f-b1336a7242dc
@@ -239,7 +314,12 @@ steps:
               - columnReferences:
                   - columnCounter: 719c6c56-b46d-416c-822e-7f200a8e61dc
                     stepCounter: 9230c454-fd7b-44b0-8bf9-65ab14f4a85c
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_AW_PRODUCT"."PRODUCTLINE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_AW_PRODUCT"."PRODUCTLINE"
+                  END
           - columnReference:
               columnCounter: 782d7067-c758-44ce-b970-2e0595563909
               stepCounter: f5739b7a-89e1-43c3-ae3f-b1336a7242dc
@@ -253,7 +333,12 @@ steps:
               - columnReferences:
                   - columnCounter: 42681deb-eace-48fa-8875-dd2059787026
                     stepCounter: 9230c454-fd7b-44b0-8bf9-65ab14f4a85c
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_AW_PRODUCT"."CLASS" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_AW_PRODUCT"."CLASS"
+                  END
           - columnReference:
               columnCounter: 7298093f-467c-4a65-b229-9d62e2af579c
               stepCounter: f5739b7a-89e1-43c3-ae3f-b1336a7242dc
@@ -267,7 +352,12 @@ steps:
               - columnReferences:
                   - columnCounter: c4e1e839-73f5-4f27-8c3e-18738b4de37c
                     stepCounter: 9230c454-fd7b-44b0-8bf9-65ab14f4a85c
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_AW_PRODUCT"."STYLE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_AW_PRODUCT"."STYLE"
+                  END
           - columnReference:
               columnCounter: f7d84a8e-a841-4b7d-8c7c-5aff407307d7
               stepCounter: f5739b7a-89e1-43c3-ae3f-b1336a7242dc
@@ -281,7 +371,12 @@ steps:
               - columnReferences:
                   - columnCounter: 5f6cef98-80c7-458a-938f-c54df91e6056
                     stepCounter: 9230c454-fd7b-44b0-8bf9-65ab14f4a85c
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_AW_PRODUCT"."PRODUCTSUBCATEGORYID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_AW_PRODUCT"."PRODUCTSUBCATEGORYID"
+                  END
           - columnReference:
               columnCounter: e0352567-bfd5-4bbf-beb9-ce7026fbb3af
               stepCounter: f5739b7a-89e1-43c3-ae3f-b1336a7242dc
@@ -295,7 +390,12 @@ steps:
               - columnReferences:
                   - columnCounter: dd2aba7b-4226-4486-81c2-06de04330663
                     stepCounter: 9230c454-fd7b-44b0-8bf9-65ab14f4a85c
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_AW_PRODUCT"."PRODUCTMODELID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_AW_PRODUCT"."PRODUCTMODELID"
+                  END
           - columnReference:
               columnCounter: c09c6367-ee2b-45ca-b246-9a168c316276
               stepCounter: f5739b7a-89e1-43c3-ae3f-b1336a7242dc
@@ -309,7 +409,12 @@ steps:
               - columnReferences:
                   - columnCounter: 1d508a04-9493-495c-9eb5-1e3f8d1a7709
                     stepCounter: 9230c454-fd7b-44b0-8bf9-65ab14f4a85c
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_AW_PRODUCT"."SELLSTARTDATE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_AW_PRODUCT"."SELLSTARTDATE"
+                  END
           - columnReference:
               columnCounter: ef5171c8-d610-4f0c-b444-10ffbf407be0
               stepCounter: f5739b7a-89e1-43c3-ae3f-b1336a7242dc
@@ -323,7 +428,12 @@ steps:
               - columnReferences:
                   - columnCounter: baadb659-cf97-4a06-9e04-fe4d0d668b92
                     stepCounter: 9230c454-fd7b-44b0-8bf9-65ab14f4a85c
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_AW_PRODUCT"."SELLENDDATE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_AW_PRODUCT"."SELLENDDATE"
+                  END
           - columnReference:
               columnCounter: b2d17403-cc6d-471f-852d-25d5498e5da5
               stepCounter: f5739b7a-89e1-43c3-ae3f-b1336a7242dc
@@ -337,7 +447,12 @@ steps:
               - columnReferences:
                   - columnCounter: 5f56a083-4a83-4929-a1fb-74b9a2461d3d
                     stepCounter: 9230c454-fd7b-44b0-8bf9-65ab14f4a85c
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_AW_PRODUCT"."DISCONTINUEDDATE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_AW_PRODUCT"."DISCONTINUEDDATE"
+                  END
           - columnReference:
               columnCounter: e8acd021-7537-427d-b2b3-b51afb2464a5
               stepCounter: f5739b7a-89e1-43c3-ae3f-b1336a7242dc
@@ -351,7 +466,12 @@ steps:
               - columnReferences:
                   - columnCounter: 3c2a52f7-b959-4667-b834-5abc2f4095ad
                     stepCounter: 9230c454-fd7b-44b0-8bf9-65ab14f4a85c
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_AW_PRODUCT"."ROWGUID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_AW_PRODUCT"."ROWGUID"
+                  END
           - columnReference:
               columnCounter: 15c16ebd-f9de-4aa8-bf32-aeacbdd55b70
               stepCounter: f5739b7a-89e1-43c3-ae3f-b1336a7242dc
@@ -365,7 +485,12 @@ steps:
               - columnReferences:
                   - columnCounter: 64253b80-6f19-48fc-94a4-64865b9c32b7
                     stepCounter: 9230c454-fd7b-44b0-8bf9-65ab14f4a85c
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_AW_PRODUCT"."MODIFIEDDATE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_AW_PRODUCT"."MODIFIEDDATE"
+                  END
           - columnReference:
               columnCounter: 587566d3-dc57-475a-b2db-67a5eb0ade89
               stepCounter: f5739b7a-89e1-43c3-ae3f-b1336a7242dc
@@ -379,7 +504,12 @@ steps:
               - columnReferences:
                   - columnCounter: 362f8106-bc8a-47ff-b239-8de253f7fbe9
                     stepCounter: 9230c454-fd7b-44b0-8bf9-65ab14f4a85c
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_AW_PRODUCT"."ROW_HASH" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_AW_PRODUCT"."ROW_HASH"
+                  END
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:

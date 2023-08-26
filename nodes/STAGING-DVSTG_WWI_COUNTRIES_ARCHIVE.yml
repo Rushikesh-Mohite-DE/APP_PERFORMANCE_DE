@@ -45,7 +45,12 @@ steps:
               - columnReferences:
                   - columnCounter: 693d85df-dc47-410a-9978-09d474989228
                     stepCounter: 292f51c8-07be-4a69-8dfd-79594f20fbd8
-                transform: ""
+                transform: |
+                  CASE 
+                  	WHEN "WWI_LOAD_COUNTRIES_ARCHIVE"."COUNTRYID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "WWI_LOAD_COUNTRIES_ARCHIVE"."COUNTRYID"
+                  END
           - columnReference:
               columnCounter: 6058eaf8-ce69-450b-8c81-1af1c74a482c
               stepCounter: 12307025-a964-4cdd-abd7-65bee545ede6
@@ -57,7 +62,12 @@ steps:
               - columnReferences:
                   - columnCounter: f8f22c60-94de-472c-b6d7-012526a2dd35
                     stepCounter: 292f51c8-07be-4a69-8dfd-79594f20fbd8
-                transform: ""
+                transform: |
+                  CASE 
+                  	WHEN "WWI_LOAD_COUNTRIES_ARCHIVE"."COUNTRYNAME" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "WWI_LOAD_COUNTRIES_ARCHIVE"."COUNTRYNAME"
+                  END
           - columnReference:
               columnCounter: 16b4210e-d244-46c4-82e7-5ab13a88c39e
               stepCounter: 12307025-a964-4cdd-abd7-65bee545ede6
@@ -69,7 +79,12 @@ steps:
               - columnReferences:
                   - columnCounter: 678f10a4-09f0-44f8-a937-e242b7ef6419
                     stepCounter: 292f51c8-07be-4a69-8dfd-79594f20fbd8
-                transform: ""
+                transform: |
+                  CASE 
+                  	WHEN "WWI_LOAD_COUNTRIES_ARCHIVE"."FORMALNAME" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "WWI_LOAD_COUNTRIES_ARCHIVE"."FORMALNAME"
+                  END
           - columnReference:
               columnCounter: ad3418cb-bc7a-4821-9f76-11a0ea9ed7ac
               stepCounter: 12307025-a964-4cdd-abd7-65bee545ede6
@@ -81,7 +96,12 @@ steps:
               - columnReferences:
                   - columnCounter: 45e4f89e-a3bc-4b1d-8570-b38a4e7f0c1f
                     stepCounter: 292f51c8-07be-4a69-8dfd-79594f20fbd8
-                transform: ""
+                transform: |
+                  CASE 
+                  	WHEN "WWI_LOAD_COUNTRIES_ARCHIVE"."ISOALPHA3CODE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "WWI_LOAD_COUNTRIES_ARCHIVE"."ISOALPHA3CODE"
+                  END
           - columnReference:
               columnCounter: e9645ed7-c96f-4a29-b4b8-04d83159ad98
               stepCounter: 12307025-a964-4cdd-abd7-65bee545ede6
@@ -93,7 +113,12 @@ steps:
               - columnReferences:
                   - columnCounter: 0fca2c8f-907e-49b9-b1d3-0042908204fc
                     stepCounter: 292f51c8-07be-4a69-8dfd-79594f20fbd8
-                transform: ""
+                transform: |
+                  CASE 
+                  	WHEN "WWI_LOAD_COUNTRIES_ARCHIVE"."ISONUMERICCODE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "WWI_LOAD_COUNTRIES_ARCHIVE"."ISONUMERICCODE"
+                  END
           - columnReference:
               columnCounter: dcbc5358-8aae-40e0-a251-1e245e759307
               stepCounter: 12307025-a964-4cdd-abd7-65bee545ede6
@@ -105,7 +130,12 @@ steps:
               - columnReferences:
                   - columnCounter: da18c85d-c96f-4743-972a-efc901f3dae7
                     stepCounter: 292f51c8-07be-4a69-8dfd-79594f20fbd8
-                transform: ""
+                transform: |
+                  CASE 
+                  	WHEN "WWI_LOAD_COUNTRIES_ARCHIVE"."COUNTRYTYPE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "WWI_LOAD_COUNTRIES_ARCHIVE"."COUNTRYTYPE"
+                  END
           - columnReference:
               columnCounter: b93cb752-c0ad-438b-9483-66392ea17a54
               stepCounter: 12307025-a964-4cdd-abd7-65bee545ede6
@@ -117,7 +147,12 @@ steps:
               - columnReferences:
                   - columnCounter: 1a56a683-0c5d-445f-a9ec-0f85f0a04d73
                     stepCounter: 292f51c8-07be-4a69-8dfd-79594f20fbd8
-                transform: ""
+                transform: |
+                  CASE 
+                  	WHEN "WWI_LOAD_COUNTRIES_ARCHIVE"."LATESTRECORDEDPOPULATION" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "WWI_LOAD_COUNTRIES_ARCHIVE"."LATESTRECORDEDPOPULATION"
+                  END
           - columnReference:
               columnCounter: 20c062de-f920-42a8-9286-80e06fd7142c
               stepCounter: 12307025-a964-4cdd-abd7-65bee545ede6
@@ -129,7 +164,12 @@ steps:
               - columnReferences:
                   - columnCounter: a59eb6c7-f7e4-459d-966e-c254584faaf0
                     stepCounter: 292f51c8-07be-4a69-8dfd-79594f20fbd8
-                transform: ""
+                transform: |
+                  CASE 
+                  	WHEN "WWI_LOAD_COUNTRIES_ARCHIVE"."CONTINENT" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "WWI_LOAD_COUNTRIES_ARCHIVE"."CONTINENT"
+                  END
           - columnReference:
               columnCounter: 603e4be6-d15d-4bc6-983b-d92877866ace
               stepCounter: 12307025-a964-4cdd-abd7-65bee545ede6
@@ -141,7 +181,12 @@ steps:
               - columnReferences:
                   - columnCounter: 950efc52-62ec-49c0-8fdc-fbd149aee8f6
                     stepCounter: 292f51c8-07be-4a69-8dfd-79594f20fbd8
-                transform: ""
+                transform: |
+                  CASE 
+                  	WHEN "WWI_LOAD_COUNTRIES_ARCHIVE"."REGION" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "WWI_LOAD_COUNTRIES_ARCHIVE"."REGION"
+                  END
           - columnReference:
               columnCounter: 147f36fd-7a76-44bb-939e-00fe32c45fdb
               stepCounter: 12307025-a964-4cdd-abd7-65bee545ede6
@@ -153,7 +198,12 @@ steps:
               - columnReferences:
                   - columnCounter: e0900ed2-4493-4845-84de-64c974ee57b6
                     stepCounter: 292f51c8-07be-4a69-8dfd-79594f20fbd8
-                transform: ""
+                transform: |
+                  CASE 
+                  	WHEN "WWI_LOAD_COUNTRIES_ARCHIVE"."SUBREGION" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "WWI_LOAD_COUNTRIES_ARCHIVE"."SUBREGION"
+                  END
           - columnReference:
               columnCounter: e5705b11-3b8f-4bf5-a6e4-adf302964c0b
               stepCounter: 12307025-a964-4cdd-abd7-65bee545ede6
@@ -165,7 +215,12 @@ steps:
               - columnReferences:
                   - columnCounter: b6724e89-8e3a-43ac-8c8b-9829608adf4c
                     stepCounter: 292f51c8-07be-4a69-8dfd-79594f20fbd8
-                transform: ""
+                transform: |
+                  CASE 
+                  	WHEN "WWI_LOAD_COUNTRIES_ARCHIVE"."BORDER" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "WWI_LOAD_COUNTRIES_ARCHIVE"."BORDER"
+                  END
           - columnReference:
               columnCounter: 100c0674-6b45-41d1-9ba2-88a995606f23
               stepCounter: 12307025-a964-4cdd-abd7-65bee545ede6
@@ -177,7 +232,12 @@ steps:
               - columnReferences:
                   - columnCounter: e63e2e06-2f5c-4003-92e3-fd960d9dba88
                     stepCounter: 292f51c8-07be-4a69-8dfd-79594f20fbd8
-                transform: ""
+                transform: |
+                  CASE 
+                  	WHEN "WWI_LOAD_COUNTRIES_ARCHIVE"."LASTEDITEDBY" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "WWI_LOAD_COUNTRIES_ARCHIVE"."LASTEDITEDBY"
+                  END
           - columnReference:
               columnCounter: 3ffa4779-9558-4097-8ddf-94a29c7f8e15
               stepCounter: 12307025-a964-4cdd-abd7-65bee545ede6

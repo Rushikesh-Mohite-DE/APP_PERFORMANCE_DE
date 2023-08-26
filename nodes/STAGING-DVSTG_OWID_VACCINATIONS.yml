@@ -5,7 +5,7 @@ steps:
         generate_ghost_records: true
         testsEnabled: true
       database: ""
-      deployEnabled: false
+      deployEnabled: true
       description: ""
       isMultisource: false
       locationName: STAGING
@@ -47,7 +47,7 @@ steps:
               - columnReferences:
                   - columnCounter: 0ff3df39-3de4-4d6f-ac13-0d38a4f365d1
                     stepCounter: 9179f14d-4a02-4af7-bd78-696f8815410b
-                transform: ""
+                transform: CONCAT("OWID_VACCINATIONS"."DATE", '')
           - columnReference:
               columnCounter: 6feec30e-bc67-41f5-b6d2-c9d93ddd4508
               stepCounter: 6dbdfc8e-ca6d-4cd0-b99b-7db1c4b5bc29
@@ -59,7 +59,7 @@ steps:
               - columnReferences:
                   - columnCounter: b8f66c73-621e-4926-ac4c-26090ba11505
                     stepCounter: 9179f14d-4a02-4af7-bd78-696f8815410b
-                transform: ""
+                transform: CONCAT("OWID_VACCINATIONS"."COUNTRY_REGION", '')
           - columnReference:
               columnCounter: 1435d401-98d4-401f-a04b-efed57b7d86a
               stepCounter: 6dbdfc8e-ca6d-4cd0-b99b-7db1c4b5bc29
@@ -71,7 +71,7 @@ steps:
               - columnReferences:
                   - columnCounter: 41315917-7c5b-466e-b254-8a7ceb4676de
                     stepCounter: 9179f14d-4a02-4af7-bd78-696f8815410b
-                transform: ""
+                transform: CONCAT("OWID_VACCINATIONS"."ISO3166_1", '')
           - columnReference:
               columnCounter: 6f9609c9-cfbe-4cb3-844a-fb9efdc0a6cb
               stepCounter: 6dbdfc8e-ca6d-4cd0-b99b-7db1c4b5bc29
@@ -83,7 +83,7 @@ steps:
               - columnReferences:
                   - columnCounter: e37eb5de-ab83-4b69-9ec6-20e1e40c4591
                     stepCounter: 9179f14d-4a02-4af7-bd78-696f8815410b
-                transform: ""
+                transform: CONCAT("OWID_VACCINATIONS"."TOTAL_VACCINATIONS", '')
           - columnReference:
               columnCounter: 9f1d9b20-49af-45ac-8564-ce9aaf1458c0
               stepCounter: 6dbdfc8e-ca6d-4cd0-b99b-7db1c4b5bc29
@@ -95,7 +95,7 @@ steps:
               - columnReferences:
                   - columnCounter: 934b6709-27e2-4d34-8593-7f523af7ae9b
                     stepCounter: 9179f14d-4a02-4af7-bd78-696f8815410b
-                transform: ""
+                transform: CONCAT("OWID_VACCINATIONS"."PEOPLE_VACCINATED", '')
           - columnReference:
               columnCounter: bbef8dfe-ea2d-45a3-a8ba-d602706a4dc6
               stepCounter: 6dbdfc8e-ca6d-4cd0-b99b-7db1c4b5bc29
@@ -107,7 +107,7 @@ steps:
               - columnReferences:
                   - columnCounter: d5b51092-73c4-4c93-9db9-a678543e4fd7
                     stepCounter: 9179f14d-4a02-4af7-bd78-696f8815410b
-                transform: ""
+                transform: CONCAT("OWID_VACCINATIONS"."PEOPLE_FULLY_VACCINATED", '')
           - columnReference:
               columnCounter: 22689076-cdcd-45a7-9589-1ff73ffab478
               stepCounter: 6dbdfc8e-ca6d-4cd0-b99b-7db1c4b5bc29
@@ -119,7 +119,7 @@ steps:
               - columnReferences:
                   - columnCounter: 73fa2215-801a-4633-819a-2214de1a9351
                     stepCounter: 9179f14d-4a02-4af7-bd78-696f8815410b
-                transform: ""
+                transform: CONCAT("OWID_VACCINATIONS"."DAILY_VACCINATIONS_RAW", '')
           - columnReference:
               columnCounter: e26c7dd9-c3af-45b0-96d6-36900ccda8c7
               stepCounter: 6dbdfc8e-ca6d-4cd0-b99b-7db1c4b5bc29
@@ -131,7 +131,7 @@ steps:
               - columnReferences:
                   - columnCounter: 4a0a2896-0564-4e2f-bddc-a4599b018353
                     stepCounter: 9179f14d-4a02-4af7-bd78-696f8815410b
-                transform: ""
+                transform: CONCAT("OWID_VACCINATIONS"."DAILY_VACCINATIONS", '')
           - columnReference:
               columnCounter: 5ca8ee88-e2cb-41c4-9eeb-af9d25981d28
               stepCounter: 6dbdfc8e-ca6d-4cd0-b99b-7db1c4b5bc29
@@ -143,7 +143,7 @@ steps:
               - columnReferences:
                   - columnCounter: 6e64bbe0-2813-4142-9d2f-ea72323ee391
                     stepCounter: 9179f14d-4a02-4af7-bd78-696f8815410b
-                transform: ""
+                transform: CONCAT("OWID_VACCINATIONS"."TOTAL_VACCINATIONS_PER_HUNDRED", '')
           - columnReference:
               columnCounter: 29813276-a907-42cc-87df-3459671d9ee1
               stepCounter: 6dbdfc8e-ca6d-4cd0-b99b-7db1c4b5bc29
@@ -155,7 +155,7 @@ steps:
               - columnReferences:
                   - columnCounter: 7e019b30-c3e7-41c8-aae1-bbb3daa5b9be
                     stepCounter: 9179f14d-4a02-4af7-bd78-696f8815410b
-                transform: ""
+                transform: CONCAT("OWID_VACCINATIONS"."PEOPLE_VACCINATED_PER_HUNDRED", '')
           - columnReference:
               columnCounter: 5c5ceb0d-753e-46fc-8596-4fcfb883a579
               stepCounter: 6dbdfc8e-ca6d-4cd0-b99b-7db1c4b5bc29
@@ -167,7 +167,7 @@ steps:
               - columnReferences:
                   - columnCounter: e1880869-17f5-414f-a2e2-85b6ceca1a8d
                     stepCounter: 9179f14d-4a02-4af7-bd78-696f8815410b
-                transform: ""
+                transform: CONCAT("OWID_VACCINATIONS"."PEOPLE_FULLY_VACCINATED_PER_HUNDRED", '')
           - columnReference:
               columnCounter: 0a3f42fa-0ff7-461c-88aa-102e165e494b
               stepCounter: 6dbdfc8e-ca6d-4cd0-b99b-7db1c4b5bc29
@@ -179,7 +179,7 @@ steps:
               - columnReferences:
                   - columnCounter: 0707e261-48bb-4e52-a539-4be68162ae55
                     stepCounter: 9179f14d-4a02-4af7-bd78-696f8815410b
-                transform: ""
+                transform: CONCAT("OWID_VACCINATIONS"."DAILY_VACCINATIONS_PER_MILLION", '')
           - columnReference:
               columnCounter: 12fc4473-39a5-4cce-baa0-780d2cb619fb
               stepCounter: 6dbdfc8e-ca6d-4cd0-b99b-7db1c4b5bc29
@@ -191,7 +191,7 @@ steps:
               - columnReferences:
                   - columnCounter: d7555c38-60de-4142-bfd7-2c6db76acde1
                     stepCounter: 9179f14d-4a02-4af7-bd78-696f8815410b
-                transform: ""
+                transform: CONCAT("OWID_VACCINATIONS"."VACCINES", '')
           - columnReference:
               columnCounter: c5db128d-df1b-457d-b83f-0ed629408c9d
               stepCounter: 6dbdfc8e-ca6d-4cd0-b99b-7db1c4b5bc29
@@ -203,7 +203,7 @@ steps:
               - columnReferences:
                   - columnCounter: e5fe0e88-e9b0-46aa-a3af-dd98210b17dc
                     stepCounter: 9179f14d-4a02-4af7-bd78-696f8815410b
-                transform: ""
+                transform: CONCAT("OWID_VACCINATIONS"."LAST_OBSERVATION_DATE", '')
           - columnReference:
               columnCounter: 81116578-89bc-4234-be5e-6b80bd2f9845
               stepCounter: 6dbdfc8e-ca6d-4cd0-b99b-7db1c4b5bc29
@@ -215,7 +215,7 @@ steps:
               - columnReferences:
                   - columnCounter: 8b4c9644-c8c9-42c8-af5b-d7f84f46dea2
                     stepCounter: 9179f14d-4a02-4af7-bd78-696f8815410b
-                transform: ""
+                transform: CONCAT("OWID_VACCINATIONS"."SOURCE_NAME", '')
           - columnReference:
               columnCounter: 4bd4c9f2-7d7b-438a-8d08-3095a5b89797
               stepCounter: 6dbdfc8e-ca6d-4cd0-b99b-7db1c4b5bc29
@@ -227,7 +227,7 @@ steps:
               - columnReferences:
                   - columnCounter: 5473376d-3764-4d42-901c-47fd5d24eba1
                     stepCounter: 9179f14d-4a02-4af7-bd78-696f8815410b
-                transform: ""
+                transform: CONCAT("OWID_VACCINATIONS"."SOURCE_WEBSITE", '')
           - columnReference:
               columnCounter: efe93a82-3db9-4b99-bc5f-e1fe49d694aa
               stepCounter: 6dbdfc8e-ca6d-4cd0-b99b-7db1c4b5bc29
@@ -239,7 +239,7 @@ steps:
               - columnReferences:
                   - columnCounter: 6e85c401-ee7d-4d9d-8fe0-fc39f94d8a12
                     stepCounter: 9179f14d-4a02-4af7-bd78-696f8815410b
-                transform: ""
+                transform: CONCAT("OWID_VACCINATIONS"."LAST_UPDATE_DATE", '')
           - columnReference:
               columnCounter: d378795e-9db2-4e1a-8399-c9ad050f2fdb
               stepCounter: 6dbdfc8e-ca6d-4cd0-b99b-7db1c4b5bc29
@@ -251,7 +251,7 @@ steps:
               - columnReferences:
                   - columnCounter: 6070ef36-f862-4855-8013-4f134a6beb7e
                     stepCounter: 9179f14d-4a02-4af7-bd78-696f8815410b
-                transform: ""
+                transform: CONCAT("OWID_VACCINATIONS"."LAST_REPORTED_FLAG", '')
           - acceptedValues:
               strictMatch: true
               values: []

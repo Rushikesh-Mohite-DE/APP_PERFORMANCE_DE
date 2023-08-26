@@ -57,7 +57,7 @@ steps:
               - columnReferences:
                   - columnCounter: 76cca26d-2dd4-412b-acd2-46a4cdc6bb43
                     stepCounter: 16882bfb-941e-48ba-997d-5a9a2f916f12
-                transform: ""
+                transform: COALESCE("WWI_LOAD_SUPPLIERS_ARCHIVE"."SUPPLIERID",0)
           - columnReference:
               columnCounter: ba128bce-7200-44b3-a2aa-eb0a05cbbc6d
               stepCounter: a13d1df8-5513-45f9-9a7c-434c34951f2e
@@ -81,7 +81,7 @@ steps:
               - columnReferences:
                   - columnCounter: 501f9e2f-fb60-4bd4-80f0-3f18088b1e55
                     stepCounter: 16882bfb-941e-48ba-997d-5a9a2f916f12
-                transform: ""
+                transform: COALESCE("WWI_LOAD_SUPPLIERS_ARCHIVE"."SUPPLIERCATEGORYID",0)
           - columnReference:
               columnCounter: 68fc2412-dcef-4825-9ed9-ccd36a105a77
               stepCounter: a13d1df8-5513-45f9-9a7c-434c34951f2e
@@ -93,7 +93,7 @@ steps:
               - columnReferences:
                   - columnCounter: 23ab66d0-fc84-4ab3-9827-1d612304837f
                     stepCounter: 16882bfb-941e-48ba-997d-5a9a2f916f12
-                transform: ""
+                transform: COALESCE("WWI_LOAD_SUPPLIERS_ARCHIVE"."PRIMARYCONTACTPERSONID",0)
           - columnReference:
               columnCounter: a2cbb00b-bb18-4433-9ca4-b7056a7a9a09
               stepCounter: a13d1df8-5513-45f9-9a7c-434c34951f2e
@@ -105,7 +105,7 @@ steps:
               - columnReferences:
                   - columnCounter: a21ae174-0c4f-4fb3-9555-62fb2d63068b
                     stepCounter: 16882bfb-941e-48ba-997d-5a9a2f916f12
-                transform: ""
+                transform: COALESCE("WWI_LOAD_SUPPLIERS_ARCHIVE"."ALTERNATECONTACTPERSONID",0)
           - columnReference:
               columnCounter: cf6c9c8f-2bea-49ee-ae06-f5a89409ce99
               stepCounter: a13d1df8-5513-45f9-9a7c-434c34951f2e
@@ -129,7 +129,7 @@ steps:
               - columnReferences:
                   - columnCounter: 100fd3ba-8fd3-46e8-9d05-83d2a4724079
                     stepCounter: 16882bfb-941e-48ba-997d-5a9a2f916f12
-                transform: ""
+                transform: COALESCE("WWI_LOAD_SUPPLIERS_ARCHIVE"."DELIVERYCITYID",0)
           - columnReference:
               columnCounter: a8cb0561-12f6-45b5-a91e-912b9d6ede6d
               stepCounter: a13d1df8-5513-45f9-9a7c-434c34951f2e
@@ -141,7 +141,7 @@ steps:
               - columnReferences:
                   - columnCounter: 3c08302d-509e-4729-b6d2-5efe02603a15
                     stepCounter: 16882bfb-941e-48ba-997d-5a9a2f916f12
-                transform: ""
+                transform: COALESCE("WWI_LOAD_SUPPLIERS_ARCHIVE"."POSTALCITYID",0)
           - columnReference:
               columnCounter: bf5dc9c5-13dd-4b60-a21c-9b9c6c24ec35
               stepCounter: a13d1df8-5513-45f9-9a7c-434c34951f2e
@@ -153,7 +153,7 @@ steps:
               - columnReferences:
                   - columnCounter: 4f8ecd7a-9ffe-4c24-be71-f6c978c5e360
                     stepCounter: 16882bfb-941e-48ba-997d-5a9a2f916f12
-                transform: ""
+                transform: CONCAT("WWI_LOAD_SUPPLIERS_ARCHIVE"."SUPPLIERREFERENCE", '')
           - columnReference:
               columnCounter: 4540836d-a66f-40d8-9a12-0cfb06bdc900
               stepCounter: a13d1df8-5513-45f9-9a7c-434c34951f2e
@@ -165,7 +165,7 @@ steps:
               - columnReferences:
                   - columnCounter: 98b3bda6-6bcc-49fe-a825-63e899efec01
                     stepCounter: 16882bfb-941e-48ba-997d-5a9a2f916f12
-                transform: ""
+                transform: CONCAT("WWI_LOAD_SUPPLIERS_ARCHIVE"."BANKACCOUNTNAME", '')
           - columnReference:
               columnCounter: 119046e7-09b9-455e-93fe-63e314079d40
               stepCounter: a13d1df8-5513-45f9-9a7c-434c34951f2e
@@ -177,7 +177,7 @@ steps:
               - columnReferences:
                   - columnCounter: 6d213f1a-5258-4c0e-88f4-6c8bc6326380
                     stepCounter: 16882bfb-941e-48ba-997d-5a9a2f916f12
-                transform: ""
+                transform: CONCAT("WWI_LOAD_SUPPLIERS_ARCHIVE"."BANKACCOUNTBRANCH", '')
           - columnReference:
               columnCounter: 1080f95e-f1c4-4871-aa9b-bec2618bd38d
               stepCounter: a13d1df8-5513-45f9-9a7c-434c34951f2e
@@ -189,7 +189,7 @@ steps:
               - columnReferences:
                   - columnCounter: bf5df3bf-4d44-4c44-a953-229e9ffdbe69
                     stepCounter: 16882bfb-941e-48ba-997d-5a9a2f916f12
-                transform: ""
+                transform: CONCAT("WWI_LOAD_SUPPLIERS_ARCHIVE"."BANKACCOUNTCODE", '')
           - columnReference:
               columnCounter: ae3a10a0-362e-414b-8d66-9bc999e31918
               stepCounter: a13d1df8-5513-45f9-9a7c-434c34951f2e
@@ -201,7 +201,7 @@ steps:
               - columnReferences:
                   - columnCounter: 4580c544-2fee-4eff-b54f-23144e9db007
                     stepCounter: 16882bfb-941e-48ba-997d-5a9a2f916f12
-                transform: ""
+                transform: CONCAT("WWI_LOAD_SUPPLIERS_ARCHIVE"."BANKACCOUNTNUMBER", '')
           - columnReference:
               columnCounter: dd0e0a7a-277a-4d08-80fd-55b5bec3b736
               stepCounter: a13d1df8-5513-45f9-9a7c-434c34951f2e
@@ -213,7 +213,7 @@ steps:
               - columnReferences:
                   - columnCounter: b69c1569-257f-49e5-bdb3-9065607a07c4
                     stepCounter: 16882bfb-941e-48ba-997d-5a9a2f916f12
-                transform: ""
+                transform: CONCAT("WWI_LOAD_SUPPLIERS_ARCHIVE"."BANKINTERNATIONALCODE", '')
           - columnReference:
               columnCounter: 3db028a0-d1f4-45e5-9d9c-2355c257b344
               stepCounter: a13d1df8-5513-45f9-9a7c-434c34951f2e
@@ -225,7 +225,7 @@ steps:
               - columnReferences:
                   - columnCounter: c31b56c8-7c91-41d9-851e-bebcf81adb90
                     stepCounter: 16882bfb-941e-48ba-997d-5a9a2f916f12
-                transform: ""
+                transform: CONCAT("WWI_LOAD_SUPPLIERS_ARCHIVE"."PAYMENTDAYS", '')
           - columnReference:
               columnCounter: 7bc6d959-482e-4584-a321-b4834c3c19ed
               stepCounter: a13d1df8-5513-45f9-9a7c-434c34951f2e
@@ -237,7 +237,7 @@ steps:
               - columnReferences:
                   - columnCounter: 8942e449-e888-4c28-9312-f349cb6dee13
                     stepCounter: 16882bfb-941e-48ba-997d-5a9a2f916f12
-                transform: ""
+                transform: CONCAT("WWI_LOAD_SUPPLIERS_ARCHIVE"."INTERNALCOMMENTS", '')
           - columnReference:
               columnCounter: ca8cd1ff-3fc0-46a2-8218-5843e90461f7
               stepCounter: a13d1df8-5513-45f9-9a7c-434c34951f2e
@@ -249,7 +249,7 @@ steps:
               - columnReferences:
                   - columnCounter: fd85b328-d6a6-40f4-893f-8ecb505acbe2
                     stepCounter: 16882bfb-941e-48ba-997d-5a9a2f916f12
-                transform: ""
+                transform: CONCAT("WWI_LOAD_SUPPLIERS_ARCHIVE"."PHONENUMBER", '')
           - columnReference:
               columnCounter: 0db3f034-f696-4ea2-be7d-d63ecd2184c2
               stepCounter: a13d1df8-5513-45f9-9a7c-434c34951f2e
@@ -261,7 +261,7 @@ steps:
               - columnReferences:
                   - columnCounter: d947d595-e1f2-401f-b252-eb9225ce01d7
                     stepCounter: 16882bfb-941e-48ba-997d-5a9a2f916f12
-                transform: ""
+                transform: CONCAT("WWI_LOAD_SUPPLIERS_ARCHIVE"."FAXNUMBER", '')
           - columnReference:
               columnCounter: 5c6a42ee-0883-4da9-a151-895412faddd6
               stepCounter: a13d1df8-5513-45f9-9a7c-434c34951f2e
@@ -273,7 +273,7 @@ steps:
               - columnReferences:
                   - columnCounter: a8dbee0e-3127-4afb-a97b-0025757f997c
                     stepCounter: 16882bfb-941e-48ba-997d-5a9a2f916f12
-                transform: ""
+                transform: CONCAT("WWI_LOAD_SUPPLIERS_ARCHIVE"."WEBSITEURL", '')
           - columnReference:
               columnCounter: 17dece29-73a3-4f51-b50a-2b6be823e15b
               stepCounter: a13d1df8-5513-45f9-9a7c-434c34951f2e
@@ -285,7 +285,7 @@ steps:
               - columnReferences:
                   - columnCounter: 948645ff-1053-41fa-b62c-8d94a04d4ee8
                     stepCounter: 16882bfb-941e-48ba-997d-5a9a2f916f12
-                transform: ""
+                transform: CONCAT("WWI_LOAD_SUPPLIERS_ARCHIVE"."DELIVERYADDRESSLINE1", '')
           - columnReference:
               columnCounter: c96f9449-f6c1-416a-b752-0b603855b5d3
               stepCounter: a13d1df8-5513-45f9-9a7c-434c34951f2e
@@ -297,7 +297,7 @@ steps:
               - columnReferences:
                   - columnCounter: 2b9ed02d-12ea-4a0c-8d31-424c4ff7885e
                     stepCounter: 16882bfb-941e-48ba-997d-5a9a2f916f12
-                transform: ""
+                transform: CONCAT("WWI_LOAD_SUPPLIERS_ARCHIVE"."DELIVERYADDRESSLINE2", '')
           - columnReference:
               columnCounter: e3af95b3-b71b-4a97-afc8-199c0112b44e
               stepCounter: a13d1df8-5513-45f9-9a7c-434c34951f2e
@@ -309,7 +309,7 @@ steps:
               - columnReferences:
                   - columnCounter: 8d96b24b-03d4-4b2d-af87-d1ab692f4862
                     stepCounter: 16882bfb-941e-48ba-997d-5a9a2f916f12
-                transform: ""
+                transform: CONCAT("WWI_LOAD_SUPPLIERS_ARCHIVE"."DELIVERYPOSTALCODE", '')
           - columnReference:
               columnCounter: f794c4a5-bd02-441d-9dad-2155d29e0eb6
               stepCounter: a13d1df8-5513-45f9-9a7c-434c34951f2e
@@ -321,7 +321,7 @@ steps:
               - columnReferences:
                   - columnCounter: 4bd7e4a9-9d45-478d-8404-da8b557a385a
                     stepCounter: 16882bfb-941e-48ba-997d-5a9a2f916f12
-                transform: ""
+                transform: CONCAT("WWI_LOAD_SUPPLIERS_ARCHIVE"."DELIVERYLOCATION", '')
           - columnReference:
               columnCounter: 98881a57-e3d7-42d4-b646-24d9e77e987c
               stepCounter: a13d1df8-5513-45f9-9a7c-434c34951f2e
@@ -333,7 +333,7 @@ steps:
               - columnReferences:
                   - columnCounter: 799e7fc9-d097-4869-b07d-92d65d4484db
                     stepCounter: 16882bfb-941e-48ba-997d-5a9a2f916f12
-                transform: ""
+                transform: CONCAT("WWI_LOAD_SUPPLIERS_ARCHIVE"."POSTALADDRESSLINE1", '')
           - columnReference:
               columnCounter: 5e512497-6df8-4cbb-b303-66edcef04a62
               stepCounter: a13d1df8-5513-45f9-9a7c-434c34951f2e
@@ -345,7 +345,7 @@ steps:
               - columnReferences:
                   - columnCounter: 0de9547a-46f1-4cb7-82f3-df53e171c85b
                     stepCounter: 16882bfb-941e-48ba-997d-5a9a2f916f12
-                transform: ""
+                transform: CONCAT("WWI_LOAD_SUPPLIERS_ARCHIVE"."POSTALADDRESSLINE2", '')
           - columnReference:
               columnCounter: de0b6b0f-c15d-44df-8ca3-c18bf09da58f
               stepCounter: a13d1df8-5513-45f9-9a7c-434c34951f2e
@@ -357,7 +357,7 @@ steps:
               - columnReferences:
                   - columnCounter: c295d2f6-4436-4ec0-810e-ec6dedd162cf
                     stepCounter: 16882bfb-941e-48ba-997d-5a9a2f916f12
-                transform: ""
+                transform: CONCAT("WWI_LOAD_SUPPLIERS_ARCHIVE"."POSTALPOSTALCODE", '')
           - columnReference:
               columnCounter: b4ce2e7e-33d8-4564-a861-6c29506f4101
               stepCounter: a13d1df8-5513-45f9-9a7c-434c34951f2e
@@ -369,7 +369,7 @@ steps:
               - columnReferences:
                   - columnCounter: 19cb35d5-cbde-459b-8326-c11f5852d524
                     stepCounter: 16882bfb-941e-48ba-997d-5a9a2f916f12
-                transform: ""
+                transform: CONCAT("WWI_LOAD_SUPPLIERS_ARCHIVE"."LASTEDITEDBY", '')
           - columnReference:
               columnCounter: 781b8f4d-8765-4fd3-b03e-320e28f05c1b
               stepCounter: a13d1df8-5513-45f9-9a7c-434c34951f2e
@@ -381,7 +381,7 @@ steps:
               - columnReferences:
                   - columnCounter: df767450-2c94-4023-a5ce-982d01053354
                     stepCounter: 16882bfb-941e-48ba-997d-5a9a2f916f12
-                transform: ""
+                transform: CONCAT("WWI_LOAD_SUPPLIERS_ARCHIVE"."VALIDFROM", '')
           - columnReference:
               columnCounter: 74241fda-1cbb-4c80-bc29-4d478b97db2f
               stepCounter: a13d1df8-5513-45f9-9a7c-434c34951f2e
@@ -393,7 +393,7 @@ steps:
               - columnReferences:
                   - columnCounter: 6025b18d-07f1-43b8-9b0d-cbb4224be4a3
                     stepCounter: 16882bfb-941e-48ba-997d-5a9a2f916f12
-                transform: ""
+                transform: CONCAT("WWI_LOAD_SUPPLIERS_ARCHIVE"."VALIDTO", '')
           - acceptedValues:
               strictMatch: true
               values: []

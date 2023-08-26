@@ -157,7 +157,12 @@ steps:
               - columnReferences:
                   - columnCounter: 7c577198-0e2b-40e3-bb67-8e0ea93cbf66
                     stepCounter: 9b993024-0410-444b-8d06-cf50b0c9fa7d
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_WORKORDERROUTING"."PLANNEDCOST" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_WORKORDERROUTING"."PLANNEDCOST"
+                  END
           - columnReference:
               columnCounter: 64109720-ab91-491e-8d33-ae2440c114a4
               stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85
@@ -169,7 +174,12 @@ steps:
               - columnReferences:
                   - columnCounter: 64468417-152d-4a9b-a0d3-edfb675f7acc
                     stepCounter: 9b993024-0410-444b-8d06-cf50b0c9fa7d
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_WORKORDERROUTING"."ACTUALCOST" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_WORKORDERROUTING"."ACTUALCOST"
+                  END
           - columnReference:
               columnCounter: fae22fd1-7251-47b4-b276-18d3ae119e29
               stepCounter: 099a2033-f391-41f9-817f-5cc9236aac85

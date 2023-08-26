@@ -56,7 +56,12 @@ steps:
               - columnReferences:
                   - columnCounter: 198dad4b-2687-46f4-b9e5-8637ed2f8006
                     stepCounter: 812d5c2d-10a4-459d-88d5-daf221d3d78c
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "DVSTG_AW_SPECIALOFFER"."DISCOUNTPCT" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "DVSTG_AW_SPECIALOFFER"."DISCOUNTPCT"
+                  END
           - columnReference:
               columnCounter: 3cf6ec82-a36e-496c-abeb-747e28dc0e55
               stepCounter: 8954e682-d764-41ae-b6b8-b98102db13f9

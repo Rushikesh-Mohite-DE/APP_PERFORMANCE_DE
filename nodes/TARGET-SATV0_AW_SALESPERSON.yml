@@ -70,7 +70,12 @@ steps:
               - columnReferences:
                   - columnCounter: 4d3d4dbd-4021-4cfe-b482-ef70688df220
                     stepCounter: 8a09aa10-c627-42e7-8740-bf39e846490e
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "DVSTG_AW_SALESPERSON"."COMMISSIONPCT" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "DVSTG_AW_SALESPERSON"."COMMISSIONPCT"
+                  END
           - columnReference:
               columnCounter: e667a1ff-f9be-4d0a-a56d-2f7fef22536a
               stepCounter: 5cd40e21-d94c-4cbe-8406-62a9cf01e51e

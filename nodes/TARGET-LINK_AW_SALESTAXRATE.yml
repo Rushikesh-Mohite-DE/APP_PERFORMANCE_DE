@@ -82,7 +82,12 @@ steps:
               - columnReferences:
                   - columnCounter: 62078a11-7c3f-4538-b5c8-d069abd1f060
                     stepCounter: 144db9f0-2fba-415b-86ab-377e839d8993
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "DVSTG_AW_SALESTAXRATE"."TAXRATE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "DVSTG_AW_SALESTAXRATE"."TAXRATE"
+                  END
           - columnReference:
               columnCounter: 749bcd09-1731-43df-8ed0-c21949a8b932
               stepCounter: a53477a8-0a66-4b57-aae9-72c95e6892e5

@@ -29,7 +29,12 @@ steps:
               - columnReferences:
                   - columnCounter: 61735c04-ecc5-4cf2-b48f-e85433337766
                     stepCounter: a566a5fd-2614-4eaf-90eb-8d21affe7bf8
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "HUB_NW_ORDERS"."ORDERID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "HUB_NW_ORDERS"."ORDERID"
+                  END
           - columnReference:
               columnCounter: 2e03d928-26eb-471c-929c-4df9ca4f5998
               stepCounter: 2c2056f5-5d9a-4eff-a8e1-a905648f4283
@@ -43,7 +48,12 @@ steps:
               - columnReferences:
                   - columnCounter: 30b178d1-2cfb-40dd-b55e-722f23e5e9cf
                     stepCounter: a566a5fd-2614-4eaf-90eb-8d21affe7bf8
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "HUB_NW_ORDERS"."CUSTOMERID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "HUB_NW_ORDERS"."CUSTOMERID"
+                  END
           - columnReference:
               columnCounter: b69a2fcd-215f-47dd-8f9a-84835f56e839
               stepCounter: 2c2056f5-5d9a-4eff-a8e1-a905648f4283
@@ -57,7 +67,12 @@ steps:
               - columnReferences:
                   - columnCounter: 06b18546-31d3-4b97-8cef-8e3828f1a819
                     stepCounter: a566a5fd-2614-4eaf-90eb-8d21affe7bf8
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "HUB_NW_ORDERS"."EMPLOYEEID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "HUB_NW_ORDERS"."EMPLOYEEID"
+                  END
           - columnReference:
               columnCounter: 89a84ab2-c380-4749-b2d9-26e846dcee4a
               stepCounter: 2c2056f5-5d9a-4eff-a8e1-a905648f4283
@@ -71,7 +86,12 @@ steps:
               - columnReferences:
                   - columnCounter: ca8643b4-11c3-4d06-aa74-b7ecef83f925
                     stepCounter: 9fb5e790-e586-4ce5-b204-a68e77300a01
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_NW_ORDERS"."ORDERDATE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_NW_ORDERS"."ORDERDATE"
+                  END
           - columnReference:
               columnCounter: b1ac889b-4f56-4fc1-96d9-97361bf86f08
               stepCounter: 2c2056f5-5d9a-4eff-a8e1-a905648f4283
@@ -85,7 +105,12 @@ steps:
               - columnReferences:
                   - columnCounter: c77a1bd6-e388-44ab-bb29-d8b5766db97c
                     stepCounter: 9fb5e790-e586-4ce5-b204-a68e77300a01
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_NW_ORDERS"."REQUIREDDATE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_NW_ORDERS"."REQUIREDDATE"
+                  END
           - columnReference:
               columnCounter: 2336240f-905e-4bea-8320-31ab1346ddb3
               stepCounter: 2c2056f5-5d9a-4eff-a8e1-a905648f4283
@@ -99,7 +124,12 @@ steps:
               - columnReferences:
                   - columnCounter: 7badbeb0-b2a6-4717-a8ed-950bf84b7bf3
                     stepCounter: 9fb5e790-e586-4ce5-b204-a68e77300a01
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_NW_ORDERS"."SHIPPEDDATE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_NW_ORDERS"."SHIPPEDDATE"
+                  END
           - columnReference:
               columnCounter: 1b4c36e9-5910-40e2-b975-bc9b3b8b8561
               stepCounter: 2c2056f5-5d9a-4eff-a8e1-a905648f4283
@@ -113,7 +143,12 @@ steps:
               - columnReferences:
                   - columnCounter: 34006516-962b-4e05-af79-c4964b17a3e9
                     stepCounter: 9fb5e790-e586-4ce5-b204-a68e77300a01
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_NW_ORDERS"."SHIPVIA" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_NW_ORDERS"."SHIPVIA"
+                  END
           - columnReference:
               columnCounter: a52bc52c-6230-40fb-9003-c84fdf19bef2
               stepCounter: 2c2056f5-5d9a-4eff-a8e1-a905648f4283
@@ -127,7 +162,12 @@ steps:
               - columnReferences:
                   - columnCounter: 2201c73f-d219-4d2a-adb7-495904f09900
                     stepCounter: 9fb5e790-e586-4ce5-b204-a68e77300a01
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_NW_ORDERS"."FREIGHT" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_NW_ORDERS"."FREIGHT"
+                  END
           - columnReference:
               columnCounter: 57bb6a56-e8f6-4172-93ab-9f184563bc03
               stepCounter: 2c2056f5-5d9a-4eff-a8e1-a905648f4283
@@ -141,7 +181,12 @@ steps:
               - columnReferences:
                   - columnCounter: f1015364-8b38-412f-950f-264cd1484cb8
                     stepCounter: 9fb5e790-e586-4ce5-b204-a68e77300a01
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_NW_ORDERS"."SHIPNAME" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_NW_ORDERS"."SHIPNAME"
+                  END
           - columnReference:
               columnCounter: 31bc6dd1-6394-4792-97d8-796b9abc5565
               stepCounter: 2c2056f5-5d9a-4eff-a8e1-a905648f4283
@@ -155,7 +200,12 @@ steps:
               - columnReferences:
                   - columnCounter: 0eb90118-2ddd-43b6-a36a-14ee5718657b
                     stepCounter: 9fb5e790-e586-4ce5-b204-a68e77300a01
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_NW_ORDERS"."SHIPADDRESS" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_NW_ORDERS"."SHIPADDRESS"
+                  END
           - columnReference:
               columnCounter: 81307522-39d5-422c-a481-2810173dfc9b
               stepCounter: 2c2056f5-5d9a-4eff-a8e1-a905648f4283
@@ -169,7 +219,12 @@ steps:
               - columnReferences:
                   - columnCounter: 93708339-b09d-4d78-9bdf-199da7e387b4
                     stepCounter: 9fb5e790-e586-4ce5-b204-a68e77300a01
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_NW_ORDERS"."SHIPCITY" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_NW_ORDERS"."SHIPCITY"
+                  END
           - columnReference:
               columnCounter: 9e7d26ac-1465-4d05-8db3-8d4f4eb35798
               stepCounter: 2c2056f5-5d9a-4eff-a8e1-a905648f4283
@@ -183,7 +238,12 @@ steps:
               - columnReferences:
                   - columnCounter: 970c92a3-ac5b-4250-b24a-03123bff03af
                     stepCounter: 9fb5e790-e586-4ce5-b204-a68e77300a01
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_NW_ORDERS"."SHIPREGION" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_NW_ORDERS"."SHIPREGION"
+                  END
           - columnReference:
               columnCounter: c5b4f0ad-0e56-4e3b-8dfe-31880cc3a3ee
               stepCounter: 2c2056f5-5d9a-4eff-a8e1-a905648f4283
@@ -197,7 +257,12 @@ steps:
               - columnReferences:
                   - columnCounter: d0db1015-93c0-4d89-b6f6-ec064422e9a7
                     stepCounter: 9fb5e790-e586-4ce5-b204-a68e77300a01
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_NW_ORDERS"."SHIPPOSTALCODE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_NW_ORDERS"."SHIPPOSTALCODE"
+                  END
           - columnReference:
               columnCounter: cafd8aed-12d5-47d7-84a0-1e5a88b799ac
               stepCounter: 2c2056f5-5d9a-4eff-a8e1-a905648f4283
@@ -211,7 +276,12 @@ steps:
               - columnReferences:
                   - columnCounter: 15e63b0a-4d24-4090-96e4-9d92fdb2e02e
                     stepCounter: 9fb5e790-e586-4ce5-b204-a68e77300a01
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_NW_ORDERS"."SHIPCOUNTRY" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_NW_ORDERS"."SHIPCOUNTRY"
+                  END
           - columnReference:
               columnCounter: 7547f8f4-bc21-47c1-a55f-0dc800b97b23
               stepCounter: 2c2056f5-5d9a-4eff-a8e1-a905648f4283
@@ -225,7 +295,12 @@ steps:
               - columnReferences:
                   - columnCounter: 6291dc35-5305-49d3-b347-d05b1bcd7009
                     stepCounter: 9fb5e790-e586-4ce5-b204-a68e77300a01
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SATV0_NW_ORDERS"."ROW_HASH" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SATV0_NW_ORDERS"."ROW_HASH"
+                  END
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:

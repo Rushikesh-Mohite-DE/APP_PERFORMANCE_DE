@@ -45,7 +45,12 @@ steps:
               - columnReferences:
                   - columnCounter: 77854d3a-9358-44b8-8aa4-b8fad5259cfd
                     stepCounter: d9ee64a6-c76f-422f-a23e-50d8273c625b
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_CURRENCYRATE"."CURRENCYRATEID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_CURRENCYRATE"."CURRENCYRATEID"
+                  END
           - columnReference:
               columnCounter: 903576be-7bd9-43ba-a6e2-bdf4055f60ea
               stepCounter: f630f3e0-9df6-4f6b-8740-7fe4f4f23cd2
@@ -57,7 +62,12 @@ steps:
               - columnReferences:
                   - columnCounter: d6467a8f-23eb-42f9-b867-6615d69048f6
                     stepCounter: d9ee64a6-c76f-422f-a23e-50d8273c625b
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_CURRENCYRATE"."CURRENCYRATEDATE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_CURRENCYRATE"."CURRENCYRATEDATE"
+                  END
           - columnReference:
               columnCounter: 766dfae0-b8f8-40dd-9132-352b11e7a329
               stepCounter: f630f3e0-9df6-4f6b-8740-7fe4f4f23cd2
@@ -69,7 +79,12 @@ steps:
               - columnReferences:
                   - columnCounter: 60e977da-2fbf-4dd5-abc9-656f33ed6228
                     stepCounter: d9ee64a6-c76f-422f-a23e-50d8273c625b
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_CURRENCYRATE"."FROMCURRENCYCODE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_CURRENCYRATE"."FROMCURRENCYCODE"
+                  END
           - columnReference:
               columnCounter: 100c601a-b007-4efe-a3bd-b2eabf1290a1
               stepCounter: f630f3e0-9df6-4f6b-8740-7fe4f4f23cd2
@@ -81,7 +96,12 @@ steps:
               - columnReferences:
                   - columnCounter: 5ca13061-43ee-49f1-80ef-7325656fd719
                     stepCounter: d9ee64a6-c76f-422f-a23e-50d8273c625b
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_CURRENCYRATE"."TOCURRENCYCODE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_CURRENCYRATE"."TOCURRENCYCODE"
+                  END
           - columnReference:
               columnCounter: a0ef875a-4074-4452-9a0d-1329eac98d85
               stepCounter: f630f3e0-9df6-4f6b-8740-7fe4f4f23cd2
@@ -93,7 +113,12 @@ steps:
               - columnReferences:
                   - columnCounter: 87266c4e-50b8-4225-b9b6-36bd5c33a08c
                     stepCounter: d9ee64a6-c76f-422f-a23e-50d8273c625b
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_CURRENCYRATE"."AVERAGERATE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_CURRENCYRATE"."AVERAGERATE"
+                  END
           - columnReference:
               columnCounter: 61957466-37c9-40b3-8c7a-3c19c0d42b35
               stepCounter: f630f3e0-9df6-4f6b-8740-7fe4f4f23cd2
@@ -105,7 +130,12 @@ steps:
               - columnReferences:
                   - columnCounter: 23c0ba17-1492-45d3-83a1-32284b821205
                     stepCounter: d9ee64a6-c76f-422f-a23e-50d8273c625b
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_CURRENCYRATE"."ENDOFDAYRATE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_CURRENCYRATE"."ENDOFDAYRATE"
+                  END
           - columnReference:
               columnCounter: d9ae1ca0-dcd0-4e1e-909f-b1bbd8e496b8
               stepCounter: f630f3e0-9df6-4f6b-8740-7fe4f4f23cd2
@@ -117,7 +147,12 @@ steps:
               - columnReferences:
                   - columnCounter: ed74061e-dfd6-4e06-96df-a76162d6c78a
                     stepCounter: d9ee64a6-c76f-422f-a23e-50d8273c625b
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_CURRENCYRATE"."MODIFIEDDATE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_CURRENCYRATE"."MODIFIEDDATE"
+                  END
           - acceptedValues:
               strictMatch: true
               values: []

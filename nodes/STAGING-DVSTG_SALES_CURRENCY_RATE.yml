@@ -49,7 +49,12 @@ steps:
               - columnReferences:
                   - columnCounter: 6a89ec42-dd8b-4dd3-9ec3-43dcccf53ac1
                     stepCounter: 12eb8b12-ad10-434f-a404-10719a7687bf
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_CURRENCY_RATE"."ORIGINATING_CURRENCY_CODE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_CURRENCY_RATE"."ORIGINATING_CURRENCY_CODE"
+                  END
           - columnReference:
               columnCounter: cdaeb807-5aaf-4ace-b600-e50902093498
               stepCounter: 98b08145-5423-4cfd-917e-709c376929ea
@@ -61,7 +66,12 @@ steps:
               - columnReferences:
                   - columnCounter: 6928ca01-ad4e-467c-b829-f8f65fe5cb34
                     stepCounter: 12eb8b12-ad10-434f-a404-10719a7687bf
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_CURRENCY_RATE"."DESTINATION_CURRENCY_CODE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_CURRENCY_RATE"."DESTINATION_CURRENCY_CODE"
+                  END
           - columnReference:
               columnCounter: be92d695-380b-4c15-8bfb-b4f1bfc4d514
               stepCounter: 98b08145-5423-4cfd-917e-709c376929ea
@@ -73,7 +83,12 @@ steps:
               - columnReferences:
                   - columnCounter: 26465caf-3ef3-411d-8b22-c71fefdaa80d
                     stepCounter: 12eb8b12-ad10-434f-a404-10719a7687bf
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_CURRENCY_RATE"."EFFECTIVE_FROM_DATE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_CURRENCY_RATE"."EFFECTIVE_FROM_DATE"
+                  END
           - columnReference:
               columnCounter: e55cd62f-c130-4e39-8757-766248a2e3cb
               stepCounter: 98b08145-5423-4cfd-917e-709c376929ea
@@ -85,7 +100,12 @@ steps:
               - columnReferences:
                   - columnCounter: be840f88-6af1-4913-a1f9-f9b8a065f816
                     stepCounter: 12eb8b12-ad10-434f-a404-10719a7687bf
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_CURRENCY_RATE"."THRU_DATE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_CURRENCY_RATE"."THRU_DATE"
+                  END
           - columnReference:
               columnCounter: f87964d5-05fd-4eeb-a4d3-7414a184540a
               stepCounter: 98b08145-5423-4cfd-917e-709c376929ea
@@ -97,7 +117,12 @@ steps:
               - columnReferences:
                   - columnCounter: 10dada82-785f-48c7-b9f4-72dbda54851a
                     stepCounter: 12eb8b12-ad10-434f-a404-10719a7687bf
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_CURRENCY_RATE"."EXCHANGE_RATE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_CURRENCY_RATE"."EXCHANGE_RATE"
+                  END
           - columnReference:
               columnCounter: 21cfded9-ef24-4bab-ba8b-eaa7984c7ffe
               stepCounter: 98b08145-5423-4cfd-917e-709c376929ea
@@ -109,7 +134,12 @@ steps:
               - columnReferences:
                   - columnCounter: c7e6d6af-5c01-42ad-94f5-c8b7e0dc640c
                     stepCounter: 12eb8b12-ad10-434f-a404-10719a7687bf
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_CURRENCY_RATE"."EXCHANGE_RATE_MULTIPLIER" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_CURRENCY_RATE"."EXCHANGE_RATE_MULTIPLIER"
+                  END
           - columnReference:
               columnCounter: 918c57c8-a2aa-40ce-9448-2a5f0e2a34a8
               stepCounter: 98b08145-5423-4cfd-917e-709c376929ea
@@ -121,7 +151,12 @@ steps:
               - columnReferences:
                   - columnCounter: 9847ed3c-b4e7-4197-a375-0adace955e66
                     stepCounter: 12eb8b12-ad10-434f-a404-10719a7687bf
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_CURRENCY_RATE"."CREATING_EMPLOYEE_ID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_CURRENCY_RATE"."CREATING_EMPLOYEE_ID"
+                  END
           - columnReference:
               columnCounter: 2b5b81f2-d0e2-46a1-847c-ea52f3e15490
               stepCounter: 98b08145-5423-4cfd-917e-709c376929ea
@@ -133,7 +168,12 @@ steps:
               - columnReferences:
                   - columnCounter: dc9177e4-2475-4363-be87-82542779aea0
                     stepCounter: 12eb8b12-ad10-434f-a404-10719a7687bf
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_CURRENCY_RATE"."CREATED_DATETIME" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_CURRENCY_RATE"."CREATED_DATETIME"
+                  END
           - columnReference:
               columnCounter: 48e8a63c-ce46-4f95-b6e2-60dfec824827
               stepCounter: 98b08145-5423-4cfd-917e-709c376929ea
@@ -145,7 +185,12 @@ steps:
               - columnReferences:
                   - columnCounter: 175b787d-3f8a-4d9a-aa30-0c7c2ed0e3eb
                     stepCounter: 12eb8b12-ad10-434f-a404-10719a7687bf
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_CURRENCY_RATE"."LAST_CHANGE_EMPLOYEE_ID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_CURRENCY_RATE"."LAST_CHANGE_EMPLOYEE_ID"
+                  END
           - columnReference:
               columnCounter: 391be6f0-6f6d-47fe-83e8-70a89eb909f9
               stepCounter: 98b08145-5423-4cfd-917e-709c376929ea
@@ -157,7 +202,12 @@ steps:
               - columnReferences:
                   - columnCounter: 729205a5-6b63-4878-89f0-82979a31f7b5
                     stepCounter: 12eb8b12-ad10-434f-a404-10719a7687bf
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_CURRENCY_RATE"."LAST_CHANGE_DATETIME" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_CURRENCY_RATE"."LAST_CHANGE_DATETIME"
+                  END
           - acceptedValues:
               strictMatch: true
               values: []

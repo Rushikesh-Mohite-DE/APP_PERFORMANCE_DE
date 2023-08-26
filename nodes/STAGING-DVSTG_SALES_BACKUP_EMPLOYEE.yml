@@ -45,7 +45,12 @@ steps:
               - columnReferences:
                   - columnCounter: 4a21a28a-f714-4018-b50a-739fb76065be
                     stepCounter: 7bffbb0a-febe-456a-ae0b-34b7ca32b531
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_BACKUP_EMPLOYEE"."EMPLOYEE_ID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_BACKUP_EMPLOYEE"."EMPLOYEE_ID"
+                  END
           - columnReference:
               columnCounter: d583e379-d4bd-43d4-b1fc-287f44313a98
               stepCounter: 570f220c-e87e-4779-9c58-ec0dfeb59645
@@ -57,7 +62,12 @@ steps:
               - columnReferences:
                   - columnCounter: e5e355a8-98cc-49f6-a65d-fd16b4686219
                     stepCounter: 7bffbb0a-febe-456a-ae0b-34b7ca32b531
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_BACKUP_EMPLOYEE"."FIRST_NAME" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_BACKUP_EMPLOYEE"."FIRST_NAME"
+                  END
           - columnReference:
               columnCounter: 1e63267f-a3a6-4798-aebc-342f70fa9776
               stepCounter: 570f220c-e87e-4779-9c58-ec0dfeb59645
@@ -69,7 +79,12 @@ steps:
               - columnReferences:
                   - columnCounter: faca8b40-8969-43ec-9adf-5d82d4eda4dc
                     stepCounter: 7bffbb0a-febe-456a-ae0b-34b7ca32b531
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_BACKUP_EMPLOYEE"."MIDDLE_NAME" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_BACKUP_EMPLOYEE"."MIDDLE_NAME"
+                  END
           - columnReference:
               columnCounter: 849e4f66-8439-4fb3-81dc-425c9ad488f2
               stepCounter: 570f220c-e87e-4779-9c58-ec0dfeb59645
@@ -81,7 +96,12 @@ steps:
               - columnReferences:
                   - columnCounter: 8988833d-5119-4d43-80fb-13afd8105c73
                     stepCounter: 7bffbb0a-febe-456a-ae0b-34b7ca32b531
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_BACKUP_EMPLOYEE"."LAST_NAME" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_BACKUP_EMPLOYEE"."LAST_NAME"
+                  END
           - columnReference:
               columnCounter: 8debe747-4c0f-4eea-b7e9-04538d7266d8
               stepCounter: 570f220c-e87e-4779-9c58-ec0dfeb59645
@@ -93,7 +113,12 @@ steps:
               - columnReferences:
                   - columnCounter: 4995be9c-eb21-4479-8b48-e32dae75b189
                     stepCounter: 7bffbb0a-febe-456a-ae0b-34b7ca32b531
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_BACKUP_EMPLOYEE"."KNOWN_AS_NAME" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_BACKUP_EMPLOYEE"."KNOWN_AS_NAME"
+                  END
           - columnReference:
               columnCounter: 5ae2229d-f342-40c1-bfd0-1d12afb5ed1b
               stepCounter: 570f220c-e87e-4779-9c58-ec0dfeb59645
@@ -105,7 +130,12 @@ steps:
               - columnReferences:
                   - columnCounter: 8c36d9c4-2ac0-450a-b625-179cc2cc6f73
                     stepCounter: 7bffbb0a-febe-456a-ae0b-34b7ca32b531
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_BACKUP_EMPLOYEE"."SALUTATION" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_BACKUP_EMPLOYEE"."SALUTATION"
+                  END
           - columnReference:
               columnCounter: 769fa2c1-719d-41e2-96ad-0db5e340135d
               stepCounter: 570f220c-e87e-4779-9c58-ec0dfeb59645
@@ -117,7 +147,12 @@ steps:
               - columnReferences:
                   - columnCounter: f5d0a713-58b6-485a-a8d0-3f2f4c27f40c
                     stepCounter: 7bffbb0a-febe-456a-ae0b-34b7ca32b531
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_BACKUP_EMPLOYEE"."DATE_OF_BIRTH" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_BACKUP_EMPLOYEE"."DATE_OF_BIRTH"
+                  END
           - columnReference:
               columnCounter: 7a1aae08-fa85-4b75-9590-c8d13aaa0968
               stepCounter: 570f220c-e87e-4779-9c58-ec0dfeb59645
@@ -129,7 +164,12 @@ steps:
               - columnReferences:
                   - columnCounter: 9a579dc8-8506-4301-b549-e1afa33d4df0
                     stepCounter: 7bffbb0a-febe-456a-ae0b-34b7ca32b531
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_BACKUP_EMPLOYEE"."TERRITORY_ID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_BACKUP_EMPLOYEE"."TERRITORY_ID"
+                  END
           - columnReference:
               columnCounter: 4af969a7-dd49-4d6c-9b1b-78933e842df5
               stepCounter: 570f220c-e87e-4779-9c58-ec0dfeb59645
@@ -141,7 +181,12 @@ steps:
               - columnReferences:
                   - columnCounter: 3b3be43b-72d1-42d9-b912-8d0c48d34586
                     stepCounter: 7bffbb0a-febe-456a-ae0b-34b7ca32b531
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_BACKUP_EMPLOYEE"."HOME_ADDRESS_ID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_BACKUP_EMPLOYEE"."HOME_ADDRESS_ID"
+                  END
           - columnReference:
               columnCounter: 39185a7b-8d63-4039-9878-68c60da8aa2d
               stepCounter: 570f220c-e87e-4779-9c58-ec0dfeb59645
@@ -153,7 +198,12 @@ steps:
               - columnReferences:
                   - columnCounter: 5d1fbc0e-84df-4a32-8f4a-1b647a5f371d
                     stepCounter: 7bffbb0a-febe-456a-ae0b-34b7ca32b531
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_BACKUP_EMPLOYEE"."MAIL_ADDRESS_ID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_BACKUP_EMPLOYEE"."MAIL_ADDRESS_ID"
+                  END
           - columnReference:
               columnCounter: 62c22cad-d4e3-419b-aee5-c1d306a55881
               stepCounter: 570f220c-e87e-4779-9c58-ec0dfeb59645
@@ -165,7 +215,12 @@ steps:
               - columnReferences:
                   - columnCounter: 8d4236e9-6584-445e-a64b-85cb2a7f19ce
                     stepCounter: 7bffbb0a-febe-456a-ae0b-34b7ca32b531
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_BACKUP_EMPLOYEE"."COMMENCEMENT_DATE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_BACKUP_EMPLOYEE"."COMMENCEMENT_DATE"
+                  END
           - columnReference:
               columnCounter: 745c359c-41c1-4284-8061-2ff11be7210a
               stepCounter: 570f220c-e87e-4779-9c58-ec0dfeb59645
@@ -177,7 +232,12 @@ steps:
               - columnReferences:
                   - columnCounter: 29d19c3a-eed2-4ef9-b322-f17e9b04e11f
                     stepCounter: 7bffbb0a-febe-456a-ae0b-34b7ca32b531
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_BACKUP_EMPLOYEE"."TERMINATION_DATE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_BACKUP_EMPLOYEE"."TERMINATION_DATE"
+                  END
           - columnReference:
               columnCounter: e7019614-3403-484c-b37b-6bd975461f0b
               stepCounter: 570f220c-e87e-4779-9c58-ec0dfeb59645
@@ -189,7 +249,12 @@ steps:
               - columnReferences:
                   - columnCounter: 1c964e58-5d42-466d-bfc1-edeec12fa2b6
                     stepCounter: 7bffbb0a-febe-456a-ae0b-34b7ca32b531
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_BACKUP_EMPLOYEE"."CURRENT_POSITION_TITLE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_BACKUP_EMPLOYEE"."CURRENT_POSITION_TITLE"
+                  END
           - columnReference:
               columnCounter: b77bdf83-12b9-4621-8cf1-a5d3cc000032
               stepCounter: 570f220c-e87e-4779-9c58-ec0dfeb59645
@@ -201,7 +266,12 @@ steps:
               - columnReferences:
                   - columnCounter: 1dd89d8f-38bb-4424-b8f9-77bbf123583a
                     stepCounter: 7bffbb0a-febe-456a-ae0b-34b7ca32b531
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_BACKUP_EMPLOYEE"."CURRENT_POSITION_START_DATE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_BACKUP_EMPLOYEE"."CURRENT_POSITION_START_DATE"
+                  END
           - columnReference:
               columnCounter: 4aea5245-7be6-40be-91ba-90c290ab1760
               stepCounter: 570f220c-e87e-4779-9c58-ec0dfeb59645
@@ -213,7 +283,12 @@ steps:
               - columnReferences:
                   - columnCounter: 83901973-e8c5-4f0c-b52c-17afb7ed09f6
                     stepCounter: 7bffbb0a-febe-456a-ae0b-34b7ca32b531
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_BACKUP_EMPLOYEE"."SALES_REP_FLAG" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_BACKUP_EMPLOYEE"."SALES_REP_FLAG"
+                  END
           - columnReference:
               columnCounter: 51ae7fc5-93fa-4098-8aeb-d710b7bf8132
               stepCounter: 570f220c-e87e-4779-9c58-ec0dfeb59645
@@ -225,7 +300,12 @@ steps:
               - columnReferences:
                   - columnCounter: 84a7a5f1-6f32-4ae2-bcd8-29f55f11683f
                     stepCounter: 7bffbb0a-febe-456a-ae0b-34b7ca32b531
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_BACKUP_EMPLOYEE"."BUYER_FLAG" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_BACKUP_EMPLOYEE"."BUYER_FLAG"
+                  END
           - columnReference:
               columnCounter: 9b4f07bc-207a-43c9-abbc-41561d1f1429
               stepCounter: 570f220c-e87e-4779-9c58-ec0dfeb59645
@@ -237,7 +317,12 @@ steps:
               - columnReferences:
                   - columnCounter: 8c26e241-3072-487d-9da9-dc8d5e86ea03
                     stepCounter: 7bffbb0a-febe-456a-ae0b-34b7ca32b531
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_BACKUP_EMPLOYEE"."MANAGER_FLAG" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_BACKUP_EMPLOYEE"."MANAGER_FLAG"
+                  END
           - columnReference:
               columnCounter: cbbdc646-1155-485c-a9a3-dfc01584403a
               stepCounter: 570f220c-e87e-4779-9c58-ec0dfeb59645
@@ -249,7 +334,12 @@ steps:
               - columnReferences:
                   - columnCounter: 2e507517-7ad2-4c6a-8e7a-4581c1668a7d
                     stepCounter: 7bffbb0a-febe-456a-ae0b-34b7ca32b531
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_BACKUP_EMPLOYEE"."FULL_TIME_FLAG" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_BACKUP_EMPLOYEE"."FULL_TIME_FLAG"
+                  END
           - columnReference:
               columnCounter: 4d32c2fc-0e78-4ba0-847c-8a76e0d1c270
               stepCounter: 570f220c-e87e-4779-9c58-ec0dfeb59645
@@ -261,7 +351,12 @@ steps:
               - columnReferences:
                   - columnCounter: 156e5d1e-8de8-4ad1-bb7f-a0a5bb2361ef
                     stepCounter: 7bffbb0a-febe-456a-ae0b-34b7ca32b531
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_BACKUP_EMPLOYEE"."CREATING_EMPLOYEE_ID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_BACKUP_EMPLOYEE"."CREATING_EMPLOYEE_ID"
+                  END
           - columnReference:
               columnCounter: bef2f01b-7efa-4b98-9157-b9cf430f21e7
               stepCounter: 570f220c-e87e-4779-9c58-ec0dfeb59645
@@ -273,7 +368,12 @@ steps:
               - columnReferences:
                   - columnCounter: dab1dd37-ed00-46c4-8e15-5b55cbc8d9e3
                     stepCounter: 7bffbb0a-febe-456a-ae0b-34b7ca32b531
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_BACKUP_EMPLOYEE"."CREATED_DATETIME" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_BACKUP_EMPLOYEE"."CREATED_DATETIME"
+                  END
           - columnReference:
               columnCounter: d741a312-fa14-4ce9-991d-d8725cda2791
               stepCounter: 570f220c-e87e-4779-9c58-ec0dfeb59645
@@ -285,7 +385,12 @@ steps:
               - columnReferences:
                   - columnCounter: 28215b20-8a52-4eec-be30-5e73944e4f50
                     stepCounter: 7bffbb0a-febe-456a-ae0b-34b7ca32b531
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_BACKUP_EMPLOYEE"."LAST_CHANGE_EMPLOYEE_ID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_BACKUP_EMPLOYEE"."LAST_CHANGE_EMPLOYEE_ID"
+                  END
           - columnReference:
               columnCounter: 6e7632a4-82a9-4a07-b2d5-a59cd9f9db8a
               stepCounter: 570f220c-e87e-4779-9c58-ec0dfeb59645
@@ -297,7 +402,12 @@ steps:
               - columnReferences:
                   - columnCounter: c159bfd2-8b9e-482b-a25f-8a604ee41bae
                     stepCounter: 7bffbb0a-febe-456a-ae0b-34b7ca32b531
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "SALES_LOAD_BACKUP_EMPLOYEE"."LAST_CHANGE_DATETIME" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "SALES_LOAD_BACKUP_EMPLOYEE"."LAST_CHANGE_DATETIME"
+                  END
           - acceptedValues:
               strictMatch: true
               values: []

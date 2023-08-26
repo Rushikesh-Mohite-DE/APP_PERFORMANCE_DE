@@ -1,0 +1,212 @@
+steps:
+  STG_DEMOGRAPHICS-988da99a-a3f1-4258-affa-218997856db5:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGING
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 80ea5dde-eb99-4c0d-864c-c87fc0b8c865
+              stepCounter: 988da99a-a3f1-4258-affa-218997856db5
+            dataType: VARCHAR(16777216)
+            description: ISO-3166-1 code for geography of record
+            hashColumns: []
+            hashDetails: null
+            name: ISO3166_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 23312fbb-c9c7-4cca-955a-da0ce851715c
+                    stepCounter: 92686e97-5f48-4267-8fd2-028f1d846bc4
+                transform: ""
+          - columnReference:
+              columnCounter: 410649e5-b2d7-4467-ad42-485380dc936d
+              stepCounter: 988da99a-a3f1-4258-affa-218997856db5
+            dataType: VARCHAR(16777216)
+            description: ISO-3166-2 code for geography of record
+            hashColumns: []
+            hashDetails: null
+            name: ISO3166_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e74d7b9b-419a-4bb3-8075-426ee65c8094
+                    stepCounter: 92686e97-5f48-4267-8fd2-028f1d846bc4
+                transform: ""
+          - columnReference:
+              columnCounter: b8bcee88-d473-45d6-bb7a-2316f9aed323
+              stepCounter: 988da99a-a3f1-4258-affa-218997856db5
+            dataType: VARCHAR(16777216)
+            description: County FIPS code
+            hashColumns: []
+            hashDetails: null
+            name: FIPS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8fb0a00f-5dbf-49bb-aa73-98322ec69c03
+                    stepCounter: 25baa641-c3bf-43ee-95b9-90c02b0bd748
+                transform: ""
+          - columnReference:
+              columnCounter: 16fbb704-bc8b-43ff-b2ff-c4ca86ef544e
+              stepCounter: 988da99a-a3f1-4258-affa-218997856db5
+            dataType: FLOAT
+            description: Latitude of the county
+            hashColumns: []
+            hashDetails: null
+            name: LATITUDE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bd13bf3a-35a2-4d53-b930-4a0fff9d7d73
+                    stepCounter: 25baa641-c3bf-43ee-95b9-90c02b0bd748
+                transform: ""
+          - columnReference:
+              columnCounter: 43f6e4c2-e02a-4138-8940-d82bf3a73340
+              stepCounter: 988da99a-a3f1-4258-affa-218997856db5
+            dataType: FLOAT
+            description: Longitude of the county
+            hashColumns: []
+            hashDetails: null
+            name: LONGITUDE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bab351db-01b1-4a7b-9d01-22bbb04d309d
+                    stepCounter: 25baa641-c3bf-43ee-95b9-90c02b0bd748
+                transform: ""
+          - columnReference:
+              columnCounter: a55e5dfb-1110-4614-b99d-309836c69e7c
+              stepCounter: 988da99a-a3f1-4258-affa-218997856db5
+            dataType: VARCHAR(16777216)
+            description: US Census State Code
+            hashColumns: []
+            hashDetails: null
+            name: STATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 61bae6cb-737b-4c83-abfd-663eb17453e0
+                    stepCounter: 25baa641-c3bf-43ee-95b9-90c02b0bd748
+                transform: ""
+          - columnReference:
+              columnCounter: 8f29fcb1-57cd-40e9-b1b5-4295f58aa8f9
+              stepCounter: 988da99a-a3f1-4258-affa-218997856db5
+            dataType: VARCHAR(16777216)
+            description: US Census County Name
+            hashColumns: []
+            hashDetails: null
+            name: COUNTY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a3c3252a-c7e8-41a0-82d9-c2bdbfd204bb
+                    stepCounter: 25baa641-c3bf-43ee-95b9-90c02b0bd748
+                transform: ""
+          - columnReference:
+              columnCounter: dbe0d397-4001-4bfc-a567-59d18ed526cf
+              stepCounter: 988da99a-a3f1-4258-affa-218997856db5
+            dataType: NUMBER(38,0)
+            description: Total population for the FIPS code
+            hashColumns: []
+            hashDetails: null
+            name: TOTAL_POPULATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fc3b116c-6eed-4dc1-b583-6757a60e4c0e
+                    stepCounter: 25baa641-c3bf-43ee-95b9-90c02b0bd748
+                transform: ""
+          - columnReference:
+              columnCounter: d17ca3ee-e418-448f-a378-f94b5af988a8
+              stepCounter: 988da99a-a3f1-4258-affa-218997856db5
+            dataType: NUMBER(38,0)
+            description: Total male population for the FIPS code
+            hashColumns: []
+            hashDetails: null
+            name: TOTAL_MALE_POPULATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 691036d7-0f18-45b2-b353-23509690d921
+                    stepCounter: 25baa641-c3bf-43ee-95b9-90c02b0bd748
+                transform: ""
+          - columnReference:
+              columnCounter: 642aa3ae-60bf-4db5-90b8-e3889110ef2c
+              stepCounter: 988da99a-a3f1-4258-affa-218997856db5
+            dataType: NUMBER(38,0)
+            description: Total female population for the FIPS code
+            hashColumns: []
+            hashDetails: null
+            name: TOTAL_FEMALE_POPULATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2cfbe1bf-ae1c-4885-9510-7a5cadb75158
+                    stepCounter: 25baa641-c3bf-43ee-95b9-90c02b0bd748
+                transform: ""
+          - columnReference:
+              columnCounter: 6191f132-8c6c-4351-b626-ec6fb109815e
+              stepCounter: 988da99a-a3f1-4258-affa-218997856db5
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: GH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8a4692e3-1dd2-438c-ab6c-7a0bab2e67e9
+                    stepCounter: 25baa641-c3bf-43ee-95b9-90c02b0bd748
+                transform: ""
+          - columnReference:
+              columnCounter: a27b5f2c-0f62-463e-a31d-bc7db0692ea3
+              stepCounter: 988da99a-a3f1-4258-affa-218997856db5
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROW_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6b166cb2-09fa-484c-b586-a51900cc7d12
+                    stepCounter: 25baa641-c3bf-43ee-95b9-90c02b0bd748
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              HUB_DEMOGRAPHICS: 92686e97-5f48-4267-8fd2-028f1d846bc4
+              SATV0_DEMOGRAPHICS: 25baa641-c3bf-43ee-95b9-90c02b0bd748
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TARGET
+                nodeName: HUB_DEMOGRAPHICS
+              - locationName: TARGET
+                nodeName: SATV0_DEMOGRAPHICS
+            join:
+              joinCondition: |-
+                FROM {{ ref('TARGET', 'HUB_DEMOGRAPHICS') }} "HUB_DEMOGRAPHICS"
+                INNER JOIN {{ ref('TARGET', 'SATV0_DEMOGRAPHICS') }} "SATV0_DEMOGRAPHICS"
+                ON "HUB_DEMOGRAPHICS".HK_DEMOGRAPHICS = "SATV0_DEMOGRAPHICS".HK_DEMOGRAPHICS
+            name: STG_DEMOGRAPHICS
+            noLinkRefs: []
+      name: STG_DEMOGRAPHICS
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 988da99a-a3f1-4258-affa-218997856db5

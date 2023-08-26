@@ -49,7 +49,12 @@ steps:
               - columnReferences:
                   - columnCounter: 631035fb-b0a8-4e3a-9a73-5b5634cee357
                     stepCounter: 86a5e84a-b4e4-4b29-b56d-2a852f3d7583
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_BILLOFMATERIALS"."BILLOFMATERIALSID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_BILLOFMATERIALS"."BILLOFMATERIALSID"
+                  END
           - columnReference:
               columnCounter: fef785b6-5ba3-4efc-9ef1-b201fdf6c47f
               stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
@@ -61,7 +66,12 @@ steps:
               - columnReferences:
                   - columnCounter: 7263b313-8a69-41fb-ad98-18366ac2cccd
                     stepCounter: 86a5e84a-b4e4-4b29-b56d-2a852f3d7583
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_BILLOFMATERIALS"."PRODUCTASSEMBLYID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_BILLOFMATERIALS"."PRODUCTASSEMBLYID"
+                  END
           - columnReference:
               columnCounter: 991d17f7-766b-431d-af1b-5537c30b6347
               stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
@@ -73,7 +83,12 @@ steps:
               - columnReferences:
                   - columnCounter: 331f2434-6c6a-4a2f-9c1a-14a80ed17080
                     stepCounter: 86a5e84a-b4e4-4b29-b56d-2a852f3d7583
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_BILLOFMATERIALS"."COMPONENTID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_BILLOFMATERIALS"."COMPONENTID"
+                  END
           - columnReference:
               columnCounter: be398c37-76ed-4414-b983-f16738f9abfc
               stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
@@ -85,7 +100,12 @@ steps:
               - columnReferences:
                   - columnCounter: 01017ea4-8ab3-4c0a-bc5f-bfd158ee440b
                     stepCounter: 86a5e84a-b4e4-4b29-b56d-2a852f3d7583
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_BILLOFMATERIALS"."STARTDATE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_BILLOFMATERIALS"."STARTDATE"
+                  END
           - columnReference:
               columnCounter: 523afda7-aa57-4ab6-9e29-525a1982d155
               stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
@@ -97,7 +117,12 @@ steps:
               - columnReferences:
                   - columnCounter: 04d1bd15-fdc3-4e6b-9485-5d1446f6bc23
                     stepCounter: 86a5e84a-b4e4-4b29-b56d-2a852f3d7583
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_BILLOFMATERIALS"."ENDDATE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_BILLOFMATERIALS"."ENDDATE"
+                  END
           - columnReference:
               columnCounter: b94e9d95-3e2c-432e-9373-881cddbe4c4e
               stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
@@ -109,7 +134,12 @@ steps:
               - columnReferences:
                   - columnCounter: 44b670b3-c871-4e34-9215-e1a96ac3efb8
                     stepCounter: 86a5e84a-b4e4-4b29-b56d-2a852f3d7583
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_BILLOFMATERIALS"."UNITMEASURECODE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_BILLOFMATERIALS"."UNITMEASURECODE"
+                  END
           - columnReference:
               columnCounter: ad673452-2fee-4b68-91ec-0ac9bb0e2931
               stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
@@ -121,7 +151,12 @@ steps:
               - columnReferences:
                   - columnCounter: 8fae2b78-f0cc-46ed-a8b3-040769c69a2d
                     stepCounter: 86a5e84a-b4e4-4b29-b56d-2a852f3d7583
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_BILLOFMATERIALS"."BOMLEVEL" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_BILLOFMATERIALS"."BOMLEVEL"
+                  END
           - columnReference:
               columnCounter: 5317b1c9-5d8d-4104-8454-b677cc759fc6
               stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
@@ -133,7 +168,12 @@ steps:
               - columnReferences:
                   - columnCounter: 67e0b7dd-69e8-47fd-a41e-4704397e0a2f
                     stepCounter: 86a5e84a-b4e4-4b29-b56d-2a852f3d7583
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_BILLOFMATERIALS"."PERASSEMBLYQTY" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_BILLOFMATERIALS"."PERASSEMBLYQTY"
+                  END
           - columnReference:
               columnCounter: 5d0ab978-07c7-4439-8d19-56eb465a3729
               stepCounter: ea0b7ffb-794a-4538-aee8-8bed3aecade9
@@ -145,7 +185,12 @@ steps:
               - columnReferences:
                   - columnCounter: 7fc04503-45fd-4346-949c-90c6ce663cc1
                     stepCounter: 86a5e84a-b4e4-4b29-b56d-2a852f3d7583
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_BILLOFMATERIALS"."MODIFIEDDATE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_BILLOFMATERIALS"."MODIFIEDDATE"
+                  END
           - acceptedValues:
               strictMatch: true
               values: []

@@ -83,7 +83,12 @@ steps:
               - columnReferences:
                   - columnCounter: 7fe9c349-63df-4697-924b-543a1679d87f
                     stepCounter: f839ec19-0806-49e9-a6f8-7d05ef886083
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_SALESPERSON"."BONUS" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_SALESPERSON"."BONUS"
+                  END
           - columnReference:
               columnCounter: 4d3d4dbd-4021-4cfe-b482-ef70688df220
               stepCounter: 8a09aa10-c627-42e7-8740-bf39e846490e
@@ -95,7 +100,12 @@ steps:
               - columnReferences:
                   - columnCounter: d2a98a75-c647-4c13-ac6b-4eb9e2d27a59
                     stepCounter: f839ec19-0806-49e9-a6f8-7d05ef886083
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_SALESPERSON"."COMMISSIONPCT" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_SALESPERSON"."COMMISSIONPCT"
+                  END
           - columnReference:
               columnCounter: 333e712e-e26c-46a9-9e91-322f8bf3904e
               stepCounter: 8a09aa10-c627-42e7-8740-bf39e846490e
@@ -107,7 +117,12 @@ steps:
               - columnReferences:
                   - columnCounter: eaa8a9b1-b05e-461d-a46e-6ab3d8b63606
                     stepCounter: f839ec19-0806-49e9-a6f8-7d05ef886083
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_SALESPERSON"."SALESYTD" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_SALESPERSON"."SALESYTD"
+                  END
           - columnReference:
               columnCounter: 1cf241c6-5cb3-4ecf-a5c7-aef17e6af8d3
               stepCounter: 8a09aa10-c627-42e7-8740-bf39e846490e
@@ -119,7 +134,12 @@ steps:
               - columnReferences:
                   - columnCounter: 4801286b-7a5c-4362-9b9e-f05f4ddd25ca
                     stepCounter: f839ec19-0806-49e9-a6f8-7d05ef886083
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_SALESPERSON"."SALESLASTYEAR" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_SALESPERSON"."SALESLASTYEAR"
+                  END
           - columnReference:
               columnCounter: 49b3e3e4-e935-43e5-a75d-6227c29c865f
               stepCounter: 8a09aa10-c627-42e7-8740-bf39e846490e

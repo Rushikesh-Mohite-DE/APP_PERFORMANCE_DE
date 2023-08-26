@@ -43,7 +43,16 @@ steps:
               - columnReferences:
                   - columnCounter: 21d819b2-c92f-4982-a91c-d0f4a4244118
                     stepCounter: 8fd8ba7c-b0b0-4972-b4d0-0e1d9e15bbc1
-                transform: ""
+                transform: |-
+                  CASE
+                      WHEN TRY_CAST(SUBSTRING("SATV0_PERBANK_USERS"."USERNAME", 5) AS INTEGER) < 100 THEN 'less than hundred'
+                      WHEN TRY_CAST(SUBSTRING("SATV0_PERBANK_USERS"."USERNAME", 5) AS INTEGER) BETWEEN 100 AND 199 THEN 'hundred range'
+                      WHEN TRY_CAST(SUBSTRING("SATV0_PERBANK_USERS"."USERNAME", 5) AS INTEGER) BETWEEN 200 AND 299 THEN 'two hundred range'
+                      WHEN TRY_CAST(SUBSTRING("SATV0_PERBANK_USERS"."USERNAME", 5) AS INTEGER) BETWEEN 300 AND 399 THEN 'three hundred range'
+                      WHEN TRY_CAST(SUBSTRING("SATV0_PERBANK_USERS"."USERNAME", 5) AS INTEGER) BETWEEN 400 AND 499 THEN 'four hundred range'
+                      WHEN TRY_CAST(SUBSTRING("SATV0_PERBANK_USERS"."USERNAME", 5) AS INTEGER) >= 500 THEN '500 and above'
+                      ELSE 'unknown'
+                  END
           - columnReference:
               columnCounter: f6b13795-9368-473f-9493-7d0da0229153
               stepCounter: 02766fa7-a143-4e3b-8a62-3c5da875b03b

@@ -3,7 +3,7 @@ steps:
     operation:
       config:
         postSQL: ""
-        preSQL: ""
+        preSQL: TRUNCATE TABLE {{ ref('TARGET', 'DIM_IMPORTERS_PRODUCT') }}
         testsEnabled: true
       database: ""
       deployEnabled: true

@@ -69,7 +69,12 @@ steps:
               - columnReferences:
                   - columnCounter: 46bdaf1c-4333-495a-ac45-b6a661f011db
                     stepCounter: 79802b98-d66e-472d-9c6b-66b2a337980b
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_EMPLOYEEPAYHISTORY"."RATE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_EMPLOYEEPAYHISTORY"."RATE"
+                  END
           - columnReference:
               columnCounter: 50eeaa02-e36c-495e-b33e-fcc72fb1fa0d
               stepCounter: ea440c7a-0d29-444e-9793-f2b2f7ed5c7b

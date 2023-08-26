@@ -49,7 +49,12 @@ steps:
               - columnReferences:
                   - columnCounter: e15d9470-29f2-4566-9d38-1cd4b5d10667
                     stepCounter: 225aad74-8a02-49ef-93be-edcd01d0f065
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PRODUCTMODELPRODUCTDESCRIPTIONCULTURE"."PRODUCTMODELID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PRODUCTMODELPRODUCTDESCRIPTIONCULTURE"."PRODUCTMODELID"
+                  END
           - columnReference:
               columnCounter: 13080e17-382d-49a8-826d-61e0b31adce6
               stepCounter: f78b9b04-6ed6-47cb-a646-3d71c3e10035
@@ -61,7 +66,12 @@ steps:
               - columnReferences:
                   - columnCounter: 389e9c12-31c0-47ba-9fe9-703e345f4ef0
                     stepCounter: 225aad74-8a02-49ef-93be-edcd01d0f065
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PRODUCTMODELPRODUCTDESCRIPTIONCULTURE"."PRODUCTDESCRIPTIONID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PRODUCTMODELPRODUCTDESCRIPTIONCULTURE"."PRODUCTDESCRIPTIONID"
+                  END
           - columnReference:
               columnCounter: 3ac4086d-db62-4fa2-aa9a-5475dd82eb66
               stepCounter: f78b9b04-6ed6-47cb-a646-3d71c3e10035
@@ -73,7 +83,12 @@ steps:
               - columnReferences:
                   - columnCounter: 530c79c5-42f7-4e38-bf5f-54794fc64a25
                     stepCounter: 225aad74-8a02-49ef-93be-edcd01d0f065
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PRODUCTMODELPRODUCTDESCRIPTIONCULTURE"."CULTUREID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PRODUCTMODELPRODUCTDESCRIPTIONCULTURE"."CULTUREID"
+                  END
           - columnReference:
               columnCounter: 9e378533-cb1d-40da-b6ad-db36a0cb8b70
               stepCounter: f78b9b04-6ed6-47cb-a646-3d71c3e10035
@@ -85,7 +100,12 @@ steps:
               - columnReferences:
                   - columnCounter: 97ab68f0-15c6-45f6-ac4b-9f3fdc783040
                     stepCounter: 225aad74-8a02-49ef-93be-edcd01d0f065
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PRODUCTMODELPRODUCTDESCRIPTIONCULTURE"."MODIFIEDDATE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PRODUCTMODELPRODUCTDESCRIPTIONCULTURE"."MODIFIEDDATE"
+                  END
           - acceptedValues:
               strictMatch: true
               values: []

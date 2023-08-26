@@ -93,7 +93,12 @@ steps:
               - columnReferences:
                   - columnCounter: 329c9347-5b21-4500-b66a-80c4a6ed1d9d
                     stepCounter: 845ecd73-4582-464c-92c3-4881085ad0ad
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_SALESTERRITORY"."SALESYTD" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_SALESTERRITORY"."SALESYTD"
+                  END
           - columnReference:
               columnCounter: 4f419336-c54e-478f-b5e9-b07e7fef40fd
               stepCounter: cc7d4ccd-1d58-45c5-9b57-cd35925295ee
@@ -105,7 +110,12 @@ steps:
               - columnReferences:
                   - columnCounter: 14b52562-0683-4b42-8aa1-f3ff336c98e9
                     stepCounter: 845ecd73-4582-464c-92c3-4881085ad0ad
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_SALESTERRITORY"."SALESLASTYEAR" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_SALESTERRITORY"."SALESLASTYEAR"
+                  END
           - columnReference:
               columnCounter: 10cc60df-dfa0-4cbb-b052-6e3d4b97f07c
               stepCounter: cc7d4ccd-1d58-45c5-9b57-cd35925295ee
@@ -117,7 +127,12 @@ steps:
               - columnReferences:
                   - columnCounter: d60fd253-6c0a-44c2-8d9c-9340f9e6f7a4
                     stepCounter: 845ecd73-4582-464c-92c3-4881085ad0ad
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_SALESTERRITORY"."COSTYTD" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_SALESTERRITORY"."COSTYTD"
+                  END
           - columnReference:
               columnCounter: 8d4aadc1-4c19-47e0-98ef-64d71043deb7
               stepCounter: cc7d4ccd-1d58-45c5-9b57-cd35925295ee
@@ -129,7 +144,12 @@ steps:
               - columnReferences:
                   - columnCounter: 11853f2d-df40-4c1b-a9a9-93260724b416
                     stepCounter: 845ecd73-4582-464c-92c3-4881085ad0ad
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_SALESTERRITORY"."COSTLASTYEAR" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_SALESTERRITORY"."COSTLASTYEAR"
+                  END
           - columnReference:
               columnCounter: 38d1ab7e-5ad6-4e98-8f7a-62e9913fcdad
               stepCounter: cc7d4ccd-1d58-45c5-9b57-cd35925295ee

@@ -49,7 +49,12 @@ steps:
               - columnReferences:
                   - columnCounter: fc4f3a64-76b1-4027-8bde-e38e7042ffae
                     stepCounter: ccf242e9-0605-43d9-8f50-2593c59e03c6
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_ORDERS"."ORDERID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_ORDERS"."ORDERID"
+                  END
           - columnReference:
               columnCounter: 3f65d262-c8d2-41d9-a1e1-20468cd7ef9d
               stepCounter: 0710082f-01ac-4023-8601-cf9c4ac6de6e
@@ -61,7 +66,12 @@ steps:
               - columnReferences:
                   - columnCounter: a845f185-9e0f-430c-a6cd-095c87793b56
                     stepCounter: ccf242e9-0605-43d9-8f50-2593c59e03c6
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_ORDERS"."CUSTOMERID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_ORDERS"."CUSTOMERID"
+                  END
           - columnReference:
               columnCounter: 29580c3f-ffc2-4f6f-a7bc-fb8c50d34a84
               stepCounter: 0710082f-01ac-4023-8601-cf9c4ac6de6e
@@ -73,7 +83,12 @@ steps:
               - columnReferences:
                   - columnCounter: f580669e-cda2-4cac-8434-b4952e0e0da0
                     stepCounter: ccf242e9-0605-43d9-8f50-2593c59e03c6
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_ORDERS"."EMPLOYEEID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_ORDERS"."EMPLOYEEID"
+                  END
           - columnReference:
               columnCounter: 79922066-fc61-4a49-84b5-15fb19eabeed
               stepCounter: 0710082f-01ac-4023-8601-cf9c4ac6de6e
@@ -85,7 +100,12 @@ steps:
               - columnReferences:
                   - columnCounter: 3ed7dae3-a6f7-4605-8169-593a326624ad
                     stepCounter: ccf242e9-0605-43d9-8f50-2593c59e03c6
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_ORDERS"."ORDERDATE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_ORDERS"."ORDERDATE"
+                  END
           - columnReference:
               columnCounter: 58c71cd5-6cd3-46e8-bf29-ad08643c8626
               stepCounter: 0710082f-01ac-4023-8601-cf9c4ac6de6e
@@ -97,7 +117,12 @@ steps:
               - columnReferences:
                   - columnCounter: 861d3d54-7cd7-4ccc-a12c-011dd126acfb
                     stepCounter: ccf242e9-0605-43d9-8f50-2593c59e03c6
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_ORDERS"."REQUIREDDATE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_ORDERS"."REQUIREDDATE"
+                  END
           - columnReference:
               columnCounter: 771fa7dc-d1fb-4e5b-a886-fc94d2986797
               stepCounter: 0710082f-01ac-4023-8601-cf9c4ac6de6e
@@ -109,7 +134,12 @@ steps:
               - columnReferences:
                   - columnCounter: c895a978-0ad0-4666-bb9c-3d42b7ff52b0
                     stepCounter: ccf242e9-0605-43d9-8f50-2593c59e03c6
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_ORDERS"."SHIPPEDDATE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_ORDERS"."SHIPPEDDATE"
+                  END
           - columnReference:
               columnCounter: 9a7b2118-80cd-4758-92f5-b96a8815c44a
               stepCounter: 0710082f-01ac-4023-8601-cf9c4ac6de6e
@@ -121,7 +151,12 @@ steps:
               - columnReferences:
                   - columnCounter: 75251cda-280b-4fa7-9533-4cba172fc77d
                     stepCounter: ccf242e9-0605-43d9-8f50-2593c59e03c6
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_ORDERS"."SHIPVIA" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_ORDERS"."SHIPVIA"
+                  END
           - columnReference:
               columnCounter: 9111a2f6-9e55-414c-96a2-78a31cf9aab6
               stepCounter: 0710082f-01ac-4023-8601-cf9c4ac6de6e
@@ -133,7 +168,12 @@ steps:
               - columnReferences:
                   - columnCounter: f0a480c3-1efc-49bb-bea7-458a539c4ee2
                     stepCounter: ccf242e9-0605-43d9-8f50-2593c59e03c6
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_ORDERS"."FREIGHT" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_ORDERS"."FREIGHT"
+                  END
           - columnReference:
               columnCounter: a57023ae-b1d1-43cc-bc78-6b600c157c46
               stepCounter: 0710082f-01ac-4023-8601-cf9c4ac6de6e
@@ -145,7 +185,12 @@ steps:
               - columnReferences:
                   - columnCounter: 7683e773-00b8-4499-8039-8821367912c7
                     stepCounter: ccf242e9-0605-43d9-8f50-2593c59e03c6
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_ORDERS"."SHIPNAME" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_ORDERS"."SHIPNAME"
+                  END
           - columnReference:
               columnCounter: 44a76194-3ba8-4c0d-aeb3-ed9bc36a2a4d
               stepCounter: 0710082f-01ac-4023-8601-cf9c4ac6de6e
@@ -157,7 +202,12 @@ steps:
               - columnReferences:
                   - columnCounter: 3c986eaa-45b4-45e2-8f92-dd8842fac974
                     stepCounter: ccf242e9-0605-43d9-8f50-2593c59e03c6
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_ORDERS"."SHIPADDRESS" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_ORDERS"."SHIPADDRESS"
+                  END
           - columnReference:
               columnCounter: faab9dd8-29ac-414f-a248-36cb2290fd99
               stepCounter: 0710082f-01ac-4023-8601-cf9c4ac6de6e
@@ -169,7 +219,12 @@ steps:
               - columnReferences:
                   - columnCounter: e3c14f27-873c-472f-91c6-c7c147093a28
                     stepCounter: ccf242e9-0605-43d9-8f50-2593c59e03c6
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_ORDERS"."SHIPCITY" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_ORDERS"."SHIPCITY"
+                  END
           - columnReference:
               columnCounter: 07d0998e-ab6a-4388-9dfa-95581a23c8ea
               stepCounter: 0710082f-01ac-4023-8601-cf9c4ac6de6e
@@ -181,7 +236,12 @@ steps:
               - columnReferences:
                   - columnCounter: c63d2519-77b1-4211-aff2-75ea2fe931b7
                     stepCounter: ccf242e9-0605-43d9-8f50-2593c59e03c6
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_ORDERS"."SHIPREGION" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_ORDERS"."SHIPREGION"
+                  END
           - columnReference:
               columnCounter: a4ad8929-a2be-4585-9cb5-2c2e7c3c8314
               stepCounter: 0710082f-01ac-4023-8601-cf9c4ac6de6e
@@ -193,7 +253,12 @@ steps:
               - columnReferences:
                   - columnCounter: b4f95807-0377-4aba-8d3f-120ae470b311
                     stepCounter: ccf242e9-0605-43d9-8f50-2593c59e03c6
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_ORDERS"."SHIPPOSTALCODE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_ORDERS"."SHIPPOSTALCODE"
+                  END
           - columnReference:
               columnCounter: 148f43a1-8f0b-4d1c-8fbf-59951bfe0301
               stepCounter: 0710082f-01ac-4023-8601-cf9c4ac6de6e
@@ -205,7 +270,12 @@ steps:
               - columnReferences:
                   - columnCounter: 626a898b-ef94-43c0-940e-ca8e4af80be1
                     stepCounter: ccf242e9-0605-43d9-8f50-2593c59e03c6
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "NW_LOAD_ORDERS"."SHIPCOUNTRY" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "NW_LOAD_ORDERS"."SHIPCOUNTRY"
+                  END
           - acceptedValues:
               strictMatch: true
               values: []

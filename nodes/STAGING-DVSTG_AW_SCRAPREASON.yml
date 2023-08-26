@@ -45,7 +45,12 @@ steps:
               - columnReferences:
                   - columnCounter: fc97d52e-24d3-497a-af4b-fbf3deb3b499
                     stepCounter: ebc0b0f4-dfa8-463f-a733-d5f84c98527b
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_SCRAPREASON"."SCRAPREASONID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_SCRAPREASON"."SCRAPREASONID"
+                  END
           - columnReference:
               columnCounter: 1ff17fd8-2e29-4699-bdc0-9a8a816efe37
               stepCounter: ef68e7c0-0faf-4c8e-9aec-b218fbc8f719
@@ -57,7 +62,12 @@ steps:
               - columnReferences:
                   - columnCounter: 018a694f-998f-413e-9180-305b5b6ab8bc
                     stepCounter: ebc0b0f4-dfa8-463f-a733-d5f84c98527b
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_SCRAPREASON"."NAME" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_SCRAPREASON"."NAME"
+                  END
           - columnReference:
               columnCounter: 69bfa9f6-1874-4da9-95e5-ddc85325db6c
               stepCounter: ef68e7c0-0faf-4c8e-9aec-b218fbc8f719

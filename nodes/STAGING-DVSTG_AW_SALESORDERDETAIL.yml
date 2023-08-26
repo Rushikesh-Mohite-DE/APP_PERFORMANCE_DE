@@ -123,7 +123,12 @@ steps:
               - columnReferences:
                   - columnCounter: 5c69821b-a535-45b9-b002-6ef5e21bfc93
                     stepCounter: ab806a21-4e59-4471-ab9c-75fa0433f8b7
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_SALESORDERDETAIL"."UNITPRICE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_SALESORDERDETAIL"."UNITPRICE"
+                  END
           - columnReference:
               columnCounter: 24c95173-ffe4-4495-a771-85d897e64a27
               stepCounter: 84f654d3-3a53-42f6-a720-42ebd92c0714
@@ -135,7 +140,12 @@ steps:
               - columnReferences:
                   - columnCounter: c67b447a-3859-447a-bc0e-859f8e2c6355
                     stepCounter: ab806a21-4e59-4471-ab9c-75fa0433f8b7
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_SALESORDERDETAIL"."UNITPRICEDISCOUNT" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_SALESORDERDETAIL"."UNITPRICEDISCOUNT"
+                  END
           - columnReference:
               columnCounter: b5b7ba28-2aaf-4384-8669-c5527ec4f284
               stepCounter: 84f654d3-3a53-42f6-a720-42ebd92c0714

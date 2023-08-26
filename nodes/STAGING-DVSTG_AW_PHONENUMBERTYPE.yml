@@ -45,7 +45,12 @@ steps:
               - columnReferences:
                   - columnCounter: ab834ef4-fa53-4259-9fa0-a47eeed5c52b
                     stepCounter: fd1c55f4-52a6-40d7-b439-f09e9007fc38
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PHONENUMBERTYPE"."PHONENUMBERTYPEID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PHONENUMBERTYPE"."PHONENUMBERTYPEID"
+                  END
           - columnReference:
               columnCounter: bbcb90ec-3426-48d5-a9df-5e86d79f25fe
               stepCounter: d19e6a06-8738-4bab-83f0-32e546f0b016
@@ -57,7 +62,12 @@ steps:
               - columnReferences:
                   - columnCounter: f9f52fb8-e367-480c-8efe-2325ca1c6a02
                     stepCounter: fd1c55f4-52a6-40d7-b439-f09e9007fc38
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PHONENUMBERTYPE"."NAME" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PHONENUMBERTYPE"."NAME"
+                  END
           - columnReference:
               columnCounter: 0a5b1797-87f7-4d43-941a-d1862d8bb52b
               stepCounter: d19e6a06-8738-4bab-83f0-32e546f0b016
@@ -69,7 +79,12 @@ steps:
               - columnReferences:
                   - columnCounter: 530790eb-3180-4d7d-96e6-36244c692c62
                     stepCounter: fd1c55f4-52a6-40d7-b439-f09e9007fc38
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PHONENUMBERTYPE"."MODIFIEDDATE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PHONENUMBERTYPE"."MODIFIEDDATE"
+                  END
           - acceptedValues:
               strictMatch: true
               values: []

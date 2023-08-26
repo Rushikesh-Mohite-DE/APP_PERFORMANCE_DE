@@ -85,11 +85,14 @@ steps:
               - columnReferences:
                   - columnCounter: ccdf0f51-b7a4-4e88-a3ea-bc47bd9b4a80
                     stepCounter: ef7917d7-d9d4-4cf9-ba0f-0b534f6b96ca
-                transform: ""
+                transform: |-
+                  CONCAT(
+                          LEFT("SATV0_PERBANK_ACCOUNTS"."ACCOUNTNUMBER", LENGTH("SATV0_PERBANK_ACCOUNTS"."ACCOUNTNUMBER") - 4),
+                          '####')
           - columnReference:
               columnCounter: 2c10eb81-eefe-4177-8684-0904f8e08cf6
               stepCounter: 8dd5b23f-a064-4f3f-a46f-84faaf85cb4d
-            dataType: NUMBER(19,4)
+            dataType: STRING
             description: ""
             hashColumns: []
             hashDetails: null
@@ -99,7 +102,7 @@ steps:
               - columnReferences:
                   - columnCounter: 68666437-1bb7-4094-9710-f8e75c1443ac
                     stepCounter: ef7917d7-d9d4-4cf9-ba0f-0b534f6b96ca
-                transform: ""
+                transform: (CAST("SATV0_PERBANK_ACCOUNTS"."AMOUNT" AS VARCHAR) || ' $')
           - columnReference:
               columnCounter: b5f5031d-173d-4c14-a3bd-c985bdaccd88
               stepCounter: 8dd5b23f-a064-4f3f-a46f-84faaf85cb4d

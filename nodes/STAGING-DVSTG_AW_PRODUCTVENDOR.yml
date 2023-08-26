@@ -47,7 +47,12 @@ steps:
               - columnReferences:
                   - columnCounter: fc3a9cce-bdcd-4d65-9718-c405779b8b91
                     stepCounter: 239bdde1-0e2f-44d1-ae9d-45a4889855c3
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PRODUCTVENDOR"."PRODUCTID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PRODUCTVENDOR"."PRODUCTID"
+                  END
           - columnReference:
               columnCounter: 819d7255-ef63-4919-8c08-6cf488a642d7
               stepCounter: efdfd2c5-e27f-45a6-b52e-a602ec7089b5
@@ -59,7 +64,12 @@ steps:
               - columnReferences:
                   - columnCounter: c81b6d7a-047e-4ce1-ae53-2bf75589ed0f
                     stepCounter: 239bdde1-0e2f-44d1-ae9d-45a4889855c3
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PRODUCTVENDOR"."BUSINESSENTITYID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PRODUCTVENDOR"."BUSINESSENTITYID"
+                  END
           - columnReference:
               columnCounter: 82c59bde-6b5b-49dc-a362-8cdc5988d864
               stepCounter: efdfd2c5-e27f-45a6-b52e-a602ec7089b5
@@ -71,7 +81,12 @@ steps:
               - columnReferences:
                   - columnCounter: eeef68a2-390e-40cc-a5d1-281d8dd73b2a
                     stepCounter: 239bdde1-0e2f-44d1-ae9d-45a4889855c3
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PRODUCTVENDOR"."AVERAGELEADTIME" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PRODUCTVENDOR"."AVERAGELEADTIME"
+                  END
           - columnReference:
               columnCounter: 6484cabe-999f-43e0-a843-3872893234af
               stepCounter: efdfd2c5-e27f-45a6-b52e-a602ec7089b5
@@ -83,7 +98,12 @@ steps:
               - columnReferences:
                   - columnCounter: 13d8a9b1-d0bb-4c4b-b20c-8df74d31e1e9
                     stepCounter: 239bdde1-0e2f-44d1-ae9d-45a4889855c3
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PRODUCTVENDOR"."STANDARDPRICE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PRODUCTVENDOR"."STANDARDPRICE"
+                  END
           - columnReference:
               columnCounter: 17048910-a30b-43a8-958b-6cac880a1b5f
               stepCounter: efdfd2c5-e27f-45a6-b52e-a602ec7089b5
@@ -95,7 +115,12 @@ steps:
               - columnReferences:
                   - columnCounter: 45ff0666-7ceb-4034-a929-81985f61af53
                     stepCounter: 239bdde1-0e2f-44d1-ae9d-45a4889855c3
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PRODUCTVENDOR"."LASTRECEIPTCOST" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PRODUCTVENDOR"."LASTRECEIPTCOST"
+                  END
           - columnReference:
               columnCounter: 0735970d-7954-4d6a-8fab-ab1489b28b4c
               stepCounter: efdfd2c5-e27f-45a6-b52e-a602ec7089b5
@@ -107,7 +132,12 @@ steps:
               - columnReferences:
                   - columnCounter: 3815c11f-c7a4-4727-b104-4a7591444d31
                     stepCounter: 239bdde1-0e2f-44d1-ae9d-45a4889855c3
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PRODUCTVENDOR"."LASTRECEIPTDATE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PRODUCTVENDOR"."LASTRECEIPTDATE"
+                  END
           - columnReference:
               columnCounter: 85645790-c164-4109-8caf-1ec60f05d58a
               stepCounter: efdfd2c5-e27f-45a6-b52e-a602ec7089b5
@@ -119,7 +149,12 @@ steps:
               - columnReferences:
                   - columnCounter: 4be33640-3361-4c74-b481-162eba49a649
                     stepCounter: 239bdde1-0e2f-44d1-ae9d-45a4889855c3
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PRODUCTVENDOR"."MINORDERQTY" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PRODUCTVENDOR"."MINORDERQTY"
+                  END
           - columnReference:
               columnCounter: f726cbaf-9b6f-41a2-9fac-dbf0ad42fa25
               stepCounter: efdfd2c5-e27f-45a6-b52e-a602ec7089b5
@@ -131,7 +166,12 @@ steps:
               - columnReferences:
                   - columnCounter: f5bf08e3-57b5-4bc6-922d-b6137cb82fbd
                     stepCounter: 239bdde1-0e2f-44d1-ae9d-45a4889855c3
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PRODUCTVENDOR"."MAXORDERQTY" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PRODUCTVENDOR"."MAXORDERQTY"
+                  END
           - columnReference:
               columnCounter: 68b71503-d968-47bd-a7f7-8ecc9ba72dba
               stepCounter: efdfd2c5-e27f-45a6-b52e-a602ec7089b5
@@ -143,7 +183,12 @@ steps:
               - columnReferences:
                   - columnCounter: 8e0fdc5c-b455-4879-8646-3a5e16b6f453
                     stepCounter: 239bdde1-0e2f-44d1-ae9d-45a4889855c3
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PRODUCTVENDOR"."ONORDERQTY" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PRODUCTVENDOR"."ONORDERQTY"
+                  END
           - columnReference:
               columnCounter: cf6d379a-3a82-41e3-993a-3fd74a31ec77
               stepCounter: efdfd2c5-e27f-45a6-b52e-a602ec7089b5
@@ -155,7 +200,12 @@ steps:
               - columnReferences:
                   - columnCounter: b28b8006-44d3-4c9d-8607-c483c83c0eca
                     stepCounter: 239bdde1-0e2f-44d1-ae9d-45a4889855c3
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PRODUCTVENDOR"."UNITMEASURECODE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PRODUCTVENDOR"."UNITMEASURECODE"
+                  END
           - columnReference:
               columnCounter: 50c9e084-a774-4515-9e51-2c3355a6bf05
               stepCounter: efdfd2c5-e27f-45a6-b52e-a602ec7089b5
@@ -167,7 +217,12 @@ steps:
               - columnReferences:
                   - columnCounter: 4fcce394-ad72-4d8f-9398-bff75ea77f46
                     stepCounter: 239bdde1-0e2f-44d1-ae9d-45a4889855c3
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PRODUCTVENDOR"."MODIFIEDDATE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PRODUCTVENDOR"."MODIFIEDDATE"
+                  END
           - acceptedValues:
               strictMatch: true
               values: []

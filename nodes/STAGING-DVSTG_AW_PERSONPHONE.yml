@@ -47,7 +47,12 @@ steps:
               - columnReferences:
                   - columnCounter: 3e7ab923-60a7-496f-a551-8d307efee6de
                     stepCounter: 583a8527-dab9-467d-825b-594c5041d58b
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PERSONPHONE"."BUSINESSENTITYID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PERSONPHONE"."BUSINESSENTITYID"
+                  END
           - columnReference:
               columnCounter: 54530656-14a7-447a-a661-2ff60b19f6f9
               stepCounter: c6338d9b-7be2-4e21-9783-c0f673ce4826
@@ -59,7 +64,12 @@ steps:
               - columnReferences:
                   - columnCounter: 30b6cbbb-9475-4f92-a3e1-8aa694db16fe
                     stepCounter: 583a8527-dab9-467d-825b-594c5041d58b
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PERSONPHONE"."PHONENUMBER" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PERSONPHONE"."PHONENUMBER"
+                  END
           - columnReference:
               columnCounter: 9917e424-e8bd-45d1-ac8d-8fe4e43fa83f
               stepCounter: c6338d9b-7be2-4e21-9783-c0f673ce4826
@@ -71,7 +81,12 @@ steps:
               - columnReferences:
                   - columnCounter: d70495ae-801a-4239-a60d-b4590b34f833
                     stepCounter: 583a8527-dab9-467d-825b-594c5041d58b
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PERSONPHONE"."PHONENUMBERTYPEID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PERSONPHONE"."PHONENUMBERTYPEID"
+                  END
           - columnReference:
               columnCounter: 2c535daf-b8ca-477c-b97e-b597f9bc9789
               stepCounter: c6338d9b-7be2-4e21-9783-c0f673ce4826
@@ -83,7 +98,12 @@ steps:
               - columnReferences:
                   - columnCounter: f2e458df-69c7-44e1-adee-fbafbd0a2a3a
                     stepCounter: 583a8527-dab9-467d-825b-594c5041d58b
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_PERSONPHONE"."MODIFIEDDATE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_PERSONPHONE"."MODIFIEDDATE"
+                  END
           - acceptedValues:
               strictMatch: true
               values: []

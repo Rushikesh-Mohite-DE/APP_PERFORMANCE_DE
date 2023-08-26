@@ -69,7 +69,12 @@ steps:
               - columnReferences:
                   - columnCounter: 6ce23aee-0da7-4dad-a775-55499926d380
                     stepCounter: b7118a43-5cd9-4dd3-9dbc-dd4752af1c17
-                transform: ""
+                transform: |-
+                  CASE 
+                  	WHEN "AW_LOAD_LOCATION"."COSTRATE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "AW_LOAD_LOCATION"."COSTRATE"
+                  END
           - columnReference:
               columnCounter: 584377b5-5e95-4ec7-8bbd-a7a97a12be10
               stepCounter: 95ebf7d8-30d5-4c65-bd20-060d9144be16

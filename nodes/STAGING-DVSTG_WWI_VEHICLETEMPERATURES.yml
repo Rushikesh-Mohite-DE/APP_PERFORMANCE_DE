@@ -45,7 +45,12 @@ steps:
               - columnReferences:
                   - columnCounter: ec878cd6-aa96-45f3-8a4a-306048bbe177
                     stepCounter: 85831fa9-12f8-49c0-9d5b-4c59f1ffd28c
-                transform: ""
+                transform: |
+                  CASE 
+                  	WHEN "WWI_LOAD_VEHICLETEMPERATURES"."VEHICLETEMPERATUREID" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "WWI_LOAD_VEHICLETEMPERATURES"."VEHICLETEMPERATUREID"
+                  END
           - columnReference:
               columnCounter: 32777f20-77f0-44cb-bd5f-3fddd1f6e8fe
               stepCounter: 1a7e95d4-3c8e-4d58-8124-05fb4ab178ab
@@ -57,7 +62,12 @@ steps:
               - columnReferences:
                   - columnCounter: 51d1fe56-14b1-4223-b563-9b2eb5a1043a
                     stepCounter: 85831fa9-12f8-49c0-9d5b-4c59f1ffd28c
-                transform: ""
+                transform: |
+                  CASE 
+                  	WHEN "WWI_LOAD_VEHICLETEMPERATURES"."VEHICLEREGISTRATION" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "WWI_LOAD_VEHICLETEMPERATURES"."VEHICLEREGISTRATION"
+                  END
           - columnReference:
               columnCounter: 3992508d-3193-494f-88d3-b0a4fcc28188
               stepCounter: 1a7e95d4-3c8e-4d58-8124-05fb4ab178ab
@@ -69,7 +79,12 @@ steps:
               - columnReferences:
                   - columnCounter: 730b8bab-4abf-4e89-8189-3429af19d893
                     stepCounter: 85831fa9-12f8-49c0-9d5b-4c59f1ffd28c
-                transform: ""
+                transform: |
+                  CASE 
+                  	WHEN "WWI_LOAD_VEHICLETEMPERATURES"."CHILLERSENSORNUMBER" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "WWI_LOAD_VEHICLETEMPERATURES"."CHILLERSENSORNUMBER"
+                  END
           - columnReference:
               columnCounter: b47ccd3f-1849-4340-a52d-33f020a62065
               stepCounter: 1a7e95d4-3c8e-4d58-8124-05fb4ab178ab
@@ -81,7 +96,12 @@ steps:
               - columnReferences:
                   - columnCounter: 64db1c43-9ba8-46dd-869b-c93a12776e18
                     stepCounter: 85831fa9-12f8-49c0-9d5b-4c59f1ffd28c
-                transform: ""
+                transform: |
+                  CASE 
+                  	WHEN "WWI_LOAD_VEHICLETEMPERATURES"."RECORDEDWHEN" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "WWI_LOAD_VEHICLETEMPERATURES"."RECORDEDWHEN"
+                  END
           - columnReference:
               columnCounter: c0dc109f-4df8-490c-8efc-c7616dd56620
               stepCounter: 1a7e95d4-3c8e-4d58-8124-05fb4ab178ab
@@ -93,7 +113,12 @@ steps:
               - columnReferences:
                   - columnCounter: 1c4b9097-915d-4448-9a04-ce26f2360d30
                     stepCounter: 85831fa9-12f8-49c0-9d5b-4c59f1ffd28c
-                transform: ""
+                transform: |
+                  CASE 
+                  	WHEN "WWI_LOAD_VEHICLETEMPERATURES"."TEMPERATURE" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "WWI_LOAD_VEHICLETEMPERATURES"."TEMPERATURE"
+                  END
           - columnReference:
               columnCounter: 3407bbdc-6271-4542-9eac-56d8e003596e
               stepCounter: 1a7e95d4-3c8e-4d58-8124-05fb4ab178ab
@@ -105,7 +130,12 @@ steps:
               - columnReferences:
                   - columnCounter: 853febc1-9bda-4d2d-ba44-558c41314e92
                     stepCounter: 85831fa9-12f8-49c0-9d5b-4c59f1ffd28c
-                transform: ""
+                transform: |
+                  CASE 
+                  	WHEN "WWI_LOAD_VEHICLETEMPERATURES"."FULLSENSORDATA" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "WWI_LOAD_VEHICLETEMPERATURES"."FULLSENSORDATA"
+                  END
           - columnReference:
               columnCounter: 151c8578-532a-4104-85cf-e8c1dfdb9211
               stepCounter: 1a7e95d4-3c8e-4d58-8124-05fb4ab178ab
@@ -117,7 +147,12 @@ steps:
               - columnReferences:
                   - columnCounter: 087df3d5-3a8c-4f26-ade8-f86f1b43f976
                     stepCounter: 85831fa9-12f8-49c0-9d5b-4c59f1ffd28c
-                transform: ""
+                transform: |
+                  CASE 
+                  	WHEN "WWI_LOAD_VEHICLETEMPERATURES"."ISCOMPRESSED" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "WWI_LOAD_VEHICLETEMPERATURES"."ISCOMPRESSED"
+                  END
           - columnReference:
               columnCounter: bb63b357-cda7-4917-9497-6cb609c0357f
               stepCounter: 1a7e95d4-3c8e-4d58-8124-05fb4ab178ab
@@ -129,7 +164,12 @@ steps:
               - columnReferences:
                   - columnCounter: 9faab5fe-956f-43eb-96a6-6b994aa405c6
                     stepCounter: 85831fa9-12f8-49c0-9d5b-4c59f1ffd28c
-                transform: ""
+                transform: |
+                  CASE 
+                  	WHEN "WWI_LOAD_VEHICLETEMPERATURES"."COMPRESSEDSENSORDATA" IS NULL 
+                  	THEN NULL 
+                  	ELSE  "WWI_LOAD_VEHICLETEMPERATURES"."COMPRESSEDSENSORDATA"
+                  END
           - acceptedValues:
               strictMatch: true
               values: []
