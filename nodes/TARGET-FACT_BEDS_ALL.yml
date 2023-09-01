@@ -3,7 +3,7 @@ steps:
     operation:
       config:
         postSQL: ""
-        preSQL: ""
+        preSQL: TRUNCATE TABLE {{ ref('TARGET', 'FACT_BEDS_ALL') }};
         testsEnabled: true
       database: ""
       deployEnabled: true
@@ -35,7 +35,6 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            isBusinessKey: true
             name: STATE
             nullable: true
             sourceColumnReferences:
@@ -120,6 +119,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
+            isBusinessKey: true
             name: INPATIENT_BEDS_OCCUPIED
             nullable: true
             sourceColumnReferences:
