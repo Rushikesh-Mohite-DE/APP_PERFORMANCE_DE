@@ -3,7 +3,7 @@ steps:
     operation:
       config:
         postSQL: ""
-        preSQL: ""
+        preSQL: TRUNCATE TABLE {{ ref('TARGET', 'DIM_CDC_INPATIENT_BEDS_ICU') }};
         testsEnabled: true
       database: ""
       deployEnabled: true
