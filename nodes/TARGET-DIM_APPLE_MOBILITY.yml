@@ -3,7 +3,7 @@ steps:
     operation:
       config:
         postSQL: ""
-        preSQL: ""
+        preSQL: TRUNCATE TABLE {{ ref('TARGET', 'DIM_APPLE_MOBILITY') }}
         testsEnabled: true
       database: ""
       deployEnabled: true
